@@ -18,6 +18,9 @@ function dayPhase(hour) {
 
 const root = document.documentElement
 
+// Waits two frames so the current color is painted before transitions turn on
+const enableFade = () => requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add("daynight-fade")))
+
 /** Safe to call every tick, only touches the DOM when the phase changes (every few Earth minutes). */
 export function applyDayNight(now) {
   const phase = dayPhase(toEorzea(now).hours)
@@ -26,6 +29,17 @@ export function applyDayNight(now) {
   const first = !root.dataset.time
   root.dataset.time = phase
 
-  // Skip the fade on page load, waiting two frames so the first color is painted before transitions turn on
-  if (first) requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add("daynight-fade")))
+  // Skip the fade on page load
+  if (first) enableFade()
 }
+
+// A fade started in a hidden tab can get stuck on the old color, so it's off while hidden
+// and coming back snaps straight to the current phase
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    root.classList.remove("daynight-fade")
+  } else {
+    applyDayNight(Date.now())
+    enableFade()
+  }
+})
