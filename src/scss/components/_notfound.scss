@@ -1,0 +1,31 @@
+@use "../mixins" as *;
+
+.not-found {
+  @include glass;
+  max-width: 95%;
+  box-sizing: border-box;
+  margin-top: 2.5rem;
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+
+  p {
+    margin: .75rem 0 1rem;
+    color: var(--font-secondary);
+  }
+
+  // A link, since it goes to another page, styled as a button
+  a {
+    display: inline-block;
+    padding: .5rem 1.25rem;
+    border-radius: .5rem;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      box-shadow: var(--box-shadow);
+    }
+  }
+}

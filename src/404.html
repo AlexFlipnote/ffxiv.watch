@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <!-- No <x-seo>: GitHub Pages serves this for every missing URL, a canonical would point them all here -->
+    <title>Page Not Found - ffxiv.watch</title>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="not-found">
+        <h1 class="title">Page not found</h1>
+        <p>This page doesn't exist, maybe it moved or the link has a typo.</p>
+        <a href="/">Back to the timers</a>
+      </main>
+    </div>
+
+    <x-js src="404.js"/>
+  </body>
+</html>
