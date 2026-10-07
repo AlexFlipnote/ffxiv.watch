@@ -1,0 +1,40 @@
+<!-- A clock reading "14": long hand on 1, short hand on 4. Edge to edge, logo.svg has the square -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FFXIV.Watch">
+  <title>FFXIV.Watch</title>
+
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#b03131" stroke-width="4"/>
+
+  <!-- Hour marks, longer on 12, 3, 6 and 9 -->
+  <g stroke="#b03131" stroke-linecap="round">
+    <g stroke-width="3">
+      <line x1="32" y1="8" x2="32" y2="12.5"/>
+      <line x1="32" y1="8" x2="32" y2="12.5" transform="rotate(90 32 32)"/>
+      <line x1="32" y1="8" x2="32" y2="12.5" transform="rotate(180 32 32)"/>
+      <line x1="32" y1="8" x2="32" y2="12.5" transform="rotate(270 32 32)"/>
+    </g>
+    <g stroke-width="2" opacity=".6">
+      <line x1="32" y1="8.5" x2="32" y2="10.5" transform="rotate(30 32 32)"/>
+      <line x1="32" y1="8.5" x2="32" y2="10.5" transform="rotate(60 32 32)"/>
+      <line x1="32" y1="8.5" x2="32" y2="10.5" transform="rotate(120 32 32)"/>
+      <line x1="32" y1="8.5" x2="32" y2="10.5" transform="rotate(150 32 32)"/>
+      <line x1="32" y1="8.5" x2="32" y2="10.5" transform="rotate(210 32 32)"/>
+      <line x1="32" y1="8.5" x2="32" y2="10.5" transform="rotate(240 32 32)"/>
+      <line x1="32" y1="8.5" x2="32" y2="10.5" transform="rotate(300 32 32)"/>
+      <line x1="32" y1="8.5" x2="32" y2="10.5" transform="rotate(330 32 32)"/>
+    </g>
+  </g>
+
+  <!-- Short hand on 4 -->
+  <g transform="rotate(120 32 32)">
+    <polygon points="32,17 36,27 32,32 28,27" fill="#bdbdbd"/>
+    <polygon points="32,17 32,32 28,27" fill="#e6e6e6"/>
+  </g>
+
+  <!-- Long hand on 1 -->
+  <g transform="rotate(30 32 32)">
+    <polygon points="32,11 35,25 32,32 29,25" fill="#e6e6e6"/>
+    <polygon points="32,11 32,32 29,25" fill="#ffffff"/>
+  </g>
+
+  <circle cx="32" cy="32" r="3" fill="#b03131"/>
+</svg>

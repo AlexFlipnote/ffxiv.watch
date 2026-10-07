@@ -1,0 +1,17 @@
+{
+  "name": "ffxiv-watch",
+  "author": "AlexFlipnote",
+  "type": "module",
+  "scripts": {
+    "dev": "node build.js watch",
+    "build": "node build.js",
+    "clean": "node build.js clean",
+    "weather-data": "node scripts/weather-data.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "sass": "^1.93.3"
+  }
+}

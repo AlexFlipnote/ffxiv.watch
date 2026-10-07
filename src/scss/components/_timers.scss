@@ -1,0 +1,145 @@
+@use "../mixins" as *;
+
+.timers {
+  @include content-column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  align-items: start;
+  padding-bottom: 1.25rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.timer {
+  @include glass;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+
+  &.small {
+    grid-column: span 1;
+    padding: 1rem;
+
+    .title {
+      font-size: 0.95rem;
+    }
+
+    .countdown {
+      font-size: 1.15rem;
+    }
+  }
+
+  @include mobile {
+    &, &.small {
+      grid-column: span 1;
+    }
+  }
+}
+
+.timer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.timer-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.side-col {
+  padding-left: 1.25rem;
+  border-left: .05rem solid var(--divider);
+  flex: 1;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.countdown {
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+  text-shadow: var(--text-shadow);
+}
+
+// Something is open right now (Ocean Fishing boarding), counting down to when it closes
+.timer.open .countdown {
+  color: var(--gold);
+}
+
+.sub-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.target {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--font-tertiary);
+}
+
+.info-btn {
+  background: var(--blur-background);
+  border: none;
+  color: var(--accent);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+
+  &:hover {
+    background: var(--accent);
+    color: var(--bg);
+    box-shadow: var(--box-shadow);
+  }
+}
+
+.region-picker {
+  display: flex;
+  gap: .25rem;
+  margin: .25rem 0 .5rem;
+}
+
+.region-btn {
+  flex: 1;
+  padding: .125rem .25rem;
+  background: var(--blur-background);
+  border: none;
+  border-radius: .375rem;
+  color: var(--font-tertiary);
+  font-family: inherit;
+  font-size: .7rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: var(--font-primary);
+  }
+
+  &[aria-pressed="true"] {
+    background: var(--accent);
+    color: var(--bg);
+  }
+}

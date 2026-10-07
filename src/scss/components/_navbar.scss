@@ -1,0 +1,200 @@
+// Frosted navbar, same as the xelA dashboard. On mobile the links slide in from the left
+@use "../mixins" as *;
+
+$height: 5rem;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  height: $height;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+
+  // The frosted background lives on its own layer, backdrop-filter on .navbar itself
+  // would trap the fixed-position mobile menu inside the bar
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--surface);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+  }
+}
+
+.navbar-inner {
+  @include content-column;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--font-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+}
+
+.navbar-logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    color: var(--font-secondary);
+    text-decoration: none;
+    transition: color .2s;
+
+    &:hover {
+      color: var(--font-primary);
+    }
+
+    // Set by build.js on links pointing at the current page
+    &[aria-current="page"] {
+      color: var(--accent);
+    }
+
+    &:not(:first-child)::before {
+      content: "";
+      width: .625rem;
+      height: .625rem;
+      margin: 0 .625rem;
+      border-radius: 3px;
+      transform: rotate(45deg);
+      background-color: var(--font-secondary);
+    }
+  }
+}
+
+.navbar-hamburger {
+  display: none;
+  width: 1.625rem;
+  height: 1.625rem;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--font-primary);
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+}
+
+.theme-toggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--font-secondary);
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+
+  &:hover {
+    color: var(--font-primary);
+    background-color: var(--blur-background);
+  }
+
+  svg {
+    width: 1.375rem;
+    height: 1.375rem;
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .theme-moon,
+  :root[data-theme="light"] & .theme-sun {
+    display: none;
+  }
+
+  :root[data-theme="light"] & .theme-moon {
+    display: block;
+  }
+}
+
+@include mobile {
+  .navbar-inner {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 1rem;
+    gap: .75rem;
+  }
+
+  .navbar-hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: $height;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 17.5rem;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y: auto;
+    background-color: var(--surface-solid);
+    box-shadow: 4px 0 16px rgba(0, 0, 0, .3);
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform .25s ease-in-out, visibility 0s linear .25s;
+
+    a {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--surface-hover);
+
+      &:hover {
+        background-color: var(--surface-hover);
+      }
+
+      &:not(:first-child)::before {
+        display: none;
+      }
+    }
+  }
+
+  .navbar.opened .navbar-links {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform .25s ease-in-out, visibility 0s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-links {
+    transition: none;
+  }
+}

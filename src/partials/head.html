@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#181818">
+
+<!-- Theme before the first paint so it never flashes, same logic as js/utils/theme.js -->
+<script>
+  (() => {
+    let theme = null
+    try { theme = localStorage.getItem("theme") } catch {}
+    if (theme !== "light" && theme !== "dark") theme = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
+    document.documentElement.dataset.theme = theme
+  })()
+</script>
+
+<!-- Favicon: SVG where supported, .ico (16/32/48px) for the rest, PNG for iOS home screens -->
+<link rel="icon" href="/images/favicon.ico" sizes="32x32">
+<link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+<!-- Preloaded so nothing shifts when they arrive -->
+<link rel="preload" href="/fonts/google-sans-flex-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/google-sans-flex-700.woff2" as="font" type="font/woff2" crossorigin>
+
+<x-css src="index.css"/>

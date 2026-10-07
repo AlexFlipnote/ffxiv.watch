@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="FFXIV Weather Forecast - ffxiv.watch"
+      description="Weather forecast for every FFXIV zone. Find the next weather or transition, in your local time."
+    />
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="weather">
+        <section class="weather-now">
+          <select class="select weather-zone" id="zone" aria-label="Zone"></select>
+          <div class="weather-current">
+            <div>
+              <div class="weather-label">Now</div>
+              <div class="weather-name" id="now-weather"></div>
+            </div>
+            <div class="weather-next">
+              <div class="weather-label">Next: <span id="next-weather"></span></div>
+              <div class="countdown" id="next-countdown"></div>
+              <div class="target"><strong>Changes at:</strong> <span id="next-at"></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="weather-forecast">
+          <div class="weather-filters">
+            <label>From <select class="select" id="filter-from"></select></label>
+            <label>To <select class="select" id="filter-to"></select></label>
+            <label>At (ET) <select class="select" id="filter-time"></select></label>
+          </div>
+          <table class="weather-table" id="forecast-table">
+            <thead>
+              <tr><th>ET</th><th>Weather</th><th class="weather-local">Local time</th><th>In</th></tr>
+            </thead>
+            <tbody id="forecast"></tbody>
+          </table>
+          <p class="weather-empty" id="forecast-empty" hidden>No match in the next 30 days.</p>
+        </section>
+      </main>
+    </div>
+
+    <x-js src="weather.js"/>
+  </body>
+</html>

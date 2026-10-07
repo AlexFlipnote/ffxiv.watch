@@ -1,0 +1,66 @@
+@use "../mixins" as *;
+
+// Eorzea clock, a banner across the top of the timer grid
+.clock {
+  @include glass;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.25rem 2rem;
+
+  @include mobile {
+    flex-direction: column;
+    gap: .75rem;
+    padding: 1.25rem;
+  }
+}
+
+.clock-time {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: .25rem;
+  font-variant-numeric: tabular-nums;
+  text-shadow: var(--text-shadow);
+
+  @include mobile {
+    font-size: 3.5rem;
+  }
+}
+
+.clock-details {
+  padding-left: 2rem;
+  border-left: .05rem solid var(--divider);
+
+  @include mobile {
+    padding-left: 0;
+    border-left: none;
+    text-align: center;
+  }
+}
+
+.clock-date {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.clock-earth {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin-top: .5rem;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--font-secondary);
+
+  @include mobile {
+    justify-content: center;
+  }
+
+  strong {
+    color: var(--font-tertiary);
+    margin-right: 0.25rem;
+  }
+}

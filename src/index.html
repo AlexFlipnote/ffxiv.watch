@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="ffxiv.watch - FFXIV Timers & Resets"
+      description="A lightning-fast, zero-bloat timer dashboard for Final Fantasy XIV."
+    />
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="timers" id="timers">
+        <section class="clock">
+          <div class="clock-time" id="et-time">00:00</div>
+          <div class="clock-details">
+            <div class="clock-date" id="et-date"></div>
+            <div class="clock-earth">
+              <div><strong>Local</strong> <span id="local-time"></span></div>
+              <div><strong>Server (UTC)</strong> <span id="server-time"></span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="modal" id="modal">
+      <div class="modal-header">
+        <h2 class="title" id="modal-title"></h2>
+        <button class="close-btn" id="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-info"></p>
+        <ul id="modal-list"></ul>
+      </div>
+    </dialog>
+
+    <x-js src="index.js"/>
+  </body>
+</html>

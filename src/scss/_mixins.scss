@@ -1,0 +1,24 @@
+// Shared building blocks. Use from any component with: @use "../mixins" as *;
+
+$content-width: 62.5rem;
+$ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+@mixin mobile {
+  @media (max-width: 48rem) {
+    @content;
+  }
+}
+
+// Frosted see-through panel, same as homepage_plusplus: the background shows through, blurred
+@mixin glass {
+  -webkit-backdrop-filter: var(--blur-amount-ui);
+  backdrop-filter: var(--blur-amount-ui);
+  background-color: var(--blur-background);
+  border-radius: 1rem;
+}
+
+// Full-width column that lines up across pages
+@mixin content-column {
+  width: 95%;
+  max-width: $content-width;
+}
