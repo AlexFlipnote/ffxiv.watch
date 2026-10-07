@@ -21,7 +21,7 @@ function apply(theme) {
   root.dataset.theme = theme
   if (fading) requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add("daynight-fade")))
 
-  themeColor.content = theme === "light" ? "#f7f7f7" : "#181818"
+  themeColor.content = theme === "light" ? "#f7f7f7" : "#1a1a1a"
   button.setAttribute("aria-label", theme === "light" ? "Switch to dark theme" : "Switch to light theme")
   button.title = button.getAttribute("aria-label")
 }

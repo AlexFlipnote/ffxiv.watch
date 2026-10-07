@@ -9,7 +9,7 @@
   --divider: rgba(255, 255, 255, .1);
 
   // homepage_plusplus puts dark glass over a dimmed photo, on a flat dark page that would vanish,
-  // so the glass is tinted light instead. With a background image, rgba(24, 24, 24, .5) works again
+  // so the glass is tinted light instead. With a background image, rgba(26, 26, 26, .5) works again
   --blur-background: rgba(255, 255, 255, .05);
   --blur-amount-ui: blur(3px);
   --box-shadow: 0 0 .75rem rgba(0, 0, 0, .5);
@@ -20,8 +20,8 @@
   --text-shadow: 0 0 .5rem #000;
 
   // The scrollbar track is a shade darker than the navbar
-  --surface: rgba(24, 24, 24, .75);
-  --surface-solid: #181818;
+  --surface: rgba(26, 26, 26, .75);
+  --surface-solid: #1a1a1a;
   --scrollbar-track: #121212;
   --scrollbar-thumb: #3a3a3a;
   --scrollbar-thumb-hover: #4a4a4a;
