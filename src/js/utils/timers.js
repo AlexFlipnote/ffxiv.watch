@@ -12,7 +12,7 @@ const DAY = 24 * HOUR
   Unix epoch (1970-01-01) was a Thursday, so weekly offsets count days from Thursday 00:00 UTC.
   Order matters: big cards first, then the small ones fill the last row.
 */
-const TIMERS = [
+export const TIMERS = [
   {
     kind: "phased",
     id: "housing",

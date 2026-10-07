@@ -48,47 +48,18 @@ function guessCactpotRegion() {
   return "na"
 }
 
-function createCard(timer) {
-  const card = document.createElement("div")
-  card.className = timer.small ? "timer small" : "timer"
-  card.innerHTML = `
-    <div class="timer-header">
-      <div class="title"></div>
-      <button class="info-btn" title="Details">i</button>
-    </div>
-    <div class="timer-body">
-      <div>
-        <div class="countdown"></div>
-        <div class="target"><strong></strong> <time></time></div>
-      </div>
-      <div class="side-col"><div class="sub-title"></div></div>
-    </div>
-  `
-
+// The cards are already in the page, written by the build (see timerCards in build.js)
+function bindCard(timer) {
+  const card = container.querySelector(`[data-id="${timer.id}"]`)
   card.querySelector(".info-btn").addEventListener("click", () => openModal(timer.id))
 
-  const regionBtns = timer.regions.map((region) => {
-    const btn = document.createElement("button")
-    btn.className = "region-btn"
-    btn.textContent = region.name
-    btn.addEventListener("click", () => {
-      regions[timer.id] = region.id
-      saveRegions()
-      render(Date.now())
-    })
-    return btn
-  })
-
-  if (regionBtns.length) {
-    const picker = document.createElement("div")
-    picker.className = "region-picker"
-    picker.setAttribute("role", "group")
-    picker.setAttribute("aria-label", "Region")
-    picker.append(...regionBtns)
-    card.querySelector(".timer-header").after(picker)
-  }
-
-  container.appendChild(card)
+  // Same order as timer.regions, the build writes them from the same list
+  const regionBtns = [...card.querySelectorAll(".region-btn")]
+  regionBtns.forEach((btn, i) => btn.addEventListener("click", () => {
+    regions[timer.id] = timer.regions[i].id
+    saveRegions()
+    render(Date.now())
+  }))
 
   return {
     card,
@@ -150,7 +121,7 @@ modal.addEventListener("click", (e) => {
 
 function render(now) {
   for (const timer of getAllTimerStates(now, regions)) {
-    if (!cards.has(timer.id)) cards.set(timer.id, createCard(timer))
+    if (!cards.has(timer.id)) cards.set(timer.id, bindCard(timer))
     updateCard(cards.get(timer.id), timer, now)
     if (timer.id === openId) renderModal(timer)
   }

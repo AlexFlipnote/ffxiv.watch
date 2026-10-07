@@ -3,7 +3,7 @@ import esbuild from "esbuild"
 import fs from "fs"
 import path from "path"
 import * as sass from "sass"
-import { fileURLToPath } from "url"
+import { fileURLToPath, pathToFileURL } from "url"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -18,9 +18,13 @@ const SKIPPED = ["js", "scss", "partials"]
 
 const NOT_IN_SITEMAP = ["404.html"]
 
+const TIMERS_FILE = path.join(SRC, "js/utils/timers.js")
+const ZONES_FILE = path.join(SRC, "js/data/weather.json")
+
 const jsBuildConfigs = [
   { entryPoints: ["src/js/index.js"], outfile: "dist/js/index.js" },
-  { entryPoints: ["src/js/weather.js"], outfile: "dist/js/weather.js" }
+  { entryPoints: ["src/js/weather.js"], outfile: "dist/js/weather.js" },
+  { entryPoints: ["src/js/404.js"], outfile: "dist/js/404.js" }
 ]
 
 const esbuildOptions = (cfg, overrides = {}) => ({
@@ -92,7 +96,9 @@ async function buildCSS() {
   - <x-html str="partials/topbar.html"/>  pastes in src/partials/topbar.html (partials can include partials)
   - <x-js src="index.js"/>                <script src="/js/index.js?v=hash"></script>
   - <x-css src="index.css"/>              <link href="/css/index.css?v=hash" rel="stylesheet">
-  - <x-seo title="..." description="..." keywords="..."/>  <title>, description, canonical URL and link preview tags (keywords is optional)
+  - <x-seo title="..." description="..."/>  <title>, description, canonical URL and link preview tags
+  - <x-timers/>                           the timer cards from src/js/utils/timers.js, see timerCards()
+  - <x-zones/>                            the weather zones from src/js/data/weather.json as <option>s, grouped by expansion
 
   The ?v=hash is only added on production builds, so browsers and Cloudflare fetch the new file after a deploy.
   Links pointing at the page they're on get aria-current="page", which is how the topbar marks the active page.
@@ -124,7 +130,6 @@ function seoTags(page, attrs) {
   const description = attr("description")
   if (!title || !description) throw new Error(`${page}: <x-seo> needs a title and a description`)
 
-  const keywords = attr("keywords")
   const url = `https://${DOMAIN}${pageUrl(page)}`
   const meta = (key, name, content) => `<meta ${key}="${name}" content="${content}">`
 
@@ -136,7 +141,6 @@ function seoTags(page, attrs) {
   return [
     `<title>${title}</title>`,
     meta("name", "description", description),
-    ...(keywords ? [meta("name", "keywords", keywords)] : []),
     `<link rel="canonical" href="${url}">`,
     meta("property", "og:locale", "en_US"),
     meta("property", "og:type", "website"),
@@ -153,12 +157,74 @@ function seoTags(page, attrs) {
   ]
 }
 
-function renderPage(page, hashed) {
+// Fresh import every build, so `npm run dev` picks up edits to the timers
+const loadTimers = async () => (await import(`${pathToFileURL(TIMERS_FILE)}?v=${Date.now()}`)).TIMERS
+
+/*
+  The cards are written into the page so search engines can read them without running JS or clicking anything.
+  index.js finds them by data-id and fills in the countdowns. The hidden details are the modal's text,
+  only there for search engines, the modal itself is still filled from getAllTimerStates().
+*/
+function timerCards(timers) {
+  const indent = (lines) => lines.map(line => "  " + line)
+
+  return timers.flatMap(timer => {
+    const details = timer.phases?.map(phase => `<p>${phase.name}: ${phase.info}</p>`)
+      ?? timer.regions?.map(region => `<p>${region.name}: ${region.info}</p>`)
+      ?? [`<p>${timer.info}</p>`]
+    const list = timer.list ? ["<ul>", ...indent(timer.list.map(item => `<li>${item}</li>`)), "</ul>"] : []
+    const regions = timer.regions
+      ? [
+        "<div class=\"region-picker\" role=\"group\" aria-label=\"Region\">",
+        ...indent(timer.regions.map(region => `<button class="region-btn">${region.name}</button>`)),
+        "</div>"
+      ]
+      : []
+
+    return [
+      `<div class="${timer.small ? "timer small" : "timer"}" data-id="${timer.id}">`,
+      ...indent([
+        "<div class=\"timer-header\">",
+        `  <h2 class="title">${timer.name}</h2>`,
+        "  <button class=\"info-btn\" title=\"Details\">i</button>",
+        "</div>",
+        ...regions,
+        "<div class=\"timer-body\">",
+        "  <div>",
+        "    <div class=\"countdown\"></div>",
+        "    <div class=\"target\"><strong></strong> <time></time></div>",
+        "  </div>",
+        "  <div class=\"side-col\" hidden><div class=\"sub-title\"></div></div>",
+        "</div>",
+        "<div class=\"timer-details\" hidden>",
+        ...indent([...details, ...list]),
+        "</div>"
+      ]),
+      "</div>"
+    ]
+  })
+}
+
+// Written into the page for the same reason as the timer cards, weather.js only picks the saved zone
+function zoneOptions(zones) {
+  const groups = Map.groupBy(zones, zone => zone.group)
+  return [...groups].flatMap(([group, members]) => [
+    `<optgroup label="${group}">`,
+    ...members.map(zone => `  <option>${zone.name}</option>`),
+    "</optgroup>"
+  ])
+}
+
+function renderPage(page, hashed, { timers, zones }) {
   const url = pageUrl(page)
 
   return includeHtml(fs.readFileSync(path.join(SRC, page), "utf8"), page)
     .replace(/^([ \t]*)<x-seo\s+([^>]*?)\s*\/?>/gm, (_, indent, attrs) =>
       seoTags(page, attrs).map(tag => indent + tag).join("\n"))
+    .replace(/^([ \t]*)<x-timers\s*\/?>/gm, (_, indent) =>
+      timerCards(timers).map(line => indent + line).join("\n"))
+    .replace(/^([ \t]*)<x-zones\s*\/?>/gm, (_, indent) =>
+      zoneOptions(zones).map(line => indent + line).join("\n"))
     .replace(/<x-js\s+src="([^"]+)"\s*\/?>/g, (_, file) =>
       `<script src="${assetUrl(`/js/${file}`, hashed)}"></script>`)
     .replace(/<x-css\s+src="([^"]+)"\s*\/?>/g, (_, file) =>
@@ -170,10 +236,11 @@ function renderPage(page, hashed) {
 async function buildHTML(hashed = true) {
   log("HTML", "Rendering pages...")
   const pages = listPages()
+  const data = { timers: await loadTimers(), zones: JSON.parse(fs.readFileSync(ZONES_FILE, "utf8")) }
   for (const page of pages) {
     const outputFile = path.join(OUT, page)
     fs.mkdirSync(path.dirname(outputFile), { recursive: true })
-    fs.writeFileSync(outputFile, renderPage(page, hashed))
+    fs.writeFileSync(outputFile, renderPage(page, hashed, data))
   }
   log("HTML", `Done rendering ${pages.length} pages`)
 }
@@ -246,7 +313,7 @@ async function watch() {
     const file = path.join(SRC, filename)
     if (file.startsWith(path.join(SRC, "scss")))
       buildCSS().catch(err => log("CSS", err.message))
-    else if (file.endsWith(".html"))
+    else if (file.endsWith(".html") || file === TIMERS_FILE || file === ZONES_FILE)
       buildHTML(false).then(buildSite).catch(err => log("HTML", err.message))
     else if (!isSkipped(file))
       copyAssets().catch(err => log("ASSET", err.message))

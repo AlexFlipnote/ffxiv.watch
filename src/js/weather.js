@@ -35,19 +35,9 @@ function option(value, text = value) {
   return el
 }
 
+// The zone options are already in the page, written by the build (see zoneOptions in build.js).
 // The last picked zone is remembered
-function fillZones() {
-  const groups = new Map()
-  for (const zone of ZONES) {
-    if (!groups.has(zone.group)) {
-      const group = document.createElement("optgroup")
-      group.label = zone.group
-      groups.set(zone.group, group)
-    }
-    groups.get(zone.group).append(option(zone.name))
-  }
-  zoneSelect.append(...groups.values())
-
+function pickZone() {
   let saved = null
   try {
     saved = localStorage.getItem(ZONE_KEY)
@@ -124,7 +114,7 @@ function render(now) {
   }
 }
 
-fillZones()
+pickZone()
 fillFilters()
 timeSelect.append(option(ANY, "Any"), ...[0, 8, 16].map((h) => option(String(h), `${pad(h)}:00`)))
 

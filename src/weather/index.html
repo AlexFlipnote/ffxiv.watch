@@ -5,7 +5,6 @@
     <x-seo
       title="Weather Forecast for Every Zone - ffxiv.watch"
       description="Weather forecast for every FFXIV zone. Find the next weather or transition, in your local time."
-      keywords="FFXIV, Final Fantasy XIV, FFXIV weather, weather forecast, Eorzea weather, Skywatcher, fishing, Sightseeing Log, Eureka weather, Bozja weather"
     />
   </head>
 
@@ -16,7 +15,9 @@
       <h1 class="sr-only">FFXIV Weather Forecast</h1>
       <main class="weather">
         <section class="weather-now">
-          <select class="select weather-zone" id="zone" aria-label="Zone"></select>
+          <select class="select weather-zone" id="zone" aria-label="Zone">
+            <x-zones/>
+          </select>
           <div class="weather-current">
             <div>
               <div class="weather-label">Now</div>
