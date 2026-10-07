@@ -3,6 +3,9 @@
 
 const EORZEA_MULTIPLIER = 3600 / 175
 
+// One Eorzean minute in Earth ms (~2917). Unix time 0 is also an ET minute boundary.
+export const ET_MINUTE_EARTH_MS = 175000 / 60
+
 const ET_MINUTE = 60 * 1000
 const ET_HOUR = 60 * ET_MINUTE
 const ET_SUN = 24 * ET_HOUR

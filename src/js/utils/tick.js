@@ -2,7 +2,8 @@
 export function tick(interval, fn) {
   const run = () => {
     fn(Date.now())
-    setTimeout(run, interval - (Date.now() % interval))
+    // Rounded up so a fractional interval never fires just before its boundary
+    setTimeout(run, Math.ceil(interval - (Date.now() % interval)))
   }
   run()
 }

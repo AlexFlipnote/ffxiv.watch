@@ -1,6 +1,6 @@
 import "./utils/navbar.js"
 import { applyDayNight } from "./utils/daynight.js"
-import { ordinal, toEorzea } from "./utils/eorzea.js"
+import { ET_MINUTE_EARTH_MS, ordinal, toEorzea } from "./utils/eorzea.js"
 import { formatCountdown, getAllTimerStates, gmtOffset, setTime } from "./utils/timers.js"
 import { tick } from "./utils/tick.js"
 
@@ -133,21 +133,28 @@ const timeOf = (date, utc) => (utc
   : [date.getHours(), date.getMinutes(), date.getSeconds()]
 ).map(pad).join(":")
 
-function renderClock(now) {
-  const et = toEorzea(now)
+function renderEarthClock(now) {
   const date = new Date(now)
 
-  etTime.textContent = `${pad(et.hours)}:${pad(et.minutes)}`
-  etDate.textContent = `${ordinal(et.sun)} Sun of the ${et.moonName}`
   localTime.textContent = timeOf(date, false)
   localZone.textContent = gmtOffset(date)
   serverTime.textContent = timeOf(date, true)
 }
 
-tick(1000, render)
+function renderEorzeaClock(now) {
+  const et = toEorzea(now)
 
-// An Eorzean minute is under 3 Earth seconds, so the clock ticks faster than the timers
-tick(250, (now) => {
-  renderClock(now)
+  etTime.textContent = `${pad(et.hours)}:${pad(et.minutes)}`
+  etDate.textContent = `${ordinal(et.sun)} Sun of the ${et.moonName}`
+}
+
+tick(1000, (now) => {
+  render(now)
+  renderEarthClock(now)
+})
+
+// Redraw ET right as each Eorzean minute starts, so it flips in step with the game
+tick(ET_MINUTE_EARTH_MS, (now) => {
+  renderEorzeaClock(now)
   applyDayNight(now)
 })
