@@ -24,17 +24,22 @@
     <link rel="preload" href="/fonts/google-sans-flex-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/google-sans-flex-700.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link href="/css/index.css?v=fe4d0222" type="text/css" rel="stylesheet">
-    <title>FFXIV Weather Forecast - ffxiv.watch</title>
+    <link href="/css/index.css?v=77bfcc14" type="text/css" rel="stylesheet">
+    <title>Weather Forecast for Every Zone - ffxiv.watch</title>
     <meta name="description" content="Weather forecast for every FFXIV zone. Find the next weather or transition, in your local time.">
+    <meta name="keywords" content="FFXIV, Final Fantasy XIV, FFXIV weather, weather forecast, Eorzea weather, Skywatcher, fishing, Sightseeing Log, Eureka weather, Bozja weather">
     <link rel="canonical" href="https://ffxiv.watch/weather/">
+    <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ffxiv.watch">
-    <meta property="og:title" content="FFXIV Weather Forecast - ffxiv.watch">
+    <meta property="og:title" content="Weather Forecast for Every Zone - ffxiv.watch">
     <meta property="og:description" content="Weather forecast for every FFXIV zone. Find the next weather or transition, in your local time.">
     <meta property="og:url" content="https://ffxiv.watch/weather/">
-    <meta property="og:image" content="https://ffxiv.watch/images/apple-touch-icon.png">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://ffxiv.watch/images/banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ffxiv.watch: Eorzea time, on your time.">
+    <meta name="twitter:card" content="summary_large_image">
   </head>
 
   <body>
@@ -95,6 +100,7 @@
     </nav>
 
     <div class="page">
+      <h1 class="sr-only">FFXIV Weather Forecast</h1>
       <main class="weather">
         <section class="weather-now">
           <select class="select weather-zone" id="zone" aria-label="Zone"></select>
@@ -106,7 +112,7 @@
             <div class="weather-next">
               <div class="weather-label">Next: <span id="next-weather"></span></div>
               <div class="countdown" id="next-countdown"></div>
-              <div class="target"><strong>Changes at:</strong> <span id="next-at"></span></div>
+              <div class="target"><strong>Changes at:</strong> <time id="next-at"></time></div>
             </div>
           </div>
         </section>
@@ -119,7 +125,7 @@
           </div>
           <table class="weather-table" id="forecast-table">
             <thead>
-              <tr><th>ET</th><th>Weather</th><th class="weather-local">Local time</th><th>In</th></tr>
+              <tr><th>ET</th><th>Weather</th><th class="weather-local">Local time (<span id="local-zone">GMT</span>)</th><th>In</th></tr>
             </thead>
             <tbody id="forecast"></tbody>
           </table>
@@ -128,6 +134,6 @@
       </main>
     </div>
 
-    <script src="/js/weather.js?v=527d15d1"></script>
+    <script src="/js/weather.js?v=25ad7d1b"></script>
   </body>
 </html>

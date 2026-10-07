@@ -24,17 +24,23 @@
     <link rel="preload" href="/fonts/google-sans-flex-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/google-sans-flex-700.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link href="/css/index.css?v=fe4d0222" type="text/css" rel="stylesheet">
-    <title>ffxiv.watch - FFXIV Timers & Resets</title>
-    <meta name="description" content="A lightning-fast, zero-bloat timer dashboard for Final Fantasy XIV.">
+    <link href="/css/index.css?v=77bfcc14" type="text/css" rel="stylesheet">
+    <title>ffxiv.watch - Resets & Eorzea Time</title>
+    <meta name="description" content="Eorzea time, on your time. Live FFXIV timers for daily and weekly resets, housing lottery, Jumbo Cactpot, GATEs and Ocean Fishing.">
+    <meta name="keywords" content="FFXIV, Final Fantasy XIV, FFXIV reset timer, daily reset, weekly reset, Eorzea time, ET clock, Grand Company reset, housing lottery, Jumbo Cactpot, GATE, Ocean Fishing">
     <link rel="canonical" href="https://ffxiv.watch/">
+    <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ffxiv.watch">
-    <meta property="og:title" content="ffxiv.watch - FFXIV Timers & Resets">
-    <meta property="og:description" content="A lightning-fast, zero-bloat timer dashboard for Final Fantasy XIV.">
+    <meta property="og:title" content="ffxiv.watch - Resets & Eorzea Time">
+    <meta property="og:description" content="Eorzea time, on your time. Live FFXIV timers for daily and weekly resets, housing lottery, Jumbo Cactpot, GATEs and Ocean Fishing.">
     <meta property="og:url" content="https://ffxiv.watch/">
-    <meta property="og:image" content="https://ffxiv.watch/images/apple-touch-icon.png">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://ffxiv.watch/images/banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ffxiv.watch: Eorzea time, on your time.">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ffxiv.watch","url":"https://ffxiv.watch/"}</script>
   </head>
 
   <body>
@@ -95,13 +101,14 @@
     </nav>
 
     <div class="page">
+      <h1 class="sr-only">FFXIV Reset Timers and Eorzea Time</h1>
       <main class="timers" id="timers">
         <section class="clock">
           <div class="clock-time" id="et-time">00:00</div>
           <div class="clock-details">
             <div class="clock-date" id="et-date"></div>
             <div class="clock-earth">
-              <div><strong>Local</strong> <span id="local-time"></span></div>
+              <div><strong>Local (<span id="local-zone">GMT</span>)</strong> <span id="local-time"></span></div>
               <div><strong>Server (UTC)</strong> <span id="server-time"></span></div>
             </div>
           </div>
@@ -120,6 +127,6 @@
       </div>
     </dialog>
 
-    <script src="/js/index.js?v=a6af28ef"></script>
+    <script src="/js/index.js?v=922162f4"></script>
   </body>
 </html>
