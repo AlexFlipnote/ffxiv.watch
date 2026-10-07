@@ -32,10 +32,9 @@
     <link rel="preload" href="/fonts/google-sans-flex-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/google-sans-flex-700.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link href="/css/index.css?v=0e35e02c" type="text/css" rel="stylesheet">
+    <link href="/css/index.css?v=b9e89100" type="text/css" rel="stylesheet">
     <title>Weather Forecast for Every Zone - ffxiv.watch</title>
     <meta name="description" content="Weather forecast for every FFXIV zone. Find the next weather or transition, in your local time.">
-    <meta name="keywords" content="FFXIV, Final Fantasy XIV, FFXIV weather, weather forecast, Eorzea weather, Skywatcher, fishing, Sightseeing Log, Eureka weather, Bozja weather">
     <link rel="canonical" href="https://ffxiv.watch/weather/">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
@@ -111,7 +110,104 @@
       <h1 class="sr-only">FFXIV Weather Forecast</h1>
       <main class="weather">
         <section class="weather-now">
-          <select class="select weather-zone" id="zone" aria-label="Zone"></select>
+          <select class="select weather-zone" id="zone" aria-label="Zone">
+            <optgroup label="A Realm Reborn">
+              <option>Limsa Lominsa Upper Decks</option>
+              <option>Limsa Lominsa Lower Decks</option>
+              <option>Ul'dah - Steps of Nald</option>
+              <option>Ul'dah - Steps of Thal</option>
+              <option>New Gridania</option>
+              <option>Old Gridania</option>
+              <option>Middle La Noscea</option>
+              <option>Lower La Noscea</option>
+              <option>Eastern La Noscea</option>
+              <option>Western La Noscea</option>
+              <option>Upper La Noscea</option>
+              <option>Western Thanalan</option>
+              <option>Central Thanalan</option>
+              <option>Eastern Thanalan</option>
+              <option>Southern Thanalan</option>
+              <option>Northern Thanalan</option>
+              <option>Central Shroud</option>
+              <option>East Shroud</option>
+              <option>South Shroud</option>
+              <option>North Shroud</option>
+              <option>Coerthas Central Highlands</option>
+              <option>Mor Dhona</option>
+              <option>Outer La Noscea</option>
+              <option>Wolves' Den Pier</option>
+            </optgroup>
+            <optgroup label="Heavensward">
+              <option>Coerthas Western Highlands</option>
+              <option>The Dravanian Forelands</option>
+              <option>The Dravanian Hinterlands</option>
+              <option>The Churning Mists</option>
+              <option>The Sea of Clouds</option>
+              <option>Azys Lla</option>
+              <option>Foundation</option>
+              <option>The Pillars</option>
+              <option>Idyllshire</option>
+            </optgroup>
+            <optgroup label="Stormblood">
+              <option>The Fringes</option>
+              <option>The Ruby Sea</option>
+              <option>Yanxia</option>
+              <option>The Peaks</option>
+              <option>The Lochs</option>
+              <option>The Azim Steppe</option>
+              <option>Kugane</option>
+              <option>Rhalgr's Reach</option>
+              <option>The Doman Enclave</option>
+            </optgroup>
+            <optgroup label="Shadowbringers">
+              <option>Lakeland</option>
+              <option>Kholusia</option>
+              <option>Amh Araeng</option>
+              <option>Il Mheg</option>
+              <option>The Rak'tika Greatwood</option>
+              <option>The Tempest</option>
+              <option>The Crystarium</option>
+              <option>Eulmore</option>
+            </optgroup>
+            <optgroup label="Endwalker">
+              <option>Labyrinthos</option>
+              <option>Thavnair</option>
+              <option>Garlemald</option>
+              <option>Mare Lamentorum</option>
+              <option>Ultima Thule</option>
+              <option>Elpis</option>
+              <option>Old Sharlayan</option>
+              <option>Radz-at-Han</option>
+            </optgroup>
+            <optgroup label="Dawntrail">
+              <option>Tuliyollal</option>
+              <option>Solution Nine</option>
+              <option>Urqopacha</option>
+              <option>Kozama'uka</option>
+              <option>Yak T'el</option>
+              <option>Shaaloani</option>
+              <option>Heritage Found</option>
+              <option>Living Memory</option>
+            </optgroup>
+            <optgroup label="Housing">
+              <option>Mist</option>
+              <option>The Lavender Beds</option>
+              <option>The Goblet</option>
+              <option>Shirogane</option>
+              <option>Empyreum</option>
+            </optgroup>
+            <optgroup label="Field Operations">
+              <option>Eureka Anemos</option>
+              <option>Eureka Pagos</option>
+              <option>Eureka Pyros</option>
+              <option>Eureka Hydatos</option>
+              <option>Bozjan Southern Front</option>
+              <option>Zadnor</option>
+              <option>Island Sanctuary</option>
+              <option>South Horn</option>
+              <option>North Horn</option>
+            </optgroup>
+          </select>
           <div class="weather-current">
             <div>
               <div class="weather-label">Now</div>
@@ -142,6 +238,6 @@
       </main>
     </div>
 
-    <script src="/js/weather.js?v=039024bf"></script>
+    <script src="/js/weather.js?v=e05c7363"></script>
   </body>
 </html>

@@ -32,16 +32,15 @@
     <link rel="preload" href="/fonts/google-sans-flex-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/google-sans-flex-700.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link href="/css/index.css?v=0e35e02c" type="text/css" rel="stylesheet">
-    <title>ffxiv.watch - Resets & Eorzea Time</title>
-    <meta name="description" content="Eorzea time, on your time. Live FFXIV timers for daily and weekly resets, housing lottery, Jumbo Cactpot, GATEs and Ocean Fishing.">
-    <meta name="keywords" content="FFXIV, Final Fantasy XIV, FFXIV reset timer, daily reset, weekly reset, Eorzea time, ET clock, Grand Company reset, housing lottery, Jumbo Cactpot, GATE, Ocean Fishing">
+    <link href="/css/index.css?v=b9e89100" type="text/css" rel="stylesheet">
+    <title>FFXIV Timers: Daily & Weekly Resets, Eorzea Time - ffxiv.watch</title>
+    <meta name="description" content="Live FFXIV timers for daily and weekly resets, housing lottery, Jumbo Cactpot, GATEs and Ocean Fishing, plus Eorzea time.">
     <link rel="canonical" href="https://ffxiv.watch/">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ffxiv.watch">
-    <meta property="og:title" content="ffxiv.watch - Resets & Eorzea Time">
-    <meta property="og:description" content="Eorzea time, on your time. Live FFXIV timers for daily and weekly resets, housing lottery, Jumbo Cactpot, GATEs and Ocean Fishing.">
+    <meta property="og:title" content="FFXIV Timers: Daily & Weekly Resets, Eorzea Time - ffxiv.watch">
+    <meta property="og:description" content="Live FFXIV timers for daily and weekly resets, housing lottery, Jumbo Cactpot, GATEs and Ocean Fishing, plus Eorzea time.">
     <meta property="og:url" content="https://ffxiv.watch/">
     <meta property="og:image" content="https://ffxiv.watch/images/banner.png">
     <meta property="og:image:width" content="1200">
@@ -121,6 +120,186 @@
             </div>
           </div>
         </section>
+        <div class="timer" data-id="housing">
+          <div class="timer-header">
+            <h2 class="title">Housing</h2>
+            <button class="info-btn" title="Details">i</button>
+          </div>
+          <div class="timer-body">
+            <div>
+              <div class="countdown"></div>
+              <div class="target"><strong></strong> <time></time></div>
+            </div>
+            <div class="side-col" hidden><div class="sub-title"></div></div>
+          </div>
+          <div class="timer-details" hidden>
+            <p>Application Period: During this time, you may place an entry into the housing lottery.</p>
+            <p>Results Period: During this time, you may accept a winning bid.</p>
+          </div>
+        </div>
+        <div class="timer" data-id="weekly">
+          <div class="timer-header">
+            <h2 class="title">Weekly Reset</h2>
+            <button class="info-btn" title="Details">i</button>
+          </div>
+          <div class="timer-body">
+            <div>
+              <div class="countdown"></div>
+              <div class="target"><strong></strong> <time></time></div>
+            </div>
+            <div class="side-col" hidden><div class="sub-title"></div></div>
+          </div>
+          <div class="timer-details" hidden>
+            <p>On the weekly reset, the following resets:</p>
+            <ul>
+              <li>Cap on latest Allagan tomestones</li>
+              <li>Weekly repeatable quests</li>
+              <li>Latest Savage raid tier reward eligibility</li>
+              <li>Latest Alliance Raid reward eligibility</li>
+              <li>Blue Mage/Masked Carnival Weekly Targets</li>
+              <li>PvP Weekly Performance</li>
+              <li>Challenge Log challenges</li>
+              <li>New Wondrous Tails journal availability</li>
+              <li>Faux Hollows availability</li>
+              <li>Custom deliveries allowances/individual allowances</li>
+              <li>Doman Enclave Reconstruction Effort donations</li>
+              <li>Adventurer Squadron Priority mission</li>
+              <li>Fashion Report Theme Reveal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timer" data-id="daily">
+          <div class="timer-header">
+            <h2 class="title">Daily reset</h2>
+            <button class="info-btn" title="Details">i</button>
+          </div>
+          <div class="timer-body">
+            <div>
+              <div class="countdown"></div>
+              <div class="target"><strong></strong> <time></time></div>
+            </div>
+            <div class="side-col" hidden><div class="sub-title"></div></div>
+          </div>
+          <div class="timer-details" hidden>
+            <p>At this time, the following resets:</p>
+            <ul>
+              <li>Allied society daily quest allowances</li>
+              <li>Duty Roulette daily bonuses</li>
+              <li>Daily repeatable quests</li>
+              <li>Frontline Duty Availability</li>
+              <li>Housing Message</li>
+              <li>Mini Cactpot</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timer" data-id="gc">
+          <div class="timer-header">
+            <h2 class="title">Grand Company Daily Reset</h2>
+            <button class="info-btn" title="Details">i</button>
+          </div>
+          <div class="timer-body">
+            <div>
+              <div class="countdown"></div>
+              <div class="target"><strong></strong> <time></time></div>
+            </div>
+            <div class="side-col" hidden><div class="sub-title"></div></div>
+          </div>
+          <div class="timer-details" hidden>
+            <p>At this time, the following resets:</p>
+            <ul>
+              <li>Adventurer Squadron training allowances</li>
+              <li>Grand Company Supply/Provisioning missions</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timer small" data-id="gates">
+          <div class="timer-header">
+            <h2 class="title">Gold Saucer GATEs</h2>
+            <button class="info-btn" title="Details">i</button>
+          </div>
+          <div class="timer-body">
+            <div>
+              <div class="countdown"></div>
+              <div class="target"><strong></strong> <time></time></div>
+            </div>
+            <div class="side-col" hidden><div class="sub-title"></div></div>
+          </div>
+          <div class="timer-details" hidden>
+            <p>Gold Saucer Active Time Maneuvers begin:</p>
+            <ul>
+              <li>GATE registration opens</li>
+              <li>A random Gold Saucer minigame spawns</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timer small" data-id="fashion_judging">
+          <div class="timer-header">
+            <h2 class="title">Fashion Report</h2>
+            <button class="info-btn" title="Details">i</button>
+          </div>
+          <div class="timer-body">
+            <div>
+              <div class="countdown"></div>
+              <div class="target"><strong></strong> <time></time></div>
+            </div>
+            <div class="side-col" hidden><div class="sub-title"></div></div>
+          </div>
+          <div class="timer-details" hidden>
+            <p>At this time, the Masked Rose begins judging:</p>
+            <ul>
+              <li>Fashion Report judging begins</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timer small" data-id="jumbo_cactpot">
+          <div class="timer-header">
+            <h2 class="title">Jumbo Cactpot</h2>
+            <button class="info-btn" title="Details">i</button>
+          </div>
+          <div class="region-picker" role="group" aria-label="Region">
+            <button class="region-btn">EU</button>
+            <button class="region-btn">NA</button>
+            <button class="region-btn">JP</button>
+            <button class="region-btn">OCE</button>
+          </div>
+          <div class="timer-body">
+            <div>
+              <div class="countdown"></div>
+              <div class="target"><strong></strong> <time></time></div>
+            </div>
+            <div class="side-col" hidden><div class="sub-title"></div></div>
+          </div>
+          <div class="timer-details" hidden>
+            <p>EU: The weekly lottery numbers are drawn for Chaos and Light:</p>
+            <p>NA: The weekly lottery numbers are drawn for Aether, Primal, Crystal, and Dynamis:</p>
+            <p>JP: The weekly lottery numbers are drawn for Elemental, Gaia, Mana, and Meteor:</p>
+            <p>OCE: The weekly lottery numbers are drawn for Materia:</p>
+            <ul>
+              <li>Jumbo Cactpot drawing</li>
+              <li>Early bird bonus active for 1 hour</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timer small" data-id="ocean_fishing">
+          <div class="timer-header">
+            <h2 class="title">Ocean Fishing</h2>
+            <button class="info-btn" title="Details">i</button>
+          </div>
+          <div class="timer-body">
+            <div>
+              <div class="countdown"></div>
+              <div class="target"><strong></strong> <time></time></div>
+            </div>
+            <div class="side-col" hidden><div class="sub-title"></div></div>
+          </div>
+          <div class="timer-details" hidden>
+            <p>Board the voyage by talking to Dryskthota in Limsa Lominsa Lower Decks:</p>
+            <ul>
+              <li>Boarding opens every even hour UTC</li>
+              <li>Boarding closes 15 minutes later</li>
+            </ul>
+          </div>
+        </div>
       </main>
     </div>
 
@@ -135,6 +314,6 @@
       </div>
     </dialog>
 
-    <script src="/js/index.js?v=4e8ba711"></script>
+    <script src="/js/index.js?v=e9ae3871"></script>
   </body>
 </html>
