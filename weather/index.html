@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#181818">
+    <meta name="theme-color" content="#1a1a1a">
 
     <!-- Theme before the first paint so it never flashes, same logic as js/utils/theme.js -->
     <script>
@@ -20,11 +20,19 @@
     <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
+    <!-- "Add to Home Screen": the name and icon it gets, and opening without the browser bars -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="application-name" content="ffxiv.watch">
+    <meta name="apple-mobile-web-app-title" content="ffxiv.watch">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <!-- Preloaded so nothing shifts when they arrive -->
     <link rel="preload" href="/fonts/google-sans-flex-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/google-sans-flex-700.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link href="/css/index.css?v=77bfcc14" type="text/css" rel="stylesheet">
+    <link href="/css/index.css?v=0e35e02c" type="text/css" rel="stylesheet">
     <title>Weather Forecast for Every Zone - ffxiv.watch</title>
     <meta name="description" content="Weather forecast for every FFXIV zone. Find the next weather or transition, in your local time.">
     <meta name="keywords" content="FFXIV, Final Fantasy XIV, FFXIV weather, weather forecast, Eorzea weather, Skywatcher, fishing, Sightseeing Log, Eureka weather, Bozja weather">
@@ -134,6 +142,6 @@
       </main>
     </div>
 
-    <script src="/js/weather.js?v=25ad7d1b"></script>
+    <script src="/js/weather.js?v=039024bf"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#181818">
+    <meta name="theme-color" content="#1a1a1a">
 
     <!-- Theme before the first paint so it never flashes, same logic as js/utils/theme.js -->
     <script>
@@ -20,11 +20,19 @@
     <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
+    <!-- "Add to Home Screen": the name and icon it gets, and opening without the browser bars -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="application-name" content="ffxiv.watch">
+    <meta name="apple-mobile-web-app-title" content="ffxiv.watch">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <!-- Preloaded so nothing shifts when they arrive -->
     <link rel="preload" href="/fonts/google-sans-flex-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/google-sans-flex-700.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link href="/css/index.css?v=77bfcc14" type="text/css" rel="stylesheet">
+    <link href="/css/index.css?v=0e35e02c" type="text/css" rel="stylesheet">
     <title>ffxiv.watch - Resets & Eorzea Time</title>
     <meta name="description" content="Eorzea time, on your time. Live FFXIV timers for daily and weekly resets, housing lottery, Jumbo Cactpot, GATEs and Ocean Fishing.">
     <meta name="keywords" content="FFXIV, Final Fantasy XIV, FFXIV reset timer, daily reset, weekly reset, Eorzea time, ET clock, Grand Company reset, housing lottery, Jumbo Cactpot, GATE, Ocean Fishing">
@@ -127,6 +135,6 @@
       </div>
     </dialog>
 
-    <script src="/js/index.js?v=922162f4"></script>
+    <script src="/js/index.js?v=4e8ba711"></script>
   </body>
 </html>
