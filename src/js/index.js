@@ -1,13 +1,14 @@
 import "./utils/navbar.js"
 import { applyDayNight } from "./utils/daynight.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
-import { formatCountdown, formatDate, getAllTimerStates } from "./utils/timers.js"
+import { formatCountdown, getAllTimerStates, gmtOffset, setTime } from "./utils/timers.js"
 import { tick } from "./utils/tick.js"
 
 const container = document.getElementById("timers")
 const etTime = document.getElementById("et-time")
 const etDate = document.getElementById("et-date")
 const localTime = document.getElementById("local-time")
+const localZone = document.getElementById("local-zone")
 const serverTime = document.getElementById("server-time")
 const modal = document.getElementById("modal")
 const modalTitle = document.getElementById("modal-title")
@@ -58,7 +59,7 @@ function createCard(timer) {
     <div class="timer-body">
       <div>
         <div class="countdown"></div>
-        <div class="target"><strong></strong> <span></span></div>
+        <div class="target"><strong></strong> <time></time></div>
       </div>
       <div class="side-col"><div class="sub-title"></div></div>
     </div>
@@ -95,7 +96,7 @@ function createCard(timer) {
     title: card.querySelector(".title"),
     countdown: card.querySelector(".countdown"),
     targetLabel: card.querySelector(".target strong"),
-    targetDate: card.querySelector(".target span"),
+    targetDate: card.querySelector(".target time"),
     sideCol: card.querySelector(".side-col"),
     next: card.querySelector(".sub-title")
   }
@@ -106,7 +107,7 @@ function updateCard(els, timer, now) {
   els.title.textContent = timer.title
   els.countdown.textContent = formatCountdown(timer.target - now)
   els.targetLabel.textContent = `${timer.targetLabel}:`
-  els.targetDate.textContent = formatDate(new Date(timer.target), new Date(now))
+  setTime(els.targetDate, new Date(timer.target), new Date(now))
   els.sideCol.hidden = !timer.nextPhase
   els.next.textContent = timer.nextPhase ? `Next: ${timer.nextPhase}` : ""
   els.regionBtns.forEach((btn, i) => btn.setAttribute("aria-pressed", timer.regions[i].id === timer.region))
@@ -168,6 +169,7 @@ function renderClock(now) {
   etTime.textContent = `${pad(et.hours)}:${pad(et.minutes)}`
   etDate.textContent = `${ordinal(et.sun)} Sun of the ${et.moonName}`
   localTime.textContent = timeOf(date, false)
+  localZone.textContent = gmtOffset(date)
   serverTime.textContent = timeOf(date, true)
 }
 

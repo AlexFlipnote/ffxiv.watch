@@ -1,7 +1,14 @@
-// Frosted navbar, same as the xelA dashboard. On mobile the links slide in from the left
+// Frosted navbar, same as the xelA dashboard. On mobile the links slide in from the left, frosted the same way
 @use "../mixins" as *;
 
 $height: 5rem;
+
+@mixin frosted {
+  background-color: var(--surface);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--navbar-shadow);
+}
 
 .navbar {
   position: sticky;
@@ -18,14 +25,11 @@ $height: 5rem;
   // The frosted background lives on its own layer, backdrop-filter on .navbar itself
   // would trap the fixed-position mobile menu inside the bar
   &::before {
+    @include frosted;
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
-    background-color: var(--surface);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, .35);
   }
 }
 
@@ -63,7 +67,7 @@ $height: 5rem;
     font-size: 1.125rem;
     color: var(--font-secondary);
     text-decoration: none;
-    transition: color .2s;
+    transition: color .2s, background-color .2s;
 
     &:hover {
       color: var(--font-primary);
@@ -86,19 +90,28 @@ $height: 5rem;
   }
 }
 
+// Same round button as the theme toggle, the icon keeps its own size
 .navbar-hamburger {
   display: none;
-  width: 1.625rem;
-  height: 1.625rem;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0;
-  background: none;
   border: none;
+  border-radius: 50%;
+  background: none;
   color: var(--font-primary);
   cursor: pointer;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: var(--chip-background);
+  }
 
   svg {
-    width: 100%;
-    height: 100%;
+    width: 1.625rem;
+    height: 1.625rem;
     fill: currentColor;
   }
 }
@@ -120,7 +133,7 @@ $height: 5rem;
 
   &:hover {
     color: var(--font-primary);
-    background-color: var(--blur-background);
+    background-color: var(--chip-background);
   }
 
   svg {
@@ -144,18 +157,26 @@ $height: 5rem;
 }
 
 @include mobile {
+  // Menu button left, logo centered, theme toggle right. The links are out of the flow in their slide-out panel
   .navbar-inner {
     box-sizing: border-box;
     width: 100%;
     padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     gap: .75rem;
   }
 
   .navbar-hamburger {
-    display: block;
+    display: flex;
+  }
+
+  .theme-toggle {
+    justify-self: end;
   }
 
   .navbar-links {
+    @include frosted;
     position: fixed;
     top: $height;
     bottom: 0;
@@ -166,18 +187,16 @@ $height: 5rem;
     flex-direction: column;
     align-items: stretch;
     overflow-y: auto;
-    background-color: var(--surface-solid);
-    box-shadow: 4px 0 16px rgba(0, 0, 0, .3);
     transform: translateX(-100%);
     visibility: hidden;
     transition: transform .25s ease-in-out, visibility 0s linear .25s;
 
     a {
       padding: 1rem 1.25rem;
-      border-bottom: 1px solid var(--surface-hover);
+      border-bottom: .05rem solid var(--divider);
 
       &:hover {
-        background-color: var(--surface-hover);
+        background-color: var(--chip-background);
       }
 
       &:not(:first-child)::before {

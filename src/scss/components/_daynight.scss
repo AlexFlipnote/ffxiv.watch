@@ -20,10 +20,10 @@
   &[data-time="dusk"]  { --bg: #1f1815; --glow: rgba(235, 125, 50, .2); }
 
   &[data-theme="light"] {
-    &[data-time="night"] { --bg: #e4e7ef; --glow: rgba(60, 80, 160, .16); }
-    &[data-time="dawn"]  { --bg: #f2eaef; --glow: rgba(210, 110, 160, .16); }
-    &[data-time="day"]   { --bg: #eef1f4; --glow: rgba(20, 186, 228, .14); }
-    &[data-time="dusk"]  { --bg: #f4ede7; --glow: rgba(235, 125, 50, .16); }
+    &[data-time="night"] { --bg: #d5d8e0; --glow: rgba(60, 80, 160, .08); }
+    &[data-time="dawn"]  { --bg: #dcd7da; --glow: rgba(210, 110, 160, .08); }
+    &[data-time="day"]   { --bg: #d6dbdf; --glow: rgba(20, 186, 228, .08); }
+    &[data-time="dusk"]  { --bg: #dcd8d3; --glow: rgba(235, 125, 50, .08); }
   }
 
   &.daynight-fade {

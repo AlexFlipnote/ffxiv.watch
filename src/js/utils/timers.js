@@ -194,13 +194,29 @@ export function formatCountdown(ms) {
   return d > 0 ? `${d} ${d > 1 ? "days" : "day"}, ${time}` : time
 }
 
-/** "Tue 13/10, 10:00 GMT+2", or "10:00 GMT+2" when it's today */
-export function formatDate(date, now = new Date()) {
+/** "Tue 13 Oct, 10:00", or "10:00" when it's today. The page shows the time zone once, see gmtOffset */
+function formatDate(date, now = new Date()) {
   const today = date.toDateString() === now.toDateString()
-  const formatted = date.toLocaleString("en-GB", {
-    ...(today ? {} : { weekday: "short", day: "2-digit", month: "2-digit" }),
+  return date.toLocaleString("en-GB", {
+    ...(today ? {} : { weekday: "short", day: "numeric", month: "short" }),
     hour: "2-digit", minute: "2-digit", hour12: false
   })
-  const offset = -date.getTimezoneOffset() / 60
-  return `${formatted} GMT${offset >= 0 ? "+" : ""}${offset}`
+}
+
+/** Fills a <time>: the short date on the page, "Tuesday, 13 October 2026 at 10:00 (GMT+2)" on hover */
+export function setTime(el, date, now, { zone = false } = {}) {
+  el.textContent = zone ? `${formatDate(date, now)} ${gmtOffset(date)}` : formatDate(date, now)
+  el.dateTime = date.toISOString()
+  el.title = `${date.toLocaleString("en-GB", {
+    weekday: "long", day: "numeric", month: "long", year: "numeric",
+    hour: "2-digit", minute: "2-digit", hour12: false
+  })} (${gmtOffset(date)})`
+}
+
+/** "GMT+2", or "GMT+5:30" for zones that aren't a whole hour off */
+export function gmtOffset(date) {
+  const minutes = -date.getTimezoneOffset()
+  const hours = Math.floor(Math.abs(minutes) / 60)
+  const rest = Math.abs(minutes) % 60
+  return `GMT${minutes < 0 ? "-" : "+"}${hours}${rest ? `:${String(rest).padStart(2, "0")}` : ""}`
 }

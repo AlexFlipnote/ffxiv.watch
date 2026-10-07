@@ -1,6 +1,6 @@
 import "./utils/navbar.js"
 import { applyDayNight } from "./utils/daynight.js"
-import { formatCountdown, formatDate } from "./utils/timers.js"
+import { formatCountdown, gmtOffset, setTime } from "./utils/timers.js"
 import { tick } from "./utils/tick.js"
 import { WEATHER_PERIOD, ZONES, forecast, periodStart, weatherAt, weatherNames } from "./utils/weather.js"
 
@@ -15,6 +15,7 @@ const nextAt = document.getElementById("next-at")
 const forecastBody = document.getElementById("forecast")
 const forecastTable = document.getElementById("forecast-table")
 const forecastEmpty = document.getElementById("forecast-empty")
+const localZone = document.getElementById("local-zone")
 
 const ZONE_KEY = "weather-zone"
 const DEFAULT_ZONE = "Middle La Noscea"
@@ -84,14 +85,14 @@ function renderForecast(now) {
     tr.innerHTML = `
       <td class="weather-et"></td>
       <td><span class="weather-previous"></span><span class="weather-arrow"> → </span><strong></strong></td>
-      <td class="weather-local"></td>
+      <td class="weather-local"><time></time></td>
       <td class="weather-in"></td>
     `
     const cells = tr.querySelectorAll("td")
     cells[0].textContent = `${pad(etHour(p.start))}:00`
     tr.querySelector(".weather-previous").textContent = p.previous
     tr.querySelector("strong").textContent = p.weather
-    cells[2].textContent = formatDate(new Date(p.start), new Date(now))
+    setTime(cells[2].querySelector("time"), new Date(p.start), new Date(now))
     return { period: p, tr, inCell: cells[3] }
   })
 
@@ -108,7 +109,8 @@ function render(now) {
   nowWeather.textContent = weatherAt(zone, now)
   nextWeather.textContent = weatherAt(zone, next)
   nextCountdown.textContent = formatCountdown(next - now)
-  nextAt.textContent = formatDate(new Date(next), new Date(now))
+  setTime(nextAt, new Date(next), new Date(now), { zone: true })
+  localZone.textContent = gmtOffset(new Date(now))
 
   // The list only changes when the weather does, or when a picker changes
   const key = [zone.name, fromSelect.value, toSelect.value, timeSelect.value, periodStart(now)].join("|")

@@ -92,7 +92,7 @@
 }
 
 .info-btn {
-  background: var(--blur-background);
+  background: var(--chip-background);
   border: none;
   color: var(--accent);
   border-radius: 50%;
@@ -124,7 +124,7 @@
 .region-btn {
   flex: 1;
   padding: .125rem .25rem;
-  background: var(--blur-background);
+  background: var(--chip-background);
   border: none;
   border-radius: .375rem;
   color: var(--font-tertiary);

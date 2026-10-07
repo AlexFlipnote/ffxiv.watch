@@ -92,7 +92,7 @@ async function buildCSS() {
   - <x-html str="partials/topbar.html"/>  pastes in src/partials/topbar.html (partials can include partials)
   - <x-js src="index.js"/>                <script src="/js/index.js?v=hash"></script>
   - <x-css src="index.css"/>              <link href="/css/index.css?v=hash" rel="stylesheet">
-  - <x-seo title="..." description="..."/>  <title>, description, canonical URL and link preview tags
+  - <x-seo title="..." description="..." keywords="..."/>  <title>, description, canonical URL and link preview tags (keywords is optional)
 
   The ?v=hash is only added on production builds, so browsers and Cloudflare fetch the new file after a deploy.
   Links pointing at the page they're on get aria-current="page", which is how the topbar marks the active page.
@@ -124,19 +124,32 @@ function seoTags(page, attrs) {
   const description = attr("description")
   if (!title || !description) throw new Error(`${page}: <x-seo> needs a title and a description`)
 
+  const keywords = attr("keywords")
   const url = `https://${DOMAIN}${pageUrl(page)}`
   const meta = (key, name, content) => `<meta ${key}="${name}" content="${content}">`
+
+  // Lets Google show "ffxiv.watch" as the site name in results, it only reads this from the front page
+  const siteName = pageUrl(page) === "/"
+    ? [`<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "WebSite", name: DOMAIN, url })}</script>`]
+    : []
+
   return [
     `<title>${title}</title>`,
     meta("name", "description", description),
+    ...(keywords ? [meta("name", "keywords", keywords)] : []),
     `<link rel="canonical" href="${url}">`,
+    meta("property", "og:locale", "en_US"),
     meta("property", "og:type", "website"),
     meta("property", "og:site_name", DOMAIN),
     meta("property", "og:title", title),
     meta("property", "og:description", description),
     meta("property", "og:url", url),
-    meta("property", "og:image", `https://${DOMAIN}/images/apple-touch-icon.png`),
-    meta("name", "twitter:card", "summary")
+    meta("property", "og:image", `https://${DOMAIN}/images/banner.png`),
+    meta("property", "og:image:width", "1200"),
+    meta("property", "og:image:height", "630"),
+    meta("property", "og:image:alt", `${DOMAIN}: Eorzea time, on your time.`),
+    meta("name", "twitter:card", "summary_large_image"),
+    ...siteName
   ]
 }
 

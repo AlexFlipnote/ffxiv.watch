@@ -105,7 +105,7 @@
   }
 
   tr.current td {
-    background: var(--blur-background);
+    background: var(--chip-background);
 
     strong {
       color: var(--accent);
@@ -139,7 +139,7 @@
 }
 
 .select {
-  @include glass;
+  background-color: var(--chip-background);
   border: none;
   border-radius: .5rem;
   padding: .375rem .625rem;
