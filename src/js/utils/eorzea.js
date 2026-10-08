@@ -1,6 +1,4 @@
-// Eorzea time runs 3600/175 (~20.57x) faster than Earth time: one Eorzean hour is 175 Earth seconds.
-// The Eorzean calendar has 12 moons of 32 suns, alternating Astral (odd) and Umbral (even).
-
+// One Eorzean hour is 175 Earth seconds. A year is 12 moons of 32 suns, alternating Astral (odd) and Umbral (even)
 const EORZEA_MULTIPLIER = 3600 / 175
 
 // One Eorzean minute in Earth ms (~2917). Unix time 0 is also an ET minute boundary.
@@ -11,6 +9,11 @@ const ET_HOUR = 60 * ET_MINUTE
 const ET_SUN = 24 * ET_HOUR
 const ET_MOON = 32 * ET_SUN
 
+/**
+ * Eorzea time and date at an Earth time.
+ * @param {number} earthMs
+ * @returns {{ hours: number, minutes: number, sun: number, moon: number, moonName: string }}
+ */
 export function toEorzea(earthMs) {
   const et = earthMs * EORZEA_MULTIPLIER
   const moon = (Math.floor(et / ET_MOON) % 12) + 1
@@ -24,6 +27,10 @@ export function toEorzea(earthMs) {
   }
 }
 
+/**
+ * @param {number} n
+ * @returns {string} "1st", "2nd", "11th"...
+ */
 export function ordinal(n) {
   const suffix = { 1: "st", 2: "nd", 3: "rd" }[n % 100 >= 11 && n % 100 <= 13 ? 0 : n % 10] ?? "th"
   return `${n}${suffix}`

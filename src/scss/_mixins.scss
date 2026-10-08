@@ -1,5 +1,3 @@
-// Shared building blocks. Use from any component with: @use "../mixins" as *;
-
 $content-width: 62.5rem;
 $ease: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -18,8 +16,20 @@ $ease: cubic-bezier(0.16, 1, 0.3, 1);
   border-radius: 1rem;
 }
 
-// Full-width column that lines up across pages
+// Divider along the top of a table row, drawn as a background so it can stop short of the table's sides
+// and never bends around a rounded corner like a border would. $left/$right: how far in it starts and ends
+$row-line-inset: 1rem;
+
+// The 0px needs its unit, calc(100% - 0) is invalid and the line would fill the whole cell
+@mixin row-line($left: 0px, $right: 0px) {
+  background-image: linear-gradient(var(--divider), var(--divider));
+  background-repeat: no-repeat;
+  background-position: $left 0;
+  background-size: calc(100% - #{$left} - #{$right}) 1px;
+}
+
+// Full-width column that lines up across pages, with a 1rem gutter on each side
 @mixin content-column {
-  width: 95%;
+  width: calc(100% - 2rem);
   max-width: $content-width;
 }

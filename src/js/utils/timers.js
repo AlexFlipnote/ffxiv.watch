@@ -2,16 +2,35 @@ const MINUTE = 60 * 1000
 const HOUR = 60 * MINUTE
 const DAY = 24 * HOUR
 
-/*
-  Two kinds of timers:
-  - recurring: fires every `every` ms, aligned to Unix epoch + `offset`.
-    Optional `window`: stays open for that long after firing, shown as `windowName`.
-    Optional `regions`: one card with a region picker, each region brings its own `offset` and `info`.
-  - phased: loops through `phases` in order, starting from `startTime`
+/**
+ * @typedef {object} RecurringTimer Fires every `every` ms, at Unix epoch + `offset`
+ * @property {"recurring"} kind
+ * @property {string} id
+ * @property {string} name
+ * @property {number} every
+ * @property {number} [offset] Unix epoch was a Thursday, so weekly offsets count from Thursday 00:00 UTC
+ * @property {number} [window] Stays open this long after firing, shown as `windowName`
+ * @property {string} [windowName]
+ * @property {{ id: string, name: string, offset: number, info: string }[]} [regions] One card with a region picker
+ * @property {boolean} [small]
+ * @property {string} [info]
+ * @property {string[]} [list]
+ */
 
-  Unix epoch (1970-01-01) was a Thursday, so weekly offsets count days from Thursday 00:00 UTC.
-  Order matters: big cards first, then the small ones fill the last row.
-*/
+/**
+ * @typedef {object} PhasedTimer Loops through `phases` in order, from `startTime`
+ * @property {"phased"} kind
+ * @property {string} id
+ * @property {string} name
+ * @property {number} startTime
+ * @property {{ name: string, duration: number, info: string }[]} phases
+ * @property {boolean} [small]
+ */
+
+/**
+ * The timer cards, in page order: big cards first, the small ones fill the last row.
+ * @type {(RecurringTimer | PhasedTimer)[]}
+ */
 export const TIMERS = [
   {
     kind: "phased",
@@ -128,11 +147,38 @@ export const TIMERS = [
   }
 ]
 
+/**
+ * @param {string} id
+ * @param {string} name
+ * @param {number} offset
+ * @param {string} dcs The data centers drawing at this time
+ */
 function jumboCactpot(id, name, offset, dcs) {
   return { id, name, offset, info: `The weekly lottery numbers are drawn for ${dcs}:` }
 }
 
-/** A timer's state at a given moment. `regionId` picks the region for timers that have them. */
+/**
+ * @typedef {object} TimerState What a card shows at a moment
+ * @property {string} id
+ * @property {string} title
+ * @property {number} target What the countdown counts to
+ * @property {string} targetLabel "Next at", "Closes at", "Ends at"
+ * @property {boolean} open In its window (Ocean Fishing boarding)
+ * @property {boolean} small
+ * @property {string} info
+ * @property {string[]} list
+ * @property {object[]} regions
+ * @property {string} [region] The picked region's id
+ * @property {string} [currentPhase]
+ * @property {string} [nextPhase]
+ */
+
+/**
+ * @param {RecurringTimer | PhasedTimer} timer
+ * @param {number} now
+ * @param {string} [regionId] For timers with regions, the first one when missing
+ * @returns {TimerState}
+ */
 function getTimerState(timer, now, regionId) {
   if (timer.kind === "recurring") {
     const region = timer.regions && (timer.regions.find((r) => r.id === regionId) ?? timer.regions[0])
@@ -182,8 +228,17 @@ function getTimerState(timer, now, regionId) {
   }
 }
 
+/**
+ * @param {number} now
+ * @param {Record<string, string>} [regions] Timer id -> picked region id
+ * @returns {TimerState[]}
+ */
 export const getAllTimerStates = (now, regions = {}) => TIMERS.map((timer) => getTimerState(timer, now, regions[timer.id]))
 
+/**
+ * @param {number} ms
+ * @returns {string} "01:02:03", or "2 days, 01:02:03"
+ */
 export function formatCountdown(ms) {
   const s = Math.floor(ms / 1000)
   const m = Math.floor(s / 60)
@@ -194,7 +249,11 @@ export function formatCountdown(ms) {
   return d > 0 ? `${d} ${d > 1 ? "days" : "day"}, ${time}` : time
 }
 
-/** "Tue 13 Oct, 10:00", or "10:00" when it's today. The page shows the time zone once, see gmtOffset */
+/**
+ * @param {Date} date
+ * @param {Date} [now]
+ * @returns {string} "Tue 13 Oct, 10:00", or "10:00" when it's today
+ */
 function formatDate(date, now = new Date()) {
   const today = date.toDateString() === now.toDateString()
   return date.toLocaleString("en-GB", {
@@ -203,8 +262,33 @@ function formatDate(date, now = new Date()) {
   })
 }
 
-/** Fills a <time>: the short date on the page, "Tuesday, 13 October 2026 at 10:00 (GMT+2)" on hover */
+// <time> -> what it was last filled with
+const filledTimes = new WeakMap()
+
+let today = { ms: null, day: null }
+
+/**
+ * `now.toDateString()`, worked out once for all the <time>s in a frame.
+ * @param {Date} now
+ * @returns {string}
+ */
+const dayOf = (now) => {
+  if (today.ms !== now.getTime()) today = { ms: now.getTime(), day: now.toDateString() }
+  return today.day
+}
+
+/**
+ * Fills a <time> with the short date, the full one on hover. Skips the work when nothing changed.
+ * @param {HTMLTimeElement} el
+ * @param {Date} date
+ * @param {Date} now Decides whether the day is shown
+ * @param {{ zone?: boolean }} [options] `zone` adds "GMT+2" after it
+ */
 export function setTime(el, date, now, { zone = false } = {}) {
+  const key = `${date.getTime()}|${dayOf(now)}|${zone}`
+  if (filledTimes.get(el) === key) return
+  filledTimes.set(el, key)
+
   el.textContent = zone ? `${formatDate(date, now)} ${gmtOffset(date)}` : formatDate(date, now)
   el.dateTime = date.toISOString()
   el.title = `${date.toLocaleString("en-GB", {
@@ -213,7 +297,10 @@ export function setTime(el, date, now, { zone = false } = {}) {
   })} (${gmtOffset(date)})`
 }
 
-/** "GMT+2", or "GMT+5:30" for zones that aren't a whole hour off */
+/**
+ * @param {Date} date
+ * @returns {string} "GMT+2", or "GMT+5:30" for zones that aren't a whole hour off
+ */
 export function gmtOffset(date) {
   const minutes = -date.getTimezoneOffset()
   const hours = Math.floor(Math.abs(minutes) / 60)

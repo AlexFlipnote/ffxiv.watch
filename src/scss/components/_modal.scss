@@ -9,7 +9,9 @@
   border: none;
   color: var(--font-primary);
   padding: 1.5rem;
-  max-width: 35rem;
+  // The padding counts in the width, or 90% plus padding is wider than a phone
+  box-sizing: border-box;
+  max-width: 38rem;
   width: 90%;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
 

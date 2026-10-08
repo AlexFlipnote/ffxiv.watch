@@ -1,11 +1,10 @@
-// Light/dark theme, applied before the first paint by partials/head.html. Follows the system until someone picks one
-
 const KEY = "theme"
 const root = document.documentElement
 const system = matchMedia("(prefers-color-scheme: light)")
 const themeColor = document.querySelector("meta[name=theme-color]")
 const button = document.querySelector(".theme-toggle")
 
+/** @returns {string | null} The picked theme, if any */
 function saved() {
   try {
     return localStorage.getItem(KEY)
@@ -14,8 +13,9 @@ function saved() {
   }
 }
 
+/** @param {"light" | "dark"} theme */
 function apply(theme) {
-  // Switch instantly instead of through the 8s day/night fade
+  // Instant, not through the 8s day/night fade
   const fading = root.classList.contains("daynight-fade")
   root.classList.remove("daynight-fade")
   root.dataset.theme = theme

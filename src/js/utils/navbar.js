@@ -1,10 +1,9 @@
-// Mobile menu, and the theme toggle. Every page imports this once
-
 import "./theme.js"
 
 const navbar = document.querySelector(".navbar")
 const hamburger = navbar.querySelector(".navbar-hamburger")
 
+/** @param {boolean} opened */
 function setOpened(opened) {
   navbar.classList.toggle("opened", opened)
   hamburger.setAttribute("aria-expanded", opened)

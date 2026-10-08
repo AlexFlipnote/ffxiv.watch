@@ -1,6 +1,3 @@
-// Background per Eorzea time of day, kept subtle so the cards read the same at every hour
-
-// Registered so the browser knows they're colors, which is what lets them transition
 @property --bg {
   syntax: "<color>";
   inherits: true;

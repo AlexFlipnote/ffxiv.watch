@@ -1,5 +1,3 @@
-// Sets <html data-time> by Eorzea time of day, the colors are in _daynight.scss
-
 import { toEorzea } from "./eorzea.js"
 
 const PHASES = [
@@ -10,6 +8,10 @@ const PHASES = [
   { name: "night", from: 20 }
 ]
 
+/**
+ * @param {number} hour ET hour
+ * @returns {string} One of the PHASES names
+ */
 function dayPhase(hour) {
   let phase = PHASES[0].name
   for (const p of PHASES) if (hour >= p.from) phase = p.name
@@ -18,23 +20,22 @@ function dayPhase(hour) {
 
 const root = document.documentElement
 
-// Waits two frames so the current color is painted before transitions turn on
+// Two frames, so the current color is painted before transitions turn on
 const enableFade = () => requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add("daynight-fade")))
 
-/** Safe to call every tick, only touches the DOM when the phase changes (every few Earth minutes). */
+/**
+ * Updates the day/night phase, partials/head.html sets the first one before the page paints.
+ * Cheap to call every frame, only writes when the phase changes.
+ * @param {number} now
+ */
 export function applyDayNight(now) {
   const phase = dayPhase(toEorzea(now).hours)
-  if (root.dataset.time === phase) return
-
-  const first = !root.dataset.time
-  root.dataset.time = phase
-
-  // Skip the fade on page load
-  if (first) enableFade()
+  if (root.dataset.time !== phase) root.dataset.time = phase
 }
 
-// A fade started in a hidden tab can get stuck on the old color, so it's off while hidden
-// and coming back snaps straight to the current phase
+enableFade()
+
+// A fade started in a hidden tab can get stuck, so it's off while hidden and snaps to the phase on return
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     root.classList.remove("daynight-fade")

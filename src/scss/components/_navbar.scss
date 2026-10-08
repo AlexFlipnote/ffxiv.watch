@@ -22,8 +22,7 @@ $height: 5rem;
   justify-content: center;
   user-select: none;
 
-  // The frosted background lives on its own layer, backdrop-filter on .navbar itself
-  // would trap the fixed-position mobile menu inside the bar
+  // The frosted background lives on its own layer
   &::before {
     @include frosted;
     content: "";

@@ -2,14 +2,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1a1a1a">
 
-<!-- Theme before the first paint so it never flashes, same logic as js/utils/theme.js -->
+<!-- Theme and day/night colors before the first paint so they never flash, same logic as js/utils/theme.js and daynight.js -->
 <script>
   (() => {
+    const root = document.documentElement
     let theme = null
     try { theme = localStorage.getItem("theme") } catch {}
     if (theme !== "light" && theme !== "dark") theme = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
-    document.documentElement.dataset.theme = theme
+    root.dataset.theme = theme
+
+    const hour = Math.floor(Date.now() / 175000) % 24
+    root.dataset.time = hour < 5 ? "night" : hour < 8 ? "dawn" : hour < 17 ? "day" : hour < 20 ? "dusk" : "night"
   })()
+</script>
+
+<!-- Chrome and Edge prerender a page when its link is hovered, so the click shows it at once -->
+<script type="speculationrules">
+  { "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }] }
 </script>
 
 <!-- Favicon: SVG where supported, .ico (16/32/48px) for the rest, PNG for iOS home screens -->
