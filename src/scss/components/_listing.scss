@@ -23,6 +23,12 @@
     background-color: var(--group-background);
   }
 
+  // A very dumb edge-case bug for smalled phone screens, standing, width.
+  .group-row td:first-child {
+    width: 100%;
+    max-width: 0;
+  }
+
   .group-open td {
     background-color: var(--chip-background);
   }
