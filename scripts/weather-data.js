@@ -1,64 +1,24 @@
-// Builds src/js/data/weather.json from the game's datamined sheets (xivapi/ffxiv-datamining).
-// Run with "npm run weather-data" after a patch adds zones, the site itself never calls out for weather.
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
+import { sheets } from "./datamining.js"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const OUT = path.join(__dirname, "../src/js/data/weather.json")
-const SHEETS = "https://raw.githubusercontent.com/xivapi/ffxiv-datamining/master/csv/en"
 
-// TerritoryIntendedUse values worth forecasting, everything else is instances, inns and cutscenes
 const TOWN = 0
 const OVERWORLD = 1
 const HOUSING = 13
 const ISLAND_SANCTUARY = 49
 const FIELD_OPERATIONS = [41, 48, 61] // Eureka, Bozja and Zadnor, Occult Crescent
 
-// The same place shows up as several territories (e.g. Mist the town and Mist the housing ward),
-// keep the one with the most specific weather
 const USE_PRIORITY = [OVERWORLD, HOUSING, ...FIELD_OPERATIONS, ISLAND_SANCTUARY, TOWN]
 
-async function sheet(name) {
-  const res = await fetch(`${SHEETS}/${name}.csv`)
-  if (!res.ok) throw new Error(`${name}.csv: HTTP ${res.status}`)
-  return parseCsv(await res.text())
-}
-
-function parseCsv(text) {
-  const rows = []
-  let row = []
-  let field = ""
-  let quoted = false
-
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i]
-    if (quoted) {
-      if (c !== "\"") field += c
-      else if (text[i + 1] === "\"") field += text[++i]
-      else quoted = false
-    } else if (c === "\"") {
-      quoted = true
-    } else if (c === ",") {
-      row.push(field)
-      field = ""
-    } else if (c === "\n") {
-      row.push(field.replace(/\r$/, ""))
-      rows.push(row)
-      row = []
-      field = ""
-    } else {
-      field += c
-    }
-  }
-  if (field || row.length) rows.push([...row, field])
-
-  const [header, ...data] = rows
-  return data
-    .filter((r) => r.length === header.length)
-    .map((r) => Object.fromEntries(header.map((h, i) => [h, r[i]])))
-}
-
+/**
+ * @param {Record<string, string>} territory TerritoryType row
+ * @param {Record<string, string>} expansions ExVersion id -> name
+ * @returns {string} The zone picker group: an expansion, "Housing" or "Field Operations"
+ */
 function groupOf(territory, expansions) {
   const use = +territory.TerritoryIntendedUse
   if (use === HOUSING) return "Housing"
@@ -67,8 +27,8 @@ function groupOf(territory, expansions) {
 }
 
 async function main() {
-  const [territories, rates, weathers, places, exVersions] = await Promise.all(
-    ["TerritoryType", "WeatherRate", "Weather", "PlaceName", "ExVersion"].map(sheet)
+  const [territories, rates, weathers, places, exVersions] = await sheets(
+    ["TerritoryType", "WeatherRate", "Weather", "PlaceName", "ExVersion"]
   )
 
   const byId = (rows, key = "Name") => Object.fromEntries(rows.map((r) => [r["#"], r[key]]))

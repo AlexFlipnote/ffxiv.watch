@@ -1,0 +1,32 @@
+[
+  {
+    "name": "A Realm Reborn",
+    "file": "a-realm-reborn",
+    "count": 80
+  },
+  {
+    "name": "Heavensward",
+    "file": "heavensward",
+    "count": 62
+  },
+  {
+    "name": "Stormblood",
+    "file": "stormblood",
+    "count": 62
+  },
+  {
+    "name": "Shadowbringers",
+    "file": "shadowbringers",
+    "count": 45
+  },
+  {
+    "name": "Endwalker",
+    "file": "endwalker",
+    "count": 46
+  },
+  {
+    "name": "Dawntrail",
+    "file": "dawntrail",
+    "count": 45
+  }
+]

@@ -1,0 +1,968 @@
+[
+  {
+    "number": 1,
+    "name": "The Leveilleur Estate",
+    "zone": "Old Sharlayan",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 15.7,
+      "y": 8.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 2,
+    "name": "Scholar's Harbor",
+    "zone": "Old Sharlayan",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.9,
+      "y": 15.8,
+      "radius": 0
+    }
+  },
+  {
+    "number": 3,
+    "name": "The Forum",
+    "zone": "Old Sharlayan",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 10.9,
+      "y": 6.9,
+      "radius": 0
+    }
+  },
+  {
+    "number": 4,
+    "name": "Noumenon",
+    "zone": "Old Sharlayan",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 4.5,
+      "y": 11.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 5,
+    "name": "The Rostra",
+    "zone": "Old Sharlayan",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 10.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 6,
+    "name": "Journey's End",
+    "zone": "Old Sharlayan",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 15.2,
+      "y": 9.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 7,
+    "name": "Learners' Meet",
+    "zone": "Old Sharlayan",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 3.3,
+      "y": 9,
+      "radius": 0
+    }
+  },
+  {
+    "number": 8,
+    "name": "Ruveydah Fibers",
+    "zone": "Radz-at-Han",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 8,
+      "y": 13.4,
+      "radius": 0
+    }
+  },
+  {
+    "number": 9,
+    "name": "Balshahn Bazaar",
+    "zone": "Radz-at-Han",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 10.7,
+      "y": 9.5,
+      "radius": 0
+    }
+  },
+  {
+    "number": 10,
+    "name": "Nilopala Nourishments",
+    "zone": "Radz-at-Han",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 7.8,
+      "y": 14.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 11,
+    "name": "Mehryde's Meyhane",
+    "zone": "Radz-at-Han",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 7.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 12,
+    "name": "Meghaduta",
+    "zone": "Radz-at-Han",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 5.1,
+      "y": 13.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 13,
+    "name": "Alzadaal's Peace",
+    "zone": "Radz-at-Han",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 11,
+      "y": 12.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 14,
+    "name": "Ruveydah Fibers Rooftop Garden",
+    "zone": "Radz-at-Han",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 8.7,
+      "y": 13.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 15,
+    "name": "The Path of Artifice",
+    "zone": "Labyrinthos",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 20.4,
+      "y": 7.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 16,
+    "name": "Thaumazein",
+    "zone": "Labyrinthos",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 15,
+      "y": 25.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 17,
+    "name": "Meryall Agronomics",
+    "zone": "Labyrinthos",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 30.9,
+      "y": 18.8,
+      "radius": 0
+    }
+  },
+  {
+    "number": 18,
+    "name": "Troglophile's Deep",
+    "zone": "Labyrinthos",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 38.5,
+      "y": 13.7,
+      "radius": 0
+    }
+  },
+  {
+    "number": 19,
+    "name": "Sharlayan Hamlet",
+    "zone": "Labyrinthos",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 22.5,
+      "y": 17.5,
+      "radius": 0
+    }
+  },
+  {
+    "number": 20,
+    "name": "Yedlihmad",
+    "zone": "Thavnair",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 26.3,
+      "y": 33.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 21,
+    "name": "Kadjaya's Footsteps",
+    "zone": "Thavnair",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 22.6,
+      "y": 19.7,
+      "radius": 0
+    }
+  },
+  {
+    "number": 22,
+    "name": "Giantsgall Grounds",
+    "zone": "Thavnair",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 20,
+      "y": 6.9,
+      "radius": 0
+    }
+  },
+  {
+    "number": 23,
+    "name": "The Shroud of the Samgha",
+    "zone": "Thavnair",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 29.3,
+      "y": 25,
+      "radius": 0
+    }
+  },
+  {
+    "number": 24,
+    "name": "The Font of Maya",
+    "zone": "Thavnair",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 26.6,
+      "y": 24.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 25,
+    "name": "The Great Work",
+    "zone": "Thavnair",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.8,
+      "y": 23.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 26,
+    "name": "Tertium",
+    "zone": "Garlemald",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 32.4,
+      "y": 18.5,
+      "radius": 0
+    }
+  },
+  {
+    "number": 27,
+    "name": "Juturna Platform G",
+    "zone": "Garlemald",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 29.7,
+      "y": 34.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 28,
+    "name": "The Runaway Train",
+    "zone": "Garlemald",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 29.6,
+      "y": 23.4,
+      "radius": 0
+    }
+  },
+  {
+    "number": 29,
+    "name": "Senaculum Imperialis",
+    "zone": "Garlemald",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 17,
+      "y": 9.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 30,
+    "name": "Regio Urbanissima",
+    "zone": "Garlemald",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 19.4,
+      "y": 16.9,
+      "radius": 0
+    }
+  },
+  {
+    "number": 31,
+    "name": "Forum Solius",
+    "zone": "Garlemald",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 29.1,
+      "y": 8.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 32,
+    "name": "The Chthonic Horns",
+    "zone": "Elpis",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 33.1,
+      "y": 29.4,
+      "radius": 0
+    }
+  },
+  {
+    "number": 33,
+    "name": "Metabaseos Thalassai",
+    "zone": "Elpis",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 10.2,
+      "y": 13.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 34,
+    "name": "Lethe",
+    "zone": "Elpis",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 31.7,
+      "y": 15.8,
+      "radius": 0
+    }
+  },
+  {
+    "number": 35,
+    "name": "Ktisis Hyperboreia",
+    "zone": "Elpis",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 14.9,
+      "y": 7.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 36,
+    "name": "Anagnorisis",
+    "zone": "Elpis",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 24.6,
+      "y": 22.9,
+      "radius": 0
+    }
+  },
+  {
+    "number": 37,
+    "name": "Kydonia Knolls",
+    "zone": "Mare Lamentorum",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 11.4,
+      "y": 22.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 38,
+    "name": "The Carrotorium",
+    "zone": "Mare Lamentorum",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 7.4,
+      "y": 6.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 39,
+    "name": "Greatest Endsvale",
+    "zone": "Mare Lamentorum",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 36,
+      "y": 9.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 40,
+    "name": "Heimdall's Last Sight",
+    "zone": "Mare Lamentorum",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 34.4,
+      "y": 29.5,
+      "radius": 0
+    }
+  },
+  {
+    "number": 41,
+    "name": "The Watcher's Palace",
+    "zone": "Mare Lamentorum",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 13.5,
+      "y": 32.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 42,
+    "name": "Stigma-1",
+    "zone": "Ultima Thule",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 32.7,
+      "y": 29.9,
+      "radius": 0
+    }
+  },
+  {
+    "number": 43,
+    "name": "Ostrakon Deka-hexi",
+    "zone": "Ultima Thule",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 33.7,
+      "y": 26.9,
+      "radius": 0
+    }
+  },
+  {
+    "number": 44,
+    "name": "Ostrakon Tria",
+    "zone": "Ultima Thule",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 18.7,
+      "y": 13.8,
+      "radius": 0
+    }
+  },
+  {
+    "number": 45,
+    "name": "Ostrakon Deka-okto",
+    "zone": "Ultima Thule",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 8.9,
+      "y": 18.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 46,
+    "name": "Ostrakon Hena",
+    "zone": "Ultima Thule",
+    "emote": "Lookout",
+    "level": 80,
+    "unlock": {
+      "quest": "Sights of the End",
+      "after": [
+        "A Sight to Behold",
+        "Old Sharlayan, New to You"
+      ]
+    },
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 23.1,
+      "y": 27.3,
+      "radius": 0
+    }
+  }
+]

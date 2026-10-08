@@ -1,0 +1,2745 @@
+[
+  {
+    "id": 485,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 60,
+    "zone": "The Fringes",
+    "spot": "East End",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 16.9,
+      "y": 11.4,
+      "radius": 2.6
+    },
+    "items": [
+      {
+        "id": 19910,
+        "name": "Gyr Abanian Alumen",
+        "stars": 2
+      },
+      {
+        "id": 20780,
+        "name": "Starcrack Sand",
+        "collectable": true
+      },
+      {
+        "id": 20782,
+        "name": "Cotter Dynasty Relic",
+        "collectable": true
+      },
+      {
+        "id": 10,
+        "name": "Wind Crystal"
+      }
+    ]
+  },
+  {
+    "id": 497,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 60,
+    "zone": "The Fringes",
+    "spot": "The Striped Hills",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 25.3,
+      "y": 8.3,
+      "radius": 1.1
+    },
+    "times": [
+      [
+        120,
+        120
+      ],
+      [
+        840,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19968,
+        "name": "Raw Triphane",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 505,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 60,
+    "zone": "The Fringes",
+    "spot": "East End",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 17.4,
+      "y": 8.8,
+      "radius": 3.3
+    },
+    "items": [
+      {
+        "id": 19976,
+        "name": "Bloodhemp",
+        "stars": 2
+      },
+      {
+        "id": 19868,
+        "name": "Gyr Abanian Wheat",
+        "stars": 2
+      },
+      {
+        "id": 20780,
+        "name": "Starcrack Sand",
+        "collectable": true
+      },
+      {
+        "id": 20782,
+        "name": "Cotter Dynasty Relic",
+        "collectable": true
+      },
+      {
+        "id": 8,
+        "name": "Fire Crystal"
+      }
+    ]
+  },
+  {
+    "id": 310,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 65,
+    "zone": "The Fringes",
+    "spot": "Mirage Creek",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 29.6,
+      "y": 12.9,
+      "radius": 0
+    },
+    "times": [
+      [
+        480,
+        120
+      ],
+      [
+        1200,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 32975,
+        "name": "Rarefied Raw Triphane",
+        "collectable": true
+      },
+      {
+        "id": 32977,
+        "name": "Rarefied Raw Kyanite",
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 486,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 65,
+    "zone": "The Fringes",
+    "spot": "The Striped Hills",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 24.3,
+      "y": 14.8,
+      "radius": 2.7
+    },
+    "items": [
+      {
+        "id": 19871,
+        "name": "Gyr Abanian Mineral Water"
+      },
+      {
+        "id": 19969,
+        "name": "Raw Kyanite"
+      },
+      {
+        "id": 17941,
+        "name": "Beggar's Mythril Ore"
+      },
+      {
+        "id": 23149,
+        "name": "Harpoon Head",
+        "collectable": true
+      },
+      {
+        "id": 10,
+        "name": "Wind Crystal"
+      }
+    ]
+  },
+  {
+    "id": 506,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Fringes",
+    "spot": "East End",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 10.5,
+      "y": 16.3,
+      "radius": 3
+    },
+    "items": [
+      {
+        "id": 19930,
+        "name": "Beech Log"
+      },
+      {
+        "id": 19851,
+        "name": "Loquat"
+      },
+      {
+        "id": 19936,
+        "name": "Beech Branch"
+      },
+      {
+        "id": 8,
+        "name": "Fire Crystal"
+      }
+    ]
+  },
+  {
+    "id": 509,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Fringes",
+    "spot": "Dimwold",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 11.9,
+      "y": 25.2,
+      "radius": 1.8
+    },
+    "items": [
+      {
+        "id": 19917,
+        "name": "Holy Basil"
+      },
+      {
+        "id": 19982,
+        "name": "Kudzu Vine"
+      },
+      {
+        "id": 19853,
+        "name": "Kudzu Root"
+      },
+      {
+        "id": 17945,
+        "name": "Wild Popoto"
+      },
+      {
+        "id": 23149,
+        "name": "Harpoon Head",
+        "collectable": true
+      },
+      {
+        "id": 8,
+        "name": "Fire Crystal"
+      }
+    ]
+  },
+  {
+    "id": 779,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 65,
+    "zone": "The Fringes",
+    "spot": "Pike Falls",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 15.7,
+      "y": 24.9,
+      "radius": 3.1
+    },
+    "items": [
+      {
+        "id": 32989,
+        "name": "Rarefied Gyr Abanian Mineral Water",
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 783,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Fringes",
+    "spot": "Mirage Creek",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 26.2,
+      "y": 12.6,
+      "radius": 3.3
+    },
+    "items": [
+      {
+        "id": 33011,
+        "name": "Rarefied Bloodhemp",
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 513,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Fringes",
+    "spot": "Dimwold",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 30,
+      "radius": 2.2
+    },
+    "items": [
+      {
+        "id": 19870,
+        "name": "Persimmon Leaf"
+      },
+      {
+        "id": 19932,
+        "name": "Persimmon Log"
+      },
+      {
+        "id": 19869,
+        "name": "Persimmon"
+      },
+      {
+        "id": 24571,
+        "name": "Sturdy Vat Material",
+        "collectable": true
+      },
+      {
+        "id": 8,
+        "name": "Fire Crystal"
+      }
+    ]
+  },
+  {
+    "id": 537,
+    "type": "Legendary",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Fringes",
+    "spot": "Pike Falls",
+    "folklore": "Gyr Abanian Botany Folklore",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 14.9,
+      "y": 21.2,
+      "radius": 0.2
+    },
+    "times": [
+      [
+        240,
+        120
+      ],
+      [
+        960,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 22419,
+        "name": "Black Willow Log",
+        "stars": 2
+      },
+      {
+        "id": 23180,
+        "name": "Hardened Veteran Tree Sap",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 555,
+    "type": "Legendary",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Fringes",
+    "spot": "Virdjala",
+    "folklore": "Gyr Abanian Mining Folklore",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 27.4,
+      "y": 30.2,
+      "radius": 0.4
+    },
+    "times": [
+      [
+        0,
+        120
+      ],
+      [
+        720,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 24240,
+        "name": "Gyr Abanian Ore",
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "id": 810,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 75,
+    "zone": "The Fringes",
+    "spot": "Vira Nilya",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 30.9,
+      "y": 22.8,
+      "radius": 2.9
+    },
+    "items": [
+      {
+        "id": 33231,
+        "name": "Rehabilitation Aid Materials",
+        "collectable": true
+      },
+      {
+        "id": 10,
+        "name": "Wind Crystal"
+      }
+    ]
+  },
+  {
+    "id": 811,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 75,
+    "zone": "The Fringes",
+    "spot": "Virdjala",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 34.4,
+      "y": 28,
+      "radius": 2.4
+    },
+    "items": [
+      {
+        "id": 33231,
+        "name": "Rehabilitation Aid Materials",
+        "collectable": true
+      },
+      {
+        "id": 8,
+        "name": "Fire Crystal"
+      }
+    ]
+  },
+  {
+    "id": 767,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 80,
+    "zone": "The Fringes",
+    "spot": "Virdjala",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 31.6,
+      "y": 31.4,
+      "radius": 0
+    },
+    "times": [
+      [
+        600,
+        120
+      ],
+      [
+        1320,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 32987,
+        "name": "Rarefied Gyr Abanian Alumen",
+        "stars": 1,
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 533,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 60,
+    "zone": "The Ruby Sea",
+    "spot": "The Turquoise Trench",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 17.1,
+      "y": 35.7,
+      "radius": 2
+    },
+    "items": [
+      {
+        "id": 20781,
+        "name": "Shishu Koban",
+        "collectable": true
+      },
+      {
+        "id": 13,
+        "name": "Water Crystal"
+      }
+    ]
+  },
+  {
+    "id": 534,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 60,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 36.8,
+      "y": 17.3,
+      "radius": 2.6
+    },
+    "items": [
+      {
+        "id": 20781,
+        "name": "Shishu Koban",
+        "collectable": true
+      },
+      {
+        "id": 13,
+        "name": "Water Crystal"
+      }
+    ]
+  },
+  {
+    "id": 312,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The Crab Pots",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 21.2,
+      "y": 34.3,
+      "radius": 0
+    },
+    "times": [
+      [
+        600,
+        120
+      ],
+      [
+        1320,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 32976,
+        "name": "Rarefied Raw Star Spinel",
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 487,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Hells' Lid",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 24.1,
+      "y": 35.9,
+      "radius": 2.2
+    },
+    "items": [
+      {
+        "id": 19951,
+        "name": "Koppranickel Ore"
+      },
+      {
+        "id": 17942,
+        "name": "Feather Iron Ore"
+      },
+      {
+        "id": 24567,
+        "name": "Sparkstone",
+        "collectable": true
+      },
+      {
+        "id": 35847,
+        "name": "Hairpin Material"
+      },
+      {
+        "id": 13,
+        "name": "Water Crystal"
+      }
+    ]
+  },
+  {
+    "id": 490,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Rasen Kaikyo",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 12.2,
+      "y": 17.8,
+      "radius": 3.8
+    },
+    "items": [
+      {
+        "id": 20006,
+        "name": "Diatomite"
+      },
+      {
+        "id": 23151,
+        "name": "Shisui Jewel",
+        "collectable": true
+      },
+      {
+        "id": 13,
+        "name": "Water Crystal"
+      }
+    ]
+  },
+  {
+    "id": 498,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "East Othard Coastline",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 14.9,
+      "y": 5,
+      "radius": 0.8
+    },
+    "times": [
+      [
+        0,
+        120
+      ],
+      [
+        720,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19970,
+        "name": "Raw Star Spinel"
+      }
+    ]
+  },
+  {
+    "id": 507,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 20.7,
+      "y": 6.8,
+      "radius": 2.4
+    },
+    "items": [
+      {
+        "id": 19931,
+        "name": "Larch Log"
+      },
+      {
+        "id": 19863,
+        "name": "Shiitake Mushroom"
+      },
+      {
+        "id": 24567,
+        "name": "Sparkstone",
+        "collectable": true
+      },
+      {
+        "id": 35847,
+        "name": "Hairpin Material"
+      },
+      {
+        "id": 13,
+        "name": "Water Crystal"
+      }
+    ]
+  },
+  {
+    "id": 510,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "East Othard Coastline",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 7,
+      "radius": 2.9
+    },
+    "items": [
+      {
+        "id": 19862,
+        "name": "Soybeans"
+      },
+      {
+        "id": 19864,
+        "name": "Cumin Seeds"
+      },
+      {
+        "id": 17946,
+        "name": "Walker's Popoto"
+      },
+      {
+        "id": 13,
+        "name": "Water Crystal"
+      }
+    ]
+  },
+  {
+    "id": 511,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Rasen Kaikyo",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 27.2,
+      "y": 22,
+      "radius": 3
+    },
+    "items": [
+      {
+        "id": 19881,
+        "name": "Gem Algae"
+      },
+      {
+        "id": 19979,
+        "name": "Ruby Cotton Boll"
+      },
+      {
+        "id": 19879,
+        "name": "Ama Nori"
+      },
+      {
+        "id": 23151,
+        "name": "Shisui Jewel",
+        "collectable": true
+      },
+      {
+        "id": 13,
+        "name": "Water Crystal"
+      }
+    ]
+  },
+  {
+    "id": 671,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The Turquoise Trench",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 12,
+      "y": 35.9,
+      "radius": 2.7
+    },
+    "items": [
+      {
+        "id": 28782,
+        "name": "Skybuilders' Nightsteel Ore"
+      },
+      {
+        "id": 28787,
+        "name": "Skybuilders' Ruby Sea Water"
+      }
+    ]
+  },
+  {
+    "id": 770,
+    "type": "Unspoiled",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Isari",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 6,
+      "y": 15.8,
+      "radius": 0
+    },
+    "times": [
+      [
+        120,
+        120
+      ],
+      [
+        840,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 32997,
+        "name": "Rarefied Larch Log",
+        "collectable": true
+      },
+      {
+        "id": 32999,
+        "name": "Rarefied Larch Sap",
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 771,
+    "type": "Unspoiled",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Shoal Rock",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 33.1,
+      "y": 9.2,
+      "radius": 0
+    },
+    "times": [
+      [
+        240,
+        120
+      ],
+      [
+        960,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 32998,
+        "name": "Rarefied Shiitake Mushroom",
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 529,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "Rasen Kaikyo",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 12.8,
+      "y": 14.4,
+      "radius": 3.1
+    },
+    "items": [
+      {
+        "id": 19880,
+        "name": "Ruby Tide Kelp"
+      },
+      {
+        "id": 17947,
+        "name": "Nanoriso"
+      },
+      {
+        "id": 13,
+        "name": "Water Crystal"
+      }
+    ]
+  },
+  {
+    "id": 535,
+    "type": "Legendary",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "East Othard Coastline",
+    "folklore": "Othardian Mining Folklore",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 10.9,
+      "y": 22.6,
+      "radius": 0.4
+    },
+    "times": [
+      [
+        360,
+        120
+      ],
+      [
+        1080,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 22417,
+        "name": "Nightsteel Ore",
+        "stars": 2
+      },
+      {
+        "id": 23179,
+        "name": "Hawk's Eye",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 730,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 75,
+    "zone": "The Ruby Sea",
+    "spot": "The *Kobayashi Maru*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 39.5,
+      "y": 3.9,
+      "radius": 2.1
+    },
+    "items": [
+      {
+        "id": 30501,
+        "name": "Handpicked Ingredients",
+        "collectable": true
+      },
+      {
+        "id": 33232,
+        "name": "High Tea Ingredients",
+        "collectable": true
+      },
+      {
+        "id": 13,
+        "name": "Water Crystal"
+      }
+    ]
+  },
+  {
+    "id": 488,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The Gensui Chain",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 31.7,
+      "y": 21.7,
+      "radius": 2.7
+    },
+    "items": [
+      {
+        "id": 19872,
+        "name": "Crescent Spring Water"
+      },
+      {
+        "id": 19953,
+        "name": "Doman Iron Ore"
+      },
+      {
+        "id": 24568,
+        "name": "Malleable Still Material",
+        "collectable": true
+      },
+      {
+        "id": 8,
+        "name": "Fire Crystal"
+      }
+    ]
+  },
+  {
+    "id": 508,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The Heron's Flight",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 35.7,
+      "y": 14.8,
+      "radius": 2.7
+    },
+    "items": [
+      {
+        "id": 19908,
+        "name": "Pine Resin"
+      },
+      {
+        "id": 5389,
+        "name": "Pine Log"
+      },
+      {
+        "id": 24568,
+        "name": "Malleable Still Material",
+        "collectable": true
+      },
+      {
+        "id": 10,
+        "name": "Wind Crystal"
+      }
+    ]
+  },
+  {
+    "id": 522,
+    "type": "Unspoiled",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The Glittering Basin",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.8,
+      "y": 25.6,
+      "radius": 1.1
+    },
+    "times": [
+      [
+        600,
+        120
+      ],
+      [
+        1320,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19860,
+        "name": "Bamboo Shoot"
+      }
+    ]
+  },
+  {
+    "id": 491,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Unseen Spirits Laughing",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 37.7,
+      "y": 19.9,
+      "radius": 2.2
+    },
+    "items": [
+      {
+        "id": 19954,
+        "name": "Durium Ore"
+      },
+      {
+        "id": 17943,
+        "name": "Serpentine"
+      },
+      {
+        "id": 24571,
+        "name": "Sturdy Vat Material",
+        "collectable": true
+      },
+      {
+        "id": 8,
+        "name": "Fire Crystal"
+      }
+    ]
+  },
+  {
+    "id": 492,
+    "type": "Ephemeral",
+    "job": "Miner",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Valley of the Fallen Rainbow",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 29,
+      "y": 6.7,
+      "radius": 2.3
+    },
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "items": [
+      {
+        "id": 20010,
+        "name": "Perlite"
+      },
+      {
+        "id": 33152,
+        "name": "Dacite",
+        "collectable": true
+      },
+      {
+        "id": 23220,
+        "name": "Yanxian Soil",
+        "stars": 2,
+        "collectable": true
+      },
+      {
+        "id": 8,
+        "name": "Fire Crystal"
+      }
+    ]
+  },
+  {
+    "id": 500,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Valley of the Fallen Rainbow",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 29.9,
+      "y": 9.3,
+      "radius": 0.6
+    },
+    "times": [
+      [
+        360,
+        120
+      ],
+      [
+        1080,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19972,
+        "name": "Raw Imperial Jade"
+      }
+    ]
+  },
+  {
+    "id": 504,
+    "type": "Legendary",
+    "job": "Miner",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Doma",
+    "folklore": "Othardian Mining Folklore",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 20.5,
+      "y": 9.7,
+      "radius": 2
+    },
+    "times": [
+      [
+        240,
+        120
+      ],
+      [
+        960,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19958,
+        "name": "Palladium Ore",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "id": 517,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Doma",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 22.4,
+      "y": 12,
+      "radius": 2.8
+    },
+    "items": [
+      {
+        "id": 19855,
+        "name": "Daikon Radish"
+      },
+      {
+        "id": 19913,
+        "name": "Nagxian Cudweed"
+      },
+      {
+        "id": 19911,
+        "name": "Yanxian Parsley"
+      },
+      {
+        "id": 19854,
+        "name": "Doman Eggplant"
+      },
+      {
+        "id": 10,
+        "name": "Wind Crystal"
+      }
+    ]
+  },
+  {
+    "id": 518,
+    "type": "Ephemeral",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Glittering Basin",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 32.1,
+      "y": 26.7,
+      "radius": 2.2
+    },
+    "times": [
+      [
+        960,
+        240
+      ]
+    ],
+    "items": [
+      {
+        "id": 19916,
+        "name": "Windtea Leaves"
+      },
+      {
+        "id": 33151,
+        "name": "Countess Tea Leaves",
+        "collectable": true
+      },
+      {
+        "id": 23221,
+        "name": "Yanxian Verbena",
+        "stars": 2,
+        "collectable": true
+      },
+      {
+        "id": 10,
+        "name": "Wind Crystal"
+      }
+    ]
+  },
+  {
+    "id": 525,
+    "type": "Unspoiled",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Valley of the Fallen Rainbow",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.1,
+      "y": 7.8,
+      "radius": 0.5
+    },
+    "times": [
+      [
+        480,
+        120
+      ],
+      [
+        1200,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19865,
+        "name": "Lotus Root"
+      }
+    ]
+  },
+  {
+    "id": 558,
+    "type": "Legendary",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Glittering Basin",
+    "folklore": "Othardian Botany Folklore",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.4,
+      "y": 35.4,
+      "radius": 0.4
+    },
+    "times": [
+      [
+        120,
+        120
+      ],
+      [
+        840,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 24243,
+        "name": "Yanxian Cotton Boll",
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "id": 670,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Glittering Basin",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 10.4,
+      "y": 36.3,
+      "radius": 2.1
+    },
+    "items": [
+      {
+        "id": 28785,
+        "name": "Skybuilders' Horsetail"
+      },
+      {
+        "id": 28909,
+        "name": "Skybuilders' Cocoon"
+      }
+    ]
+  },
+  {
+    "id": 772,
+    "type": "Unspoiled",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Doma",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 18.7,
+      "y": 14.4,
+      "radius": 0
+    },
+    "times": [
+      [
+        0,
+        120
+      ],
+      [
+        720,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 33000,
+        "name": "Rarefied Pine Resin",
+        "collectable": true
+      },
+      {
+        "id": 33001,
+        "name": "Rarefied Pine Log",
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 731,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 75,
+    "zone": "Yanxia",
+    "spot": "Yuzuka Manor",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 16.2,
+      "y": 30.8,
+      "radius": 1.9
+    },
+    "items": [
+      {
+        "id": 30502,
+        "name": "Printing Paraphernalia",
+        "collectable": true
+      },
+      {
+        "id": 10,
+        "name": "Wind Crystal"
+      }
+    ]
+  },
+  {
+    "id": 734,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 80,
+    "zone": "Yanxia",
+    "spot": "Valley of the Fallen Rainbow",
+    "quest": "In Everyone's Best Interests",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.7,
+      "y": 10.1,
+      "radius": 1.9
+    },
+    "items": [
+      {
+        "id": 31125,
+        "name": "Oddly Specific Dark Chestnut Log",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 735,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 80,
+    "zone": "Yanxia",
+    "spot": "The Dragon's Struggle",
+    "quest": "In Everyone's Best Interests",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 12.3,
+      "y": 10.3,
+      "radius": 2.2
+    },
+    "items": [
+      {
+        "id": 31127,
+        "name": "Oddly Specific Schorl",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 531,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 60,
+    "zone": "The Peaks",
+    "spot": "Sleeping Stones",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 37.2,
+      "y": 9.8,
+      "radius": 2.1
+    },
+    "items": [
+      {
+        "id": 20783,
+        "name": "Peaks Pigment",
+        "stars": 1,
+        "collectable": true
+      },
+      {
+        "id": 20784,
+        "name": "Yellow Kudzu Root",
+        "stars": 1,
+        "collectable": true
+      },
+      {
+        "id": 11,
+        "name": "Earth Crystal"
+      }
+    ]
+  },
+  {
+    "id": 532,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 60,
+    "zone": "The Peaks",
+    "spot": "The Last Forest",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 6.3,
+      "radius": 2.1
+    },
+    "items": [
+      {
+        "id": 20783,
+        "name": "Peaks Pigment",
+        "stars": 1,
+        "collectable": true
+      },
+      {
+        "id": 20784,
+        "name": "Yellow Kudzu Root",
+        "stars": 1,
+        "collectable": true
+      },
+      {
+        "id": 12,
+        "name": "Lightning Crystal"
+      }
+    ]
+  },
+  {
+    "id": 489,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 65,
+    "zone": "The Peaks",
+    "spot": "Rustrock",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 23.4,
+      "y": 13.2,
+      "radius": 2.6
+    },
+    "items": [
+      {
+        "id": 5232,
+        "name": "Stiperstone"
+      },
+      {
+        "id": 19950,
+        "name": "Koppranickel Sand"
+      },
+      {
+        "id": 20007,
+        "name": "Slate"
+      },
+      {
+        "id": 23148,
+        "name": "Pinch of Active Ingredients",
+        "collectable": true
+      },
+      {
+        "id": 11,
+        "name": "Earth Crystal"
+      }
+    ]
+  },
+  {
+    "id": 512,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Peaks",
+    "spot": "The Last Forest",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 12.8,
+      "y": 12.2,
+      "radius": 2.3
+    },
+    "items": [
+      {
+        "id": 19861,
+        "name": "Mountain Popoto"
+      },
+      {
+        "id": 19850,
+        "name": "Buckwheat Kernels"
+      },
+      {
+        "id": 19859,
+        "name": "Green Leek"
+      },
+      {
+        "id": 19856,
+        "name": "Sugar Beet"
+      },
+      {
+        "id": 23148,
+        "name": "Pinch of Active Ingredients",
+        "collectable": true
+      },
+      {
+        "id": 12,
+        "name": "Lightning Crystal"
+      }
+    ]
+  },
+  {
+    "id": 667,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 65,
+    "zone": "The Peaks",
+    "spot": "Grymm & Enid",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 6.6,
+      "y": 13.4,
+      "radius": 2.6
+    },
+    "items": [
+      {
+        "id": 28781,
+        "name": "Skybuilders' Urunday Log"
+      }
+    ]
+  },
+  {
+    "id": 499,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "Rustrock",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 27,
+      "y": 12.6,
+      "radius": 0.7
+    },
+    "times": [
+      [
+        480,
+        120
+      ],
+      [
+        1200,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19973,
+        "name": "Raw Rhodonite"
+      },
+      {
+        "id": 17944,
+        "name": "Pummelite"
+      }
+    ]
+  },
+  {
+    "id": 503,
+    "type": "Legendary",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "Wightrock",
+    "folklore": "Gyr Abanian Mining Folklore",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 15.9,
+      "y": 33.9,
+      "radius": 0.4
+    },
+    "times": [
+      [
+        600,
+        120
+      ],
+      [
+        1320,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19959,
+        "name": "Chromite Ore",
+        "stars": 1
+      },
+      {
+        "id": 21085,
+        "name": "Gyr Abanian Spring Water",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "id": 516,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "Mount Yorn",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 26.6,
+      "y": 31.3,
+      "radius": 2.5
+    },
+    "items": [
+      {
+        "id": 19858,
+        "name": "Gyr Abanian Carrot"
+      },
+      {
+        "id": 19912,
+        "name": "Alyssum"
+      },
+      {
+        "id": 19989,
+        "name": "Twincoon"
+      },
+      {
+        "id": 12,
+        "name": "Lightning Crystal"
+      }
+    ]
+  },
+  {
+    "id": 524,
+    "type": "Unspoiled",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "Rustrock",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 24.1,
+      "y": 16.6,
+      "radius": 0.6
+    },
+    "times": [
+      [
+        360,
+        120
+      ],
+      [
+        1080,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19918,
+        "name": "Hallowed Basil",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "id": 538,
+    "type": "Legendary",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "Mount Yorn",
+    "folklore": "Gyr Abanian Botany Folklore",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 24.7,
+      "y": 36.1,
+      "radius": 0.3
+    },
+    "times": [
+      [
+        120,
+        120
+      ],
+      [
+        840,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 22420,
+        "name": "Hingan Flax",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 557,
+    "type": "Legendary",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "Rustrock",
+    "folklore": "Gyr Abanian Botany Folklore",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 33.4,
+      "y": 10.6,
+      "radius": 0.6
+    },
+    "times": [
+      [
+        240,
+        120
+      ],
+      [
+        960,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 24242,
+        "name": "Urunday Log",
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "id": 729,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 75,
+    "zone": "The Peaks",
+    "spot": "Hidden Tear",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 33.9,
+      "y": 9.2,
+      "radius": 2.2
+    },
+    "items": [
+      {
+        "id": 30501,
+        "name": "Handpicked Ingredients",
+        "collectable": true
+      },
+      {
+        "id": 33232,
+        "name": "High Tea Ingredients",
+        "collectable": true
+      },
+      {
+        "id": 11,
+        "name": "Earth Crystal"
+      }
+    ]
+  },
+  {
+    "id": 777,
+    "type": "Unspoiled",
+    "job": "Botanist",
+    "level": 80,
+    "zone": "The Peaks",
+    "spot": "Heather Falls",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 30.6,
+      "y": 6.9,
+      "radius": 0
+    },
+    "times": [
+      [
+        0,
+        120
+      ],
+      [
+        720,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 33009,
+        "name": "Rarefied Urunday Log",
+        "stars": 1,
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 493,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "The High Bank",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 11.5,
+      "y": 16.6,
+      "radius": 2.4
+    },
+    "items": [
+      {
+        "id": 19957,
+        "name": "Molybdenum Ore"
+      },
+      {
+        "id": 24570,
+        "name": "Hard Place Furnishing Materials",
+        "collectable": true
+      },
+      {
+        "id": 9,
+        "name": "Ice Crystal"
+      }
+    ]
+  },
+  {
+    "id": 494,
+    "type": "Ephemeral",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "The High Bank",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 13.3,
+      "y": 27.4,
+      "radius": 2.5
+    },
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "items": [
+      {
+        "id": 20011,
+        "name": "Almandine",
+        "stars": 1
+      },
+      {
+        "id": 33153,
+        "name": "Rhodolite",
+        "stars": 1,
+        "collectable": true
+      },
+      {
+        "id": 23220,
+        "name": "Yanxian Soil",
+        "stars": 2,
+        "collectable": true
+      },
+      {
+        "id": 9,
+        "name": "Ice Crystal"
+      }
+    ]
+  },
+  {
+    "id": 502,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.2,
+      "y": 29,
+      "radius": 0.7
+    },
+    "times": [
+      [
+        0,
+        120
+      ],
+      [
+        720,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19907,
+        "name": "Ala Mhigan Salt Crystal"
+      }
+    ]
+  },
+  {
+    "id": 514,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Abalathia's Skull",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 28.4,
+      "y": 9.8,
+      "radius": 2.4
+    },
+    "items": [
+      {
+        "id": 19933,
+        "name": "Zelkova Log"
+      },
+      {
+        "id": 24570,
+        "name": "Hard Place Furnishing Materials",
+        "collectable": true
+      },
+      {
+        "id": 9,
+        "name": "Ice Crystal"
+      }
+    ]
+  },
+  {
+    "id": 515,
+    "type": "Ephemeral",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "The Queen's Gardens",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 31.1,
+      "y": 27,
+      "radius": 2.4
+    },
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "items": [
+      {
+        "id": 19937,
+        "name": "Torreya Branch",
+        "stars": 1,
+        "collectable": true
+      },
+      {
+        "id": 23221,
+        "name": "Yanxian Verbena",
+        "stars": 2,
+        "collectable": true
+      },
+      {
+        "id": 9,
+        "name": "Ice Crystal"
+      }
+    ]
+  },
+  {
+    "id": 526,
+    "type": "Unspoiled",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Abalathia's Skull",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 6.9,
+      "y": 9,
+      "radius": 1.3
+    },
+    "times": [
+      [
+        240,
+        120
+      ],
+      [
+        960,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19857,
+        "name": "Jhammel Ginger"
+      },
+      {
+        "id": 17948,
+        "name": "Rhalgr's Streak"
+      }
+    ]
+  },
+  {
+    "id": 527,
+    "type": "Legendary",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "The High Bank",
+    "folklore": "Gyr Abanian Botany Folklore",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 11.9,
+      "y": 12.7,
+      "radius": 0.5
+    },
+    "times": [
+      [
+        360,
+        120
+      ],
+      [
+        1080,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19934,
+        "name": "Torreya Log",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "id": 556,
+    "type": "Legendary",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "folklore": "Gyr Abanian Mining Folklore",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.8,
+      "y": 13.5,
+      "radius": 0.8
+    },
+    "times": [
+      [
+        600,
+        120
+      ],
+      [
+        1320,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 24241,
+        "name": "Evergleam Ore",
+        "stars": 3
+      }
+    ]
+  },
+  {
+    "id": 672,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 22.7,
+      "y": 15.3,
+      "radius": 1.9
+    },
+    "items": [
+      {
+        "id": 28784,
+        "name": "Skybuilders' Molybdenum Ore"
+      },
+      {
+        "id": 28786,
+        "name": "Skybuilders' Ala Mhigan Rock Salt"
+      }
+    ]
+  },
+  {
+    "id": 732,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 75,
+    "zone": "The Lochs",
+    "spot": "The Queen's Gardens",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 30.7,
+      "y": 15.8,
+      "radius": 2.3
+    },
+    "items": [
+      {
+        "id": 30502,
+        "name": "Printing Paraphernalia",
+        "collectable": true
+      },
+      {
+        "id": 9,
+        "name": "Ice Crystal"
+      }
+    ]
+  },
+  {
+    "id": 736,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 80,
+    "zone": "The Lochs",
+    "spot": "The Destroyer",
+    "quest": "In Everyone's Best Interests",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.1,
+      "y": 19.2,
+      "radius": 2.1
+    },
+    "items": [
+      {
+        "id": 31125,
+        "name": "Oddly Specific Dark Chestnut Log",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 737,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 80,
+    "zone": "The Lochs",
+    "spot": "The Pauper's Lode",
+    "quest": "In Everyone's Best Interests",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 4,
+      "y": 27.7,
+      "radius": 2.2
+    },
+    "items": [
+      {
+        "id": 31127,
+        "name": "Oddly Specific Schorl",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 328,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "The Sea of Blades",
+    "quest": "Inscrutable Tastes",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 36,
+      "y": 26.4,
+      "radius": 0
+    },
+    "times": [
+      [
+        360,
+        120
+      ],
+      [
+        1080,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 32978,
+        "name": "Rarefied Raw Azurite",
+        "collectable": true
+      },
+      {
+        "id": 32979,
+        "name": "Rarefied Silvergrace Ore",
+        "collectable": true
+      }
+    ]
+  },
+  {
+    "id": 495,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Onsal Hakair",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 29.4,
+      "y": 15.3,
+      "radius": 2.8
+    },
+    "items": [
+      {
+        "id": 19952,
+        "name": "Durium Sand"
+      },
+      {
+        "id": 19955,
+        "name": "Doman Iron Sand"
+      },
+      {
+        "id": 19956,
+        "name": "Palladium Sand"
+      },
+      {
+        "id": 24569,
+        "name": "Strong Steppe Spice",
+        "collectable": true
+      },
+      {
+        "id": 12,
+        "name": "Lightning Crystal"
+      }
+    ]
+  },
+  {
+    "id": 496,
+    "type": "Ephemeral",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Ragill's Reckoning",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 34.8,
+      "y": 24.5,
+      "radius": 2.5
+    },
+    "times": [
+      [
+        720,
+        240
+      ]
+    ],
+    "items": [
+      {
+        "id": 20009,
+        "name": "Schorl",
+        "collectable": true
+      },
+      {
+        "id": 23220,
+        "name": "Yanxian Soil",
+        "stars": 2,
+        "collectable": true
+      },
+      {
+        "id": 12,
+        "name": "Lightning Crystal"
+      }
+    ]
+  },
+  {
+    "id": 501,
+    "type": "Unspoiled",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "The Towering Still",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 4.9,
+      "y": 29.5,
+      "radius": 2.4
+    },
+    "times": [
+      [
+        240,
+        120
+      ],
+      [
+        960,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19971,
+        "name": "Raw Azurite"
+      }
+    ]
+  },
+  {
+    "id": 519,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Nhaama's Retreat",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 15.9,
+      "y": 28.1,
+      "radius": 2.9
+    },
+    "items": [
+      {
+        "id": 19866,
+        "name": "Sun Cabbage"
+      },
+      {
+        "id": 19867,
+        "name": "Fennel"
+      },
+      {
+        "id": 19915,
+        "name": "Nipplewort"
+      },
+      {
+        "id": 19914,
+        "name": "Chickweed"
+      },
+      {
+        "id": 24569,
+        "name": "Strong Steppe Spice",
+        "collectable": true
+      },
+      {
+        "id": 11,
+        "name": "Earth Crystal"
+      }
+    ]
+  },
+  {
+    "id": 520,
+    "type": "Ephemeral",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Nhaama's Retreat",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 29.9,
+      "radius": 2.8
+    },
+    "times": [
+      [
+        480,
+        240
+      ]
+    ],
+    "items": [
+      {
+        "id": 20012,
+        "name": "Doman Yellow",
+        "collectable": true
+      },
+      {
+        "id": 23221,
+        "name": "Yanxian Verbena",
+        "stars": 2,
+        "collectable": true
+      },
+      {
+        "id": 11,
+        "name": "Earth Crystal"
+      }
+    ]
+  },
+  {
+    "id": 523,
+    "type": "Unspoiled",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Onsal Hakair",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 27.2,
+      "y": 16.3,
+      "radius": 0.3
+    },
+    "times": [
+      [
+        120,
+        120
+      ],
+      [
+        840,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19852,
+        "name": "Othardian Plum"
+      }
+    ]
+  },
+  {
+    "id": 528,
+    "type": "Legendary",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Onsal Hakair",
+    "folklore": "Othardian Botany Folklore",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 19.7,
+      "y": 9.8,
+      "radius": 1.1
+    },
+    "times": [
+      [
+        0,
+        120
+      ],
+      [
+        720,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 19991,
+        "name": "Rhea",
+        "stars": 1
+      },
+      {
+        "id": 21086,
+        "name": "Azim Cotton Boll",
+        "stars": 1
+      }
+    ]
+  },
+  {
+    "id": 536,
+    "type": "Legendary",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Nhaama's Retreat",
+    "folklore": "Othardian Mining Folklore",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 24.1,
+      "y": 37.2,
+      "radius": 0.5
+    },
+    "times": [
+      [
+        480,
+        120
+      ],
+      [
+        1200,
+        120
+      ]
+    ],
+    "items": [
+      {
+        "id": 22418,
+        "name": "Silvergrace Ore",
+        "stars": 2
+      },
+      {
+        "id": 24255,
+        "name": "Azim Spring Water",
+        "stars": 2
+      }
+    ]
+  },
+  {
+    "id": 668,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Ceol Aen",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 16.1,
+      "y": 15.6,
+      "radius": 2.2
+    },
+    "items": [
+      {
+        "id": 28789,
+        "name": "Skybuilders' Vine"
+      },
+      {
+        "id": 28783,
+        "name": "Skybuilders' Adder"
+      }
+    ]
+  },
+  {
+    "id": 673,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Nhaama's Retreat",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 11.5,
+      "y": 25.3,
+      "radius": 2.8
+    },
+    "items": [
+      {
+        "id": 28788,
+        "name": "Skybuilders' Durium Sand"
+      }
+    ]
+  },
+  {
+    "id": 812,
+    "type": "Regular",
+    "job": "Miner",
+    "level": 80,
+    "zone": "The Azim Steppe",
+    "spot": "Kahkol Iloh",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 22.3,
+      "y": 28.7,
+      "radius": 1.9
+    },
+    "items": [
+      {
+        "id": 33233,
+        "name": "Art Supply Materials",
+        "collectable": true
+      },
+      {
+        "id": 12,
+        "name": "Lightning Crystal"
+      }
+    ]
+  },
+  {
+    "id": 813,
+    "type": "Regular",
+    "job": "Botanist",
+    "level": 80,
+    "zone": "The Azim Steppe",
+    "spot": "Onsal Hakair",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 29.2,
+      "y": 16.9,
+      "radius": 2.5
+    },
+    "items": [
+      {
+        "id": 33233,
+        "name": "Art Supply Materials",
+        "collectable": true
+      },
+      {
+        "id": 11,
+        "name": "Earth Crystal"
+      }
+    ]
+  }
+]

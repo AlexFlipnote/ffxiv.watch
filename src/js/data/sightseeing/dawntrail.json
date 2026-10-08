@@ -1,0 +1,930 @@
+[
+  {
+    "number": 1,
+    "name": "Bayside Bevy",
+    "zone": "Tuliyollal",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 12.2,
+      "y": 14.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 2,
+    "name": "The Resplendent Quarter",
+    "zone": "Tuliyollal",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 8,
+      "y": 10.8,
+      "radius": 0
+    }
+  },
+  {
+    "number": 3,
+    "name": "High Tide Harbor",
+    "zone": "Tuliyollal",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 14.7,
+      "y": 15.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 4,
+    "name": "The For'ard Cabins",
+    "zone": "Tuliyollal",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 10.3,
+      "y": 22,
+      "radius": 0
+    }
+  },
+  {
+    "number": 5,
+    "name": "Hunu'iliy",
+    "zone": "Tuliyollal",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 18.5,
+      "y": 3.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 6,
+    "name": "Wachunpelo",
+    "zone": "Urqopacha",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 29.1,
+      "y": 12.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 7,
+    "name": "Miplu's Mate Garden",
+    "zone": "Urqopacha",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 14.5,
+      "y": 8.9,
+      "radius": 0
+    }
+  },
+  {
+    "number": 8,
+    "name": "Shades of Grief",
+    "zone": "Urqopacha",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 26.7,
+      "y": 24.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 9,
+    "name": "Naryor Gorna",
+    "zone": "Urqopacha",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 34.7,
+      "y": 25.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 10,
+    "name": "Chirwagur Saltern",
+    "zone": "Urqopacha",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 22,
+      "y": 35.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 11,
+    "name": "Worqor Lar Dor",
+    "zone": "Urqopacha",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 22.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 12,
+    "name": "House of Winds High",
+    "zone": "Kozama'uka",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 9.2,
+      "y": 12,
+      "radius": 0
+    }
+  },
+  {
+    "number": 13,
+    "name": "Cave Kikitola ",
+    "zone": "Kozama'uka",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 18.2,
+      "y": 20.7,
+      "radius": 0
+    }
+  },
+  {
+    "number": 14,
+    "name": "Breath Between",
+    "zone": "Kozama'uka",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 24.8,
+      "y": 19.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 15,
+    "name": "Kozanuakiy",
+    "zone": "Kozama'uka",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 34.7,
+      "y": 10.7,
+      "radius": 0
+    }
+  },
+  {
+    "number": 16,
+    "name": "Earthenshire",
+    "zone": "Kozama'uka",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 10.7,
+      "y": 28.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 17,
+    "name": "Marsh Ligaka",
+    "zone": "Kozama'uka",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 28.8,
+      "y": 28.7,
+      "radius": 0
+    }
+  },
+  {
+    "number": 18,
+    "name": "Iq Br'aax",
+    "zone": "Yak T'el",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 11.5,
+      "y": 14.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 19,
+    "name": "Iq Rrax Tsoly",
+    "zone": "Yak T'el",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 33,
+      "y": 6.5,
+      "radius": 0
+    }
+  },
+  {
+    "number": 20,
+    "name": "The Xobr'it Cinderfield",
+    "zone": "Yak T'el",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 29.6,
+      "y": 15.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 21,
+    "name": "Choliselvaas",
+    "zone": "Yak T'el",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 24.5,
+      "y": 23.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 22,
+    "name": "The Ja Tiika Heartland",
+    "zone": "Yak T'el",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.5,
+      "y": 32.5,
+      "radius": 0
+    }
+  },
+  {
+    "number": 23,
+    "name": "Tree of Living Light",
+    "zone": "Yak T'el",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 25.3,
+      "y": 27.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 24,
+    "name": "Hhusatahwi",
+    "zone": "Shaaloani",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 29.9,
+      "radius": 0
+    }
+  },
+  {
+    "number": 25,
+    "name": "Mehwahhetsoan",
+    "zone": "Shaaloani",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 27.7,
+      "y": 12,
+      "radius": 0
+    }
+  },
+  {
+    "number": 26,
+    "name": "Lake Toari",
+    "zone": "Shaaloani",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 32.5,
+      "y": 13.5,
+      "radius": 0
+    }
+  },
+  {
+    "number": 27,
+    "name": "Pyaayehe'pya",
+    "zone": "Shaaloani",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 13.8,
+      "y": 34.4,
+      "radius": 0
+    }
+  },
+  {
+    "number": 28,
+    "name": "Mount Loazensasaya",
+    "zone": "Shaaloani",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West",
+      "after": [
+        "A Sight to Behold",
+        "The Rite of Succession"
+      ]
+    },
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 10.3,
+      "y": 12.4,
+      "radius": 0
+    }
+  },
+  {
+    "number": 29,
+    "name": "Resolution",
+    "zone": "Solution Nine",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 10.9,
+      "y": 5.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 30,
+    "name": "Residential Sector",
+    "zone": "Solution Nine",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 4,
+      "y": 17,
+      "radius": 0
+    }
+  },
+  {
+    "number": 31,
+    "name": "Mosaic",
+    "zone": "Solution Nine",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 5.5,
+      "y": 14.7,
+      "radius": 0
+    }
+  },
+  {
+    "number": 32,
+    "name": "True Vue",
+    "zone": "Solution Nine",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 20.1,
+      "y": 15.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 33,
+    "name": "Nexus Arcade",
+    "zone": "Solution Nine",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 7.6,
+      "y": 13.4,
+      "radius": 0
+    }
+  },
+  {
+    "number": 34,
+    "name": "The Thunderyards",
+    "zone": "Heritage Found",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 33.5,
+      "y": 13.5,
+      "radius": 0
+    }
+  },
+  {
+    "number": 35,
+    "name": "The Outskirts",
+    "zone": "Heritage Found",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 20.1,
+      "y": 8,
+      "radius": 0
+    }
+  },
+  {
+    "number": 36,
+    "name": "Everkeep",
+    "zone": "Heritage Found",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 17.7,
+      "y": 5.2,
+      "radius": 0
+    }
+  },
+  {
+    "number": 37,
+    "name": "Crackling Chasm",
+    "zone": "Heritage Found",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 20.7,
+      "y": 25.1,
+      "radius": 0
+    }
+  },
+  {
+    "number": 38,
+    "name": "The Nameslates",
+    "zone": "Heritage Found",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 25.5,
+      "y": 34.7,
+      "radius": 0
+    }
+  },
+  {
+    "number": 39,
+    "name": "Archeo Alexandria",
+    "zone": "Heritage Found",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 9.4,
+      "y": 37.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 40,
+    "name": "Meso Terminal",
+    "zone": "Living Memory",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 21.9,
+      "y": 36.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 41,
+    "name": "Canal Town",
+    "zone": "Living Memory",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 19.2,
+      "y": 33.5,
+      "radius": 0
+    }
+  },
+  {
+    "number": 42,
+    "name": "Yesterland",
+    "zone": "Living Memory",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 28.9,
+      "y": 29.3,
+      "radius": 0
+    }
+  },
+  {
+    "number": 43,
+    "name": "Windspath Gardens",
+    "zone": "Living Memory",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 6.5,
+      "y": 13.6,
+      "radius": 0
+    }
+  },
+  {
+    "number": 44,
+    "name": "Asyle Volcane",
+    "zone": "Living Memory",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 30.3,
+      "y": 18.7,
+      "radius": 0
+    }
+  },
+  {
+    "number": 45,
+    "name": "Steps of the Speaker",
+    "zone": "Living Memory",
+    "emote": "Lookout",
+    "level": 90,
+    "unlock": {
+      "quest": "Sights of the West and Beyond",
+      "after": [
+        "Sights of the West"
+      ]
+    },
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 30.5,
+      "y": 7.6,
+      "radius": 0
+    }
+  }
+]
