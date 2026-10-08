@@ -6,12 +6,16 @@
     "dev": "node build.js watch",
     "build": "node build.js",
     "clean": "node build.js clean",
-    "weather-data": "node scripts/weather-data.js"
+    "weather-data": "node scripts/weather-data.js",
+    "gathering-data": "node scripts/gathering-data.js",
+    "sightseeing-data": "node scripts/sightseeing-data.js"
   },
   "devDependencies": {
     "esbuild": "0.28.1",
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
-    "sass": "^1.93.3"
+    "html-minifier-terser": "7.2.0",
+    "sass": "^1.93.3",
+    "sharp": "0.35.5"
   }
 }

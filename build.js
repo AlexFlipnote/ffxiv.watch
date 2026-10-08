@@ -1,6 +1,7 @@
 import crypto from "crypto"
 import esbuild from "esbuild"
 import fs from "fs"
+import { minify } from "html-minifier-terser"
 import path from "path"
 import * as sass from "sass"
 import { fileURLToPath, pathToFileURL } from "url"
@@ -13,20 +14,42 @@ const OUT = path.join(__dirname, "dist")
 const DOMAIN = "ffxiv.watch"
 const DEV_PORT = 8080
 
-// Folders in src/ that never get copied as-is: compiled (js, scss) or only used inside pages (partials)
-const SKIPPED = ["js", "scss", "partials"]
+const SKIPPED = ["js", "scss", "partials", "pages"]
+
+const PAGES = path.join(SRC, "pages")
+
+// GitHub Pages looks for these in the root of dist/, every other page gets its own folder
+const ROOT_PAGES = ["index.html", "404.html"]
+
+const minifyOptions = {
+  collapseWhitespace: true,
+  removeComments: true,
+  minifyJS: true,
+  minifyCSS: true
+}
 
 const NOT_IN_SITEMAP = ["404.html"]
 
 const TIMERS_FILE = path.join(SRC, "js/utils/timers.js")
-const ZONES_FILE = path.join(SRC, "js/data/weather.json")
 
 const jsBuildConfigs = [
   { entryPoints: ["src/js/index.js"], outfile: "dist/js/index.js" },
-  { entryPoints: ["src/js/weather.js"], outfile: "dist/js/weather.js" },
-  { entryPoints: ["src/js/404.js"], outfile: "dist/js/404.js" }
+  { entryPoints: ["src/js/404.js"], outfile: "dist/js/404.js" },
+  // Code split: each expansion's data is its own chunk, and the code both pages use is one shared chunk
+  {
+    entryPoints: ["src/js/gathering.js", "src/js/sightseeing.js"],
+    outdir: "dist/js",
+    format: "esm",
+    splitting: true,
+    chunkNames: "chunks/[name]-[hash]"
+  }
 ]
 
+/**
+ * @param {object} cfg One of jsBuildConfigs
+ * @param {object} [overrides]
+ * @returns {import("esbuild").BuildOptions}
+ */
 const esbuildOptions = (cfg, overrides = {}) => ({
   bundle: true,
   format: "iife",
@@ -37,6 +60,10 @@ const esbuildOptions = (cfg, overrides = {}) => ({
   ...overrides
 })
 
+/**
+ * @param {string} type Short tag, like "HTML"
+ * @param {string} message
+ */
 function log(type, message) {
   const now = new Date()
   const pad = (num) => String(num).padStart(2, "0")
@@ -51,15 +78,28 @@ function log(type, message) {
   console.log(`[ ${type.padStart(5)} ] ${formattedDate} ${message}`)
 }
 
+/**
+ * @param {string} file Absolute path
+ * @returns {boolean} Inside a folder that's compiled or only used inside pages, see SKIPPED
+ */
 const isSkipped = (file) => SKIPPED.includes(path.relative(SRC, file).split(path.sep)[0])
 
-// Every .html file in src/ except partials, as paths relative to src/ ("index.html", "resets/index.html")
-const listPages = () => fs.readdirSync(SRC, { recursive: true })
-  .filter(file => file.endsWith(".html") && !isSkipped(path.join(SRC, file)))
-  .map(file => file.split(path.sep).join("/"))
+/** @returns {string[]} Every .html file in src/pages/, the front page first so it leads the sitemap */
+const listPages = () => fs.readdirSync(PAGES)
+  .filter(file => file.endsWith(".html"))
+  .sort((a, b) => (b === "index.html") - (a === "index.html") || a.localeCompare(b))
 
-// "index.html" -> "/", "resets/index.html" -> "/resets/", "404.html" -> "/404.html"
-const pageUrl = (page) => "/" + page.replace(/(^|\/)index\.html$/, "$1")
+/**
+ * @param {string} page "gathering.html"
+ * @returns {string} Where it goes in dist/: "gathering/index.html", root pages as-is
+ */
+const pageOutput = (page) => ROOT_PAGES.includes(page) ? page : `${page.replace(/\.html$/, "")}/index.html`
+
+/**
+ * @param {string} page "gathering.html"
+ * @returns {string} "/gathering/", "/" for index.html
+ */
+const pageUrl = (page) => "/" + pageOutput(page).replace(/(^|\/)index\.html$/, "$1")
 
 async function clean() {
   log("CLEAN", "Removing build folder...")
@@ -76,9 +116,19 @@ async function copyAssets() {
   log("ASSET", "Done copying assets")
 }
 
+// "/js/gathering.js" -> the chunks it imports up front, filled by buildJS for the modulepreload links
+const chunkImports = new Map()
+
+/** @param {object} [overrides] esbuild options for every config */
 async function buildJS(overrides = {}) {
   log("JS", "Building JS...")
-  await Promise.all(jsBuildConfigs.map(cfg => esbuild.build(esbuildOptions(cfg, overrides))))
+  const results = await Promise.all(jsBuildConfigs.map(cfg => esbuild.build(esbuildOptions(cfg, { metafile: true, ...overrides }))))
+
+  const url = (file) => "/" + path.relative(OUT, path.resolve(file)).split(path.sep).join("/")
+  for (const [file, output] of results.flatMap(r => Object.entries(r.metafile.outputs))) {
+    const imports = output.imports.filter(i => i.kind === "import-statement").map(i => url(i.path))
+    if (imports.length) chunkImports.set(url(file), imports)
+  }
   log("JS", "Done building the JS")
 }
 
@@ -93,26 +143,36 @@ async function buildCSS() {
 
 /*
   Custom tags, usable in any page or partial:
-  - <x-html str="partials/topbar.html"/>  pastes in src/partials/topbar.html (partials can include partials)
-  - <x-js src="index.js"/>                <script src="/js/index.js?v=hash"></script>
+  - <x-html str="partials/navbar.html"/>  pastes in the partial (partials can include partials)
+  - <x-js src="index.js"/>                <script src="/js/index.js?v=hash">, add `module` for code split pages
+                                          (those also get a modulepreload for each chunk they import up front)
   - <x-css src="index.css"/>              <link href="/css/index.css?v=hash" rel="stylesheet">
   - <x-seo title="..." description="..."/>  <title>, description, canonical URL and link preview tags
-  - <x-timers/>                           the timer cards from src/js/utils/timers.js, see timerCards()
-  - <x-zones/>                            the weather zones from src/js/data/weather.json as <option>s, grouped by expansion
-
-  The ?v=hash is only added on production builds, so browsers and Cloudflare fetch the new file after a deploy.
-  Links pointing at the page they're on get aria-current="page", which is how the topbar marks the active page.
+  - <x-timers/>                           the timer cards, see timerCards()
+  Links to the page they're on get aria-current="page", which marks the active navbar link.
 */
+
+/**
+ * @param {string} file "/js/index.js"
+ * @param {boolean} hashed Production builds add ?v=hash, so browsers and Cloudflare fetch it fresh after a deploy
+ * @returns {string}
+ */
 function assetUrl(file, hashed) {
   if (!hashed) return file
   const content = fs.readFileSync(path.join(OUT, file))
   return `${file}?v=${crypto.createHash("md5").update(content).digest("hex").slice(0, 8)}`
 }
 
+/**
+ * Pastes in the <x-html> partials, each indented like its tag, so partials are written unindented.
+ * @param {string} html
+ * @param {string} from For errors, the file `html` came from
+ * @param {number} [depth]
+ * @returns {string}
+ */
 function includeHtml(html, from, depth = 0) {
   if (depth > 10) throw new Error(`${from}: <x-html> nested too deep, is a partial including itself?`)
 
-  // Every line of the partial gets the same indent as the <x-html> tag, so partials are written unindented
   return html.replace(/^([ \t]*)<x-html\s+str="([^"]+)"\s*\/?>/gm, (_, indent, file) => {
     const partial = path.join(SRC, file)
     if (!fs.existsSync(partial)) throw new Error(`${from}: <x-html> can't find src/${file}`)
@@ -124,6 +184,11 @@ function includeHtml(html, from, depth = 0) {
   })
 }
 
+/**
+ * @param {string} page
+ * @param {string} attrs The <x-seo> tag's attributes, needs a title and a description
+ * @returns {string[]} The tags, one per line
+ */
 function seoTags(page, attrs) {
   const attr = (name) => attrs.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1]
   const title = attr("title")
@@ -157,14 +222,15 @@ function seoTags(page, attrs) {
   ]
 }
 
-// Fresh import every build, so `npm run dev` picks up edits to the timers
+/** @returns {Promise<object[]>} TIMERS, imported fresh every time so `npm run dev` picks up edits */
 const loadTimers = async () => (await import(`${pathToFileURL(TIMERS_FILE)}?v=${Date.now()}`)).TIMERS
 
-/*
-  The cards are written into the page so search engines can read them without running JS or clicking anything.
-  index.js finds them by data-id and fills in the countdowns. The hidden details are the modal's text,
-  only there for search engines, the modal itself is still filled from getAllTimerStates().
-*/
+/**
+ * The timer cards as HTML, so search engines can read them without running JS. index.js finds them by data-id and
+ * fills in the countdowns. The hidden details are the modal's text, for search engines only.
+ * @param {object[]} timers TIMERS
+ * @returns {string[]} Lines of HTML
+ */
 function timerCards(timers) {
   const indent = (lines) => lines.map(line => "  " + line)
 
@@ -205,42 +271,40 @@ function timerCards(timers) {
   })
 }
 
-// Written into the page for the same reason as the timer cards, weather.js only picks the saved zone
-function zoneOptions(zones) {
-  const groups = Map.groupBy(zones, zone => zone.group)
-  return [...groups].flatMap(([group, members]) => [
-    `<optgroup label="${group}">`,
-    ...members.map(zone => `  <option>${zone.name}</option>`),
-    "</optgroup>"
-  ])
-}
-
-function renderPage(page, hashed, { timers, zones }) {
+/**
+ * @param {string} page File name in src/pages/
+ * @param {boolean} hashed Add ?v=hash to the assets
+ * @param {{ timers: object[] }} data
+ * @returns {string} The finished HTML
+ */
+function renderPage(page, hashed, { timers }) {
   const url = pageUrl(page)
 
-  return includeHtml(fs.readFileSync(path.join(SRC, page), "utf8"), page)
+  return includeHtml(fs.readFileSync(path.join(PAGES, page), "utf8"), `pages/${page}`)
     .replace(/^([ \t]*)<x-seo\s+([^>]*?)\s*\/?>/gm, (_, indent, attrs) =>
       seoTags(page, attrs).map(tag => indent + tag).join("\n"))
     .replace(/^([ \t]*)<x-timers\s*\/?>/gm, (_, indent) =>
       timerCards(timers).map(line => indent + line).join("\n"))
-    .replace(/^([ \t]*)<x-zones\s*\/?>/gm, (_, indent) =>
-      zoneOptions(zones).map(line => indent + line).join("\n"))
-    .replace(/<x-js\s+src="([^"]+)"\s*\/?>/g, (_, file) =>
-      `<script src="${assetUrl(`/js/${file}`, hashed)}"></script>`)
+    .replace(/^([ \t]*)<x-js\s+src="([^"]+)"(\s+module)?\s*\/?>/gm, (_, indent, file, module) => [
+      ...(module ? chunkImports.get(`/js/${file}`) ?? [] : []).map(chunk => `<link rel="modulepreload" href="${chunk}">`),
+      `<script${module ? " type=\"module\"" : ""} src="${assetUrl(`/js/${file}`, hashed)}"></script>`
+    ].map(tag => indent + tag).join("\n"))
     .replace(/<x-css\s+src="([^"]+)"\s*\/?>/g, (_, file) =>
       `<link href="${assetUrl(`/css/${file}`, hashed)}" type="text/css" rel="stylesheet">`)
     .replace(/<a\b([^>]*\bhref="([^"]+)"[^>]*)>/g, (tag, attrs, href) =>
       href === url ? `<a${attrs} aria-current="page">` : tag)
 }
 
+/** @param {boolean} [hashed] Production build: hashed asset links and minified HTML */
 async function buildHTML(hashed = true) {
   log("HTML", "Rendering pages...")
   const pages = listPages()
-  const data = { timers: await loadTimers(), zones: JSON.parse(fs.readFileSync(ZONES_FILE, "utf8")) }
+  const data = { timers: await loadTimers() }
   for (const page of pages) {
-    const outputFile = path.join(OUT, page)
+    const outputFile = path.join(OUT, pageOutput(page))
     fs.mkdirSync(path.dirname(outputFile), { recursive: true })
-    fs.writeFileSync(outputFile, renderPage(page, hashed, data))
+    const html = renderPage(page, hashed, data)
+    fs.writeFileSync(outputFile, hashed ? await minify(html, minifyOptions) : html)
   }
   log("HTML", `Done rendering ${pages.length} pages`)
 }
@@ -248,7 +312,7 @@ async function buildHTML(hashed = true) {
 async function buildSite() {
   log("SITE", "Writing CNAME, sitemap.xml and robots.txt")
 
-  // Tells GitHub Pages which domain the site is on, has to be in every deploy since gh-pages gets wiped
+  // Every deploy wipes gh-pages, so the custom domain has to be written each time
   fs.writeFileSync(path.join(OUT, "CNAME"), DOMAIN + "\n")
 
   const urls = listPages()
@@ -313,7 +377,7 @@ async function watch() {
     const file = path.join(SRC, filename)
     if (file.startsWith(path.join(SRC, "scss")))
       buildCSS().catch(err => log("CSS", err.message))
-    else if (file.endsWith(".html") || file === TIMERS_FILE || file === ZONES_FILE)
+    else if (file.endsWith(".html") || file === TIMERS_FILE)
       buildHTML(false).then(buildSite).catch(err => log("HTML", err.message))
     else if (!isSkipped(file))
       copyAssets().catch(err => log("ASSET", err.message))
