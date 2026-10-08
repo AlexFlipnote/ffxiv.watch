@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="Sightseeing Log: Every Vista, Time and Weather - ffxiv.watch"
+      description="FFXIV sightseeing log for every vista, with the emote, map location, unlock quests, and when the time and weather line up next, in your local time."
+    />
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <h1 class="sr-only">FFXIV Sightseeing Log</h1>
+      <main class="listing">
+        <section class="listing-panel">
+          <div class="filters">
+            <input class="input search" id="search" type="search" placeholder="Vista, zone, emote or weather" aria-label="Search">
+            <label>Expansion <select class="select" id="filter-expansion"></select></label>
+          </div>
+          <table class="table listing-table">
+            <thead class="sr-only">
+              <tr><th>Vista</th><th>Location</th></tr>
+            </thead>
+            <tbody id="vistas"></tbody>
+          </table>
+          <p class="table-empty" id="vistas-empty" hidden></p>
+        </section>
+      </main>
+    </div>
+
+    <x-html str="partials/map-modal.html"/>
+
+    <x-js src="sightseeing.js" module/>
+  </body>
+</html>

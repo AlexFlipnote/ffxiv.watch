@@ -3,8 +3,11 @@
 @use "components/daynight";
 
 @use "components/navbar";
+@use "components/controls";
 @use "components/clock";
 @use "components/timers";
-@use "components/weather";
+@use "components/listing";
+@use "components/gathering";
+@use "components/sightseeing";
 @use "components/modal";
 @use "components/notfound";

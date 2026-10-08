@@ -1,0 +1,22 @@
+.gathering-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .75rem;
+}
+
+.gathering-item {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.gathering-stars {
+  color: var(--gold);
+  font-size: .7rem;
+}
+
+.gathering-collectable {
+  padding: 0 .25rem;
+  color: var(--accent);
+  cursor: help;
+}

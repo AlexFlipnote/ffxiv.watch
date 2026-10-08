@@ -1,0 +1,79 @@
+@use "../mixins" as *;
+
+// Dropdowns, text inputs, the filter row above a table, and the table itself. Shared by the table pages
+.select, .input {
+  background-color: var(--chip-background);
+  border: none;
+  border-radius: .5rem;
+  padding: .375rem .625rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--font-primary);
+}
+
+// Our own chevron instead of the browser's, which sits right against the edge whatever the padding
+.select {
+  appearance: none;
+  padding-right: 2rem;
+  background-image: var(--select-arrow);
+  background-repeat: no-repeat;
+  background-position: right .625rem center;
+  background-size: .625rem auto;
+  cursor: pointer;
+
+  option,
+  optgroup {
+    background-color: var(--surface-solid);
+    color: var(--font-primary);
+  }
+}
+
+.input::placeholder {
+  color: var(--font-tertiary);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--font-tertiary);
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+}
+
+// Separate borders, not collapsed
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+
+  th {
+    text-align: left;
+    font-weight: bold;
+    color: var(--font-tertiary);
+    padding: 0 .5rem .5rem;
+  }
+
+  td {
+    padding: .5rem;
+    color: var(--font-secondary);
+  }
+
+  strong {
+    color: var(--font-primary);
+  }
+}
+
+.table-empty {
+  margin: 1rem 0 0;
+  color: var(--font-tertiary);
+  font-style: italic;
+}

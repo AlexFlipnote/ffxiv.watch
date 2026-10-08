@@ -1,15 +1,21 @@
-// Eorzean weather: fully deterministic, so any zone can be forecast as far ahead as you like.
-// Weather changes every 8 Eorzean hours (ET 00:00, 08:00 and 16:00), which is 23 minutes 20 seconds of Earth time.
-// Each change rolls a number from 0-99 out of the time, the zone's weather rates decide what that roll means.
 import ZONES from "../data/weather.json"
 
 export { ZONES }
 
+/** One weather period (8 ET hours) in Earth ms. */
 export const WEATHER_PERIOD = 8 * 175 * 1000
 
+/**
+ * @param {number} ms
+ * @returns {number} Start of the weather period containing `ms`
+ */
 export const periodStart = (ms) => Math.floor(ms / WEATHER_PERIOD) * WEATHER_PERIOD
 
-// The game's roll for the weather period starting at `ms`, done in unsigned 32-bit like the game
+/**
+ * The game's roll for a weather period, in unsigned 32-bit math like the game.
+ * @param {number} ms Start of the period
+ * @returns {number} 0-99
+ */
 function roll(ms) {
   const seconds = Math.floor(ms / 1000)
   const bell = Math.floor(seconds / 175)
@@ -22,6 +28,11 @@ function roll(ms) {
   return step2 % 100
 }
 
+/**
+ * @param {{ weather: [string, number][] }} zone [name, chance] pairs, rolled in order
+ * @param {number} ms
+ * @returns {string} The weather at `ms`
+ */
 export function weatherAt(zone, ms) {
   let chance = roll(periodStart(ms))
   for (const [name, rate] of zone.weather) {
@@ -32,9 +43,19 @@ export function weatherAt(zone, ms) {
   return zone.weather.at(-1)[0]
 }
 
+/**
+ * @param {{ weather: [string, number][] }} zone
+ * @returns {string[]} Each weather the zone can have, once
+ */
 export const weatherNames = (zone) => [...new Set(zone.weather.map(([name]) => name))]
 
-/** Weather periods from the one containing `from` onwards, as { start, end, weather, previous }. */
+/**
+ * Weather periods from the one containing `from` onwards.
+ * @param {{ weather: [string, number][] }} zone
+ * @param {number} from
+ * @param {{ filter?: (period: object) => boolean, limit?: number, horizon?: number }} [options]
+ * @returns {{ start: number, end: number, weather: string, previous: string }[]}
+ */
 export function forecast(zone, from, { filter = () => true, limit = 10, horizon = 30 * 24 * 60 * 60 * 1000 } = {}) {
   const periods = []
   let start = periodStart(from)
