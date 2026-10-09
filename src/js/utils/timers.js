@@ -236,11 +236,12 @@ function getTimerState(timer, now, regionId) {
 export const getAllTimerStates = (now, regions = {}) => TIMERS.map((timer) => getTimerState(timer, now, regions[timer.id]))
 
 /**
+ * Rounded up to the second, so it reaches 00:00:00 right as the time comes, not a second before.
  * @param {number} ms
  * @returns {string} "01:02:03", or "2 days, 01:02:03"
  */
 export function formatCountdown(ms) {
-  const s = Math.floor(ms / 1000)
+  const s = Math.ceil(ms / 1000)
   const m = Math.floor(s / 60)
   const h = Math.floor(m / 60)
   const d = Math.floor(h / 24)
