@@ -13,6 +13,11 @@
       "y": 20.9,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Summerford Farms",
+      "x": 26.1,
+      "y": 16.4
+    },
     "items": [
       {
         "id": 28766,
@@ -33,6 +38,11 @@
       "x": 22.7,
       "y": 19.1,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Summerford Farms",
+      "x": 26.1,
+      "y": 16.4
     },
     "items": [
       {
@@ -71,6 +81,11 @@
       "y": 9.9,
       "radius": 1.5
     },
+    "aetheryte": {
+      "name": "Summerford Farms",
+      "x": 26.1,
+      "y": 16.4
+    },
     "items": [
       {
         "id": 5599,
@@ -95,6 +110,11 @@
       "x": 16.8,
       "y": 13.7,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Summerford Farms",
+      "x": 26.1,
+      "y": 16.4
     },
     "items": [
       {
@@ -125,6 +145,11 @@
       "y": 21.4,
       "radius": 1.5
     },
+    "aetheryte": {
+      "name": "Summerford Farms",
+      "x": 26.1,
+      "y": 16.4
+    },
     "items": [
       {
         "id": 8,
@@ -149,6 +174,11 @@
       "x": 18.7,
       "y": 16.5,
       "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Summerford Farms",
+      "x": 26.1,
+      "y": 16.4
     },
     "times": [
       [
@@ -177,6 +207,11 @@
       "x": 24.3,
       "y": 27,
       "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Summerford Farms",
+      "x": 26.1,
+      "y": 16.4
     },
     "times": [
       [
@@ -210,6 +245,11 @@
       "y": 26.4,
       "radius": 1.4
     },
+    "aetheryte": {
+      "name": "Summerford Farms",
+      "x": 26.1,
+      "y": 16.4
+    },
     "times": [
       [
         240,
@@ -237,6 +277,11 @@
       "x": 32.2,
       "y": 16.1,
       "radius": 0.7
+    },
+    "aetheryte": {
+      "name": "Moraby Drydocks",
+      "x": 24.6,
+      "y": 35
     },
     "items": [
       {
@@ -267,6 +312,11 @@
       "y": 18.6,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "Moraby Drydocks",
+      "x": 24.6,
+      "y": 35
+    },
     "items": [
       {
         "id": 5128,
@@ -291,6 +341,11 @@
       "x": 26.7,
       "y": 22.3,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Moraby Drydocks",
+      "x": 24.6,
+      "y": 35
     },
     "items": [
       {
@@ -329,6 +384,11 @@
       "y": 26.3,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "Moraby Drydocks",
+      "x": 24.6,
+      "y": 35
+    },
     "items": [
       {
         "id": 28768,
@@ -349,6 +409,11 @@
       "x": 34.8,
       "y": 17.1,
       "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Moraby Drydocks",
+      "x": 24.6,
+      "y": 35
     },
     "items": [
       {
@@ -374,6 +439,11 @@
       "x": 26.4,
       "y": 15.6,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Moraby Drydocks",
+      "x": 24.6,
+      "y": 35
     },
     "items": [
       {
@@ -404,6 +474,11 @@
       "y": 35,
       "radius": 1.5
     },
+    "aetheryte": {
+      "name": "Moraby Drydocks",
+      "x": 24.6,
+      "y": 35
+    },
     "items": [
       {
         "id": 11,
@@ -428,6 +503,11 @@
       "x": 32.5,
       "y": 13,
       "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Moraby Drydocks",
+      "x": 24.6,
+      "y": 35
     },
     "times": [
       [
@@ -461,6 +541,11 @@
       "x": 23.8,
       "y": 21.6,
       "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Moraby Drydocks",
+      "x": 24.6,
+      "y": 35
     },
     "times": [
       [
@@ -500,6 +585,11 @@
       "y": 33.8,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "Costa del Sol",
+      "x": 31.3,
+      "y": 30.8
+    },
     "items": [
       {
         "id": 52712,
@@ -528,6 +618,11 @@
       "x": 26.6,
       "y": 30.1,
       "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Costa del Sol",
+      "x": 31.3,
+      "y": 30.8
     },
     "items": [
       {
@@ -566,6 +661,11 @@
       "y": 27.2,
       "radius": 1.7
     },
+    "aetheryte": {
+      "name": "Costa del Sol",
+      "x": 31.3,
+      "y": 30.8
+    },
     "items": [
       {
         "id": 5139,
@@ -598,6 +698,11 @@
       "x": 19.3,
       "y": 25.5,
       "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Wineport",
+      "x": 21.1,
+      "y": 21.6
     },
     "items": [
       {
@@ -636,6 +741,11 @@
       "y": 29.1,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "Wineport",
+      "x": 21.1,
+      "y": 21.6
+    },
     "items": [
       {
         "id": 4840,
@@ -669,6 +779,11 @@
       "y": 32.3,
       "radius": 1.4
     },
+    "aetheryte": {
+      "name": "Wineport",
+      "x": 21.1,
+      "y": 21.6
+    },
     "items": [
       {
         "id": 13,
@@ -693,6 +808,11 @@
       "x": 30.7,
       "y": 27,
       "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Costa del Sol",
+      "x": 31.3,
+      "y": 30.8
     },
     "times": [
       [
@@ -727,6 +847,11 @@
       "y": 32.8,
       "radius": 1.4
     },
+    "aetheryte": {
+      "name": "Costa del Sol",
+      "x": 31.3,
+      "y": 30.8
+    },
     "times": [
       [
         300,
@@ -759,6 +884,11 @@
       "x": 17.6,
       "y": 27.6,
       "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Wineport",
+      "x": 21.1,
+      "y": 21.6
     },
     "times": [
       [
@@ -793,6 +923,11 @@
       "y": 33.1,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Wineport",
+      "x": 21.1,
+      "y": 21.6
+    },
     "times": [
       [
         1020,
@@ -820,6 +955,11 @@
       "x": 17.6,
       "y": 27.5,
       "radius": 1.7
+    },
+    "aetheryte": {
+      "name": "Wineport",
+      "x": 21.1,
+      "y": 21.6
     },
     "times": [
       [
@@ -849,6 +989,11 @@
       "y": 24,
       "radius": 1.6
     },
+    "aetheryte": {
+      "name": "Aleport",
+      "x": 26.7,
+      "y": 25.9
+    },
     "items": [
       {
         "id": 5599,
@@ -873,6 +1018,11 @@
       "x": 31.9,
       "y": 29.2,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Swiftperch",
+      "x": 34.6,
+      "y": 31.8
     },
     "items": [
       {
@@ -907,6 +1057,11 @@
       "y": 22.7,
       "radius": 1.4
     },
+    "aetheryte": {
+      "name": "Aleport",
+      "x": 26.7,
+      "y": 25.9
+    },
     "items": [
       {
         "id": 5129,
@@ -935,6 +1090,11 @@
       "x": 26.4,
       "y": 24.2,
       "radius": 1.7
+    },
+    "aetheryte": {
+      "name": "Aleport",
+      "x": 26.7,
+      "y": 25.9
     },
     "items": [
       {
@@ -965,6 +1125,11 @@
       "y": 28.3,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "Swiftperch",
+      "x": 34.6,
+      "y": 31.8
+    },
     "items": [
       {
         "id": 52712,
@@ -994,6 +1159,11 @@
       "y": 29.5,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Swiftperch",
+      "x": 34.6,
+      "y": 31.8
+    },
     "items": [
       {
         "id": 9,
@@ -1018,6 +1188,11 @@
       "x": 34.3,
       "y": 28.3,
       "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Swiftperch",
+      "x": 34.6,
+      "y": 31.8
     },
     "times": [
       [
@@ -1057,6 +1232,11 @@
       "y": 24.7,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Camp Bronze Lake",
+      "x": 30.3,
+      "y": 23.4
+    },
     "items": [
       {
         "id": 4812,
@@ -1094,6 +1274,11 @@
       "y": 23.4,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "Camp Bronze Lake",
+      "x": 30.3,
+      "y": 23.4
+    },
     "items": [
       {
         "id": 5152,
@@ -1127,6 +1312,11 @@
       "y": 26,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Camp Bronze Lake",
+      "x": 30.3,
+      "y": 23.4
+    },
     "items": [
       {
         "id": 5527,
@@ -1156,6 +1346,11 @@
       "y": 22,
       "radius": 0.9
     },
+    "aetheryte": {
+      "name": "Camp Bronze Lake",
+      "x": 30.3,
+      "y": 23.4
+    },
     "items": [
       {
         "id": 28770,
@@ -1180,6 +1375,11 @@
       "x": 28.5,
       "y": 22.2,
       "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Camp Bronze Lake",
+      "x": 30.3,
+      "y": 23.4
     },
     "items": [
       {
@@ -1209,6 +1409,11 @@
       "x": 34.6,
       "y": 24.7,
       "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Camp Bronze Lake",
+      "x": 30.3,
+      "y": 23.4
     },
     "items": [
       {
@@ -1247,6 +1452,11 @@
       "y": 25.3,
       "radius": 1
     },
+    "aetheryte": {
+      "name": "Camp Bronze Lake",
+      "x": 30.3,
+      "y": 23.4
+    },
     "items": [
       {
         "id": 5145,
@@ -1275,6 +1485,11 @@
       "x": 29.1,
       "y": 25.5,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Camp Bronze Lake",
+      "x": 30.3,
+      "y": 23.4
     },
     "times": [
       [
@@ -1309,6 +1524,11 @@
       "y": 25.7,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
+    },
     "items": [
       {
         "id": 5106,
@@ -1341,6 +1561,11 @@
       "x": 22.4,
       "y": 28.7,
       "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
     },
     "items": [
       {
@@ -1379,6 +1604,11 @@
       "y": 18.8,
       "radius": 1.5
     },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
+    },
     "items": [
       {
         "id": 4778,
@@ -1416,6 +1646,11 @@
       "y": 23.4,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
+    },
     "items": [
       {
         "id": 4829,
@@ -1449,6 +1684,11 @@
       "y": 17,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
+    },
     "items": [
       {
         "id": 5111,
@@ -1473,6 +1713,11 @@
       "x": 24.4,
       "y": 18.7,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
     },
     "items": [
       {
@@ -1507,6 +1752,11 @@
       "y": 15.1,
       "radius": 0.6
     },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
+    },
     "items": [
       {
         "id": 28916,
@@ -1527,6 +1777,11 @@
       "x": 23.6,
       "y": 23.3,
       "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
     },
     "items": [
       {
@@ -1557,6 +1812,11 @@
       "y": 28.8,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
+    },
     "items": [
       {
         "id": 7,
@@ -1577,6 +1837,11 @@
       "x": 18.9,
       "y": 28.4,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Horizon",
+      "x": 22.9,
+      "y": 16.9
     },
     "times": [
       [
@@ -1609,6 +1874,11 @@
       "x": 19.2,
       "y": 25.7,
       "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
     },
     "items": [
       {
@@ -1643,6 +1913,11 @@
       "y": 27,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
+    },
     "items": [
       {
         "id": 5432,
@@ -1672,6 +1947,11 @@
       "y": 26.7,
       "radius": 1.9
     },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
+    },
     "items": [
       {
         "id": 5351,
@@ -1700,6 +1980,11 @@
       "x": 20.2,
       "y": 22.6,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
     },
     "items": [
       {
@@ -1734,6 +2019,11 @@
       "y": 20.5,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
+    },
     "items": [
       {
         "id": 4781,
@@ -1766,6 +2056,11 @@
       "x": 14.6,
       "y": 22.6,
       "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
     },
     "items": [
       {
@@ -1800,6 +2095,11 @@
       "y": 14.7,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
+    },
     "items": [
       {
         "id": 28767,
@@ -1820,6 +2120,11 @@
       "x": 21,
       "y": 20.2,
       "radius": 1.3
+    },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
     },
     "items": [
       {
@@ -1845,6 +2150,11 @@
       "x": 24.7,
       "y": 30.7,
       "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
     },
     "items": [
       {
@@ -1875,6 +2185,11 @@
       "y": 19.7,
       "radius": 1.9
     },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
+    },
     "items": [
       {
         "id": 12,
@@ -1899,6 +2214,11 @@
       "x": 25.2,
       "y": 15.9,
       "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Black Brush Station",
+      "x": 21.1,
+      "y": 18.2
     },
     "times": [
       [
@@ -1943,6 +2263,11 @@
       "y": 27.1,
       "radius": 1
     },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
+    },
     "items": [
       {
         "id": 4787,
@@ -1976,6 +2301,11 @@
       "y": 20.5,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
+    },
     "items": [
       {
         "id": 5130,
@@ -2008,6 +2338,11 @@
       "x": 14.8,
       "y": 20.8,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
     },
     "items": [
       {
@@ -2046,6 +2381,11 @@
       "y": 26.4,
       "radius": 0.6
     },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
+    },
     "items": [
       {
         "id": 28772,
@@ -2066,6 +2406,11 @@
       "x": 26.4,
       "y": 16.7,
       "radius": 1.3
+    },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
     },
     "items": [
       {
@@ -2096,6 +2441,11 @@
       "y": 19.6,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
+    },
     "items": [
       {
         "id": 52712,
@@ -2125,6 +2475,11 @@
       "y": 19.1,
       "radius": 1.4
     },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
+    },
     "items": [
       {
         "id": 5143,
@@ -2153,6 +2508,11 @@
       "x": 12.3,
       "y": 15.9,
       "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
     },
     "times": [
       [
@@ -2186,6 +2546,11 @@
       "x": 28.1,
       "y": 21.7,
       "radius": 0.7
+    },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
     },
     "times": [
       [
@@ -2225,6 +2590,11 @@
       "y": 23.2,
       "radius": 1.7
     },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
+    },
     "times": [
       [
         300,
@@ -2253,6 +2623,11 @@
       "y": 18.6,
       "radius": 0.9
     },
+    "aetheryte": {
+      "name": "Camp Drybone",
+      "x": 13.8,
+      "y": 24.3
+    },
     "times": [
       [
         120,
@@ -2280,6 +2655,11 @@
       "x": 22.4,
       "y": 29.6,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Forgotten Springs",
+      "x": 15,
+      "y": 29.6
     },
     "items": [
       {
@@ -2310,6 +2690,11 @@
       "y": 11.3,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Little Ala Mhigo",
+      "x": 18.3,
+      "y": 13.2
+    },
     "items": [
       {
         "id": 52712,
@@ -2339,6 +2724,11 @@
       "y": 18.5,
       "radius": 1
     },
+    "aetheryte": {
+      "name": "Little Ala Mhigo",
+      "x": 18.3,
+      "y": 13.2
+    },
     "items": [
       {
         "id": 5271,
@@ -2363,6 +2753,11 @@
       "x": 20.5,
       "y": 8.6,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Little Ala Mhigo",
+      "x": 18.3,
+      "y": 13.2
     },
     "items": [
       {
@@ -2401,6 +2796,11 @@
       "y": 40.8,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "Forgotten Springs",
+      "x": 15,
+      "y": 29.6
+    },
     "items": [
       {
         "id": 5137,
@@ -2429,6 +2829,11 @@
       "x": 13.9,
       "y": 31.7,
       "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Forgotten Springs",
+      "x": 15,
+      "y": 29.6
     },
     "items": [
       {
@@ -2463,6 +2868,11 @@
       "y": 10.6,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "Little Ala Mhigo",
+      "x": 18.3,
+      "y": 13.2
+    },
     "times": [
       [
         240,
@@ -2496,6 +2906,11 @@
       "y": 28.1,
       "radius": 1.7
     },
+    "aetheryte": {
+      "name": "Camp Bluefog",
+      "x": 21.9,
+      "y": 30.6
+    },
     "items": [
       {
         "id": 5526,
@@ -2520,6 +2935,11 @@
       "x": 23.4,
       "y": 24.4,
       "radius": 1.3
+    },
+    "aetheryte": {
+      "name": "Ceruleum Processing Plant",
+      "x": 21,
+      "y": 20.9
     },
     "items": [
       {
@@ -2557,6 +2977,11 @@
       "x": 17.3,
       "y": 20.2,
       "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Ceruleum Processing Plant",
+      "x": 21,
+      "y": 20.9
     },
     "times": [
       [
@@ -2601,6 +3026,11 @@
       "y": 24.3,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Ceruleum Processing Plant",
+      "x": 21,
+      "y": 20.9
+    },
     "times": [
       [
         1020,
@@ -2633,6 +3063,11 @@
       "x": 22.9,
       "y": 17.9,
       "radius": 1.3
+    },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
     },
     "items": [
       {
@@ -2675,6 +3110,11 @@
       "y": 20.4,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
+    },
     "items": [
       {
         "id": 5383,
@@ -2712,6 +3152,11 @@
       "y": 20.2,
       "radius": 1.4
     },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
+    },
     "items": [
       {
         "id": 5385,
@@ -2740,6 +3185,11 @@
       "x": 18.8,
       "y": 19.3,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
     },
     "items": [
       {
@@ -2778,6 +3228,11 @@
       "y": 23.8,
       "radius": 1.4
     },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
+    },
     "items": [
       {
         "id": 5540,
@@ -2815,6 +3270,11 @@
       "y": 30.9,
       "radius": 1.5
     },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
+    },
     "items": [
       {
         "id": 52712,
@@ -2843,6 +3303,11 @@
       "x": 14.1,
       "y": 22.1,
       "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
     },
     "items": [
       {
@@ -2877,6 +3342,11 @@
       "y": 18.8,
       "radius": 0.6
     },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
+    },
     "items": [
       {
         "id": 28769,
@@ -2897,6 +3367,11 @@
       "x": 15.9,
       "y": 20.5,
       "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
     },
     "times": [
       [
@@ -2931,6 +3406,11 @@
       "y": 20.2,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
+    },
     "times": [
       [
         360,
@@ -2958,6 +3438,11 @@
       "x": 24.8,
       "y": 29.6,
       "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Bentbranch Meadows",
+      "x": 21.8,
+      "y": 22.2
     },
     "times": [
       [
@@ -2987,6 +3472,11 @@
       "y": 23.6,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
+    },
     "items": [
       {
         "id": 28765,
@@ -3007,6 +3497,11 @@
       "x": 15.4,
       "y": 27.2,
       "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
     },
     "items": [
       {
@@ -3040,6 +3535,11 @@
       "x": 18.5,
       "y": 28.3,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
     },
     "items": [
       {
@@ -3078,6 +3578,11 @@
       "y": 27.4,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
+    },
     "items": [
       {
         "id": 52712,
@@ -3106,6 +3611,11 @@
       "x": 16.5,
       "y": 23.3,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
     },
     "items": [
       {
@@ -3136,6 +3646,11 @@
       "y": 24.6,
       "radius": 0.8
     },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
+    },
     "items": [
       {
         "id": 10,
@@ -3160,6 +3675,11 @@
       "x": 22,
       "y": 26.5,
       "radius": 0.7
+    },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
     },
     "times": [
       [
@@ -3194,6 +3714,11 @@
       "y": 19.3,
       "radius": 0.4
     },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
+    },
     "times": [
       [
         300,
@@ -3226,6 +3751,11 @@
       "x": 13.8,
       "y": 23.8,
       "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
     },
     "times": [
       [
@@ -3265,6 +3795,11 @@
       "y": 30.6,
       "radius": 1
     },
+    "aetheryte": {
+      "name": "The Hawthorne Hut",
+      "x": 17.8,
+      "y": 27.5
+    },
     "times": [
       [
         1020,
@@ -3297,6 +3832,11 @@
       "x": 23.2,
       "y": 21.6,
       "radius": 1.3
+    },
+    "aetheryte": {
+      "name": "Quarrymill",
+      "x": 25.1,
+      "y": 20.1
     },
     "items": [
       {
@@ -3331,6 +3871,11 @@
       "y": 19.5,
       "radius": 1
     },
+    "aetheryte": {
+      "name": "Quarrymill",
+      "x": 25.1,
+      "y": 20.1
+    },
     "items": [
       {
         "id": 5113,
@@ -3359,6 +3904,11 @@
       "x": 23,
       "y": 21.8,
       "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Quarrymill",
+      "x": 25.1,
+      "y": 20.1
     },
     "items": [
       {
@@ -3397,6 +3947,11 @@
       "y": 19.1,
       "radius": 1.4
     },
+    "aetheryte": {
+      "name": "Quarrymill",
+      "x": 25.1,
+      "y": 20.1
+    },
     "items": [
       {
         "id": 4813,
@@ -3426,6 +3981,11 @@
       "y": 21.9,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "Camp Tranquil",
+      "x": 16.9,
+      "y": 28.6
+    },
     "items": [
       {
         "id": 52712,
@@ -3454,6 +4014,11 @@
       "x": 16.6,
       "y": 30.3,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Camp Tranquil",
+      "x": 16.9,
+      "y": 28.6
     },
     "items": [
       {
@@ -3488,6 +4053,11 @@
       "y": 28.7,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "Camp Tranquil",
+      "x": 16.9,
+      "y": 28.6
+    },
     "items": [
       {
         "id": 4798,
@@ -3520,6 +4090,11 @@
       "x": 28.7,
       "y": 22.9,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Quarrymill",
+      "x": 25.1,
+      "y": 20.1
     },
     "items": [
       {
@@ -3554,6 +4129,11 @@
       "y": 28.7,
       "radius": 1.7
     },
+    "aetheryte": {
+      "name": "Camp Tranquil",
+      "x": 16.9,
+      "y": 28.6
+    },
     "items": [
       {
         "id": 4841,
@@ -3583,6 +4163,11 @@
       "y": 32.6,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "Camp Tranquil",
+      "x": 16.9,
+      "y": 28.6
+    },
     "items": [
       {
         "id": 28773,
@@ -3603,6 +4188,11 @@
       "x": 16.8,
       "y": 30.7,
       "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Camp Tranquil",
+      "x": 16.9,
+      "y": 28.6
     },
     "times": [
       [
@@ -3637,6 +4227,11 @@
       "y": 23.1,
       "radius": 0.9
     },
+    "aetheryte": {
+      "name": "Camp Tranquil",
+      "x": 16.9,
+      "y": 28.6
+    },
     "times": [
       [
         120,
@@ -3664,6 +4259,11 @@
       "x": 29.6,
       "y": 26.6,
       "radius": 1.3
+    },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
     },
     "items": [
       {
@@ -3698,6 +4298,11 @@
       "y": 27.4,
       "radius": 1
     },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
+    },
     "items": [
       {
         "id": 5498,
@@ -3731,6 +4336,11 @@
       "y": 22,
       "radius": 1.5
     },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
+    },
     "items": [
       {
         "id": 5,
@@ -3752,6 +4362,11 @@
       "y": 21.3,
       "radius": 0.6
     },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
+    },
     "items": [
       {
         "id": 5,
@@ -3772,6 +4387,11 @@
       "x": 27.7,
       "y": 24.4,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
     },
     "items": [
       {
@@ -3806,6 +4426,11 @@
       "y": 25.1,
       "radius": 0.6
     },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
+    },
     "items": [
       {
         "id": 5133,
@@ -3835,6 +4460,11 @@
       "y": 23.1,
       "radius": 0.8
     },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
+    },
     "items": [
       {
         "id": 5131,
@@ -3859,6 +4489,11 @@
       "x": 23.4,
       "y": 26.2,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
     },
     "items": [
       {
@@ -3897,6 +4532,11 @@
       "y": 21.9,
       "radius": 1.1
     },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
+    },
     "items": [
       {
         "id": 52712,
@@ -3926,6 +4566,11 @@
       "y": 27.6,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Fallgourd Float",
+      "x": 20.6,
+      "y": 26.1
+    },
     "times": [
       [
         180,
@@ -3954,6 +4599,11 @@
       "y": 19.9,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
+    },
     "items": [
       {
         "id": 3,
@@ -3975,6 +4625,11 @@
       "y": 16.7,
       "radius": 0.8
     },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
+    },
     "items": [
       {
         "id": 3,
@@ -3995,6 +4650,11 @@
       "x": 24.3,
       "y": 19.9,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
     },
     "items": [
       {
@@ -4025,6 +4685,11 @@
       "y": 17.8,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
+    },
     "items": [
       {
         "id": 6146,
@@ -4054,6 +4719,11 @@
       "y": 13.8,
       "radius": 0.8
     },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
+    },
     "items": [
       {
         "id": 28774,
@@ -4074,6 +4744,11 @@
       "x": 29.2,
       "y": 12.8,
       "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
     },
     "times": [
       [
@@ -4103,6 +4778,11 @@
       "y": 24.4,
       "radius": 2
     },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
+    },
     "times": [
       [
         780,
@@ -4131,6 +4811,11 @@
       "y": 13.4,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
+    },
     "times": [
       [
         1020,
@@ -4158,6 +4843,11 @@
       "x": 27.6,
       "y": 19.9,
       "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
     },
     "times": [
       [
@@ -4192,6 +4882,11 @@
       "y": 24.7,
       "radius": 1.5
     },
+    "aetheryte": {
+      "name": "Camp Dragonhead",
+      "x": 26,
+      "y": 16.8
+    },
     "times": [
       [
         1260,
@@ -4220,6 +4915,11 @@
       "y": 15,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Revenant's Toll",
+      "x": 22.3,
+      "y": 8.1
+    },
     "items": [
       {
         "id": 6,
@@ -4241,6 +4941,11 @@
       "y": 14.5,
       "radius": 0.6
     },
+    "aetheryte": {
+      "name": "Revenant's Toll",
+      "x": 22.3,
+      "y": 8.1
+    },
     "items": [
       {
         "id": 6,
@@ -4261,6 +4966,11 @@
       "x": 32.1,
       "y": 13.6,
       "radius": 1.9
+    },
+    "aetheryte": {
+      "name": "Revenant's Toll",
+      "x": 22.3,
+      "y": 8.1
     },
     "times": [
       [
@@ -4316,6 +5026,11 @@
       "x": 27.8,
       "y": 10.9,
       "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Revenant's Toll",
+      "x": 22.3,
+      "y": 8.1
     },
     "times": [
       [

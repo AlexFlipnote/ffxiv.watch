@@ -1,4 +1,4 @@
-import { byId, mapPosition, saveMaps, sheets, writeExpansions } from "./datamining.js"
+import { byId, mapPosition, nearestAetheryte, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
 
 /**
  * @param {string} hhmm HHMM ET
@@ -20,8 +20,9 @@ function timeWindow(adventure) {
 }
 
 async function main() {
-  const [adventures, phases, levels, emotes, weathers, quests, maps, territories, places, exVersions] = await sheets([
-    "Adventure", "AdventureExPhase", "Level", "Emote", "Weather", "Quest", "Map", "TerritoryType", "PlaceName", "ExVersion"
+  const [adventures, phases, levels, emotes, weathers, quests, maps, territories, places, exVersions, aetherytes, markers] = await sheets([
+    "Adventure", "AdventureExPhase", "Level", "Emote", "Weather", "Quest", "Map", "TerritoryType", "PlaceName", "ExVersion",
+    "Aetheryte", "MapMarker"
   ])
 
   const level = byId(levels)
@@ -32,6 +33,7 @@ async function main() {
   const territory = byId(territories)
   const place = byId(places)
   const exVersion = byId(exVersions)
+  const aetheryteNear = nearestAetheryte({ aetherytes, markers, map, place })
 
   const SIGHT_TO_BEHOLD = quests.find((q) => q.Name === "A Sight to Behold")
   /**
@@ -59,6 +61,7 @@ async function main() {
   }
 
   const vistas = []
+  const text = {}
   const numbers = {}
   for (const adventure of adventures) {
     const l = level[adventure.Level]
@@ -78,6 +81,9 @@ async function main() {
     // Only the listed weather. Rain, Thunderstorms and Blizzards have their own categories, which may also allow
     // Showers, Thunder and Snow, but the data doesn't say
     const needsWeather = adventure.WeatherCategory !== "0" && weather[adventure.Weather]?.Name
+    const position = m ? mapPosition(m, l.X, l.Z, l.Radius) : null
+    const aetheryte = position && aetheryteNear(l.Map, position.x, position.y)
+    text[adventure.Name] = { impression: adventure.Impression, description: adventure.Description }
 
     vistas.push({
       expansion,
@@ -92,7 +98,8 @@ async function main() {
         ...(times ? { times } : {}),
         ...(needsWeather ? { weather: [needsWeather] } : {}),
         ...(unlock ? { unlock } : {}),
-        ...(m ? { map: mapPosition(m, l.X, l.Z, l.Radius) } : {})
+        ...(position ? { map: position } : {}),
+        ...(aetheryte ? { aetheryte } : {})
       }
     })
   }
@@ -102,6 +109,8 @@ async function main() {
   if (missing.length) console.log(`No map position for ${missing.map((v) => v.entry.name).join(", ")}`)
 
   writeExpansions("sightseeing", exVersions, vistas)
+  // The vista pages' text, kept out of the chunks the list page loads
+  writeData("sightseeing-text", text)
 }
 
 main().catch((err) => {

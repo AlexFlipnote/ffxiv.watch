@@ -13,6 +13,11 @@
       "y": 11,
       "radius": 3.1
     },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
     "items": [
       {
         "id": 43992,
@@ -48,6 +53,11 @@
       "y": 27.4,
       "radius": 3.7
     },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
     "items": [
       {
         "id": 44002,
@@ -82,6 +92,11 @@
       "y": 27.7,
       "radius": 3.3
     },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
     "items": [
       {
         "id": 43982,
@@ -111,6 +126,11 @@
       "x": 18.9,
       "y": 14.3,
       "radius": 3.1
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
     },
     "items": [
       {
@@ -151,6 +171,11 @@
       "y": 12,
       "radius": 3.9
     },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
     "items": [
       {
         "id": 43989,
@@ -180,6 +205,11 @@
       "x": 7.6,
       "y": 24,
       "radius": 3
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
     },
     "items": [
       {
@@ -216,6 +246,11 @@
       "y": 23.8,
       "radius": 0.4
     },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
     "times": [
       [
         0,
@@ -248,6 +283,11 @@
       "x": 37.1,
       "y": 29.6,
       "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
     },
     "times": [
       [
@@ -283,6 +323,11 @@
       "y": 25.2,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
     "times": [
       [
         360,
@@ -315,6 +360,11 @@
       "x": 7.8,
       "y": 15.1,
       "radius": 2.9
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
     },
     "items": [
       {
@@ -356,6 +406,11 @@
       "y": 9.5,
       "radius": 3.2
     },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
     "items": [
       {
         "id": 44015,
@@ -395,6 +450,11 @@
       "y": 34,
       "radius": 3.3
     },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
     "items": [
       {
         "id": 44014,
@@ -419,6 +479,11 @@
       "x": 32.1,
       "y": 12,
       "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
     },
     "items": [
       {
@@ -450,6 +515,11 @@
       "y": 28,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
     "items": [
       {
         "id": 44040,
@@ -476,6 +546,11 @@
       "y": 21.3,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
     "items": [
       {
         "id": 43917,
@@ -499,6 +574,11 @@
       "y": 25.1,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
     "items": [
       {
         "id": 43924,
@@ -521,6 +601,11 @@
       "x": 7,
       "y": 7.4,
       "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
     },
     "times": [
       [
@@ -554,6 +639,11 @@
       "x": 7.4,
       "y": 33.1,
       "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
     },
     "times": [
       [
@@ -589,6 +679,11 @@
       "y": 17.6,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
     "times": [
       [
         480,
@@ -623,6 +718,11 @@
       "y": 10.2,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
     "times": [
       [
         240,
@@ -655,6 +755,11 @@
       "x": 12.7,
       "y": 19.4,
       "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
     },
     "items": [
       {
@@ -691,6 +796,11 @@
       "y": 21.4,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
     "items": [
       {
         "id": 44016,
@@ -725,6 +835,11 @@
       "y": 11.8,
       "radius": 3.2
     },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
     "items": [
       {
         "id": 43978,
@@ -749,6 +864,11 @@
       "x": 34.4,
       "y": 22.7,
       "radius": 3.1
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
     },
     "items": [
       {
@@ -780,6 +900,11 @@
       "y": 34.8,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
     "items": [
       {
         "id": 43990,
@@ -804,6 +929,11 @@
       "x": 12.6,
       "y": 9.7,
       "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
     },
     "items": [
       {
@@ -835,6 +965,11 @@
       "y": 8.6,
       "radius": 3.6
     },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
     "items": [
       {
         "id": 44004,
@@ -863,6 +998,11 @@
       "x": 28.1,
       "y": 14.9,
       "radius": 2.5
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
     },
     "items": [
       {
@@ -898,6 +1038,11 @@
       "y": 5.1,
       "radius": 2.9
     },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
     "items": [
       {
         "id": 44043,
@@ -927,6 +1072,11 @@
       "x": 36.9,
       "y": 34.8,
       "radius": 0.7
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
     },
     "times": [
       [
@@ -966,6 +1116,11 @@
       "y": 37,
       "radius": 0.4
     },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
     "times": [
       [
         600,
@@ -999,6 +1154,11 @@
       "x": 35.8,
       "y": 22.3,
       "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
     },
     "times": [
       [
@@ -1038,6 +1198,11 @@
       "x": 33.1,
       "y": 5.8,
       "radius": 4.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
     },
     "items": [
       {
@@ -1079,6 +1244,11 @@
       "y": 24.7,
       "radius": 2.9
     },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
     "items": [
       {
         "id": 43980,
@@ -1119,6 +1289,11 @@
       "y": 8.9,
       "radius": 3
     },
+    "aetheryte": {
+      "name": "Sheshenewezi Springs",
+      "x": 15.7,
+      "y": 19.2
+    },
     "items": [
       {
         "id": 43995,
@@ -1143,6 +1318,11 @@
       "x": 17.3,
       "y": 32.2,
       "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
     },
     "items": [
       {
@@ -1169,6 +1349,11 @@
       "y": 22.1,
       "radius": 3.7
     },
+    "aetheryte": {
+      "name": "Sheshenewezi Springs",
+      "x": 15.7,
+      "y": 19.2
+    },
     "items": [
       {
         "id": 43987,
@@ -1193,6 +1378,11 @@
       "x": 27.5,
       "y": 13.8,
       "radius": 3.3
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
     },
     "items": [
       {
@@ -1223,6 +1413,11 @@
       "y": 33.7,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
     "items": [
       {
         "id": 43984,
@@ -1247,6 +1442,11 @@
       "x": 16.3,
       "y": 10.4,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Sheshenewezi Springs",
+      "x": 15.7,
+      "y": 19.2
     },
     "times": [
       [
@@ -1280,6 +1480,11 @@
       "x": 9.2,
       "y": 24.2,
       "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Sheshenewezi Springs",
+      "x": 15.7,
+      "y": 19.2
     },
     "times": [
       [
@@ -1318,6 +1523,11 @@
       "x": 31.7,
       "y": 20.4,
       "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
     },
     "times": [
       [
@@ -1358,6 +1568,11 @@
       "y": 28.1,
       "radius": 0.8
     },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
     "times": [
       [
         600,
@@ -1391,6 +1606,11 @@
       "x": 10.9,
       "y": 31.1,
       "radius": 0.1
+    },
+    "aetheryte": {
+      "name": "Sheshenewezi Springs",
+      "x": 15.7,
+      "y": 19.2
     },
     "times": [
       [
@@ -1426,6 +1646,11 @@
       "y": 16.3,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
     "times": [
       [
         240,
@@ -1460,6 +1685,11 @@
       "y": 27.1,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
     "times": [
       [
         0,
@@ -1493,6 +1723,11 @@
       "y": 21.8,
       "radius": 3
     },
+    "aetheryte": {
+      "name": "Yyasulani Station",
+      "x": 31.8,
+      "y": 25.6
+    },
     "items": [
       {
         "id": 44006,
@@ -1517,6 +1752,11 @@
       "x": 15.6,
       "y": 22.7,
       "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
     },
     "items": [
       {
@@ -1552,6 +1792,11 @@
       "y": 27.9,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "Yyasulani Station",
+      "x": 31.8,
+      "y": 25.6
+    },
     "items": [
       {
         "id": 44018,
@@ -1576,6 +1821,11 @@
       "x": 11.4,
       "y": 17.4,
       "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
     },
     "items": [
       {
@@ -1611,6 +1861,11 @@
       "y": 12.2,
       "radius": 2.7
     },
+    "aetheryte": {
+      "name": "The Outskirts",
+      "x": 17.1,
+      "y": 9.8
+    },
     "times": [
       [
         1200,
@@ -1644,6 +1899,11 @@
       "y": 6.8,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "The Outskirts",
+      "x": 17.1,
+      "y": 9.8
+    },
     "items": [
       {
         "id": 43925,
@@ -1666,6 +1926,11 @@
       "x": 34.6,
       "y": 8.3,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Yyasulani Station",
+      "x": 31.8,
+      "y": 25.6
     },
     "times": [
       [
@@ -1705,6 +1970,11 @@
       "x": 14,
       "y": 16.8,
       "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "The Outskirts",
+      "x": 17.1,
+      "y": 9.8
     },
     "times": [
       [
@@ -1746,6 +2016,11 @@
       "y": 20.7,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "Yyasulani Station",
+      "x": 31.8,
+      "y": 25.6
+    },
     "times": [
       [
         360,
@@ -1780,6 +2055,11 @@
       "y": 27.9,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
     "times": [
       [
         600,
@@ -1813,6 +2093,11 @@
       "y": 17.9,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
     "items": [
       {
         "id": 44041,
@@ -1845,6 +2130,11 @@
       "x": 10.5,
       "y": 11.1,
       "radius": 3.3
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
     },
     "times": [
       [
@@ -1883,6 +2173,11 @@
       "x": 26.9,
       "y": 7.4,
       "radius": 2.3
+    },
+    "aetheryte": {
+      "name": "Leynode Pyro",
+      "x": 34.7,
+      "y": 15.8
     },
     "times": [
       [
@@ -1923,6 +2218,11 @@
       "y": 18.2,
       "radius": 2.7
     },
+    "aetheryte": {
+      "name": "Leynode Pyro",
+      "x": 34.7,
+      "y": 15.8
+    },
     "items": [
       {
         "id": 43918,
@@ -1945,6 +2245,11 @@
       "x": 25,
       "y": 17.3,
       "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
     },
     "times": [
       [
@@ -1980,6 +2285,11 @@
       "y": 7.5,
       "radius": 0.8
     },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
     "times": [
       [
         600,
@@ -2013,6 +2323,11 @@
       "x": 9.3,
       "y": 15.2,
       "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
     },
     "times": [
       [
@@ -2054,6 +2369,11 @@
       "y": 17.4,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Leynode Pyro",
+      "x": 34.7,
+      "y": 15.8
+    },
     "times": [
       [
         240,
@@ -2094,6 +2414,11 @@
       "y": 14.2,
       "radius": 0.3
     },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
     "times": [
       [
         120,
@@ -2127,6 +2452,11 @@
       "x": 8.5,
       "y": 9.6,
       "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
     },
     "times": [
       [

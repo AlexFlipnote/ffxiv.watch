@@ -13,6 +13,11 @@
       "y": 9.6,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
     "items": [
       {
         "id": 36174,
@@ -46,6 +51,11 @@
       "x": 22.8,
       "y": 12,
       "radius": 2
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
     },
     "items": [
       {
@@ -91,6 +101,11 @@
       "y": 21.2,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
     "times": [
       [
         0,
@@ -128,6 +143,11 @@
       "y": 6.6,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
     "items": [
       {
         "id": 36190,
@@ -157,6 +177,11 @@
       "x": 28,
       "y": 17,
       "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
     },
     "items": [
       {
@@ -206,6 +231,11 @@
       "y": 21.4,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Aporia",
+      "x": 6.9,
+      "y": 27.5
+    },
     "times": [
       [
         600,
@@ -247,6 +277,11 @@
       "y": 11.4,
       "radius": 0.5
     },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
     "times": [
       [
         240,
@@ -287,6 +322,11 @@
       "y": 24.2,
       "radius": 1.9
     },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
     "items": [
       {
         "id": 36292,
@@ -308,6 +348,11 @@
       "x": 10.6,
       "y": 34.8,
       "radius": 1.9
+    },
+    "aetheryte": {
+      "name": "Aporia",
+      "x": 6.9,
+      "y": 27.5
     },
     "times": [
       [
@@ -348,6 +393,11 @@
       "y": 22.4,
       "radius": 0.3
     },
+    "aetheryte": {
+      "name": "Aporia",
+      "x": 6.9,
+      "y": 27.5
+    },
     "times": [
       [
         360,
@@ -386,6 +436,11 @@
       "x": 19.1,
       "y": 35.9,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Aporia",
+      "x": 6.9,
+      "y": 27.5
     },
     "times": [
       [
@@ -427,6 +482,11 @@
       "y": 31,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
     "items": [
       {
         "id": 36163,
@@ -458,6 +518,11 @@
       "y": 19.2,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
     "items": [
       {
         "id": 36291,
@@ -479,6 +544,11 @@
       "x": 12.4,
       "y": 13,
       "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
     },
     "items": [
       {
@@ -520,6 +590,11 @@
       "y": 22.3,
       "radius": 1.9
     },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
     "items": [
       {
         "id": 36191,
@@ -557,6 +632,11 @@
       "x": 21.9,
       "y": 9.6,
       "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
     },
     "items": [
       {
@@ -603,6 +683,11 @@
       "y": 30.6,
       "radius": 2
     },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
     "items": [
       {
         "id": 36301,
@@ -625,6 +710,11 @@
       "x": 14.4,
       "y": 14.5,
       "radius": 0.1
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
     },
     "times": [
       [
@@ -663,6 +753,11 @@
       "x": 29.1,
       "y": 26.9,
       "radius": 1.3
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
     },
     "times": [
       [
@@ -705,6 +800,11 @@
       "y": 25,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
     "times": [
       [
         240,
@@ -738,6 +838,11 @@
       "y": 15.7,
       "radius": 2.7
     },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
     "times": [
       [
         720,
@@ -770,6 +875,11 @@
       "x": 25.3,
       "y": 21.7,
       "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
     },
     "times": [
       [
@@ -815,6 +925,11 @@
       "y": 13.1,
       "radius": 0.8
     },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
     "times": [
       [
         360,
@@ -847,6 +962,11 @@
       "x": 21,
       "y": 29,
       "radius": 2.3
+    },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
     },
     "items": [
       {
@@ -892,6 +1012,11 @@
       "y": 28.9,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
+    },
     "items": [
       {
         "id": 36192,
@@ -926,6 +1051,11 @@
       "x": 25.4,
       "y": 26.2,
       "radius": 2.3
+    },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
     },
     "items": [
       {
@@ -970,6 +1100,11 @@
       "y": 5.8,
       "radius": 0.4
     },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
+    },
     "times": [
       [
         240,
@@ -1002,6 +1137,11 @@
       "x": 32,
       "y": 17.4,
       "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
     },
     "times": [
       [
@@ -1042,6 +1182,11 @@
       "y": 15.3,
       "radius": 2
     },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
+    },
     "times": [
       [
         1200,
@@ -1074,6 +1219,11 @@
       "x": 12.8,
       "y": 21.9,
       "radius": 0.2
+    },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
     },
     "times": [
       [
@@ -1112,6 +1262,11 @@
       "x": 32.2,
       "y": 34.9,
       "radius": 0.2
+    },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
     },
     "times": [
       [
@@ -1164,6 +1319,11 @@
       "y": 12.5,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
+    },
     "times": [
       [
         600,
@@ -1196,6 +1356,11 @@
       "x": 29.4,
       "y": 35.9,
       "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
     },
     "items": [
       {
@@ -1233,6 +1398,11 @@
       "y": 32.7,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
     "times": [
       [
         360,
@@ -1264,6 +1434,11 @@
       "x": 34.3,
       "y": 27.7,
       "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Bestways Burrow",
+      "x": 21.5,
+      "y": 11.2
     },
     "items": [
       {
@@ -1300,6 +1475,11 @@
       "x": 29.6,
       "y": 22.4,
       "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Bestways Burrow",
+      "x": 21.5,
+      "y": 11.2
     },
     "times": [
       [
@@ -1341,6 +1521,11 @@
       "y": 34.7,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
     "times": [
       [
         0,
@@ -1380,6 +1565,11 @@
       "y": 23.4,
       "radius": 0.5
     },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
     "times": [
       [
         120,
@@ -1418,6 +1608,11 @@
       "y": 20.4,
       "radius": 0.8
     },
+    "aetheryte": {
+      "name": "Bestways Burrow",
+      "x": 21.5,
+      "y": 11.2
+    },
     "times": [
       [
         0,
@@ -1451,6 +1646,11 @@
       "y": 12.4,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
     "items": [
       {
         "id": 36166,
@@ -1475,6 +1675,11 @@
       "x": 21.5,
       "y": 33.5,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Base Omicron",
+      "x": 31.3,
+      "y": 28.1
     },
     "items": [
       {
@@ -1501,6 +1706,11 @@
       "y": 21.6,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
     "items": [
       {
         "id": 36194,
@@ -1525,6 +1735,11 @@
       "x": 14.2,
       "y": 28.7,
       "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
     },
     "items": [
       {
@@ -1555,6 +1770,11 @@
       "x": 9.5,
       "y": 33.2,
       "radius": 0.2
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
     },
     "times": [
       [
@@ -1589,6 +1809,11 @@
       "x": 28.1,
       "y": 13.2,
       "radius": 0.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
     },
     "times": [
       [
@@ -1635,6 +1860,11 @@
       "y": 29.4,
       "radius": 0.3
     },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
     "times": [
       [
         240,
@@ -1676,6 +1906,11 @@
       "y": 29.9,
       "radius": 1.3
     },
+    "aetheryte": {
+      "name": "The Twelve Wonders",
+      "x": 8.8,
+      "y": 32.4
+    },
     "times": [
       [
         120,
@@ -1716,6 +1951,11 @@
       "y": 9.8,
       "radius": 2.9
     },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
     "items": [
       {
         "id": 36165,
@@ -1745,6 +1985,11 @@
       "x": 14,
       "y": 18.3,
       "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
     },
     "items": [
       {
@@ -1785,6 +2030,11 @@
       "y": 36.6,
       "radius": 0.1
     },
+    "aetheryte": {
+      "name": "The Twelve Wonders",
+      "x": 8.8,
+      "y": 32.4
+    },
     "times": [
       [
         600,
@@ -1824,6 +2074,11 @@
       "y": 7.2,
       "radius": 0.1
     },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
+    },
     "times": [
       [
         240,
@@ -1861,6 +2116,11 @@
       "y": 23.2,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
+    },
     "items": [
       {
         "id": 36193,
@@ -1895,6 +2155,11 @@
       "y": 25.2,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
     "items": [
       {
         "id": 36302,
@@ -1916,6 +2181,11 @@
       "x": 20.8,
       "y": 23.8,
       "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
     },
     "items": [
       {
@@ -1961,6 +2231,11 @@
       "y": 5.6,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
+    },
     "times": [
       [
         0,
@@ -1999,6 +2274,11 @@
       "y": 14.8,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
     "times": [
       [
         360,
@@ -2036,6 +2316,11 @@
       "x": 30.3,
       "y": 18.3,
       "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
     },
     "times": [
       [

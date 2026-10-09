@@ -14,6 +14,11 @@
       "y": 24.2,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
+    },
     "times": [
       [
         240,
@@ -51,6 +56,11 @@
       "y": 36.5,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
+    },
     "items": [
       {
         "id": 26753,
@@ -80,6 +90,11 @@
       "y": 24.9,
       "radius": 2.7
     },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
+    },
     "items": [
       {
         "id": 27820,
@@ -104,6 +119,11 @@
       "x": 14.3,
       "y": 22.9,
       "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "The Ostall Imperative",
+      "x": 6.8,
+      "y": 16.9
     },
     "items": [
       {
@@ -138,6 +158,11 @@
       "y": 20.7,
       "radius": 0.4
     },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
+    },
     "times": [
       [
         600,
@@ -169,6 +194,11 @@
       "y": 24,
       "radius": 1.9
     },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
+    },
     "items": [
       {
         "id": 28793,
@@ -190,6 +220,11 @@
       "x": 29.6,
       "y": 22.1,
       "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
     },
     "items": [
       {
@@ -214,6 +249,11 @@
       "y": 12.8,
       "radius": 2.9
     },
+    "aetheryte": {
+      "name": "The Ostall Imperative",
+      "x": 6.8,
+      "y": 16.9
+    },
     "items": [
       {
         "id": 33012,
@@ -235,6 +275,11 @@
       "x": 36.1,
       "y": 14.3,
       "radius": 2.5
+    },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
     },
     "items": [
       {
@@ -268,6 +313,11 @@
       "x": 35.5,
       "y": 30.6,
       "radius": 3.3
+    },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
     },
     "times": [
       [
@@ -307,6 +357,11 @@
       "y": 33.2,
       "radius": 0.6
     },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
+    },
     "times": [
       [
         360,
@@ -338,6 +393,11 @@
       "y": 10.2,
       "radius": 2.7
     },
+    "aetheryte": {
+      "name": "The Ostall Imperative",
+      "x": 6.8,
+      "y": 16.9
+    },
     "items": [
       {
         "id": 27819,
@@ -366,6 +426,11 @@
       "x": 31.6,
       "y": 36.6,
       "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
     },
     "times": [
       [
@@ -406,6 +471,11 @@
       "y": 10.1,
       "radius": 0.5
     },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
+    },
     "times": [
       [
         480,
@@ -437,6 +507,11 @@
       "x": 25.5,
       "y": 29.9,
       "radius": 2
+    },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
     },
     "items": [
       {
@@ -471,6 +546,11 @@
       "x": 4.7,
       "y": 34,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "The Ostall Imperative",
+      "x": 6.8,
+      "y": 16.9
     },
     "times": [
       [
@@ -510,6 +590,11 @@
       "y": 26.6,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "The Ostall Imperative",
+      "x": 6.8,
+      "y": 16.9
+    },
     "times": [
       [
         0,
@@ -543,6 +628,11 @@
       "y": 15.7,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "The Ostall Imperative",
+      "x": 6.8,
+      "y": 16.9
+    },
     "items": [
       {
         "id": 39805,
@@ -567,6 +657,11 @@
       "y": 10.7,
       "radius": 2.7
     },
+    "aetheryte": {
+      "name": "Fort Jobb",
+      "x": 36.6,
+      "y": 20.9
+    },
     "items": [
       {
         "id": 38794,
@@ -589,6 +684,11 @@
       "x": 34,
       "y": 23.2,
       "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Stilltide",
+      "x": 34.9,
+      "y": 27.3
     },
     "times": [
       [
@@ -622,6 +722,11 @@
       "y": 24.6,
       "radius": 1.8
     },
+    "aetheryte": {
+      "name": "Wright",
+      "x": 16.6,
+      "y": 29.2
+    },
     "items": [
       {
         "id": 28199,
@@ -653,6 +758,11 @@
       "x": 9.9,
       "y": 28.3,
       "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "Wright",
+      "x": 16.6,
+      "y": 29.2
     },
     "items": [
       {
@@ -686,6 +796,11 @@
       "y": 31.8,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "Wright",
+      "x": 16.6,
+      "y": 29.2
+    },
     "items": [
       {
         "id": 27696,
@@ -714,6 +829,11 @@
       "x": 27.6,
       "y": 24.6,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Stilltide",
+      "x": 34.9,
+      "y": 27.3
     },
     "items": [
       {
@@ -744,6 +864,11 @@
       "y": 36.2,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Wright",
+      "x": 16.6,
+      "y": 29.2
+    },
     "items": [
       {
         "id": 27832,
@@ -769,6 +894,11 @@
       "x": 28,
       "y": 32.8,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Stilltide",
+      "x": 34.9,
+      "y": 27.3
     },
     "times": [
       [
@@ -802,6 +932,11 @@
       "y": 18.3,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "Wright",
+      "x": 16.6,
+      "y": 29.2
+    },
     "items": [
       {
         "id": 26757,
@@ -830,6 +965,11 @@
       "x": 33,
       "y": 18.5,
       "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Stilltide",
+      "x": 34.9,
+      "y": 27.3
     },
     "times": [
       [
@@ -869,6 +1009,11 @@
       "y": 14.3,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Tomra",
+      "x": 13,
+      "y": 9
+    },
     "items": [
       {
         "id": 26757,
@@ -905,6 +1050,11 @@
       "x": 18.7,
       "y": 7.8,
       "radius": 2.5
+    },
+    "aetheryte": {
+      "name": "Tomra",
+      "x": 13,
+      "y": 9
     },
     "times": [
       [
@@ -944,6 +1094,11 @@
       "y": 27.3,
       "radius": 0.6
     },
+    "aetheryte": {
+      "name": "Wright",
+      "x": 16.6,
+      "y": 29.2
+    },
     "times": [
       [
         360,
@@ -975,6 +1130,11 @@
       "y": 9.8,
       "radius": 1.8
     },
+    "aetheryte": {
+      "name": "Tomra",
+      "x": 13,
+      "y": 9
+    },
     "items": [
       {
         "id": 28796,
@@ -996,6 +1156,11 @@
       "x": 28.4,
       "y": 21.2,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Stilltide",
+      "x": 34.9,
+      "y": 27.3
     },
     "times": [
       [
@@ -1035,6 +1200,11 @@
       "y": 12.3,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "Stilltide",
+      "x": 34.9,
+      "y": 27.3
+    },
     "times": [
       [
         240,
@@ -1068,6 +1238,11 @@
       "y": 12.9,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "Tomra",
+      "x": 13,
+      "y": 9
+    },
     "items": [
       {
         "id": 38788,
@@ -1092,6 +1267,11 @@
       "y": 28.5,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "Stilltide",
+      "x": 34.9,
+      "y": 27.3
+    },
     "items": [
       {
         "id": 39811,
@@ -1114,6 +1294,11 @@
       "x": 30.4,
       "y": 23,
       "radius": 2.3
+    },
+    "aetheryte": {
+      "name": "The Inn at Journey's Head",
+      "x": 29.5,
+      "y": 27.7
     },
     "items": [
       {
@@ -1161,6 +1346,11 @@
       "y": 16.8,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Mord Souq",
+      "x": 26.4,
+      "y": 17
+    },
     "items": [
       {
         "id": 26752,
@@ -1202,6 +1392,11 @@
       "y": 11.5,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Twine",
+      "x": 11.3,
+      "y": 17.2
+    },
     "items": [
       {
         "id": 27700,
@@ -1230,6 +1425,11 @@
       "x": 20,
       "y": 29,
       "radius": 0.7
+    },
+    "aetheryte": {
+      "name": "The Inn at Journey's Head",
+      "x": 29.5,
+      "y": 27.7
     },
     "times": [
       [
@@ -1262,6 +1462,11 @@
       "y": 30.2,
       "radius": 2.7
     },
+    "aetheryte": {
+      "name": "The Inn at Journey's Head",
+      "x": 29.5,
+      "y": 27.7
+    },
     "items": [
       {
         "id": 27821,
@@ -1290,6 +1495,11 @@
       "x": 19.3,
       "y": 16.9,
       "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Mord Souq",
+      "x": 26.4,
+      "y": 17
     },
     "times": [
       [
@@ -1322,6 +1532,11 @@
       "y": 25.3,
       "radius": 2
     },
+    "aetheryte": {
+      "name": "The Inn at Journey's Head",
+      "x": 29.5,
+      "y": 27.7
+    },
     "items": [
       {
         "id": 28794,
@@ -1347,6 +1562,11 @@
       "x": 20.2,
       "y": 8.6,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Mord Souq",
+      "x": 26.4,
+      "y": 17
     },
     "times": [
       [
@@ -1381,6 +1601,11 @@
       "y": 33.6,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "The Inn at Journey's Head",
+      "x": 29.5,
+      "y": 27.7
+    },
     "times": [
       [
         240,
@@ -1414,6 +1639,11 @@
       "y": 11,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "Twine",
+      "x": 11.3,
+      "y": 17.2
+    },
     "times": [
       [
         360,
@@ -1446,6 +1676,11 @@
       "x": 18.6,
       "y": 20.5,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Twine",
+      "x": 11.3,
+      "y": 17.2
     },
     "times": [
       [
@@ -1485,6 +1720,11 @@
       "y": 29,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "The Inn at Journey's Head",
+      "x": 29.5,
+      "y": 27.7
+    },
     "items": [
       {
         "id": 33013,
@@ -1506,6 +1746,11 @@
       "x": 15,
       "y": 18.5,
       "radius": 2.3
+    },
+    "aetheryte": {
+      "name": "Twine",
+      "x": 11.3,
+      "y": 17.2
     },
     "items": [
       {
@@ -1537,6 +1782,11 @@
       "x": 13.2,
       "y": 10.9,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Twine",
+      "x": 11.3,
+      "y": 17.2
     },
     "items": [
       {
@@ -1570,6 +1820,11 @@
       "y": 14.3,
       "radius": 2.6
     },
+    "aetheryte": {
+      "name": "Mord Souq",
+      "x": 26.4,
+      "y": 17
+    },
     "items": [
       {
         "id": 38796,
@@ -1594,6 +1849,11 @@
       "y": 18.7,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "Twine",
+      "x": 11.3,
+      "y": 17.2
+    },
     "items": [
       {
         "id": 39813,
@@ -1616,6 +1876,11 @@
       "x": 30.4,
       "y": 36.7,
       "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "Lydha Lran",
+      "x": 14.6,
+      "y": 31.7
     },
     "items": [
       {
@@ -1643,6 +1908,11 @@
       "y": 31,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Lydha Lran",
+      "x": 14.6,
+      "y": 31.7
+    },
     "items": [
       {
         "id": 28201,
@@ -1668,6 +1938,11 @@
       "x": 6.5,
       "y": 19,
       "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Lydha Lran",
+      "x": 14.6,
+      "y": 31.7
     },
     "items": [
       {
@@ -1706,6 +1981,11 @@
       "y": 13.3,
       "radius": 0.4
     },
+    "aetheryte": {
+      "name": "Wolekdorf",
+      "x": 29.1,
+      "y": 7.7
+    },
     "times": [
       [
         360,
@@ -1737,6 +2017,11 @@
       "y": 5.2,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "Wolekdorf",
+      "x": 29.1,
+      "y": 7.7
+    },
     "items": [
       {
         "id": 27831,
@@ -1765,6 +2050,11 @@
       "x": 12.6,
       "y": 22.9,
       "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "Lydha Lran",
+      "x": 14.6,
+      "y": 31.7
     },
     "items": [
       {
@@ -1811,6 +2101,11 @@
       "y": 36.8,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Lydha Lran",
+      "x": 14.6,
+      "y": 31.7
+    },
     "times": [
       [
         0,
@@ -1842,6 +2137,11 @@
       "y": 9,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Pla Enni",
+      "x": 20.1,
+      "y": 4.3
+    },
     "items": [
       {
         "id": 28792,
@@ -1867,6 +2167,11 @@
       "x": 4.1,
       "y": 23.1,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Lydha Lran",
+      "x": 14.6,
+      "y": 31.7
     },
     "times": [
       [
@@ -1906,6 +2211,11 @@
       "y": 20.6,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Wolekdorf",
+      "x": 29.1,
+      "y": 7.7
+    },
     "times": [
       [
         240,
@@ -1944,6 +2254,11 @@
       "y": 27.4,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "Wolekdorf",
+      "x": 29.1,
+      "y": 7.7
+    },
     "times": [
       [
         480,
@@ -1977,6 +2292,11 @@
       "y": 8.7,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "Wolekdorf",
+      "x": 29.1,
+      "y": 7.7
+    },
     "times": [
       [
         120,
@@ -2009,6 +2329,11 @@
       "y": 11.4,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "Wolekdorf",
+      "x": 29.1,
+      "y": 7.7
+    },
     "items": [
       {
         "id": 38820,
@@ -2039,6 +2364,11 @@
       "x": 16.9,
       "y": 10,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Pla Enni",
+      "x": 20.1,
+      "y": 4.3
     },
     "items": [
       {
@@ -2072,6 +2402,11 @@
       "y": 36.6,
       "radius": 3.2
     },
+    "aetheryte": {
+      "name": "Lydha Lran",
+      "x": 14.6,
+      "y": 31.7
+    },
     "items": [
       {
         "id": 38790,
@@ -2095,6 +2430,11 @@
       "x": 25.9,
       "y": 19,
       "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Wolekdorf",
+      "x": 29.1,
+      "y": 7.7
     },
     "items": [
       {
@@ -2120,6 +2460,11 @@
       "y": 10.2,
       "radius": 3.1
     },
+    "aetheryte": {
+      "name": "Pla Enni",
+      "x": 20.1,
+      "y": 4.3
+    },
     "items": [
       {
         "id": 41286,
@@ -2143,6 +2488,11 @@
       "x": 16.5,
       "y": 18.2,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
     },
     "times": [
       [
@@ -2176,6 +2526,11 @@
       "y": 20.1,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
+    },
     "items": [
       {
         "id": 27699,
@@ -2200,6 +2555,11 @@
       "x": 19.8,
       "y": 20.5,
       "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
     },
     "times": [
       [
@@ -2232,6 +2592,11 @@
       "y": 20.6,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
+    },
     "items": [
       {
         "id": 27834,
@@ -2260,6 +2625,11 @@
       "x": 14.9,
       "y": 27.2,
       "radius": 2.5
+    },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
     },
     "items": [
       {
@@ -2294,6 +2664,11 @@
       "y": 29.1,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
+    },
     "items": [
       {
         "id": 27776,
@@ -2322,6 +2697,11 @@
       "x": 22.5,
       "y": 11.9,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Fanow",
+      "x": 29.1,
+      "y": 17.6
     },
     "times": [
       [
@@ -2361,6 +2741,11 @@
       "y": 24.6,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "Fanow",
+      "x": 29.1,
+      "y": 17.6
+    },
     "items": [
       {
         "id": 27779,
@@ -2393,6 +2778,11 @@
       "x": 22.5,
       "y": 13.1,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Fanow",
+      "x": 29.1,
+      "y": 17.6
     },
     "times": [
       [
@@ -2432,6 +2822,11 @@
       "y": 21.6,
       "radius": 0.2
     },
+    "aetheryte": {
+      "name": "Fanow",
+      "x": 29.1,
+      "y": 17.6
+    },
     "times": [
       [
         0,
@@ -2463,6 +2858,11 @@
       "x": 24.7,
       "y": 36.9,
       "radius": 0.7
+    },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
     },
     "times": [
       [
@@ -2501,6 +2901,11 @@
       "y": 22.9,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Fanow",
+      "x": 29.1,
+      "y": 17.6
+    },
     "items": [
       {
         "id": 28790,
@@ -2526,6 +2931,11 @@
       "x": 7.6,
       "y": 30.2,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
     },
     "times": [
       [
@@ -2560,6 +2970,11 @@
       "y": 13.3,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "Fanow",
+      "x": 29.1,
+      "y": 17.6
+    },
     "times": [
       [
         600,
@@ -2593,6 +3008,11 @@
       "y": 30.6,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
+    },
     "items": [
       {
         "id": 32991,
@@ -2615,6 +3035,11 @@
       "x": 15.7,
       "y": 35.3,
       "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Slitherbough",
+      "x": 19.4,
+      "y": 27.4
     },
     "items": [
       {
@@ -2639,6 +3064,11 @@
       "x": 25.1,
       "y": 4.5,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "The Ondo Cups",
+      "x": 32.7,
+      "y": 17.5
     },
     "times": [
       [
@@ -2677,6 +3107,11 @@
       "y": 21.6,
       "radius": 0.3
     },
+    "aetheryte": {
+      "name": "The Macarenses Angle",
+      "x": 18.7,
+      "y": 25.9
+    },
     "times": [
       [
         0,
@@ -2708,6 +3143,11 @@
       "x": 32.8,
       "y": 7.7,
       "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "The Ondo Cups",
+      "x": 32.7,
+      "y": 17.5
     },
     "times": [
       [
@@ -2741,6 +3181,11 @@
       "y": 14.9,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "The Macarenses Angle",
+      "x": 18.7,
+      "y": 25.9
+    },
     "items": [
       {
         "id": 28791,
@@ -2766,6 +3211,11 @@
       "x": 34.4,
       "y": 31.4,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "The Ondo Cups",
+      "x": 32.7,
+      "y": 17.5
     },
     "times": [
       [
@@ -2799,6 +3249,11 @@
       "x": 32.7,
       "y": 20.6,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "The Ondo Cups",
+      "x": 32.7,
+      "y": 17.5
     },
     "times": [
       [
@@ -2839,6 +3294,11 @@
       "y": 11.6,
       "radius": 0
     },
+    "aetheryte": {
+      "name": "The Ondo Cups",
+      "x": 32.7,
+      "y": 17.5
+    },
     "times": [
       [
         240,
@@ -2877,6 +3337,11 @@
       "y": 9.1,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "The Ondo Cups",
+      "x": 32.7,
+      "y": 17.5
+    },
     "items": [
       {
         "id": 38824,
@@ -2902,6 +3367,11 @@
       "x": 29,
       "y": 4.4,
       "radius": 2.3
+    },
+    "aetheryte": {
+      "name": "The Ondo Cups",
+      "x": 32.7,
+      "y": 17.5
     },
     "items": [
       {
@@ -2930,6 +3400,11 @@
       "y": 22.4,
       "radius": 3
     },
+    "aetheryte": {
+      "name": "The Ondo Cups",
+      "x": 32.7,
+      "y": 17.5
+    },
     "items": [
       {
         "id": 41290,
@@ -2953,6 +3428,11 @@
       "x": 37.5,
       "y": 13.5,
       "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "The Ondo Cups",
+      "x": 32.7,
+      "y": 17.5
     },
     "items": [
       {

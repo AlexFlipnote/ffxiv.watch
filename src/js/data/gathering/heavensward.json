@@ -13,6 +13,11 @@
       "y": 28.1,
       "radius": 3.1
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 5126,
@@ -43,6 +48,11 @@
       "x": 31.5,
       "y": 31.9,
       "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "items": [
       {
@@ -75,6 +85,11 @@
       "y": 12.6,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 12551,
@@ -103,6 +118,11 @@
       "x": 16.7,
       "y": 12.9,
       "radius": 3
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "items": [
       {
@@ -137,6 +157,11 @@
       "y": 16.7,
       "radius": 2.9
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 12597,
@@ -165,6 +190,11 @@
       "x": 31.2,
       "y": 19,
       "radius": 2.3
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "times": [
       [
@@ -213,6 +243,11 @@
       "y": 9.4,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 28778,
@@ -234,6 +269,11 @@
       "x": 35.6,
       "y": 21.4,
       "radius": 2.5
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "items": [
       {
@@ -258,6 +298,11 @@
       "y": 13.1,
       "radius": 2.8
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 33010,
@@ -280,6 +325,11 @@
       "x": 10.3,
       "y": 9.5,
       "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "times": [
       [
@@ -312,6 +362,11 @@
       "x": 11.6,
       "y": 15.3,
       "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "items": [
       {
@@ -351,6 +406,11 @@
       "x": 23.5,
       "y": 21.1,
       "radius": 3
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "times": [
       [
@@ -401,6 +461,11 @@
       "y": 17.6,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "times": [
       [
         0,
@@ -437,6 +502,11 @@
       "x": 25.7,
       "y": 29.4,
       "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "times": [
       [
@@ -494,6 +564,11 @@
       "y": 10.4,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "times": [
       [
         480,
@@ -525,6 +600,11 @@
       "x": 22.4,
       "y": 21.5,
       "radius": 1
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "times": [
       [
@@ -568,6 +648,11 @@
       "y": 28.2,
       "radius": 3.2
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 12557,
@@ -602,6 +687,11 @@
       "y": 35,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 23150,
@@ -628,6 +718,11 @@
       "y": 14.8,
       "radius": 1.8
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 23150,
@@ -653,6 +748,11 @@
       "x": 12.8,
       "y": 23.7,
       "radius": 2
+    },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
     },
     "items": [
       {
@@ -681,6 +781,11 @@
       "y": 30.4,
       "radius": 2.5
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 29671,
@@ -704,6 +809,11 @@
       "y": 18.5,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Falcon's Nest",
+      "x": 32.1,
+      "y": 36.8
+    },
     "items": [
       {
         "id": 29674,
@@ -725,6 +835,11 @@
       "x": 26.6,
       "y": 13.3,
       "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
     },
     "times": [
       [
@@ -763,6 +878,11 @@
       "y": 15.2,
       "radius": 3
     },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
+    },
     "items": [
       {
         "id": 12554,
@@ -799,6 +919,11 @@
       "x": 27.5,
       "y": 31.9,
       "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
     },
     "items": [
       {
@@ -837,6 +962,11 @@
       "y": 27.2,
       "radius": 3.4
     },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
+    },
     "items": [
       {
         "id": 12578,
@@ -865,6 +995,11 @@
       "x": 37.6,
       "y": 19.6,
       "radius": 2.9
+    },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
     },
     "items": [
       {
@@ -895,6 +1030,11 @@
       "x": 30.7,
       "y": 32.2,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
     },
     "times": [
       [
@@ -938,6 +1078,11 @@
       "y": 36.8,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Anyx Trine",
+      "x": 16.5,
+      "y": 23.3
+    },
     "items": [
       {
         "id": 28776,
@@ -958,6 +1103,11 @@
       "x": 31,
       "y": 10.6,
       "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
     },
     "items": [
       {
@@ -980,6 +1130,11 @@
       "x": 29.2,
       "y": 30.1,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
     },
     "times": [
       [
@@ -1024,6 +1179,11 @@
       "y": 29,
       "radius": 1.4
     },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
+    },
     "times": [
       [
         360,
@@ -1055,6 +1215,11 @@
       "x": 25.7,
       "y": 21.6,
       "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
     },
     "times": [
       [
@@ -1103,6 +1268,11 @@
       "x": 17.5,
       "y": 31.9,
       "radius": 2.3
+    },
+    "aetheryte": {
+      "name": "Anyx Trine",
+      "x": 16.5,
+      "y": 23.3
     },
     "times": [
       [
@@ -1156,6 +1326,11 @@
       "y": 28.8,
       "radius": 2.6
     },
+    "aetheryte": {
+      "name": "Anyx Trine",
+      "x": 16.5,
+      "y": 23.3
+    },
     "items": [
       {
         "id": 12556,
@@ -1200,6 +1375,11 @@
       "y": 33.1,
       "radius": 2.9
     },
+    "aetheryte": {
+      "name": "Anyx Trine",
+      "x": 16.5,
+      "y": 23.3
+    },
     "items": [
       {
         "id": 12638,
@@ -1235,6 +1415,11 @@
       "x": 16.2,
       "y": 36.5,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Anyx Trine",
+      "x": 16.5,
+      "y": 23.3
     },
     "times": [
       [
@@ -1273,6 +1458,11 @@
       "y": 11.1,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
+    },
     "items": [
       {
         "id": 30499,
@@ -1300,6 +1490,11 @@
       "y": 10.7,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Anyx Trine",
+      "x": 16.5,
+      "y": 23.3
+    },
     "items": [
       {
         "id": 29676,
@@ -1322,6 +1517,11 @@
       "x": 29.8,
       "y": 17.6,
       "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tailfeather",
+      "x": 33.2,
+      "y": 23.2
     },
     "items": [
       {
@@ -1818,6 +2018,11 @@
       "y": 22.4,
       "radius": 3.1
     },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
+    },
     "items": [
       {
         "id": 12885,
@@ -1842,6 +2047,11 @@
       "x": 26,
       "y": 8.8,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
     },
     "times": [
       [
@@ -1879,6 +2089,11 @@
       "y": 38.1,
       "radius": 1.8
     },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
+    },
     "times": [
       [
         600,
@@ -1910,6 +2125,11 @@
       "x": 19.5,
       "y": 37,
       "radius": 3
+    },
+    "aetheryte": {
+      "name": "Moghome",
+      "x": 27.9,
+      "y": 34.3
     },
     "times": [
       [
@@ -1960,6 +2180,11 @@
       "y": 36.9,
       "radius": 3.6
     },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
+    },
     "times": [
       [
         120,
@@ -1996,6 +2221,11 @@
       "x": 10.3,
       "y": 37,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
     },
     "times": [
       [
@@ -2050,6 +2280,11 @@
       "y": 37,
       "radius": 0.9
     },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
+    },
     "times": [
       [
         240,
@@ -2081,6 +2316,11 @@
       "x": 27.7,
       "y": 19.2,
       "radius": 2.5
+    },
+    "aetheryte": {
+      "name": "Moghome",
+      "x": 27.9,
+      "y": 34.3
     },
     "items": [
       {
@@ -2129,6 +2369,11 @@
       "y": 29.8,
       "radius": 3
     },
+    "aetheryte": {
+      "name": "Moghome",
+      "x": 27.9,
+      "y": 34.3
+    },
     "items": [
       {
         "id": 12640,
@@ -2163,6 +2408,11 @@
       "y": 31.8,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Moghome",
+      "x": 27.9,
+      "y": 34.3
+    },
     "items": [
       {
         "id": 14159,
@@ -2194,6 +2444,11 @@
       "x": 10,
       "y": 9.7,
       "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
     },
     "times": [
       [
@@ -2232,6 +2487,11 @@
       "y": 18.9,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
+    },
     "items": [
       {
         "id": 28775,
@@ -2252,6 +2512,11 @@
       "x": 36,
       "y": 26,
       "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Moghome",
+      "x": 27.9,
+      "y": 34.3
     },
     "items": [
       {
@@ -2279,6 +2544,11 @@
       "y": 13.2,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
+    },
     "items": [
       {
         "id": 23152,
@@ -2304,6 +2574,11 @@
       "x": 9,
       "y": 7.6,
       "radius": 2.6
+    },
+    "aetheryte": {
+      "name": "Zenith",
+      "x": 10.8,
+      "y": 28.9
     },
     "items": [
       {
@@ -2332,6 +2607,11 @@
       "y": 28.1,
       "radius": 1.7
     },
+    "aetheryte": {
+      "name": "Moghome",
+      "x": 27.9,
+      "y": 34.3
+    },
     "items": [
       {
         "id": 29674,
@@ -2354,6 +2634,11 @@
       "y": 36,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Camp Cloudtop",
+      "x": 10.3,
+      "y": 33.6
+    },
     "items": [
       {
         "id": 28779,
@@ -2375,6 +2660,11 @@
       "x": 20.6,
       "y": 11.6,
       "radius": 0
+    },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
     },
     "times": [
       [
@@ -2412,6 +2702,11 @@
       "x": 25.2,
       "y": 31.3,
       "radius": 2
+    },
+    "aetheryte": {
+      "name": "Camp Cloudtop",
+      "x": 10.3,
+      "y": 33.6
     },
     "times": [
       [
@@ -2461,6 +2756,11 @@
       "y": 7.6,
       "radius": 1.7
     },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
+    },
     "times": [
       [
         600,
@@ -2497,6 +2797,11 @@
       "y": 37.7,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Camp Cloudtop",
+      "x": 10.3,
+      "y": 33.6
+    },
     "times": [
       [
         240,
@@ -2528,6 +2833,11 @@
       "x": 13.9,
       "y": 20.7,
       "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
     },
     "times": [
       [
@@ -2585,6 +2895,11 @@
       "y": 21.4,
       "radius": 4.6
     },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
+    },
     "times": [
       [
         360,
@@ -2621,6 +2936,11 @@
       "y": 6.4,
       "radius": 2.1
     },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
+    },
     "times": [
       [
         0,
@@ -2652,6 +2972,11 @@
       "x": 34.9,
       "y": 30.6,
       "radius": 2.5
+    },
+    "aetheryte": {
+      "name": "Camp Cloudtop",
+      "x": 10.3,
+      "y": 33.6
     },
     "items": [
       {
@@ -2695,6 +3020,11 @@
       "y": 33.5,
       "radius": 3.2
     },
+    "aetheryte": {
+      "name": "Camp Cloudtop",
+      "x": 10.3,
+      "y": 33.6
+    },
     "items": [
       {
         "id": 12586,
@@ -2732,6 +3062,11 @@
       "y": 11.8,
       "radius": 2.4
     },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
+    },
     "items": [
       {
         "id": 12887,
@@ -2766,6 +3101,11 @@
       "x": 37.6,
       "y": 14.6,
       "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
     },
     "times": [
       [
@@ -2804,6 +3144,11 @@
       "y": 37.2,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Camp Cloudtop",
+      "x": 10.3,
+      "y": 33.6
+    },
     "items": [
       {
         "id": 30500,
@@ -2834,6 +3179,11 @@
       "x": 30,
       "y": 7.6,
       "radius": 1.9
+    },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
     },
     "items": [
       {
@@ -2867,6 +3217,11 @@
       "y": 22.9,
       "radius": 2.2
     },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
+    },
     "items": [
       {
         "id": 29671,
@@ -2890,6 +3245,11 @@
       "y": 23.3,
       "radius": 2.3
     },
+    "aetheryte": {
+      "name": "Ok' Zundu",
+      "x": 10.5,
+      "y": 14.2
+    },
     "items": [
       {
         "id": 29669,
@@ -2912,6 +3272,11 @@
       "x": 5.5,
       "y": 16.4,
       "radius": 1.3
+    },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
     },
     "times": [
       [
@@ -2946,6 +3311,11 @@
       "y": 30.2,
       "radius": 1.7
     },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
+    },
     "times": [
       [
         240,
@@ -2978,6 +3348,11 @@
       "y": 5.9,
       "radius": 0.7
     },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
+    },
     "times": [
       [
         0,
@@ -3009,6 +3384,11 @@
       "x": 36.1,
       "y": 15.4,
       "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
     },
     "times": [
       [
@@ -3043,6 +3423,11 @@
       "y": 9.2,
       "radius": 1.2
     },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
+    },
     "times": [
       [
         120,
@@ -3076,6 +3461,11 @@
       "y": 34.8,
       "radius": 1.9
     },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
+    },
     "items": [
       {
         "id": 31130,
@@ -3098,6 +3488,11 @@
       "x": 10.8,
       "y": 34.8,
       "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
     },
     "items": [
       {
@@ -3122,6 +3517,11 @@
       "y": 16.1,
       "radius": 1.8
     },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
+    },
     "items": [
       {
         "id": 31130,
@@ -3144,6 +3544,11 @@
       "x": 14,
       "y": 10.1,
       "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
     },
     "items": [
       {
@@ -3168,6 +3573,11 @@
       "y": 27.7,
       "radius": 1.5
     },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
+    },
     "items": [
       {
         "id": 31768,
@@ -3191,6 +3601,11 @@
       "x": 11.8,
       "y": 26.9,
       "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Helix",
+      "x": 8.1,
+      "y": 10.6
     },
     "items": [
       {

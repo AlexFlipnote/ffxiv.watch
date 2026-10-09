@@ -73,6 +73,9 @@ const MAPS = path.join(ROOT, "src/images/maps")
 const MAP_SOURCE = "https://v2.xivapi.com/api/asset/map"
 const MAP_SIZE = 1024
 
+const ICON_SOURCE = "https://v2.xivapi.com/api/asset"
+const ICONS = path.join(ROOT, "src/images/items")
+
 /**
  * @param {string} name
  * @returns {string} "A Realm Reborn" -> "a-realm-reborn"
@@ -102,6 +105,50 @@ export function mapPosition(map, x, z, radius = 0) {
   }
 }
 
+// MapMarker.DataType for an aetheryte, its DataKey is then the Aetheryte row
+const AETHERYTE_MARKER = "3"
+
+/**
+ * Builds a lookup for the aetheryte closest to a spot, on the same map. Aethernet shards don't count, only the ones
+ * you can teleport to. Their Level rows aren't in the sheets, so the position comes from the map's marker for it,
+ * placed in pixels on the 2048px map texture.
+ * @param {{ aetherytes: Record<string, string>[], markers: Record<string, string>[], map: object, place: object }} sheets
+ * Aetheryte and MapMarker rows, and Map and PlaceName by id
+ * @returns {(mapRowId: string, x: number, y: number) => { name: string, x: number, y: number } | null} x/y are map coordinates
+ */
+export function nearestAetheryte({ aetherytes, markers, map, place }) {
+  // A MapMarker row id is "<Map.MapMarkerRange>.<n>"
+  const marker = new Map(markers
+    .filter((mm) => mm.DataType === AETHERYTE_MARKER)
+    .map((mm) => [`${mm["#"].split(".")[0]}|${mm.DataKey}`, mm]))
+
+  const byMap = new Map()
+  for (const a of aetherytes) {
+    const m = map[a.Map]
+    const mm = m && marker.get(`${m.MapMarkerRange}|${a["#"]}`)
+    const name = place[a.PlaceName]?.Name
+    if (a.IsAetheryte !== "True" || a.Invisible === "True" || !mm || !name) continue
+
+    const coord = (px) => round((41 / (+m.SizeFactor / 100)) * (+px / 2048) + 1)
+    byMap.set(a.Map, [...byMap.get(a.Map) ?? [], { name, x: coord(mm.X), y: coord(mm.Y) }])
+  }
+
+  return (mapRowId, x, y) => {
+    const distance = (a) => Math.hypot(a.x - x, a.y - y)
+    return byMap.get(mapRowId)?.reduce((best, a) => distance(a) < distance(best) ? a : best) ?? null
+  }
+}
+
+/**
+ * Writes src/js/data/<name>.json. For data only the build reads, like the text on the detail pages.
+ * @param {string} name
+ * @param {object} value
+ */
+export function writeData(name, value) {
+  fs.writeFileSync(path.join(DATA, `${name}.json`), JSON.stringify(value, null, 2) + "\n")
+  console.log(`Wrote ${Object.keys(value).length} to src/js/data/${name}.json`)
+}
+
 /**
  * Saves maps to src/images/maps/ as WebP, one at a time since XIVAPI renders each on request.
  * Maps already there are kept, delete one to fetch it again after a patch redraws it.
@@ -120,6 +167,29 @@ export async function saveMaps(ids) {
     saved++
   }
   console.log(`Maps: ${saved} saved, ${new Set(ids).size - saved} already there`)
+}
+
+/**
+ * Saves item icons to src/images/items/<id>.webp, so the site serves its own copies. The game's 80px, compressed hard,
+ * as the lists show hundreds of them. A few at a time, XIVAPI renders each on request. Icons already there are kept.
+ * @param {number[]} ids Item.Icon values, repeats are fine
+ */
+export async function saveIcons(ids) {
+  fs.mkdirSync(ICONS, { recursive: true })
+  const queue = [...new Set(ids)].filter((id) => !fs.existsSync(path.join(ICONS, `${id}.webp`)))
+  const saved = queue.length
+
+  await Promise.all(Array.from({ length: 6 }, async () => {
+    while (queue.length) {
+      const id = queue.pop()
+      // ui/icon/022000/022408_hr1.tex, a folder per thousand
+      const folder = String(Math.floor(id / 1000) * 1000).padStart(6, "0")
+      const res = await fetch(`${ICON_SOURCE}?path=ui/icon/${folder}/${String(id).padStart(6, "0")}_hr1.tex&format=png`)
+      if (!res.ok) throw new Error(`icon ${id}: HTTP ${res.status}`)
+      await sharp(Buffer.from(await res.arrayBuffer())).webp({ quality: 60, effort: 6 }).toFile(path.join(ICONS, `${id}.webp`))
+    }
+  }))
+  console.log(`Icons: ${saved} saved, ${new Set(ids).size - saved} already there`)
 }
 
 /**
