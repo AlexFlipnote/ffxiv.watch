@@ -6,9 +6,145 @@
   padding-bottom: 1.25rem;
 }
 
-.listing-panel {
+// The page's heading and a line on what it has, outside the boxes like a detail page's header
+.listing-intro {
+  margin-bottom: 1.25rem;
+}
+
+.listing-title {
+  margin: 0;
+  font-size: 1.75rem;
+
+  @include mobile {
+    font-size: 1.4rem;
+  }
+}
+
+.listing-lead {
+  margin: .375rem 0 0;
+  color: var(--font-secondary);
+  line-height: 1.5;
+}
+
+// No card around the page, it costs too much width on a phone. The filters and each group are boxes instead
+.listing .filters {
   @include glass;
-  padding: 1.25rem;
+  padding: .75rem;
+  // Clear of the sticky navbar when the filters button scrolls back to them
+  scroll-margin-top: calc(var(--navbar-height) + 1.25rem);
+}
+
+// Round button in the corner once the filters are scrolled away, takes you back up to them, see js/utils/listing.js
+.filters-button {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: opacity .2s, transform .2s $ease, visibility 0s;
+
+  &[hidden] {
+    display: flex;
+    opacity: 0;
+    transform: scale(.8);
+    visibility: hidden;
+    transition: opacity .2s, transform .2s $ease, visibility 0s linear .2s;
+  }
+
+  &::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: currentColor;
+    mask: url("/images/filter.svg") center / contain no-repeat;
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--font-primary);
+    outline-offset: .125rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filters-button,
+  .filters-button[hidden] {
+    transition: none;
+  }
+}
+
+// The table's shape until the first data is in: tabs over rows, like the groups. Without JS the real rows show
+.listing-skeleton {
+  display: none;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  .js &:not([hidden]) {
+    display: flex;
+  }
+}
+
+.skeleton-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: var(--group-shadow);
+}
+
+.skeleton-tab,
+.skeleton-row {
+  background-color: var(--group-background);
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-tab {
+  width: 9rem;
+  height: 1.75rem;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.skeleton-row {
+  align-self: stretch;
+  height: 4rem;
+
+  &:nth-child(2) {
+    border-radius: .5rem .5rem 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 .5rem .5rem;
+  }
+
+  &:only-of-type {
+    border-radius: .5rem;
+  }
+
+  & + & {
+    border-top: 1px solid var(--divider);
+  }
+}
+
+@keyframes skeleton-pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-tab,
+  .skeleton-row {
+    animation: none;
+  }
 }
 
 .search {
@@ -18,6 +154,35 @@
 
 // The column names are only there for screen readers (the thead is .sr-only), the group tabs head each block
 .listing-table {
+  filter: var(--group-shadow);
+
+  // The build puts every row in the page, listing.js sorts the ones it shows into groups, which gives them a class
+  .js & tr[data-key]:not([class]) {
+    display: none;
+  }
+
+  // The names link to their own pages: the row's color, with a faint underline to show they can be clicked
+  td a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .2em;
+    transition: color .2s, text-decoration-color .2s;
+
+    @include hover {
+      color: var(--accent);
+      text-decoration-color: currentColor;
+    }
+
+    // Taller to tap without moving anything: the padding reaches past the line, the margin takes it back
+    @include touch {
+      display: inline-block;
+      padding: .375rem 0;
+      margin: -.375rem 0;
+    }
+  }
+
   td {
     vertical-align: top;
     background-color: var(--group-background);
@@ -30,7 +195,7 @@
   }
 
   .group-open td {
-    background-color: var(--chip-background);
+    background-color: var(--group-open-background);
   }
 
   .group-open strong {
@@ -96,7 +261,7 @@ $tab-flare: .5rem;
   white-space: nowrap;
 
   .group-open & {
-    --tab-color: var(--chip-background);
+    --tab-color: var(--group-open-background);
   }
 
   &::before,
@@ -159,9 +324,8 @@ $tab-flare: .5rem;
   padding: .0625rem .375rem;
   border-radius: .375rem;
   background: var(--chip-background);
-  color: var(--font-tertiary);
+  color: var(--font-secondary);
   font-size: .7rem;
-  font-weight: bold;
   white-space: nowrap;
 }
 
@@ -216,11 +380,13 @@ $tab-flare: .5rem;
     }
   }
 
-  &:hover:not(:disabled) {
-    color: var(--accent);
+  &:not(:disabled) {
+    @include hover {
+      color: var(--accent);
 
-    &::after {
-      background: var(--chip-background);
+      &::after {
+        background: var(--chip-background);
+      }
     }
   }
 
@@ -330,24 +496,55 @@ $tab-flare: .5rem;
   }
 }
 
+// While the dialog's next map loads it pulses empty, then the map and its markers fade in, see js/utils/mapModal.js
+.map-modal .map {
+  > * {
+    transition: opacity .3s ease-out;
+  }
+
+  &.map-loading {
+    animation: skeleton-pulse 1.5s ease-in-out infinite;
+
+    // Gone at once, only the way in fades
+    > * {
+      opacity: 0;
+      transition: none;
+    }
+  }
+}
+
 .map-area,
+.map-aetheryte,
 .map-pin {
   position: absolute;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
   pointer-events: none;
 }
 
 .map-area {
   min-width: 1.5rem;
   min-height: 1.5rem;
+  border-radius: 50%;
   background: rgba(176, 49, 49, .25);
   border: .125rem solid rgba(176, 49, 49, .8);
 }
 
+// The nearest aetheryte, centered on its spot, under the pin when they're close. Drawn 24x32
+.map-aetheryte {
+  width: 1.3125rem;
+  height: 1.75rem;
+  background: url("/images/map-aetheryte.svg") center / contain no-repeat;
+  filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, .5));
+  pointer-events: auto;
+  cursor: help;
+}
+
+// An exact spot, small so the map around it still shows. One with a radius has the circle instead, its edge the same
 .map-pin {
-  width: .75rem;
-  height: .75rem;
+  width: .5625rem;
+  height: .5625rem;
+  border-radius: 50%;
+  // The circle's edge red, solid, with a white edge so it can't be taken for a small circle
   background: #b03131;
   border: .125rem solid #fff;
   box-shadow: 0 0 .375rem rgba(0, 0, 0, .6);

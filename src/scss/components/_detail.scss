@@ -1,0 +1,471 @@
+@use "../mixins" as *;
+
+// An item's or vista's own page, see src/render/
+.detail {
+  @include content-column;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+// Links styled as buttons. The icons are drawn, so screen readers only read the text
+.backlink,
+.detail-prev-link,
+.detail-next-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  min-width: 0;
+  padding: .375rem .75rem .375rem .5rem;
+  border-radius: .5rem;
+  background: var(--chip-background);
+  color: var(--font-secondary);
+  font-size: .85rem;
+  text-decoration: none;
+  transition: color .2s, background-color .2s;
+
+  // The icon files are white, as a mask they take the text color instead, so they follow the theme and the hover
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: currentColor;
+    mask: center / contain no-repeat;
+  }
+
+  @include hover {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+    outline-offset: .125rem;
+  }
+
+  @include touch {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+  }
+}
+
+.backlink {
+  align-self: flex-start;
+
+  &::before {
+    mask-image: url("/images/arrow.svg");
+  }
+}
+
+.detail-kicker {
+  margin: 0 0 .25rem;
+  font-size: .8rem;
+  color: var(--font-tertiary);
+}
+
+.detail-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem .5rem;
+  margin: 0;
+  font-size: 1.75rem;
+
+  .gathering-stars {
+    font-size: 1rem;
+  }
+}
+
+// The game's own text
+.detail-text,
+.detail-quote {
+  max-width: 40rem;
+  color: var(--font-secondary);
+  line-height: 1.5;
+
+  p {
+    margin: .5rem 0 0;
+  }
+}
+
+.detail-quote {
+  margin: .75rem 0 0;
+  padding-left: .75rem;
+  border-left: .125rem solid var(--accent);
+  font-style: italic;
+
+  p:first-child {
+    margin-top: 0;
+  }
+}
+
+// Info on the left, the map on the right, stacked on phones
+// The card's map opens the map dialog, bigger
+.map-zoom {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  cursor: zoom-in;
+  transition: box-shadow .2s;
+
+  @include hover {
+    box-shadow: 0 0 0 .125rem var(--accent);
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+    outline-offset: .125rem;
+  }
+
+  // The whole map is the button, the marker's own hover hint is for the dialog
+  .map-aetheryte {
+    pointer-events: none;
+  }
+}
+
+// Only lays out the node's boxes, a card around them would cost too much room. Half and half: the text next to
+// the map on top, the timer next to the facts under them
+.detail-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "top map"
+    "timer facts";
+  align-items: start;
+  gap: 1rem;
+
+  // A node without a map position, like the Diadem's
+  &:not(:has(.map)) {
+    grid-template-areas:
+      "top top"
+      "timer facts";
+  }
+
+  // At most about 400px, in the top right corner of its half
+  > .map {
+    grid-area: map;
+    justify-self: end;
+    max-width: 20rem;
+  }
+
+  // Side by side, so as tall as each other
+  > .detail-timer {
+    grid-area: timer;
+    align-self: stretch;
+  }
+
+  > .detail-facts {
+    grid-area: facts;
+    align-self: stretch;
+  }
+
+  .tags {
+    margin-top: 0;
+  }
+
+  // An item at several nodes: a line between them, as they have no card to tell them apart
+  & + & {
+    padding-top: 1rem;
+    border-top: 1px solid var(--divider);
+  }
+}
+
+.detail-top {
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  min-width: 0;
+}
+
+// The zone heading a node after the first, on an item found at several
+.detail-node {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.detail-timer,
+.detail-facts {
+  @include glass;
+  padding: .75rem 1rem;
+}
+
+.detail-state {
+  font-size: .85rem;
+  color: var(--font-tertiary);
+}
+
+.detail-countdown {
+  font-size: 1.4rem;
+  font-variant-numeric: tabular-nums;
+
+  .detail-open & {
+    color: var(--accent);
+  }
+
+  .detail-always & {
+    font-size: 1.1rem;
+    color: var(--font-secondary);
+  }
+}
+
+.detail-when {
+  margin: .25rem 0 0;
+  font-size: .8rem;
+  color: var(--font-tertiary);
+}
+
+.detail-upcoming {
+  margin: .625rem 0 0;
+  padding: .625rem 0 0;
+  border-top: 1px solid var(--divider);
+  list-style: none;
+  font-size: .85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--font-secondary);
+
+  // Filled in by js/utils/detail.js
+  &:empty {
+    display: none;
+  }
+
+  li + li {
+    margin-top: .25rem;
+  }
+}
+
+.detail-facts {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  // Stretched as tall as the timer next to it, the rows grow with it, so each label and value sits in the middle of its row
+  align-items: center;
+  gap: .375rem 1rem;
+  margin: 0;
+
+  dt {
+    font-size: .8rem;
+    color: var(--font-tertiary);
+    line-height: 1.5rem;
+  }
+
+  dd {
+    margin: 0;
+    line-height: 1.5rem;
+  }
+}
+
+// An item's page is packed tighter than a vista's: the header with what the item's worth next to it, the recipes
+// under them, then each node with its map down the right. The right column is as wide as the map, so the two line up
+$item-side: min(20rem, 40%);
+
+.item-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) $item-side;
+  align-items: start;
+  gap: 1rem;
+
+  .detail-header .tags {
+    margin-top: .75rem;
+  }
+}
+
+.item-about {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.detail-subtitle {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.item-uses {
+  @include glass;
+  padding: .75rem 1rem;
+}
+
+.item-uses-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+// The timer over the node's facts, the map next to both, under the heading. A node without a map keeps the card's own
+// layout
+.detail-card.gathering-node:has(> .map) {
+  grid-template-columns: minmax(0, 1fr) $item-side;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "top top"
+    "timer map"
+    "facts map";
+
+  // Only an item at several nodes has a heading on each
+  &:not(:has(> .detail-top)) {
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "timer map"
+      "facts map";
+  }
+
+  > .map {
+    max-width: none;
+  }
+}
+
+// The timer has the left column's whole width: the ET times next to the countdown, the upcoming windows in columns
+.gathering-node .detail-timer[data-window] {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0 1rem;
+
+  .detail-when {
+    margin: 0;
+    text-align: right;
+  }
+
+  .detail-upcoming {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: .25rem 1rem;
+
+    li + li {
+      margin-top: 0;
+    }
+  }
+}
+
+.detail-recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: .75rem 1rem;
+  margin-top: .75rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: .9rem;
+  }
+
+  li + li {
+    margin-top: .25rem;
+  }
+}
+
+.detail-recipe-job {
+  margin: 0 0 .375rem;
+  font-size: .8rem;
+  font-weight: normal;
+  color: var(--font-tertiary);
+}
+
+.detail-recipe-level {
+  font-size: .8rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--font-tertiary);
+}
+
+.detail-recipe-amount {
+  color: var(--font-secondary);
+}
+
+.detail-recipe-more {
+  font-size: .8rem;
+  color: var(--font-tertiary);
+}
+
+.detail-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 .75rem;
+}
+
+.detail-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .detail-prev-link::before,
+  .detail-next-link::before {
+    mask-image: url("/images/chevron.svg");
+  }
+
+  // The chevron points left, so next has it flipped and on the right
+  .detail-next-link {
+    flex-direction: row-reverse;
+    margin-left: auto;
+    padding-right: .5rem;
+    padding-left: .75rem;
+    text-align: right;
+
+    &::before {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+// Two columns still fit a narrow window, only a phone stacks them, the map last
+@media (max-width: 36rem) {
+  .detail-card,
+  .detail-card:not(:has(.map)) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "top"
+      "timer"
+      "facts"
+      "map";
+
+    // The phone's whole width, it's narrow enough already
+    > .map {
+      max-width: none;
+    }
+  }
+
+  .detail-card.gathering-node:has(> .map) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas:
+      "top"
+      "timer"
+      "facts"
+      "map";
+
+    &:not(:has(> .detail-top)) {
+      grid-template-rows: none;
+      grid-template-areas:
+        "timer"
+        "facts"
+        "map";
+    }
+  }
+
+  // The ET times under the countdown again, next to it they'd squeeze it
+  .gathering-node .detail-timer[data-window] .detail-when {
+    grid-column: 1 / -1;
+    margin-top: .25rem;
+    text-align: left;
+  }
+
+  // One column, where it's gathered first: what the item's worth and the recipes go after the nodes
+  .item-intro {
+    display: contents;
+  }
+
+  .item-about,
+  .item-uses {
+    order: 1;
+  }
+}
+
+@include mobile {
+  .detail-title {
+    font-size: 1.4rem;
+  }
+}

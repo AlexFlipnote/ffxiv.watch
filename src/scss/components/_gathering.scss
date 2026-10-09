@@ -1,13 +1,32 @@
+// Far enough apart, when they wrap onto more lines, for a finger to tap the right one
 .gathering-items {
   display: flex;
   flex-wrap: wrap;
-  gap: .25rem .75rem;
+  gap: .5rem .75rem;
 }
 
 .gathering-item {
   display: inline-flex;
   align-items: center;
   gap: .25rem;
+}
+
+// An item's icon, next to the title on its page. The game's is 80px, so it's shown at 44 to stay sharp on a phone
+.item-icon {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: .5rem;
+}
+
+.item-heading {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+
+  .detail-kicker {
+    margin-bottom: .125rem;
+  }
 }
 
 .gathering-stars {

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="FFXIV Sightseeing Log: Vista Times & Weather - ffxiv.watch"
+      description="FFXIV sightseeing log for every vista, with the emote, map location, unlock quests, and when the time and weather line up next, in your local time."
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="sightseeing.js" module preload="data/sightseeing/{{ defaultExpansion }}.json"/>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="listing">
+        <header class="listing-intro">
+          <h1 class="listing-title">Sightseeing log</h1>
+          <p class="listing-lead">Every vista in FFXIV, with its emote, where to stand, and when the time and weather line up next, in your local time.</p>
+        </header>
+        <div class="filters">
+          <input class="input search" id="search" type="search" enterkeyhint="search" placeholder="Vista, zone, emote or weather" aria-label="Search">
+          <label>Expansion <select class="select" id="filter-expansion">{{{ expansionOptions }}}</select></label>
+        </div>
+        <x-html str="partials/listing-skeleton.html"/>
+        <table class="table listing-table">
+          <thead class="sr-only">
+            <tr><th>Vista</th><th>Location</th></tr>
+          </thead>
+          <tbody id="vistas">
+            {{{ rows }}}
+          </tbody>
+        </table>
+        <p class="table-empty" id="vistas-empty" hidden></p>
+      </main>
+    </div>
+
+    <x-html str="partials/map-modal.html"/>
+  </body>
+</html>

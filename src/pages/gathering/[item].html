@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo title="{{ title }}" description="{{ description }}" image="{{ image }}" image-alt="{{ imageAlt }}" image-size="{{ imageSize }}" section="Gathering" name="{{ name }}"/>
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="item.js" module/>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="detail">
+        <a class="backlink" href="/gathering/">Gathering</a>
+        {{{ content }}}
+      </main>
+    </div>
+
+    <x-html str="partials/map-modal.html"/>
+  </body>
+</html>

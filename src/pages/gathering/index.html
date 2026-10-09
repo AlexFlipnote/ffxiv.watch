@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="FFXIV Gathering Nodes & Timers - ffxiv.watch"
+      description="Every FFXIV gathering node and where to find each item, with timers for unspoiled, legendary and ephemeral nodes, folklore books and maps."
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="gathering.js" module preload="data/gathering/{{ defaultExpansion }}.json"/>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="listing">
+        <header class="listing-intro">
+          <h1 class="listing-title">Gathering nodes</h1>
+          <p class="listing-lead">Where every item in FFXIV is gathered, and when the unspoiled, legendary and ephemeral nodes are up next, in your local time.</p>
+        </header>
+        <div class="filters">
+          <input class="input search" id="search" type="search" enterkeyhint="search" placeholder="Item, zone or folklore" aria-label="Search">
+          <label>Job
+            <select class="select" id="filter-job">
+              <option value="">Any</option>
+              <option>Miner</option>
+              <option>Botanist</option>
+            </select>
+          </label>
+          <label>Expansion <select class="select" id="filter-expansion">{{{ expansionOptions }}}</select></label>
+          <label>Type
+            <select class="select" id="filter-type">
+              <option value="">Any</option>
+              <option value="Timed">Timed</option>
+              <option>Legendary</option>
+              <option>Unspoiled</option>
+              <option>Ephemeral</option>
+              <option>Regular</option>
+              <option>Diadem</option>
+            </select>
+          </label>
+        </div>
+        <x-html str="partials/listing-skeleton.html"/>
+        <table class="table listing-table">
+          <thead class="sr-only">
+            <tr><th>Items</th><th>Location</th></tr>
+          </thead>
+          <tbody id="nodes">
+            {{{ rows }}}
+          </tbody>
+        </table>
+        <p class="table-empty" id="nodes-empty" hidden></p>
+      </main>
+    </div>
+
+    <x-html str="partials/map-modal.html"/>
+  </body>
+</html>

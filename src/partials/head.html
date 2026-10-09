@@ -2,10 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1a1a1a">
 
-<!-- Theme and day/night colors before the first paint so they never flash, same logic as js/utils/theme.js and daynight.js -->
+<!-- Theme and day/night colors before the first paint so they never flash, same logic as js/utils/theme.js and daynight.js.
+     The js class lets the CSS hide what the scripts will redo, like the table rows before they're sorted -->
 <script>
   (() => {
     const root = document.documentElement
+    root.classList.add("js")
     let theme = null
     try { theme = localStorage.getItem("theme") } catch {}
     if (theme !== "light" && theme !== "dark") theme = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"

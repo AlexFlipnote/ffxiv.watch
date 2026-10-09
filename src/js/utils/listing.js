@@ -15,41 +15,17 @@ import { setText } from "./tick.js"
  * @property {(file: string) => Promise<object[]>} loadChunk Loads one expansion's entries
  * @property {Record<string, HTMLSelectElement>} selects Filter dropdowns by name, `expansion` gets filled here
  * @property {HTMLInputElement} search
- * @property {HTMLElement} body The table's tbody
+ * @property {HTMLElement} body The table's tbody, with a row for every entry from the build
  * @property {HTMLElement} empty Shown when nothing matches
- * @property {(entry: object) => Node[]} cells The first column's content
+ * @property {HTMLElement} skeleton Shown in place of the table until the first data is in
  * @property {(entry: object) => string | (string | Node)[]} [mapNote] Shown under the coordinates in the map dialog
  * @property {(entry: object, query: string) => boolean} matches `query` is lowercase, "" for none
- * @property {(entry: object, now: number) => Window} windowOf Called every frame, so keep it cheap
+ * @property {(entry: object, now: number) => Window} windowOf Called every tick, so keep it cheap
  * @property {string} noun "nodes", "vistas"
  */
 
 const ALL = ""
 const STATE_ORDER = { open: 0, later: 1, always: 2, none: 3 }
-
-/**
- * @param {string} value
- * @param {string} [text]
- * @returns {HTMLOptionElement}
- */
-export function option(value, text = value) {
-  const el = document.createElement("option")
-  el.value = value
-  el.textContent = text
-  return el
-}
-
-/**
- * @param {string} text
- * @param {string} [className] Extra class, like "chip-gold"
- * @returns {HTMLSpanElement}
- */
-export function chip(text, className = "") {
-  const el = document.createElement("span")
-  el.className = `chip ${className}`.trim()
-  el.textContent = text
-  return el
-}
 
 /**
  * @param {string} key
@@ -73,43 +49,6 @@ function save(key, value) {
   } catch {
     // Storage blocked, just not saved
   }
-}
-
-/**
- * The location column: zone and spot, the whole cell opens the map.
- * @param {{ zone: string, spot?: string, map?: import("./mapModal.js").MapSpot }} entry
- * @param {string | (string | Node)[]} [note] Shown under the coordinates
- * @returns {HTMLTableCellElement}
- */
-function locationCell(entry, note) {
-  const td = document.createElement("td")
-  td.className = "location-cell"
-  td.innerHTML = `
-    <button class="location" title="Show on map">
-      <span class="map-icon" aria-hidden="true"></span>
-      <span class="place"><span class="zone"></span><span class="spot"></span></span>
-    </button>
-  `
-  td.querySelector(".zone").textContent = entry.zone
-  td.querySelector(".spot").textContent = entry.spot ?? ""
-
-  const button = td.querySelector("button")
-  if (entry.map) button.addEventListener("click", () => openMap({ ...entry, note }))
-  else button.disabled = true
-  return td
-}
-
-/**
- * Zone and spot on one line, for the first column on phones, where the location column is only the map icon.
- * @param {{ zone: string, spot?: string }} entry
- * @returns {HTMLDivElement}
- */
-function placeLine(entry) {
-  const el = document.createElement("div")
-  el.className = "place-line"
-  el.append(Object.assign(document.createElement("span"), { className: "zone", textContent: entry.zone }))
-  if (entry.spot) el.append(Object.assign(document.createElement("span"), { className: "spot", textContent: entry.spot }))
-  return el
 }
 
 /**
@@ -174,12 +113,15 @@ function groupRows(state) {
 }
 
 /**
- * Wires up a table page: remembered filters, one expansion's data at a time, and rows sorted and grouped by when
- * they're up.
+ * Wires up a table page: remembered filters, the search in the URL, one expansion's data at a time, and rows sorted
+ * and grouped by when they're up. The rows come with the page, each marked with the entry it's for.
  * @param {ListingOptions} options
- * @returns {(now: number) => void} Redraws the table, call it every frame
+ * @returns {(now: number) => void} Redraws the table, call it every tick
  */
-export function listing({ key, expansions, defaultExpansion, loadChunk, selects, search, body, empty, cells, mapNote, matches, windowOf, noun }) {
+export function listing({ key, expansions, defaultExpansion, loadChunk, selects, search, body, empty, skeleton, mapNote, matches, windowOf, noun }) {
+  // "dawntrail:12" -> its row, until the entry it's for has loaded
+  const unclaimed = new Map([...body.querySelectorAll("tr[data-key]")].map((tr) => [tr.dataset.key, tr]))
+  const keys = new Map()
   const rows = new Map()
   let groups = new Map()
   const loaded = new Map()
@@ -189,41 +131,63 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, selects,
   let generation = 0
   // The groups on the page, until the first moment one of them opens or closes
   let layout = null
+  // Nothing is drawn until the first data is in, the rows from the build stay hidden until then (see _listing.scss)
+  let ready = false
 
-  selects.expansion.append(option(ALL, "All"), ...expansions.map((e) => option(e.file, e.name)))
+  // The expansion select's options are in the page already, see expansionOptions in src/render/html.js
   const saved = { expansion: defaultExpansion, ...loadSaved(key) }
   for (const [name, select] of Object.entries(selects)) {
     if ([...select.options].some((o) => o.value === saved[name])) select.value = saved[name]
   }
+  // In the URL, so going back to the page brings it back, while a fresh visit starts without one
+  search.value = new URLSearchParams(location.search).get("q") ?? ""
 
   const loadExpansion = (file) => {
-    if (!loaded.has(file)) loaded.set(file, loadChunk(file))
+    if (!loaded.has(file)) {
+      loaded.set(file, loadChunk(file).then((entries) => {
+        entries.forEach((entry, i) => keys.set(entry, `${file}:${i}`))
+        return entries
+      }))
+    }
     return loaded.get(file)
   }
 
+  /**
+   * @param {object} entry
+   * @returns {{ tr: HTMLTableRowElement } | null} null when the page has no row for it
+   */
   function rowOf(entry) {
     if (!rows.has(entry)) {
-      const tr = document.createElement("tr")
-      tr.className = "group-row"
-      const first = document.createElement("td")
-      first.append(...cells(entry), placeLine(entry))
-      tr.append(first, locationCell(entry, mapNote?.(entry)))
+      const tr = unclaimed.get(keys.get(entry))
+      if (!tr) return null
+      unclaimed.delete(keys.get(entry))
+      if (entry.map) tr.querySelector(".location").addEventListener("click", () => openMap({ ...entry, note: mapNote?.(entry) }))
       rows.set(entry, { tr })
     }
     return rows.get(entry)
   }
 
+  function saveSearch() {
+    const url = new URL(location.href)
+    const query = search.value.trim()
+    if (query) url.searchParams.set("q", query)
+    else url.searchParams.delete("q")
+    if (url.href !== location.href) history.replaceState(history.state, "", url)
+  }
+
   async function applyFilters() {
     save(key, Object.fromEntries(Object.entries(selects).map(([name, select]) => [name, select.value])))
+    saveSearch()
     const query = search.value.trim().toLowerCase()
 
     const current = ++generation
-    if (!shown.length) empty.textContent = `Loading ${noun}...`
     const files = selects.expansion.value === ALL ? expansions.map((e) => e.file) : [selects.expansion.value]
     const entries = (await Promise.all(files.map(loadExpansion))).flat()
     if (current !== generation) return
 
-    shown = entries.filter((entry) => matches(entry, query))
+    shown = entries.filter((entry) => rowOf(entry) && matches(entry, query))
+    ready = true
+    skeleton.hidden = true
     layout = null
     render(Date.now())
   }
@@ -277,8 +241,9 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, selects,
     return { runs, until: Math.min(until, now + 60 * 1000) }
   }
 
-  // Every frame only the countdowns change, the groups are rebuilt when one opens or closes
+  // Every tick only the countdowns change, the groups are rebuilt when one opens or closes
   function render(now) {
+    if (!ready) return
     if (!layout || now >= layout.until) layout = buildLayout(now)
 
     const date = new Date(now)
@@ -295,7 +260,36 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, selects,
 
   for (const select of Object.values(selects)) select.addEventListener("change", applyFilters)
   search.addEventListener("input", applyFilters)
+  // It filters as you type, so Enter only has to put the phone's keyboard away
+  search.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") search.blur()
+  })
   applyFilters()
+  filtersButton(search.closest(".filters"))
 
   return render
+}
+
+/**
+ * A button in the corner that takes you back up to the filters, shown once they're scrolled out of sight.
+ * @param {HTMLElement} filters
+ */
+function filtersButton(filters) {
+  const button = document.createElement("button")
+  button.className = "filters-button"
+  button.hidden = true
+  button.setAttribute("aria-label", "Back to the filters")
+  button.title = button.getAttribute("aria-label")
+  document.body.append(button)
+
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)")
+  button.addEventListener("click", () => {
+    filters.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: "start" })
+  })
+
+  // Only once they're above the screen, the sticky navbar over the top counts as out of sight
+  const navbarHeight = document.querySelector(".navbar").offsetHeight
+  new IntersectionObserver(([entry]) => {
+    button.hidden = entry.isIntersecting || entry.boundingClientRect.top > 0
+  }, { rootMargin: `-${navbarHeight}px 0px 0px 0px` }).observe(filters)
 }
