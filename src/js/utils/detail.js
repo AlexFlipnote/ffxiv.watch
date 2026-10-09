@@ -69,8 +69,9 @@ export function detailTimers(windowsOf) {
       if (timer.listed[0]?.start !== w.start) relist(timer, w)
       timer.listed.forEach((listed, i) => {
         const [from, to] = timer.list.children[i].querySelectorAll("time")
-        setTime(from, new Date(listed.start), date)
-        setTime(to, new Date(listed.end), date, { zone: true })
+        const start = new Date(listed.start)
+        setTime(from, start, date)
+        setTime(to, new Date(listed.end), date, { zone: true, from: start })
       })
     }
   }

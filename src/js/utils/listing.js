@@ -251,8 +251,10 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, se
     for (const { state, w, group } of layout.runs) {
       if (state === "open" || state === "later") {
         setText(group.countdown, formatCountdown((w.open ? w.end : w.start) - now))
-        setTime(group.from, new Date(w.start), date)
-        setTime(group.to, new Date(w.end), date, { zone: true })
+        // Up now, only the end is shown, "Up until 21:03", so its day goes by today's instead
+        const start = new Date(w.start)
+        setTime(group.from, start, date)
+        setTime(group.to, new Date(w.end), date, { zone: true, from: w.open ? null : start })
       } else {
         setText(group.countdown, state === "always" ? "Any time" : "Nothing in the next 30 days")
       }

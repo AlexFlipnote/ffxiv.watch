@@ -252,8 +252,8 @@ export function formatCountdown(ms) {
 
 /**
  * @param {Date} date
- * @param {Date} [now]
- * @returns {string} "Tue 13 Oct, 10:00", or "10:00" when it's today
+ * @param {Date} [now] Or any other day to leave the day out on
+ * @returns {string} "Tue 13 Oct, 10:00", or "10:00" when it's the same day as `now`
  */
 function formatDate(date, now = new Date()) {
   const today = date.toDateString() === now.toDateString()
@@ -283,14 +283,16 @@ const dayOf = (now) => {
  * @param {HTMLTimeElement} el
  * @param {Date} date
  * @param {Date} now Decides whether the day is shown
- * @param {{ zone?: boolean }} [options] `zone` adds "GMT+2" after it
+ * @param {{ zone?: boolean, from?: Date }} [options] `zone` adds "GMT+2" after it. `from` is the start of the range
+ * this ends: on the same day the day is left out, "Sat 10 Oct, 00:40 - 00:54", whether or not it's today
  */
-export function setTime(el, date, now, { zone = false } = {}) {
-  const key = `${date.getTime()}|${dayOf(now)}|${zone}`
+export function setTime(el, date, now, { zone = false, from = null } = {}) {
+  const key = `${date.getTime()}|${from ? from.getTime() : dayOf(now)}|${zone}`
   if (filledTimes.get(el) === key) return
   filledTimes.set(el, key)
 
-  el.textContent = zone ? `${formatDate(date, now)} ${gmtOffset(date)}` : formatDate(date, now)
+  const short = formatDate(date, from ?? now)
+  el.textContent = zone ? `${short} ${gmtOffset(date)}` : short
   el.dateTime = date.toISOString()
   el.title = `${date.toLocaleString("en-GB", {
     weekday: "long", day: "numeric", month: "long", year: "numeric",
