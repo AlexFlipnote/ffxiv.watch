@@ -52,8 +52,13 @@ export function detailTimers(windowsOf) {
     for (const timer of timers) {
       const w = timer.current(now)
       if (!w) {
+        timer.el.classList.remove("detail-open")
         setText(timer.state, "Nothing in the next 30 days")
         setText(timer.countdown, "")
+        if (timer.listed.length) {
+          timer.listed = []
+          timer.list.replaceChildren()
+        }
         continue
       }
 
