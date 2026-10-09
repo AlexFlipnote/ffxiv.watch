@@ -3,7 +3,7 @@ import EXPANSIONS from "./data/gathering.json"
 import { applyDayNight } from "./utils/daynight.js"
 import { nextWindow } from "./utils/gathering.js"
 import { chip, listing } from "./utils/listing.js"
-import { everyFrame } from "./utils/tick.js"
+import { everyTick } from "./utils/tick.js"
 
 const jobSelect = document.getElementById("filter-job")
 const typeSelect = document.getElementById("filter-type")
@@ -62,7 +62,7 @@ const render = listing({
   windowOf: (node, now) => node.times ? nextWindow(node, now) : { always: true }
 })
 
-everyFrame((now) => {
+everyTick((now) => {
   render(now)
   applyDayNight(now)
 })

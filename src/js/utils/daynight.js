@@ -25,7 +25,7 @@ const enableFade = () => requestAnimationFrame(() => requestAnimationFrame(() =>
 
 /**
  * Updates the day/night phase, partials/head.html sets the first one before the page paints.
- * Cheap to call every frame, only writes when the phase changes.
+ * Cheap to call every tick, only writes when the phase changes.
  * @param {number} now
  */
 export function applyDayNight(now) {

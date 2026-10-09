@@ -3,7 +3,7 @@ import EXPANSIONS from "./data/sightseeing.json"
 import { applyDayNight } from "./utils/daynight.js"
 import { chip, listing } from "./utils/listing.js"
 import { cachedVistaWindows } from "./utils/sightseeing.js"
-import { everyFrame } from "./utils/tick.js"
+import { everyTick } from "./utils/tick.js"
 
 /**
  * "Needs Sights of the First", with what that quest needs in turn on hover.
@@ -54,7 +54,7 @@ const render = listing({
   windowOf: cachedVistaWindows()
 })
 
-everyFrame((now) => {
+everyTick((now) => {
   render(now)
   applyDayNight(now)
 })

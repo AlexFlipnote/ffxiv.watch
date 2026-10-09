@@ -2,7 +2,7 @@ import "./utils/navbar.js"
 import { applyDayNight } from "./utils/daynight.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
 import { formatCountdown, getAllTimerStates, gmtOffset, setTime } from "./utils/timers.js"
-import { everyFrame, setText } from "./utils/tick.js"
+import { everyTick, setText } from "./utils/tick.js"
 
 const container = document.getElementById("timers")
 const etTime = document.getElementById("et-time")
@@ -174,7 +174,7 @@ function renderEorzeaClock(now) {
   setText(etDate, `${ordinal(et.sun)} Sun of the ${et.moonName}`)
 }
 
-everyFrame((now) => {
+everyTick((now) => {
   render(now)
   renderEarthClock(now)
   renderEorzeaClock(now)
