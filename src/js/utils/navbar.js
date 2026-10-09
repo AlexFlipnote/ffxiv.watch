@@ -9,14 +9,10 @@ function setOpened(opened) {
   hamburger.setAttribute("aria-expanded", opened)
 }
 
-hamburger.addEventListener("click", (e) => {
-  e.stopPropagation()
-  setOpened(!navbar.classList.contains("opened"))
-})
+hamburger.addEventListener("click", () => setOpened(!navbar.classList.contains("opened")))
 
-window.addEventListener("click", (e) => {
-  if (!navbar.contains(e.target)) setOpened(false)
-})
+// The backdrop covers the page while the menu is open, so a tap next to it only closes it
+navbar.querySelector(".navbar-backdrop").addEventListener("click", () => setOpened(false))
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") setOpened(false)

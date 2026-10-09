@@ -38,14 +38,25 @@
   margin-bottom: 1rem;
 }
 
+// A finger-sized square, the negative margin keeps the × where it was
 .close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: -.625rem -.75rem -.625rem 0;
+  padding: 0;
   background: none;
   border: none;
+  border-radius: 50%;
   color: var(--font-secondary);
   font-size: 1.5rem;
+  line-height: 1;
   cursor: pointer;
 
-  &:hover {
+  @include hover {
     color: var(--accent);
   }
 }

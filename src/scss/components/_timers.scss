@@ -107,8 +107,16 @@
   justify-content: center;
   transition: all 0.2s;
   flex-shrink: 0;
+  position: relative;
 
-  &:hover {
+  // A finger's worth to tap around the small circle, it sits in the card's corner with nothing else near
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -.625rem;
+  }
+
+  @include hover {
     background: var(--accent);
     color: var(--bg);
     box-shadow: var(--box-shadow);
@@ -134,7 +142,12 @@
   cursor: pointer;
   transition: all 0.2s;
 
-  &:hover {
+  @include touch {
+    min-height: 2.25rem;
+    font-size: .8rem;
+  }
+
+  @include hover {
     color: var(--font-primary);
   }
 

@@ -7,6 +7,22 @@ $ease: cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
 
+// Fingers instead of a mouse, so taps need room
+@mixin touch {
+  @media (pointer: coarse) {
+    @content;
+  }
+}
+
+// Only where there's a pointer to hover with, a tap would leave the hover look stuck on
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
 // Frosted see-through panel, same as homepage_plusplus: the background shows through, blurred
 @mixin glass {
   -webkit-backdrop-filter: var(--blur-amount-ui);

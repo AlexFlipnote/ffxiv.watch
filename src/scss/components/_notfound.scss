@@ -24,7 +24,7 @@
     text-decoration: none;
     transition: all 0.2s;
 
-    &:hover {
+    @include hover {
       box-shadow: var(--box-shadow);
     }
   }

@@ -9,6 +9,11 @@
   font-family: inherit;
   font-size: inherit;
   color: var(--font-primary);
+
+  // iOS zooms into a field with text under 16px when it's tapped, and stays zoomed
+  @include touch {
+    font-size: max(1rem, 1em);
+  }
 }
 
 // Our own chevron instead of the browser's, which sits right against the edge whatever the padding
@@ -36,7 +41,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: .75rem 1.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   font-size: 0.85rem;
   color: var(--font-tertiary);
 

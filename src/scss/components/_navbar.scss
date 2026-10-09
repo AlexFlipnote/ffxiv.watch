@@ -1,8 +1,6 @@
 // Frosted navbar, same as the xelA dashboard. On mobile the links slide in from the left, frosted the same way
 @use "../mixins" as *;
 
-$height: 5rem;
-
 @mixin frosted {
   background-color: var(--surface);
   -webkit-backdrop-filter: blur(8px);
@@ -17,7 +15,7 @@ $height: 5rem;
   isolation: isolate;
   box-sizing: border-box;
   width: 100%;
-  height: $height;
+  height: var(--navbar-height);
   display: flex;
   justify-content: center;
   user-select: none;
@@ -68,12 +66,12 @@ $height: 5rem;
     text-decoration: none;
     transition: color .2s, background-color .2s;
 
-    &:hover {
+    @include hover {
       color: var(--font-primary);
     }
 
-    // Set by build.js on links pointing at the current page
-    &[aria-current="page"] {
+    // Set by build.js on links pointing at the current page, or the section it's in
+    &[aria-current] {
       color: var(--accent);
     }
 
@@ -104,7 +102,7 @@ $height: 5rem;
   cursor: pointer;
   transition: background-color .2s;
 
-  &:hover {
+  @include hover {
     background-color: var(--chip-background);
   }
 
@@ -130,7 +128,7 @@ $height: 5rem;
   cursor: pointer;
   transition: color .2s, background-color .2s;
 
-  &:hover {
+  @include hover {
     color: var(--font-primary);
     background-color: var(--chip-background);
   }
@@ -155,6 +153,10 @@ $height: 5rem;
   }
 }
 
+.navbar-backdrop {
+  display: none;
+}
+
 @include mobile {
   // Menu button left, logo centered, theme toggle right. The links are out of the flow in their slide-out panel
   .navbar-inner {
@@ -166,6 +168,16 @@ $height: 5rem;
     gap: .75rem;
   }
 
+  .navbar-title {
+    font-size: 1.25rem;
+    gap: .5rem;
+  }
+
+  .navbar-logo {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
   .navbar-hamburger {
     display: flex;
   }
@@ -174,10 +186,27 @@ $height: 5rem;
     justify-self: end;
   }
 
+  // Dims the page next to the open menu, and takes the tap that closes it so it can't also hit what's under it
+  .navbar-backdrop {
+    display: block;
+    position: fixed;
+    inset: var(--navbar-height) 0 0;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s ease-in-out, visibility 0s linear .25s;
+  }
+
+  .navbar.opened .navbar-backdrop {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .25s ease-in-out, visibility 0s;
+  }
+
   .navbar-links {
     @include frosted;
     position: fixed;
-    top: $height;
+    top: var(--navbar-height);
     bottom: 0;
     left: 0;
     width: 100%;
@@ -194,7 +223,7 @@ $height: 5rem;
       padding: 1rem 1.25rem;
       border-bottom: .05rem solid var(--divider);
 
-      &:hover {
+      @include hover {
         background-color: var(--chip-background);
       }
 
@@ -212,7 +241,8 @@ $height: 5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .navbar-links {
+  .navbar-links,
+  .navbar-backdrop {
     transition: none;
   }
 }
