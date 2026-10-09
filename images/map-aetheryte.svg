@@ -1,0 +1,10 @@
+<!-- The nearest aetheryte: a crystal cut like the logo's hands, a light and a dark half. Its middle is the spot -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32">
+  <!-- Dark outline under everything, so it reads on light and dark parts of the map alike -->
+  <polygon points="12,1.5 19,13 12,30.5 5,13" fill="#082a36" stroke="#082a36" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="12,1.5 19,13 12,30.5 5,13" fill="#0b7fa0"/>
+  <polygon points="12,1.5 12,30.5 5,13" fill="#14bae4"/>
+  <!-- The top facets catching the light -->
+  <polygon points="12,1.5 19,13 12,11" fill="#2fa6c8"/>
+  <polygon points="12,1.5 12,11 5,13" fill="#8fe3ff"/>
+</svg>
