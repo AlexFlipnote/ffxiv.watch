@@ -53,7 +53,7 @@ function guessCactpotRegion() {
 }
 
 /**
- * Hooks up a card the build wrote into the page (see timerCards in build.js).
+ * Hooks up a card the build wrote into the page (see timerCard in src/pages/index.data.js).
  * @param {import("./utils/timers.js").TimerState} timer
  */
 function bindCard(timer) {
