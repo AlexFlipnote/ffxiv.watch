@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          # The whole history, the sitemap's lastmod comes from when each page's data last changed
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
