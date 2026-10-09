@@ -258,6 +258,25 @@
   }
 }
 
+// A vista's text runs up to its map, which is narrower than its half. The text takes the whole row with room kept for
+// the map on its right, so the timer and facts under them stay half and half
+@media (width > 36rem) {
+  .detail-card.vista-card:has(> .map) {
+    grid-template-areas:
+      "top top"
+      "timer facts";
+
+    > .detail-top {
+      padding-right: calc(min(20rem, 50% - .5rem) + 1rem);
+    }
+
+    > .map {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
+}
+
 // An item's page is packed tighter than a vista's: the header with what the item's worth next to it, the recipes
 // under them, then each node with its map down the right. The right column is as wide as the map, so the two line up
 $item-side: min(20rem, 40%);
