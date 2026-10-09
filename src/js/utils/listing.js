@@ -13,6 +13,7 @@ import { setText } from "./tick.js"
  * @property {{ name: string, file: string }[]} expansions From the data's index file
  * @property {string} defaultExpansion `file` to pick on a first visit
  * @property {(file: string) => Promise<object[]>} loadChunk Loads one expansion's entries
+ * @property {(entry: object) => number} idOf The same as the page's rows were keyed with, see listRows in src/render/html.js
  * @property {Record<string, HTMLSelectElement>} selects Filter dropdowns by name, `expansion` gets filled here
  * @property {HTMLInputElement} search
  * @property {HTMLElement} body The table's tbody, with a row for every entry from the build
@@ -118,8 +119,8 @@ function groupRows(state) {
  * @param {ListingOptions} options
  * @returns {(now: number) => void} Redraws the table, call it every tick
  */
-export function listing({ key, expansions, defaultExpansion, loadChunk, selects, search, body, empty, skeleton, mapNote, matches, windowOf, noun }) {
-  // "dawntrail:12" -> its row, until the entry it's for has loaded
+export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, matches, windowOf, noun }) {
+  // "dawntrail:974" -> its row, until the entry it's for has loaded
   const unclaimed = new Map([...body.querySelectorAll("tr[data-key]")].map((tr) => [tr.dataset.key, tr]))
   const keys = new Map()
   const rows = new Map()
@@ -145,7 +146,7 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, selects,
   const loadExpansion = (file) => {
     if (!loaded.has(file)) {
       loaded.set(file, loadChunk(file).then((entries) => {
-        entries.forEach((entry, i) => keys.set(entry, `${file}:${i}`))
+        entries.forEach((entry) => keys.set(entry, `${file}:${idOf(entry)}`))
         return entries
       }))
     }

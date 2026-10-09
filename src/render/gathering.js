@@ -1,5 +1,6 @@
 import {
-  chip, detailTimer, etWindows, expansionOptions, facts, gameText, html, listRow, locationFacts, mapFigure, readData, readExpansions, slug
+  chip, detailTimer, etWindows, expansionOptions, facts, gameText,
+  html, listRow, listRows, locationFacts, mapFigure, readData, readExpansions, slug
 } from "./html.js"
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
@@ -72,9 +73,9 @@ function nodeRow(key, node) {
  */
 export function nodeList() {
   const expansions = readExpansions("gathering")
-  const rows = expansions.flatMap((e) => e.entries.map((node, i) => nodeRow(`${e.file}:${i}`, node)))
+  const rows = listRows(expansions, (node) => node.id, nodeRow)
   const defaultExpansion = expansions.at(-1).file
-  return { rows: html`${rows}`, defaultExpansion, expansionOptions: expansionOptions(expansions, defaultExpansion), sources: DATA_SOURCES }
+  return { rows, defaultExpansion, expansionOptions: expansionOptions(expansions, defaultExpansion), sources: DATA_SOURCES }
 }
 
 /**

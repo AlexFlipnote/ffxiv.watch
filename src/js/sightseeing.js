@@ -11,6 +11,7 @@ const render = listing({
   // A Realm Reborn's are the only ones with times and weather
   defaultExpansion: EXPANSIONS[0].file,
   loadChunk: (file) => import(`./data/sightseeing/${file}.json`).then((m) => m.default),
+  idOf: (vista) => vista.number,
   selects: { expansion: document.getElementById("filter-expansion") },
   search: document.getElementById("search"),
   body: document.getElementById("vistas"),

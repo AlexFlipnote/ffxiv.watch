@@ -1,5 +1,5 @@
 import {
-  chip, detailTimer, etWindows, expansionOptions, facts, gameText, html, listRow, locationFacts, mapFigure, readData, readExpansions, slug
+  chip, detailTimer, etWindows, expansionOptions, facts, gameText, html, listRow, listRows, locationFacts, mapFigure, readData, readExpansions, slug
 } from "./html.js"
 import { ogImage } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
@@ -56,10 +56,10 @@ const vistaRow = (key, vista) => listRow(key, vista, html`
  */
 export function vistaList() {
   const expansions = readExpansions("sightseeing")
-  const rows = expansions.flatMap((e) => e.entries.map((vista, i) => vistaRow(`${e.file}:${i}`, vista)))
+  const rows = listRows(expansions, (vista) => vista.number, vistaRow)
   const defaultExpansion = expansions[0].file
   return {
-    rows: html`${rows}`,
+    rows,
     defaultExpansion,
     expansionOptions: expansionOptions(expansions, defaultExpansion),
     sources: ["js/data/sightseeing.json", "js/data/sightseeing"]

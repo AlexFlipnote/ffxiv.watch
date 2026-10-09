@@ -156,7 +156,7 @@ export const locationCell = (entry) => html`
 
 /**
  * A table row, matched up with its entry by data-key when listing.js loads the data.
- * @param {string} key "dawntrail:12", the expansion's file and the entry's place in it
+ * @param {string} key "dawntrail:974", see listRows
  * @param {{ zone: string, spot?: string, map?: object }} entry
  * @param {Html} content The first column, placeLine is added after it
  * @returns {Html}
@@ -165,6 +165,24 @@ export const listRow = (key, entry, content) => html`
 <tr data-key="${key}">
   <td>${content}${placeLine(entry)}</td>${locationCell(entry)}
 </tr>`
+
+/**
+ * Every entry's row, keyed by the expansion's file and the entry's id, not its place in the list: a page cached from
+ * before a deploy still finds the right rows in the newer data. listing.js keys the data with the same `idOf`.
+ * @param {{ file: string, entries: object[] }[]} expansions From readExpansions
+ * @param {(entry: object) => number} idOf
+ * @param {(key: string, entry: object) => Html} row
+ * @returns {Html}
+ */
+export function listRows(expansions, idOf, row) {
+  const seen = new Set()
+  return html`${expansions.flatMap((e) => e.entries.map((entry) => {
+    const key = `${e.file}:${idOf(entry)}`
+    if (seen.has(key)) throw new Error(`js/data: two entries are both "${key}"`)
+    seen.add(key)
+    return row(key, entry)
+  }))}`
+}
 
 /**
  * The map with a circle when it's an area or a pin when it's an exact spot, and the nearest aetheryte, placed like
