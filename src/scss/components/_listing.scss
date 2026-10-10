@@ -9,6 +9,10 @@
 // The page's heading and a line on what it has, outside the boxes like a detail page's header
 .listing-intro {
   margin-bottom: 1.25rem;
+
+  @include mobile {
+    text-align: center;
+  }
 }
 
 .listing-title {
@@ -24,6 +28,12 @@
   margin: .375rem 0 0;
   color: var(--font-secondary);
   line-height: 1.5;
+
+  // The title says enough on a phone, where the list matters more than the room this takes. Still there for search
+  // engines, and the page's description says the same
+  @include mobile {
+    display: none;
+  }
 }
 
 // No card around the page, it costs too much width on a phone. The filters and each group are boxes instead
