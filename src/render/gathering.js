@@ -1,6 +1,6 @@
 import {
-  chip, detailTimer, etWindows, expansionOptions, facts, gameText,
-  html, listRow, listRows, locationFacts, mapFigure, readData, readExpansions, slug
+  chip, collectableChip, detailTimer, etWindows, expansionOptions, facts, gameText,
+  html, listRow, listRows, locationFacts, mapFigure, readData, readExpansions, slug, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
@@ -27,8 +27,6 @@ const itemLink = (item) => itemUrl(item) ? html`<a href="${itemUrl(item)}">${ite
 const itemIcon = (item, info) => html`<img class="item-icon" src="/images/items/${info.icon}.webp" alt="${item.name} icon" width="44" height="44">`
 
 const stars = (item) => item.stars && html`<span class="gathering-stars">${"★".repeat(item.stars)}</span>`
-
-const collectable = (item) => item.collectable && chip("C", "gathering-collectable", "Collectable")
 
 /**
  * @param {object} node
@@ -59,8 +57,16 @@ function perceptionChip(node) {
  * @returns {import("./html.js").Html}
  */
 function nodeRow(key, node) {
-  const items = node.items.map((item) => html`
-    <span class="gathering-item"${item.perception && html` title="Needs ${item.perception} Perception"`}><strong>${itemLink(item)}</strong>${stars(item)}${collectable(item)}</span>`)
+  // The stars and collectable mark are part of the link, so its line runs under them too
+  const items = node.items.map((item) => {
+    const title = item.perception && html` title="Needs ${item.perception} Perception"`
+    const content = html`<strong>${item.name}</strong>${stars(item)}${collectableChip(item)}`
+    return itemUrl(item)
+      ? html`
+    <a class="gathering-item" href="${itemUrl(item)}"${title}>${content}</a>`
+      : html`
+    <span class="gathering-item"${title}>${content}</span>`
+  })
 
   return listRow(key, node, html`
     <div class="gathering-items">${items}</div>
@@ -169,7 +175,7 @@ function whereText(item, spots) {
  * @returns {import("./html.js").Html}
  */
 const spotTags = ({ node, item, expansion }) => html`
-  <div class="tags">${nodeTags(node)}${item.collectable && chip("Collectable", "chip-accent")}${item.perception && chip(`${item.perception} Perception`)}${chip(expansion)}</div>`
+  <div class="tags">${nodeTags(node)}${item.collectable && chip(html`${xivIcon("collectable")} Collectable`, "chip-accent")}${item.perception && chip(`${item.perception} Perception`)}${chip(expansion)}</div>`
 
 /**
  * One node an item is at: its timer and where it is, next to the map.

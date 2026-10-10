@@ -118,6 +118,24 @@ export function gameText(text) {
 export const chip = (text, className = "", title = null) =>
   html`<span class="${`chip ${className}`.trim()}"${title ? html` title="${title}"` : ""}>${text}</span>`
 
+// The game's own icons, in fonts/ffxiv-icons.woff2
+const XIV_ICONS = { collectable: "\ue03d" }
+
+/**
+ * @param {keyof XIV_ICONS} name
+ * @param {string} [label] What a screen reader says, left out when the text next to it says it already
+ * @returns {Html}
+ */
+export const xivIcon = (name, label = null) => label
+  ? html`<span class="xiv" role="img" aria-label="${label}">${XIV_ICONS[name]}</span>`
+  : html`<span class="xiv" aria-hidden="true">${XIV_ICONS[name]}</span>`
+
+/**
+ * @param {{ collectable?: boolean }} entry An item or fish
+ * @returns {Html | undefined} The game's collectable mark, as a chip
+ */
+export const collectableChip = (entry) => entry.collectable && chip(xivIcon("collectable", "Collectable"), "gathering-collectable", "Collectable")
+
 /**
  * @param {number} minutes ET minutes into the day
  * @returns {string} "08:00"

@@ -105,7 +105,8 @@
   }
 }
 
-// All preloaded in partials/head.html
+// All preloaded in partials/head.html. Subset with pyftsubset to the characters the site uses (printable ASCII,
+// · × é î – — “ ” ›), keeping tnum for tabular-nums, anything else falls back to system-ui
 @font-face {
   font-family: "Google Sans Flex";
   src: url("/fonts/google-sans-flex-400.woff2") format("woff2");
@@ -118,6 +119,22 @@
   src: url("/fonts/google-sans-flex-700.woff2") format("woff2");
   font-weight: 700;
   font-display: optional;
+}
+
+// Square Enix's icon font from the Lodestone, subset to the icons render/html.js's xivIcon uses. Not preloaded, only
+// the gathering and fishing pages use it
+@font-face {
+  font-family: "FFXIV Icons";
+  src: url("/fonts/ffxiv-icons.woff2") format("woff2");
+  font-display: block;
+}
+
+.xiv {
+  font-family: "FFXIV Icons";
+  font-style: normal;
+  font-weight: normal;
+  // Its tall line metrics would make whatever it's in, like a chip, taller
+  line-height: 0;
 }
 
 body {

@@ -1,3 +1,5 @@
+@use "../mixins" as *;
+
 // Far enough apart, when they wrap onto more lines, for a finger to tap the right one
 .gathering-items {
   display: flex;
@@ -9,6 +11,19 @@
   display: inline-flex;
   align-items: center;
   gap: .25rem;
+}
+
+// The link has the stars and collectable mark in it too. An underline skips the mark and the gaps, so the line is
+// drawn under the content instead, above the padding listing-table gives links to tap on a phone
+.listing-table a.gathering-item {
+  --line: color-mix(in srgb, currentColor 35%, transparent);
+  display: inline-flex;
+  text-decoration: none;
+  background: linear-gradient(var(--line), var(--line)) bottom / 100% 1px no-repeat content-box;
+
+  @include hover {
+    --line: currentColor;
+  }
 }
 
 // An item's icon, next to the title on its page. The game's is 80px, so it's shown at 44 to stay sharp on a phone
