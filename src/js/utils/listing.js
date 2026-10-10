@@ -141,7 +141,12 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
       const tr = unclaimed.get(keys.get(entry))
       if (!tr) return null
       unclaimed.delete(keys.get(entry))
-      if (entry.map) tr.querySelector(".location").addEventListener("click", () => openMap({ ...entry, note: mapNote?.(entry) }))
+      if (entry.map) {
+        tr.querySelector(".location").addEventListener("click", (e) => {
+          e.preventDefault()
+          openMap({ ...entry, note: mapNote?.(entry) })
+        })
+      }
       rows.set(entry, { tr })
     }
     return rows.get(entry)

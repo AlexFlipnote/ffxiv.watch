@@ -160,17 +160,21 @@ export const placeLine = (entry) =>
   html`<div class="place-line"><span class="zone">${entry.zone}</span>${entry.spot ? html`<span class="spot">${entry.spot}</span>` : ""}</div>`
 
 /**
- * The location column: zone and spot, the whole cell opens the map (listing.js hooks up the click).
- * @param {{ zone: string, spot?: string, map?: object }} entry
+ * The location column: zone and spot. The whole cell links to the map, listing.js opens it in the map dialog instead.
+ * @param {{ zone: string, spot?: string, map?: { image: string } }} entry
  * @returns {Html}
  */
-export const locationCell = (entry) => html`
-  <td class="location-cell">
-    <button class="location" title="Show on map"${entry.map ? "" : raw(" disabled")}>
+export const locationCell = (entry) => {
+  const place = html`
       <span class="map-icon" aria-hidden="true"></span>
-      <span class="place"><span class="zone">${entry.zone}</span><span class="spot">${entry.spot ?? ""}</span></span>
-    </button>
+      <span class="place"><span class="zone">${entry.zone}</span><span class="spot">${entry.spot ?? ""}</span></span>`
+  return html`
+  <td class="location-cell">
+    ${entry.map
+    ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" title="Show on map">${place}</a>`
+    : html`<span class="location">${place}</span>`}
   </td>`
+}
 
 /**
  * A table row, matched up with its entry by data-key when listing.js loads the data.
@@ -205,7 +209,7 @@ export function listRows(expansions, idOf, row) {
 /**
  * The map with a circle when it's an area or a pin when it's an exact spot, and the nearest aetheryte, placed like
  * js/utils/mapModal.js does.
- * It's a button that opens the same map bigger in the map dialog, with what data-map holds (see js/utils/mapZoom.js).
+ * It links to the map image, js/utils/mapZoom.js opens it bigger in the map dialog instead, with what data-map holds.
  * @param {{ zone: string, spot?: string, map: import("../js/utils/map.js").MapSpot, aetheryte?: { name: string, x: number, y: number } }} entry
  * @param {string} [note] Shown under the coordinates in the dialog
  * @returns {Html}
@@ -216,15 +220,14 @@ export function mapFigure(entry, note) {
   const size = `${(2 * mapSize(map, map.radius)).toFixed(2)}%`
   const data = JSON.stringify({ zone: entry.zone, spot: entry.spot, map, aetheryte: entry.aetheryte, note })
 
-  // Spans, as a button can't hold a div
   return html`
-    <button class="map map-zoom" data-map="${data}" title="Show a bigger map">
+    <a class="map map-zoom" href="/images/maps/${map.image}.webp" data-map="${data}" title="Show a bigger map">
       <img src="/images/maps/${map.image}.webp" alt="Map of ${entry.zone}, marked at ${coordinates(map)}" width="1024" height="1024" loading="lazy">
       ${map.radius
     ? html`<span class="map-area" style="${at(map)}; width: ${size}; height: ${size}"></span>`
     : html`<span class="map-pin" style="${at(map)}"></span>`}
       ${entry.aetheryte ? html`<span class="map-aetheryte" style="${at(entry.aetheryte)}"></span>` : ""}
-    </button>`
+    </a>`
 }
 
 /**

@@ -162,7 +162,8 @@
   }
 
   // The names link to their own pages: the row's color, with a faint underline to show they can be clicked
-  td a {
+  // :where() so leaving out the map links doesn't outrank a.gathering-item's own line (see _gathering.scss)
+  td a:where(:not(.location)) {
     color: inherit;
     text-decoration: underline;
     text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
@@ -362,7 +363,7 @@ $tab-flare: .5rem;
   color: var(--font-tertiary);
   font: inherit;
   text-align: left;
-  cursor: pointer;
+  text-decoration: none;
 
   &::after {
     content: "";
@@ -380,7 +381,7 @@ $tab-flare: .5rem;
     }
   }
 
-  &:not(:disabled) {
+  &[href] {
     @include hover {
       color: var(--accent);
 
@@ -390,9 +391,7 @@ $tab-flare: .5rem;
     }
   }
 
-  &:disabled {
-    cursor: default;
-
+  &:not([href]) {
     .map-icon {
       display: none;
     }
