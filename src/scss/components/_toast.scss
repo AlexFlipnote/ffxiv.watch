@@ -3,7 +3,7 @@
 // Short messages in the lower right, see js/utils/toast.js. Newest at the bottom
 .toasts {
   position: fixed;
-  right: 1rem;
+  right: calc(1rem + env(safe-area-inset-right));
   bottom: calc(1rem + env(safe-area-inset-bottom));
   z-index: 60;
   display: flex;
@@ -14,7 +14,7 @@
   transition: bottom .2s $ease;
 
   @include mobile {
-    left: 1rem;
+    left: calc(1rem + env(safe-area-inset-left));
     max-width: none;
 
     // Across the width on a phone, so above the button back to the top while it's there
