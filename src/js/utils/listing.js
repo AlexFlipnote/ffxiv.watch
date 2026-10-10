@@ -1,5 +1,5 @@
 import { openMap } from "./mapModal.js"
-import { formatCountdown, setTime } from "./timers.js"
+import { formatCountdown, setTime } from "./time.js"
 import { setText } from "./tick.js"
 
 /**

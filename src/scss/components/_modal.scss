@@ -74,4 +74,9 @@
     padding-left: 1.25rem;
     line-height: 1.6;
   }
+
+  // An item can run over more lines, like an Ocean Fishing departure's two routes
+  li {
+    white-space: pre-line;
+  }
 }

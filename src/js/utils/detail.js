@@ -1,4 +1,4 @@
-import { formatCountdown, setTime } from "./timers.js"
+import { formatCountdown, setTime } from "./time.js"
 import { setText } from "./tick.js"
 
 // How many windows the list under the countdown shows, the current one included

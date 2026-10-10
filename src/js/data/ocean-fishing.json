@@ -1,0 +1,939 @@
+{
+  "routes": {
+    "1": {
+      "destination": "The Northern Strait of Merlthor",
+      "stops": [
+        {
+          "place": "The Southern Strait of Merlthor",
+          "time": "Sunset"
+        },
+        {
+          "place": "Galadion Bay",
+          "time": "Night"
+        },
+        {
+          "place": "The Northern Strait of Merlthor",
+          "time": "Day"
+        }
+      ]
+    },
+    "2": {
+      "destination": "The Northern Strait of Merlthor",
+      "stops": [
+        {
+          "place": "The Southern Strait of Merlthor",
+          "time": "Night"
+        },
+        {
+          "place": "Galadion Bay",
+          "time": "Day"
+        },
+        {
+          "place": "The Northern Strait of Merlthor",
+          "time": "Sunset"
+        }
+      ]
+    },
+    "3": {
+      "destination": "The Northern Strait of Merlthor",
+      "stops": [
+        {
+          "place": "The Southern Strait of Merlthor",
+          "time": "Day"
+        },
+        {
+          "place": "Galadion Bay",
+          "time": "Sunset"
+        },
+        {
+          "place": "The Northern Strait of Merlthor",
+          "time": "Night"
+        }
+      ]
+    },
+    "4": {
+      "destination": "Rhotano Sea",
+      "stops": [
+        {
+          "place": "Galadion Bay",
+          "time": "Sunset"
+        },
+        {
+          "place": "The Southern Strait of Merlthor",
+          "time": "Night"
+        },
+        {
+          "place": "Rhotano Sea",
+          "time": "Day"
+        }
+      ]
+    },
+    "5": {
+      "destination": "Rhotano Sea",
+      "stops": [
+        {
+          "place": "Galadion Bay",
+          "time": "Night"
+        },
+        {
+          "place": "The Southern Strait of Merlthor",
+          "time": "Day"
+        },
+        {
+          "place": "Rhotano Sea",
+          "time": "Sunset"
+        }
+      ]
+    },
+    "6": {
+      "destination": "Rhotano Sea",
+      "stops": [
+        {
+          "place": "Galadion Bay",
+          "time": "Day"
+        },
+        {
+          "place": "The Southern Strait of Merlthor",
+          "time": "Sunset"
+        },
+        {
+          "place": "Rhotano Sea",
+          "time": "Night"
+        }
+      ]
+    },
+    "7": {
+      "destination": "The Bloodbrine Sea",
+      "stops": [
+        {
+          "place": "The Cieldalaes",
+          "time": "Sunset"
+        },
+        {
+          "place": "The Northern Strait of Merlthor",
+          "time": "Night"
+        },
+        {
+          "place": "The Bloodbrine Sea",
+          "time": "Day"
+        }
+      ]
+    },
+    "8": {
+      "destination": "The Bloodbrine Sea",
+      "stops": [
+        {
+          "place": "The Cieldalaes",
+          "time": "Night"
+        },
+        {
+          "place": "The Northern Strait of Merlthor",
+          "time": "Day"
+        },
+        {
+          "place": "The Bloodbrine Sea",
+          "time": "Sunset"
+        }
+      ]
+    },
+    "9": {
+      "destination": "The Bloodbrine Sea",
+      "stops": [
+        {
+          "place": "The Cieldalaes",
+          "time": "Day"
+        },
+        {
+          "place": "The Northern Strait of Merlthor",
+          "time": "Sunset"
+        },
+        {
+          "place": "The Bloodbrine Sea",
+          "time": "Night"
+        }
+      ]
+    },
+    "10": {
+      "destination": "The Rothlyt Sound",
+      "stops": [
+        {
+          "place": "The Cieldalaes",
+          "time": "Sunset"
+        },
+        {
+          "place": "Rhotano Sea",
+          "time": "Night"
+        },
+        {
+          "place": "The Rothlyt Sound",
+          "time": "Day"
+        }
+      ]
+    },
+    "11": {
+      "destination": "The Rothlyt Sound",
+      "stops": [
+        {
+          "place": "The Cieldalaes",
+          "time": "Night"
+        },
+        {
+          "place": "Rhotano Sea",
+          "time": "Day"
+        },
+        {
+          "place": "The Rothlyt Sound",
+          "time": "Sunset"
+        }
+      ]
+    },
+    "12": {
+      "destination": "The Rothlyt Sound",
+      "stops": [
+        {
+          "place": "The Cieldalaes",
+          "time": "Day"
+        },
+        {
+          "place": "Rhotano Sea",
+          "time": "Sunset"
+        },
+        {
+          "place": "The Rothlyt Sound",
+          "time": "Night"
+        }
+      ]
+    },
+    "13": {
+      "destination": "The One River",
+      "stops": [
+        {
+          "place": "The Sirensong Sea",
+          "time": "Sunset"
+        },
+        {
+          "place": "Kugane",
+          "time": "Night"
+        },
+        {
+          "place": "The One River",
+          "time": "Day"
+        }
+      ]
+    },
+    "14": {
+      "destination": "The One River",
+      "stops": [
+        {
+          "place": "The Sirensong Sea",
+          "time": "Night"
+        },
+        {
+          "place": "Kugane",
+          "time": "Day"
+        },
+        {
+          "place": "The One River",
+          "time": "Sunset"
+        }
+      ]
+    },
+    "15": {
+      "destination": "The One River",
+      "stops": [
+        {
+          "place": "The Sirensong Sea",
+          "time": "Day"
+        },
+        {
+          "place": "Kugane",
+          "time": "Sunset"
+        },
+        {
+          "place": "The One River",
+          "time": "Night"
+        }
+      ]
+    },
+    "16": {
+      "destination": "The Ruby Sea",
+      "stops": [
+        {
+          "place": "The Sirensong Sea",
+          "time": "Sunset"
+        },
+        {
+          "place": "Kugane",
+          "time": "Night"
+        },
+        {
+          "place": "The Ruby Sea",
+          "time": "Day"
+        }
+      ]
+    },
+    "17": {
+      "destination": "The Ruby Sea",
+      "stops": [
+        {
+          "place": "The Sirensong Sea",
+          "time": "Night"
+        },
+        {
+          "place": "Kugane",
+          "time": "Day"
+        },
+        {
+          "place": "The Ruby Sea",
+          "time": "Sunset"
+        }
+      ]
+    },
+    "18": {
+      "destination": "The Ruby Sea",
+      "stops": [
+        {
+          "place": "The Sirensong Sea",
+          "time": "Day"
+        },
+        {
+          "place": "Kugane",
+          "time": "Sunset"
+        },
+        {
+          "place": "The Ruby Sea",
+          "time": "Night"
+        }
+      ]
+    },
+    "19": {
+      "destination": "Thavnair",
+      "stops": [
+        {
+          "place": "Unnamed Island",
+          "time": "Sunset"
+        },
+        {
+          "place": "The Sirensong Sea",
+          "time": "Night"
+        },
+        {
+          "place": "Thavnair",
+          "time": "Day"
+        }
+      ]
+    },
+    "20": {
+      "destination": "Thavnair",
+      "stops": [
+        {
+          "place": "Unnamed Island",
+          "time": "Night"
+        },
+        {
+          "place": "The Sirensong Sea",
+          "time": "Day"
+        },
+        {
+          "place": "Thavnair",
+          "time": "Sunset"
+        }
+      ]
+    },
+    "21": {
+      "destination": "Thavnair",
+      "stops": [
+        {
+          "place": "Unnamed Island",
+          "time": "Day"
+        },
+        {
+          "place": "The Sirensong Sea",
+          "time": "Sunset"
+        },
+        {
+          "place": "Thavnair",
+          "time": "Night"
+        }
+      ]
+    }
+  },
+  "schedule": [
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 6,
+      "ruby": 18
+    },
+    {
+      "indigo": 7,
+      "ruby": 19
+    },
+    {
+      "indigo": 10,
+      "ruby": 13
+    },
+    {
+      "indigo": 1,
+      "ruby": 19
+    },
+    {
+      "indigo": 4,
+      "ruby": 16
+    },
+    {
+      "indigo": 8,
+      "ruby": 20
+    },
+    {
+      "indigo": 11,
+      "ruby": 14
+    },
+    {
+      "indigo": 2,
+      "ruby": 20
+    },
+    {
+      "indigo": 5,
+      "ruby": 17
+    },
+    {
+      "indigo": 9,
+      "ruby": 21
+    },
+    {
+      "indigo": 12,
+      "ruby": 15
+    },
+    {
+      "indigo": 3,
+      "ruby": 21
+    }
+  ]
+}

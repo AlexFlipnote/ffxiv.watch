@@ -1,7 +1,8 @@
 import "./utils/navbar.js"
 import { applyDayNight } from "./utils/daynight.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
-import { formatCountdown, getAllTimerStates, gmtOffset, setTime } from "./utils/timers.js"
+import { formatCountdown, gmtOffset, setTime } from "./utils/time.js"
+import { getAllTimerStates } from "./utils/timers.js"
 import { everyTick, setText } from "./utils/tick.js"
 
 const container = document.getElementById("timers")
@@ -18,6 +19,8 @@ const modalList = document.getElementById("modal-list")
 // Timer id -> its card's elements
 const cards = new Map()
 let openId = null
+// What the modal shows, see renderModal
+let renderedModal = null
 
 // Timer id -> picked region id
 const REGIONS_KEY = "regions"
@@ -90,8 +93,8 @@ function updateCard(els, timer, now) {
   setText(els.countdown, formatCountdown(timer.target - now))
   setText(els.targetLabel, `${timer.targetLabel}:`)
   setTime(els.targetDate, new Date(timer.target), new Date(now))
-  if (els.sideCol.hidden !== !timer.nextPhase) els.sideCol.hidden = !timer.nextPhase
-  setText(els.next, timer.nextPhase ? `Next: ${timer.nextPhase}` : "")
+  if (els.sideCol.hidden !== !timer.note) els.sideCol.hidden = !timer.note
+  setText(els.next, timer.note ?? "")
   els.regionBtns.forEach((btn, i) => {
     const pressed = String(timer.regions[i].id === timer.region)
     if (btn.getAttribute("aria-pressed") !== pressed) btn.setAttribute("aria-pressed", pressed)
@@ -99,11 +102,14 @@ function updateCard(els, timer, now) {
 }
 
 /**
- * Fills the details modal, only when its content changed (like the housing phase flipping while open).
+ * Fills the details modal, only when its content changed (like the housing phase flipping while open, or Ocean
+ * Fishing's voyages dropping the day from their times at midnight).
  * @param {import("./utils/timers.js").TimerState} timer
  */
 function renderModal(timer) {
-  if (modalTitle.textContent === timer.title) return
+  const key = `${timer.title}|${timer.list.join("|")}`
+  if (renderedModal === key) return
+  renderedModal = key
 
   modalTitle.textContent = timer.title
   modalInfo.textContent = timer.info
@@ -124,7 +130,7 @@ function openModal(id) {
 
 modal.addEventListener("close", () => {
   openId = null
-  modalTitle.textContent = ""
+  renderedModal = null
 })
 
 document.getElementById("modal-close").addEventListener("click", () => modal.close())
