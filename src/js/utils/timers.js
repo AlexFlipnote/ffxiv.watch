@@ -73,7 +73,7 @@ export const TIMERS = [
   {
     kind: "recurring",
     id: "daily",
-    name: "Daily reset",
+    name: "Daily Reset",
     every: DAY,
     offset: 15 * HOUR,
     info: "At this time, the following resets:",
