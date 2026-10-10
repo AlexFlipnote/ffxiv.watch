@@ -1,3 +1,4 @@
+import { clockNow } from "./clock.js"
 import { openMap } from "./mapModal.js"
 import { formatCountdown, setTime } from "./time.js"
 import { setText } from "./tick.js"
@@ -212,7 +213,7 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, se
     ready = true
     skeleton.hidden = true
     layout = null
-    render(Date.now())
+    render(clockNow())
   }
 
   /**
