@@ -21,7 +21,7 @@ function timerCard(timer) {
 <div class="${timer.small ? "timer small" : "timer"}" data-id="${timer.id}">
   <div class="timer-header">
     <h2 class="title">${timer.name}</h2>
-    <button class="info-btn" title="Details">i</button>
+    <button class="info-btn" title="Details" aria-label="Details about ${timer.name}">i</button>
   </div>${regions}
   <div class="timer-body">
     <div>
