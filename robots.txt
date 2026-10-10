@@ -1,4 +1,40 @@
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: linkdexbot
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: rogerbot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SEOkicks
+Disallow: /
+
 User-agent: serpstatbot
+Disallow: /
+
+User-agent: spbot
 Disallow: /
 
 User-agent: *
