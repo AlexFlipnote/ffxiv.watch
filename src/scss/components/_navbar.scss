@@ -1,4 +1,4 @@
-// Frosted navbar, same as the xelA dashboard. On mobile the links slide in from the left, frosted the same way
+// Frosted navbar, same as the xelA dashboard. On mobile the links unroll down from it, frosted the same way
 @use "../mixins" as *;
 
 @mixin frosted {
@@ -109,7 +109,30 @@
   svg {
     width: 1.625rem;
     height: 1.625rem;
-    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  line {
+    transform-box: view-box;
+    transform-origin: 12px 12px;
+    transition: transform .3s $ease, opacity .2s;
+  }
+
+  .navbar.opened & {
+    .burger-top {
+      transform: rotate(45deg) translateY(5px);
+    }
+
+    .burger-middle {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .burger-bottom {
+      transform: rotate(-45deg) translateY(-5px);
+    }
   }
 }
 
@@ -158,7 +181,7 @@
 }
 
 @include mobile {
-  // Menu button left, logo centered, theme toggle right. The links are out of the flow in their slide-out panel
+  // Menu button left, logo centered, theme toggle right. The links are out of the flow in their dropdown panel
   .navbar-inner {
     box-sizing: border-box;
     width: 100%;
@@ -207,21 +230,23 @@
     @include frosted;
     position: fixed;
     top: var(--navbar-height);
-    bottom: 0;
     left: 0;
-    width: 100%;
-    max-width: 17.5rem;
+    right: 0;
     height: auto;
+    max-height: calc(100dvh - var(--navbar-height));
     flex-direction: column;
     align-items: stretch;
     overflow-y: auto;
-    transform: translateX(-100%);
+    clip-path: inset(0 0 100% 0);
     visibility: hidden;
-    transition: transform .25s ease-in-out, visibility 0s linear .25s;
+    transition: clip-path .3s $ease, visibility 0s linear .3s;
 
     a {
       padding: 1rem 1.25rem;
       border-bottom: .05rem solid var(--divider);
+      opacity: 0;
+      transform: translateY(-.5rem);
+      transition: color .2s, background-color .2s, opacity .2s, transform .3s $ease;
 
       @include hover {
         background-color: var(--chip-background);
@@ -234,15 +259,29 @@
   }
 
   .navbar.opened .navbar-links {
-    transform: translateX(0);
+    clip-path: inset(0 0 -1rem);
     visibility: visible;
-    transition: transform .25s ease-in-out, visibility 0s;
+    transition: clip-path .3s $ease, visibility 0s;
+
+    a {
+      opacity: 1;
+      transform: none;
+    }
+
+    @for $i from 1 through 6 {
+      a:nth-child(#{$i}) {
+        transition-delay: 0s, 0s, #{$i * 40ms}, #{$i * 40ms};
+      }
+    }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .navbar-links,
-  .navbar-backdrop {
-    transition: none;
+  .navbar-links a,
+  .navbar.opened .navbar-links a,
+  .navbar-backdrop,
+  .navbar-hamburger line {
+    transition: none !important;
   }
 }

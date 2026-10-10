@@ -43,10 +43,10 @@
   color-scheme: dark;
 
   // Shorter on phones, where it stays on screen as the page scrolls, see _navbar.scss
-  --navbar-height: 5rem;
+  --navbar-height: 4.5rem;
 
   @include mobile {
-    --navbar-height: 3.75rem;
+    --navbar-height: 3.5rem;
   }
 
   // --bg and --glow change with the Eorzea time, see _daynight.scss
