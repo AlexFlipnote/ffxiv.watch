@@ -1,3 +1,4 @@
+import "./haptics.js"
 import "./theme.js"
 
 const navbar = document.querySelector(".navbar")
