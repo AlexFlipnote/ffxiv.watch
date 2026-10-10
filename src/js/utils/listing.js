@@ -124,6 +124,13 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
     if ([...select.options].some((o) => o.value === value)) select.value = value
   }
   search.value = params.get("q") ?? ""
+
+  const filters = search.closest(".filters")
+  const toggle = filters.querySelector(".filters-toggle")
+  toggle?.addEventListener("click", () => {
+    const open = filters.classList.toggle("filters-open")
+    toggle.setAttribute("aria-expanded", open)
+  })
   if (hideDone) hideDone.checked = params.get("hide") === "completed"
 
   const loadExpansion = (file) => {
@@ -164,6 +171,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
     }
     if (hideDone?.checked) url.searchParams.set("hide", "completed")
     else url.searchParams.delete("hide")
+    toggle?.classList.toggle("filters-set", Object.entries(selects).some(([name, select]) => select.value !== defaults[name]) || !!hideDone?.checked)
     const query = search.value.trim()
     if (query) url.searchParams.set("q", query)
     else url.searchParams.delete("q")
@@ -295,20 +303,21 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
     if (e.key === "Enter") search.blur()
   })
   applyFilters()
-  filtersButton(search.closest(".filters"))
+  topButton(filters)
 
   return render
 }
 
 /**
- * A button in the corner that takes you back up to the filters, shown once they're scrolled out of sight.
+ * A button in the lower left that takes you back up to the search and filters, shown once they're scrolled out of
+ * sight. Left, so the toasts on the right don't cover it.
  * @param {HTMLElement} filters
  */
-function filtersButton(filters) {
+function topButton(filters) {
   const button = document.createElement("button")
-  button.className = "filters-button"
+  button.className = "top-button"
   button.hidden = true
-  button.setAttribute("aria-label", "Back to the filters")
+  button.setAttribute("aria-label", "Back to the top")
   button.title = button.getAttribute("aria-label")
   document.body.append(button)
 

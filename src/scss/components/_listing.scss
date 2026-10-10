@@ -30,14 +30,79 @@
 .listing .filters {
   @include glass;
   padding: .75rem;
-  // Clear of the sticky navbar when the filters button scrolls back to them
+  // Clear of the sticky navbar when the top button scrolls back to them
   scroll-margin-top: calc(var(--navbar-height) + 1.25rem);
 }
 
-// Round button in the corner once the filters are scrolled away, takes you back up to them, see js/utils/listing.js
-.filters-button {
+// Next to the search on a phone, where the dropdowns fold away behind it. A dot while any filter isn't the default
+.filters-toggle {
+  display: none;
+  position: relative;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  padding: 0;
+  border: none;
+  border-radius: .5rem;
+  background: var(--chip-background);
+  color: var(--font-secondary);
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+
+  &::before {
+    content: "";
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: currentColor;
+    mask: url("/images/filter.svg") center / contain no-repeat;
+  }
+
+  &.filters-set::after {
+    content: "";
+    position: absolute;
+    top: .375rem;
+    right: .375rem;
+    width: .4rem;
+    height: .4rem;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  &[aria-expanded="true"] {
+    color: var(--accent);
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+  }
+}
+
+// Folding needs the script, without it everything shows
+@include mobile {
+  .js .filters {
+    column-gap: .75rem;
+
+    .filters-toggle {
+      display: flex;
+    }
+
+    // The row to itself with the toggle, the dropdowns go under it
+    .search {
+      flex-basis: calc(100% - 3.5rem);
+      min-width: 0;
+    }
+
+    &:not(.filters-open) > label {
+      display: none;
+    }
+  }
+}
+
+// Round button in the lower left once the search is scrolled away, takes you back up to it, see js/utils/listing.js
+.top-button {
   position: fixed;
-  right: 1rem;
+  left: calc(1rem + env(safe-area-inset-left));
   bottom: calc(1rem + env(safe-area-inset-bottom));
   z-index: 50;
   display: flex;
@@ -67,7 +132,9 @@
     width: 1.5rem;
     height: 1.5rem;
     background-color: currentColor;
-    mask: url("/images/filter.svg") center / contain no-repeat;
+    mask: url("/images/arrow.svg") center / contain no-repeat;
+    // The arrow points left
+    transform: rotate(90deg);
   }
 
   &:focus-visible {
@@ -77,8 +144,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .filters-button,
-  .filters-button[hidden] {
+  .top-button,
+  .top-button[hidden] {
     transition: none;
   }
 }

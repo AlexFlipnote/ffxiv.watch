@@ -13,14 +13,14 @@
   max-width: min(22rem, calc(100vw - 2rem));
   transition: bottom .2s $ease;
 
-  // Above the button back to the filters while it's there
-  body:has(.filters-button:not([hidden])) & {
-    bottom: calc(4.75rem + env(safe-area-inset-bottom));
-  }
-
   @include mobile {
     left: 1rem;
     max-width: none;
+
+    // Across the width on a phone, so above the button back to the top while it's there
+    body:has(.top-button:not([hidden])) & {
+      bottom: calc(4.75rem + env(safe-area-inset-bottom));
+    }
   }
 }
 
