@@ -1,0 +1,1 @@
+import{b as o}from"./chunk-H7AJGITX.js";var r=1440*o;function E(e,n){let s=Math.floor(n/r)*r,t=null;for(let c of[s-r,s,s+r])for(let[i,_]of e.times){let f=c+i*o,a=f+_*o;a>n&&(!t||f<t.start)&&(t={start:f,end:a})}return{...t,open:t.start<=n}}export{E as a};
