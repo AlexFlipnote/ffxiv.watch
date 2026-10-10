@@ -60,6 +60,7 @@ document.getElementById("map-close").addEventListener("click", () => modal.close
 
 // Clicking the backdrop closes it
 modal.addEventListener("click", (e) => {
+  if (e.target !== modal) return
   const rect = modal.getBoundingClientRect()
   if (e.clientY < rect.top || e.clientY > rect.bottom || e.clientX < rect.left || e.clientX > rect.right) {
     modal.close()
