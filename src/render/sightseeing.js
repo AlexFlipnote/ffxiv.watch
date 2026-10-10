@@ -1,5 +1,6 @@
 import {
-  chip, detailTimer, etWindows, expansionOptions, facts, gameText, html, listRow, listRows, locationFacts, mapFigure, readData, readExpansions, slug
+  chip, detailTimer, etWindows, expansionOptions, facts, gameText, html, listRow, listRows, locationFacts, mapFigure, pager, readData,
+  readExpansions, slug
 } from "./html.js"
 import { ogImage } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
@@ -71,19 +72,23 @@ export function vistaList() {
 }
 
 /**
- * @param {object} vista
- * @param {string} direction "prev", "next"
- * @returns {import("./html.js").Html}
+ * @param {{ vista: object, expansion: { name: string } } | undefined} entry
+ * @param {{ name: string }} current The page's expansion
+ * @returns {{ url: string, text: string } | null} Where the pager links to, the expansion's name when it's another one's
  */
-const pagerLink = (vista, direction) => vista
-  ? html`<a class="detail-${direction}-link" href="${vistaUrl(vista)}" rel="${direction}">${vistaNumber(vista)} ${vistaName(vista)}</a>`
-  : html`<span></span>`
+const pagerTo = (entry, current) => entry && {
+  url: vistaUrl(entry.vista),
+  text: `${entry.expansion === current ? "" : `${entry.expansion.name} `}${vistaNumber(entry.vista)} ${vistaName(entry.vista)}`
+}
 
 /** @returns {object[]} A page per vista, see [vista].data.js */
 export function vistaPages() {
   const text = readData("sightseeing-text.json")
 
-  return readExpansions("sightseeing").flatMap((expansion) => expansion.entries.map((vista, i, all) => {
+  // One list, so the pager carries on into the next expansion
+  const all = readExpansions("sightseeing").flatMap((expansion) => expansion.entries.map((vista) => ({ vista, expansion })))
+
+  return all.map(({ vista, expansion }, i) => {
     const name = vistaName(vista)
     const timed = vista.times || vista.weather
     const when = vistaWhen(vista)
@@ -109,11 +114,8 @@ export function vistaPages() {
   ${detailTimer(timed ? JSON.stringify({ zone: vista.zone, times: vista.times, weather: vista.weather }) : null, when)}
   ${facts([["Emote", vista.emote], ...locationFacts(vista), ["Level", vista.level], ["Unlocked by", vista.unlock && unlockText(vista.unlock)]])}
 </section>
-<nav class="detail-pager" aria-label="Previous and next vista">
-  ${pagerLink(all[i - 1], "prev")}
-  ${pagerLink(all[i + 1], "next")}
-</nav>`,
-      sources: ["js/data/sightseeing-text.json", `js/data/sightseeing/${expansion.file}.json`]
+${pager(pagerTo(all[i - 1], expansion), pagerTo(all[i + 1], expansion), "Previous and next vista")}`,
+      sources: ["js/data/sightseeing-text.json", ...new Set([all[i - 1], all[i], all[i + 1]].filter(Boolean).map((e) => `js/data/sightseeing/${e.expansion.file}.json`))]
     }
-  }))
+  })
 }

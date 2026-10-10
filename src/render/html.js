@@ -231,6 +231,20 @@ export function mapFigure(entry, note) {
 }
 
 /**
+ * Links to the entries before and after this one, at the bottom of a detail page.
+ * @param {{ url: string, text: string } | null} prev
+ * @param {{ url: string, text: string } | null} next
+ * @param {string} label "Previous and next vista"
+ * @returns {Html}
+ */
+export const pager = (prev, next, label) => html`
+<nav class="detail-pager" aria-label="${label}">
+  ${[[prev, "prev"], [next, "next"]].map(([to, direction]) => to
+    ? html`<a class="detail-${direction}-link" href="${to.url}" rel="${direction}">${to.text}</a>`
+    : html`<span></span>`)}
+</nav>`
+
+/**
  * The facts under a detail page's timer.
  * @param {[string, any][]} rows [label, value], rows without a value are left out
  * @returns {Html}

@@ -1,6 +1,6 @@
 import {
   chip, collectableChip, detailTimer, etWindows, expansionOptions, facts, gameText,
-  html, listRow, listRows, locationFacts, mapFigure, readData, readExpansions, slug, xivIcon
+  html, listRow, listRows, locationFacts, mapFigure, pager, readData, readExpansions, slug, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
@@ -286,13 +286,18 @@ export function itemPages() {
     }
   }
 
-  return [...items.values()].sort((a, b) => a.item.name.localeCompare(b.item.name)).map(({ item, spots }) => ({
+  // In the list's order, by zone, so the pager goes to the items nearby
+  const all = [...items.values()]
+  const pagerTo = (entry) => entry && { url: itemUrl(entry.item), text: entry.item.name }
+
+  return all.map(({ item, spots }, i) => ({
     slug: slug(item.name),
     name: item.name,
     ...itemSeo(item, spots, info[item.id]),
     ...ogIcon(info[item.id].icon, item.name),
-    content: html`${itemIntro(item, info[item.id], spots)}${itemUses(info[item.id])}${spots.map((spot) => nodeCard(spot, spots.length > 1))}`,
-    // Only the expansions it's in, so a patch's new nodes don't change every item's lastmod
-    sources: ["js/data/gathering-items.json", ...new Set(spots.map((s) => `js/data/gathering/${s.file}.json`))]
+    content: html`${itemIntro(item, info[item.id], spots)}${itemUses(info[item.id])}${spots.map((spot) => nodeCard(spot, spots.length > 1))}
+${pager(pagerTo(all[i - 1]), pagerTo(all[i + 1]), "Previous and next item")}`,
+    // Only the expansions it and its pager links are in, so a patch's new nodes don't change every item's lastmod
+    sources: ["js/data/gathering-items.json", ...new Set([all[i - 1], all[i], all[i + 1]].filter(Boolean).flatMap((e) => e.spots.map((s) => `js/data/gathering/${s.file}.json`)))]
   }))
 }
