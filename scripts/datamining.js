@@ -193,6 +193,39 @@ export async function saveIcons(ids) {
 }
 
 /**
+ * @returns {Map<string, Set<string>>} Zone name -> the weather that can happen there, from src/js/data/weather.json
+ */
+export const zoneWeather = () => new Map(JSON.parse(fs.readFileSync(path.join(DATA, "weather.json"), "utf8"))
+  .map((z) => [z.name, new Set(z.weather.map(([name]) => name))]))
+
+/**
+ * Throws on times or weather the pages can't use, before anything is written.
+ * @param {{ name: string, zone: string, times?: [number, number][], weather?: string[], previousWeather?: string[] }[]} list
+ */
+function validate(list) {
+  const zones = zoneWeather()
+  const problems = []
+
+  for (const entry of list) {
+    const problem = (text) => problems.push(`${entry.name ?? entry.id} (${entry.zone}): ${text}`)
+    if (entry.times) {
+      if (!entry.times.length) problem("empty times, leave it out for any time")
+      for (const [start, duration] of entry.times) {
+        if (!(start >= 0 && start < 1440 && duration > 0 && duration <= 1440)) problem(`bad time [${start}, ${duration}]`)
+      }
+    }
+    for (const key of ["weather", "previousWeather"]) {
+      if (!entry[key]) continue
+      if (!entry[key].length) problem(`empty ${key}, leave it out for any weather`)
+      if (!zones.has(entry.zone)) problem(`${key} set, but the zone isn't in weather.json`)
+      else for (const w of entry[key]) if (!zones.get(entry.zone).has(w)) problem(`${key} "${w}" never happens there`)
+    }
+  }
+
+  if (problems.length) throw new Error(`${problems.length} bad entries:\n${problems.join("\n")}`)
+}
+
+/**
  * Writes src/js/data/<name>/<expansion>.json per expansion (the page loads each when picked),
  * and src/js/data/<name>.json listing them.
  * @param {string} name "gathering", "sightseeing"
@@ -200,6 +233,7 @@ export async function saveIcons(ids) {
  * @param {{ expansion: string, entry: object }[]} entries In the order to write them
  */
 export function writeExpansions(name, exVersions, entries) {
+  validate(entries.map((e) => e.entry))
   const dir = path.join(DATA, name)
   fs.rmSync(dir, { recursive: true, force: true })
   fs.mkdirSync(dir, { recursive: true })
