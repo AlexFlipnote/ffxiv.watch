@@ -29,6 +29,8 @@ const ALL = ""
 // An option with no value, "Any" or "All", in the URL
 const ANY = "any"
 const STATE_ORDER = { open: 0, later: 1, always: 2, none: 3 }
+// Laying out a row is what's slow, a search for "a" matches nearly every fish. The soonest are the ones that matter
+const MAX_ROWS = 100
 
 /**
  * @param {Window} w
@@ -216,7 +218,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     const sorted = [...shown].sort((a, b) => compareWindows(windows.get(a), windows.get(b)))
 
     const runs = []
-    for (const entry of sorted) {
+    for (const entry of sorted.slice(0, MAX_ROWS)) {
       const w = windows.get(entry)
       const key = groupKey(w)
       if (runs.at(-1)?.key !== key) runs.push({ key, w, state: stateOf(w), entries: [] })
@@ -248,8 +250,11 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
       body.replaceChildren(...trs)
     }
 
-    setText(empty, `No ${noun} match.`)
-    if (empty.hidden !== shown.length > 0) empty.hidden = shown.length > 0
+    setText(empty, shown.length
+      ? `Showing the ${MAX_ROWS} soonest of ${shown.length.toLocaleString("en-US")} ${noun}, search or filter to narrow them down.`
+      : `No ${noun} match.`)
+    const hide = shown.length > 0 && shown.length <= MAX_ROWS
+    if (empty.hidden !== hide) empty.hidden = hide
     // Nothing coming up rechecks once a minute
     return { runs, until: Math.min(until, now + 60 * 1000) }
   }
