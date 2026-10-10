@@ -21,7 +21,8 @@ import { setText } from "./tick.js"
  * @property {HTMLElement} empty Shown when nothing matches
  * @property {HTMLElement} skeleton Shown in place of the table until the first data is in
  * @property {(entry: object) => string | (string | Node)[]} [mapNote] Shown under the coordinates in the map dialog
- * @property {(entry: object, query: string) => boolean} matches `query` is lowercase, "" for none
+ * @property {(entry: object) => boolean} [filter] The page's own dropdowns, skipped while searching
+ * @property {(entry: object, query: string) => boolean} matches The search, `query` is lowercase and never ""
  * @property {(entry: object, now: number) => Window} windowOf Called every tick, so keep it cheap
  * @property {string} noun "nodes", "vistas"
  */
@@ -120,7 +121,7 @@ function groupRows(state) {
  * @param {ListingOptions} options
  * @returns {(now: number) => void} Redraws the table, call it every tick
  */
-export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, matches, windowOf, noun }) {
+export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, filter, matches, windowOf, noun }) {
   // "dawntrail:974" -> its row, until the entry it's for has loaded
   const unclaimed = new Map([...body.querySelectorAll("tr[data-key]")].map((tr) => [tr.dataset.key, tr]))
   const keys = new Map()
@@ -196,9 +197,11 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, se
     save(key, Object.fromEntries(Object.entries(selects).map(([name, select]) => [name, select.value])))
     saveSearch()
     const query = search.value.trim().toLowerCase()
+    // A search looks through everything, the dropdowns are off until it's cleared
+    for (const select of Object.values(selects)) select.disabled = !!query
 
     const current = ++generation
-    const files = selects.expansion.value === ALL ? expansions.map((e) => e.file) : [selects.expansion.value]
+    const files = query || selects.expansion.value === ALL ? expansions.map((e) => e.file) : [selects.expansion.value]
     let entries
     try {
       entries = (await Promise.all(files.map(loadExpansion))).flat()
@@ -209,7 +212,8 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, se
     }
     if (current !== generation) return
 
-    shown = entries.filter((entry) => rowOf(entry) && matches(entry, query))
+    shown = entries.filter((entry) => rowOf(entry)
+      && (query ? matches(entry, query) : !filter || filter(entry)))
     ready = true
     skeleton.hidden = true
     layout = null

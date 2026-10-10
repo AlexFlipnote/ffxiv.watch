@@ -25,8 +25,9 @@ const render = listing({
     " emote here"
   ],
 
-  matches: (vista, query) => !query || [vista.name, vista.zone, vista.spot, vista.emote, ...(vista.weather ?? []), vista.unlock?.quest]
-    .some((text) => text?.toLowerCase().includes(query)),
+  matches: (vista, query) => [
+    `#${String(vista.number).padStart(3, "0")}`, vista.name, vista.zone, vista.spot, vista.emote, ...(vista.weather ?? []), vista.unlock?.quest
+  ].some((text) => text?.toLowerCase().includes(query)),
   windowOf: cachedVistaWindows()
 })
 

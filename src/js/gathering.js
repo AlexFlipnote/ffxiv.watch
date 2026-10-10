@@ -26,13 +26,10 @@ const render = listing({
 
   mapNote: (node) => node.items.map((i) => i.name).join(", "),
 
-  matches: (node, query) => {
-    if (jobSelect.value !== ALL && node.job !== jobSelect.value) return false
-    if (typeSelect.value === TIMED ? !node.times : typeSelect.value !== ALL && node.type !== typeSelect.value) return false
-    if (!query) return true
-    return [node.zone, node.spot, node.folklore, node.quest, ...node.items.map((i) => i.name)]
-      .some((text) => text?.toLowerCase().includes(query))
-  },
+  filter: (node) => (jobSelect.value === ALL || node.job === jobSelect.value)
+    && (typeSelect.value === TIMED ? !!node.times : typeSelect.value === ALL || node.type === typeSelect.value),
+  matches: (node, query) => [node.zone, node.spot, node.type, node.job, node.folklore, node.quest, ...node.items.map((i) => i.name)]
+    .some((text) => text?.toLowerCase().includes(query)),
   // Regular and Diadem nodes have no times, they're always up
   windowOf: (node, now) => node.times ? nextWindow(node, now) : { always: true }
 })
