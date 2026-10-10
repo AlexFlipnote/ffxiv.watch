@@ -1,4 +1,5 @@
 import { clockNow } from "./clock.js"
+import { CELEBRATE_MS } from "./done.js"
 import { openMap } from "./mapModal.js"
 import { formatCountdown, setTime } from "./time.js"
 import { setText } from "./tick.js"
@@ -15,6 +16,7 @@ import { setText } from "./tick.js"
  * @property {(entry: object) => number} idOf The same as the page's rows were keyed with, see listRows in src/render/html.js
  * @property {Record<string, HTMLSelectElement>} selects Filter dropdowns by name, also their names in the URL
  * @property {HTMLInputElement} search
+ * @property {HTMLInputElement} [hideDone] Leaves out the rows marked done, see js/utils/done.js
  * @property {HTMLElement} body The table's tbody, with a row for every entry from the build
  * @property {HTMLElement} empty Shown when nothing matches
  * @property {HTMLElement} skeleton Shown in place of the table until the first data is in
@@ -99,7 +101,7 @@ function groupRows(state) {
  * @param {ListingOptions} options
  * @returns {(now: number) => void} Redraws the table, call it every tick
  */
-export function listing({ expansions, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, filter, matches, windowOf, noun }) {
+export function listing({ expansions, loadChunk, idOf, selects, search, hideDone, body, empty, skeleton, mapNote, filter, matches, windowOf, noun }) {
   // "dawntrail:974" -> its row, until the entry it's for has loaded
   const unclaimed = new Map([...body.querySelectorAll("tr[data-key]")].map((tr) => [tr.dataset.key, tr]))
   const keys = new Map()
@@ -123,6 +125,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     if ([...select.options].some((o) => o.value === value)) select.value = value
   }
   search.value = params.get("q") ?? ""
+  if (hideDone) hideDone.checked = params.get("hide") === "completed"
 
   const loadExpansion = (file) => {
     if (!loaded.has(file)) {
@@ -160,6 +163,8 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
       if (select.value === defaults[name]) url.searchParams.delete(name)
       else url.searchParams.set(name, select.value || ANY)
     }
+    if (hideDone?.checked) url.searchParams.set("hide", "completed")
+    else url.searchParams.delete("hide")
     const query = search.value.trim()
     if (query) url.searchParams.set("q", query)
     else url.searchParams.delete("q")
@@ -200,6 +205,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     if (current !== generation) return
 
     shown = entries.filter((entry) => rowOf(entry)
+      && !(hideDone?.checked && rowOf(entry).tr.hasAttribute("data-done"))
       && (query ? matches(entry, query) : !filter || filter(entry)))
     ready = true
     skeleton.hidden = true
@@ -280,6 +286,11 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
 
   for (const select of Object.values(selects)) select.addEventListener("change", applyFilters)
   search.addEventListener("input", applyFilters)
+  hideDone?.addEventListener("change", applyFilters)
+  // After the check's sparks, which a row hidden at once would take with it
+  document.addEventListener("done-change", () => {
+    if (hideDone?.checked) setTimeout(applyFilters, CELEBRATE_MS)
+  })
   // It filters as you type, so Enter only has to put the phone's keyboard away
   search.addEventListener("keydown", (e) => {
     if (e.key === "Enter") search.blur()

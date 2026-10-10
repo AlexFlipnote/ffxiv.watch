@@ -82,6 +82,21 @@
   }
 }
 
+.hide-done {
+  cursor: pointer;
+
+  input {
+    margin: 0;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+
+  // It needs the done checks, which need the script
+  :root:not(.js) & {
+    display: none;
+  }
+}
+
 .table-empty {
   margin: 1rem 0 0;
   color: var(--font-tertiary);

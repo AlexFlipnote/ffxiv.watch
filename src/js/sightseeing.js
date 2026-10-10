@@ -12,6 +12,7 @@ const render = listing({
   idOf: (vista) => vista.number,
   selects: { expansion: document.getElementById("filter-expansion") },
   search: document.getElementById("search"),
+  hideDone: document.getElementById("hide-done"),
   body: document.getElementById("vistas"),
   empty: document.getElementById("vistas-empty"),
   skeleton: document.getElementById("listing-skeleton"),

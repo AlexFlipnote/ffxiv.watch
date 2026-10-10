@@ -22,6 +22,7 @@
         <div class="filters">
           <input class="input search" id="search" type="search" enterkeyhint="search" placeholder="Vista, zone, emote or weather" aria-label="Search">
           <label>Expansion <select class="select" id="filter-expansion">{{{ expansionOptions }}}</select></label>
+          <label class="hide-done"><input type="checkbox" id="hide-done"> Hide completed</label>
         </div>
         <x-html str="partials/listing-skeleton.html"/>
         <table class="table listing-table">
