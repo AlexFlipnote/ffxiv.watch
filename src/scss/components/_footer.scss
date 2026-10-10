@@ -1,0 +1,39 @@
+@use "../mixins" as *;
+
+// Under every page's content, pushed to the bottom when the page is short
+.footer {
+  @include content-column;
+  box-sizing: border-box;
+  margin-top: auto;
+  padding: 1.5rem 0 calc(1rem + env(safe-area-inset-bottom));
+  text-align: center;
+  text-wrap: balance;
+  font-size: .75rem;
+  color: var(--font-tertiary);
+
+  a {
+    white-space: nowrap;
+    color: var(--font-secondary);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    text-underline-offset: .2em;
+    transition: color .2s, text-decoration-color .2s;
+
+    @include hover {
+      color: var(--accent);
+      text-decoration-color: currentColor;
+    }
+  }
+}
+
+// The navbar's diamond, smaller
+.footer-dot {
+  display: inline-block;
+  width: .4rem;
+  height: .4rem;
+  margin: 0 .5rem;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  background-color: var(--font-tertiary);
+}
