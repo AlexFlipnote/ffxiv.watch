@@ -1,0 +1,111 @@
+@use "../mixins" as *;
+
+// Short messages in the lower right, see js/utils/toast.js. Newest at the bottom
+.toasts {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .5rem;
+  max-width: min(22rem, calc(100vw - 2rem));
+  transition: bottom .2s $ease;
+
+  // Above the button back to the filters while it's there
+  body:has(.filters-button:not([hidden])) & {
+    bottom: calc(4.75rem + env(safe-area-inset-bottom));
+  }
+
+  @include mobile {
+    left: 1rem;
+    max-width: none;
+  }
+}
+
+// Tinted by its tone, over the solid surface so the page doesn't show through
+.toast {
+  --tone: var(--accent);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .625rem .5rem .625rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--tone) 35%, transparent);
+  border-radius: .5rem;
+  background-color: color-mix(in srgb, var(--tone) 14%, var(--surface-solid));
+  box-shadow: var(--box-shadow);
+  color: var(--font-primary);
+  font-size: .9rem;
+  animation: toastIn .25s $ease;
+  transition: opacity .2s, transform .2s $ease;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.toast-warning {
+  --tone: var(--warning);
+}
+
+.toast-success {
+  --tone: var(--success);
+}
+
+.toast-text {
+  flex: 1;
+}
+
+.toast-close {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: none;
+  border-radius: .375rem;
+  background: none;
+  color: var(--font-tertiary);
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+
+  svg {
+    width: .875rem;
+    height: .875rem;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+  }
+
+  @include hover {
+    color: var(--font-primary);
+    background-color: var(--chip-background);
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--tone);
+  }
+}
+
+.toast-leaving {
+  opacity: 0;
+  transform: translateX(1rem);
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(.75rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toasts,
+  .toast {
+    animation: none;
+    transition: none;
+  }
+}
