@@ -12,9 +12,7 @@ const ALL = ""
 const TIMED = "Timed"
 
 const render = listing({
-  key: "gathering-filters",
   expansions: EXPANSIONS,
-  defaultExpansion: EXPANSIONS.at(-1).file,
   loadChunk: (file) => import(`./data/gathering/${file}.json`).then((m) => m.default),
   idOf: (node) => node.id,
   selects: { job: jobSelect, expansion: document.getElementById("filter-expansion"), type: typeSelect },

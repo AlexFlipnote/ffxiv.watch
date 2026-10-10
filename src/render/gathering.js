@@ -75,7 +75,7 @@ function nodeRow(key, node) {
 
 /**
  * @returns {{ rows: import("./html.js").Html, defaultExpansion: string, sources: string[] }} Every node's row,
- * for /gathering/, and the expansion a first visit shows (see js/gathering.js), its data is preloaded
+ * for /gathering/, and the expansion a first visit shows, its data is preloaded
  */
 export function nodeList() {
   const expansions = readExpansions("gathering")

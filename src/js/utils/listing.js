@@ -10,12 +10,10 @@ import { setText } from "./tick.js"
 
 /**
  * @typedef {object} ListingOptions
- * @property {string} key localStorage key for the filters
  * @property {{ name: string, file: string }[]} expansions From the data's index file
- * @property {string} defaultExpansion `file` to pick on a first visit
  * @property {(file: string) => Promise<object[]>} loadChunk Loads one expansion's entries
  * @property {(entry: object) => number} idOf The same as the page's rows were keyed with, see listRows in src/render/html.js
- * @property {Record<string, HTMLSelectElement>} selects Filter dropdowns by name, `expansion` gets filled here
+ * @property {Record<string, HTMLSelectElement>} selects Filter dropdowns by name, also their names in the URL
  * @property {HTMLInputElement} search
  * @property {HTMLElement} body The table's tbody, with a row for every entry from the build
  * @property {HTMLElement} empty Shown when nothing matches
@@ -28,31 +26,9 @@ import { setText } from "./tick.js"
  */
 
 const ALL = ""
+// An option with no value, "Any" or "All", in the URL
+const ANY = "any"
 const STATE_ORDER = { open: 0, later: 1, always: 2, none: 3 }
-
-/**
- * @param {string} key
- * @returns {object} The saved value, {} when there's none or storage is blocked
- */
-function loadSaved(key) {
-  try {
-    return JSON.parse(localStorage.getItem(key)) ?? {}
-  } catch {
-    return {}
-  }
-}
-
-/**
- * @param {string} key
- * @param {object} value
- */
-function save(key, value) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value))
-  } catch {
-    // Storage blocked, just not saved
-  }
-}
 
 /**
  * @param {Window} w
@@ -121,7 +97,7 @@ function groupRows(state) {
  * @param {ListingOptions} options
  * @returns {(now: number) => void} Redraws the table, call it every tick
  */
-export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, filter, matches, windowOf, noun }) {
+export function listing({ expansions, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, filter, matches, windowOf, noun }) {
   // "dawntrail:974" -> its row, until the entry it's for has loaded
   const unclaimed = new Map([...body.querySelectorAll("tr[data-key]")].map((tr) => [tr.dataset.key, tr]))
   const keys = new Map()
@@ -137,13 +113,14 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, se
   // Nothing is drawn until the first data is in, the rows from the build stay hidden until then (see _listing.scss)
   let ready = false
 
-  // The expansion select's options are in the page already, see expansionOptions in src/render/html.js
-  const saved = { expansion: defaultExpansion, ...loadSaved(key) }
+  // The filters are only in the URL, so a link shares them and a fresh visit starts from what the page picks
+  const defaults = Object.fromEntries(Object.entries(selects).map(([name, select]) => [name, select.value]))
+  const params = new URLSearchParams(location.search)
   for (const [name, select] of Object.entries(selects)) {
-    if ([...select.options].some((o) => o.value === saved[name])) select.value = saved[name]
+    const value = params.get(name) === ANY ? ALL : params.get(name)
+    if ([...select.options].some((o) => o.value === value)) select.value = value
   }
-  // In the URL, so going back to the page brings it back, while a fresh visit starts without one
-  search.value = new URLSearchParams(location.search).get("q") ?? ""
+  search.value = params.get("q") ?? ""
 
   const loadExpansion = (file) => {
     if (!loaded.has(file)) {
@@ -170,8 +147,12 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, se
     return rows.get(entry)
   }
 
-  function saveSearch() {
+  function saveUrl() {
     const url = new URL(location.href)
+    for (const [name, select] of Object.entries(selects)) {
+      if (select.value === defaults[name]) url.searchParams.delete(name)
+      else url.searchParams.set(name, select.value || ANY)
+    }
     const query = search.value.trim()
     if (query) url.searchParams.set("q", query)
     else url.searchParams.delete("q")
@@ -194,8 +175,7 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, se
   }
 
   async function applyFilters() {
-    save(key, Object.fromEntries(Object.entries(selects).map(([name, select]) => [name, select.value])))
-    saveSearch()
+    saveUrl()
     const query = search.value.trim().toLowerCase()
     // A search looks through everything, the dropdowns are off until it's cleared
     for (const select of Object.values(selects)) select.disabled = !!query

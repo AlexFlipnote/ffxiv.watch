@@ -55,11 +55,12 @@ const vistaRow = (key, vista) => listRow(key, vista, html`
 
 /**
  * @returns {{ rows: import("./html.js").Html, defaultExpansion: string, sources: string[] }} Every vista's row, for
- * /sightseeing/, and the expansion a first visit shows (see js/sightseeing.js), its data is preloaded
+ * /sightseeing/, and the expansion a first visit shows, its data is preloaded
  */
 export function vistaList() {
   const expansions = readExpansions("sightseeing")
   const rows = listRows(expansions, (vista) => vista.number, vistaRow)
+  // A Realm Reborn's are the only ones with times and weather
   const defaultExpansion = expansions[0].file
   return {
     rows,
