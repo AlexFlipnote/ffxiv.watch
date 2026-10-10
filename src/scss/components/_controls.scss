@@ -131,6 +131,15 @@
   cursor: pointer;
   transition: color .2s, background-color .2s, border-color .2s, transform .15s $ease;
 
+  // A finger's worth to tap, past the box without changing how it looks. Less to the right.
+  @include touch {
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -.75rem -.375rem -.75rem -.75rem;
+    }
+  }
+
   // Held down it squeezes in, and pops when it's let go
   &:active {
     transform: scale(.85);

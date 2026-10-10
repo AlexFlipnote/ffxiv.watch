@@ -87,13 +87,19 @@
   }
 }
 
-// Same round button as the theme toggle, the icon keeps its own size
+// Same round button as the theme toggle, the icon keeps its own size. A finger's worth on a touch screen
 .navbar-hamburger {
   display: none;
   align-items: center;
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
+
+  @include touch {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
   padding: 0;
   border: none;
   border-radius: 50%;
@@ -143,6 +149,12 @@
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
+
+  @include touch {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
   padding: 0;
   border: none;
   border-radius: 50%;
