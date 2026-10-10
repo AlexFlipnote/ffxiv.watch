@@ -517,7 +517,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f1-00",
@@ -550,7 +551,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f1-00",
@@ -580,7 +582,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f2-00",
@@ -613,7 +616,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f3-01",
@@ -646,7 +650,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f3-01",
@@ -679,7 +684,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f4-00",
@@ -709,7 +715,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f4-00",
@@ -742,7 +749,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f4-00",
@@ -775,7 +783,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f4-00",
@@ -808,7 +817,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f5-00",
@@ -841,7 +851,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f5-00",
@@ -874,7 +885,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f5-00",
@@ -907,7 +919,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f6-00",
@@ -937,7 +950,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f6-00",
@@ -970,7 +984,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f6-00",
@@ -1000,7 +1015,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "s1f6-00",
@@ -1034,7 +1050,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1t1-00",
@@ -1068,7 +1085,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1t2-00",
@@ -1096,7 +1114,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f1-00",
@@ -1129,7 +1148,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f1-00",
@@ -1162,7 +1182,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f1-00",
@@ -1195,7 +1216,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f1-00",
@@ -1225,7 +1247,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f2-00",
@@ -1255,7 +1278,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f3-00",
@@ -1288,7 +1312,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f3-00",
@@ -1318,7 +1343,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f3-00",
@@ -1351,7 +1377,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f3-00",
@@ -1384,7 +1411,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f4-00",
@@ -1417,7 +1445,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f4-00",
@@ -1447,7 +1476,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "f1f4-00",
@@ -1480,7 +1510,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f1-00",
@@ -1513,7 +1544,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f1-00",
@@ -1543,7 +1575,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f2-00",
@@ -1576,7 +1609,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f2-00",
@@ -1609,7 +1643,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f3-00",
@@ -1642,7 +1677,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f3-00",
@@ -1672,7 +1708,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f3-00",
@@ -1702,7 +1739,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f4-01",
@@ -1735,7 +1773,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f4-01",
@@ -1765,7 +1804,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f4-01",
@@ -1798,7 +1838,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f4-01",
@@ -1828,7 +1869,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f4-01",
@@ -1861,7 +1903,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f5-00",
@@ -1894,7 +1937,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f5-00",
@@ -1927,7 +1971,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f5-00",
@@ -1957,7 +2002,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f5-00",
@@ -1987,7 +2033,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "w1f5-00",
@@ -2020,7 +2067,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "r1f1-00",
@@ -2050,7 +2098,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "r1f1-00",
@@ -2083,7 +2132,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "r1f1-00",
@@ -2116,7 +2166,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "r1f1-00",
@@ -2149,7 +2200,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "r1f1-00",
@@ -2182,7 +2234,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "r1f1-00",
@@ -2215,7 +2268,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "r1f1-00",
@@ -2248,7 +2302,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "r1f1-00",
@@ -2281,7 +2336,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "r1f1-00",
@@ -2311,7 +2367,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "l1f1-01",
@@ -2344,7 +2401,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "l1f1-01",
@@ -2377,7 +2435,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "l1f1-01",
@@ -2410,7 +2469,8 @@
       "quest": "A Sight to Behold",
       "after": [
         "Sylph-management"
-      ]
+      ],
+      "vistas": 20
     },
     "map": {
       "image": "l1f1-01",

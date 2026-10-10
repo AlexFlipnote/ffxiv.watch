@@ -45,18 +45,21 @@ async function main() {
     after: [0, 1, 2].map((i) => quest[q[`PreviousQuest[${i}]`]]?.Name).filter(Boolean)
   })
 
+  // "A Sight to Behold" also needs those first vistas logged, which the Quest sheet doesn't say
+  const initialVistas = adventures.filter((a) => a.IsInitial === "True").length
+
   /**
    * A Realm Reborn's first 20 are there from the start, the rest need "A Sight to Behold". Heavensward's only need
    * the level. From Stormblood on, each range of Adventure ids has its own quest.
    * @param {Record<string, string>} adventure
    * @param {string} expansion
-   * @returns {{ quest: string, after: string[] } | null}
+   * @returns {{ quest: string, after: string[], vistas?: number } | null}
    */
   function unlockOf(adventure, expansion) {
     const id = +adventure["#"]
     const phase = phases.find((p) => id >= +p.AdventureBegin && id <= +p.AdventureEnd)
     if (phase) return unlockBy(quest[phase.Quest])
-    if (expansion === exVersions[0].Name && adventure.IsInitial !== "True") return unlockBy(SIGHT_TO_BEHOLD)
+    if (expansion === exVersions[0].Name && adventure.IsInitial !== "True") return { ...unlockBy(SIGHT_TO_BEHOLD), vistas: initialVistas }
     return null
   }
 

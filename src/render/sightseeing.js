@@ -15,10 +15,13 @@ const vistaUrl = (vista) => `/sightseeing/${slug(vistaName(vista))}/`
 const vistaNumber = (vista) => `#${String(vista.number).padStart(3, "0")}`
 
 /**
- * @param {{ quest: string, after: string[] }} unlock
+ * @param {{ quest: string, after: string[], vistas?: number }} unlock
  * @returns {string} "Sights of the First, which needs A and B first"
  */
-const unlockText = (unlock) => `${unlock.quest}${unlock.after.length ? `, which needs ${unlock.after.join(" and ")} first` : ""}`
+function unlockText(unlock) {
+  const needs = [...unlock.after, unlock.vistas && `vistas #001 to ${vistaNumber({ number: unlock.vistas })}`].filter(Boolean)
+  return `${unlock.quest}${needs.length ? `, which needs ${needs.join(" and ")} first` : ""}`
+}
 
 /**
  * @param {object} vista
@@ -28,7 +31,7 @@ const vistaTags = (vista) => [
   chip(vista.emote),
   ...(vista.weather ?? []).map((w) => chip(w, "chip-accent")),
   vista.level && chip(`Lv. ${vista.level}`),
-  vista.unlock && chip(`Needs ${vista.unlock.quest}`, "chip-warning", `Unlocked by the quest ${unlockText(vista.unlock)}`)
+  vista.unlock && chip(`Quest: ${vista.unlock.quest}`, "chip-warning", `Unlocked by the quest ${unlockText(vista.unlock)}`)
 ]
 
 /**
