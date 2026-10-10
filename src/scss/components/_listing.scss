@@ -458,6 +458,10 @@ $tab-flare: .5rem;
     }
   }
 
+  &[href]:active::after {
+    background: var(--chip-background);
+  }
+
   &[href] {
     @include hover {
       color: var(--accent);

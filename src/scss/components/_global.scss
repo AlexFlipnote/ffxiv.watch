@@ -182,6 +182,22 @@ a {
   color: var(--accent);
 }
 
+// No grey flash on a tap, and no waiting to see if it's a double tap to zoom, pinching still zooms
+a,
+button,
+label,
+select,
+input {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+// Pressed in while held, like an app's buttons
+:where(.backlink, .detail-prev-link, .detail-next-link, .info-btn, .region-btn, .navbar-hamburger, .theme-toggle,
+  .filters-toggle, .top-button, .toast-close, .close-btn):active {
+  transform: scale(.94);
+}
+
 .title {
   margin: 0;
   font-size: 1.1rem;
