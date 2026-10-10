@@ -1,6 +1,7 @@
 import "./utils/navbar.js"
 import EXPANSIONS from "./data/sightseeing.json"
 import { applyDayNight } from "./utils/daynight.js"
+import { doneChecks } from "./utils/done.js"
 import { listing } from "./utils/listing.js"
 import { cachedVistaWindows } from "./utils/sightseeing.js"
 import { everyTick } from "./utils/tick.js"
@@ -27,6 +28,8 @@ const render = listing({
   ].some((text) => text?.toLowerCase().includes(query)),
   windowOf: cachedVistaWindows()
 })
+
+doneChecks("vistas")
 
 everyTick((now) => {
   render(now)

@@ -3,6 +3,7 @@ import "./utils/mapZoom.js"
 import "./utils/navbar.js"
 import { applyDayNight } from "./utils/daynight.js"
 import { detailTimers } from "./utils/detail.js"
+import { doneChecks } from "./utils/done.js"
 import { cachedVistaWindows, nextVistaWindow } from "./utils/sightseeing.js"
 import { everyTick } from "./utils/tick.js"
 
@@ -14,6 +15,8 @@ const render = detailTimers((vista) => {
     after: (from) => nextVistaWindow(vista, from)
   }
 })
+
+doneChecks("vistas")
 
 everyTick((now) => {
   render(now)

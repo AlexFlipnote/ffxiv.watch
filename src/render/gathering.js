@@ -1,5 +1,5 @@
 import {
-  chip, collectableChip, detailTimer, etWindows, expansionOptions, facts, gameText,
+  chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText,
   html, listRow, listRows, locationFacts, mapFigure, pager, readData, readExpansions, slug, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
@@ -63,7 +63,7 @@ function nodeRow(key, node) {
     const content = html`<strong>${item.name}</strong>${stars(item)}${collectableChip(item)}`
     return itemUrl(item)
       ? html`
-    <a class="gathering-item" href="${itemUrl(item)}"${title}>${content}</a>`
+    <span class="done-entry">${doneButton(item.id, item.name)}<a class="gathering-item" href="${itemUrl(item)}"${title}>${content}</a></span>`
       : html`
     <span class="gathering-item"${title}>${content}</span>`
   })
@@ -241,7 +241,7 @@ const itemIntro = (item, info, spots) => html`
       ${itemIcon(item, info)}
       <div>
         <p class="detail-kicker">${info.category} · Item level ${info.level}</p>
-        <h1 class="detail-title">${item.name}${stars(item)}</h1>
+        <div class="detail-title-row"><h1 class="detail-title">${item.name}${stars(item)}</h1>${doneButton(item.id, item.name)}</div>
       </div>
     </div>
     <div class="detail-text">${gameText(info.description)}</div>${spots.length === 1 && spotTags(spots[0])}

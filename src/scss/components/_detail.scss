@@ -66,6 +66,12 @@
   color: var(--font-tertiary);
 }
 
+.detail-title-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
 .detail-title {
   display: flex;
   flex-wrap: wrap;

@@ -1,6 +1,7 @@
 import "./utils/navbar.js"
 import EXPANSIONS from "./data/gathering.json"
 import { applyDayNight } from "./utils/daynight.js"
+import { doneChecks } from "./utils/done.js"
 import { nextWindow } from "./utils/gathering.js"
 import { listing } from "./utils/listing.js"
 import { everyTick } from "./utils/tick.js"
@@ -31,6 +32,8 @@ const render = listing({
   // Regular and Diadem nodes have no times, they're always up
   windowOf: (node, now) => node.times ? nextWindow(node, now) : { always: true }
 })
+
+doneChecks("gathering")
 
 everyTick((now) => {
   render(now)

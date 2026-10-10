@@ -559,3 +559,25 @@ $tab-flare: .5rem;
     color: var(--font-primary);
   }
 }
+
+// A name with its done check in front
+.done-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+}
+
+// Faded, back to full on hover so it still reads easily. The fade waits for the check's sparks, which it would dim
+tr[data-done] {
+  > td > * {
+    opacity: .45;
+    transition: opacity .3s .4s;
+  }
+
+  @include hover {
+    > td > * {
+      opacity: 1;
+      transition: opacity .2s;
+    }
+  }
+}

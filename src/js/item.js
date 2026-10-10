@@ -3,6 +3,7 @@ import "./utils/mapZoom.js"
 import "./utils/navbar.js"
 import { applyDayNight } from "./utils/daynight.js"
 import { detailTimers } from "./utils/detail.js"
+import { doneChecks } from "./utils/done.js"
 import { nextWindow } from "./utils/gathering.js"
 import { everyTick } from "./utils/tick.js"
 
@@ -11,6 +12,8 @@ const render = detailTimers((node) => ({
   current: (now) => nextWindow(node, now),
   after: (from) => nextWindow(node, from)
 }))
+
+doneChecks("gathering")
 
 everyTick((now) => {
   render(now)

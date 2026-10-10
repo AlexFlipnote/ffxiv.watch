@@ -1,5 +1,5 @@
 import {
-  chip, detailTimer, etWindows, expansionOptions, facts, gameText, html, listRow, listRows, locationFacts, mapFigure, pager, readData,
+  chip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, html, listRow, listRows, locationFacts, mapFigure, pager, readData,
   readExpansions, slug
 } from "./html.js"
 import { ogImage } from "./og.js"
@@ -14,6 +14,14 @@ const vistaName = (vista) => vista.name.replaceAll("*", "")
 const vistaUrl = (vista) => `/sightseeing/${slug(vistaName(vista))}/`
 
 const vistaNumber = (vista) => `#${String(vista.number).padStart(3, "0")}`
+
+/**
+ * The numbers start over each expansion, so the done checks keep them as this instead.
+ * @param {number} expansion Its place in sightseeing.json
+ * @param {{ number: number }} vista
+ * @returns {number} 112 for Heavensward's #012
+ */
+const vistaId = (expansion, vista) => expansion * 100 + vista.number
 
 /**
  * @param {{ quest: string, after: string[], vistas?: number }} unlock
@@ -46,12 +54,13 @@ function vistaWhen(vista) {
 }
 
 /**
+ * @param {number} id From vistaId
  * @param {string} key See listRow
  * @param {object} vista
  * @returns {import("./html.js").Html}
  */
-const vistaRow = (key, vista) => listRow(key, vista, html`
-    <div class="vista-name"><span class="vista-number">${vistaNumber(vista)}</span><strong><a href="${vistaUrl(vista)}">${vistaName(vista)}</a></strong></div>
+const vistaRow = (id, key, vista) => listRow(key, vista, html`
+    <div class="vista-name">${doneButton(id, vistaName(vista))}<span class="vista-number">${vistaNumber(vista)}</span><strong><a href="${vistaUrl(vista)}">${vistaName(vista)}</a></strong></div>
     <div class="tags">${vistaTags(vista)}</div>`)
 
 /**
@@ -60,7 +69,8 @@ const vistaRow = (key, vista) => listRow(key, vista, html`
  */
 export function vistaList() {
   const expansions = readExpansions("sightseeing")
-  const rows = listRows(expansions, (vista) => vista.number, vistaRow)
+  const index = new Map(expansions.map((e, i) => [e.file, i]))
+  const rows = listRows(expansions, (vista) => vista.number, (key, vista) => vistaRow(vistaId(index.get(key.split(":")[0]), vista), key, vista))
   // A Realm Reborn's are the only ones with times and weather
   const defaultExpansion = expansions[0].file
   return {
@@ -86,9 +96,9 @@ export function vistaPages() {
   const text = readData("sightseeing-text.json")
 
   // One list, so the pager carries on into the next expansion
-  const all = readExpansions("sightseeing").flatMap((expansion) => expansion.entries.map((vista) => ({ vista, expansion })))
+  const all = readExpansions("sightseeing").flatMap((expansion, e) => expansion.entries.map((vista) => ({ vista, expansion, id: vistaId(e, vista) })))
 
-  return all.map(({ vista, expansion }, i) => {
+  return all.map(({ vista, expansion, id }, i) => {
     const name = vistaName(vista)
     const timed = vista.times || vista.weather
     const when = vistaWhen(vista)
@@ -104,7 +114,7 @@ export function vistaPages() {
   <div class="detail-top">
     <header class="detail-header">
       <p class="detail-kicker">${expansion.name} sightseeing log ${vistaNumber(vista)}</p>
-      <h1 class="detail-title">${name}</h1>
+      <div class="detail-title-row"><h1 class="detail-title">${name}</h1>${doneButton(id, name)}</div>
       <blockquote class="detail-quote">${gameText(text[vista.name].impression)}</blockquote>
       <div class="detail-text">${gameText(text[vista.name].description)}</div>
     </header>

@@ -231,6 +231,15 @@ export function mapFigure(entry, note) {
 }
 
 /**
+ * A check to mark an entry complete, js/utils/done.js hooks it up.
+ * @param {number} id
+ * @param {string} name What it's for, for screen readers and the toast
+ * @returns {Html}
+ */
+export const doneButton = (id, name) =>
+  html`<button class="done-check" data-done-id="${id}" data-name="${name}" aria-pressed="false" aria-label="${name} complete" title="Mark as complete"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg></button>`
+
+/**
  * Links to the entries before and after this one, at the bottom of a detail page.
  * @param {{ url: string, text: string } | null} prev
  * @param {{ url: string, text: string } | null} next

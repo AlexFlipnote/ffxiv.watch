@@ -98,3 +98,157 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+// A box that fills in with a check once it's done, see js/utils/done.js
+.done-check {
+  position: relative;
+  flex: none;
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  border: .125rem solid var(--font-tertiary);
+  border-radius: .25rem;
+  background: none;
+  color: transparent;
+  cursor: pointer;
+  transition: color .2s, background-color .2s, border-color .2s, transform .15s $ease;
+
+  // Held down it squeezes in, and pops when it's let go
+  &:active {
+    transform: scale(.85);
+  }
+
+  svg {
+    width: 85%;
+    height: 85%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  @include hover {
+    border-color: var(--accent);
+    color: var(--font-tertiary);
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+    outline-offset: .125rem;
+  }
+
+  &[aria-pressed="true"] {
+    border-color: var(--accent);
+    background-color: var(--accent);
+    color: var(--surface-solid);
+  }
+
+  .detail-title-row & {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: .375rem;
+  }
+
+  // It needs the script to do anything
+  :root:not(.js) & {
+    display: none;
+  }
+
+  // Checked: it pops and the tick draws in, see celebrate in js/utils/done.js
+  &.done-pop {
+    animation: donePop .35s $ease;
+
+    path {
+      stroke-dasharray: 20;
+      animation: doneTick .3s ease-out;
+    }
+  }
+
+  &.done-unpop {
+    animation: doneUnpop .25s $ease;
+  }
+}
+
+// Sparks flying out from the middle of the box
+.done-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    width: .3rem;
+    height: .3rem;
+    margin: -.15rem;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0;
+    animation: doneSpark .6s ease-out forwards;
+
+    &:nth-child(even) {
+      background: var(--gold);
+    }
+  }
+
+  .detail-title-row & span {
+    --start: .875rem;
+    --reach: 2rem;
+  }
+}
+
+@keyframes donePop {
+  40% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes doneUnpop {
+  40% {
+    transform: scale(.8);
+  }
+}
+
+@keyframes doneTick {
+  from {
+    stroke-dashoffset: 20;
+  }
+}
+
+// Bright for most of the way out, then gone
+@keyframes doneSpark {
+  // From the box's edge, not under it
+  0% {
+    opacity: 1;
+    transform: rotate(var(--angle)) translateY(calc(-1 * var(--start, .625rem))) scale(1);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(var(--angle)) translateY(calc(-1 * var(--reach, 1.5rem))) scale(.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .done-check.done-pop,
+  .done-check.done-pop path,
+  .done-check.done-unpop {
+    animation: none;
+  }
+
+  .done-check:active {
+    transform: none;
+  }
+
+  .done-burst {
+    display: none;
+  }
+}
