@@ -470,7 +470,7 @@ async function buildSite(routes, dated = true) {
     ""
   ].join("\n"))
 
-  fs.writeFileSync(path.join(OUT, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: https://${DOMAIN}/sitemap.xml\n`)
+  fs.writeFileSync(path.join(OUT, "robots.txt"), `User-agent: serpstatbot\nDisallow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: https://${DOMAIN}/sitemap.xml\n`)
 
   log("SITE", `Done, ${urls.length} pages in the sitemap`)
 }
