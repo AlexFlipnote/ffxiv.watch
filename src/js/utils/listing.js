@@ -176,6 +176,21 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, se
     if (url.href !== location.href) history.replaceState(history.state, "", url)
   }
 
+  // A flaky connection, say. The table empties out for a note instead of the skeleton staying up. Trying again
+  // reloads the page, the browser remembers a failed import() and won't fetch it again
+  function showLoadError() {
+    ready = false
+    skeleton.hidden = true
+    layout = null
+    groups = new Map()
+    onPage = []
+    body.replaceChildren()
+    const retry = Object.assign(document.createElement("button"), { className: "table-retry", textContent: "Try again" })
+    retry.addEventListener("click", () => location.reload())
+    empty.replaceChildren(`Couldn't load the ${noun}, check your connection. `, retry)
+    empty.hidden = false
+  }
+
   async function applyFilters() {
     save(key, Object.fromEntries(Object.entries(selects).map(([name, select]) => [name, select.value])))
     saveSearch()
@@ -183,7 +198,14 @@ export function listing({ key, expansions, defaultExpansion, loadChunk, idOf, se
 
     const current = ++generation
     const files = selects.expansion.value === ALL ? expansions.map((e) => e.file) : [selects.expansion.value]
-    const entries = (await Promise.all(files.map(loadExpansion))).flat()
+    let entries
+    try {
+      entries = (await Promise.all(files.map(loadExpansion))).flat()
+    } catch (err) {
+      console.error(err)
+      if (current === generation) showLoadError()
+      return
+    }
     if (current !== generation) return
 
     shown = entries.filter((entry) => rowOf(entry) && matches(entry, query))

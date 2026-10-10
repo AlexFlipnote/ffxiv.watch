@@ -82,3 +82,14 @@
   color: var(--font-tertiary);
   font-style: italic;
 }
+
+// In the note when a listing's data fails to load, see listing.js
+.table-retry {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
