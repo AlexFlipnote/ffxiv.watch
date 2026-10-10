@@ -3,6 +3,7 @@ import crypto from "crypto"
 import esbuild from "esbuild"
 import fs from "fs"
 import net from "net"
+import os from "os"
 import { minify } from "html-minifier-terser"
 import path from "path"
 import * as sass from "sass"
@@ -16,7 +17,19 @@ const __dirname = path.dirname(__filename)
 const SRC = path.join(__dirname, "src")
 const OUT = path.join(__dirname, "dist")
 const DOMAIN = "ffxiv.watch"
-const DEV_PORT = 8080
+
+/**
+ * `npm run dev -- --host 0.0.0.0 --port 3000`, the `--` hands the flags to this script instead of npm.
+ * @param {string} name
+ * @returns {string | undefined}
+ */
+const devFlag = (name) => {
+  const i = process.argv.indexOf(`--${name}`)
+  return i > -1 ? process.argv[i + 1] : undefined
+}
+
+const DEV_HOST = devFlag("host") ?? "localhost"
+const DEV_PORT = Number(devFlag("port")) || 8080
 
 const SKIPPED = ["js", "scss", "partials", "pages", "render"]
 
@@ -513,13 +526,19 @@ function rebuildHTML() {
 
 /**
  * @param {number} port
+ * @param {string} host
  * @returns {Promise<void>} Rejects when something is already listening on it
  */
-const portFree = (port) => new Promise((resolve, reject) => {
+const portFree = (port, host) => new Promise((resolve, reject) => {
   const server = net.createServer()
   server.once("error", reject)
-  server.listen(port, () => server.close(() => resolve()))
+  server.listen(port, host, () => server.close(() => resolve()))
 })
+
+/** @returns {string[]} This machine's addresses on the local network, to open the dev server from a phone */
+const lanAddresses = () => Object.values(os.networkInterfaces()).flat()
+  .filter((i) => i.family === "IPv4" && !i.internal)
+  .map((i) => i.address)
 
 async function watch() {
   log("WATCH", "Starting to watch for changes...")
@@ -534,7 +553,7 @@ async function watch() {
 
   // The port first, so a second `npm run dev` stops here, before it wipes the files the running one serves
   try {
-    await portFree(DEV_PORT)
+    await portFree(DEV_PORT, DEV_HOST)
   } catch (err) {
     await Promise.all(contexts.map(ctx => ctx.dispose()))
     log("SERVE", `Port ${DEV_PORT} is taken, is \`npm run dev\` already running? (${err.message})`)
@@ -547,9 +566,10 @@ async function watch() {
   await buildSite(await buildHTML(false), false)
   // Served only now: a tab left open asks for the page at once, and the server builds the JS for it, which would
   // land in the folder while it's being wiped. Any esbuild context can serve the whole output folder
-  await contexts[0].serve({ servedir: OUT, port: DEV_PORT })
+  await contexts[0].serve({ servedir: OUT, host: DEV_HOST, port: DEV_PORT })
   await Promise.all(contexts.map(ctx => ctx.watch()))
-  log("SERVE", `http://localhost:${DEV_PORT}/`)
+  const hosts = DEV_HOST === "0.0.0.0" ? ["localhost", ...lanAddresses()] : [DEV_HOST]
+  for (const host of hosts) log("SERVE", `http://${host}:${DEV_PORT}/`)
 
   // A deleted or renamed file would leave its old output behind, so that starts over from an empty folder.
   // A rename fires a few events at once, they wait for each other
