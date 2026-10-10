@@ -31,6 +31,23 @@ const devFlag = (name) => {
 const DEV_HOST = devFlag("host") ?? "localhost"
 const DEV_PORT = Number(devFlag("port")) || 8080
 
+// SEO crawlers that only feed a paid backlink database and send no one here
+const BLOCKED_BOTS = [
+  "AhrefsBot",
+  "Barkrowler", // Babbar
+  "BLEXBot", // WebMeUp
+  "DataForSeoBot",
+  "DotBot", // Moz
+  "linkdexbot",
+  "MegaIndex.ru",
+  "MJ12bot", // Majestic
+  "rogerbot", // Moz
+  "SemrushBot",
+  "SEOkicks",
+  "serpstatbot",
+  "spbot" // OpenLinkProfiler
+]
+
 const SKIPPED = ["js", "scss", "partials", "pages", "render"]
 
 const PAGES = path.join(SRC, "pages")
@@ -470,7 +487,14 @@ async function buildSite(routes, dated = true) {
     ""
   ].join("\n"))
 
-  fs.writeFileSync(path.join(OUT, "robots.txt"), `User-agent: serpstatbot\nDisallow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: https://${DOMAIN}/sitemap.xml\n`)
+  fs.writeFileSync(path.join(OUT, "robots.txt"), [
+    ...BLOCKED_BOTS.flatMap(bot => [`User-agent: ${bot}`, "Disallow: /", ""]),
+    "User-agent: *",
+    "Allow: /",
+    "",
+    `Sitemap: https://${DOMAIN}/sitemap.xml`,
+    ""
+  ].join("\n"))
 
   log("SITE", `Done, ${urls.length} pages in the sitemap`)
 }
