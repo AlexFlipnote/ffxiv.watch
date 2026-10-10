@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="FFXIV Fishing: Big Fish Times, Weather & Bait - ffxiv.watch"
+      description="Every FFXIV fish, with when big fish and fish with a time or weather bite next in your local time, plus bait and mooch, intuition, maps and where to stand."
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="fishing.js" module preload="data/fishing/{{ defaultExpansion }}.json"/>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="listing">
+        <header class="listing-intro">
+          <h1 class="listing-title">Fishing</h1>
+          <p class="listing-lead">Every fish in FFXIV, and when the big fish and those with a time or weather to them bite next, in your local time.</p>
+        </header>
+        <div class="filters">
+          <input class="input search" id="search" type="search" enterkeyhint="search" placeholder="Fish, zone, bait or weather" aria-label="Search">
+          <label>Method
+            <select class="select" id="filter-method">
+              <option value="">Any</option>
+              <option>Fishing</option>
+              <option>Spearfishing</option>
+            </select>
+          </label>
+          <label>Expansion <select class="select" id="filter-expansion">{{{ expansionOptions }}}</select></label>
+          <label>Type
+            <select class="select" id="filter-type">
+              <option value="">Timed &amp; big fish</option>
+              <option value="big">Big fish</option>
+              <option value="timed">Time or weather</option>
+              <option value="intuition">Intuition</option>
+              <option value="anytime">Any time</option>
+              <option value="all">All fish</option>
+            </select>
+          </label>
+          <label class="hide-done"><input type="checkbox" id="hide-done"> Hide completed</label>
+        </div>
+        <x-html str="partials/listing-skeleton.html"/>
+        <table class="table listing-table">
+          <thead class="sr-only">
+            <tr><th>Fish</th><th>Location</th></tr>
+          </thead>
+          <tbody id="fish">
+            {{{ rows }}}
+          </tbody>
+        </table>
+        <p class="table-empty" id="fish-empty" hidden></p>
+      </main>
+      <x-html str="partials/footer.html"/>
+    </div>
+
+    <x-html str="partials/map-modal.html"/>
+  </body>
+</html>

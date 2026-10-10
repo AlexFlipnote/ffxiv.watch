@@ -37,7 +37,7 @@ const jsBuildConfigs = [
   { entryPoints: ["src/js/404.js"], outfile: "dist/js/404.js" },
   // Code split: each expansion's data is its own chunk, and the code the pages share is in shared chunks
   {
-    entryPoints: ["src/js/gathering.js", "src/js/sightseeing.js", "src/js/item.js", "src/js/vista.js"],
+    entryPoints: ["src/js/gathering.js", "src/js/sightseeing.js", "src/js/fishing.js", "src/js/item.js", "src/js/vista.js", "src/js/fish.js"],
     outdir: "dist/js",
     format: "esm",
     splitting: true,

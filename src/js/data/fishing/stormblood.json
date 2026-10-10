@@ -1,0 +1,10437 @@
+[
+  {
+    "id": 20033,
+    "name": "Greenstream Loach",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "The Velodyna River",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 17.9,
+      "y": 9.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20049,
+    "name": "Steelhead Trout",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "Timmon Beck",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 11.5,
+      "y": 18.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20057,
+    "name": "Bloodsipper",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "The Velodyna River",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 17.9,
+      "y": 9.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20058,
+    "name": "Miounnefish",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "Timmon Beck",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 11.5,
+      "y": 18.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ],
+      [
+        {
+          "id": 20064,
+          "name": "Balloon Frog"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 4
+  },
+  {
+    "id": 20064,
+    "name": "Balloon Frog",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "Timmon Beck",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 11.5,
+      "y": 18.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 4
+  },
+  {
+    "id": 20087,
+    "name": "Velodyna Grass Carp",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "The Velodyna River",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 17.9,
+      "y": 9.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20088,
+    "name": "Black Velodyna Carp",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "The Velodyna River",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 17.9,
+      "y": 9.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20785,
+    "name": "Gyr Abanian Chub",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "Timmon Beck",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 11.5,
+      "y": 18.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "collectable": true,
+    "patch": 4.1
+  },
+  {
+    "id": 20788,
+    "name": "Velodyna Salmon",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "The Velodyna River",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 17.9,
+      "y": 9.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 4.1
+  },
+  {
+    "id": 24207,
+    "name": "Hardhead Trout",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "Timmon Beck",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 11.5,
+      "y": 18.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24208,
+    "name": "Downstream Loach",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "The Velodyna River",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 17.9,
+      "y": 9.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "big": true,
+    "weather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24990,
+    "name": "Xenacanthus",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Fringes",
+    "spot": "Timmon Beck",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 11.5,
+      "y": 18.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ],
+      [
+        {
+          "id": 24207,
+          "name": "Hardhead Trout"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 20047,
+    "name": "Mirage Chub",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Mirage Creek",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 27.5,
+      "y": 16.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20081,
+    "name": "Cave Killifish",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Dimwold",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 29,
+      "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20082,
+    "name": "Bone Melter",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "The Comet's Tail",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 31,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20083,
+    "name": "Fallen Leaf",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Dimwold",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 29,
+      "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20084,
+    "name": "Falling Star",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "The Comet's Tail",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 31,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 4
+  },
+  {
+    "id": 20085,
+    "name": "Capsized Squeaker",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "The Comet's Tail",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 31,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "times": [
+      [
+        960,
+        135
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "fishEyes": true,
+    "patch": 4
+  },
+  {
+    "id": 20086,
+    "name": "Nirvana Crab",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "The Comet's Tail",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 31,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 4
+  },
+  {
+    "id": 20089,
+    "name": "Rhalgr's Bolt",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Mirage Creek",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 27.5,
+      "y": 16.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20090,
+    "name": "Highland Perch",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Mirage Creek",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 27.5,
+      "y": 16.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20091,
+    "name": "Gravel Gudgeon",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Mirage Creek",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 27.5,
+      "y": 16.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20136,
+    "name": "Padjali Loach",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Dimwold",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 29,
+      "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20142,
+    "name": "Wraithfish",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Dimwold",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 29,
+      "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "weather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 21174,
+    "name": "Cardinalfish",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "The Comet's Tail",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 31,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "times": [
+      [
+        1140,
+        240
+      ]
+    ],
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.1
+  },
+  {
+    "id": 22389,
+    "name": "Mirage Mahi",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Mirage Creek",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 27.5,
+      "y": 16.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.2
+  },
+  {
+    "id": 23058,
+    "name": "Sapphire Fan",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Dimwold",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 29,
+      "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "big": true,
+    "weather": [
+      "Thunder"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 23059,
+    "name": "The Archbishop",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "The Comet's Tail",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 31,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "big": true,
+    "times": [
+      [
+        720,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 23072,
+    "name": "Lake Sphairai",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "The Comet's Tail",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 31,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 24209,
+    "name": "Corpse Chub",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Mirage Creek",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 27.5,
+      "y": 16.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24559,
+    "name": "Chakrafish",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Dimwold",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 29,
+      "radius": 2.2
+    },
+    "aetheryte": {
+      "name": "Castrum Oriens",
+      "x": 8.9,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 33221,
+    "name": "Scarlet Frog",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Fringes",
+    "spot": "Mirage Creek",
+    "map": {
+      "image": "g3f1-00",
+      "scale": 100,
+      "x": 27.5,
+      "y": 16.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "The Peering Stones",
+      "x": 29.8,
+      "y": 26.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20018,
+    "name": "Liopleurodon",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "Hells' Lid",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 33.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "weather": [
+      "Thunder"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ],
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4
+  },
+  {
+    "id": 20037,
+    "name": "Coeurl Snake Eel",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "The Ruby Price",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.4,
+      "y": 38.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20092,
+    "name": "Grinning Anchovy",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "The Ruby Price",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.4,
+      "y": 38.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20093,
+    "name": "Glass Herring",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "The Ruby Price",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.4,
+      "y": 38.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20094,
+    "name": "Hellyfish",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "Hells' Lid",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 33.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20109,
+    "name": "Blockhead",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "Hells' Lid",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 33.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 20786,
+    "name": "Coral Horse",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "The Ruby Price",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.4,
+      "y": 38.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "collectable": true,
+    "patch": 4.1
+  },
+  {
+    "id": 21176,
+    "name": "Ukiki",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "Hells' Lid",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 33.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "times": [
+      [
+        480,
+        240
+      ]
+    ],
+    "weather": [
+      "Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.1
+  },
+  {
+    "id": 23054,
+    "name": "Shrieker",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "Hells' Lid",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 33.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 24214,
+    "name": "Ku'er",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "The Ruby Price",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.4,
+      "y": 38.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        480
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Thunder"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24560,
+    "name": "Wicked Wartfish",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "Hells' Lid",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 33.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 24882,
+    "name": "The Vegetarian",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "Hells' Lid",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 33.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "weather": [
+      "Thunder"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ],
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 24993,
+    "name": "The Ruby Dragon",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "The Ruby Sea",
+    "spot": "The Ruby Price",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.4,
+      "y": 38.4,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Thunder"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ],
+      [
+        {
+          "id": 24214,
+          "name": "Ku'er"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 20048,
+    "name": "Harutsuge",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "The Ruby Sea",
+    "spot": "Shoal Rock",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 8.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4
+  },
+  {
+    "id": 20095,
+    "name": "Ruby Coral",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "The Ruby Sea",
+    "spot": "Shoal Rock",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 8.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "snagging": true
+  },
+  {
+    "id": 20096,
+    "name": "Sapphire Coral",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "The Ruby Sea",
+    "spot": "Shoal Rock",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 8.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "snagging": true
+  },
+  {
+    "id": 20097,
+    "name": "Bone Coral",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "The Ruby Sea",
+    "spot": "Shoal Rock",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 8.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "snagging": true
+  },
+  {
+    "id": 20098,
+    "name": "Butterfly Fish",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "The Ruby Sea",
+    "spot": "Shoal Rock",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 8.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 23065,
+    "name": "The Winter Queen",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "The Ruby Sea",
+    "spot": "Shoal Rock",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 8.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 24558,
+    "name": "Ruby Laver",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "The Ruby Sea",
+    "spot": "Shoal Rock",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 8.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20022,
+    "name": "Blackfin Snake Eel",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 22,
+      "y": 11,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 4
+  },
+  {
+    "id": 20032,
+    "name": "Ruby Meagre",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Isari",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 11.9,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20100,
+    "name": "Swordfish",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 22,
+      "y": 11,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "times": [
+      [
+        480,
+        480
+      ]
+    ],
+    "weather": [
+      "Clouds",
+      "Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20101,
+    "name": "Leaf Tatsunoko",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 22,
+      "y": 11,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20102,
+    "name": "Glass Flounder",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 22,
+      "y": 11,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20106,
+    "name": "Gliding Fish",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Isari",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 11.9,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20107,
+    "name": "Globefish",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Isari",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 11.9,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20108,
+    "name": "Fan Clam",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Isari",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 11.9,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20112,
+    "name": "Ruby Shrimp",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 22,
+      "y": 11,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 4
+  },
+  {
+    "id": 22390,
+    "name": "Triplespine",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Isari",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 11.9,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "times": [
+      [
+        300,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.2
+  },
+  {
+    "id": 23074,
+    "name": "Shirogane Clam",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Isari",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 11.9,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 24215,
+    "name": "Argonautica",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 22,
+      "y": 11,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "big": true,
+    "weather": [
+      "Wind"
+    ],
+    "previousWeather": [
+      "Fair Skies",
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ],
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24884,
+    "name": "Pinhead",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Isari",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 9,
+      "y": 11.9,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        480
+      ]
+    ],
+    "weather": [
+      "Thunder"
+    ],
+    "previousWeather": [
+      "Fair Skies",
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 30489,
+    "name": "Hook Fish",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "The Ruby Sea",
+    "spot": "Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 22,
+      "y": 11,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20034,
+    "name": "Tawny Wench Shark",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 34.6,
+      "y": 20.2,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "times": [
+      [
+        600,
+        480
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "patch": 4
+  },
+  {
+    "id": 20099,
+    "name": "Dafu",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 34.6,
+      "y": 20.2,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20110,
+    "name": "Glass Tuna",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 34.6,
+      "y": 20.2,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20144,
+    "name": "Wentletrap",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Ruby Price Depths",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 29.7,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20145,
+    "name": "Black Boxfish",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Ruby Price Depths",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 29.7,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20146,
+    "name": "Glass Manta",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Tamamizu",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 27.9,
+      "y": 11.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20147,
+    "name": "Regal Silverside",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Sui–no–Sato",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 20.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20148,
+    "name": "Snowflake Moray",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Shisui of the Violet Tides",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 4.8,
+      "y": 37.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20154,
+    "name": "Spider Crab",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Ruby Price Depths",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 29.7,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20155,
+    "name": "Little Dragonfish",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Tamamizu",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 27.9,
+      "y": 11.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20156,
+    "name": "Black Fanfish",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Sui–no–Sato",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 20.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20157,
+    "name": "Zebra Shark",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The *Adventure*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 16.4,
+      "y": 24.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20158,
+    "name": "Nophica's Comb",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Shisui of the Violet Tides",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 4.8,
+      "y": 37.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20162,
+    "name": "Hatchetfish",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Ruby Price Depths",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 29.7,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20163,
+    "name": "Threadfish",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Ruby Price Depths",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 29.7,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20164,
+    "name": "Garden Eel",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Tamamizu",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 27.9,
+      "y": 11.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20165,
+    "name": "Eastern Sea Pickle",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Sui–no–Sato",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 20.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20166,
+    "name": "Brindlebass",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The *Adventure*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 16.4,
+      "y": 24.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20167,
+    "name": "Demon Stonefish",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Shisui of the Violet Tides",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 4.8,
+      "y": 37.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20171,
+    "name": "Corpse-eater",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Ruby Price Depths",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 29.7,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20172,
+    "name": "Ronin Trevally",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Tamamizu",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 27.9,
+      "y": 11.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20173,
+    "name": "Toothsome Grouper",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Sui–no–Sato",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 20.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20174,
+    "name": "Horned Turban",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The *Adventure*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 16.4,
+      "y": 24.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20175,
+    "name": "Ruby Sea Star",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Shisui of the Violet Tides",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 4.8,
+      "y": 37.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20179,
+    "name": "Swordtip",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Tamamizu",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 27.9,
+      "y": 11.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20180,
+    "name": "False Scad",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Sui–no–Sato",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 20.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20181,
+    "name": "Snow Crab",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The *Adventure*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 16.4,
+      "y": 24.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20182,
+    "name": "Red-eyed Lates",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "Shisui of the Violet Tides",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 4.8,
+      "y": 37.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 22393,
+    "name": "Usuginu Octopus",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 34.6,
+      "y": 20.2,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.2
+  },
+  {
+    "id": 24883,
+    "name": "Seven Stars",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 34.6,
+      "y": 20.2,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "big": true,
+    "times": [
+      [
+        600,
+        480
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Thunder"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 30491,
+    "name": "Fatty Herring",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 34.6,
+      "y": 20.2,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20038,
+    "name": "Zekki Grouper",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Zekki",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 26.6,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20676,
+          "name": "Blue Bobbit"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20103,
+    "name": "Zekki Gator",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Zekki",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 26.6,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 20104,
+    "name": "Daio Squid",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Zekki",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 26.6,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20105,
+    "name": "Koromo Octopus",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Zekki",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 26.6,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20618,
+          "name": "Bream Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "patch": 4
+  },
+  {
+    "id": 20186,
+    "name": "Redcoat",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The *Kobayashi Maru*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.9,
+      "y": 6.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20198,
+    "name": "Sea Lamp",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The *Kobayashi Maru*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.9,
+      "y": 6.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20199,
+    "name": "Amberjack",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The *Kobayashi Maru*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.9,
+      "y": 6.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20209,
+    "name": "Spiny Lobster",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The *Kobayashi Maru*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.9,
+      "y": 6.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20210,
+    "name": "Mitsukuri Shark",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The Eastern Ruby Sea",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 40.3,
+      "y": 9.7,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "predators": [
+      {
+        "id": 20217,
+        "name": "Bashful Batfish",
+        "count": 7
+      }
+    ],
+    "gig": "Large",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20217,
+    "name": "Bashful Batfish",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The *Kobayashi Maru*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.9,
+      "y": 6.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "gig": "Small",
+    "patch": 4
+  },
+  {
+    "id": 20226,
+    "name": "Motley Beakfish",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The *Kobayashi Maru*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.9,
+      "y": 6.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20227,
+    "name": "Thousandfang",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The Eastern Ruby Sea",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 40.3,
+      "y": 9.7,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "predators": [
+      {
+        "id": 20217,
+        "name": "Bashful Batfish",
+        "count": 7
+      }
+    ],
+    "gig": "Large",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20528,
+    "name": "Tiny Tatsunoko",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The Eastern Ruby Sea",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 40.3,
+      "y": 9.7,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "predators": [
+      {
+        "id": 20217,
+        "name": "Bashful Batfish",
+        "count": 7
+      }
+    ],
+    "gig": "Large",
+    "patch": 4
+  },
+  {
+    "id": 21179,
+    "name": "Ichimonji",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The *Kobayashi Maru*",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 38.9,
+      "y": 6.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "times": [
+      [
+        120,
+        600
+      ]
+    ],
+    "gig": "Large",
+    "patch": 4.1
+  },
+  {
+    "id": 21180,
+    "name": "Snailfish",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "*Kobayashi Maru*'s Northern Wake",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 39.3,
+      "y": 2.8,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "predators": [
+      {
+        "id": 21179,
+        "name": "Ichimonji",
+        "count": 10
+      }
+    ],
+    "gig": "Normal",
+    "patch": 4.1
+  },
+  {
+    "id": 23066,
+    "name": "Rakshasa",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Ruby Sea",
+    "spot": "The Isle of Zekki",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 26.6,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "big": true,
+    "weather": [
+      "Thunder"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ],
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 36548,
+    "name": "Coffer Shell",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Northern Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 3.5,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36549,
+    "name": "Onihige",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Northern Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 3.5,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36550,
+    "name": "Onokoro Carp",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Northern Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 3.5,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36551,
+    "name": "Ruby-spotted Crab",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Northern Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 3.5,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36552,
+    "name": "Marrow-eater",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Northern Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 3.5,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36553,
+    "name": "Cloudy Cat Shark",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Northern Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 3.5,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "gig": "Large",
+    "patch": 6
+  },
+  {
+    "id": 36554,
+    "name": "Red Gurnard",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Isari Slope",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 11,
+      "y": 13.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36555,
+    "name": "Dream Pickle",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Isari Slope",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 11,
+      "y": 13.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36556,
+    "name": "Ruby Haddock",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Isari Slope",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 11,
+      "y": 13.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36557,
+    "name": "Crown Fish",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Isari Slope",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 11,
+      "y": 13.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36558,
+    "name": "Sword of Isari",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Isari Slope",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 11,
+      "y": 13.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36559,
+    "name": "Blue Shark",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Isari Slope",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 11,
+      "y": 13.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36560,
+    "name": "Barb of Exile",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Exile",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 21.3,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36561,
+    "name": "Smooth Lumpfish",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Exile",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 21.3,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36562,
+    "name": "Hells' Cap",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Exile",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 21.3,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36563,
+    "name": "Keeled Fugu",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Exile",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 21.3,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36564,
+    "name": "Eastern Seerfish",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Exile",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 21.3,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36565,
+    "name": "False Fusilier",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Exile",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 21.3,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36568,
+    "name": "Othardian Wrasse",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Exile",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 28.2,
+      "y": 21.3,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36573,
+    "name": "Pipefish",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Northwestern Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 23.4,
+      "y": 3.3,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "predators": [
+      {
+        "id": 36553,
+        "name": "Cloudy Cat Shark",
+        "count": 10
+      }
+    ],
+    "gig": "Small",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36578,
+    "name": "Shogun's Kabuto",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Northwestern Onokoro",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 23.4,
+      "y": 3.3,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "predators": [
+      {
+        "id": 36553,
+        "name": "Cloudy Cat Shark",
+        "count": 10
+      }
+    ],
+    "gig": "Large",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36661,
+    "name": "Auroral Clam",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "The Anemone Gardens",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 23.7,
+      "y": 27.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true
+  },
+  {
+    "id": 41060,
+    "name": "Empyreal Spiral",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Ruby Sea",
+    "spot": "Saibai Cavern",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 19.2,
+      "y": 13.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Onokoro",
+      "x": 23.3,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 6.5
+  },
+  {
+    "id": 36566,
+    "name": "Skipping Stone",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Northeastern Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 37.3,
+      "y": 12.3,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36567,
+    "name": "Red-spotted Blenny",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Northeastern Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 37.3,
+      "y": 12.3,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36569,
+    "name": "Grey Mullet",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Northeastern Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 37.3,
+      "y": 12.3,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36570,
+    "name": "Prayer Cushion",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Northeastern Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 37.3,
+      "y": 12.3,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36571,
+    "name": "Deepbody Boarfish",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Northeastern Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 37.3,
+      "y": 12.3,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36572,
+    "name": "Jointed Razorfish",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Eastern Barrier Isle",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 39.8,
+      "y": 31.7,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36574,
+    "name": "Righteye Flounder",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Eastern Barrier Isle",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 39.8,
+      "y": 31.7,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36575,
+    "name": "Mini Yasha",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Eastern Barrier Isle",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 39.8,
+      "y": 31.7,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36576,
+    "name": "Sawshark",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Eastern Barrier Isle",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 39.8,
+      "y": 31.7,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36577,
+    "name": "Othardian Lumpsucker",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Eastern Barrier Isle",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 39.8,
+      "y": 31.7,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36579,
+    "name": "Bluefin Trevally",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Eastern Barrier Isle",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 39.8,
+      "y": 31.7,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36580,
+    "name": "Kitefin Shark",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Northeastern Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 37.3,
+      "y": 12.3,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36581,
+    "name": "Uzumaki",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Ruby Sea",
+    "spot": "Northeastern Bekko",
+    "map": {
+      "image": "e3f1-00",
+      "scale": 100,
+      "x": 37.3,
+      "y": 12.3,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Tamamizu",
+      "x": 28.7,
+      "y": 16.3
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 20046,
+    "name": "River Barramundi",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "Yanxia",
+    "spot": "The Heron's Way",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 35.8,
+      "y": 17,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20111,
+    "name": "Doman Crayfish",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "Yanxia",
+    "spot": "The Heron's Way",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 35.8,
+      "y": 17,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20123,
+    "name": "Doman Trout",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "Yanxia",
+    "spot": "The Heron's Way",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 35.8,
+      "y": 17,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20137,
+    "name": "Nogoi",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "Yanxia",
+    "spot": "Namai",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 29.5,
+      "y": 15.6,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20787,
+    "name": "Maiden's Heart",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "Yanxia",
+    "spot": "The Heron's Nest",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 34.8,
+      "y": 14,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "collectable": true,
+    "patch": 4.1
+  },
+  {
+    "id": 24885,
+    "name": "Pomegranate Trout",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "Yanxia",
+    "spot": "The Heron's Nest",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 34.8,
+      "y": 14,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "big": true,
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 24886,
+    "name": "Glarramundi",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "Yanxia",
+    "spot": "The Heron's Way",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 35.8,
+      "y": 17,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "big": true,
+    "weather": [
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 24887,
+    "name": "Hermit's End",
+    "method": "Fishing",
+    "level": 64,
+    "zone": "Yanxia",
+    "spot": "Namai",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 29.5,
+      "y": 15.6,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 20020,
+    "name": "Yanxian Barramundi",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River (East)",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 20,
+      "y": 24.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "patch": 4
+  },
+  {
+    "id": 20118,
+    "name": "Yanxian Koi",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River (East)",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 20,
+      "y": 24.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20120,
+    "name": "Longhair Catfish",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River (East)",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 20,
+      "y": 24.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 4
+  },
+  {
+    "id": 20149,
+    "name": "Hoppfish",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southwestern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 15.1,
+      "y": 37.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20150,
+    "name": "Lightscale",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southwestern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 15.1,
+      "y": 37.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20151,
+    "name": "Grass Fugu",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 36.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20152,
+    "name": "Giant Eel",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 36.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20153,
+    "name": "Kamina Crab",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "Imperial Hypersonic Assault Craft L-XXIII",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 34.8,
+      "y": 36.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20159,
+    "name": "Warty Wartfish",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southwestern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 15.1,
+      "y": 37.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20160,
+    "name": "Common Whelk",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 36.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20161,
+    "name": "Hairless Barb",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "Imperial Hypersonic Assault Craft L-XXIII",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 34.8,
+      "y": 36.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20168,
+    "name": "Armored Crayfish",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 36.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20169,
+    "name": "Bighead Carp",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 36.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20170,
+    "name": "Zeni Clam",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "Imperial Hypersonic Assault Craft L-XXIII",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 34.8,
+      "y": 36.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20176,
+    "name": "Gauntlet Crab",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southwestern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 15.1,
+      "y": 37.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20177,
+    "name": "Hermit Goby",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 36.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20178,
+    "name": "Skythorn",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "Imperial Hypersonic Assault Craft L-XXIII",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 34.8,
+      "y": 36.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20183,
+    "name": "Common Bitterling",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southwestern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 15.1,
+      "y": 37.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20184,
+    "name": "Fifty-summer Cod",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River Southwestern Riverbeds",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 15.1,
+      "y": 37.5,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20185,
+    "name": "Nagxian Mullet",
+    "method": "Spearfishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "Imperial Hypersonic Assault Craft L-XXIII",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 34.8,
+      "y": 36.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 24561,
+    "name": "Othardian Salmon",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River (East)",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 20,
+      "y": 24.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 24889,
+    "name": "Axelrod",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "Yanxia",
+    "spot": "The One River (East)",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 20,
+      "y": 24.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        480
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 20027,
+    "name": "Doman Grass Carp",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Mercantile Docks",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 11.4,
+      "y": 14,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "times": [
+      [
+        1200,
+        480
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "patch": 4
+  },
+  {
+    "id": 20028,
+    "name": "Samurai Fish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Doma Castle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 14.4,
+      "y": 7.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20052,
+    "name": "Yellow Prismfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Lake",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 6.5,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20053,
+    "name": "Blue Prismfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Lake",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 6.5,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20114,
+    "name": "Raitonfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Doma Castle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 14.4,
+      "y": 7.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "weather": [
+      "Rain",
+      "Showers"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 4
+  },
+  {
+    "id": 20115,
+    "name": "Blank Oscar",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Doma Castle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 14.4,
+      "y": 7.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20116,
+    "name": "Dragonfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Doma Castle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 14.4,
+      "y": 7.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20117,
+    "name": "Lordly Salmon",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Mercantile Docks",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 11.4,
+      "y": 14,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20124,
+    "name": "Doman Eel",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Canyon",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 31.7,
+      "y": 7.2,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "times": [
+      [
+        1020,
+        1020
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "patch": 4
+  },
+  {
+    "id": 21177,
+    "name": "Violet Prismfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Lake",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 6.5,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.1
+  },
+  {
+    "id": 22397,
+    "name": "Red Prismfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Lake",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 6.5,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.2
+  },
+  {
+    "id": 23055,
+    "name": "White Goldfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Lake",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 6.5,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ],
+      [
+        {
+          "id": 22397,
+          "name": "Red Prismfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 23056,
+    "name": "Firelight Goldfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Lake",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 6.5,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ],
+      [
+        {
+          "id": 22397,
+          "name": "Red Prismfish"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 23067,
+    "name": "Bokuden",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Doma Castle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 14.4,
+      "y": 7.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "big": true,
+    "times": [
+      [
+        720,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 24203,
+    "name": "Indigo Prismfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Lake",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 6.5,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ],
+      [
+        {
+          "id": 21177,
+          "name": "Violet Prismfish"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24204,
+    "name": "Green Prismfish",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Lake",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 6.5,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "times": [
+      [
+        0,
+        960
+      ]
+    ],
+    "weather": [
+      "Fair Skies",
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24888,
+    "name": "Suiten Ippeki",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Mercantile Docks",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 11.4,
+      "y": 14,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        480
+      ]
+    ],
+    "weather": [
+      "Showers"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 24890,
+    "name": "The Unraveled Bow",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Canyon",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 31.7,
+      "y": 7.2,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "big": true,
+    "times": [
+      [
+        720,
+        240
+      ]
+    ],
+    "weather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 24994,
+    "name": "Warden of the Seven Hues",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Prism Lake",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 28.6,
+      "y": 6.5,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "big": true,
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 24203,
+        "name": "Indigo Prismfish",
+        "count": 3
+      },
+      {
+        "id": 23056,
+        "name": "Firelight Goldfish",
+        "count": 3
+      },
+      {
+        "id": 24204,
+        "name": "Green Prismfish",
+        "count": 5
+      }
+    ],
+    "intuition": 175,
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 33222,
+    "name": "White Clam",
+    "method": "Fishing",
+    "level": 67,
+    "zone": "Yanxia",
+    "spot": "Mercantile Docks",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 11.4,
+      "y": 14,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20021,
+    "name": "Seraphim",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The One River (West)",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 11,
+      "y": 32.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "times": [
+      [
+        960,
+        480
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20051,
+    "name": "Silken Koi",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Plum Spring",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 36,
+      "y": 23.8,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20119,
+    "name": "Kotsu Zetsu",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Plum Spring",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 36,
+      "y": 23.8,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20121,
+    "name": "Plum Gazer",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Plum Spring",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 36,
+      "y": 23.8,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20122,
+    "name": "Pandamoth",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Plum Spring",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 36,
+      "y": 23.8,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "times": [
+      [
+        600,
+        480
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "patch": 4
+  },
+  {
+    "id": 20187,
+    "name": "Yanxian Tiger Prawn",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Sunken Junk",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 9.9,
+      "y": 34.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20188,
+    "name": "Tengu Fan",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Sunken Junk",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 9.9,
+      "y": 34.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20189,
+    "name": "Star Turban",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Dragon's Struggle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 10.9,
+      "y": 10.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20190,
+    "name": "Blue-fish",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Dragon's Struggle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 10.9,
+      "y": 10.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20200,
+    "name": "Cherry Salmon",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Sunken Junk",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 9.9,
+      "y": 34.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20201,
+    "name": "Yu-no-hana Crab",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Dragon's Struggle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 10.9,
+      "y": 10.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20211,
+    "name": "Doman Bubble Eye",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Sunken Junk",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 9.9,
+      "y": 34.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20212,
+    "name": "Dragon Squeaker",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Dragon's Struggle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 10.9,
+      "y": 10.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20218,
+    "name": "River Bream",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Sunken Junk",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 9.9,
+      "y": 34.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20219,
+    "name": "Snipe Eel",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Dragon's Struggle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 10.9,
+      "y": 10.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20220,
+    "name": "Cherubfish",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Sunken Junk's South Side",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 11,
+      "y": 37.8,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "predators": [
+      {
+        "id": 20228,
+        "name": "Ichthyosaur",
+        "count": 7
+      }
+    ],
+    "gig": "Normal",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20228,
+    "name": "Ichthyosaur",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Sunken Junk",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 9.9,
+      "y": 34.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "gig": "Large",
+    "patch": 4
+  },
+  {
+    "id": 20229,
+    "name": "Sailfin",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Dragon's Struggle",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 10.9,
+      "y": 10.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The House of the Fierce",
+      "x": 26.4,
+      "y": 13.4
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20230,
+    "name": "Fangshi",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The Sunken Junk's South Side",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 11,
+      "y": 37.8,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "predators": [
+      {
+        "id": 20228,
+        "name": "Ichthyosaur",
+        "count": 7
+      }
+    ],
+    "gig": "Normal",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 23068,
+    "name": "Hagoromo Koi",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Plum Spring",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 36,
+      "y": 23.8,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "big": true,
+    "weather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 24216,
+    "name": "Hagoromo Bijin",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "The One River (West)",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 11,
+      "y": 32.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "big": true,
+    "weather": [
+      "Fair Skies",
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 31129,
+    "name": "Petal Shell",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "Yanxia",
+    "spot": "Plum Spring",
+    "map": {
+      "image": "e3f2-00",
+      "scale": 100,
+      "x": 36,
+      "y": 23.8,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Namai",
+      "x": 30.2,
+      "y": 19.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 30136,
+          "name": "Signature Skyball"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20045,
+    "name": "Idle Goby",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "The Slow Wash",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 23.6,
+      "y": 9.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20050,
+    "name": "Heather Charr",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "The Slow Wash",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 23.6,
+      "y": 9.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20066,
+    "name": "Death Loach",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "Grymm & Enid",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 6.2,
+      "y": 15,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20067,
+    "name": "Grymm Crab",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "Grymm & Enid",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 6.2,
+      "y": 15,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20068,
+    "name": "Enid Shrimp",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "Grymm & Enid",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 6.2,
+      "y": 15,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20069,
+    "name": "Invisible Crayfish",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "The Slow Wash",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 23.6,
+      "y": 9.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20070,
+    "name": "Rapids Jumper",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "The Slow Wash",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 23.6,
+      "y": 9.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 23060,
+    "name": "Bondsplitter",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "Grymm & Enid",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 6.2,
+      "y": 15,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "big": true,
+    "weather": [
+      "Dust Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 23061,
+    "name": "The Undecided",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "The Slow Wash",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 23.6,
+      "y": 9.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ],
+      [
+        {
+          "id": 20056,
+          "name": "Gyr Abanian Trout"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 23071,
+    "name": "Curefish",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "Grymm & Enid",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 6.2,
+      "y": 15,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 24991,
+    "name": "Drepanaspis",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "The Peaks",
+    "spot": "Grymm & Enid",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 6.2,
+      "y": 15,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "big": true,
+    "weather": [
+      "Dust Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 23060,
+        "name": "Bondsplitter",
+        "count": 2
+      }
+    ],
+    "intuition": 175,
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 20043,
+    "name": "Steelshark",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Peaks",
+    "spot": "Heather Falls",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 6.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "weather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 4
+  },
+  {
+    "id": 20071,
+    "name": "Abalathian Salamander",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Peaks",
+    "spot": "Heather Falls",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 6.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20072,
+    "name": "Adamantite Bichir",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Peaks",
+    "spot": "Heather Falls",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 6.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20789,
+    "name": "Purple Buckler",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Peaks",
+    "spot": "Heather Falls",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 6.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 4.1
+  },
+  {
+    "id": 24210,
+    "name": "The Last Tear",
+    "method": "Fishing",
+    "level": 65,
+    "zone": "The Peaks",
+    "spot": "Heather Falls",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 6.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "big": true,
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 20076,
+    "name": "Bull's Bite",
+    "method": "Fishing",
+    "level": 68,
+    "zone": "The Peaks",
+    "spot": "The Bull's Bath",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 20.6,
+      "y": 32.7,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "weather": [
+      "Fog",
+      "Wind",
+      "Clouds",
+      "Dust Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 4
+  },
+  {
+    "id": 20077,
+    "name": "Peeping Pisces",
+    "method": "Fishing",
+    "level": 68,
+    "zone": "The Peaks",
+    "spot": "The Bull's Bath",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 20.6,
+      "y": 32.7,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 22391,
+    "name": "Alligator Snapping Turtle",
+    "method": "Fishing",
+    "level": 68,
+    "zone": "The Peaks",
+    "spot": "The Bull's Bath",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 20.6,
+      "y": 32.7,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "weather": [
+      "Fair Skies",
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.2
+  },
+  {
+    "id": 24211,
+    "name": "Hemon",
+    "method": "Fishing",
+    "level": 68,
+    "zone": "The Peaks",
+    "spot": "The Bull's Bath",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 20.6,
+      "y": 32.7,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        240
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 20019,
+    "name": "Ala Mhigan Ribbon",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Arms of Meed",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 9.2,
+      "y": 37.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20073,
+    "name": "Meditator",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Ephor",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 32,
+      "y": 17,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "weather": [
+      "Clouds",
+      "Wind",
+      "Fog",
+      "Dust Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 4
+  },
+  {
+    "id": 20074,
+    "name": "Deemster",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Ephor",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 32,
+      "y": 17,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "weather": [
+      "Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20075,
+    "name": "Stonytongue",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Ephor",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 32,
+      "y": 17,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20078,
+    "name": "Scimitarfish",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Arms of Meed",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 9.2,
+      "y": 37.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20056,
+          "name": "Gyr Abanian Trout"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20079,
+    "name": "Gigant Bass",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Arms of Meed",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 9.2,
+      "y": 37.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20056,
+          "name": "Gyr Abanian Trout"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20141,
+    "name": "Eastern Pike",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Arms of Meed",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 9.2,
+      "y": 37.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "weather": [
+      "Clear Skies",
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "patch": 4
+  },
+  {
+    "id": 21175,
+    "name": "Rockfish",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Arms of Meed",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 9.2,
+      "y": 37.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "times": [
+      [
+        720,
+        240
+      ]
+    ],
+    "weather": [
+      "Clouds",
+      "Fog",
+      "Wind",
+      "Dust Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.1
+  },
+  {
+    "id": 24212,
+    "name": "Moksha",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Ephor",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 32,
+      "y": 17,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Ala Gannha",
+      "x": 23.7,
+      "y": 6.5
+    },
+    "big": true,
+    "weather": [
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Clouds",
+      "Wind",
+      "Fog",
+      "Dust Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24881,
+    "name": "Lily of the Veil",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Peaks",
+    "spot": "The Arms of Meed",
+    "map": {
+      "image": "g3f2-00",
+      "scale": 100,
+      "x": 9.2,
+      "y": 37.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Ala Ghiri",
+      "x": 16.1,
+      "y": 36.4
+    },
+    "big": true,
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 20025,
+    "name": "Rock Saltfish",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 21.5,
+      "radius": 6
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20616,
+          "name": "Silkworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 4
+  },
+  {
+    "id": 20035,
+    "name": "Whitehorse",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 21.5,
+      "radius": 6
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20616,
+          "name": "Silkworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20039,
+    "name": "Saltshield Snapper",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 21.5,
+      "radius": 6
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20616,
+          "name": "Silkworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 20040,
+    "name": "Sculptor",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 21.5,
+      "radius": 6
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "times": [
+      [
+        720,
+        360
+      ]
+    ],
+    "weather": [
+      "Thunderstorms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20616,
+          "name": "Silkworm"
+        }
+      ],
+      [
+        {
+          "id": 20025,
+          "name": "Rock Saltfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20041,
+    "name": "Pearl-eye",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 21.5,
+      "radius": 6
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20025,
+          "name": "Rock Saltfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 20194,
+    "name": "Moondisc",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northwestern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 18.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20195,
+    "name": "Bleached Bonytongue",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northwestern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 18.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20196,
+    "name": "Salt Shark",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Central Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23.3,
+      "y": 24.8,
+      "radius": 1.7
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20197,
+    "name": "King's Mantle",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Southeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 24.6,
+      "y": 28,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20205,
+    "name": "Typhoon Shrimp",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northwestern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 18.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20206,
+    "name": "Rock Oyster",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Central Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23.3,
+      "y": 24.8,
+      "radius": 1.7
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20207,
+    "name": "Salt Urchin",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Southeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 24.6,
+      "y": 28,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20208,
+    "name": "Carpenter Crab",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Southeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 24.6,
+      "y": 28,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20214,
+    "name": "Salt Cellar",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northwestern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 18.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20215,
+    "name": "White Sturgeon",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Central Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23.3,
+      "y": 24.8,
+      "radius": 1.7
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20216,
+    "name": "Tithe Collector",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Southeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 24.6,
+      "y": 28,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20223,
+    "name": "Abalathian Pipira",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northwestern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 18.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20224,
+    "name": "Steel Loach",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Central Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23.3,
+      "y": 24.8,
+      "radius": 1.7
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20225,
+    "name": "Ivory Sole",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Southeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 24.6,
+      "y": 28,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20235,
+    "name": "Flood Tuna",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northwestern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 13.9,
+      "y": 18.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20236,
+    "name": "Mercenary Crab",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Central Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23.3,
+      "y": 24.8,
+      "radius": 1.7
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true,
+    "gig": "Normal",
+    "patch": 4
+  },
+  {
+    "id": 20237,
+    "name": "Ashfish",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Southeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 24.6,
+      "y": 28,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Ala Mhigan Quarter",
+      "x": 33.8,
+      "y": 34.5
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20238,
+    "name": "Silken Sunfish",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Deep Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 22.1,
+      "y": 24.9,
+      "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "predators": [
+      {
+        "id": 20236,
+        "name": "Mercenary Crab",
+        "count": 7
+      }
+    ],
+    "gig": "Large",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20239,
+    "name": "Mosasaur",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Deep Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 22.1,
+      "y": 24.9,
+      "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "predators": [
+      {
+        "id": 20236,
+        "name": "Mercenary Crab",
+        "count": 7
+      }
+    ],
+    "gig": "Large",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 22394,
+    "name": "Saltmill",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 21.5,
+      "radius": 6
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20616,
+          "name": "Silkworm"
+        }
+      ],
+      [
+        {
+          "id": 20025,
+          "name": "Rock Saltfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.2
+  },
+  {
+    "id": 23062,
+    "name": "Diamond-eye",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 21.5,
+      "radius": 6
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "big": true,
+    "weather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20616,
+          "name": "Silkworm"
+        }
+      ],
+      [
+        {
+          "id": 20025,
+          "name": "Rock Saltfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 24992,
+    "name": "Stethacanthus",
+    "method": "Fishing",
+    "level": 70,
+    "zone": "The Lochs",
+    "spot": "Loch Seld",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 21.5,
+      "radius": 6
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20616,
+          "name": "Silkworm"
+        }
+      ],
+      [
+        {
+          "id": 20025,
+          "name": "Rock Saltfish"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 20040,
+        "name": "Sculptor",
+        "count": 2
+      }
+    ],
+    "intuition": 350,
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 36659,
+    "name": "Inksquid",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Southwestern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 20.5,
+      "y": 29,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true
+  },
+  {
+    "id": 36582,
+    "name": "Natron Puffer",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 17.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36583,
+    "name": "Diamond Dagger",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 17.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36584,
+    "name": "Queenly Fan",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 17.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36585,
+    "name": "Pale Panther",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 17.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36586,
+    "name": "Saltsquid",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 17.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36587,
+    "name": "Platinum Hammerhead",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "The Lochs",
+    "spot": "Loch Seld Northeastern Lakebed",
+    "map": {
+      "image": "g3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 17.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Porta Praetoria",
+      "x": 8.5,
+      "y": 21.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 20023,
+    "name": "Tail Mountains Minnow",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Upper Yat Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 17.9,
+      "y": 18.8,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20127,
+          "name": "Zagas Khaal"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20024,
+    "name": "Sweatfish",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 21.6,
+      "y": 22.4,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "folklore": "Othardian Fishing Folklore",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20030,
+    "name": "Hak Bitterling",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Hak Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 29,
+      "y": 20.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20031,
+    "name": "Yat Goby",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Lower Yat Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 22.6,
+      "y": 28.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20044,
+    "name": "Tao Bitterling",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Tao Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 16.6,
+      "y": 14.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20080,
+    "name": "Nhaama's Boon",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Dotharl Khaa",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 12.5,
+      "y": 33.2,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Dhoro Iloh",
+      "x": 6.4,
+      "y": 23.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20125,
+    "name": "Brassfish",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Dotharl Khaa",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 12.5,
+      "y": 33.2,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Dhoro Iloh",
+      "x": 6.4,
+      "y": 23.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20126,
+    "name": "Othardian Trout",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Nem Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 32.4,
+      "y": 30.4,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Reunion",
+      "x": 32.6,
+      "y": 28.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20127,
+    "name": "Zagas Khaal",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Nem Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 32.4,
+      "y": 30.4,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Reunion",
+      "x": 32.6,
+      "y": 28.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 4
+  },
+  {
+    "id": 20128,
+    "name": "Steppe Skipper",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Nem Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 32.4,
+      "y": 30.4,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Reunion",
+      "x": 32.6,
+      "y": 28.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 4
+  },
+  {
+    "id": 20129,
+    "name": "Dry Steppe Skipper",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Hak Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 29,
+      "y": 20.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20130,
+    "name": "Sun Bass",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 21.6,
+      "y": 22.4,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20131,
+    "name": "Skytear",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Upper Yat Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 17.9,
+      "y": 18.8,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20132,
+    "name": "Dawn Crayfish",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Nem Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 32.4,
+      "y": 30.4,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Reunion",
+      "x": 32.6,
+      "y": 28.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20127,
+          "name": "Zagas Khaal"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20133,
+    "name": "Dusk Crayfish",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Hak Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 29,
+      "y": 20.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20134,
+    "name": "Bowfish",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Tao Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 16.6,
+      "y": 14.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20135,
+    "name": "Jade Sculpin",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Lower Yat Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 22.6,
+      "y": 28.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20138,
+    "name": "Curtain Pleco",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Hak Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 29,
+      "y": 20.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20140,
+    "name": "Hardscale",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 21.6,
+      "y": 22.4,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 21178,
+    "name": "Guppy",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 21.6,
+      "y": 22.4,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "times": [
+      [
+        960,
+        240
+      ]
+    ],
+    "weather": [
+      "Fair Skies",
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.1
+  },
+  {
+    "id": 22398,
+    "name": "Elder Gourami",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Tao Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 16.6,
+      "y": 14.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "weather": [
+      "Clouds",
+      "Fog",
+      "Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ],
+      [
+        {
+          "id": 20127,
+          "name": "Zagas Khaal"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.2
+  },
+  {
+    "id": 23069,
+    "name": "The Word of God",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Tao Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 16.6,
+      "y": 14.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 23070,
+    "name": "Yat Khan",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Lower Yat Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 22.6,
+      "y": 28.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "big": true,
+    "weather": [
+      "Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 24217,
+    "name": "Duskfish",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 21.6,
+      "y": 22.4,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        480
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Rain",
+      "Gales"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ],
+      [
+        {
+          "id": 20127,
+          "name": "Zagas Khaal"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24218,
+    "name": "Blade Skipper",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Upper Yat Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 17.9,
+      "y": 18.8,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "weather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24891,
+    "name": "Nhaama's Treasure",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Dotharl Khaa",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 12.5,
+      "y": 33.2,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Dhoro Iloh",
+      "x": 6.4,
+      "y": 23.8
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "weather": [
+      "Fair Skies",
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 24892,
+    "name": "Garden Skipper",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Nem Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 32.4,
+      "y": 30.4,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Reunion",
+      "x": 32.6,
+      "y": 28.3
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        240
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 24893,
+    "name": "Banderole",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Hak Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 29,
+      "y": 20.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        480
+      ]
+    ],
+    "weather": [
+      "Fog",
+      "Clouds",
+      "Wind"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ],
+      [
+        {
+          "id": 20127,
+          "name": "Zagas Khaal"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 24995,
+    "name": "The Unconditional",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Dotharl Khaa",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 12.5,
+      "y": 33.2,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Dhoro Iloh",
+      "x": 6.4,
+      "y": 23.8
+    },
+    "big": true,
+    "times": [
+      [
+        330,
+        60
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20675,
+          "name": "Stonefly Larva"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.5
+  },
+  {
+    "id": 33223,
+    "name": "Fragrant Sweetfish",
+    "method": "Fishing",
+    "level": 60,
+    "zone": "The Azim Steppe",
+    "spot": "Lower Yat Khaal",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 22.6,
+      "y": 28.4,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20191,
+    "name": "Steppe Bullfrog",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Western Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 19,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20192,
+    "name": "Cavalry Catfish",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Western Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 19,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20193,
+    "name": "Redfin",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Eastern Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20202,
+    "name": "Dotharli Gudgeon",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Western Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 19,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20203,
+    "name": "River Clam",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Eastern Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20204,
+    "name": "Grass Shark",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Eastern Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20213,
+    "name": "Dawn Herald",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Western Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 19,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20221,
+    "name": "Dusk Herald",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Western Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 19,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20222,
+    "name": "Glaring Perch",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Eastern Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "gig": "Large",
+    "patch": 4
+  },
+  {
+    "id": 20231,
+    "name": "Flamefish",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Western Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 19,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20232,
+    "name": "Fickle Krait",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Eastern Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 23,
+      "y": 23,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "anyTime": true
+  },
+  {
+    "id": 20233,
+    "name": "Eternal Eye",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Southern Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 21.7,
+      "y": 25.2,
+      "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "predators": [
+      {
+        "id": 20222,
+        "name": "Glaring Perch",
+        "count": 7
+      }
+    ],
+    "gig": "Small",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20234,
+    "name": "Soul of the Stallion",
+    "method": "Spearfishing",
+    "level": 70,
+    "zone": "The Azim Steppe",
+    "spot": "Azim Khaat Southern Lakebed",
+    "map": {
+      "image": "e3f3-00",
+      "scale": 100,
+      "x": 21.7,
+      "y": 25.2,
+      "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "The Dawn Throne",
+      "x": 23.1,
+      "y": 22.2
+    },
+    "predators": [
+      {
+        "id": 20222,
+        "name": "Glaring Perch",
+        "count": 7
+      }
+    ],
+    "gig": "Small",
+    "collectable": true,
+    "patch": 4
+  },
+  {
+    "id": 20054,
+    "name": "Hanatatsu",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "Kugane",
+    "spot": "Kugane Piers",
+    "map": {
+      "image": "e3t1-00",
+      "scale": 200,
+      "x": 10.5,
+      "y": 11,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Kugane",
+      "x": 12.2,
+      "y": 10.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ],
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4
+  },
+  {
+    "id": 20113,
+    "name": "Striped Fugu",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "Kugane",
+    "spot": "Kugane Piers",
+    "map": {
+      "image": "e3t1-00",
+      "scale": 200,
+      "x": 10.5,
+      "y": 11,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Kugane",
+      "x": 12.2,
+      "y": 10.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 22396,
+    "name": "Ribbon Eel",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "Kugane",
+    "spot": "Kugane Piers",
+    "map": {
+      "image": "e3t1-00",
+      "scale": 200,
+      "x": 10.5,
+      "y": 11,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Kugane",
+      "x": 12.2,
+      "y": 10.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ],
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.2
+  },
+  {
+    "id": 23063,
+    "name": "Rising Dragon",
+    "method": "Fishing",
+    "level": 63,
+    "zone": "Kugane",
+    "spot": "Kugane Piers",
+    "map": {
+      "image": "e3t1-00",
+      "scale": 200,
+      "x": 10.5,
+      "y": 11,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Kugane",
+      "x": 12.2,
+      "y": 10.5
+    },
+    "big": true,
+    "bait": [
+      [
+        {
+          "id": 20617,
+          "name": "Live Shrimp"
+        }
+      ],
+      [
+        {
+          "id": 20112,
+          "name": "Ruby Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 20042,
+    "name": "Abalathian Bitterling",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "Rhalgr's Reach",
+    "spot": "Upper Mirage Creek",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11,
+      "y": 14,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20055,
+    "name": "Broken Crab",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "Rhalgr's Reach",
+    "spot": "Upper Mirage Creek",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11,
+      "y": 14,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20056,
+    "name": "Gyr Abanian Trout",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "Rhalgr's Reach",
+    "spot": "Upper Mirage Creek",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11,
+      "y": 14,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 4
+  },
+  {
+    "id": 23057,
+    "name": "Hookstealer",
+    "method": "Fishing",
+    "level": 61,
+    "zone": "Rhalgr's Reach",
+    "spot": "Upper Mirage Creek",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11,
+      "y": 14,
+      "radius": 0.4
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "big": true,
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ],
+      [
+        {
+          "id": 20056,
+          "name": "Gyr Abanian Trout"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.3
+  },
+  {
+    "id": 20026,
+    "name": "Comet Minnow",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "The Outer Fist",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 12.2,
+      "y": 5.9,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20029,
+    "name": "Golden Cichlid",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "Rhalgr's Reach",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 10.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20059,
+    "name": "Monk Betta",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "Rhalgr's Reach",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 10.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20056,
+          "name": "Gyr Abanian Trout"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20060,
+    "name": "Electric Catfish",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "Rhalgr's Reach",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 10.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20061,
+    "name": "Pagan Pirarucu",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "Rhalgr's Reach",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 10.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20056,
+          "name": "Gyr Abanian Trout"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 20062,
+    "name": "Temple Carp",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "Rhalgr's Reach",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 10.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20063,
+    "name": "Gilfish",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "The Outer Fist",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 12.2,
+      "y": 5.9,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20614,
+          "name": "Nightcrawler"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 20065,
+    "name": "Lantern Marimo",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "The Outer Fist",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 12.2,
+      "y": 5.9,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 20619,
+          "name": "Suspending Minnow"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 22392,
+    "name": "Redtail",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "The Outer Fist",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 12.2,
+      "y": 5.9,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ],
+      [
+        {
+          "id": 20064,
+          "name": "Balloon Frog"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.2
+  },
+  {
+    "id": 24205,
+    "name": "Watcher Catfish",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "Rhalgr's Reach",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 10.4,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "big": true,
+    "weather": [
+      "Thunder"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20615,
+          "name": "Midge Larva"
+        }
+      ],
+      [
+        {
+          "id": 20056,
+          "name": "Gyr Abanian Trout"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.4
+  },
+  {
+    "id": 24206,
+    "name": "Bloodtail Zombie",
+    "method": "Fishing",
+    "level": 62,
+    "zone": "Rhalgr's Reach",
+    "spot": "The Outer Fist",
+    "map": {
+      "image": "g3t1-00",
+      "scale": 200,
+      "x": 12.2,
+      "y": 5.9,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Rhalgr's Reach",
+      "x": 12.8,
+      "y": 13.2
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        240
+      ]
+    ],
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 20613,
+          "name": "Salmon Roe"
+        }
+      ],
+      [
+        {
+          "id": 20064,
+          "name": "Balloon Frog"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "fishEyes": true,
+    "folklore": "Gyr Abanian Fishing Folklore",
+    "patch": 4.4
+  }
+]

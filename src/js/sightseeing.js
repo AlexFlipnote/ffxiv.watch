@@ -3,7 +3,7 @@ import EXPANSIONS from "./data/sightseeing.json"
 import { applyDayNight } from "./utils/daynight.js"
 import { doneChecks } from "./utils/done.js"
 import { listing } from "./utils/listing.js"
-import { cachedVistaWindows } from "./utils/sightseeing.js"
+import { cachedWeatherWindows } from "./utils/windows.js"
 import { everyTick } from "./utils/tick.js"
 
 const render = listing({
@@ -27,7 +27,7 @@ const render = listing({
   matches: (vista, query) => [
     `#${String(vista.number).padStart(3, "0")}`, vista.name, vista.zone, vista.spot, vista.emote, ...(vista.weather ?? []), vista.unlock?.quest
   ].some((text) => text?.toLowerCase().includes(query)),
-  windowOf: cachedVistaWindows()
+  windowOf: cachedWeatherWindows()
 })
 
 doneChecks("vistas")

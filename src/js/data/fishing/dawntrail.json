@@ -1,0 +1,8488 @@
+[
+  {
+    "id": 43664,
+    "name": "Mosquito Fish",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "Downripple",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 9.2,
+      "y": 10.6,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43665,
+    "name": "Pel Frog",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "Downripple",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 9.2,
+      "y": 10.6,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43666,
+    "name": "Petticoat Tetra",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "Downripple",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 9.2,
+      "y": 10.6,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43667,
+    "name": "Reasonscale Silverside",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "The For'ard Cabins",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 10.3,
+      "y": 19.7,
+      "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43668,
+    "name": "Stardust Shrimp",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "The For'ard Cabins",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 10.3,
+      "y": 19.7,
+      "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43669,
+    "name": "Shallows Sot",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "The For'ard Cabins",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 10.3,
+      "y": 19.7,
+      "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43670,
+    "name": "Ghostfish",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "The For'ard Cabins",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 10.3,
+      "y": 19.7,
+      "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43671,
+    "name": "Permit",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "The For'ard Cabins",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 10.3,
+      "y": 19.7,
+      "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 44336,
+    "name": "Inktopus",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "The For'ard Cabins",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 10.3,
+      "y": 19.7,
+      "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 44339,
+    "name": "Icuvlo's Barter",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "Downripple",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 9.2,
+      "y": 10.6,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "big": true,
+    "weather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.1
+  },
+  {
+    "id": 47988,
+    "name": "Cabinkeep Permit",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Tuliyollal",
+    "spot": "The For'ard Cabins",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 10.3,
+      "y": 19.7,
+      "radius": 1.1
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "big": true,
+    "times": [
+      [
+        300,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.2
+  },
+  {
+    "id": 43672,
+    "name": "Floating Fife",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Tuliyollal",
+    "spot": "High Tide Harbor",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 16.9,
+      "y": 15.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43673,
+    "name": "Blue Purse",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Tuliyollal",
+    "spot": "High Tide Harbor",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 16.9,
+      "y": 15.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43674,
+    "name": "Goldfin Cavalli",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Tuliyollal",
+    "spot": "High Tide Harbor",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 16.9,
+      "y": 15.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43903,
+    "name": "King Puffer",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Tuliyollal",
+    "spot": "High Tide Harbor",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 16.9,
+      "y": 15.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 49794,
+    "name": "Purse of Riches",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Tuliyollal",
+    "spot": "High Tide Harbor",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 16.9,
+      "y": 15.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        120
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.4
+  },
+  {
+    "id": 52013,
+    "name": "Harbor Cloud",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Tuliyollal",
+    "spot": "High Tide Harbor",
+    "map": {
+      "image": "y6t1-00",
+      "scale": 180,
+      "x": 16.9,
+      "y": 15.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Tuliyollal",
+      "x": 12.9,
+      "y": 11.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 43776,
+    "name": "Everkeep Yabby",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Solution Nine",
+    "spot": "Residential Sector",
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 6.5,
+      "y": 17.7,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Solution Nine",
+      "x": 12.4,
+      "y": 14.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43777,
+    "name": "Stickleback",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Solution Nine",
+    "spot": "Residential Sector",
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 6.5,
+      "y": 17.7,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Solution Nine",
+      "x": 12.4,
+      "y": 14.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43778,
+    "name": "Custodian Carp",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Solution Nine",
+    "spot": "Residential Sector",
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 6.5,
+      "y": 17.7,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Solution Nine",
+      "x": 12.4,
+      "y": 14.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43779,
+    "name": "Mosaic Loach",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Solution Nine",
+    "spot": "Residential Sector",
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 6.5,
+      "y": 17.7,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Solution Nine",
+      "x": 12.4,
+      "y": 14.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 44344,
+    "name": "Pixel Loach",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Solution Nine",
+    "spot": "Residential Sector",
+    "map": {
+      "image": "x6t1-00",
+      "scale": 180,
+      "x": 6.5,
+      "y": 17.7,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Solution Nine",
+      "x": 12.4,
+      "y": 14.2
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.1
+  },
+  {
+    "id": 43675,
+    "name": "Sea Alpaca",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Urqopacha",
+    "spot": "Sunken Stars",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20.4,
+      "y": 27.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43851,
+          "name": "Silkmoth Pupa"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43676,
+    "name": "Marbled Hatchetfish",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Urqopacha",
+    "spot": "Sunken Stars",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20.4,
+      "y": 27.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43851,
+          "name": "Silkmoth Pupa"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43677,
+    "name": "Starsnipper",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Urqopacha",
+    "spot": "Sunken Stars",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20.4,
+      "y": 27.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43851,
+          "name": "Silkmoth Pupa"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43678,
+    "name": "Urqotrout",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Urqopacha",
+    "spot": "Sunken Stars",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20.4,
+      "y": 27.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43851,
+          "name": "Silkmoth Pupa"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43679,
+    "name": "Yok Huy Stonecutter",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Urqopacha",
+    "spot": "Sunken Stars",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20.4,
+      "y": 27.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43851,
+          "name": "Silkmoth Pupa"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 44340,
+    "name": "Moongripper",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Urqopacha",
+    "spot": "Sunken Stars",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20.4,
+      "y": 27.6,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "big": true,
+    "times": [
+      [
+        720,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43854,
+          "name": "White Worm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "lure": "Modest",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.1
+  },
+  {
+    "id": 43680,
+    "name": "Chirwagur Loach",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Urqopacha",
+    "spot": "Chirwagur Lake",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20,
+      "y": 37,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43851,
+          "name": "Silkmoth Pupa"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43681,
+    "name": "Alright Alright Alright",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Urqopacha",
+    "spot": "Chirwagur Lake",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20,
+      "y": 37,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43851,
+          "name": "Silkmoth Pupa"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43682,
+    "name": "Zorlortor",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Urqopacha",
+    "spot": "Chirwagur Lake",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20,
+      "y": 37,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43851,
+          "name": "Silkmoth Pupa"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43683,
+    "name": "Shooting Starscale",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Urqopacha",
+    "spot": "Chirwagur Lake",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20,
+      "y": 37,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43851,
+          "name": "Silkmoth Pupa"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 51999,
+    "name": "Ole Ole Ole",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Urqopacha",
+    "spot": "Chirwagur Lake",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 20,
+      "y": 37,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Worlar's Echo",
+      "x": 30.8,
+      "y": 34.2
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        120
+      ]
+    ],
+    "weather": [
+      "Snow"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43854,
+          "name": "White Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "lure": "Ambitious",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.5
+  },
+  {
+    "id": 43684,
+    "name": "First Feastfish",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.3,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43685,
+    "name": "Urqofrog",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.3,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "lure": "Modest",
+    "folklore": "Yok Turali Fishing Folklore",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43686,
+    "name": "Zeh Tortoh",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.3,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43687,
+    "name": "Morsel Trout",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.3,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43688,
+    "name": "Deepwarden",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.3,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43905,
+    "name": "Qor Pirarucu",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.3,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 46189,
+    "name": "Prime Adjudicator",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.3,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "big": true,
+    "times": [
+      [
+        720,
+        240
+      ]
+    ],
+    "weather": [
+      "Fog"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.3
+  },
+  {
+    "id": 52007,
+    "name": "Ner Lar Dor",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.3,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "big": true,
+    "times": [
+      [
+        900,
+        60
+      ]
+    ],
+    "weather": [
+      "Wind"
+    ],
+    "previousWeather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "lure": "Modest",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.55
+  },
+  {
+    "id": 43803,
+    "name": "Turali Loach",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.4,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43804,
+    "name": "Yok Huy Toad",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.4,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43805,
+    "name": "Stone Pleco",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.4,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43806,
+    "name": "Shark Catfish",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.4,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43807,
+    "name": "Zeh Lar Dor",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.4,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43808,
+    "name": "Karvarichthys",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Urqopacha",
+    "spot": "Karvarhur the First",
+    "map": {
+      "image": "y6f1-00",
+      "scale": 100,
+      "x": 6.3,
+      "y": 20.4,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Wachunpelo",
+      "x": 28.1,
+      "y": 13.2
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43694,
+    "name": "Plattershell",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Kozama'uka",
+    "spot": "Waters Hanu",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.9,
+      "y": 12.9,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43904,
+    "name": "Yok Huy Pleco",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Kozama'uka",
+    "spot": "Waters Hanu",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.9,
+      "y": 12.9,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 44341,
+    "name": "Cazuela Crab",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Kozama'uka",
+    "spot": "Waters Hanu",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.9,
+      "y": 12.9,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        240
+      ]
+    ],
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.1
+  },
+  {
+    "id": 52012,
+    "name": "Pote'uka",
+    "method": "Fishing",
+    "level": 91,
+    "zone": "Kozama'uka",
+    "spot": "Waters Hanu",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.9,
+      "y": 12.9,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true
+  },
+  {
+    "id": 43689,
+    "name": "Kozama'uka Skipper",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Kozama'uka",
+    "spot": "Bopo'uihih",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 10.6,
+      "y": 12.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43690,
+    "name": "Bopo'u Sleeper",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Kozama'uka",
+    "spot": "Bopo'uihih",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 10.6,
+      "y": 12.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43691,
+    "name": "Poison Dyefrog",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Kozama'uka",
+    "spot": "Bopo'uihih",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 10.6,
+      "y": 12.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43692,
+    "name": "Pleated Matamata",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Kozama'uka",
+    "spot": "Bopo'uihih",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 10.6,
+      "y": 12.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ],
+      [
+        {
+          "id": 43691,
+          "name": "Poison Dyefrog"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43693,
+    "name": "Uyuy Xage",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Kozama'uka",
+    "spot": "Bopo'uihih",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 10.6,
+      "y": 12.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ],
+      [
+        {
+          "id": 43691,
+          "name": "Poison Dyefrog"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 44334,
+    "name": "Oily Ropefish",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Kozama'uka",
+    "spot": "Bopo'uihih",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 10.6,
+      "y": 12.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 47989,
+    "name": "Muttering Matamata",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Kozama'uka",
+    "spot": "Bopo'uihih",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 10.6,
+      "y": 12.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "big": true,
+    "times": [
+      [
+        720,
+        120
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ],
+      [
+        {
+          "id": 43691,
+          "name": "Poison Dyefrog"
+        }
+      ]
+    ],
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.2
+  },
+  {
+    "id": 43695,
+    "name": "Candiru",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zu",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 29.2,
+      "y": 12,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43696,
+    "name": "Trahira",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zu",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 29.2,
+      "y": 12,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43697,
+    "name": "Driftwood Catfish",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zu",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 29.2,
+      "y": 12,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43698,
+    "name": "Oho Hunu",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "The Dewspun Bank",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 37.9,
+      "y": 33.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43699,
+    "name": "Bronze Pleco",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "The Dewspun Bank",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 37.9,
+      "y": 33.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43700,
+    "name": "Crenicichla",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "The Dewspun Bank",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 37.9,
+      "y": 33.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43704,
+    "name": "Ku'uxage Bitterling",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Ku'uxage",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.7,
+      "y": 21.1,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43705,
+    "name": "Tonguesnatcher",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Ku'uxage",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.7,
+      "y": 21.1,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43706,
+    "name": "Corn Dace",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Ku'uxage",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.7,
+      "y": 21.1,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43707,
+    "name": "Ka Puyhu",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Ku'uxage",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.7,
+      "y": 21.1,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 46190,
+    "name": "Crenicichla Miyaka",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "The Dewspun Bank",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 37.9,
+      "y": 33.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "big": true,
+    "times": [
+      [
+        360,
+        120
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "lure": "Ambitious",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.3
+  },
+  {
+    "id": 46249,
+    "name": "Purple Palate",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Ku'uxage",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.7,
+      "y": 21.1,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Yok Turali Fishing Folklore",
+    "collectable": true,
+    "patch": 7.3
+  },
+  {
+    "id": 47990,
+    "name": "Riverlong Candiru",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zu",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 29.2,
+      "y": 12,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.2
+  },
+  {
+    "id": 49796,
+    "name": "Shuckfin Dace",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Ku'uxage",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 22.7,
+      "y": 21.1,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Ok'hanu",
+      "x": 18.1,
+      "y": 11.9
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        120
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.4
+  },
+  {
+    "id": 52008,
+    "name": "Xehabopo'u",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zu",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 29.2,
+      "y": 12,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
+    "big": true,
+    "times": [
+      [
+        780,
+        120
+      ]
+    ],
+    "weather": [
+      "Showers"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ],
+      [
+        {
+          "id": 43697,
+          "name": "Driftwood Catfish"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 43697,
+        "name": "Driftwood Catfish",
+        "count": 6
+      }
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.55
+  },
+  {
+    "id": 43701,
+    "name": "Hunu Peacock Bass",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Peaks Poga",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 40,
+      "y": 15.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43702,
+    "name": "Pelubane",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Peaks Poga",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 40,
+      "y": 15.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43703,
+    "name": "Giant Trahira",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Peaks Poga",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 40,
+      "y": 15.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43708,
+    "name": "Ligaka Guppy",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zoma",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 14.5,
+      "y": 28.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43709,
+    "name": "Dumplingfish",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zoma",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 14.5,
+      "y": 28.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43710,
+    "name": "Banded Candiru",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zoma",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 14.5,
+      "y": 28.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ],
+      [
+        {
+          "id": 43709,
+          "name": "Dumplingfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43711,
+    "name": "Oxydoras",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zoma",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 14.5,
+      "y": 28.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ],
+      [
+        {
+          "id": 43709,
+          "name": "Dumplingfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 44337,
+    "name": "Honeycomb Sponge",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zoma",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 14.5,
+      "y": 28.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 49795,
+    "name": "Punutiy Pain",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Peaks Poga",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 40,
+      "y": 15.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Dock Poga",
+      "x": 37.3,
+      "y": 16.8
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        240
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ],
+      [
+        {
+          "id": 43701,
+          "name": "Hunu Peacock Bass"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.4
+  },
+  {
+    "id": 52000,
+    "name": "Iron Oxydoras",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Kozama'uka",
+    "spot": "Miyakabek'zoma",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 14.5,
+      "y": 28.6,
+      "radius": 4
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "big": true,
+    "times": [
+      [
+        780,
+        120
+      ]
+    ],
+    "weather": [
+      "Fog"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ],
+      [
+        {
+          "id": 43709,
+          "name": "Dumplingfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.5
+  },
+  {
+    "id": 43712,
+    "name": "Spotted Stingray",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 31.6,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ],
+      [
+        {
+          "id": 43709,
+          "name": "Dumplingfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43713,
+    "name": "Yellow Peacock Bass",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 31.6,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "times": [
+      [
+        720,
+        60
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ],
+      [
+        {
+          "id": 43709,
+          "name": "Dumplingfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Yok Turali Fishing Folklore",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43714,
+    "name": "Shovelnose Catfish",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 31.6,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43809,
+    "name": "Severum",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Eastern Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 27.8,
+      "y": 30.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43810,
+    "name": "Ligaka Blossom",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Eastern Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 27.8,
+      "y": 30.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43811,
+    "name": "Potglaze Stingray",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Eastern Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 27.8,
+      "y": 30.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43812,
+    "name": "Emberwisp",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Eastern Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 27.8,
+      "y": 30.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43813,
+    "name": "Ihuyka Colossoma",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Eastern Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 27.8,
+      "y": 30.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43814,
+    "name": "Torchtail",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Eastern Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 27.8,
+      "y": 30.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43815,
+    "name": "Variegated Sisterscale",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Western Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 21.2,
+      "y": 33.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43816,
+    "name": "Kozama'uka Characin",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Western Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 21.2,
+      "y": 33.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43817,
+    "name": "Charcoal Eel",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Western Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 21.2,
+      "y": 33.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43818,
+    "name": "Rainbow Pipira",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Western Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 21.2,
+      "y": 33.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43819,
+    "name": "Lau Lau",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Western Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 21.2,
+      "y": 33.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43820,
+    "name": "Ligaka Pirarucu",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Western Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 21.2,
+      "y": 33.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Earthenshire",
+      "x": 11.9,
+      "y": 27.7
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43821,
+    "name": "Piraputanga",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Marsh Ligaka Depths",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 25.2,
+      "y": 31.3,
+      "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43822,
+    "name": "Purussaurus",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Marsh Ligaka Depths",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 25.2,
+      "y": 31.3,
+      "radius": 0.5
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 52001,
+    "name": "Excavator Catfish",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Kozama'uka",
+    "spot": "Marsh Ligaka",
+    "map": {
+      "image": "y6f2-00",
+      "scale": 100,
+      "x": 25.8,
+      "y": 31.6,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Many Fires",
+      "x": 32.3,
+      "y": 25.6
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        120
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.5
+  },
+  {
+    "id": 43719,
+    "name": "Iq Br'aax Sailfin",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Yak T'el",
+    "spot": "Iq Br'aax Reservoir",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 13.7,
+      "y": 12.7,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43720,
+    "name": "Hunmu Ob",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Yak T'el",
+    "spot": "Iq Br'aax Reservoir",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 13.7,
+      "y": 12.7,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 47991,
+    "name": "Deep Canopy",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Yak T'el",
+    "spot": "Iq Br'aax Reservoir",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 13.7,
+      "y": 12.7,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "big": true,
+    "times": [
+      [
+        600,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.2
+  },
+  {
+    "id": 52014,
+    "name": "Iq Ebaji",
+    "method": "Fishing",
+    "level": 92,
+    "zone": "Yak T'el",
+    "spot": "Iq Br'aax Reservoir",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 13.7,
+      "y": 12.7,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true
+  },
+  {
+    "id": 43715,
+    "name": "Shimmering Shadow",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8.2,
+      "y": 11.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43716,
+    "name": "Ut'ohmu Dawnfish",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8.2,
+      "y": 11.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43717,
+    "name": "Belonesox",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8.2,
+      "y": 11.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43718,
+    "name": "Xd'aa Talat Cichlid",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8.2,
+      "y": 11.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 44343,
+    "name": "Ilyon Asoh Cichlid",
+    "method": "Fishing",
+    "level": 93,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8.2,
+      "y": 11.9,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "big": true,
+    "weather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.1
+  },
+  {
+    "id": 43721,
+    "name": "Apoda",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Yak Awak Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.1,
+      "y": 8.8,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43722,
+    "name": "Mirror Carp",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Yak Awak Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.1,
+      "y": 8.8,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43723,
+    "name": "Tsoly Mu",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 31.8,
+      "y": 6.8,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43724,
+    "name": "Iq Rrax Leaffish",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 31.8,
+      "y": 6.8,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43725,
+    "name": "Archmatron Angelfish",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 31.8,
+      "y": 6.8,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43726,
+    "name": "Yak T'el Salamander",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 31.8,
+      "y": 6.8,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43727,
+    "name": "Shadowtongue",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 31.8,
+      "y": 6.8,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43728,
+    "name": "Cloud-eye Carp",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Xobr'it Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 33.3,
+      "y": 16.6,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43729,
+    "name": "Xobr'it Lobster",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Xobr'it Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 33.3,
+      "y": 16.6,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43730,
+    "name": "Sunbright Axolotl",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Xobr'it Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 33.3,
+      "y": 16.6,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ],
+      [
+        {
+          "id": 43728,
+          "name": "Cloud-eye Carp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43731,
+    "name": "Horned Frog",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Xobr'it Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 33.3,
+      "y": 16.6,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "times": [
+      [
+        0,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ],
+      [
+        {
+          "id": 43728,
+          "name": "Cloud-eye Carp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43732,
+    "name": "Mudfish",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Ankledeep",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8,
+      "y": 27.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43733,
+    "name": "Turali Beaded Lizard",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Ankledeep",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8,
+      "y": 27.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43734,
+    "name": "Yak T'el Catfish",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Ankledeep",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8,
+      "y": 27.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43735,
+    "name": "Ankledeep Catfish",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Ankledeep",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8,
+      "y": 27.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43736,
+    "name": "Checkered Cichlid",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Cenote Moxutural",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 21.7,
+      "y": 20.3,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43737,
+    "name": "Moxutural Gar",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Cenote Moxutural",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 21.7,
+      "y": 20.3,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43738,
+    "name": "Variatus",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Cenote Jayunja",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.7,
+      "y": 32,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43739,
+    "name": "Welkin Catfish",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Cenote Jayunja",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.7,
+      "y": 32,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43740,
+    "name": "Flawless Saucer",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Cenote Jayunja",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.7,
+      "y": 32,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        },
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43743,
+    "name": "Blind Brotula",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Bitterbark Cenote",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 25.5,
+      "y": 39,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43744,
+    "name": "Yak T'el Caiman",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Bitterbark Cenote",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 25.5,
+      "y": 39,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 44335,
+    "name": "Yak Awak Core",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Yak Awak Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.1,
+      "y": 8.8,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 44338,
+    "name": "Cenote Oyster",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Bitterbark Cenote",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 25.5,
+      "y": 39,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 46191,
+    "name": "Iron Shadowtongue",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 31.8,
+      "y": 6.8,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        120
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.3
+  },
+  {
+    "id": 46192,
+    "name": "Lotl-in-waiting",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Xobr'it Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 33.3,
+      "y": 16.6,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43849,
+          "name": "Golden Stonefly Nymph"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ],
+      [
+        {
+          "id": 43728,
+          "name": "Cloud-eye Carp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.3
+  },
+  {
+    "id": 47992,
+    "name": "Awaksbane Apoda",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Yak Awak Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.1,
+      "y": 8.8,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "big": true,
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.2
+  },
+  {
+    "id": 49797,
+    "name": "Shin Snuffler",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Ankledeep",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 8,
+      "y": 27.2,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        120
+      ]
+    ],
+    "weather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 43735,
+        "name": "Ankledeep Catfish",
+        "count": 3
+      }
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.4
+  },
+  {
+    "id": 49798,
+    "name": "Moxutural Greatgar",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Cenote Moxutural",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 21.7,
+      "y": 20.3,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        120
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ],
+      [
+        {
+          "id": 43736,
+          "name": "Checkered Cichlid"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.4
+  },
+  {
+    "id": 52002,
+    "name": "Moonmarking Saucer",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Cenote Jayunja",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.7,
+      "y": 32,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        300
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "previousWeather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ],
+      [
+        {
+          "id": 43740,
+          "name": "Flawless Saucer"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.5
+  },
+  {
+    "id": 52004,
+    "name": "Bitterbark Caiman ",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Bitterbark Cenote",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 25.5,
+      "y": 39,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        120
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ],
+      [
+        {
+          "id": 43743,
+          "name": "Blind Brotula"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.5
+  },
+  {
+    "id": 52009,
+    "name": "Skyfrond",
+    "method": "Fishing",
+    "level": 94,
+    "zone": "Yak T'el",
+    "spot": "Cenote Jayunja",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 19.7,
+      "y": 32,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        300
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "previousWeather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ],
+      [
+        {
+          "id": 43740,
+          "name": "Flawless Saucer"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 52002,
+        "name": "Moonmarking Saucer",
+        "count": 1
+      },
+      {
+        "id": 43740,
+        "name": "Flawless Saucer",
+        "count": 3
+      }
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.55
+  },
+  {
+    "id": 43823,
+    "name": "Turali Land Crab",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 5.3,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43824,
+    "name": "Crested Goby",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 5.3,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43825,
+    "name": "Tsoly Turtle",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 5.3,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43826,
+    "name": "Viperfish",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 5.3,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43827,
+    "name": "Horizon Crocodile",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 5.3,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43828,
+    "name": "Tsoly Gar",
+    "method": "Spearfishing",
+    "level": 95,
+    "zone": "Yak T'el",
+    "spot": "Xd'aa Talat Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 5.3,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43741,
+    "name": "Glittergill",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Yak T'el",
+    "spot": "Sapsweet Cenote",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 35,
+      "y": 32.7,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43742,
+    "name": "Twig Catfish",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Yak T'el",
+    "spot": "Sapsweet Cenote",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 35,
+      "y": 32.7,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        },
+        {
+          "id": 43852,
+          "name": "Honeybee"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 52003,
+    "name": "Autarch's Supper",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Yak T'el",
+    "spot": "Sapsweet Cenote",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 35,
+      "y": 32.7,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        120
+      ]
+    ],
+    "weather": [
+      "Fog"
+    ],
+    "previousWeather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.5
+  },
+  {
+    "id": 43745,
+    "name": "Ut'ohmu Tiika",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Yak T'el",
+    "spot": "Xty'iinbek Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 36.9,
+      "y": 25.9,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        },
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43746,
+    "name": "Sharknose Goby",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Yak T'el",
+    "spot": "Xty'iinbek Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 36.9,
+      "y": 25.9,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        },
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43747,
+    "name": "Yak T'el Crab",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Yak T'el",
+    "spot": "Xty'iinbek Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 36.9,
+      "y": 25.9,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        },
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ],
+      [
+        {
+          "id": 43746,
+          "name": "Sharknose Goby"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43748,
+    "name": "Xty'iinbek Sleeper",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Yak T'el",
+    "spot": "Xty'iinbek Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 36.9,
+      "y": 25.9,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        },
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ],
+      [
+        {
+          "id": 43746,
+          "name": "Sharknose Goby"
+        }
+      ],
+      [
+        {
+          "id": 43747,
+          "name": "Yak T'el Crab"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43749,
+    "name": "Chain Shark",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Yak T'el",
+    "spot": "Xty'iinbek Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 36.9,
+      "y": 25.9,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "times": [
+      [
+        1080,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        },
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ],
+      [
+        {
+          "id": 43746,
+          "name": "Sharknose Goby"
+        }
+      ],
+      [
+        {
+          "id": 43747,
+          "name": "Yak T'el Crab"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Yok Turali Fishing Folklore",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 44342,
+    "name": "Stardust Sleeper",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Yak T'el",
+    "spot": "Xty'iinbek Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 36.9,
+      "y": 25.9,
+      "radius": 1.6
+    },
+    "aetheryte": {
+      "name": "Mamook",
+      "x": 35.9,
+      "y": 32
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43850,
+          "name": "Crimson Lugworm"
+        },
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ],
+      [
+        {
+          "id": 43746,
+          "name": "Sharknose Goby"
+        }
+      ],
+      [
+        {
+          "id": 43747,
+          "name": "Yak T'el Crab"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Yok Turali Fishing Folklore",
+    "patch": 7.1
+  },
+  {
+    "id": 43829,
+    "name": "Sunlit Prism",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Western Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 28.7,
+      "y": 4.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43830,
+    "name": "Fategazer",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Western Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 28.7,
+      "y": 4.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43831,
+    "name": "Frillfin Goby",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Western Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 28.7,
+      "y": 4.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43832,
+    "name": "Black Ibruq",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Western Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 28.7,
+      "y": 4.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43833,
+    "name": "Speckled Peacock Bass",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Western Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 28.7,
+      "y": 4.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43834,
+    "name": "Golden Characin",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Western Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 28.7,
+      "y": 4.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43835,
+    "name": "Deadleaf Minnow",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Eastern Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 34.7,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43836,
+    "name": "Glistening Discus",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Eastern Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 34.7,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43837,
+    "name": "Lightning Eel",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Eastern Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 34.7,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43838,
+    "name": "Longwhisker Lungfish",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Eastern Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 34.7,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43839,
+    "name": "Minted Arowana",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Eastern Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 34.7,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43840,
+    "name": "Br'aaxfish",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Eastern Iq Rrax Tsoly",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 34.7,
+      "y": 7.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43841,
+    "name": "Iq Rrax Crab",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Iq Rrax Tsoly Depths",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 31.5,
+      "y": 7.1,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43842,
+    "name": "Wivre Cod",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Yak T'el",
+    "spot": "Iq Rrax Tsoly Depths",
+    "map": {
+      "image": "y6f3-00",
+      "scale": 100,
+      "x": 31.5,
+      "y": 7.1,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Iq Br'aax",
+      "x": 13.5,
+      "y": 12.9
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43750,
+    "name": "Bonytail Chub",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Niikwerepi",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 29.8,
+      "y": 7.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43751,
+    "name": "Niikwerepi Trout",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Niikwerepi",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 29.8,
+      "y": 7.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43752,
+    "name": "Pyariyoanaan Cichlid",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Niikwerepi",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 29.8,
+      "y": 7.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43753,
+    "name": "Shaaloani Salmon",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Niikwerepi",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 29.8,
+      "y": 7.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43757,
+    "name": "Zorgor Core",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Westbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 16.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43853,
+          "name": "Cactuar Jig"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43758,
+    "name": "Cloudribbon",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Westbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 16.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43853,
+          "name": "Cactuar Jig"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43759,
+    "name": "Zorgor Scorpion",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Westbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 16.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43853,
+          "name": "Cactuar Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43760,
+    "name": "Vagrant Cascade",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Westbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 16.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43853,
+          "name": "Cactuar Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43761,
+    "name": "Zorgor Condor",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Westbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 16.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43853,
+          "name": "Cactuar Jig"
+        },
+        {
+          "id": 43857,
+          "name": "Dragonfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "lure": "Ambitious",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 44345,
+    "name": "Hwittayoanaan Cichlid",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Niikwerepi",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 29.8,
+      "y": 7.4,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "weather": [
+      "Clear Skies",
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Xak Turali Fishing Folklore",
+    "patch": 7.1
+  },
+  {
+    "id": 46779,
+    "name": "Sunray Ray",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Westbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 16.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43857,
+          "name": "Dragonfly"
+        }
+      ]
+    ],
+    "tug": "heavy",
+    "patch": 7.3
+  },
+  {
+    "id": 52005,
+    "name": "Vagrant Keeper",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Westbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 16.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "big": true,
+    "times": [
+      [
+        360,
+        120
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Gales"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43857,
+          "name": "Dragonfly"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 43760,
+        "name": "Vagrant Cascade",
+        "count": 3
+      }
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Xak Turali Fishing Folklore",
+    "patch": 7.5
+  },
+  {
+    "id": 52015,
+    "name": "Yowekwa Inkhead",
+    "method": "Fishing",
+    "level": 95,
+    "zone": "Shaaloani",
+    "spot": "Westbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 16.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true
+  },
+  {
+    "id": 43754,
+    "name": "Trailtrout",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.5,
+      "y": 13.8,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43755,
+    "name": "Toari Sucker",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.5,
+      "y": 13.8,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43756,
+    "name": "Turali Paddlefish",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.5,
+      "y": 13.8,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43762,
+    "name": "Cloud Wasp",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Eastbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 33.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43857,
+          "name": "Dragonfly"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "lure": "Modest",
+    "folklore": "Xak Turali Fishing Folklore",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43763,
+    "name": "Azure Glider",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Eastbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 33.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43853,
+          "name": "Cactuar Jig"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43764,
+    "name": "Hellsnow Shark",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Eastbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 33.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43853,
+          "name": "Cactuar Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43906,
+    "name": "Raging Hanuhead",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Eastbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 33.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43853,
+          "name": "Cactuar Jig"
+        },
+        {
+          "id": 43857,
+          "name": "Dragonfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 44347,
+    "name": "Cloudsail",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Eastbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 33.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43853,
+          "name": "Cactuar Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Xak Turali Fishing Folklore",
+    "patch": 7.1
+  },
+  {
+    "id": 46193,
+    "name": "Azure Diver",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Eastbound Zorgor",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 33.1,
+      "y": 38.2,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Hhusatahwi",
+      "x": 29.1,
+      "y": 30.8
+    },
+    "big": true,
+    "times": [
+      [
+        1080,
+        360
+      ]
+    ],
+    "weather": [
+      "Gales"
+    ],
+    "previousWeather": [
+      "Clear Skies",
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43857,
+          "name": "Dragonfly"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Xak Turali Fishing Folklore",
+    "patch": 7.3
+  },
+  {
+    "id": 47993,
+    "name": "Ttokatoa",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.5,
+      "y": 13.8,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "weather": [
+      "Dust Storms"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ],
+      [
+        {
+          "id": 43751,
+          "name": "Niikwerepi Trout"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Xak Turali Fishing Folklore",
+    "patch": 7.2
+  },
+  {
+    "id": 52010,
+    "name": "Rroneek Bichir",
+    "method": "Fishing",
+    "level": 96,
+    "zone": "Shaaloani",
+    "spot": "Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.5,
+      "y": 13.8,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "big": true,
+    "times": [
+      [
+        1320,
+        120
+      ]
+    ],
+    "weather": [
+      "Dust Storms"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ],
+      [
+        {
+          "id": 43751,
+          "name": "Niikwerepi Trout"
+        }
+      ],
+      [
+        {
+          "id": 47993,
+          "name": "Ttokatoa"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Xak Turali Fishing Folklore",
+    "patch": 7.55
+  },
+  {
+    "id": 43843,
+    "name": "Warmouth",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Shaaloani",
+    "spot": "Northern Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.6,
+      "y": 11.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43844,
+    "name": "Shaaloani Goby",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Shaaloani",
+    "spot": "Northern Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.6,
+      "y": 11.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43845,
+    "name": "Sauger",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Shaaloani",
+    "spot": "Northern Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.6,
+      "y": 11.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43846,
+    "name": "Niikwerepi Bass",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Shaaloani",
+    "spot": "Northern Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.6,
+      "y": 11.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43847,
+    "name": "Longnose Gar",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Shaaloani",
+    "spot": "Northern Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.6,
+      "y": 11.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43848,
+    "name": "Midnight Carp",
+    "method": "Spearfishing",
+    "level": 100,
+    "zone": "Shaaloani",
+    "spot": "Northern Lake Toari",
+    "map": {
+      "image": "x6f1-00",
+      "scale": 100,
+      "x": 31.6,
+      "y": 11.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Mehwahhetsoan",
+      "x": 27.7,
+      "y": 10.1
+    },
+    "anyTime": true,
+    "patch": 7
+  },
+  {
+    "id": 43765,
+    "name": "Heritage Loach",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Heritage Found",
+    "spot": "Outskirts Shallows",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 19.8,
+      "y": 8.9,
+      "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "The Outskirts",
+      "x": 17.1,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43766,
+    "name": "Outskirts Sniffer",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Heritage Found",
+    "spot": "Outskirts Shallows",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 19.8,
+      "y": 8.9,
+      "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "The Outskirts",
+      "x": 17.1,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43767,
+    "name": "Pumpkin Perch",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Heritage Found",
+    "spot": "Outskirts Shallows",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 19.8,
+      "y": 8.9,
+      "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "The Outskirts",
+      "x": 17.1,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43768,
+    "name": "Tiger Muskellunge",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Heritage Found",
+    "spot": "Outskirts Shallows",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 19.8,
+      "y": 8.9,
+      "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "The Outskirts",
+      "x": 17.1,
+      "y": 9.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43769,
+    "name": "Moon Croppie",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Heritage Found",
+    "spot": "The Driftdowns",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 13.1,
+      "y": 17.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43770,
+    "name": "Driftdowns Trout",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Heritage Found",
+    "spot": "The Driftdowns",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 13.1,
+      "y": 17.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 44346,
+    "name": "Thunderswift Trout",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Heritage Found",
+    "spot": "The Driftdowns",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 13.1,
+      "y": 17.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "big": true,
+    "times": [
+      [
+        540,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "lure": "Ambitious",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.1
+  },
+  {
+    "id": 46194,
+    "name": "Sprouting Perch",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Heritage Found",
+    "spot": "Outskirts Shallows",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 19.8,
+      "y": 8.9,
+      "radius": 2.8
+    },
+    "aetheryte": {
+      "name": "The Outskirts",
+      "x": 17.1,
+      "y": 9.8
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "weather": [
+      "Thunderstorms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.3
+  },
+  {
+    "id": 52016,
+    "name": "Burst Lungfish",
+    "method": "Fishing",
+    "level": 97,
+    "zone": "Heritage Found",
+    "spot": "The Driftdowns",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 13.1,
+      "y": 17.4,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 43771,
+    "name": "Electrobetta",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Heritage Found",
+    "spot": "Crackling Canyons",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 32.3,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43772,
+    "name": "Thundering Redbelly",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Heritage Found",
+    "spot": "Crackling Canyons",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 32.3,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43773,
+    "name": "Yyasulani Bowfin",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Heritage Found",
+    "spot": "Crackling Canyons",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 32.3,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43774,
+    "name": "Crackling Flounder",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Heritage Found",
+    "spot": "Crackling Canyons",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 32.3,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43775,
+    "name": "Goldgrouper",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Heritage Found",
+    "spot": "Alexandrian Ruins",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 6.8,
+      "y": 34,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "lure": "Ambitious",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 46188,
+    "name": "Goldentail",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Heritage Found",
+    "spot": "Crackling Canyons",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 32.3,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.3
+  },
+  {
+    "id": 47994,
+    "name": "Thunderous Flounder",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Heritage Found",
+    "spot": "Crackling Canyons",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 21.5,
+      "y": 32.3,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "big": true,
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.2
+  },
+  {
+    "id": 49799,
+    "name": "Heirloom Goldgrouper",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Heritage Found",
+    "spot": "Alexandrian Ruins",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 6.8,
+      "y": 34,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "big": true,
+    "times": [
+      [
+        720,
+        240
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.4
+  },
+  {
+    "id": 52297,
+    "name": "Great Ball of Lightning",
+    "method": "Fishing",
+    "level": 98,
+    "zone": "Heritage Found",
+    "spot": "Alexandrian Ruins",
+    "map": {
+      "image": "x6f2-00",
+      "scale": 100,
+      "x": 6.8,
+      "y": 34,
+      "radius": 2
+    },
+    "aetheryte": {
+      "name": "Electrope Strike",
+      "x": 17.1,
+      "y": 23.9
+    },
+    "big": true,
+    "times": [
+      [
+        120,
+        120
+      ]
+    ],
+    "weather": [
+      "Umbral Static"
+    ],
+    "previousWeather": [
+      "Thunderstorms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 43775,
+        "name": "Goldgrouper",
+        "count": 1
+      }
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.55
+  },
+  {
+    "id": 43780,
+    "name": "Rosebud Frog",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "The Knowable",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 7.2,
+      "y": 14.3,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43781,
+    "name": "Knight Goby",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "The Knowable",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 7.2,
+      "y": 14.3,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43782,
+    "name": "Windspath Eel",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "The Knowable",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 7.2,
+      "y": 14.3,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43783,
+    "name": "Harlequin Lancer",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "The Knowable",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 7.2,
+      "y": 14.3,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43786,
+    "name": "Datnioides",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "Leynode Aero",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 16.2,
+      "y": 13.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        },
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43787,
+    "name": "Neo Arowana",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "Leynode Aero",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 16.2,
+      "y": 13.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        },
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43788,
+    "name": "Canal Bream",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "Canal Town South",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 14.3,
+      "y": 34.8,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43856,
+          "name": "Shucked Clam"
+        },
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43789,
+    "name": "Iris Wrasse",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "Canal Town South",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 14.3,
+      "y": 34.8,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43856,
+          "name": "Shucked Clam"
+        },
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43790,
+    "name": "Canal Drum",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "Canal Town South",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 14.3,
+      "y": 34.8,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        },
+        {
+          "id": 43856,
+          "name": "Shucked Clam"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43791,
+    "name": "Butterfly Ray",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "Canal Town South",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 14.3,
+      "y": 34.8,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        },
+        {
+          "id": 43856,
+          "name": "Shucked Clam"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43792,
+    "name": "Hydro Louvar",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "Canal Town South",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 14.3,
+      "y": 34.8,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Alexandrian Fishing Folklore",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 46196,
+    "name": "Gondola Louvar",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "Canal Town South",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 14.3,
+      "y": 34.8,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        240
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.3
+  },
+  {
+    "id": 47995,
+    "name": "Harlequin Queen",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "The Knowable",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 7.2,
+      "y": 14.3,
+      "radius": 0.8
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        120
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "lure": "Ambitious",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.2
+  },
+  {
+    "id": 49800,
+    "name": "Datnioides Aeroplanos",
+    "method": "Fishing",
+    "level": 99,
+    "zone": "Living Memory",
+    "spot": "Leynode Aero",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 16.2,
+      "y": 13.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "big": true,
+    "times": [
+      [
+        120,
+        120
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "previousWeather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "lure": "Ambitious",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.4
+  },
+  {
+    "id": 43784,
+    "name": "Cleyran Carp",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Mu Springs Eternal",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 12.6,
+      "y": 11.5,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "lure": "Ambitious",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43785,
+    "name": "Giant Snakehead",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Mu Springs Eternal",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 12.6,
+      "y": 11.5,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43793,
+    "name": "Devotion Clam",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Canal Town North",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 9.5,
+      "y": 28.1,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43856,
+          "name": "Shucked Clam"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "snagging": true,
+    "patch": 7
+  },
+  {
+    "id": 43794,
+    "name": "Forgotten One",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Canal Town North",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 9.5,
+      "y": 28.1,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43795,
+    "name": "Copper Shark",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Canal Town North",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 9.5,
+      "y": 28.1,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "weather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "lure": "Ambitious",
+    "folklore": "Alexandrian Fishing Folklore",
+    "collectable": true,
+    "patch": 7
+  },
+  {
+    "id": 43796,
+    "name": "Golden Day",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Proto Alexandria",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 38.5,
+      "y": 31.6,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Leynode Pyro",
+      "x": 34.7,
+      "y": 15.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43797,
+    "name": "Starglass Gibel",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Proto Alexandria",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 38.5,
+      "y": 31.6,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Leynode Pyro",
+      "x": 34.7,
+      "y": 15.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 7
+  },
+  {
+    "id": 43798,
+    "name": "Scarlet Queen",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Proto Alexandria",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 38.5,
+      "y": 31.6,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Leynode Pyro",
+      "x": 34.7,
+      "y": 15.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43855,
+          "name": "Popper Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 43799,
+    "name": "Ultimoat Carp",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Proto Alexandria",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 38.5,
+      "y": 31.6,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Leynode Pyro",
+      "x": 34.7,
+      "y": 15.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 7
+  },
+  {
+    "id": 46195,
+    "name": "Gigagiant Snakehead",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Mu Springs Eternal",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 12.6,
+      "y": 11.5,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Leynode Aero",
+      "x": 16.4,
+      "y": 13.6
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        120
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 43781,
+        "name": "Knight Goby",
+        "count": 3
+      }
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.3
+  },
+  {
+    "id": 49801,
+    "name": "Esperance Carp",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Proto Alexandria",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 38.5,
+      "y": 31.6,
+      "radius": 1
+    },
+    "aetheryte": {
+      "name": "Leynode Pyro",
+      "x": 34.7,
+      "y": 15.8
+    },
+    "big": true,
+    "times": [
+      [
+        1320,
+        120
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43858,
+          "name": "Red Maggots"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 43796,
+        "name": "Golden Day",
+        "count": 3
+      },
+      {
+        "id": 43798,
+        "name": "Scarlet Queen",
+        "count": 3
+      }
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.4
+  },
+  {
+    "id": 52006,
+    "name": "Shined Copper Shark",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Canal Town North",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 9.5,
+      "y": 28.1,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        300
+      ]
+    ],
+    "weather": [
+      "Fog"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.5
+  },
+  {
+    "id": 52011,
+    "name": "Triple Threat",
+    "method": "Fishing",
+    "level": 100,
+    "zone": "Living Memory",
+    "spot": "Canal Town North",
+    "map": {
+      "image": "x6f3-00",
+      "scale": 100,
+      "x": 9.5,
+      "y": 28.1,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Leynode Mnemo",
+      "x": 21.5,
+      "y": 37.5
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        300
+      ]
+    ],
+    "weather": [
+      "Fog"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 43859,
+          "name": "Ghost Nipper"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 52006,
+        "name": "Shined Copper Shark",
+        "count": 1
+      },
+      {
+        "id": 43795,
+        "name": "Copper Shark",
+        "count": 2
+      }
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Alexandrian Fishing Folklore",
+    "patch": 7.55
+  }
+]

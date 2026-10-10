@@ -1,0 +1,6699 @@
+[
+  {
+    "id": 35604,
+    "name": "Giant Aetherlouse",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "Unmoved Source Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 5.4,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36397,
+    "name": "Butterfly Fry",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "Unmoved Source Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 5.4,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36398,
+    "name": "Xenocypris",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 18.6,
+      "y": 10.9,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36399,
+    "name": "Topminnow",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "Unmoved Source Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 5.4,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36400,
+    "name": "Tessera",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "Unmoved Source Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 5.4,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36402,
+    "name": "Fat Snook",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "Unmoved Source Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 5.4,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36403,
+    "name": "Prochilodus Luminosus",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 18.6,
+      "y": 10.9,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36404,
+    "name": "Mesonauta",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 18.6,
+      "y": 10.9,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36405,
+    "name": "Greengill Salmon",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 18.6,
+      "y": 10.9,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36680,
+    "name": "Jumbo Snook",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "Unmoved Source Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 17.6,
+      "y": 5.4,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "big": true,
+    "times": [
+      [
+        1080,
+        240
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.1
+  },
+  {
+    "id": 38831,
+    "name": "Mossgill Salmon",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Alpha",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 18.6,
+      "y": 10.9,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
+    "big": true,
+    "weather": [
+      "Rain"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.3
+  },
+  {
+    "id": 36407,
+    "name": "Raiamas",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "Unmoved Source Beta",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 32.3,
+      "y": 9.2,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36408,
+    "name": "Red Bowfin",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "Unmoved Source Beta",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 32.3,
+      "y": 9.2,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36409,
+    "name": "Macrobrachium Lar",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Beta",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 28.3,
+      "y": 15.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36410,
+    "name": "Blowgun",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Beta",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 28.3,
+      "y": 15.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36411,
+    "name": "Darksteel Knifefish",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Beta",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 28.3,
+      "y": 15.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36412,
+    "name": "Astacus Aetherius",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "Deepmoat",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 20.5,
+      "y": 16.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36414,
+    "name": "Labyrinthos Tilapia",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "Deepmoat",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 20.5,
+      "y": 16.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
+    "times": [
+      [
+        480,
+        480
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ],
+      [
+        {
+          "id": 36412,
+          "name": "Astacus Aetherius"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Northern Fishing Folklore",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 37846,
+    "name": "Swampsucker Bowfin",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "Unmoved Source Beta",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 32.3,
+      "y": 9.2,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        480
+      ]
+    ],
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Clear Skies",
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.2
+  },
+  {
+    "id": 39879,
+    "name": "Onyx Knifefish",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Beta",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 28.3,
+      "y": 15.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "big": true,
+    "times": [
+      [
+        1320,
+        240
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.4
+  },
+  {
+    "id": 39912,
+    "name": "The Fury's Aegis",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "The Mover Beta",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 28.3,
+      "y": 15.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Archeion",
+      "x": 30.4,
+      "y": 11.9
+    },
+    "times": [
+      [
+        960,
+        180
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Northern Fishing Folklore",
+    "collectable": true,
+    "patch": 6.4
+  },
+  {
+    "id": 41401,
+    "name": "Circuit Tilapia",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "Deepmoat",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 20.5,
+      "y": 16.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        240
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ],
+      [
+        {
+          "id": 36412,
+          "name": "Astacus Aetherius"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.5
+  },
+  {
+    "id": 41407,
+    "name": "Hyphalosaurus",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Labyrinthos",
+    "spot": "Deepmoat",
+    "map": {
+      "image": "k5f1-00",
+      "scale": 100,
+      "x": 20.5,
+      "y": 16.1,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Sharlayan Hamlet",
+      "x": 21.7,
+      "y": 20.5
+    },
+    "big": true,
+    "times": [
+      [
+        540,
+        180
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Clear Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ],
+      [
+        {
+          "id": 36412,
+          "name": "Astacus Aetherius"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 36412,
+        "name": "Astacus Aetherius",
+        "count": 3
+      }
+    ],
+    "intuition": 90,
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.55
+  },
+  {
+    "id": 36420,
+    "name": "Thavnairian Goby",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "Yedlihmad",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 25.6,
+      "y": 36.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36421,
+    "name": "Qeyiq Sole",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "Yedlihmad",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 25.6,
+      "y": 36.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36422,
+    "name": "Gwl Crab",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "Yedlihmad",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 25.6,
+      "y": 36.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36423,
+    "name": "Pantherscale Grouper",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "Yedlihmad",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 25.6,
+      "y": 36.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36425,
+    "name": "Fate's Design",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "The Thavnairian Coast",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 33.4,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36426,
+    "name": "Shadowdart Sardine",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "The Thavnairian Coast",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 33.4,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36427,
+    "name": "Paksa Fish",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "The Thavnairian Coast",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 33.4,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36663,
+    "name": "Chalky Coral",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "The Thavnairian Coast",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 33.4,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 37847,
+    "name": "Lale Crab",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "Yedlihmad",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 25.6,
+      "y": 36.3,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "big": true,
+    "weather": [
+      "Fog"
+    ],
+    "previousWeather": [
+      "Clear Skies",
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.2
+  },
+  {
+    "id": 38935,
+    "name": "Jhinga",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "The Thavnairian Coast",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 33.4,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.3
+  },
+  {
+    "id": 41402,
+    "name": "Durdina Fish",
+    "method": "Fishing",
+    "level": 81,
+    "zone": "Thavnair",
+    "spot": "The Thavnairian Coast",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.6,
+      "y": 33.4,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ],
+      [
+        {
+          "id": 36426,
+          "name": "Shadowdart Sardine"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.5
+  },
+  {
+    "id": 35605,
+    "name": "Garjana Wrasse",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Thavnair",
+    "spot": "The Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.8,
+      "y": 22.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36430,
+    "name": "Golden Barramundi",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Thavnair",
+    "spot": "The Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.8,
+      "y": 22.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36431,
+    "name": "Kadjaya's Castaway",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Thavnair",
+    "spot": "Giantsgall Grounds",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 21,
+      "y": 8.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36432,
+    "name": "Marid Frog",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Thavnair",
+    "spot": "Giantsgall Grounds",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 21,
+      "y": 8.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36434,
+    "name": "Bluegill",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Thavnair",
+    "spot": "Giantsgall Grounds",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 21,
+      "y": 8.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36435,
+    "name": "Bronze Pipira",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Thavnair",
+    "spot": "Giantsgall Grounds",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 21,
+      "y": 8.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36682,
+    "name": "Hippo Frog",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Thavnair",
+    "spot": "Giantsgall Grounds",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 21,
+      "y": 8.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "big": true,
+    "weather": [
+      "Showers"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.1
+  },
+  {
+    "id": 38832,
+    "name": "Vidyutvat Wrasse",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Thavnair",
+    "spot": "The Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.8,
+      "y": 22.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.3
+  },
+  {
+    "id": 41061,
+    "name": "Sarikuyruk",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Thavnair",
+    "spot": "The Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 9.8,
+      "y": 22.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 36436,
+    "name": "Green Swordtail",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Wakeful Torana",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 9.4,
+      "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36438,
+    "name": "Ksirapayin",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Wakeful Torana",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 9.4,
+      "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36439,
+    "name": "Wakeful Watcher",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Wakeful Torana",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 9.4,
+      "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36440,
+    "name": "Red Drum",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Wakeful Torana",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 9.4,
+      "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "times": [
+      [
+        960,
+        480
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Northern Fishing Folklore",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36441,
+    "name": "Forgeflame",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Ksiroda",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 30.6,
+      "y": 21.4,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36442,
+    "name": "Bicuda",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Ksiroda",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 30.6,
+      "y": 21.4,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36443,
+    "name": "Radzbalik",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Pavana's Remorse",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24,
+      "y": 14.5,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36444,
+    "name": "Half-moon Betta",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Pavana's Remorse",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24,
+      "y": 14.5,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36446,
+    "name": "Banana Eel",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Pavana's Remorse",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24,
+      "y": 14.5,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36447,
+    "name": "Handy Hamsa",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.2,
+      "y": 24.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36448,
+    "name": "Flowerhorn",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.2,
+      "y": 24.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36449,
+    "name": "Thavnairian Caiman",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.2,
+      "y": 24.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36450,
+    "name": "Fiery Goby",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Perfumed Tides",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 7.4,
+      "y": 7.6,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36451,
+    "name": "Puff-paya",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Perfumed Tides",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 7.4,
+      "y": 7.6,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36452,
+    "name": "Narunnairian Octopus",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Perfumed Tides",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 7.4,
+      "y": 7.6,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36453,
+    "name": "Roosterfish",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Perfumed Tides",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 7.4,
+      "y": 7.6,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ],
+      [
+        {
+          "id": 36451,
+          "name": "Puff-paya"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36454,
+    "name": "Basilosaurus",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Perfumed Tides",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 7.4,
+      "y": 7.6,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "weather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ],
+      [
+        {
+          "id": 36451,
+          "name": "Puff-paya"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36522,
+    "name": "Thavnairian Cucumber",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Southern Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 14.9,
+      "y": 36.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36523,
+    "name": "Spiny King Crab",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Southern Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 14.9,
+      "y": 36.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36524,
+    "name": "Thavnairian Eel",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Southern Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 14.9,
+      "y": 36.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36525,
+    "name": "Gilled Topknot",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Southern Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 14.9,
+      "y": 36.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36526,
+    "name": "Purusa Fish",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Southern Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 14.9,
+      "y": 36.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36527,
+    "name": "Giantsgall Jaw",
+    "method": "Spearfishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Southern Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 14.9,
+      "y": 36.9,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36660,
+    "name": "Seedtoad",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Ksiroda",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 30.6,
+      "y": 21.4,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 36686,
+    "name": "Thavnairian Calamari",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Perfumed Tides",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 7.4,
+      "y": 7.6,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.1
+  },
+  {
+    "id": 37697,
+    "name": "Mayashell",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.2,
+      "y": 24.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "times": [
+      [
+        180,
+        180
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ],
+      [
+        {
+          "id": 36447,
+          "name": "Handy Hamsa"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Northern Fishing Folklore",
+    "collectable": true,
+    "patch": 6.2
+  },
+  {
+    "id": 37848,
+    "name": "Bigcuda",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Ksiroda",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 30.6,
+      "y": 21.4,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        480
+      ]
+    ],
+    "weather": [
+      "Rain",
+      "Showers"
+    ],
+    "previousWeather": [
+      "Clear Skies",
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.2
+  },
+  {
+    "id": 38833,
+    "name": "Browned Banana Eel",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "Pavana's Remorse",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24,
+      "y": 14.5,
+      "radius": 0.9
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "big": true,
+    "times": [
+      [
+        1320,
+        240
+      ]
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.3
+  },
+  {
+    "id": 39880,
+    "name": "Wakeful Warden",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Wakeful Torana",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 9.4,
+      "radius": 2.7
+    },
+    "aetheryte": {
+      "name": "Palaka's Stand",
+      "x": 29.6,
+      "y": 16.6
+    },
+    "big": true,
+    "weather": [
+      "Clouds"
+    ],
+    "previousWeather": [
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.4
+  },
+  {
+    "id": 39881,
+    "name": "Basilosaurus Rex",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Perfumed Tides",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 7.4,
+      "y": 7.6,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "big": true,
+    "weather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ],
+      [
+        {
+          "id": 36451,
+          "name": "Puff-paya"
+        }
+      ],
+      [
+        {
+          "id": 36454,
+          "name": "Basilosaurus"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.4
+  },
+  {
+    "id": 41403,
+    "name": "Mayaman",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.2,
+      "y": 24.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 36449,
+        "name": "Thavnairian Caiman",
+        "count": 5
+      }
+    ],
+    "intuition": 180,
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.5
+  },
+  {
+    "id": 41408,
+    "name": "Gharlichthys",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Thavnair",
+    "spot": "The Perfumed Tides",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 7.4,
+      "y": 7.6,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "big": true,
+    "times": [
+      [
+        840,
+        120
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Showers"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 36454,
+        "name": "Basilosaurus",
+        "count": 12
+      }
+    ],
+    "intuition": 300,
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.55
+  },
+  {
+    "id": 36528,
+    "name": "Akyaali Sardine",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Western Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 33.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36529,
+    "name": "Spicy Pickle",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Western Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 33.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36530,
+    "name": "Mayavahana",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Western Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 33.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36531,
+    "name": "Hedonfish",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Western Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 33.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "gig": "Normal",
+    "patch": 6
+  },
+  {
+    "id": 36532,
+    "name": "Satrap Trapfish",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Western Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 33.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36533,
+    "name": "Blue Marlin",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Western Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 8.3,
+      "y": 33.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36534,
+    "name": "Satrap's Whisper",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Southern Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 4.7,
+      "y": 28.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36535,
+    "name": "Tebqeyiq Smelt",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Outer Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 6.8,
+      "y": 36.3,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "predators": [
+      {
+        "id": 36531,
+        "name": "Hedonfish",
+        "count": 10
+      },
+      {
+        "id": 36547,
+        "name": "Dusky Shark",
+        "count": 3
+      },
+      {
+        "id": 36546,
+        "name": "Xiphactinus",
+        "count": 2
+      }
+    ],
+    "gig": "Small",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36536,
+    "name": "Shallows Cod",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Southern Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 4.7,
+      "y": 28.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36537,
+    "name": "Meyhane Reveler",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Southern Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 4.7,
+      "y": 28.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36538,
+    "name": "Daemir's Alloy",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Southern Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 4.7,
+      "y": 28.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36539,
+    "name": "Rasa Fish",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Southern Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 4.7,
+      "y": 28.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36540,
+    "name": "Agama's Palm",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.3,
+      "y": 24.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36541,
+    "name": "Rummy-nosed Tetra",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.3,
+      "y": 24.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36542,
+    "name": "Monksblade",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.3,
+      "y": 24.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36543,
+    "name": "Atamra Cichlid",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.3,
+      "y": 24.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36544,
+    "name": "Root of Maya",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.3,
+      "y": 24.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36545,
+    "name": "Floral Snakehead",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "The Font of Maya",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 24.3,
+      "y": 24.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Yedlihmad",
+      "x": 25.4,
+      "y": 34.1
+    },
+    "anyTime": true,
+    "patch": 6
+  },
+  {
+    "id": 36546,
+    "name": "Xiphactinus",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Outer Akyaali",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 6.8,
+      "y": 36.3,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "predators": [
+      {
+        "id": 36531,
+        "name": "Hedonfish",
+        "count": 10
+      }
+    ],
+    "gig": "Large",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36547,
+    "name": "Dusky Shark",
+    "method": "Spearfishing",
+    "level": 90,
+    "zone": "Thavnair",
+    "spot": "Southern Great Runoff",
+    "map": {
+      "image": "m5f1-00",
+      "scale": 100,
+      "x": 4.7,
+      "y": 28.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "The Great Work",
+      "x": 11,
+      "y": 22.2
+    },
+    "anyTime": true,
+    "gig": "Large",
+    "patch": 6
+  },
+  {
+    "id": 35606,
+    "name": "Garlean Clam",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Eblan Thaw",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 11.1,
+      "y": 30.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36456,
+    "name": "Eblan Trout",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Eblan Thaw",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 11.1,
+      "y": 30.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36457,
+    "name": "Animulus",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Eblan Thaw",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 11.1,
+      "y": 30.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36458,
+    "name": "Cerule Core",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Eblan Thaw",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 11.1,
+      "y": 30.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        },
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36459,
+    "name": "Icepike",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Eblan Thaw",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 11.1,
+      "y": 30.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36460,
+    "name": "Dark Crown",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Stainless Course",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 23,
+      "y": 9.2,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36461,
+    "name": "Imperial Pleco",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Stainless Course",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 23,
+      "y": 9.2,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36462,
+    "name": "Bluetail",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Stainless Course",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 23,
+      "y": 9.2,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36683,
+    "name": "Rimepike",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Eblan Thaw",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 11.1,
+      "y": 30.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
+    },
+    "big": true,
+    "weather": [
+      "Snow"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ],
+      [
+        {
+          "id": 36458,
+          "name": "Cerule Core"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.1
+  },
+  {
+    "id": 37849,
+    "name": "Sovereign Shadow",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Stainless Course",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 23,
+      "y": 9.2,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
+    },
+    "big": true,
+    "times": [
+      [
+        120,
+        360
+      ]
+    ],
+    "weather": [
+      "Snow"
+    ],
+    "previousWeather": [
+      "Clouds",
+      "Fog"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.2
+  },
+  {
+    "id": 41059,
+    "name": "Kitty Herring",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Stainless Course",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 23,
+      "y": 9.2,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Tertium",
+      "x": 31.9,
+      "y": 17.9
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 41409,
+    "name": "Snowy Parexus",
+    "method": "Fishing",
+    "level": 83,
+    "zone": "Garlemald",
+    "spot": "The Eblan Thaw",
+    "map": {
+      "image": "m5f2-00",
+      "scale": 100,
+      "x": 11.1,
+      "y": 30.7,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Camp Broken Glass",
+      "x": 13.3,
+      "y": 31.1
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        480
+      ]
+    ],
+    "weather": [
+      "Snow"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 36458,
+        "name": "Cerule Core",
+        "count": 3
+      }
+    ],
+    "intuition": 35,
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.55
+  },
+  {
+    "id": 36463,
+    "name": "Star-blue Guppy",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Mare Lamentorum",
+    "spot": "Greatest Endsvale",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 10.9,
+      "radius": 4.8
+    },
+    "aetheryte": {
+      "name": "Bestways Burrow",
+      "x": 21.5,
+      "y": 11.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36465,
+    "name": "Lunar Cichlid",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Mare Lamentorum",
+    "spot": "Greatest Endsvale",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 10.9,
+      "radius": 4.8
+    },
+    "aetheryte": {
+      "name": "Bestways Burrow",
+      "x": 21.5,
+      "y": 11.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36466,
+    "name": "Teareye",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Mare Lamentorum",
+    "spot": "Greatest Endsvale",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 10.9,
+      "radius": 4.8
+    },
+    "aetheryte": {
+      "name": "Bestways Burrow",
+      "x": 21.5,
+      "y": 11.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36467,
+    "name": "Replipirarucu",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Mare Lamentorum",
+    "spot": "Greatest Endsvale",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 10.9,
+      "radius": 4.8
+    },
+    "aetheryte": {
+      "name": "Bestways Burrow",
+      "x": 21.5,
+      "y": 11.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 37850,
+    "name": "Disappirarucu",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Mare Lamentorum",
+    "spot": "Greatest Endsvale",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 10.9,
+      "radius": 4.8
+    },
+    "aetheryte": {
+      "name": "Bestways Burrow",
+      "x": 21.5,
+      "y": 11.2
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        120
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.2
+  },
+  {
+    "id": 41058,
+    "name": "Ossicula",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Mare Lamentorum",
+    "spot": "Greatest Endsvale",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 32.6,
+      "y": 10.9,
+      "radius": 4.8
+    },
+    "aetheryte": {
+      "name": "Bestways Burrow",
+      "x": 21.5,
+      "y": 11.2
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 36468,
+    "name": "Feverfish",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Mare Lamentorum",
+    "spot": "The Chlorophospond",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 32.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36470,
+    "name": "Calicia",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Mare Lamentorum",
+    "spot": "The Chlorophospond",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 32.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36471,
+    "name": "Protomyke #987",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Mare Lamentorum",
+    "spot": "The Chlorophospond",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 32.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36472,
+    "name": "Lunar Deathworm",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Mare Lamentorum",
+    "spot": "The Chlorophospond",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 32.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
+    "weather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ],
+      [
+        {
+          "id": 36470,
+          "name": "Calicia"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36473,
+    "name": "Fleeting Brand",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Mare Lamentorum",
+    "spot": "The Frozen Fissure",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 22.8,
+      "y": 31.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36475,
+    "name": "Regotoise",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Mare Lamentorum",
+    "spot": "The Frozen Fissure",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 22.8,
+      "y": 31.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 38834,
+    "name": "Frozen Regotoise",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Mare Lamentorum",
+    "spot": "The Frozen Fissure",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 22.8,
+      "y": 31.8,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
+    "big": true,
+    "times": [
+      [
+        600,
+        180
+      ]
+    ],
+    "weather": [
+      "Umbral Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36595,
+          "name": "Chimera Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.3
+  },
+  {
+    "id": 41404,
+    "name": "Chlorophos Deathworm",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Mare Lamentorum",
+    "spot": "The Chlorophospond",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 32.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
+    "big": true,
+    "times": [
+      [
+        120,
+        360
+      ]
+    ],
+    "weather": [
+      "Moon Dust"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36595,
+          "name": "Chimera Worm"
+        }
+      ],
+      [
+        {
+          "id": 36470,
+          "name": "Calicia"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.5
+  },
+  {
+    "id": 41411,
+    "name": "Lopoceras Elegans",
+    "method": "Fishing",
+    "level": 85,
+    "zone": "Mare Lamentorum",
+    "spot": "The Chlorophospond",
+    "map": {
+      "image": "u5f1-00",
+      "scale": 100,
+      "x": 31,
+      "y": 32.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Sinus Lacrimarum",
+      "x": 10.1,
+      "y": 34.5
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        120
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Moon Dust"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36595,
+          "name": "Chimera Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.55
+  },
+  {
+    "id": 36499,
+    "name": "Katoptron",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Ultima Thule",
+    "spot": "The Wellspring of Regret",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 15,
+      "y": 11.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36501,
+    "name": "Comet Tail",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Ultima Thule",
+    "spot": "The Wellspring of Regret",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 15,
+      "y": 11.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36502,
+    "name": "Aoide",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Ultima Thule",
+    "spot": "The Wellspring of Regret",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 15,
+      "y": 11.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36503,
+    "name": "Protoflesh",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Ultima Thule",
+    "spot": "The Wellspring of Regret",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 15,
+      "y": 11.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36505,
+    "name": "Wandering Starscale",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Ultima Thule",
+    "spot": "Abode of the Ea",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 22.6,
+      "y": 8.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 37851,
+    "name": "Starscryer",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Ultima Thule",
+    "spot": "The Wellspring of Regret",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 15,
+      "y": 11.6,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "big": true,
+    "times": [
+      [
+        120,
+        120
+      ]
+    ],
+    "weather": [
+      "Astromagnetic Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.2
+  },
+  {
+    "id": 41405,
+    "name": "Starscale Ephemeris",
+    "method": "Fishing",
+    "level": 84,
+    "zone": "Ultima Thule",
+    "spot": "Abode of the Ea",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 22.6,
+      "y": 8.8,
+      "radius": 1.5
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "big": true,
+    "times": [
+      [
+        1080,
+        240
+      ]
+    ],
+    "weather": [
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Astromagnetic Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.5
+  },
+  {
+    "id": 36487,
+    "name": "Superstring",
+    "method": "Fishing",
+    "level": 88,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-γ",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 20.9,
+      "y": 36.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Base Omicron",
+      "x": 31.3,
+      "y": 28.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36488,
+    "name": "Star Eater",
+    "method": "Fishing",
+    "level": 88,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-γ",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 20.9,
+      "y": 36.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Base Omicron",
+      "x": 31.3,
+      "y": 28.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36489,
+    "name": "Vacuum Shrimp",
+    "method": "Fishing",
+    "level": 88,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-γ",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 20.9,
+      "y": 36.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Base Omicron",
+      "x": 31.3,
+      "y": 28.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36491,
+    "name": "Cosmic Noise",
+    "method": "Fishing",
+    "level": 88,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-γ",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 20.9,
+      "y": 36.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Base Omicron",
+      "x": 31.3,
+      "y": 28.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 38835,
+    "name": "Cosmic Haze",
+    "method": "Fishing",
+    "level": 88,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-γ",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 20.9,
+      "y": 36.2,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Base Omicron",
+      "x": 31.3,
+      "y": 28.1
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        480
+      ]
+    ],
+    "weather": [
+      "Astromagnetic Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36595,
+          "name": "Chimera Worm"
+        }
+      ],
+      [
+        {
+          "id": 36489,
+          "name": "Vacuum Shrimp"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.3
+  },
+  {
+    "id": 36492,
+    "name": "Glassfish",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-β",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 9.5,
+      "y": 30.5,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36494,
+    "name": "Foun Myhk",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-β",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 9.5,
+      "y": 30.5,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36506,
+    "name": "Wormhole Worm",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Limne 18",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 5.2,
+      "y": 35.2,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36507,
+    "name": "Unidentified Flying Biomass II",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Limne 18",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 5.2,
+      "y": 35.2,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36509,
+    "name": "Sophos Deka-okto",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Limne 18",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 5.2,
+      "y": 35.2,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36510,
+    "name": "Class Twenty-four",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Limne 18",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 5.2,
+      "y": 35.2,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36511,
+    "name": "Terrifyingway",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Limne 18",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 5.2,
+      "y": 35.2,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36512,
+    "name": "Alien Mertone",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Limne 18",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 5.2,
+      "y": 35.2,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36513,
+    "name": "Monster Carrot",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Limne 18",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 5.2,
+      "y": 35.2,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36684,
+    "name": "Foun Ahlm",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-β",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 9.5,
+      "y": 30.5,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "big": true,
+    "times": [
+      [
+        600,
+        240
+      ]
+    ],
+    "weather": [
+      "Umbral Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36595,
+          "name": "Chimera Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.1
+  },
+  {
+    "id": 36685,
+    "name": "Forbiddingway",
+    "method": "Fishing",
+    "level": 89,
+    "zone": "Ultima Thule",
+    "spot": "Limne 18",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 5.2,
+      "y": 35.2,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        240
+      ]
+    ],
+    "weather": [
+      "Astromagnetic Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.1
+  },
+  {
+    "id": 36495,
+    "name": "Dragonscale",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 7,
+      "y": 22.3,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36496,
+    "name": "Ypupîara",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 7,
+      "y": 22.3,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36497,
+    "name": "Eehs Forhnesh",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 7,
+      "y": 22.3,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36508,
+    "name": "Triaina",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 37.5,
+      "y": 9.1,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36514,
+    "name": "Argonaut",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 37.5,
+      "y": 9.1,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36515,
+    "name": "Echinos",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 37.5,
+      "y": 9.1,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36516,
+    "name": "Space Bishop",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 37.5,
+      "y": 9.1,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36517,
+    "name": "Alyketos",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 37.5,
+      "y": 9.1,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36518,
+    "name": "Horizon Event",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-β",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 17.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        },
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36519,
+    "name": "E.B.E.-9318",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-β",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 17.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        },
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36520,
+    "name": "Unbegotten",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-β",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 17.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        },
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ],
+      [
+        {
+          "id": 36518,
+          "name": "Horizon Event"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36521,
+    "name": "Phallaina ",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-β",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 17.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "times": [
+      [
+        0,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        },
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ],
+      [
+        {
+          "id": 36518,
+          "name": "Horizon Event"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 37852,
+    "name": "Argonauta argo",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 37.5,
+      "y": 9.1,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "big": true,
+    "times": [
+      [
+        120,
+        120
+      ]
+    ],
+    "weather": [
+      "Umbral Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.2
+  },
+  {
+    "id": 39882,
+    "name": "Eehs Fan",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 7,
+      "y": 22.3,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "big": true,
+    "times": [
+      [
+        720,
+        480
+      ]
+    ],
+    "weather": [
+      "Umbral Wind"
+    ],
+    "previousWeather": [
+      "Astromagnetic Storms"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36595,
+          "name": "Chimera Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.4
+  },
+  {
+    "id": 41406,
+    "name": "E.B.E.-852738",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-β",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 17.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "big": true,
+    "times": [
+      [
+        720,
+        240
+      ]
+    ],
+    "weather": [
+      "Umbral Wind"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.5
+  },
+  {
+    "id": 41412,
+    "name": "Sidereal Whale",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Limne 3-β",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 17.2,
+      "radius": 1.2
+    },
+    "aetheryte": {
+      "name": "Abode of the Ea",
+      "x": 22.7,
+      "y": 8.3
+    },
+    "big": true,
+    "times": [
+      [
+        0,
+        480
+      ]
+    ],
+    "weather": [
+      "Astromagnetic Storms"
+    ],
+    "previousWeather": [
+      "Umbral Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36597,
+          "name": "Stardust"
+        },
+        {
+          "id": 36596,
+          "name": "Panic Jig"
+        }
+      ],
+      [
+        {
+          "id": 36518,
+          "name": "Horizon Event"
+        }
+      ]
+    ],
+    "predators": [
+      {
+        "id": 36521,
+        "name": "Phallaina ",
+        "count": 1
+      },
+      {
+        "id": 36520,
+        "name": "Unbegotten",
+        "count": 2
+      },
+      {
+        "id": 36519,
+        "name": "E.B.E.-9318",
+        "count": 3
+      }
+    ],
+    "intuition": 600,
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Celestial Fishing Folklore",
+    "patch": 6.55
+  },
+  {
+    "id": 41419,
+    "name": "Stargilt Lobster",
+    "method": "Fishing",
+    "level": 90,
+    "zone": "Ultima Thule",
+    "spot": "Apohelos 18-α",
+    "map": {
+      "image": "u5f2-00",
+      "scale": 100,
+      "x": 7,
+      "y": 22.3,
+      "radius": 0.6
+    },
+    "aetheryte": {
+      "name": "Reah Tahra",
+      "x": 10.6,
+      "y": 26.8
+    },
+    "times": [
+      [
+        1140,
+        180
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 36594,
+          "name": "Grey Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Celestial Fishing Folklore",
+    "collectable": true,
+    "patch": 6.5
+  },
+  {
+    "id": 36476,
+    "name": "Isle Skipper",
+    "method": "Fishing",
+    "level": 86,
+    "zone": "Elpis",
+    "spot": "Rumination's Ramble",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 11.2,
+      "y": 18.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36477,
+    "name": "Iribainion",
+    "method": "Fishing",
+    "level": 86,
+    "zone": "Elpis",
+    "spot": "Rumination's Ramble",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 11.2,
+      "y": 18.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36478,
+    "name": "Albino Loach",
+    "method": "Fishing",
+    "level": 86,
+    "zone": "Elpis",
+    "spot": "Rumination's Ramble",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 11.2,
+      "y": 18.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 29717,
+          "name": "Versatile Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36479,
+    "name": "Golden Shiner",
+    "method": "Fishing",
+    "level": 86,
+    "zone": "Elpis",
+    "spot": "Rumination's Ramble",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 11.2,
+      "y": 18.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36480,
+    "name": "Mangar",
+    "method": "Fishing",
+    "level": 86,
+    "zone": "Elpis",
+    "spot": "Rumination's Ramble",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 11.2,
+      "y": 18.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
+    },
+    "weather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ],
+      [
+        {
+          "id": 36478,
+          "name": "Albino Loach"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "folklore": "Ancient Fishing Folklore",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 37853,
+    "name": "Planetes",
+    "method": "Fishing",
+    "level": 86,
+    "zone": "Elpis",
+    "spot": "Rumination's Ramble",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 11.2,
+      "y": 18.5,
+      "radius": 3.6
+    },
+    "aetheryte": {
+      "name": "Poieten Oikos",
+      "x": 10.9,
+      "y": 17.1
+    },
+    "big": true,
+    "weather": [
+      "Umbral Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ],
+      [
+        {
+          "id": 36478,
+          "name": "Albino Loach"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Ancient Fishing Folklore",
+    "patch": 6.2
+  },
+  {
+    "id": 35607,
+    "name": "Smaragdos",
+    "method": "Fishing",
+    "level": 87,
+    "zone": "Elpis",
+    "spot": "Lethe",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 33.7,
+      "y": 16.3,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36481,
+    "name": "Dermogenys",
+    "method": "Fishing",
+    "level": 87,
+    "zone": "Elpis",
+    "spot": "The Lower Hungering Gardens",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 9.8,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36589,
+          "name": "Leech"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36484,
+    "name": "Antheia",
+    "method": "Fishing",
+    "level": 87,
+    "zone": "Elpis",
+    "spot": "Lethe",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 33.7,
+      "y": 16.3,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36485,
+    "name": "Colossoma",
+    "method": "Fishing",
+    "level": 87,
+    "zone": "Elpis",
+    "spot": "The Lower Hungering Gardens",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 9.8,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 38836,
+    "name": "Antheian Dahlia",
+    "method": "Fishing",
+    "level": 87,
+    "zone": "Elpis",
+    "spot": "Lethe",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 33.7,
+      "y": 16.3,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        360
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Clouds"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Ancient Fishing Folklore",
+    "patch": 6.3
+  },
+  {
+    "id": 39240,
+    "name": "Phyllinos",
+    "method": "Fishing",
+    "level": 87,
+    "zone": "Elpis",
+    "spot": "The Lower Hungering Gardens",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 9.8,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
+    "times": [
+      [
+        300,
+        180
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "folklore": "Ancient Fishing Folklore",
+    "collectable": true,
+    "patch": 6.3
+  },
+  {
+    "id": 39883,
+    "name": "Gilt Dermogenys",
+    "method": "Fishing",
+    "level": 87,
+    "zone": "Elpis",
+    "spot": "The Lower Hungering Gardens",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 25.1,
+      "y": 9.8,
+      "radius": 1.8
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        120
+      ]
+    ],
+    "weather": [
+      "Clear Skies",
+      "Fair Skies"
+    ],
+    "previousWeather": [
+      "Umbral Wind"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Ancient Fishing Folklore",
+    "patch": 6.4
+  },
+  {
+    "id": 41410,
+    "name": "Furcacauda",
+    "method": "Fishing",
+    "level": 87,
+    "zone": "Elpis",
+    "spot": "Lethe",
+    "map": {
+      "image": "n5f1-00",
+      "scale": 100,
+      "x": 33.7,
+      "y": 16.3,
+      "radius": 3
+    },
+    "aetheryte": {
+      "name": "Anagnorisis",
+      "x": 24.7,
+      "y": 24
+    },
+    "big": true,
+    "times": [
+      [
+        930,
+        60
+      ]
+    ],
+    "weather": [
+      "Umbral Wind"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36590,
+          "name": "Sky Spoon Lure"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Ancient Fishing Folklore",
+    "patch": 6.55
+  },
+  {
+    "id": 36385,
+    "name": "Pecten",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Scholar's Harbor",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.8,
+      "y": 16.2,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "snagging": true,
+    "patch": 6
+  },
+  {
+    "id": 36386,
+    "name": "Northern Herring",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Scholar's Harbor",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.8,
+      "y": 16.2,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36387,
+    "name": "Dog-faced Puffer",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Scholar's Harbor",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.8,
+      "y": 16.2,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36388,
+    "name": "Cobalt Chromis",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Scholar's Harbor",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.8,
+      "y": 16.2,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36389,
+    "name": "Guitarfish",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Scholar's Harbor",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.8,
+      "y": 16.2,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36592,
+          "name": "Shrimp Ball"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36390,
+    "name": "Astacus",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Oinops",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 8.3,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36392,
+    "name": "Peacock Bass",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Oinops",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 8.3,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36393,
+    "name": "Academician",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Oinops",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 8.3,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36394,
+    "name": "Swordspine Snook",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Oinops",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 8.3,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36395,
+    "name": "Ponderer",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Reflecting Pool",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 7.7,
+      "y": 10.8,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36396,
+    "name": "Tidal Dahlia",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Reflecting Pool",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 7.7,
+      "y": 10.8,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "patch": 6
+  },
+  {
+    "id": 36679,
+    "name": "Aetherolectric Guitarfish",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Scholar's Harbor",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.8,
+      "y": 16.2,
+      "radius": 2.4
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "big": true,
+    "times": [
+      [
+        1200,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.1
+  },
+  {
+    "id": 37845,
+    "name": "Greatsword Snook",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Oinops",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 11.3,
+      "y": 8.3,
+      "radius": 2.1
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "big": true,
+    "times": [
+      [
+        960,
+        240
+      ]
+    ],
+    "weather": [
+      "Snow"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.2
+  },
+  {
+    "id": 38830,
+    "name": "Catastrophizer",
+    "method": "Fishing",
+    "level": 80,
+    "zone": "Old Sharlayan",
+    "spot": "Reflecting Pool",
+    "map": {
+      "image": "k5t1-00",
+      "scale": 200,
+      "x": 7.7,
+      "y": 10.8,
+      "radius": 0.3
+    },
+    "aetheryte": {
+      "name": "Old Sharlayan",
+      "x": 11.3,
+      "y": 11.3
+    },
+    "big": true,
+    "times": [
+      [
+        480,
+        360
+      ]
+    ],
+    "weather": [
+      "Clear Skies"
+    ],
+    "previousWeather": [
+      "Fair Skies"
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.3
+  },
+  {
+    "id": 36415,
+    "name": "Trunkblessed",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Radz-at-Han",
+    "spot": "Meghaduta",
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 5.6,
+      "y": 10.9,
+      "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Radz-at-Han",
+      "x": 11.8,
+      "y": 10.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36417,
+    "name": "Seema Duta",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Radz-at-Han",
+    "spot": "Meghaduta",
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 5.6,
+      "y": 10.9,
+      "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Radz-at-Han",
+      "x": 11.8,
+      "y": 10.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true,
+    "patch": 6
+  },
+  {
+    "id": 36418,
+    "name": "Longear Sunfish",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Radz-at-Han",
+    "spot": "Meghaduta",
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 5.6,
+      "y": 10.9,
+      "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Radz-at-Han",
+      "x": 11.8,
+      "y": 10.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36419,
+    "name": "Silver Characin",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Radz-at-Han",
+    "spot": "Meghaduta",
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 5.6,
+      "y": 10.9,
+      "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Radz-at-Han",
+      "x": 11.8,
+      "y": 10.7
+    },
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 36588,
+          "name": "Gold Salmon Roe"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "patch": 6
+  },
+  {
+    "id": 36681,
+    "name": "Earful",
+    "method": "Fishing",
+    "level": 82,
+    "zone": "Radz-at-Han",
+    "spot": "Meghaduta",
+    "map": {
+      "image": "m5t1-00",
+      "scale": 200,
+      "x": 5.6,
+      "y": 10.9,
+      "radius": 1.4
+    },
+    "aetheryte": {
+      "name": "Radz-at-Han",
+      "x": 11.8,
+      "y": 10.7
+    },
+    "big": true,
+    "times": [
+      [
+        240,
+        240
+      ]
+    ],
+    "bait": [
+      [
+        {
+          "id": 36591,
+          "name": "Mayfly"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy",
+    "folklore": "Northern Fishing Folklore",
+    "patch": 6.1
+  }
+]
