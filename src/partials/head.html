@@ -12,6 +12,7 @@
     try { theme = localStorage.getItem("theme") } catch {}
     if (theme !== "light" && theme !== "dark") theme = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
     root.dataset.theme = theme
+    document.querySelector("meta[name=theme-color]").content = theme === "light" ? "#f7f7f7" : "#1a1a1a"
 
     let offset = 0
     try { offset = Number(sessionStorage.getItem("clockOffset")) || 0 } catch {}
