@@ -14,9 +14,7 @@
     root.dataset.theme = theme
     document.querySelector("meta[name=theme-color]").content = theme === "light" ? "#f7f7f7" : "#1a1a1a"
 
-    let offset = 0
-    try { offset = Number(sessionStorage.getItem("clockOffset")) || 0 } catch {}
-    const hour = Math.floor((Date.now() + offset) / 175000) % 24
+    const hour = Math.floor(Date.now() / 175000) % 24
     root.dataset.time = hour < 5 ? "night" : hour < 8 ? "dawn" : hour < 17 ? "day" : hour < 20 ? "dusk" : "night"
   })()
 </script>

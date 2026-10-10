@@ -1,4 +1,3 @@
-import { clockNow } from "./clock.js"
 import { CELEBRATE_MS } from "./done.js"
 import { openMap } from "./mapModal.js"
 import { formatCountdown, setTime } from "./time.js"
@@ -210,7 +209,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
     ready = true
     skeleton.hidden = true
     layout = null
-    render(clockNow())
+    render(Date.now())
   }
 
   /**

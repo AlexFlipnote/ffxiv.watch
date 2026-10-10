@@ -1,4 +1,3 @@
-import { clockNow } from "./clock.js"
 import { toEorzea } from "./eorzea.js"
 
 const PHASES = [
@@ -41,7 +40,7 @@ document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     root.classList.remove("daynight-fade")
   } else {
-    applyDayNight(clockNow())
+    applyDayNight(Date.now())
     enableFade()
   }
 })

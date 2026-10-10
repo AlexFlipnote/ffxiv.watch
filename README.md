@@ -7,7 +7,6 @@
 - Built for phones as much as desktops.
 - Each list loads only the expansion it shows.
 - Timers wake only when something on screen can change.
-- Timers run on the server's clock.
 
 ## Credits
 - [XIVAPI's ffxiv-datamining](https://github.com/xivapi/ffxiv-datamining) for the game data, and [XIVAPI](https://v2.xivapi.com/) for the maps and icons

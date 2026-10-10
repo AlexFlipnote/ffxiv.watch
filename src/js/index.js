@@ -1,5 +1,4 @@
 import "./utils/navbar.js"
-import { clockNow } from "./utils/clock.js"
 import { applyDayNight } from "./utils/daynight.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
 import { formatCountdown, gmtOffset, setTime } from "./utils/time.js"
@@ -68,7 +67,7 @@ function bindCard(timer) {
   regionBtns.forEach((btn, i) => btn.addEventListener("click", () => {
     regions[timer.id] = timer.regions[i].id
     saveRegions()
-    render(clockNow())
+    render(Date.now())
   }))
 
   return {
@@ -125,7 +124,7 @@ function renderModal(timer) {
 /** @param {string} id Timer id */
 function openModal(id) {
   openId = id
-  renderModal(getAllTimerStates(clockNow(), regions).find((t) => t.id === id))
+  renderModal(getAllTimerStates(Date.now(), regions).find((t) => t.id === id))
   modal.showModal()
 }
 
