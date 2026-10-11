@@ -601,6 +601,25 @@ $tab-flare: .5rem;
   }
 }
 
+// A phone's screen is tall, so the dialog is nearly as tall and the map gets what the header leaves, a portrait
+// view to drag around instead of a short strip. min-height lets a long note push it to full screen (_modal.scss)
+@include mobile {
+  .map-modal {
+    height: calc(100dvh - 4rem);
+
+    &[open] {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .map {
+      flex: 1;
+      min-height: 12rem;
+      aspect-ratio: auto;
+    }
+  }
+}
+
 // Zoomed with the wheel or a pinch, the markers on it scaled back so they stay the same size on the screen. The
 // area's circle is a part of the map, it zooms with it
 .map-canvas {
