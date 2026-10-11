@@ -1,0 +1,43 @@
+<!-- Opened by the cog, see js/utils/settings.js. After the page's content, so its headings don't come before the page's <h1> -->
+<dialog class="modal settings-modal" id="settings" closedby="any" aria-labelledby="settings-title">
+  <div class="modal-header">
+    <h2 class="title" id="settings-title">Settings</h2>
+    <button class="close-btn" id="settings-close" aria-label="Close">&times;</button>
+  </div>
+  <div class="settings-body">
+    <section class="settings-section">
+      <h3 class="settings-heading" id="settings-theme">Theme</h3>
+      <div class="segmented" role="radiogroup" aria-labelledby="settings-theme">
+        <label><input type="radio" name="theme" value="system"><span>System</span></label>
+        <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+        <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      </div>
+    </section>
+    <section class="settings-section">
+      <h3 class="settings-heading" id="settings-clock">Clock</h3>
+      <div class="segmented" role="radiogroup" aria-labelledby="settings-clock">
+        <label><input type="radio" name="clock" value="auto"><span>Auto</span></label>
+        <label><input type="radio" name="clock" value="12"><span>12-hour</span></label>
+        <label><input type="radio" name="clock" value="24"><span>24-hour</span></label>
+      </div>
+    </section>
+    <section class="settings-section">
+      <h3 class="settings-heading">Progress</h3>
+      <label class="settings-check"><input type="checkbox" id="settings-hide-done"> Hide completed in the lists</label>
+      <!-- A row for each list, filled in by the script -->
+      <ul class="settings-lists" id="settings-lists"></ul>
+    </section>
+    <section class="settings-section">
+      <h3 class="settings-heading">Backup</h3>
+      <p class="settings-note">Your progress is only saved in this browser. Copy the code to move it to another device, or keep it somewhere safe.</p>
+      <div class="settings-row">
+        <input class="input" id="settings-code" readonly aria-label="Backup code" spellcheck="false">
+        <button class="settings-btn" id="settings-copy">Copy</button>
+      </div>
+      <div class="settings-row">
+        <input class="input" id="settings-restore-code" placeholder="Paste a backup code" aria-label="Backup code to restore" autocomplete="off" spellcheck="false">
+        <button class="settings-btn" id="settings-restore">Restore</button>
+      </div>
+    </section>
+  </div>
+</dialog>
