@@ -145,6 +145,8 @@ function startGesture() {
     middle: b ? { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 } : a,
     spread: b ? Math.hypot(a.x - b.x, a.y - b.y) : 0
   }
+  // Only a pan gets the map its own layer, see .map-canvas in _listing.scss
+  frame.classList.toggle("map-panning", !b)
 }
 
 frame.addEventListener("pointerdown", (e) => {
@@ -168,7 +170,7 @@ for (const event of ["pointerup", "pointercancel"]) {
   frame.addEventListener(event, (e) => {
     if (!pointers.delete(e.pointerId)) return
     if (pointers.size) startGesture()
-    else frame.classList.remove("map-dragging")
+    else frame.classList.remove("map-dragging", "map-panning")
   })
 }
 

@@ -626,8 +626,11 @@ $tab-flare: .5rem;
   width: 1024px;
   height: 1024px;
   transform-origin: 0 0;
-  // Its own layer, so a drag only moves it instead of painting the map again every step
-  will-change: transform;
+
+  // Its own layer only while panned, a layer is scaled instead of drawn again and the markers would blur on a zoom
+  .map-panning & {
+    will-change: transform;
+  }
 
   .map-aetheryte,
   .map-pin {
