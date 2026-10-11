@@ -178,6 +178,9 @@ export function doneChecks(key) {
       celebrate(button, isDone)
       toast(`Marked ${button.dataset.name} as ${isDone ? "complete" : "not complete"}`, { tone: isDone ? "success" : "info" })
     })
+    button.addEventListener("animationend", (e) => {
+      if (e.target === button && !e.pseudoElement) button.classList.remove("done-pop", "done-unpop")
+    })
   }
 
   onStored(storageKey(key), () => {
