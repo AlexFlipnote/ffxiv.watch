@@ -1,6 +1,5 @@
 @use "../mixins" as *;
 
-// Dropdowns, text inputs, the filter row above a table, and the table itself. Shared by the table pages
 .select, .input {
   background-color: var(--chip-background);
   border: none;
@@ -57,7 +56,6 @@
   }
 }
 
-// Separate borders, not collapsed
 .table {
   width: 100%;
   border-collapse: separate;
@@ -82,21 +80,6 @@
   }
 }
 
-.hide-done {
-  cursor: pointer;
-
-  input {
-    margin: 0;
-    accent-color: var(--accent);
-    cursor: pointer;
-  }
-
-  // It needs the done checks, which need the script
-  :root:not(.js) & {
-    display: none;
-  }
-}
-
 .table-empty {
   margin: 1rem 0 0;
   color: var(--font-tertiary);
@@ -114,7 +97,7 @@
   cursor: pointer;
 }
 
-// A box that fills in with a check once it's done, see js/utils/done.js
+// Checked off by js/utils/done.js
 .done-check {
   position: relative;
   flex: none;
@@ -140,7 +123,6 @@
     }
   }
 
-  // Held down it squeezes in, and pops when it's let go
   &:active {
     transform: scale(.85);
   }
@@ -177,12 +159,11 @@
     border-radius: .375rem;
   }
 
-  // It needs the script to do anything
   :root:not(.js) & {
     display: none;
   }
 
-  // Checked: it pops and the tick draws in, see celebrate in js/utils/done.js
+  // Set by celebrate in js/utils/done.js
   &.done-pop {
     animation: donePop .35s $ease;
 
@@ -197,7 +178,6 @@
   }
 }
 
-// Sparks flying out from the middle of the box
 .done-burst {
   position: absolute;
   top: 50%;
@@ -243,7 +223,6 @@
   }
 }
 
-// Bright for most of the way out, then gone
 @keyframes doneSpark {
   // From the box's edge, not under it
   0% {

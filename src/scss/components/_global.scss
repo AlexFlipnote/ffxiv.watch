@@ -221,8 +221,8 @@ input {
   touch-action: manipulation;
 }
 
-:where(.backlink, .detail-prev-link, .detail-next-link, .info-btn, .region-btn, .navbar-hamburger, .theme-toggle,
-  .filters-toggle, .top-button, .toast-close, .close-btn):active {
+:where(.backlink, .detail-prev-link, .detail-next-link, .info-btn, .region-btn, .navbar-hamburger, .settings-button,
+  .filters-toggle, .top-button, .toast-close, .close-btn, .settings-btn):active {
   transform: scale(.94);
 }
 

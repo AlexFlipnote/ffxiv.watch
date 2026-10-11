@@ -1,5 +1,6 @@
 import "./haptics.js"
 import "./theme.js"
+import { openSettings } from "./settings.js"
 
 const navbar = document.querySelector(".navbar")
 const hamburger = navbar.querySelector(".navbar-hamburger")
@@ -17,4 +18,9 @@ navbar.querySelector(".navbar-backdrop").addEventListener("click", () => setOpen
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") setOpened(false)
+})
+
+navbar.querySelector(".settings-button").addEventListener("click", () => {
+  setOpened(false)
+  openSettings()
 })

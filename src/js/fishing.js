@@ -21,7 +21,6 @@ listing({
   idOf: (fish) => fish.id,
   selects: { method: methodSelect, expansion: document.getElementById("filter-expansion"), type: typeSelect },
   search: document.getElementById("search"),
-  hideDone: document.getElementById("hide-done"),
   body: document.getElementById("fish"),
   empty: document.getElementById("fish-empty"),
   skeleton: document.getElementById("listing-skeleton"),

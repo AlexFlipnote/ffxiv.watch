@@ -49,15 +49,47 @@
       <a href="/gathering/">Gathering</a>
       <a href="/fishing/">Fishing</a>
     </div>
-    <!-- Shows the theme it switches to -->
-    <button class="theme-toggle" aria-label="Switch theme">
-      <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="4.5"/>
-        <path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/>
-      </svg>
-      <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a7 7 0 0 0 10.7 10.7z"/>
+    <button class="settings-button" aria-label="Settings" title="Settings" aria-haspopup="dialog" aria-controls="settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+        <circle cx="12" cy="12" r="3"/>
       </svg>
     </button>
   </div>
 </nav>
+
+<!-- Opened by the cog, see js/utils/settings.js -->
+<dialog class="modal settings-modal" id="settings" closedby="any" aria-labelledby="settings-title">
+  <div class="modal-header">
+    <h2 class="title" id="settings-title">Settings</h2>
+    <button class="close-btn" id="settings-close" aria-label="Close">&times;</button>
+  </div>
+  <div class="settings-body">
+    <section class="settings-section">
+      <h3 class="settings-heading" id="settings-theme">Theme</h3>
+      <div class="segmented" role="radiogroup" aria-labelledby="settings-theme">
+        <label><input type="radio" name="theme" value="system"><span>System</span></label>
+        <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+        <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      </div>
+    </section>
+    <section class="settings-section">
+      <h3 class="settings-heading">Progress</h3>
+      <label class="settings-check"><input type="checkbox" id="settings-hide-done"> Hide completed in the lists</label>
+      <!-- A row for each list, filled in by the script -->
+      <ul class="settings-lists" id="settings-lists"></ul>
+    </section>
+    <section class="settings-section">
+      <h3 class="settings-heading">Backup</h3>
+      <p class="settings-note">Your progress is only saved in this browser. Copy the code to move it to another device, or keep it somewhere safe.</p>
+      <div class="settings-row">
+        <input class="input" id="settings-code" readonly aria-label="Backup code" spellcheck="false">
+        <button class="settings-btn" id="settings-copy">Copy</button>
+      </div>
+      <div class="settings-row">
+        <input class="input" id="settings-restore-code" placeholder="Paste a backup code" aria-label="Backup code to restore" autocomplete="off" spellcheck="false">
+        <button class="settings-btn" id="settings-restore">Restore</button>
+      </div>
+    </section>
+  </div>
+</dialog>

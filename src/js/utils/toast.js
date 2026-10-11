@@ -4,7 +4,10 @@ const MAX_SHOWN = 3
 const region = document.createElement("div")
 region.className = "toasts"
 region.setAttribute("role", "status")
+// In the top layer, so it can go over an open dialog like the settings
+region.popover = "manual"
 document.body.append(region)
+region.showPopover?.()
 
 /**
  * Shows a short message in the corner, gone after a while or when closed.
@@ -20,6 +23,12 @@ export function toast(text, { duration = 4000, tone = "info" } = {}) {
   `
   el.querySelector(".toast-text").textContent = text
   region.append(el)
+  // Inside an open dialog, everything else is inert. In the top layer it's still placed on the screen, not the dialog
+  const host = (region.showPopover && document.querySelector("dialog:modal")) || document.body
+  if (region.parentElement !== host) {
+    host.append(region)
+    region.showPopover?.()
+  }
   while (region.children.length > MAX_SHOWN) region.firstElementChild.remove()
 
   const close = () => {

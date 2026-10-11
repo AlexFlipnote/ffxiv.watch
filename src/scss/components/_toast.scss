@@ -1,7 +1,17 @@
 @use "../mixins" as *;
 
-// Short messages in the lower right, see js/utils/toast.js. Newest at the bottom
+// See js/utils/toast.js
 .toasts {
+  // A popover, without the box the browser gives one
+  inset: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  overflow: visible;
   position: fixed;
   right: calc(1rem + env(safe-area-inset-right));
   bottom: calc(1rem + env(safe-area-inset-bottom));

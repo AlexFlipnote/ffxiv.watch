@@ -1,6 +1,7 @@
 import "./utils/navbar.js"
 import { closable } from "./utils/dialog.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
+import { load, store } from "./utils/storage.js"
 import { everyTick, formatCountdown, gmtOffset, setText, setTime } from "./utils/time.js"
 import { getAllTimerStates } from "./utils/timers.js"
 
@@ -27,19 +28,13 @@ const regions = { jumbo_cactpot: guessCactpotRegion(), ...loadRegions() }
 /** @returns {Record<string, string>} */
 function loadRegions() {
   try {
-    return JSON.parse(localStorage.getItem(REGIONS_KEY)) ?? {}
+    return JSON.parse(load(REGIONS_KEY)) ?? {}
   } catch {
     return {}
   }
 }
 
-function saveRegions() {
-  try {
-    localStorage.setItem(REGIONS_KEY, JSON.stringify(regions))
-  } catch {
-    // Storage blocked, just not saved
-  }
-}
+const saveRegions = () => store(REGIONS_KEY, JSON.stringify(regions))
 
 /**
  * The Jumbo Cactpot region on a first visit, from the time zone.

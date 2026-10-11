@@ -1,6 +1,7 @@
 import "./navbar.js"
-import { CELEBRATE_MS, doneChecks } from "./done.js"
+import { CELEBRATE_MS, doneChecks, HIDE_DONE_KEY } from "./done.js"
 import { openMap } from "./mapModal.js"
+import { load, onStored } from "./storage.js"
 import { everyTick, formatCountdown, setText, setTime } from "./time.js"
 
 /**
@@ -15,7 +16,6 @@ import { everyTick, formatCountdown, setText, setTime } from "./time.js"
  * @property {(entry: object) => number} idOf The same as the page's rows were keyed with, see listRows in src/render/html.js
  * @property {Record<string, HTMLSelectElement>} selects Filter dropdowns by name, also their names in the URL
  * @property {HTMLInputElement} search
- * @property {HTMLInputElement} [hideDone] Leaves out the rows marked done, see js/utils/done.js
  * @property {HTMLElement} body The table's tbody, with a row for every entry from the build
  * @property {HTMLElement} empty Shown when nothing matches
  * @property {HTMLElement} skeleton Shown in place of the table until the first data is in
@@ -100,7 +100,7 @@ function groupRows(state) {
  * and grouped by when they're up. The rows come with the page, each marked with the entry it's for.
  * @param {ListingOptions} options
  */
-export function listing({ expansions, loadChunk, idOf, selects, search, hideDone, body, empty, skeleton, mapNote, filter, matches, windowOf, noun, done }) {
+export function listing({ expansions, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, filter, matches, windowOf, noun, done }) {
   doneChecks(done)
   // "dawntrail:974" -> its row, until the entry it's for has loaded
   const unclaimed = new Map([...body.querySelectorAll("tr[data-key]")].map((tr) => [tr.dataset.key, tr]))
@@ -116,6 +116,8 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
   let layout = null
   // Nothing is drawn until the first data is in, the rows from the build stay hidden until then (see _listing.scss)
   let ready = false
+  // Not in the URL like the filters, someone a link is shared with has their own done checks
+  let hideDone = load(HIDE_DONE_KEY) === "1"
 
   // The filters are only in the URL, so a link shares them and a fresh visit starts from what the page picks
   const defaults = Object.fromEntries(Object.entries(selects).map(([name, select]) => [name, select.value]))
@@ -132,7 +134,6 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
     const open = filters.classList.toggle("filters-open")
     toggle.setAttribute("aria-expanded", open)
   })
-  if (hideDone) hideDone.checked = params.get("hide") === "completed"
 
   const loadExpansion = (file) => {
     if (!loaded.has(file)) {
@@ -170,9 +171,9 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
       if (select.value === defaults[name]) url.searchParams.delete(name)
       else url.searchParams.set(name, select.value || ANY)
     }
-    if (hideDone?.checked) url.searchParams.set("hide", "completed")
-    else url.searchParams.delete("hide")
-    toggle?.classList.toggle("filters-set", Object.entries(selects).some(([name, select]) => select.value !== defaults[name]) || !!hideDone?.checked)
+    // Left by links from before it was remembered
+    url.searchParams.delete("hide")
+    toggle?.classList.toggle("filters-set", Object.entries(selects).some(([name, select]) => select.value !== defaults[name]))
     const query = search.value.trim()
     if (query) url.searchParams.set("q", query)
     else url.searchParams.delete("q")
@@ -212,7 +213,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
     if (current !== generation) return
 
     shown = entries.filter((entry) => rowOf(entry)
-      && !(hideDone?.checked && rowOf(entry).tr.hasAttribute("data-done"))
+      && !(hideDone && rowOf(entry).tr.hasAttribute("data-done"))
       && (query ? matches(entry, query) : !filter || filter(entry)))
     ready = true
     skeleton.hidden = true
@@ -293,10 +294,13 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
 
   for (const select of Object.values(selects)) select.addEventListener("change", applyFilters)
   search.addEventListener("input", applyFilters)
-  hideDone?.addEventListener("change", applyFilters)
+  onStored(HIDE_DONE_KEY, () => {
+    hideDone = load(HIDE_DONE_KEY) === "1"
+    applyFilters()
+  })
   // After the check's sparks, which a row hidden at once would take with it
   document.addEventListener("done-change", () => {
-    if (hideDone?.checked) setTimeout(applyFilters, CELEBRATE_MS)
+    if (hideDone) setTimeout(applyFilters, CELEBRATE_MS)
   })
   // It filters as you type, so Enter only has to put the phone's keyboard away
   search.addEventListener("keydown", (e) => {

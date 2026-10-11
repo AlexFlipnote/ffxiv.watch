@@ -14,7 +14,6 @@ listing({
   idOf: (node) => node.id,
   selects: { job: jobSelect, expansion: document.getElementById("filter-expansion"), type: typeSelect },
   search: document.getElementById("search"),
-  hideDone: document.getElementById("hide-done"),
   body: document.getElementById("nodes"),
   empty: document.getElementById("nodes-empty"),
   skeleton: document.getElementById("listing-skeleton"),

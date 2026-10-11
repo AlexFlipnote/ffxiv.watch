@@ -1,0 +1,201 @@
+@use "../mixins" as *;
+
+// The settings dialog behind the cog, see js/utils/settings.js. The frame is the .modal's
+.settings-modal {
+  max-width: 30rem;
+
+  // The sheet across the bottom, see _modal.scss
+  @include mobile {
+    max-width: none;
+  }
+}
+
+.settings-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--font-secondary);
+  font-size: .9rem;
+}
+
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.settings-heading {
+  margin: 0;
+  font-size: .75rem;
+  font-weight: bold;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--font-tertiary);
+}
+
+.settings-note {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.segmented {
+  display: flex;
+  padding: .25rem;
+  border-radius: .625rem;
+  background-color: var(--chip-background);
+
+  label {
+    flex: 1;
+    cursor: pointer;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  span {
+    display: block;
+    padding: .5rem;
+    border-radius: .4rem;
+    text-align: center;
+    color: var(--font-secondary);
+    transition: color .2s, background-color .2s, box-shadow .2s;
+
+    @include touch {
+      padding: .625rem .5rem;
+    }
+  }
+
+  @include hover {
+    span {
+      color: var(--font-primary);
+    }
+  }
+
+  input:checked + span {
+    background-color: var(--surface-solid);
+    box-shadow: var(--box-shadow);
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  input:focus-visible + span {
+    outline: .125rem solid var(--accent);
+    outline-offset: -.125rem;
+  }
+}
+
+.settings-check {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  cursor: pointer;
+
+  input {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin: 0;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+}
+
+.settings-lists {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .5rem 0;
+    border-top: .05rem solid var(--divider);
+
+    &:last-child {
+      border-bottom: .05rem solid var(--divider);
+    }
+  }
+}
+
+.settings-list-name {
+  color: var(--font-primary);
+  font-weight: bold;
+}
+
+.settings-list-count {
+  flex: 1;
+  color: var(--font-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.settings-row {
+  display: flex;
+  gap: .5rem;
+
+  .input {
+    flex: 1;
+    min-width: 0;
+    padding-block: .5rem;
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: .8rem;
+
+    @include touch {
+      font-size: max(1rem, 1em);
+    }
+
+    &[readonly] {
+      color: var(--font-secondary);
+    }
+
+    &[aria-invalid] {
+      outline: .125rem solid var(--warning);
+      outline-offset: -.125rem;
+    }
+  }
+}
+
+.settings-btn {
+  flex: none;
+  padding: .5rem .875rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--chip-background);
+  color: var(--font-primary);
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color .2s, background-color .2s, box-shadow .2s, transform .15s $ease;
+
+  @include touch {
+    min-height: 2.75rem;
+  }
+
+  @include hover {
+    background-color: var(--group-open-background);
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+    outline-offset: .125rem;
+  }
+
+  &:disabled {
+    opacity: .4;
+    cursor: default;
+    background-color: var(--chip-background);
+  }
+
+  &.settings-danger {
+    color: var(--warning);
+  }
+
+  // Waiting for the second click
+  &.settings-confirming {
+    background-color: color-mix(in srgb, var(--warning) 18%, transparent);
+    box-shadow: inset 0 0 0 .1rem var(--warning);
+    color: var(--warning);
+  }
+}

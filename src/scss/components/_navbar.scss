@@ -1,4 +1,3 @@
-// Frosted navbar, same as the xelA dashboard. On mobile the links unroll down from it, frosted the same way
 @use "../mixins" as *;
 
 @mixin frosted {
@@ -88,7 +87,6 @@
   }
 }
 
-// Same round button as the theme toggle, the icon keeps its own size. A finger's worth on a touch screen
 .navbar-hamburger {
   display: none;
   align-items: center;
@@ -143,7 +141,7 @@
   }
 }
 
-.theme-toggle {
+.settings-button {
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -172,20 +170,22 @@
   svg {
     width: 1.375rem;
     height: 1.375rem;
-    fill: currentColor;
+    fill: none;
     stroke: currentColor;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
+    transition: transform .4s $ease;
   }
 
-  .theme-moon,
-  :root[data-theme="light"] & .theme-sun {
-    display: none;
+  @include hover {
+    svg {
+      transform: rotate(30deg);
+    }
   }
 
-  :root[data-theme="light"] & .theme-moon {
-    display: block;
+  :root:not(.js) & {
+    visibility: hidden;
   }
 }
 
@@ -194,7 +194,6 @@
 }
 
 @include mobile {
-  // Menu button left, logo centered, theme toggle right. The links are out of the flow in their dropdown panel
   .navbar-inner {
     box-sizing: border-box;
     width: 100%;
@@ -218,7 +217,7 @@
     display: flex;
   }
 
-  .theme-toggle {
+  .settings-button {
     justify-self: end;
   }
 
@@ -295,7 +294,8 @@
   .navbar-links a,
   .navbar.opened .navbar-links a,
   .navbar-backdrop,
-  .navbar-hamburger line {
+  .navbar-hamburger line,
+  .settings-button svg {
     transition: none !important;
   }
 }

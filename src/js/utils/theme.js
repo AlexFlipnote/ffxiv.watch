@@ -1,4 +1,5 @@
 import { ET_MINUTE_EARTH_MS, toEorzea } from "./eorzea.js"
+import { load, onStored, store } from "./storage.js"
 
 // The page's colors: the picked light or dark theme, and the day/night tint that follows Eorzea's time. Both are set
 // before the first paint by the script in partials/head.html, this keeps them up to date
@@ -7,7 +8,6 @@ const KEY = "theme"
 const root = document.documentElement
 const system = matchMedia("(prefers-color-scheme: light)")
 const themeColor = document.querySelector("meta[name=theme-color]")
-const button = document.querySelector(".theme-toggle")
 
 const PHASES = [
   { name: "night", from: 0 },
@@ -17,20 +17,23 @@ const PHASES = [
   { name: "night", from: 20 }
 ]
 
-/** @returns {string | null} The picked theme, if any */
-function saved() {
-  try {
-    return localStorage.getItem(KEY)
-  } catch {
-    return null
-  }
+/** @returns {"system" | "light" | "dark"} The picked one, "system" follows the device */
+export function pickedTheme() {
+  const theme = load(KEY)
+  return theme === "light" || theme === "dark" ? theme : "system"
 }
+
+/** @param {"system" | "light" | "dark"} theme */
+export const pickTheme = (theme) => store(KEY, theme === "system" ? null : theme)
 
 // Two frames, so the current color is painted before transitions turn on
 const enableFade = () => requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add("daynight-fade")))
 
-/** @param {"light" | "dark"} theme */
-function apply(theme) {
+function applyTheme() {
+  const picked = pickedTheme()
+  const theme = picked === "system" ? (system.matches ? "light" : "dark") : picked
+  if (root.dataset.theme === theme) return
+
   // Instant, not through the 8s day/night fade
   const fading = root.classList.contains("daynight-fade")
   root.classList.remove("daynight-fade")
@@ -38,23 +41,7 @@ function apply(theme) {
   if (fading) enableFade()
 
   themeColor.content = theme === "light" ? "#f7f7f7" : "#1a1a1a"
-  button.setAttribute("aria-label", theme === "light" ? "Switch to dark theme" : "Switch to light theme")
-  button.title = button.getAttribute("aria-label")
 }
-
-button.addEventListener("click", () => {
-  const theme = root.dataset.theme === "light" ? "dark" : "light"
-  try {
-    localStorage.setItem(KEY, theme)
-  } catch {
-    // Storage blocked, just not saved
-  }
-  apply(theme)
-})
-
-system.addEventListener("change", () => {
-  if (!["light", "dark"].includes(saved())) apply(system.matches ? "light" : "dark")
-})
 
 /**
  * @param {number} hour ET hour
@@ -77,7 +64,9 @@ const dayNightLoop = () => {
   setTimeout(dayNightLoop, ET_MINUTE_EARTH_MS - Date.now() % ET_MINUTE_EARTH_MS)
 }
 
-apply(root.dataset.theme)
+system.addEventListener("change", applyTheme)
+onStored(KEY, applyTheme)
+applyTheme()
 dayNightLoop()
 enableFade()
 
