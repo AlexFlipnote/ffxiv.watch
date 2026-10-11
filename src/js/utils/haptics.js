@@ -2,7 +2,7 @@ const TAPPABLE = [
   ".info-btn", ".region-btn", ".close-btn", ".toast-close",
   ".navbar-hamburger", ".navbar-links a", ".settings-button",
   ".settings-btn", ".segmented input", ".settings-check input",
-  ".location[href]", ".map-zoom",
+  ".listing-table a", ".map-zoom",
   ".filters-toggle", ".top-button",
   ".backlink", ".detail-prev-link", ".detail-next-link"
 ].join(", ")
