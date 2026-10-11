@@ -21,14 +21,12 @@
   --navbar-shadow: 0 2px 10px rgba(0, 0, 0, .35);
   // Buttons, dropdowns and highlights sitting on a card
   --chip-background: rgba(255, 255, 255, .05);
-  // The table's groups are boxes of their own, a bit lighter than a card, and lighter still while up
   --group-background: rgba(255, 255, 255, .075);
   --group-open-background: rgba(255, 255, 255, .1);
   // Follows the boxes' outline, tabs included, see _listing.scss
   --group-shadow: none;
   --text-shadow: 0 0 .5rem #000;
 
-  // The scrollbar track is a shade darker than the navbar
   --surface: rgba(26, 26, 26, .75);
   --surface-solid: #1a1a1a;
   --scrollbar-track: #121212;
@@ -49,7 +47,7 @@
     --navbar-height: 3.5rem;
   }
 
-  // --bg and --glow change with the Eorzea time, see _daynight.scss
+  // --bg and --glow change with the Eorzea time, see the day/night tint below
 }
 
 :root[data-theme="light"] {
@@ -85,6 +83,37 @@
   --logo-hand-dark: #1f1f1f;
 
   color-scheme: light;
+}
+
+// The day/night tint, set by js/utils/theme.js
+@property --bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #1a1a1a;
+}
+
+@property --glow {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+
+:root {
+  &[data-time="night"] { --bg: #111319; --glow: rgba(60, 80, 160, .22); }
+  &[data-time="dawn"]  { --bg: #1c1720; --glow: rgba(210, 110, 160, .2); }
+  &[data-time="day"]   { --bg: #1a1c20; --glow: rgba(20, 186, 228, .14); }
+  &[data-time="dusk"]  { --bg: #1f1815; --glow: rgba(235, 125, 50, .2); }
+
+  &[data-theme="light"] {
+    &[data-time="night"] { --bg: #d5d8e0; --glow: rgba(60, 80, 160, .08); }
+    &[data-time="dawn"]  { --bg: #dcd7da; --glow: rgba(210, 110, 160, .08); }
+    &[data-time="day"]   { --bg: #d6dbdf; --glow: rgba(20, 186, 228, .08); }
+    &[data-time="dusk"]  { --bg: #dcd8d3; --glow: rgba(235, 125, 50, .08); }
+  }
+
+  &.daynight-fade {
+    transition: --bg 8s ease, --glow 8s ease;
+  }
 }
 
 // Scrollbars in the theme: Chrome, Edge and Firefox use scrollbar-color, Safari the ::-webkit-scrollbar rules
@@ -148,7 +177,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  // Soft glow from the top of the page, gives the glass panels something to blur
+  // Gives the glass panels something to blur
   background-color: var(--bg);
   background-image: radial-gradient(ellipse 120% 70% at 50% 0%, var(--glow), transparent 70%);
   background-attachment: fixed;
@@ -192,7 +221,6 @@ input {
   touch-action: manipulation;
 }
 
-// Pressed in while held, like an app's buttons
 :where(.backlink, .detail-prev-link, .detail-next-link, .info-btn, .region-btn, .navbar-hamburger, .theme-toggle,
   .filters-toggle, .top-button, .toast-close, .close-btn):active {
   transform: scale(.94);
@@ -205,7 +233,6 @@ input {
   color: var(--accent);
 }
 
-// Hidden on screen, still read by search engines and screen readers
 .sr-only {
   position: absolute;
   width: 1px;

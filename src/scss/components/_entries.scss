@@ -1,5 +1,7 @@
 @use "../mixins" as *;
 
+// The parts of the vistas, items and fish that their lists and pages share
+
 // Far enough apart, when they wrap onto more lines, for a finger to tap the right one
 .gathering-items {
   display: flex;
@@ -53,4 +55,40 @@
   padding: 0 .25rem;
   color: var(--accent);
   cursor: help;
+}
+
+.bait-path {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem .375rem;
+}
+
+.bait-step {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+}
+
+.bait-icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: .25rem;
+}
+
+.bait-arrow {
+  color: var(--font-tertiary);
+}
+
+.vista-name {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+}
+
+.vista-number {
+  font-size: .75rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--font-tertiary);
 }

@@ -1,9 +1,7 @@
 import "./utils/navbar.js"
-import { applyDayNight } from "./utils/daynight.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
-import { formatCountdown, gmtOffset, setTime } from "./utils/time.js"
+import { everyTick, formatCountdown, gmtOffset, setText, setTime } from "./utils/time.js"
 import { getAllTimerStates } from "./utils/timers.js"
-import { everyTick, setText } from "./utils/tick.js"
 
 const container = document.getElementById("timers")
 const etTime = document.getElementById("et-time")
@@ -19,7 +17,6 @@ const modalList = document.getElementById("modal-list")
 // Timer id -> its card's elements
 const cards = new Map()
 let openId = null
-// What the modal shows, see renderModal
 let renderedModal = null
 
 // Timer id -> picked region id
@@ -185,5 +182,4 @@ everyTick((now) => {
   render(now)
   renderEarthClock(now)
   renderEorzeaClock(now)
-  applyDayNight(now)
 })

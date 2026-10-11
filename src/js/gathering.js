@@ -1,10 +1,6 @@
-import "./utils/navbar.js"
 import EXPANSIONS from "./data/gathering.json"
-import { applyDayNight } from "./utils/daynight.js"
-import { doneChecks } from "./utils/done.js"
-import { nextWindow } from "./utils/gathering.js"
+import { nextWindow } from "./utils/eorzea.js"
 import { listing } from "./utils/listing.js"
-import { everyTick } from "./utils/tick.js"
 
 const jobSelect = document.getElementById("filter-job")
 const typeSelect = document.getElementById("filter-type")
@@ -12,7 +8,7 @@ const typeSelect = document.getElementById("filter-type")
 const ALL = ""
 const TIMED = "Timed"
 
-const render = listing({
+listing({
   expansions: EXPANSIONS,
   loadChunk: (file) => import(`./data/gathering/${file}.json`).then((m) => m.default),
   idOf: (node) => node.id,
@@ -23,6 +19,7 @@ const render = listing({
   empty: document.getElementById("nodes-empty"),
   skeleton: document.getElementById("listing-skeleton"),
   noun: "nodes",
+  done: "gathering",
 
   mapNote: (node) => node.items.map((i) => i.name).join(", "),
 
@@ -32,11 +29,4 @@ const render = listing({
     .some((text) => text?.toLowerCase().includes(query)),
   // Regular and Diadem nodes have no times, they're always up
   windowOf: (node, now) => node.times ? nextWindow(node, now) : { always: true }
-})
-
-doneChecks("gathering")
-
-everyTick((now) => {
-  render(now)
-  applyDayNight(now)
 })

@@ -1,5 +1,7 @@
-import { formatCountdown, setTime } from "./time.js"
-import { setText } from "./tick.js"
+import "./navbar.js"
+import { doneChecks } from "./done.js"
+import { openMap } from "./mapModal.js"
+import { everyTick, formatCountdown, setText, setTime } from "./time.js"
 
 // How many windows the list under the countdown shows, the current one included
 const UPCOMING = 5
@@ -17,14 +19,13 @@ const UPCOMING = 5
  * @param {(data: object) => WindowSource} windowsOf Gets the element's data-window, parsed
  * @returns {(now: number) => void} Redraws them, call it every tick
  */
-export function detailTimers(windowsOf) {
+function detailTimers(windowsOf) {
   const timers = [...document.querySelectorAll(".detail-timer[data-window]")].map((el) => ({
     el,
     ...windowsOf(JSON.parse(el.dataset.window)),
     state: el.querySelector(".detail-state"),
     countdown: el.querySelector(".detail-countdown"),
     list: el.querySelector(".detail-upcoming"),
-    // The windows listed, redrawn when the first one is over
     listed: []
   }))
 
@@ -75,4 +76,47 @@ export function detailTimers(windowsOf) {
       })
     }
   }
+}
+
+/**
+ * The link back to the list. Coming from the list, it goes back in history instead, which brings the list back as it
+ * was left: the filters, the search and how far down it was scrolled.
+ */
+function backlink() {
+  const link = document.querySelector(".backlink")
+  link?.addEventListener("click", (e) => {
+    let from = null
+    try {
+      from = new URL(document.referrer)
+    } catch {
+      return
+    }
+
+    if (from.origin === location.origin && from.pathname === link.pathname && history.length > 1) {
+      e.preventDefault()
+      history.back()
+    }
+  })
+}
+
+/** The map on the page opens the map dialog with its spot, from the data-map the build put on it */
+function mapZoom() {
+  for (const link of document.querySelectorAll(".map-zoom[data-map]")) {
+    link.addEventListener("click", (e) => {
+      e.preventDefault()
+      openMap(JSON.parse(link.dataset.map))
+    })
+  }
+}
+
+/**
+ * Starts an item's, fish's or vista's own page: its done check, its timers and the links on it.
+ * @param {string} doneKey See doneChecks
+ * @param {(data: object) => WindowSource} windowsOf See detailTimers
+ */
+export function detailPage(doneKey, windowsOf) {
+  backlink()
+  mapZoom()
+  doneChecks(doneKey)
+  everyTick(detailTimers(windowsOf))
 }

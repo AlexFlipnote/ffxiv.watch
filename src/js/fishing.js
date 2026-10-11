@@ -1,9 +1,5 @@
-import "./utils/navbar.js"
 import EXPANSIONS from "./data/fishing.json"
-import { applyDayNight } from "./utils/daynight.js"
-import { doneChecks } from "./utils/done.js"
 import { listing } from "./utils/listing.js"
-import { everyTick } from "./utils/tick.js"
 import { cachedWeatherWindows } from "./utils/windows.js"
 
 const methodSelect = document.getElementById("filter-method")
@@ -19,7 +15,7 @@ const TYPES = {
   all: () => true
 }
 
-const render = listing({
+listing({
   expansions: EXPANSIONS,
   loadChunk: (file) => import(`./data/fishing/${file}.json`).then((m) => m.default),
   idOf: (fish) => fish.id,
@@ -30,6 +26,7 @@ const render = listing({
   empty: document.getElementById("fish-empty"),
   skeleton: document.getElementById("listing-skeleton"),
   noun: "fish",
+  done: "fish",
 
   mapNote: (fish) => fish.name,
 
@@ -41,11 +38,4 @@ const render = listing({
     ...(fish.bait ?? []).flat().map((b) => b.name), ...(fish.predators ?? []).map((p) => p.name)
   ].some((text) => text?.toLowerCase().includes(query)),
   windowOf: cachedWeatherWindows()
-})
-
-doneChecks("fish")
-
-everyTick((now) => {
-  render(now)
-  applyDayNight(now)
 })

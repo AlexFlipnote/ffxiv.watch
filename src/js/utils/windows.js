@@ -1,8 +1,48 @@
-import { ET_MINUTE_EARTH_MS } from "./eorzea.js"
-import { WEATHER_PERIOD, ZONES, periodStart, weatherAt } from "./weather.js"
+import ZONES from "../data/weather.json"
+import { ET_DAY_EARTH_MS, ET_MINUTE_EARTH_MS } from "./eorzea.js"
 
-const ET_DAY_EARTH_MS = 24 * 60 * ET_MINUTE_EARTH_MS
 const HORIZON = 30 * 24 * 60 * 60 * 1000
+
+/** One weather period (8 ET hours) in Earth ms. */
+const WEATHER_PERIOD = 8 * 175 * 1000
+
+/**
+ * @param {number} ms
+ * @returns {number} Start of the weather period containing `ms`
+ */
+const periodStart = (ms) => Math.floor(ms / WEATHER_PERIOD) * WEATHER_PERIOD
+
+/**
+ * The game's roll for a weather period, in unsigned 32-bit math like the game.
+ * @param {number} ms Start of the period
+ * @returns {number} 0-99
+ */
+function roll(ms) {
+  const seconds = Math.floor(ms / 1000)
+  const bell = Math.floor(seconds / 175)
+  const increment = (bell - (bell % 8) + 8) % 24
+  const days = Math.floor(seconds / 4200) >>> 0
+
+  const base = (days * 100 + increment) >>> 0
+  const step1 = ((base << 11) ^ base) >>> 0
+  const step2 = ((step1 >>> 8) ^ step1) >>> 0
+  return step2 % 100
+}
+
+/**
+ * @param {{ weather: [string, number][] }} zone [name, chance] pairs, rolled in order
+ * @param {number} ms
+ * @returns {string} The weather at `ms`
+ */
+function weatherAt(zone, ms) {
+  let chance = roll(periodStart(ms))
+  for (const [name, rate] of zone.weather) {
+    if (chance < rate) return name
+    chance -= rate
+  }
+  // A few zones' rates add up to less than 100, the last weather covers the rest
+  return zone.weather.at(-1)[0]
+}
 
 /**
  * A vista or a fish: when it can be logged or caught.
@@ -86,5 +126,17 @@ export function cachedWeatherWindows() {
 
     const { window } = cached
     return window && !window.always ? { ...window, open: window.start <= now } : window
+  }
+}
+
+/**
+ * @param {Timed} entry
+ * @returns {import("./detail.js").WindowSource} Its windows for a timer on its own page
+ */
+export function weatherSource(entry) {
+  const current = cachedWeatherWindows()
+  return {
+    current: (now) => current(entry, now),
+    after: (from) => nextWeatherWindow(entry, from)
   }
 }

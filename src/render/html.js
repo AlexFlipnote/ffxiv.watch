@@ -156,7 +156,7 @@ export const etWindows = (times) => `${times.map(([start, duration]) => `${etClo
  * @param {{ zone: string, spot?: string }} entry
  * @returns {Html}
  */
-export const placeLine = (entry) =>
+const placeLine = (entry) =>
   html`<div class="place-line"><span class="zone">${entry.zone}</span>${entry.spot ? html`<span class="spot">${entry.spot}</span>` : ""}</div>`
 
 /**
@@ -164,7 +164,7 @@ export const placeLine = (entry) =>
  * @param {{ zone: string, spot?: string, map?: { image: string } }} entry
  * @returns {Html}
  */
-export const locationCell = (entry) => {
+const locationCell = (entry) => {
   const place = html`
       <span class="map-icon" aria-hidden="true"></span>
       <span class="place"><span class="zone">${entry.zone}</span><span class="spot">${entry.spot ?? ""}</span></span>`
@@ -209,7 +209,7 @@ export function listRows(expansions, idOf, row) {
 /**
  * The map with a circle when it's an area or a pin when it's an exact spot, and the nearest aetheryte, placed like
  * js/utils/mapModal.js does.
- * It links to the map image, js/utils/mapZoom.js opens it bigger in the map dialog instead, with what data-map holds.
+ * It links to the map image, js/utils/detail.js opens it bigger in the map dialog instead, with what data-map holds.
  * @param {{ zone: string, spot?: string, map: import("../js/utils/map.js").MapSpot, aetheryte?: { name: string, x: number, y: number } }} entry
  * @param {string} [note] Shown under the coordinates in the dialog
  * @returns {Html}

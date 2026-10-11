@@ -1,15 +1,12 @@
 @use "components/global";
 @use "components/keyframes";
-@use "components/daynight";
 
 @use "components/navbar";
 @use "components/controls";
 @use "components/clock";
 @use "components/timers";
 @use "components/listing";
-@use "components/gathering";
-@use "components/fishing";
-@use "components/sightseeing";
+@use "components/entries";
 @use "components/detail";
 @use "components/modal";
 @use "components/toast";

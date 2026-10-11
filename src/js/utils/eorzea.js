@@ -1,8 +1,9 @@
 // One Eorzean hour is 175 Earth seconds. A year is 12 moons of 32 suns, alternating Astral (odd) and Umbral (even)
 const EORZEA_MULTIPLIER = 3600 / 175
-
 // One Eorzean minute in Earth ms (~2917). Unix time 0 is also an ET minute boundary.
 export const ET_MINUTE_EARTH_MS = 175000 / 60
+// Unix time 0 is also an ET midnight
+export const ET_DAY_EARTH_MS = 24 * 60 * ET_MINUTE_EARTH_MS
 
 const ET_MINUTE = 60 * 1000
 const ET_HOUR = 60 * ET_MINUTE
@@ -34,4 +35,26 @@ export function toEorzea(earthMs) {
 export function ordinal(n) {
   const suffix = { 1: "st", 2: "nd", 3: "rd" }[n % 100 >= 11 && n % 100 <= 13 ? 0 : n % 10] ?? "th"
   return `${n}${suffix}`
+}
+
+/**
+ * The window a gathering node is up in now, or else its next one. Checks yesterday too, for a window running past
+ * midnight.
+ * @param {{ times: [number, number][] }} node `times` are [start, duration] in ET minutes, the same every ET day
+ * @param {number} now
+ * @returns {import("./listing.js").Window}
+ */
+export function nextWindow(node, now) {
+  const today = Math.floor(now / ET_DAY_EARTH_MS) * ET_DAY_EARTH_MS
+  let best = null
+
+  for (const day of [today - ET_DAY_EARTH_MS, today, today + ET_DAY_EARTH_MS]) {
+    for (const [start, duration] of node.times) {
+      const from = day + start * ET_MINUTE_EARTH_MS
+      const to = from + duration * ET_MINUTE_EARTH_MS
+      if (to > now && (!best || from < best.start)) best = { start: from, end: to }
+    }
+  }
+
+  return { ...best, open: best.start <= now }
 }

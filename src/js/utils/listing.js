@@ -1,7 +1,7 @@
-import { CELEBRATE_MS } from "./done.js"
+import "./navbar.js"
+import { CELEBRATE_MS, doneChecks } from "./done.js"
 import { openMap } from "./mapModal.js"
-import { formatCountdown, setTime } from "./time.js"
-import { setText } from "./tick.js"
+import { everyTick, formatCountdown, setText, setTime } from "./time.js"
 
 /**
  * When an entry is up, in Earth ms. `{ always: true }` for no time limit, null when nothing is coming.
@@ -24,6 +24,7 @@ import { setText } from "./tick.js"
  * @property {(entry: object, query: string) => boolean} matches The search, `query` is lowercase and never ""
  * @property {(entry: object, now: number) => Window} windowOf Called every tick, so keep it cheap
  * @property {string} noun "nodes", "vistas"
+ * @property {string} done Its done checks, see doneChecks
  */
 
 const ALL = ""
@@ -98,9 +99,9 @@ function groupRows(state) {
  * Wires up a table page: remembered filters, the search in the URL, one expansion's data at a time, and rows sorted
  * and grouped by when they're up. The rows come with the page, each marked with the entry it's for.
  * @param {ListingOptions} options
- * @returns {(now: number) => void} Redraws the table, call it every tick
  */
-export function listing({ expansions, loadChunk, idOf, selects, search, hideDone, body, empty, skeleton, mapNote, filter, matches, windowOf, noun }) {
+export function listing({ expansions, loadChunk, idOf, selects, search, hideDone, body, empty, skeleton, mapNote, filter, matches, windowOf, noun, done }) {
+  doneChecks(done)
   // "dawntrail:974" -> its row, until the entry it's for has loaded
   const unclaimed = new Map([...body.querySelectorAll("tr[data-key]")].map((tr) => [tr.dataset.key, tr]))
   const keys = new Map()
@@ -178,8 +179,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
     if (url.href !== location.href) history.replaceState(history.state, "", url)
   }
 
-  // A flaky connection, say. The table empties out for a note instead of the skeleton staying up. Trying again
-  // reloads the page, the browser remembers a failed import() and won't fetch it again
+  // Trying again reloads the page, the browser remembers a failed import() and won't fetch it again
   function showLoadError() {
     ready = false
     skeleton.hidden = true
@@ -304,8 +304,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, hideDone
   })
   applyFilters()
   topButton(filters)
-
-  return render
+  everyTick(render)
 }
 
 /**

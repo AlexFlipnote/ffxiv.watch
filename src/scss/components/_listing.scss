@@ -6,7 +6,6 @@
   padding-bottom: 1.25rem;
 }
 
-// The page's heading and a line on what it has, outside the boxes like a detail page's header
 .listing-intro {
   margin-bottom: 1.25rem;
 
@@ -36,7 +35,7 @@
   }
 }
 
-// No card around the page, it costs too much width on a phone. The filters and each group are boxes instead
+// No card around the page, it costs too much width on a phone
 .listing .filters {
   @include glass;
   padding: .75rem;
@@ -109,7 +108,7 @@
   }
 }
 
-// Round button in the lower left once the search is scrolled away, takes you back up to it, see js/utils/listing.js
+// Shown once the search is scrolled away, see js/utils/listing.js
 .top-button {
   position: fixed;
   left: calc(1rem + env(safe-area-inset-left));
@@ -238,7 +237,6 @@
     display: none;
   }
 
-  // The names link to their own pages: the row's color, with a faint underline to show they can be clicked
   // :where() so leaving out the map links doesn't outrank a.gathering-item's own line (see _gathering.scss)
   td a:where(:not(.location)) {
     color: inherit;
@@ -266,7 +264,7 @@
     background-color: var(--group-background);
   }
 
-  // A very dumb edge-case bug for smalled phone screens, standing, width.
+  // A very dumb edge-case bug for small phone screens, standing, width.
   .group-row td:first-child {
     width: 100%;
     max-width: 0;
@@ -280,7 +278,6 @@
     color: var(--accent);
   }
 
-  // The header is a tab centered on top of its block
   .group-header td {
     padding: 0;
     text-align: center;
@@ -479,7 +476,6 @@ $tab-flare: .5rem;
   }
 }
 
-// Zone and spot, one line each
 .place {
   display: flex;
   flex-direction: column;
@@ -619,18 +615,17 @@ $tab-flare: .5rem;
   cursor: help;
 }
 
-// An exact spot, small so the map around it still shows. One with a radius has the circle instead, its edge the same
+// Small so the map around it still shows
 .map-pin {
   width: .5625rem;
   height: .5625rem;
   border-radius: 50%;
-  // The circle's edge red, solid, with a white edge so it can't be taken for a small circle
+  // The white edge keeps it from being taken for a small circle
   background: #b03131;
   border: .125rem solid #fff;
   box-shadow: 0 0 .375rem rgba(0, 0, 0, .6);
 }
 
-// Under the coordinates, so it reads before the map
 .map-note {
   margin: .5rem 0 0;
   font-size: .85rem;
@@ -641,7 +636,6 @@ $tab-flare: .5rem;
   }
 }
 
-// A name with its done check in front
 .done-entry {
   display: inline-flex;
   align-items: center;
