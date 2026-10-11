@@ -82,7 +82,15 @@ const ICONS = path.join(ROOT, "src/images/items")
  */
 export const slug = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")
 
-const round = (n) => Math.round(n * 10) / 10
+/** @param {number} n */
+export const round = (n) => Math.round(n * 10) / 10
+
+/**
+ * Times are stored as HHMM ET. Durations too, but with minutes past 59: 160 is 1h60m, so 2 hours.
+ * @param {string} hhmm
+ * @returns {number} ET minutes
+ */
+export const minutes = (hhmm) => Math.floor(+hhmm / 100) * 60 + (+hhmm % 100)
 
 /**
  * A world position as the game's map coordinates. A map texture is 2048px, covering 2048 / scale world units

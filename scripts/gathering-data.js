@@ -1,4 +1,4 @@
-import { byId, mapPosition, nearestAetheryte, saveIcons, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
+import { byId, mapPosition, minutes, nearestAetheryte, saveIcons, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
 
 // GatheringPoint.Type. Regular and Diadem nodes are always up, the rest only at their times.
 // Type 8 (the Diadem's umbral nodes) only shows up in umbral weather, which the data doesn't say when
@@ -11,13 +11,6 @@ const ET_DAY = 24 * 60
 const CRAFTERS = ["Carpenter", "Blacksmith", "Armorer", "Goldsmith", "Leatherworker", "Weaver", "Alchemist", "Culinarian"]
 // Used in thousands of recipes each, and they have no pages anyway
 const NO_RECIPES = ["Crystal"]
-
-/**
- * Times are stored as HHMM ET. Durations too, but with minutes past 59: 160 is 1h60m, so 2 hours.
- * @param {string} hhmm
- * @returns {number} ET minutes
- */
-const minutes = (hhmm) => Math.floor(+hhmm / 100) * 60 + (+hhmm % 100)
 
 /**
  * @param {Record<string, string>} transient GatheringPointTransient row

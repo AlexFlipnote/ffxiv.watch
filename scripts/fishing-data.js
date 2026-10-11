@@ -1,4 +1,4 @@
-import { byId, nearestAetheryte, saveIcons, saveMaps, sheets, writeData, writeExpansions, zoneWeather } from "./datamining.js"
+import { byId, nearestAetheryte, round, saveIcons, saveMaps, sheets, writeData, writeExpansions, zoneWeather } from "./datamining.js"
 
 // When each fish bites, what with and after which weather isn't in the game's data. Carbuncle Plushy's fish tracker
 // (MIT) keeps it, for the fish with a condition and every big fish: https://github.com/icykoneko/ff14-fish-tracker-app
@@ -9,7 +9,6 @@ const HOOKSETS = { 1: "Powerful", 2: "Precision" }
 const TUGS = { 0: "medium", 1: "heavy", 2: "light" }
 
 const ET_DAY = 24 * 60
-const round = (n) => Math.round(n * 10) / 10
 
 /**
  * @param {string} url
@@ -87,7 +86,6 @@ async function main() {
   const aetheryteNear = nearestAetheryte({ aetherytes, markers, map, place })
   const inLog = (rows) => rows.filter((r) => +r.Item > 0 && r.IsInLog === "True")
   const logSpot = Object.fromEntries(inLog(fishParams).map((p) => [p.Item, p.FishingSpot]))
-  // The fishing log's text, by item
   const logText = Object.fromEntries([...fishParams, ...spearItems].map((p) => [p.Item, p.Text ?? p.Description]))
 
   const named = (id) => ({ id: +id, name: item[id].Name })
@@ -177,7 +175,6 @@ async function main() {
     }))
   }
 
-  // The rest of the log, which bites any time
   for (const p of inLog(fishParams).filter((p) => !tracker.FISH[p.Item])) {
     const source = teamcraft[p.Item]?.find((s) => String(s.spot) === p.FishingSpot) ?? teamcraft[p.Item]?.[0]
     add(p.Item, entry(p.Item, fishingSpot(p.FishingSpot), {

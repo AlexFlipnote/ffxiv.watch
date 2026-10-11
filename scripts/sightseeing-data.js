@@ -1,10 +1,5 @@
-import { byId, mapPosition, nearestAetheryte, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
+import { byId, mapPosition, minutes, nearestAetheryte, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
 
-/**
- * @param {string} hhmm HHMM ET
- * @returns {number} ET minutes
- */
-const minutes = (hhmm) => Math.floor(+hhmm / 100) * 60 + (+hhmm % 100)
 const ET_DAY = 24 * 60
 
 /**
