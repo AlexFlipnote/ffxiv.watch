@@ -87,25 +87,48 @@ export function nextWeatherWindow(entry, now) {
   if (!entry.times && !entry.weather && !entry.previousWeather) return { always: true }
 
   const zone = (entry.weather || entry.previousWeather) && ZONES.find((z) => z.name === entry.zone)
-  let found = null
 
-  for (let start = periodStart(now); start < now + HORIZON; start += WEATHER_PERIOD) {
+  /**
+   * @param {number} start A weather period's start
+   * @returns {[number, number][]} The parts of it the entry is up in
+   */
+  const segmentsIn = (start) => {
     const weatherOk = !zone
       || ((!entry.weather || entry.weather.includes(weatherAt(zone, start)))
         && (!entry.previousWeather || entry.previousWeather.includes(weatherAt(zone, start - WEATHER_PERIOD))))
-    const segments = weatherOk ? timeSegments(entry.times, start, start + WEATHER_PERIOD) : []
+    return weatherOk ? timeSegments(entry.times, start, start + WEATHER_PERIOD) : []
+  }
 
-    for (const [s, e] of segments) {
+  /**
+   * The walk starts at this period, so a window that's open may have opened in the ones before, walked back for its
+   * start: 22:00 for one up 22:00 to 01:00, not the 00:00 this period starts at.
+   * @param {{ start: number, end: number }} found
+   * @returns {import("./listing.js").Window}
+   */
+  const finish = (found) => {
+    if (found.start > now) return { ...found, open: false }
+    let start = found.start
+    for (let period = periodStart(start) - WEATHER_PERIOD; start === period + WEATHER_PERIOD && period > now - HORIZON; period -= WEATHER_PERIOD) {
+      const last = segmentsIn(period).at(-1)
+      if (last?.[1] !== start) break
+      start = last[0]
+    }
+    return { ...found, start, open: true }
+  }
+
+  let found = null
+  for (let start = periodStart(now); start < now + HORIZON; start += WEATHER_PERIOD) {
+    for (const [s, e] of segmentsIn(start)) {
       if (e <= now) continue
       if (!found) found = { start: s, end: e }
       else if (s <= found.end) found.end = Math.max(found.end, e)
-      else return { ...found, open: found.start <= now }
+      else return finish(found)
     }
 
-    if (found && found.end < start + WEATHER_PERIOD) return { ...found, open: found.start <= now }
+    if (found && found.end < start + WEATHER_PERIOD) return finish(found)
   }
 
-  return found ? { ...found, open: found.start <= now } : null
+  return found && finish(found)
 }
 
 /**
