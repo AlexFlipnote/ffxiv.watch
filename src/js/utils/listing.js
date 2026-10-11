@@ -136,16 +136,12 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
   let ready = false
   // Not in the URL like the filters, someone a link is shared with has their own done checks
   let hideDone = load(HIDE_DONE_KEY) === "1"
-  // The rows not on show wait here, hidden, instead of leaving the page: search engines index the page as the script
-  // leaves it, and every entry's link should still be in it
-  const rest = Object.assign(document.createElement("tbody"), { hidden: true })
-  body.after(rest)
-
-  /**
-   * Moves the entries' rows out of the table into `rest`, all but `keep`.
-   * @param {Set<HTMLTableRowElement>} [keep]
-   */
-  const park = (keep = new Set()) => rest.append(...[...body.children].filter((tr) => tr.dataset.key && !keep.has(tr)))
+  // Search engines index the page as the script leaves it, and the rows not on show leave it. Their links stay, hidden,
+  // as plain links: the whole rows would be thousands of nodes for the page to carry
+  const links = Object.assign(document.createElement("div"), { hidden: true })
+  links.append(...[...body.querySelectorAll("tr[data-key] a[href]:not(.location)")].map((a) =>
+    Object.assign(document.createElement("a"), { href: a.getAttribute("href"), textContent: (a.querySelector("strong") ?? a).textContent })))
+  body.closest("table").after(links)
 
   // The filters are only in the URL, so a link shares them and a fresh visit starts from what the page picks
   const defaults = Object.fromEntries(Object.entries(selects).map(([name, select]) => [name, select.value]))
@@ -220,7 +216,6 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     layout = null
     groups = new Map()
     onPage = []
-    park()
     body.replaceChildren()
     const retry = Object.assign(document.createElement("button"), { className: "table-retry", textContent: "Try again" })
     retry.addEventListener("click", () => location.reload())
@@ -295,7 +290,6 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
 
     if (trs.length !== onPage.length || trs.some((tr, i) => tr !== onPage[i])) {
       onPage = trs
-      park(new Set(trs))
       body.replaceChildren(...trs)
     }
 
