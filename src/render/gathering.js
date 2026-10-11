@@ -24,7 +24,7 @@ const itemLink = (item) => itemUrl(item) ? html`<a href="${itemUrl(item)}">${ite
  * @param {{ icon: number }} info The item's entry in gathering-items.json
  * @returns {import("./html.js").Html} Its icon, saved by scripts/datamining.js
  */
-const itemIcon = (item, info) => html`<img class="item-icon" src="/images/items/${info.icon}.webp" alt="${item.name} icon" width="44" height="44">`
+const itemIcon = (item, info) => html`<img class="item-icon" src="/images/game/${info.icon}.webp" alt="${item.name} icon" width="44" height="44">`
 
 const stars = (item) => item.stars && html`<span class="gathering-stars">${"★".repeat(item.stars)}</span>`
 

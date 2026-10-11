@@ -116,7 +116,7 @@ async function writeImage(spec, file) {
  */
 async function writeIcon(icon, file) {
   // Scaled up from the game's 80px, on the site's background where the icon's corners are see-through
-  await sharp(path.join(IMAGES, "items", `${icon}.webp`))
+  await sharp(path.join(IMAGES, "game", `${icon}.webp`))
     .resize(ICON_SIZE, ICON_SIZE, { kernel: "lanczos3" })
     .flatten({ background: "#1a1a1a" })
     .jpeg({ quality: 82, mozjpeg: true })

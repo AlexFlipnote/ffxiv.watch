@@ -18,7 +18,7 @@ const fishUrl = (fish) => `/fishing/${slug(fish.name)}/`
  * @param {object} info fishing-items.json
  * @returns {import("./html.js").Html} Its icon, small, for the bait
  */
-const baitIcon = (id, info) => html`<img class="bait-icon" src="/images/items/${info[id].icon}.webp" alt="" width="24" height="24">`
+const baitIcon = (id, info) => html`<img class="bait-icon" src="/images/game/${info[id].icon}.webp" alt="" width="24" height="24">`
 
 /** @returns {boolean} Bites only at some times or in some weather */
 const isTimed = (fish) => Boolean(fish.times || fish.weather || fish.previousWeather)
@@ -136,7 +136,7 @@ const fishIntro = (fish, paged, info, expansion) => html`
 <div class="item-intro">
   <header class="detail-header">
     <div class="item-heading">
-      <img class="item-icon" src="/images/items/${info[fish.id].icon}.webp" alt="${fish.name} icon" width="44" height="44">
+      <img class="item-icon" src="/images/game/${info[fish.id].icon}.webp" alt="${fish.name} icon" width="44" height="44">
       <div>
         <p class="detail-kicker">${[
     fish.big ? "Big fish" : fish.method === "Spearfishing" ? "Spearfishing" : "Fish",

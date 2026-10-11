@@ -73,7 +73,7 @@ function itemInfo(it, uiCategory, recipes) {
   const category = uiCategory[it.ItemUICategory]?.Name
   return {
     description: it.Description,
-    // Its file in src/images/items/, see saveIcons
+    // Its file in src/images/game/, see saveIcons
     icon: +it.Icon,
     ...(category ? { category } : {}),
     level: +it.LevelItem,

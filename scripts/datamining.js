@@ -74,7 +74,7 @@ const MAP_SOURCE = "https://v2.xivapi.com/api/asset/map"
 const MAP_SIZE = 1024
 
 const ICON_SOURCE = "https://v2.xivapi.com/api/asset"
-const ICONS = path.join(ROOT, "src/images/items")
+const ICONS = path.join(ROOT, "src/images/game")
 
 /**
  * @param {string} name
@@ -186,9 +186,10 @@ export async function saveMaps(ids) {
 }
 
 /**
- * Saves item icons to src/images/items/<id>.webp, so the site serves its own copies. The game's 80px, compressed hard,
- * as the lists show hundreds of them. A few at a time, XIVAPI renders each on request. Icons already there are kept.
- * @param {number[]} ids Item.Icon values, repeats are fine
+ * Saves the game's icons (items, actions, emotes) to src/images/game/<id>.webp, so the site serves its own copies. The
+ * game's 80px, compressed hard, as the lists show hundreds of them. A few at a time, XIVAPI renders each on request.
+ * Icons already there are kept.
+ * @param {number[]} ids Icon values from the sheets, like Item.Icon, repeats are fine
  */
 export async function saveIcons(ids) {
   fs.mkdirSync(ICONS, { recursive: true })
