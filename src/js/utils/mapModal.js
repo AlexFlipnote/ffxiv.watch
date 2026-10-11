@@ -34,7 +34,7 @@ function moveTo(x, y, zoom = view.zoom) {
   const clamp = (n, size) => Math.min(0, Math.max(size - MAP_PIXELS * zoom, n))
   view = { x: clamp(x, width), y: clamp(y, height), zoom }
   canvas.style.transform = `translate(${view.x}px, ${view.y}px) scale(${zoom})`
-  // The markers stay the same size on the screen, see _listing.scss. Only on a zoom, a drag leaves them be
+  // The markers stay the same size on the screen, see _listing.scss
   if (canvas.style.getPropertyValue("--zoom") !== String(zoom)) canvas.style.setProperty("--zoom", zoom)
 }
 

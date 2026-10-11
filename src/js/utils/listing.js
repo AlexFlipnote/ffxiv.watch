@@ -136,8 +136,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
   let ready = false
   // Not in the URL like the filters, someone a link is shared with has their own done checks
   let hideDone = load(HIDE_DONE_KEY) === "1"
-  // Search engines index the page as the script leaves it, and the rows not on show leave it. Their links stay, hidden,
-  // as plain links: the whole rows would be thousands of nodes for the page to carry
+  // Search engines index the page as the script leaves it, so the links of the rows not on show stay, hidden
   const links = Object.assign(document.createElement("div"), { hidden: true })
   links.append(...[...body.querySelectorAll("tr[data-key] a[href]:not(.location)")].map((a) =>
     Object.assign(document.createElement("a"), { href: a.getAttribute("href"), textContent: (a.querySelector("strong") ?? a).textContent })))
@@ -362,7 +361,7 @@ function topButton(filters) {
   const navbarHeight = document.querySelector(".navbar").offsetHeight
   new IntersectionObserver(([entry]) => {
     button.hidden = entry.isIntersecting || entry.boundingClientRect.top > 0
-    // For the toasts to keep above it. A body:has() for it restyled the whole page on every countdown tick
+    // Read by the toasts' CSS, a body:has() for it restyled the whole page on every tick
     document.body.toggleAttribute("data-top-button", !button.hidden)
   }, { rootMargin: `-${navbarHeight}px 0px 0px 0px` }).observe(filters)
 }
