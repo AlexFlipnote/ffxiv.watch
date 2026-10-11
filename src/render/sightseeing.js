@@ -114,8 +114,10 @@ export function vistaPages() {
 <section class="detail-card vista-card">
   <div class="detail-top">
     <header class="detail-header">
-      <p class="detail-kicker">${expansion.name} sightseeing log ${vistaNumber(vista)}</p>
-      <div class="detail-title-row"><h1 class="detail-title">${name}</h1>${doneButton(id, name)}</div>
+      <div>
+        <p class="detail-kicker">${expansion.name} sightseeing log ${vistaNumber(vista)}</p>
+        <div class="detail-title-row"><h1 class="detail-title">${name}</h1>${doneButton(id, name)}</div>
+      </div>
       <blockquote class="detail-quote">${gameText(text[vista.name].impression)}</blockquote>
       <div class="detail-text">${gameText(text[vista.name].description)}</div>
     </header>

@@ -476,6 +476,47 @@ $item-side: min(20rem, 40%);
   .item-uses {
     order: 1;
   }
+
+  // Read at the spot: when it's up and how to get it first, then where, the lore last. The boxes around them are
+  // dropped so their parts sort straight into the page's column
+  .fish-detail,
+  .vista-detail {
+    .detail-top,
+    .detail-header,
+    .detail-card {
+      display: contents;
+    }
+
+    .detail-header .tags,
+    .detail-quote {
+      margin-top: 0;
+    }
+
+    .detail-timer {
+      order: 1;
+    }
+
+    .item-about {
+      order: 2;
+    }
+
+    .detail-card > .detail-facts {
+      order: 3;
+    }
+
+    .detail-card > .map {
+      order: 4;
+    }
+
+    .detail-quote,
+    .detail-text {
+      order: 5;
+    }
+
+    .detail-pager {
+      order: 6;
+    }
+  }
 }
 
 @include mobile {
