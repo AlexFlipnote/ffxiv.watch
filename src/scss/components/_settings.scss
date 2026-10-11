@@ -3,11 +3,6 @@
 // The settings dialog behind the cog, see js/utils/settings.js. The frame is the .modal's
 .settings-modal {
   max-width: 30rem;
-
-  // The sheet across the bottom, see _modal.scss
-  @include mobile {
-    max-width: none;
-  }
 }
 
 .settings-body {
