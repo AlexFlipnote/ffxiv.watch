@@ -231,6 +231,12 @@
 // The column names are only there for screen readers (the thead is .sr-only), the group tabs head each block
 .listing-table {
   filter: var(--group-shadow);
+  // A group's outer padding, where the rows' lines stop too
+  --row-edge: 1rem;
+
+  @include mobile {
+    --row-edge: .75rem;
+  }
 
   // The build puts every row in the page, listing.js sorts the ones it shows into groups, which gives them a class
   .js & tr[data-key]:not([class]) {
@@ -268,6 +274,11 @@
   .group-row td:first-child {
     width: 100%;
     max-width: 0;
+    padding-left: var(--row-edge);
+  }
+
+  .group-row td:last-child {
+    padding-right: var(--row-edge);
   }
 
   .group-open td {
@@ -308,11 +319,11 @@
     @include row-line;
 
     &:first-child {
-      @include row-line($left: $row-line-inset);
+      @include row-line($left: var(--row-edge));
     }
 
     &:last-child {
-      @include row-line($right: $row-line-inset);
+      @include row-line($right: var(--row-edge));
     }
   }
 
@@ -423,6 +434,11 @@ $tab-flare: .5rem;
 
   .listing-table & {
     vertical-align: middle;
+  }
+
+  // The hover box keeps the same .25rem around the content as on its left, not the row's wider edge
+  .listing-table &:last-child .location::after {
+    right: calc(var(--row-edge) - .25rem);
   }
 }
 
