@@ -166,6 +166,7 @@ export function doneChecks(key) {
   }
 
   for (const button of buttons) {
+    button.setAttribute("aria-label", `${button.dataset.name} complete`)
     button.addEventListener("click", () => {
       const id = Number(button.dataset.doneId)
       const isDone = !done.delete(id)
