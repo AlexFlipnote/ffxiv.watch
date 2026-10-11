@@ -1,4 +1,4 @@
-import { byId, mapPosition, minutes, nearestAetheryte, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
+import { byId, mapPosition, minutes, nearestAetheryte, saveIcons, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
 
 const ET_DAY = 24 * 60
 
@@ -14,14 +14,22 @@ function timeWindow(adventure) {
   return [[start, (end - start + ET_DAY) % ET_DAY || ET_DAY]]
 }
 
+/**
+ * Sit's Command is /lounge with /sit as its Alias, the one its help text shows, so the alias goes first.
+ * @param {Record<string, string>} [row] TextCommand sheet row
+ * @returns {string | undefined} "/lookout"
+ */
+const commandOf = (row) => row && (row.Alias || row.Command)
+
 async function main() {
-  const [adventures, phases, levels, emotes, weathers, quests, maps, territories, places, exVersions, aetherytes, markers] = await sheets([
-    "Adventure", "AdventureExPhase", "Level", "Emote", "Weather", "Quest", "Map", "TerritoryType", "PlaceName", "ExVersion",
-    "Aetheryte", "MapMarker"
+  const [adventures, phases, levels, emotes, textCommands, weathers, quests, maps, territories, places, exVersions, aetherytes, markers] = await sheets([
+    "Adventure", "AdventureExPhase", "Level", "Emote", "TextCommand", "Weather", "Quest", "Map", "TerritoryType", "PlaceName",
+    "ExVersion", "Aetheryte", "MapMarker"
   ])
 
   const level = byId(levels)
   const emote = byId(emotes)
+  const textCommand = byId(textCommands)
   const weather = byId(weathers)
   const quest = byId(quests)
   const map = byId(maps)
@@ -81,7 +89,12 @@ async function main() {
     const needsWeather = adventure.WeatherCategory !== "0" && weather[adventure.Weather]?.Name
     const position = m ? mapPosition(m, l.X, l.Z, l.Radius) : null
     const aetheryte = position && aetheryteNear(l.Map, position.x, position.y)
-    text[adventure.Name] = { impression: adventure.Impression, description: adventure.Description }
+    const e = emote[adventure.Emote]
+    text[adventure.Name] = {
+      impression: adventure.Impression,
+      description: adventure.Description,
+      ...(e ? { emoteIcon: +e.Icon, emoteCommand: commandOf(textCommand[e.TextCommand]) } : {})
+    }
 
     vistas.push({
       expansion,
@@ -103,6 +116,7 @@ async function main() {
   }
 
   await saveMaps(vistas.map((v) => v.mapId).filter(Boolean))
+  await saveIcons(Object.values(text).map((t) => t.emoteIcon).filter(Boolean))
   const missing = vistas.filter((v) => !v.entry.map)
   if (missing.length) console.log(`No map position for ${missing.map((v) => v.entry.name).join(", ")}`)
 

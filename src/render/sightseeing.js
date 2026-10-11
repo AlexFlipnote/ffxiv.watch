@@ -34,6 +34,13 @@ function unlockText(unlock) {
 }
 
 /**
+ * @param {string} emote "Lookout"
+ * @param {{ emoteCommand?: string }} text Its entry in sightseeing-text.json
+ * @returns {import("./html.js").Html} "Lookout /lookout", the command dimmed
+ */
+const emoteFact = (emote, text) => html`${emote}${text.emoteCommand && html` <span class="emote-command">${text.emoteCommand}</span>`}`
+
+/**
  * @param {object} vista
  * @returns {import("./html.js").Html[]}
  */
@@ -114,9 +121,12 @@ export function vistaPages() {
 <section class="detail-card vista-card">
   <div class="detail-top">
     <header class="detail-header">
-      <div>
-        <p class="detail-kicker">${expansion.name} sightseeing log ${vistaNumber(vista)}</p>
-        <div class="detail-title-row"><h1 class="detail-title">${name}</h1>${doneButton(id, name)}</div>
+      <div class="item-heading">
+        ${text[vista.name].emoteIcon && html`<img class="item-icon" src="/images/game/${text[vista.name].emoteIcon}.webp" alt="${vista.emote} emote" width="44" height="44">`}
+        <div>
+          <p class="detail-kicker">${expansion.name} sightseeing log ${vistaNumber(vista)}</p>
+          <div class="detail-title-row"><h1 class="detail-title">${name}</h1>${doneButton(id, name)}</div>
+        </div>
       </div>
       <blockquote class="detail-quote">${gameText(text[vista.name].impression)}</blockquote>
       <div class="detail-text">${gameText(text[vista.name].description)}</div>
@@ -125,7 +135,7 @@ export function vistaPages() {
   </div>
   ${vista.map && mapFigure(vista, `${name}: use the ${vista.emote} emote here`)}
   ${detailTimer(timed ? JSON.stringify({ zone: vista.zone, times: vista.times, weather: vista.weather }) : null, when)}
-  ${facts([["Emote", vista.emote], ...locationFacts(vista), ["Level", vista.level], ["Unlocked by", vista.unlock && unlockText(vista.unlock)]])}
+  ${facts([["Emote", vista.emote && emoteFact(vista.emote, text[vista.name])], ...locationFacts(vista), ["Level", vista.level], ["Unlocked by", vista.unlock && unlockText(vista.unlock)]])}
 </section>
 ${pager(pagerTo(all[i - 1], expansion), pagerTo(all[i + 1], expansion), "Previous and next vista")}`,
       sources: ["js/data/sightseeing-text.json", ...new Set([all[i - 1], all[i], all[i + 1]].filter(Boolean).map((e) => `js/data/sightseeing/${e.expansion.file}.json`))]
