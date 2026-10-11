@@ -1,4 +1,4 @@
-import { byId, nearestAetheryte, round, saveIcons, saveMaps, sheets, writeData, writeExpansions, zoneWeather } from "./datamining.js"
+import { byId, nearestAetheryte, round, saveIcons, saveMaps, sheets, spotOf, writeData, writeExpansions, zoneWeather } from "./datamining.js"
 
 // When each fish bites, what with and after which weather isn't in the game's data. Carbuncle Plushy's fish tracker
 // (MIT) keeps it, for the fish with a condition and every big fish: https://github.com/icykoneko/ff14-fish-tracker-app
@@ -129,7 +129,7 @@ async function main() {
         method: location.spotId ? "Fishing" : "Spearfishing",
         level: +location.row.GatheringLevel,
         zone,
-        ...(place[location.row.PlaceName]?.Name ? { spot: place[location.row.PlaceName].Name } : {}),
+        ...spotOf(place[location.row.PlaceName]?.Name, zone),
         ...(position ? { map: position } : {}),
         ...(aetheryte ? { aetheryte } : {}),
         ...(anyTime ? { anyTime } : {}),
@@ -195,7 +195,7 @@ async function main() {
   writeExpansions("fishing", exVersions, sorted.map((f) => ({ expansion: f.expansion, entry: f.fish })))
 
   // The other spots a fish bites at, "The Mirror, Central Shroud", for its page
-  const spotName = (s) => [place[s.PlaceName]?.Name, place[territory[s.TerritoryType]?.PlaceName]?.Name].filter(Boolean).join(", ")
+  const spotName = (s) => [...new Set([place[s.PlaceName]?.Name, place[territory[s.TerritoryType]?.PlaceName]?.Name].filter(Boolean))].join(", ")
   const spotsOf = new Map()
   for (const s of spots) {
     for (let i = 0; s[`Item[${i}]`] !== undefined; i++) {
@@ -203,7 +203,7 @@ async function main() {
     }
   }
   const alsoAt = (fish) => {
-    const others = (spotsOf.get(String(fish.id)) ?? []).filter((s) => place[s.PlaceName]?.Name !== fish.spot).map(spotName)
+    const others = (spotsOf.get(String(fish.id)) ?? []).filter((s) => place[s.PlaceName]?.Name !== (fish.spot ?? fish.zone)).map(spotName)
     return others.length ? { alsoAt: [...new Set(others)] } : {}
   }
 

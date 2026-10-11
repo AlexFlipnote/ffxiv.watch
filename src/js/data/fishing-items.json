@@ -246,7 +246,7 @@
     "level": 4,
     "alsoAt": [
       "",
-      "Limsa Lominsa Lower Decks, Limsa Lominsa Lower Decks",
+      "Limsa Lominsa Lower Decks",
       "Moraby Bay, Lower La Noscea"
     ]
   },
@@ -257,7 +257,7 @@
     "level": 3,
     "alsoAt": [
       "",
-      "Limsa Lominsa Lower Decks, Limsa Lominsa Lower Decks",
+      "Limsa Lominsa Lower Decks",
       "Zephyr Drift, Middle La Noscea",
       "Summerford, Middle La Noscea",
       "Moraby Bay, Lower La Noscea",
@@ -279,7 +279,7 @@
     "level": 3,
     "alsoAt": [
       "",
-      "Limsa Lominsa Lower Decks, Limsa Lominsa Lower Decks",
+      "Limsa Lominsa Lower Decks",
       "Zephyr Drift, Middle La Noscea",
       "Candlekeep Quay, Lower La Noscea",
       "Swiftperch, Western La Noscea",
@@ -295,7 +295,7 @@
     "category": "Seafood",
     "level": 4,
     "alsoAt": [
-      "Limsa Lominsa Lower Decks, Limsa Lominsa Lower Decks",
+      "Limsa Lominsa Lower Decks",
       "Zephyr Drift, Middle La Noscea",
       "Summerford, Middle La Noscea",
       "Rhotano Sea (Privateer Forecastle), Eastern La Noscea"
@@ -307,8 +307,8 @@
     "category": "Seafood",
     "level": 6,
     "alsoAt": [
-      "Limsa Lominsa Lower Decks, Limsa Lominsa Lower Decks",
-      "Limsa Lominsa Upper Decks, Limsa Lominsa Upper Decks",
+      "Limsa Lominsa Lower Decks",
+      "Limsa Lominsa Upper Decks",
       "Summerford, Middle La Noscea",
       "Moraby Bay, Lower La Noscea",
       "Cedarwood, Lower La Noscea",
@@ -333,7 +333,7 @@
     "category": "Seafood",
     "level": 7,
     "alsoAt": [
-      "Limsa Lominsa Upper Decks, Limsa Lominsa Upper Decks",
+      "Limsa Lominsa Upper Decks",
       "Zephyr Drift, Middle La Noscea",
       "Summerford, Middle La Noscea",
       "Cedarwood, Lower La Noscea",
@@ -342,7 +342,7 @@
       "Swiftperch, Western La Noscea",
       "The Brewer's Beacon, Western La Noscea",
       "Vesper Bay, Western Thanalan",
-      "Mist, Mist",
+      "Mist",
       "Rhotano Sea (Privateer Forecastle), Eastern La Noscea"
     ]
   },
@@ -364,8 +364,8 @@
     "level": 9,
     "alsoAt": [
       "",
-      "Limsa Lominsa Lower Decks, Limsa Lominsa Lower Decks",
-      "Limsa Lominsa Upper Decks, Limsa Lominsa Upper Decks",
+      "Limsa Lominsa Lower Decks",
+      "Limsa Lominsa Upper Decks",
       "South Bloodshore, Eastern La Noscea"
     ]
   },
@@ -472,8 +472,8 @@
     "category": "Seafood",
     "level": 21,
     "alsoAt": [
-      "Limsa Lominsa Lower Decks, Limsa Lominsa Lower Decks",
-      "Limsa Lominsa Upper Decks, Limsa Lominsa Upper Decks",
+      "Limsa Lominsa Lower Decks",
+      "Limsa Lominsa Upper Decks",
       "Zephyr Drift, Middle La Noscea",
       "Summerford, Middle La Noscea",
       "Moraby Bay, Lower La Noscea",
@@ -482,7 +482,7 @@
       "Swiftperch, Western La Noscea",
       "Skull Valley, Western La Noscea",
       "Vesper Bay, Western Thanalan",
-      "Mist, Mist"
+      "Mist"
     ]
   },
   "4886": {
@@ -493,7 +493,7 @@
     "alsoAt": [
       "The Salt Strand, Lower La Noscea",
       "Crescent Cove, Western Thanalan",
-      "Mist, Mist",
+      "Mist",
       "Rhotano Sea (Privateer Forecastle), Eastern La Noscea",
       "Rhotano Sea (Privateer Sterncastle), Eastern La Noscea",
       "North Isle of Endless Summer, Eastern La Noscea"
@@ -541,7 +541,7 @@
     "level": 27,
     "alsoAt": [
       "South Bloodshore, Eastern La Noscea",
-      "Mist, Mist"
+      "Mist"
     ]
   },
   "4892": {
@@ -578,7 +578,7 @@
     "level": 31,
     "alsoAt": [
       "The Silver Bazaar, Western Thanalan",
-      "Mist, Mist"
+      "Mist"
     ]
   },
   "4896": {
@@ -588,7 +588,7 @@
     "level": 32,
     "alsoAt": [
       "North Bloodshore, Eastern La Noscea",
-      "Mist, Mist",
+      "Mist",
       "Rhotano Sea (Privateer Forecastle), Eastern La Noscea"
     ]
   },
@@ -612,7 +612,7 @@
       "Isles of Umbra Northshore, Western La Noscea",
       "Isles of Umbra Southshore, Western La Noscea",
       "Sapsa Spawning Grounds, Western La Noscea",
-      "Mist, Mist"
+      "Mist"
     ]
   },
   "4899": {
@@ -697,7 +697,7 @@
     "level": 45,
     "alsoAt": [
       "Isles of Umbra Southshore, Western La Noscea",
-      "Mist, Mist"
+      "Mist"
     ]
   },
   "4907": {
@@ -961,7 +961,7 @@
       "Whispering Gorge, Old Gridania",
       "Jadeite Flood, New Gridania",
       "Upper Black Tea Brook, Old Gridania",
-      "The Lavender Beds, The Lavender Beds"
+      "The Lavender Beds"
     ]
   },
   "4933": {
@@ -1006,7 +1006,7 @@
       "Upper Soot Creek, Central Thanalan",
       "Lower Soot Creek, Central Thanalan",
       "The Clutch, Central Thanalan",
-      "The Goblet, The Goblet"
+      "The Goblet"
     ]
   },
   "4936": {
@@ -1126,7 +1126,7 @@
       "The Tangle, Mor Dhona",
       "The Deep Tangle, Mor Dhona",
       "Haukke Manor, Central Shroud",
-      "The Lavender Beds, The Lavender Beds"
+      "The Lavender Beds"
     ]
   },
   "4943": {
@@ -1144,7 +1144,7 @@
       "North Drybone, Eastern Thanalan",
       "South Drybone, Eastern Thanalan",
       "Bronze Lake Shallows, Upper La Noscea",
-      "The Goblet, The Goblet"
+      "The Goblet"
     ]
   },
   "4944": {
@@ -1172,7 +1172,7 @@
       "Middle Hathoeva River, South Shroud",
       "East Hathoeva River, South Shroud",
       "Fallgourd Float, North Shroud",
-      "The Lavender Beds, The Lavender Beds"
+      "The Lavender Beds"
     ]
   },
   "4946": {
@@ -1218,7 +1218,7 @@
       "The Footfalls, Western Thanalan",
       "Burnt Lizard Creek, Southern Thanalan",
       "Forgotten Springs, Southern Thanalan",
-      "The Goblet, The Goblet"
+      "The Goblet"
     ]
   },
   "4949": {
@@ -1259,7 +1259,7 @@
     "alsoAt": [
       "Sanctum of the Twelve, East Shroud",
       "Murmur Rills, North Shroud",
-      "The Lavender Beds, The Lavender Beds"
+      "The Lavender Beds"
     ]
   },
   "4952": {
@@ -1277,7 +1277,7 @@
       "Empty Heart, Lower La Noscea",
       "Nophica's Wells, Western Thanalan",
       "The Footfalls, Western Thanalan",
-      "The Goblet, The Goblet"
+      "The Goblet"
     ]
   },
   "4953": {
@@ -1366,7 +1366,7 @@
       "Yugr'am River, Eastern Thanalan",
       "Burnt Lizard Creek, Southern Thanalan",
       "The Clutch, Central Thanalan",
-      "The Goblet, The Goblet"
+      "The Goblet"
     ]
   },
   "4960": {
@@ -1403,7 +1403,7 @@
     "category": "Seafood",
     "level": 27,
     "alsoAt": [
-      "The Lavender Beds, The Lavender Beds"
+      "The Lavender Beds"
     ]
   },
   "4964": {
@@ -1425,7 +1425,7 @@
       "Raincatcher Gully, Eastern La Noscea",
       "The Juggernaut, Eastern La Noscea",
       "Forgotten Springs, Southern Thanalan",
-      "The Goblet, The Goblet"
+      "The Goblet"
     ]
   },
   "4966": {
@@ -1458,7 +1458,7 @@
     "level": 30,
     "alsoAt": [
       "Verdant Drop, East Shroud",
-      "The Lavender Beds, The Lavender Beds"
+      "The Lavender Beds"
     ]
   },
   "4969": {
@@ -1506,7 +1506,7 @@
       "Northeast Bronze Lake, Upper La Noscea",
       "The Burning Wall, Eastern Thanalan",
       "Singing Shards, Mor Dhona",
-      "The Lavender Beds, The Lavender Beds",
+      "The Lavender Beds",
       "Northwest Bronze Lake, Outer La Noscea"
     ]
   },
@@ -1540,7 +1540,7 @@
       "The Deep Tangle, Mor Dhona",
       "East Agelyss River, Eastern La Noscea",
       "Haukke Manor, Central Shroud",
-      "The Lavender Beds, The Lavender Beds"
+      "The Lavender Beds"
     ]
   },
   "4976": {
@@ -1582,7 +1582,7 @@
       "The North Shards, Mor Dhona",
       "Parata's Peace, Western Thanalan",
       "Moondrip, Western Thanalan",
-      "The Goblet, The Goblet",
+      "The Goblet",
       "Northwest Bronze Lake, Outer La Noscea"
     ]
   },
@@ -1935,7 +1935,7 @@
       "Red Mantis Falls, Eastern La Noscea",
       "Ceruleum Field, Northern Thanalan",
       "The North Shards, Mor Dhona",
-      "The Goblet, The Goblet"
+      "The Goblet"
     ]
   },
   "5012": {
@@ -4563,7 +4563,7 @@
     "category": "Seafood",
     "level": 210,
     "alsoAt": [
-      "Rhalgr's Reach, Rhalgr's Reach",
+      "Rhalgr's Reach",
       "The Slow Wash, The Peaks",
       "The Arms of Meed, The Peaks"
     ]
@@ -4814,7 +4814,7 @@
       "Hells' Lid, The Ruby Sea",
       "The Isle of Bekko, The Ruby Sea",
       "Shoal Rock, The Ruby Sea",
-      "Shirogane, Shirogane"
+      "Shirogane"
     ]
   },
   "20093": {
@@ -4932,7 +4932,7 @@
     "level": 260,
     "alsoAt": [
       "Kugane Piers, Kugane",
-      "Shirogane, Shirogane"
+      "Shirogane"
     ]
   },
   "20111": {
@@ -4955,7 +4955,7 @@
       "Hells' Lid, The Ruby Sea",
       "The Isle of Bekko, The Ruby Sea",
       "The Isle of Zekki, The Ruby Sea",
-      "Shirogane, Shirogane"
+      "Shirogane"
     ]
   },
   "20113": {
@@ -4964,7 +4964,7 @@
     "category": "Seafood",
     "level": 215,
     "alsoAt": [
-      "Shirogane, Shirogane"
+      "Shirogane"
     ]
   },
   "20114": {

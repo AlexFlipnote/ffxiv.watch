@@ -1,4 +1,4 @@
-import { byId, mapPosition, minutes, nearestAetheryte, saveIcons, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
+import { byId, mapPosition, minutes, nearestAetheryte, saveIcons, saveMaps, sheets, spotOf, writeData, writeExpansions } from "./datamining.js"
 
 // GatheringPoint.Type. Regular and Diadem nodes are always up, the rest only at their times.
 // Type 8 (the Diadem's umbral nodes) only shows up in umbral weather, which the data doesn't say when
@@ -181,7 +181,7 @@ async function main() {
         job: JOBS[b.GatheringType],
         level: +b.GatheringLevel,
         zone,
-        ...(place[spotId]?.Name ? { spot: place[spotId].Name } : {}),
+        ...spotOf(place[spotId]?.Name, zone),
         ...(folklore ? { folklore } : {}),
         ...(unlock ? { quest: unlock } : {}),
         ...(position ? { map: position } : {}),

@@ -5,7 +5,6 @@
     "method": "Fishing",
     "level": 1,
     "zone": "Limsa Lominsa Upper Decks",
-    "spot": "Limsa Lominsa Upper Decks",
     "map": {
       "image": "s1t1-01",
       "scale": 200,
@@ -31,7 +30,6 @@
     "method": "Fishing",
     "level": 1,
     "zone": "Limsa Lominsa Upper Decks",
-    "spot": "Limsa Lominsa Upper Decks",
     "map": {
       "image": "s1t1-01",
       "scale": 200,
@@ -58,7 +56,6 @@
     "method": "Fishing",
     "level": 1,
     "zone": "Limsa Lominsa Upper Decks",
-    "spot": "Limsa Lominsa Upper Decks",
     "map": {
       "image": "s1t1-01",
       "scale": 200,
@@ -84,7 +81,6 @@
     "method": "Fishing",
     "level": 1,
     "zone": "Limsa Lominsa Upper Decks",
-    "spot": "Limsa Lominsa Upper Decks",
     "map": {
       "image": "s1t1-01",
       "scale": 200,
@@ -110,7 +106,6 @@
     "method": "Fishing",
     "level": 1,
     "zone": "Limsa Lominsa Upper Decks",
-    "spot": "Limsa Lominsa Upper Decks",
     "map": {
       "image": "s1t1-01",
       "scale": 200,
@@ -144,7 +139,6 @@
     "method": "Fishing",
     "level": 1,
     "zone": "Limsa Lominsa Lower Decks",
-    "spot": "Limsa Lominsa Lower Decks",
     "map": {
       "image": "s1t2-01",
       "scale": 200,
@@ -176,7 +170,6 @@
     "method": "Fishing",
     "level": 1,
     "zone": "Limsa Lominsa Lower Decks",
-    "spot": "Limsa Lominsa Lower Decks",
     "map": {
       "image": "s1t2-01",
       "scale": 200,
@@ -10854,7 +10847,6 @@
     "method": "Fishing",
     "level": 30,
     "zone": "Mist",
-    "spot": "Mist",
     "map": {
       "image": "s1h1-01",
       "scale": 200,
@@ -10898,7 +10890,6 @@
     "method": "Fishing",
     "level": 30,
     "zone": "The Lavender Beds",
-    "spot": "The Lavender Beds",
     "map": {
       "image": "f1h1-01",
       "scale": 200,
@@ -10941,7 +10932,6 @@
     "method": "Fishing",
     "level": 30,
     "zone": "The Goblet",
-    "spot": "The Goblet",
     "map": {
       "image": "w1h1-01",
       "scale": 200,
@@ -10979,7 +10969,6 @@
     "method": "Fishing",
     "level": 63,
     "zone": "Shirogane",
-    "spot": "Shirogane",
     "map": {
       "image": "e1h1-01",
       "scale": 200,

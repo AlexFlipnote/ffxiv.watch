@@ -82,6 +82,14 @@ const ICONS = path.join(ROOT, "src/images/items")
  */
 export const slug = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")
 
+/**
+ * Some spots are named after their zone, a town's docks are "Limsa Lominsa Upper Decks" in Limsa Lominsa Upper Decks.
+ * @param {string | undefined} name The spot's PlaceName
+ * @param {string} zone
+ * @returns {{ spot?: string }} To spread into an entry, empty when it has no name of its own
+ */
+export const spotOf = (name, zone) => name && name !== zone ? { spot: name } : {}
+
 /** @param {number} n */
 export const round = (n) => Math.round(n * 10) / 10
 

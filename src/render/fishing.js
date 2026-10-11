@@ -195,7 +195,7 @@ export function fishPages() {
   const paged = new Set(expansions.flatMap((e) => e.entries.map((f) => f.id)))
   // In the list's order, by zone, so the pager goes to the fish nearby
   const all = expansions.flatMap((expansion) => expansion.entries.map((fish) => ({ fish, expansion })))
-  const atSpot = Map.groupBy(all.filter((e) => e.fish.spot), (e) => `${e.fish.zone}|${e.fish.spot}`)
+  const atSpot = Map.groupBy(all, (e) => `${e.fish.zone}|${e.fish.spot ?? ""}`)
   const pagerTo = (entry) => entry && { url: fishUrl(entry.fish), text: entry.fish.name }
 
   return all.map(({ fish, expansion }, i) => ({
@@ -203,7 +203,7 @@ export function fishPages() {
     name: fish.name,
     ...fishSeo(fish),
     ...ogIcon(info[fish.id].icon, fish.name),
-    content: html`${fishIntro(fish, paged, info, expansion.name)}${spotCard(fish, info, (atSpot.get(`${fish.zone}|${fish.spot}`) ?? []).map((e) => e.fish).filter((f) => f !== fish))}
+    content: html`${fishIntro(fish, paged, info, expansion.name)}${spotCard(fish, info, atSpot.get(`${fish.zone}|${fish.spot ?? ""}`).map((e) => e.fish).filter((f) => f !== fish))}
 ${pager(pagerTo(all[i - 1]), pagerTo(all[i + 1]), "Previous and next fish")}`,
     sources: ["js/data/fishing-items.json", ...new Set([all[i - 1], all[i], all[i + 1]].filter(Boolean).map((e) => `js/data/fishing/${e.expansion.file}.json`))]
   }))
