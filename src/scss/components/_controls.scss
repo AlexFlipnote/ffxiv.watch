@@ -182,14 +182,13 @@
     transform: scale(.85);
   }
 
-  svg {
+  // The icon file is white, as a mask it takes the color, which hover and checking set
+  &::before {
+    content: "";
     width: 85%;
     height: 85%;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 3;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    background-color: currentColor;
+    mask: url("/images/check.svg") center / contain no-repeat;
   }
 
   @include hover {
@@ -222,8 +221,7 @@
   &.done-pop {
     animation: donePop .35s $ease;
 
-    path {
-      stroke-dasharray: 20;
+    &::before {
       animation: doneTick .3s ease-out;
     }
   }
@@ -272,9 +270,14 @@
   }
 }
 
+// Uncovered left to right, drawn like a pen would
 @keyframes doneTick {
   from {
-    stroke-dashoffset: 20;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0);
   }
 }
 
@@ -297,7 +300,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .done-check.done-pop,
-  .done-check.done-pop path,
+  .done-check.done-pop::before,
   .done-check.done-unpop {
     animation: none;
   }
