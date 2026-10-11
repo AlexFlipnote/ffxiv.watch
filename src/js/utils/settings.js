@@ -2,10 +2,12 @@ import { closable } from "./dialog.js"
 import { decodeBackup, encodeBackup, HIDE_DONE_KEY, LISTS, readDone, storageKey, writeDone } from "./done.js"
 import { load, onStored, store } from "./storage.js"
 import { pickedTheme, pickTheme } from "./theme.js"
+import { pickClock, pickedClock } from "./time.js"
 import { toast } from "./toast.js"
 
 const modal = document.getElementById("settings")
 const themes = [...modal.querySelectorAll("input[name=theme]")]
+const clocks = [...modal.querySelectorAll("input[name=clock]")]
 const hideDone = document.getElementById("settings-hide-done")
 const lists = document.getElementById("settings-lists")
 const code = document.getElementById("settings-code")
@@ -85,11 +87,13 @@ function showProgress() {
 
 function show() {
   for (const input of themes) input.checked = input.value === pickedTheme()
+  for (const input of clocks) input.checked = input.value === pickedClock()
   hideDone.checked = load(HIDE_DONE_KEY) === "1"
   showProgress()
 }
 
 for (const input of themes) input.addEventListener("change", () => pickTheme(input.value))
+for (const input of clocks) input.addEventListener("change", () => pickClock(input.value))
 hideDone.addEventListener("change", () => store(HIDE_DONE_KEY, hideDone.checked ? "1" : null))
 
 copy.addEventListener("click", async () => {
@@ -130,6 +134,7 @@ restoreCode.addEventListener("keydown", (e) => {
 for (const { key } of LISTS) onStored(storageKey(key), showProgress)
 onStored(HIDE_DONE_KEY, () => hideDone.checked = load(HIDE_DONE_KEY) === "1")
 onStored("theme", () => themes.forEach((input) => input.checked = input.value === pickedTheme()))
+onStored("clock", () => clocks.forEach((input) => input.checked = input.value === pickedClock()))
 
 closable(modal, document.getElementById("settings-close"))
 modal.addEventListener("close", () => confirms.forEach((reset) => reset()))

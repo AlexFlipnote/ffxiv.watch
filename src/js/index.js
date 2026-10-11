@@ -2,7 +2,7 @@ import "./utils/navbar.js"
 import { closable } from "./utils/dialog.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
 import { load, store } from "./utils/storage.js"
-import { everyTick, formatCountdown, gmtOffset, setText, setTime } from "./utils/time.js"
+import { everyTick, formatCountdown, formatEnGB, gmtOffset, hour12, setText, setTime } from "./utils/time.js"
 import { getAllTimerStates } from "./utils/timers.js"
 
 const container = document.getElementById("timers")
@@ -141,12 +141,14 @@ const pad = (n) => String(n).padStart(2, "0")
 /**
  * @param {Date} date
  * @param {boolean} utc
- * @returns {string} "13:05:09"
+ * @returns {string} "13:05:09", or "1:05:09 PM" on a 12-hour clock
  */
-const timeOf = (date, utc) => (utc
-  ? [date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()]
-  : [date.getHours(), date.getMinutes(), date.getSeconds()]
-).map(pad).join(":")
+const timeOf = (date, utc) => formatEnGB(date, {
+  ...(hour12() ? { hour: "numeric", hour12: true } : { hour: "2-digit", hour12: false }),
+  minute: "2-digit",
+  second: "2-digit",
+  timeZone: utc ? "UTC" : undefined
+})
 
 /** @param {number} now */
 function renderEarthClock(now) {

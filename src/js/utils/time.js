@@ -1,4 +1,55 @@
 import { ET_MINUTE_EARTH_MS } from "./eorzea.js"
+import { load, onStored, store } from "./storage.js"
+
+const CLOCK_KEY = "clock"
+let use12 = null
+
+/** @returns {"auto" | "12" | "24"} The picked one, "auto" guesses with autoHour12 */
+export function pickedClock() {
+  const clock = load(CLOCK_KEY)
+  return clock === "12" || clock === "24" ? clock : "auto"
+}
+
+/** @param {"auto" | "12" | "24"} clock */
+export const pickClock = (clock) => store(CLOCK_KEY, clock === "auto" ? null : clock)
+
+/**
+ * The browser's language decides it, not the device's clock setting, which a page can't see. Plenty in Europe run an
+ * American English browser on a 24-hour clock, so a European time zone overrules it.
+ * @returns {boolean}
+ */
+function autoHour12() {
+  const { hour12, timeZone = "" } = new Intl.DateTimeFormat(undefined, { hour: "numeric" }).resolvedOptions()
+  return !!hour12 && !timeZone.startsWith("Europe/")
+}
+
+/** @returns {boolean} Whether Earth times are shown as 12-hour, "9:05 PM" */
+export function hour12() {
+  if (use12 === null) {
+    const picked = pickedClock()
+    use12 = picked === "auto" ? autoHour12() : picked === "12"
+  }
+  return use12
+}
+
+// timers.js brings this file into the build too, where there's no document
+if (typeof document !== "undefined") onStored(CLOCK_KEY, () => use12 = null)
+
+/**
+ * The hour and minute part of a toLocaleString() format.
+ * @returns {Intl.DateTimeFormatOptions}
+ */
+const clockOptions = () => (hour12()
+  ? { hour: "numeric", minute: "2-digit", hour12: true }
+  : { hour: "2-digit", minute: "2-digit", hour12: false })
+
+/**
+ * The British date order, with the AM and PM the 12-hour clock's mostly American users know instead of its am and pm.
+ * @param {Date} date
+ * @param {Intl.DateTimeFormatOptions} options
+ * @returns {string}
+ */
+export const formatEnGB = (date, options) => date.toLocaleString("en-GB", options).replace(/\b[ap]m\b/, (p) => p.toUpperCase())
 
 /**
  * Rounded up to the second, so it reaches 00:00:00 right as the time comes, not a second before.
@@ -18,13 +69,13 @@ export function formatCountdown(ms) {
 /**
  * @param {Date} date
  * @param {Date} [now] Or any other day to leave the day out on
- * @returns {string} "Tue 13 Oct, 10:00", or "10:00" when it's the same day as `now`
+ * @returns {string} "Tue 13 Oct, 10:00", or "10:00" when it's the same day as `now`, 12-hour when picked
  */
 export function formatDate(date, now = new Date()) {
   const today = date.toDateString() === now.toDateString()
-  return date.toLocaleString("en-GB", {
+  return formatEnGB(date, {
     ...(today ? {} : { weekday: "short", day: "numeric", month: "short" }),
-    hour: "2-digit", minute: "2-digit", hour12: false
+    ...clockOptions()
   })
 }
 
@@ -52,16 +103,16 @@ const dayOf = (now) => {
  * this ends: on the same day the day is left out, "Sat 10 Oct, 00:40 - 00:54", whether or not it's today
  */
 export function setTime(el, date, now, { zone = false, from = null } = {}) {
-  const key = `${date.getTime()}|${from ? from.getTime() : dayOf(now)}|${zone}`
+  const key = `${date.getTime()}|${from ? from.getTime() : dayOf(now)}|${zone}|${hour12()}`
   if (filledTimes.get(el) === key) return
   filledTimes.set(el, key)
 
   const short = formatDate(date, from ?? now)
   el.textContent = zone ? `${short} ${gmtOffset(date)}` : short
   el.dateTime = date.toISOString()
-  el.title = `${date.toLocaleString("en-GB", {
+  el.title = `${formatEnGB(date, {
     weekday: "long", day: "numeric", month: "long", year: "numeric",
-    hour: "2-digit", minute: "2-digit", hour12: false
+    ...clockOptions()
   })} (${gmtOffset(date)})`
 }
 
