@@ -1,6 +1,6 @@
 const TAPPABLE = [
   ".info-btn", ".region-btn", ".close-btn", ".toast-close",
-  ".navbar-hamburger", ".navbar-links a", ".settings-button",
+  ".navbar-hamburger", ".navbar-title", ".navbar-links a", ".settings-button",
   ".settings-btn", ".segmented input", ".settings-check input",
   ".listing-table a", ".map-zoom",
   ".filters-toggle", ".top-button",
