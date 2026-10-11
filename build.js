@@ -419,6 +419,30 @@ function renderPage(route, hashed) {
 }
 
 /**
+ * Adds a Content-Security-Policy <meta>, GitHub Pages can't send headers. Only the site's own files load, so the
+ * privacy claim holds even if something slips in. The inline scripts are allowed by their hash, taken from the
+ * finished HTML as minifying changes them. Styles stay inline-friendly for the map markers' style attributes.
+ * @param {string} html The finished page
+ * @returns {string}
+ */
+function withCsp(html) {
+  const hashes = [...html.matchAll(/<script(?![^>]*\ssrc=)([^>]*)>([\s\S]*?)<\/script>/g)]
+    // JSON-LD is data, it never runs
+    .filter(([, attrs]) => !attrs.includes("application/ld+json"))
+    .map(([, , code]) => `'sha256-${crypto.createHash("sha256").update(code).digest("base64")}'`)
+  const policy = [
+    "default-src 'self'",
+    `script-src 'self' ${[...new Set(hashes)].join(" ")}`,
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data:",
+    "object-src 'none'",
+    "base-uri 'none'",
+    "form-action 'none'"
+  ].join("; ")
+  return html.replace(/<meta charset[^>]*>/, (charset) => `${charset}<meta http-equiv="Content-Security-Policy" content="${policy}">`)
+}
+
+/**
  * @param {boolean} [hashed] Production build: hashed asset links and minified HTML
  * @returns {Promise<Route[]>} The pages written
  */
@@ -432,7 +456,7 @@ async function buildHTML(hashed = true) {
     const outputFile = path.join(OUT, route.output)
     fs.mkdirSync(path.dirname(outputFile), { recursive: true })
     const html = renderPage(route, hashed)
-    fs.writeFileSync(outputFile, hashed ? await minify(html, minifyOptions) : html)
+    fs.writeFileSync(outputFile, withCsp(hashed ? await minify(html, minifyOptions) : html))
   }
   log("HTML", `Done rendering ${routes.length} pages`)
   return routes
