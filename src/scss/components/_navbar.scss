@@ -58,9 +58,11 @@
   align-items: center;
   height: 100%;
 
+  // The navbar's full height, so the click area isn't just the text
   a {
     display: flex;
     align-items: center;
+    align-self: stretch;
     font-size: 1.125rem;
     color: var(--font-secondary);
     text-decoration: none;

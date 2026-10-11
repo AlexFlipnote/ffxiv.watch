@@ -131,6 +131,7 @@
 }
 
 .region-btn {
+  position: relative;
   flex: 1;
   padding: .125rem .25rem;
   background: var(--chip-background);
@@ -143,9 +144,13 @@
   cursor: pointer;
   transition: all 0.2s;
 
+  // A finger's worth to tap, past the pill without changing how it looks. Only up and down, the pills sit close
   @include touch {
-    min-height: 2.25rem;
-    font-size: .8rem;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -.75rem 0;
+    }
   }
 
   @include hover {
