@@ -152,8 +152,8 @@
   font-display: optional;
 }
 
-// Square Enix's icon font from the Lodestone, subset to the icons render/html.js's xivIcon uses. Not preloaded, only
-// the gathering and fishing pages use it
+// Square Enix's icon font from the Lodestone, subset to the icons render/html.js's xivIcon uses. Only the gathering
+// and fishing pages use it, they preload it
 @font-face {
   font-family: "FFXIV Icons";
   src: url("/fonts/ffxiv-icons.woff2") format("woff2");
