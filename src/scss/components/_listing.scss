@@ -435,15 +435,12 @@ $tab-flare: .5rem;
   .listing-table & {
     vertical-align: middle;
   }
-
-  // The hover box keeps the same .25rem around the content as on its left, not the row's wider edge
-  .listing-table &:last-child .location::after {
-    right: calc(var(--row-edge) - .25rem);
-  }
 }
 
+// The icon at the row's right edge and the text against it, so the column lines up on the edge instead of floating
 .location {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: .5rem;
   width: 100%;
@@ -452,7 +449,7 @@ $tab-flare: .5rem;
   border: none;
   color: var(--font-tertiary);
   font: inherit;
-  text-align: left;
+  text-align: right;
   text-decoration: none;
 
   &::after {
