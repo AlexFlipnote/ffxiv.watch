@@ -1,4 +1,5 @@
 import { byId, nearestAetheryte, round, saveIcons, saveMaps, sheets, spotOf, writeData, writeExpansions, zoneWeather } from "./datamining.js"
+import { FACT_ICONS } from "../src/render/fishing.js"
 
 // When each fish bites, what with and after which weather isn't in the game's data. Carbuncle Plushy's fish tracker
 // (MIT) keeps it, for the fish with a condition and every big fish: https://github.com/icykoneko/ff14-fish-tracker-app
@@ -222,7 +223,8 @@ async function main() {
       ...(byFish.has(id) && byFish.get(id).method === "Fishing" ? alsoAt(byFish.get(id)) : {})
     }]
   })))
-  await saveIcons(ids.map((id) => +item[id].Icon))
+  // The actions and folklore tomes the fish pages show next to their facts too
+  await saveIcons([...ids.map((id) => +item[id].Icon), ...Object.values(FACT_ICONS)])
 }
 
 main().catch((err) => {

@@ -79,6 +79,29 @@ function detailTimers(windowsOf) {
 }
 
 /**
+ * Fills the .window-hint elements, "(up in 1:23:45)" after something with windows of its own, like a fish needed for
+ * intuition.
+ * @param {(data: object) => WindowSource} windowsOf Gets the element's data-window, parsed
+ * @returns {(now: number) => void} Redraws them, call it every tick
+ */
+function windowHints(windowsOf) {
+  const hints = [...document.querySelectorAll(".window-hint[data-window]")].map((el) => ({
+    el,
+    ...windowsOf(JSON.parse(el.dataset.window))
+  }))
+
+  return (now) => {
+    for (const hint of hints) {
+      const w = hint.current(now)
+      hint.el.classList.toggle("window-hint-open", Boolean(w?.open))
+      setText(hint.el, !w ? "(nothing in the next 30 days)"
+        : w.open ? `(up now, ends in ${formatCountdown(w.end - now)})`
+          : `(up in ${formatCountdown(w.start - now)})`)
+    }
+  }
+}
+
+/**
  * The link back to the list. Coming from the list, it goes back in history instead, which brings the list back as it
  * was left: the filters, the search and how far down it was scrolled.
  */
@@ -118,5 +141,10 @@ export function detailPage(doneKey, windowsOf) {
   backlink()
   mapZoom()
   doneChecks(doneKey)
-  everyTick(detailTimers(windowsOf))
+  const timers = detailTimers(windowsOf)
+  const hints = windowHints(windowsOf)
+  everyTick((now) => {
+    timers(now)
+    hints(now)
+  })
 }

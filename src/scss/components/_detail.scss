@@ -199,6 +199,16 @@
   color: var(--font-tertiary);
 }
 
+.window-hint {
+  color: var(--font-tertiary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+
+  &.window-hint-open {
+    color: var(--accent);
+  }
+}
+
 .detail-countdown {
   font-size: 1.4rem;
   font-variant-numeric: tabular-nums;

@@ -79,6 +79,37 @@
   background: var(--chip-background);
 }
 
+// The game's tug marks, ! to !!!, fanning out like they do over the character's head. In the bait icons' box, so the
+// words line up with the rows around it
+.tug {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  i {
+    width: .5rem;
+    height: 1.2rem;
+    background-color: var(--accent);
+    mask: url("/images/ui/tug.svg") center / contain no-repeat;
+    transform-origin: 50% 100%;
+  }
+
+  i + i {
+    margin-left: -.1875rem;
+  }
+
+  i:first-child:not(:last-child) {
+    transform: rotate(-12deg);
+  }
+
+  i:last-child:not(:first-child) {
+    transform: rotate(12deg);
+  }
+}
+
 .bait-arrow {
   color: var(--font-tertiary);
 }
