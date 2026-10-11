@@ -13,6 +13,7 @@ const localZone = document.getElementById("local-zone")
 const serverTime = document.getElementById("server-time")
 const modal = document.getElementById("modal")
 const modalTitle = document.getElementById("modal-title")
+const modalWhen = document.getElementById("modal-when")
 const modalInfo = document.getElementById("modal-info")
 const modalList = document.getElementById("modal-list")
 
@@ -105,6 +106,8 @@ function renderModal(timer) {
   renderedModal = key
 
   modalTitle.textContent = timer.title
+  modalWhen.textContent = timer.when ?? ""
+  modalWhen.hidden = !timer.when
   modalInfo.textContent = timer.info
   modalList.replaceChildren(...timer.list.map((item) => {
     const li = document.createElement("li")

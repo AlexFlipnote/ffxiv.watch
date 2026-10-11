@@ -4,8 +4,9 @@
     <x-html str="partials/head.html"/>
     <x-seo
       title="FFXIV Timers: Daily & Weekly Resets, Eorzea Time - ffxiv.watch"
-      description="Live FFXIV timers for daily and weekly resets, housing lottery, Jumbo Cactpot, GATEs and Ocean Fishing, plus Eorzea time."
+      description="Live FFXIV timers: daily reset at 15:00 UTC, weekly reset Tuesdays at 08:00 UTC, housing lottery, Jumbo Cactpot, GATEs, Ocean Fishing and Eorzea time."
     />
+    {{{ faq }}}
   </head>
 
   <body>
@@ -35,6 +36,7 @@
         <button class="close-btn" id="modal-close" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body">
+        <p id="modal-when"></p>
         <p id="modal-info"></p>
         <ul id="modal-list"></ul>
       </div>
