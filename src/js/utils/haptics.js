@@ -4,7 +4,7 @@ const TAPPABLE = [
   ".settings-btn", ".segmented input", ".settings-check input",
   ".listing-table a", ".map-zoom",
   ".filters-toggle", ".top-button",
-  ".backlink", ".detail-prev-link", ".detail-next-link"
+  ".backlink", ".detail-prev-link", ".detail-next-link", ".detail-facts a"
 ].join(", ")
 
 /**
