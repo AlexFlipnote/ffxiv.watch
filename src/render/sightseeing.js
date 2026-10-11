@@ -47,7 +47,7 @@ const emoteFact = (emote, text) => html`${emote}${text.emoteCommand && html` <sp
 const vistaTags = (vista) => [
   chip(vista.emote),
   ...(vista.weather ?? []).map((w) => chip(w, "chip-accent")),
-  vista.level && chip(`Lv. ${vista.level}`),
+  vista.level && chip(`Lv.${vista.level}`),
   vista.unlock && chip(`Quest: ${vista.unlock.quest}`, "chip-warning", `Unlocked by the quest ${unlockText(vista.unlock)}`)
 ]
 

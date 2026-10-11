@@ -34,7 +34,7 @@ const stars = (item) => item.stars && html`<span class="gathering-stars">${"★"
  */
 const nodeTags = (node) => [
   chip(node.type, TYPE_COLORS[node.type]),
-  chip(`${node.job} Lv. ${node.level}`),
+  chip(`${node.job} Lv.${node.level}`),
   node.folklore && chip(node.folklore),
   node.quest && chip(`Quest: ${node.quest}`, "", "Unlocked by this quest")
 ]
@@ -164,7 +164,7 @@ function whereText(item, spots) {
   }
 
   const [node] = nodes
-  const what = `${article([type === "Regular" ? "" : type.toLowerCase(), node.job].filter(Boolean).join(" "))} node, Lv. ${node.level}`
+  const what = `${article([type === "Regular" ? "" : type.toLowerCase(), node.job].filter(Boolean).join(" "))} node, Lv.${node.level}`
   const where = `, in ${node.zone}${node.map ? ` (${coordinates(node.map)})` : ""}`
   const when = node.times ? `, up ${etWindows(node.times)}` : ""
   return `Where to gather ${item.name} in FFXIV: ${what}${where}${when}`
@@ -220,7 +220,7 @@ function recipeList(recipes) {
       <div>
         <h3 class="detail-recipe-job">${job}</h3>
         <ul>${list.slice(0, RECIPES_SHOWN).map((r) => html`
-          <li><span class="detail-recipe-level">Lv. ${r.level}</span> ${r.amount > 1 && html`<span class="detail-recipe-amount">${r.amount}x</span> `}${r.item}</li>`)}${list.length > RECIPES_SHOWN && html`
+          <li><span class="detail-recipe-level">Lv.${r.level}</span> ${r.amount > 1 && html`<span class="detail-recipe-amount">${r.amount}x</span> `}${r.item}</li>`)}${list.length > RECIPES_SHOWN && html`
           <li class="detail-recipe-more">and ${list.length - RECIPES_SHOWN} more</li>`}
         </ul>
       </div>`)}

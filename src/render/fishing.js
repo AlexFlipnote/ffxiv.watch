@@ -109,7 +109,7 @@ const windowData = (fish) => isTimed(fish)
  */
 const fishTags = (fish) => [
   fish.big && chip("Big fish", "chip-gold"),
-  chip(`${fish.method === "Spearfishing" ? "Spearfishing" : "Fisher"} Lv. ${fish.level}`),
+  chip(`${fish.method === "Spearfishing" ? "Spearfishing" : "Fisher"} Lv.${fish.level}`),
   weatherText(fish) && chip(weatherText(fish), "chip-accent", `Bites ${whenText(fish)}`),
   fish.predators && chip(`Intuition: ${predatorText(fish)}`, "chip-warning", `Catch ${predatorText(fish)} first`),
   fish.folklore && chip(fish.folklore)
