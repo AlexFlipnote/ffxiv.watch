@@ -368,5 +368,7 @@ function topButton(filters) {
   const navbarHeight = document.querySelector(".navbar").offsetHeight
   new IntersectionObserver(([entry]) => {
     button.hidden = entry.isIntersecting || entry.boundingClientRect.top > 0
+    // For the toasts to keep above it. A body:has() for it restyled the whole page on every countdown tick
+    document.body.toggleAttribute("data-top-button", !button.hidden)
   }, { rootMargin: `-${navbarHeight}px 0px 0px 0px` }).observe(filters)
 }

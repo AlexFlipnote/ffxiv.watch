@@ -27,8 +27,8 @@
     left: calc(1rem + env(safe-area-inset-left));
     max-width: none;
 
-    // Across the width on a phone, so above the button back to the top while it's there
-    body:has(.top-button:not([hidden])) & {
+    // Across the width on a phone, so above the button back to the top while it's there (set in js/utils/listing.js)
+    body[data-top-button] & {
       bottom: calc(4.75rem + env(safe-area-inset-bottom));
     }
   }
