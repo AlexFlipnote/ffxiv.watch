@@ -215,8 +215,17 @@ export async function saveIcons(ids) {
 export const zoneWeather = () => new Map(JSON.parse(fs.readFileSync(path.join(DATA, "weather.json"), "utf8"))
   .map((z) => [z.name, new Set(z.weather.map(([name]) => name))]))
 
+// The fish pages draw these from a fixed set, an icon per hookset and lure and marks per tug, so a new value upstream
+// would show up broken
+const CHOICES = {
+  hookset: ["Powerful", "Precision"],
+  lure: ["Ambitious", "Modest"],
+  tug: ["light", "medium", "heavy"],
+  gig: ["Small", "Normal", "Large"]
+}
+
 /**
- * Throws on times or weather the pages can't use, before anything is written.
+ * Throws on times, weather or fish details the pages can't use, before anything is written.
  * @param {{ name: string, zone: string, times?: [number, number][], weather?: string[], previousWeather?: string[] }[]} list
  */
 function validate(list) {
@@ -236,6 +245,15 @@ function validate(list) {
       if (!entry[key].length) problem(`empty ${key}, leave it out for any weather`)
       if (!zones.has(entry.zone)) problem(`${key} set, but the zone isn't in weather.json`)
       else for (const w of entry[key]) if (!zones.get(entry.zone).has(w)) problem(`${key} "${w}" never happens there`)
+    }
+    for (const [key, allowed] of Object.entries(CHOICES)) {
+      if (entry[key] !== undefined && !allowed.includes(entry[key])) problem(`unknown ${key} "${entry[key]}"`)
+    }
+    if (entry.bait && (!entry.bait.length || entry.bait.some((step) => !step.length || step.some((b) => !(b.id > 0) || !b.name)))) {
+      problem("bait with an empty step, or one without an id and name")
+    }
+    if (entry.predators && (!entry.predators.length || entry.predators.some((p) => !(p.id > 0) || !(p.count > 0) || !p.name))) {
+      problem("intuition fish without an id, count or name")
     }
   }
 
