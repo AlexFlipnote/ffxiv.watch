@@ -9,6 +9,7 @@ const root = document.documentElement
 const system = matchMedia("(prefers-color-scheme: light)")
 const themeColor = document.querySelector("meta[name=theme-color]")
 
+// partials/head.html has a copy for the first paint, keep the two the same
 const PHASES = [
   { name: "night", from: 0 },
   { name: "dawn", from: 5 },

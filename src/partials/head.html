@@ -14,14 +14,22 @@
     root.dataset.theme = theme
     document.querySelector("meta[name=theme-color]").content = theme === "light" ? "#f7f7f7" : "#1a1a1a"
 
+    // The same phases as PHASES in js/utils/theme.js, which can't be imported here before the first paint
     const hour = Math.floor(Date.now() / 175000) % 24
     root.dataset.time = hour < 5 ? "night" : hour < 8 ? "dawn" : hour < 17 ? "day" : hour < 20 ? "dusk" : "night"
   })()
 </script>
 
-<!-- Chrome and Edge prerender a page when its link is hovered, so the click shows it at once -->
+<!-- Chrome and Edge prerender a page when its link is hovered, so the click shows it at once. The lists are only
+     fetched, building every row and running the page for a hover nobody clicks would cost a phone too much -->
 <script type="speculationrules">
-  { "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }] }
+  {
+    "prerender": [{
+      "where": { "and": [{ "href_matches": "/*" }, { "not": { "href_matches": ["/fishing/", "/gathering/", "/sightseeing/"] } }] },
+      "eagerness": "moderate"
+    }],
+    "prefetch": [{ "where": { "href_matches": ["/fishing/", "/gathering/", "/sightseeing/"] }, "eagerness": "moderate" }]
+  }
 </script>
 
 <!-- Favicon: SVG where supported, .ico (16/32/48px) for the rest, PNG for iOS home screens -->
