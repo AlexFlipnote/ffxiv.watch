@@ -37,6 +37,61 @@
   }
 }
 
+// The open list styled too, where the browser lets it (Chrome and Edge 135+, the rest keep their own). Only with a
+// mouse, a phone's own picker is easier to use with a finger
+@supports (appearance: base-select) {
+  @media (pointer: fine) {
+    .select,
+    .select::picker(select) {
+      appearance: base-select;
+    }
+
+    .select {
+      display: inline-flex;
+      align-items: center;
+
+      // The chevron is the background-image above
+      &::picker-icon {
+        display: none;
+      }
+
+      // Glass like the cards, it's a part of the page, but blurred more and less see-through so the rows under it
+      // don't get in the way of reading it
+      &::picker(select) {
+        margin-top: .25rem;
+        padding: .25rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: color-mix(in srgb, var(--surface-solid) 65%, transparent);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        box-shadow: var(--card-shadow), 0 .5rem 1.5rem rgba(0, 0, 0, .25);
+      }
+
+      option {
+        padding: .375rem .625rem;
+        border-radius: .375rem;
+        background-color: transparent;
+        cursor: pointer;
+
+        &::checkmark {
+          display: none;
+        }
+
+        &:hover,
+        &:focus-visible {
+          outline: none;
+          background-color: var(--chip-background);
+        }
+
+        &:checked {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+}
+
 .input::placeholder {
   color: var(--font-tertiary);
 }
