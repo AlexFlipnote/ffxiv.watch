@@ -223,10 +223,9 @@ export function mapFigure(entry, note) {
   return html`
     <a class="map map-zoom" href="/images/maps/${map.image}.webp" data-map="${data}" title="Show a bigger map">
       <img src="/images/maps/${map.image}.webp" alt="Map of ${entry.zone}, marked at ${coordinates(map)}" width="1024" height="1024" loading="lazy">
-      ${map.radius
-    ? html`<span class="map-area" style="${at(map)}; width: ${size}; height: ${size}"></span>`
-    : html`<span class="map-pin" style="${at(map)}"></span>`}
+      ${map.radius ? html`<span class="map-area" style="${at(map)}; width: ${size}; height: ${size}"></span>` : ""}
       ${entry.aetheryte ? html`<span class="map-aetheryte" style="${at(entry.aetheryte)}"></span>` : ""}
+      ${map.radius ? "" : html`<span class="map-pin" style="${at(map)}"></span>`}
     </a>`
 }
 
