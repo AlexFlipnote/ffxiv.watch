@@ -285,7 +285,18 @@
     background-color: var(--group-open-background);
   }
 
-  .group-open strong {
+  // The name takes the link's colour instead of .table's own for strong, so it turns blue on hover too, and the
+  // collectable mark goes along with it
+  .gathering-item {
+    color: var(--font-primary);
+
+    strong {
+      color: inherit;
+    }
+  }
+
+  .group-open strong,
+  .group-open .gathering-item {
     color: var(--accent);
   }
 

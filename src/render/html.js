@@ -132,9 +132,9 @@ export const xivIcon = (name, label = null) => label
 
 /**
  * @param {{ collectable?: boolean }} entry An item or fish
- * @returns {Html | undefined} The game's collectable mark, as a chip
+ * @returns {Html | undefined} The game's collectable mark, in the colour of the name it follows
  */
-export const collectableChip = (entry) => entry.collectable && chip(xivIcon("collectable", "Collectable"), "gathering-collectable", "Collectable")
+export const collectableChip = (entry) => entry.collectable && html`<span class="gathering-collectable" title="Collectable">${xivIcon("collectable", "Collectable")}</span>`
 
 /**
  * @param {number} minutes ET minutes into the day
