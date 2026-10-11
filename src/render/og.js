@@ -77,7 +77,7 @@ function overlay(spec, top) {
     : `<circle cx="${x}" cy="${y}" r="10" fill="#b03131" stroke="#fff" stroke-width="4" filter="url(#shadow)"/>`
   // 24x32, scaled up like the marker
   const aetheryte = spec.aetheryte
-    ? nestedSvg("map-aetheryte.svg", `x="${px(spec.aetheryte.x) - 18}" y="${px(spec.aetheryte.y) - top - 24}" width="36" height="48"`)
+    ? nestedSvg("ui/map-aetheryte.svg", `x="${px(spec.aetheryte.x) - 18}" y="${px(spec.aetheryte.y) - top - 24}" width="36" height="48"`)
     : ""
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${OG_WIDTH}" height="${OG_HEIGHT}">

@@ -56,7 +56,7 @@
   align-self: flex-start;
 
   &::before {
-    mask-image: url("/images/arrow.svg");
+    mask-image: url("/images/ui/arrow.svg");
   }
 }
 
@@ -409,7 +409,7 @@ $item-side: min(20rem, 40%);
 
   .detail-prev-link::before,
   .detail-next-link::before {
-    mask-image: url("/images/chevron.svg");
+    mask-image: url("/images/ui/chevron.svg");
   }
 
   // The chevron points left, so next has it flipped and on the right
