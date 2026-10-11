@@ -68,7 +68,8 @@
   --navbar-shadow: 0 1px 6px rgba(0, 0, 0, .08);
   --chip-background: rgba(0, 0, 0, .06);
   --group-background: rgba(255, 255, 255, .85);
-  --group-open-background: rgba(240, 240, 240, .9);
+  // A faint accent, so the open ones stand out like the lighter ones do in the dark theme
+  --group-open-background: rgba(230, 245, 250, .95);
   --group-shadow: drop-shadow(0 1px 3px rgba(0, 0, 0, .08));
   --text-shadow: none;
 
