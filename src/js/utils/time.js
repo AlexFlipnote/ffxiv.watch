@@ -99,16 +99,15 @@ const dayOf = (now) => {
  * @param {HTMLTimeElement} el
  * @param {Date} date
  * @param {Date} now Decides whether the day is shown
- * @param {{ zone?: boolean, from?: Date }} [options] `zone` adds "GMT+2" after it. `from` is the start of the range
- * this ends: on the same day the day is left out, "Sat 10 Oct, 00:40 - 00:54", whether or not it's today
+ * @param {{ from?: Date }} [options] `from` is the start of the range this ends: on the same day the day is left out,
+ * "Sat 10 Oct, 00:40 - 00:54", whether or not it's today
  */
-export function setTime(el, date, now, { zone = false, from = null } = {}) {
-  const key = `${date.getTime()}|${from ? from.getTime() : dayOf(now)}|${zone}|${hour12()}`
+export function setTime(el, date, now, { from = null } = {}) {
+  const key = `${date.getTime()}|${from ? from.getTime() : dayOf(now)}|${hour12()}`
   if (filledTimes.get(el) === key) return
   filledTimes.set(el, key)
 
-  const short = formatDate(date, from ?? now)
-  el.textContent = zone ? `${short} ${gmtOffset(date)}` : short
+  el.textContent = formatDate(date, from ?? now)
   el.dateTime = date.toISOString()
   el.title = `${formatEnGB(date, {
     weekday: "long", day: "numeric", month: "long", year: "numeric",

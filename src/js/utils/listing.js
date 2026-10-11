@@ -79,9 +79,11 @@ function groupKey(w) {
 function groupRows(state) {
   const header = document.createElement("tr")
   header.className = `group-header group-${state}`
+  const label = state === "open" ? "Ends in" : state === "later" ? "Up in" : ""
   header.innerHTML = `
     <td colspan="2">
       <span class="group-tab">
+        ${label ? `<span class="group-label">${label}</span>` : ""}
         <strong class="group-countdown"></strong>
         <span class="group-when"><span class="group-until">Up until </span><time></time><span class="group-dash"> - </span><time></time></span>
       </span>
@@ -313,7 +315,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
         // Up now, only the end is shown, "Up until 21:03", so its day goes by today's instead
         const start = new Date(w.start)
         setTime(group.from, start, date)
-        setTime(group.to, new Date(w.end), date, { zone: true, from: w.open ? null : start })
+        setTime(group.to, new Date(w.end), date, { from: w.open ? null : start })
       } else {
         setText(group.countdown, state === "always" ? "Any time" : "Nothing in the next 30 days")
       }

@@ -370,6 +370,12 @@ $tab-flare: .5rem;
   }
 }
 
+// "Ends in" or "Up in", the countdown alone looks the same either way
+.group-label {
+  font-size: .75rem;
+  color: var(--font-tertiary);
+}
+
 .group-countdown {
   font-size: .95rem;
 
@@ -388,7 +394,7 @@ $tab-flare: .5rem;
   font-size: .75rem;
   color: var(--font-tertiary);
 
-  // Up: "Up until 21:03 GMT+2". Not up yet: "20:57 - 21:03 GMT+2".
+  // Up: "Up until 21:03". Not up yet: "20:57 - 21:03".
   // Any time, or nothing coming: no times
   .group-later & .group-until,
   .group-open & .group-dash,

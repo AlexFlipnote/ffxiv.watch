@@ -72,7 +72,7 @@ function detailTimers(windowsOf) {
         const [from, to] = timer.list.children[i].querySelectorAll("time")
         const start = new Date(listed.start)
         setTime(from, start, date)
-        setTime(to, new Date(listed.end), date, { zone: true, from: start })
+        setTime(to, new Date(listed.end), date, { from: start })
       })
     }
   }
