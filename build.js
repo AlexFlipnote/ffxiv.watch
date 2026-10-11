@@ -176,7 +176,9 @@ async function listRoutes() {
       if (seen.has(slug)) throw new Error(`pages/${dataFile}: two pages are both "${slug}"`)
       seen.add(slug)
       const output = source.replace(/\[\w+\]\.html$/, `${slug}/index.html`)
-      routes.push({ source, output, url: outputUrl(output), props, sources: [...own, ...sources] })
+      // Dated by its data alone: a markup tweak to the template would otherwise date thousands of pages at once, and
+      // search engines stop trusting a lastmod that moves without the content
+      routes.push({ source, output, url: outputUrl(output), props, sources: sources.length ? sources : own })
     }
   }
   return routes
