@@ -601,11 +601,11 @@ $tab-flare: .5rem;
   }
 }
 
-// A phone's screen is tall, so the dialog is nearly as tall and the map gets what the header leaves, a portrait
+// A phone's screen is tall, so the dialog takes most of it and the map gets what the header leaves, a portrait
 // view to drag around instead of a short strip. min-height lets a long note push it to full screen (_modal.scss)
 @include mobile {
   .map-modal {
-    height: calc(100dvh - 4rem);
+    height: 80dvh;
 
     &[open] {
       display: flex;
