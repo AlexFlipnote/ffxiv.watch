@@ -245,8 +245,9 @@
     left: 0;
     right: 0;
     height: auto;
-    max-height: calc(100dvh - var(--navbar-height));
-    padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    // Stops short of the home bar instead of padding for it, Android's counts even with the menu nowhere near it
+    max-height: calc(100dvh - var(--navbar-height) - env(safe-area-inset-bottom));
+    padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
     flex-direction: column;
     align-items: stretch;
     overflow-y: auto;
