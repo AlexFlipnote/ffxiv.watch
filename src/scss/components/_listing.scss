@@ -572,7 +572,35 @@ $tab-flare: .5rem;
   }
 }
 
-// While the dialog's next map loads it pulses empty, then the map and its markers fade in, see js/utils/mapModal.js
+// The dialog's map is drawn at its full size, as close in as the link previews, and the frame shows the part around
+// the spot. Dragged to see the rest, see js/utils/mapModal.js
+.map-modal .map {
+  aspect-ratio: 4 / 3;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+
+  &.map-dragging {
+    cursor: grabbing;
+  }
+}
+
+// Zoomed with the wheel or a pinch, the markers on it scaled back so they stay the same size on the screen. The
+// area's circle is a part of the map, it zooms with it
+.map-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1024px;
+  height: 1024px;
+  transform-origin: 0 0;
+
+  .map-aetheryte,
+  .map-pin {
+    transform: translate(-50%, -50%) scale(calc(1 / var(--zoom, 1)));
+  }
+}
+
 .map-modal .map {
   > * {
     transition: opacity .3s ease-out;

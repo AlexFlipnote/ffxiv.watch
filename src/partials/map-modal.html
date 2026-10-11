@@ -8,10 +8,13 @@
     </div>
     <button class="close-btn" id="map-close" aria-label="Close">&times;</button>
   </div>
-  <div class="map">
-    <img id="map-image" alt="" width="1024" height="1024">
-    <div class="map-area" id="map-area"></div>
-    <div class="map-aetheryte" id="map-aetheryte" hidden></div>
-    <div class="map-pin" id="map-pin"></div>
+  <!-- The map at its full size, the frame shows the part around the spot and can be dragged around -->
+  <div class="map" id="map-frame">
+    <div class="map-canvas" id="map-canvas">
+      <img id="map-image" alt="" width="1024" height="1024" draggable="false">
+      <div class="map-area" id="map-area"></div>
+      <div class="map-aetheryte" id="map-aetheryte" hidden></div>
+      <div class="map-pin" id="map-pin"></div>
+    </div>
   </div>
 </dialog>

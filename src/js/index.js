@@ -1,4 +1,5 @@
 import "./utils/navbar.js"
+import { closable } from "./utils/dialog.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
 import { everyTick, formatCountdown, gmtOffset, setText, setTime } from "./utils/time.js"
 import { getAllTimerStates } from "./utils/timers.js"
@@ -130,16 +131,7 @@ modal.addEventListener("close", () => {
   renderedModal = null
 })
 
-document.getElementById("modal-close").addEventListener("click", () => modal.close())
-
-// Clicking the backdrop closes it
-modal.addEventListener("click", (e) => {
-  if (e.target !== modal) return
-  const rect = modal.getBoundingClientRect()
-  if (e.clientY < rect.top || e.clientY > rect.bottom || e.clientX < rect.left || e.clientX > rect.right) {
-    modal.close()
-  }
-})
+closable(modal, document.getElementById("modal-close"))
 
 /** @param {number} now */
 function render(now) {
