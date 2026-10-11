@@ -1,6 +1,5 @@
 @use "../mixins" as *;
 
-// Under every page's content, pushed to the bottom when the page is short
 .footer {
   @include content-column;
   box-sizing: border-box;
@@ -26,7 +25,6 @@
   }
 }
 
-// The navbar's diamond, smaller
 .footer-dot {
   display: inline-block;
   width: .4rem;

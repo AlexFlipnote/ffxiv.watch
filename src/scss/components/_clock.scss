@@ -1,6 +1,5 @@
 @use "../mixins" as *;
 
-// Eorzea clock, a banner across the top of the timer grid
 .clock {
   @include glass;
   grid-column: 1 / -1;

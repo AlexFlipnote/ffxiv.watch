@@ -351,8 +351,7 @@ function seoTags(route, attrs) {
     })]
     : []
 
-  // Its own preview, image="/images/og/hash.jpg" image-alt="..." image-size="1024x536", see render/og.js. The banner
-  // when it has none
+  // Its own preview from render/og.js, the banner when it has none
   const [width, height] = (attr("image-size") ?? "").split("x").map(Number)
   const image = attr("image")
     ? { src: `https://${DOMAIN}${attr("image")}`, width, height, alt: attr("image-alt") }

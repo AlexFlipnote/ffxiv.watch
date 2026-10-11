@@ -10,7 +10,7 @@
   padding-bottom: 1.25rem;
 }
 
-// Links styled as buttons. The icons are drawn, so screen readers only read the text
+// The icons are drawn, so screen readers only read the text
 .backlink,
 .detail-prev-link,
 .detail-next-link {
@@ -85,7 +85,6 @@
   }
 }
 
-// The game's own text
 .detail-text,
 .detail-quote {
   max-width: 40rem;
@@ -108,8 +107,6 @@
   }
 }
 
-// Info on the left, the map on the right, stacked on phones
-// The card's map opens the map dialog, bigger
 .map-zoom {
   display: block;
   width: 100%;
@@ -133,8 +130,7 @@
   }
 }
 
-// Only lays out the node's boxes, a card around them would cost too much room. Half and half: the text next to
-// the map on top, the timer next to the facts under them
+// Only lays out the node's boxes, a card around them would cost too much room
 .detail-card {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -151,14 +147,12 @@
       "timer facts";
   }
 
-  // At most about 400px, in the top right corner of its half
   > .map {
     grid-area: map;
     justify-self: end;
     max-width: 20rem;
   }
 
-  // Side by side, so as tall as each other
   > .detail-timer {
     grid-area: timer;
     align-self: stretch;
@@ -173,7 +167,7 @@
     margin-top: 0;
   }
 
-  // An item at several nodes: a line between them, as they have no card to tell them apart
+  // An item at several nodes: they have no card to tell them apart
   & + & {
     padding-top: 1rem;
     border-top: 1px solid var(--divider);
@@ -283,8 +277,7 @@
   }
 }
 
-// An item's page is packed tighter than a vista's: the header with what the item's worth next to it, the recipes
-// under them, then each node with its map down the right. The right column is as wide as the map, so the two line up
+// An item page's right column, as wide as the map so the two line up
 $item-side: min(20rem, 40%);
 
 .item-intro {
@@ -319,8 +312,6 @@ $item-side: min(20rem, 40%);
   font-size: 1rem;
 }
 
-// The timer over the node's facts, the map next to both, under the heading. A node without a map keeps the card's own
-// layout
 .detail-card.gathering-node:has(> .map) {
   grid-template-columns: minmax(0, 1fr) $item-side;
   grid-template-rows: auto auto 1fr;
@@ -342,7 +333,6 @@ $item-side: min(20rem, 40%);
   }
 }
 
-// The timer has the left column's whole width: the ET times next to the countdown, the upcoming windows in columns
 .gathering-node .detail-timer[data-window] {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -436,7 +426,7 @@ $item-side: min(20rem, 40%);
   }
 }
 
-// Two columns still fit a narrow window, only a phone stacks them, the map last
+// Two columns still fit a narrow window, only a phone stacks them
 @media (max-width: 36rem) {
   .detail-card,
   .detail-card:not(:has(.map)) {
@@ -447,7 +437,6 @@ $item-side: min(20rem, 40%);
       "facts"
       "map";
 
-    // The phone's whole width, it's narrow enough already
     > .map {
       max-width: none;
     }

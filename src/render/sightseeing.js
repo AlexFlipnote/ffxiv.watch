@@ -1,5 +1,6 @@
 import {
-  chip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, html, listRow, listRows, locationFacts, mapFigure, pager, readData,
+  chip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText,
+  html, listRow, listRows, locationFacts, mapFigure, pager, readData,
   readExpansions, slug
 } from "./html.js"
 import { ogImage } from "./og.js"

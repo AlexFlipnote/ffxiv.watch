@@ -6,10 +6,9 @@ import { fileURLToPath } from "url"
 import { coordinates, mapPercent, mapSize } from "../js/utils/map.js"
 
 /*
-  Link preview images. A vista gets its map, cut to the 1.91:1 shape large previews use, with its marker and aetheryte
-  drawn like the page does. An item gets its icon, 200px square, the smallest every site takes, shown as a thumbnail
-  next to the text. The pages ask for one while they render and get its URL, build.js then writes them all. Pages that
-  would look the same share one.
+  Link preview images. A vista gets its map, cut to the 1.91:1 shape large previews use, with its marker and aetheryte.
+  An item gets its icon, 200px square, the smallest every site takes. The pages ask for one while they render and get
+  its URL, build.js then writes them all. Pages that would look the same share one.
 */
 
 const IMAGES = path.join(path.dirname(fileURLToPath(import.meta.url)), "../images")
