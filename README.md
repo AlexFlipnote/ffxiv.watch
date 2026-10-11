@@ -13,6 +13,7 @@
 - [Carbuncle Plushy's fish tracker](https://github.com/icykoneko/ff14-fish-tracker-app) (MIT) for when each fish bites, its bait and intuition
 - [Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft) (MIT) for the bait, hookset and tug of the fish that bite any time
 - [Google Sans Flex](https://fonts.google.com/specimen/Google+Sans+Flex) (SIL Open Font License, see `src/fonts/google-sans-flex-OFL.txt`)
+- [Material Symbols](https://fonts.google.com/icons) (Apache License 2.0) for the interface icons
 - The game icon font from the Lodestone, found through [ffxiv-axis-font-icons](https://github.com/thewakingsands/ffxiv-axis-font-icons)
 
 ## License

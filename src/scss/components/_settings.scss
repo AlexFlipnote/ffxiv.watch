@@ -50,7 +50,7 @@
     pointer-events: none;
   }
 
-  span {
+  input + span {
     display: block;
     padding: .5rem;
     border-radius: .4rem;
@@ -64,7 +64,7 @@
   }
 
   @include hover {
-    span {
+    input + span {
       color: var(--font-primary);
     }
   }
@@ -79,6 +79,78 @@
   input:focus-visible + span {
     outline: .125rem solid var(--accent);
     outline-offset: -.125rem;
+  }
+}
+
+// The icon files are white, as a mask they take the option's color
+.theme-options {
+  input + span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .375rem;
+  }
+
+  .theme-icon {
+    position: relative;
+    flex-shrink: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: currentColor;
+      mask: center / contain no-repeat;
+      transition: transform .4s $ease;
+    }
+  }
+
+  input[value="system"] + span .theme-icon::before {
+    mask-image: url("/images/theme-system.svg");
+  }
+
+  input[value="light"] + span .theme-icon::before {
+    mask-image: url("/images/theme-light.svg");
+  }
+
+  input[value="dark"] + span .theme-icon {
+    &::before {
+      mask-image: url("/images/theme-dark.svg");
+    }
+
+    // Stars by the moon, in the open side of it
+    &::after {
+      content: "";
+      position: absolute;
+      top: -.3rem;
+      right: -.4rem;
+      width: .95rem;
+      height: .95rem;
+      background-color: var(--gold);
+      mask: url("/images/theme-stars.svg") center / contain no-repeat;
+      opacity: 0;
+      transform: scale(.3) rotate(-45deg);
+      transition: transform .4s $ease, opacity .4s $ease;
+    }
+  }
+
+  // A transition, not an animation, so they don't play again each time the dialog opens
+  input[value="light"]:checked + span .theme-icon::before {
+    transform: rotate(45deg);
+  }
+
+  input[value="dark"]:checked + span .theme-icon::after {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .theme-icon::before,
+    .theme-icon::after {
+      transition: none;
+    }
   }
 }
 
