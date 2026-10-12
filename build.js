@@ -234,7 +234,8 @@ async function buildCSS() {
                                           (those also get a modulepreload for each chunk they import up front,
                                           and preload="data/x.json" adds one for a file they import() later)
   - <x-css src="index.css"/>              <link href="/css/index.css?v=hash" rel="stylesheet">
-  - <x-seo title="..." description="..."/>  <title>, description, canonical URL and link preview tags. Optional:
+  - <x-seo title="..." description="..."/>  <title> (" - ffxiv.watch" is added when it fits), description, canonical URL
+                                          and link preview tags. Optional:
                                           image="..." image-alt="..." image-size="WxH" for its own preview image, and
                                           section="..." name="..." for its breadcrumb in search results
   Placeholders, filled from the page's .data.js:
@@ -305,6 +306,8 @@ function fillPlaceholders(html, props, from) {
 
 // Search results cut descriptions off around here, longer ones are cut at a word instead, so they end on "..."
 const MAX_DESCRIPTION = 160
+// And titles around here, the site's name is only added when it still fits, results show it above the title anyway
+const MAX_TITLE = 60
 
 /**
  * @param {string} description HTML, as the <x-seo> attribute has it
@@ -324,9 +327,11 @@ function fitDescription(description) {
  */
 function seoTags(route, attrs) {
   const attr = (name) => attrs.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1]
-  const title = attr("title")
   const description = attr("description") && fitDescription(attr("description"))
-  if (!title || !description) throw new Error(`pages/${route.source}: <x-seo> needs a title and a description`)
+  if (!attr("title") || !description) throw new Error(`pages/${route.source}: <x-seo> needs a title and a description`)
+  // The front page keeps it, for people searching for the site by its name
+  const named = `${attr("title")} - ${DOMAIN}`
+  const title = route.url === "/" || unescapeHtml(named).length <= MAX_TITLE ? named : attr("title")
 
   const url = `https://${DOMAIN}${route.url}`
   const meta = (key, name, content) => `<meta ${key}="${name}" content="${content}">`

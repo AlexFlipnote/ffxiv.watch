@@ -144,7 +144,7 @@ function itemTitle(item, spots) {
   const type = same(nodes.map((n) => n.type))
   const job = same(nodes.map((n) => n.job))
   const kind = type && type !== "Regular" ? type : job ?? "Gathering"
-  return `${item.name}: FFXIV ${kind} Node${timed ? " & Times" : ""} - ffxiv.watch`
+  return `${item.name}: FFXIV ${kind} Node${timed ? " & Times" : ""}`
 }
 
 /**

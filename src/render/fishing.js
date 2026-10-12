@@ -145,7 +145,7 @@ function fishSeo(fish) {
   const extras = [fish.bait ? `, with ${baitText(fish)}` : "", timed ? `, bites ${whenText(fish)}` : ""]
   const text = extras.reduce((out, extra) => (out + extra).length < 159 ? out + extra : out, `Where to catch ${fish.name} in FFXIV: ${where}`)
   return {
-    title: `${fish.name}: FFXIV ${fish.big ? "Big Fish" : "Fish"} Location${timed ? " & Times" : ""} - ffxiv.watch`,
+    title: `${fish.name}: FFXIV ${fish.big ? "Big Fish" : "Fish"} Location${timed ? " & Times" : ""}`,
     description: `${text}.`
   }
 }

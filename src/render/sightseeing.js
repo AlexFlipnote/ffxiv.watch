@@ -115,7 +115,7 @@ export function vistaPages() {
       slug: slug(name),
       name,
       ...ogImage(vista),
-      title: `${name}: FFXIV Sightseeing Log ${vistaNumber(vista)} - ffxiv.watch`,
+      title: `${name}: FFXIV Sightseeing Log ${vistaNumber(vista)}`,
       description: `FFXIV ${expansion.name} sightseeing log ${vistaNumber(vista)}, ${name}: use the ${vista.emote} emote in ${vista.zone}${vista.map ? ` at ${coordinates(vista.map)}` : ""}${timed ? `, ${when}` : ""}.`,
       content: html`
 <section class="detail-card vista-card">
