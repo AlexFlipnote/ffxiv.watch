@@ -433,7 +433,7 @@
     }
 
     // After the four links before them
-    @for $i from 1 through 3 {
+    @for $i from 1 through 4 {
       .navbar-more-menu a:nth-child(#{$i}) {
         transition-delay: 0s, 0s, #{($i + 4) * 40ms}, #{($i + 4) * 40ms};
       }
