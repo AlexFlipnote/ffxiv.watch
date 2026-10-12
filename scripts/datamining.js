@@ -37,7 +37,8 @@ export const plainNames = (rows) => rows.map((r) => ({ ...r, Name: r.Name.replac
 
 /**
  * @param {string} text CSV with a header row, quoted fields can hold commas, quotes and newlines
- * @returns {Record<string, string>[]}
+ * @returns {Record<string, string>[]} Each field trimmed, a few names end in a space ("Phallaina "), which a link's
+ * underline then runs into
  */
 function parseCsv(text) {
   const rows = []
@@ -70,7 +71,7 @@ function parseCsv(text) {
   const [header, ...data] = rows
   return data
     .filter((r) => r.length === header.length)
-    .map((r) => Object.fromEntries(header.map((h, i) => [h, r[i]])))
+    .map((r) => Object.fromEntries(header.map((h, i) => [h, r[i].trim()])))
 }
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..")
