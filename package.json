@@ -11,7 +11,8 @@
     "gathering-data": "node scripts/gathering-data.js",
     "sightseeing-data": "node scripts/sightseeing-data.js",
     "fishing-data": "node scripts/fishing-data.js",
-    "ocean-fishing-data": "node scripts/ocean-fishing-data.js"
+    "ocean-fishing-data": "node scripts/ocean-fishing-data.js",
+    "lodestone-data": "node scripts/lodestone-data.js"
   },
   "devDependencies": {
     "esbuild": "0.28.1",

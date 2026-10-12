@@ -1,10 +1,12 @@
-name: Fetch, build and deploy
+name: Build and deploy
 
 on:
   push:
     branches:
       - master
   workflow_dispatch:
+  # From lodestone.yml once it's committed new maintenance or events, its push doesn't start this on its own
+  workflow_call:
 
 permissions:
   contents: write
@@ -12,11 +14,16 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    concurrency:
+      group: deploy
+      cancel-in-progress: false
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
+          # The branch as it is now, so a deploy from lodestone.yml has the data it just committed
+          ref: ${{ github.ref }}
           # The whole history, the sitemap's lastmod comes from when each page's data last changed
           fetch-depth: 0
 

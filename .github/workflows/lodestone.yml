@@ -1,0 +1,57 @@
+name: Check the Lodestone
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.commit.outputs.deploy }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch Lodestone maintenance and events
+        run: npm run lodestone-data
+
+      - name: Commit what changed
+        id: commit
+        run: |
+          git add src/js/data/lodestone.json src/images/events
+          if git diff --cached --quiet; then
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # A new topic that isn't an event only changes the topics, nothing on the site
+          shown() { jq -S '{ maintenance, events }'; }
+          if [ "$(git show HEAD:src/js/data/lodestone.json | shown)" = "$(shown < src/js/data/lodestone.json)" ]; then
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update the Lodestone's maintenance and events"
+          # Someone may have pushed since the checkout
+          git pull --rebase
+          git push
+
+  deploy:
+    needs: check
+    if: needs.check.outputs.deploy == 'true'
+    uses: ./.github/workflows/deploy.yml
