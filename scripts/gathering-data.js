@@ -1,4 +1,6 @@
-import { byId, mapPosition, minutes, nearestAetheryte, saveIcons, saveMaps, sheets, spotOf, writeData, writeExpansions } from "./datamining.js"
+import {
+  byId, mapPosition, minutes, nearestAetheryte, plainNames, saveIcons, saveMaps, sheets, spotOf, writeData, writeExpansions
+} from "./datamining.js"
 
 // GatheringPoint.Type. Regular and Diadem nodes are always up, the rest only at their times.
 // Type 8 (the Diadem's umbral nodes) only shows up in umbral weather, which the data doesn't say when
@@ -108,7 +110,7 @@ async function main() {
   const exportedPoint = byId(exportedPoints)
   const map = byId(maps)
   const territory = byId(territories)
-  const place = byId(places)
+  const place = byId(plainNames(places))
   const exVersion = byId(exVersions)
   const aetheryteNear = nearestAetheryte({ aetherytes, markers, map, place })
 

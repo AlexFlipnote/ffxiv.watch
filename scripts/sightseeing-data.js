@@ -1,4 +1,4 @@
-import { byId, mapPosition, minutes, nearestAetheryte, saveIcons, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
+import { byId, mapPosition, minutes, nearestAetheryte, plainNames, saveIcons, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
 
 const ET_DAY = 24 * 60
 
@@ -34,7 +34,7 @@ async function main() {
   const quest = byId(quests)
   const map = byId(maps)
   const territory = byId(territories)
-  const place = byId(places)
+  const place = byId(plainNames(places))
   const exVersion = byId(exVersions)
   const aetheryteNear = nearestAetheryte({ aetherytes, markers, map, place })
 
@@ -69,7 +69,7 @@ async function main() {
   const vistas = []
   const text = {}
   const numbers = {}
-  for (const adventure of adventures) {
+  for (const adventure of plainNames(adventures)) {
     const l = level[adventure.Level]
     const t = territory[l?.Territory]
     const zone = place[t?.PlaceName]?.Name

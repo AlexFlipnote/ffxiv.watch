@@ -15,7 +15,7 @@ listing({
   done: "vistas",
 
   mapNote: (vista) => [
-    `${vista.name.replaceAll("*", "")}: use the `,
+    `${vista.name}: use the `,
     Object.assign(document.createElement("strong"), { textContent: vista.emote }),
     " emote here"
   ],

@@ -28,6 +28,14 @@ export const sheets = (names) => Promise.all(names.map(sheet))
 export const byId = (rows) => Object.fromEntries(rows.map((r) => [r["#"], r]))
 
 /**
+ * The game wraps a ship's name in asterisks for italics, "The *Kobayashi Maru*". Names go into titles, descriptions
+ * and alt text, which can't show italics, so they're kept plain.
+ * @param {Record<string, string>[]} rows A sheet with a Name column, like PlaceName
+ * @returns {Record<string, string>[]}
+ */
+export const plainNames = (rows) => rows.map((r) => ({ ...r, Name: r.Name.replaceAll("*", "") }))
+
+/**
  * @param {string} text CSV with a header row, quoted fields can hold commas, quotes and newlines
  * @returns {Record<string, string>[]}
  */

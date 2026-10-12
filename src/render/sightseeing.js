@@ -6,15 +6,9 @@ import {
 import { ogImage } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
 
-/**
- * @param {{ name: string }} vista
- * @returns {string} The name without the game's *italics* marks
- */
-const vistaName = (vista) => vista.name.replaceAll("*", "")
+export const vistaUrl = (vista) => `/sightseeing/${slug(vista.name)}/`
 
-const vistaUrl = (vista) => `/sightseeing/${slug(vistaName(vista))}/`
-
-const vistaNumber = (vista) => `#${String(vista.number).padStart(3, "0")}`
+export const vistaNumber = (vista) => `#${String(vista.number).padStart(3, "0")}`
 
 /**
  * The numbers start over each expansion, so the done checks keep them as this instead.
@@ -68,7 +62,7 @@ function vistaWhen(vista) {
  * @returns {import("./html.js").Html}
  */
 const vistaRow = (id, key, vista) => listRow(key, vista, html`
-    <div class="vista-name">${doneButton(id)}<span class="vista-number">${vistaNumber(vista)}</span><strong><a href="${vistaUrl(vista)}">${vistaName(vista)}</a></strong></div>
+    <div class="vista-name">${doneButton(id)}<span class="vista-number">${vistaNumber(vista)}</span><strong><a href="${vistaUrl(vista)}">${vista.name}</a></strong></div>
     <div class="tags">${vistaTags(vista)}</div>`)
 
 /**
@@ -82,7 +76,7 @@ export function vistaList() {
   // A Realm Reborn's are the only ones with times and weather
   const defaultExpansion = expansions[0].file
   return {
-    ...listRows("sightseeing", expansions, defaultExpansion, (vista) => vista.number, row, (vista) => [{ url: vistaUrl(vista), name: vistaName(vista) }]),
+    ...listRows("sightseeing", expansions, defaultExpansion, (vista) => vista.number, row, (vista) => [{ url: vistaUrl(vista), name: vista.name }]),
     defaultExpansion,
     expansionOptions: expansionOptions(expansions, defaultExpansion),
     sources: ["js/data/sightseeing.json", "js/data/sightseeing"]
@@ -96,7 +90,7 @@ export function vistaList() {
  */
 const pagerTo = (entry, current) => entry && {
   url: vistaUrl(entry.vista),
-  text: `${entry.expansion === current ? "" : `${entry.expansion.name} `}${vistaNumber(entry.vista)} ${vistaName(entry.vista)}`
+  text: `${entry.expansion === current ? "" : `${entry.expansion.name} `}${vistaNumber(entry.vista)} ${entry.vista.name}`
 }
 
 /** @returns {object[]} A page per vista, see [vista].data.js */
@@ -107,7 +101,7 @@ export function vistaPages() {
   const all = readExpansions("sightseeing").flatMap((expansion, e) => expansion.entries.map((vista) => ({ vista, expansion, id: vistaId(e, vista) })))
 
   return all.map(({ vista, expansion, id }, i) => {
-    const name = vistaName(vista)
+    const { name } = vista
     const timed = vista.times || vista.weather
     const when = vistaWhen(vista)
 

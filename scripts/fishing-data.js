@@ -1,4 +1,6 @@
-import { byId, nearestAetheryte, round, saveIcons, saveMaps, sheets, spotOf, writeData, writeExpansions, zoneWeather } from "./datamining.js"
+import {
+  byId, nearestAetheryte, plainNames, round, saveIcons, saveMaps, sheets, spotOf, writeData, writeExpansions, zoneWeather
+} from "./datamining.js"
 import { FACT_ICONS } from "../src/render/fishing.js"
 
 // When each fish bites, what with and after which weather isn't in the game's data. Carbuncle Plushy's fish tracker
@@ -81,7 +83,7 @@ async function main() {
   const weather = byId(weathers)
   const map = byId(maps)
   const territory = byId(territories)
-  const place = byId(places)
+  const place = byId(plainNames(places))
   const exVersion = byId(exVersions)
   const uiCategory = byId(uiCategories)
   const aetheryteNear = nearestAetheryte({ aetherytes, markers, map, place })
@@ -103,6 +105,7 @@ async function main() {
   function entry(id, location, fish) {
     const it = item[id]
     const t = location && territory[location.row.TerritoryType]
+    // The ocean fishing ship is "The *Endeavor*", the game's markup for italics
     const zone = place[t?.PlaceName]?.Name
     if (!it?.Name || !zone) return null
 
