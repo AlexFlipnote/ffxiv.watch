@@ -449,31 +449,37 @@ $tab-flare: .5rem;
 .location-cell {
   position: relative;
   isolation: isolate;
+  width: 1%;
 
   .listing-table & {
     vertical-align: middle;
   }
 }
 
-// The icon at the row's right edge and the text against it, so the column lines up on the edge instead of floating
+// The map icon, the cell's only content, the whole cell's height to tap. The icon file is white, as a mask it takes the
+// text color instead, so it follows the theme and the hover
 .location {
+  position: relative;
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
-  gap: .5rem;
-  width: 100%;
-  padding: 0;
-  background: none;
-  border: none;
+  justify-content: center;
   color: var(--font-tertiary);
-  font: inherit;
-  text-align: right;
   text-decoration: none;
 
+  &::before {
+    content: "";
+    // About as tall as the zone and spot lines together, which sit centered next to it
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: currentColor;
+    mask: url("/images/ui/map-search.svg") center / contain no-repeat;
+  }
+
+  // A rounded square around the icon on hover, a bit bigger than it, also what a finger taps
   &::after {
     content: "";
     position: absolute;
-    inset: .25rem;
+    inset: -.375rem;
     z-index: -1;
     border-radius: .5rem;
   }
@@ -486,32 +492,36 @@ $tab-flare: .5rem;
     }
   }
 
-  &[href]:active::after {
+  &:active::after {
     background: var(--chip-background);
   }
 
-  &[href] {
-    @include hover {
-      color: var(--accent);
+  @include hover {
+    color: var(--accent);
 
-      &::after {
-        background: var(--chip-background);
-      }
+    &::after {
+      background: var(--chip-background);
     }
   }
+}
 
-  &:not([href]) {
-    .map-icon {
-      display: none;
-    }
-  }
+// The first column: what the row is, then where, against the map icon, so the places line up on the row's right
+.row-body {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row-main {
+  flex: 1;
+  min-width: 0;
 }
 
 .place {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-width: 0;
+  max-width: 40%;
+  text-align: right;
 }
 
 .zone,
@@ -530,46 +540,30 @@ $tab-flare: .5rem;
   color: var(--font-tertiary);
 }
 
-// The icon file is white, as a mask it takes the text color instead, so it follows the theme and the hover
-.map-icon {
-  flex-shrink: 0;
-  // About as tall as the zone and spot lines together, which sit centered next to it
-  width: 1.75rem;
-  height: 1.75rem;
-  background-color: currentColor;
-  mask: url("/images/ui/map-search.svg") center / contain no-repeat;
-}
-
-// Phones keep both columns, but the location column is just the map icon, the zone moves under the chips
-.place-line {
-  display: none;
-  margin-top: .375rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
-  .spot {
-    margin-left: .375rem;
-  }
-}
-
 @include mobile {
-  .place-line {
+  // Under the chips, on one line, the map icon beside the whole row
+  .row-body {
     display: block;
+  }
+
+  .place {
+    display: block;
+    max-width: none;
+    margin-top: .375rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+
+    .spot {
+      margin-left: .375rem;
+    }
   }
 
   // A long one ("2 days, 19:12:22 Up until Sat 10 Oct, 18:56") wraps, the times go under the countdown
   .group-tab {
     max-width: calc(100% - 2 * $tab-flare);
     white-space: normal;
-  }
-
-  .location-cell {
-    width: 1%;
-
-    .place {
-      display: none;
-    }
   }
 }
 

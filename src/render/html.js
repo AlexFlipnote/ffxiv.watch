@@ -152,40 +152,32 @@ const etClock = (minutes) => {
 export const etWindows = (times) => `${times.map(([start, duration]) => `${etClock(start)} - ${etClock(start + duration)}`).join(" and ")} ET`
 
 /**
- * Zone and spot on one line, for the first column on phones, where the location column is only the map icon.
+ * Zone and spot, written once: against the map icon on a computer, a line under the chips on a phone (see _listing.scss).
  * @param {{ zone: string, spot?: string }} entry
  * @returns {Html}
  */
-const placeLine = (entry) =>
-  html`<div class="place-line"><span class="zone">${entry.zone}</span>${entry.spot ? html`<span class="spot">${entry.spot}</span>` : ""}</div>`
+const place = (entry) =>
+  html`<div class="place"><span class="zone">${entry.zone}</span>${entry.spot ? html`<span class="spot">${entry.spot}</span>` : ""}</div>`
 
 /**
- * The location column: zone and spot. The whole cell links to the map, listing.js opens it in the map dialog instead.
- * @param {{ zone: string, spot?: string, map?: { image: string } }} entry
+ * The map column, its icon drawn by the CSS. It links to the map, listing.js opens it in the map dialog instead.
+ * @param {{ map?: { image: string } }} entry
  * @returns {Html}
  */
-const locationCell = (entry) => {
-  const place = html`
-      <span class="map-icon" aria-hidden="true"></span>
-      <span class="place"><span class="zone">${entry.zone}</span><span class="spot">${entry.spot ?? ""}</span></span>`
-  return html`
-  <td class="location-cell">
-    ${entry.map
-    ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" title="Show on map">${place}</a>`
-    : html`<span class="location">${place}</span>`}
-  </td>`
-}
+const locationCell = (entry) => html`
+  <td class="location-cell">${entry.map ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" title="Show on map"></a>` : ""}</td>`
 
 /**
- * A table row, matched up with its entry by data-key when listing.js loads the data.
+ * A table row, matched up with its entry by data-key when listing.js loads the data. Lists have thousands, so each
+ * says things once.
  * @param {string} key "dawntrail:974", see listRows
  * @param {{ zone: string, spot?: string, map?: object }} entry
- * @param {Html} content The first column, placeLine is added after it
+ * @param {Html} content The first column, the place is added next to it
  * @returns {Html}
  */
 export const listRow = (key, entry, content) => html`
 <tr data-key="${key}">
-  <td>${content}${placeLine(entry)}</td>${locationCell(entry)}
+  <td><div class="row-body"><div class="row-main">${content}</div>${place(entry)}</div></td>${locationCell(entry)}
 </tr>`
 
 /**
