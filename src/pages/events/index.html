@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="FFXIV Events: Seasonal & Collaboration Events On Now"
+      description="The FFXIV seasonal and collaboration events on now and coming up, when each starts and ends in your local time, from the Lodestone."
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="events.js" module/>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="listing events">
+        <header class="listing-intro">
+          <h1 class="listing-title">Events</h1>
+          <p class="listing-lead">The seasonal and collaboration events on now and coming up, when each starts and ends in your local time, from the Lodestone.</p>
+        </header>
+        <section class="events-section" id="events-now" aria-labelledby="events-now-title"{{{ nowHidden }}}>
+          <h2 class="events-heading" id="events-now-title">On now</h2>
+          <div class="events-grid">{{{ now }}}</div>
+        </section>
+        <section class="events-section" id="events-soon" aria-labelledby="events-soon-title"{{{ soonHidden }}}>
+          <h2 class="events-heading" id="events-soon-title">Coming up</h2>
+          <div class="events-grid">{{{ soon }}}</div>
+        </section>
+        <p class="events-empty" id="events-empty"{{{ emptyHidden }}}>
+          Nothing's on right now. The <a href="https://eu.finalfantasyxiv.com/lodestone/topics/" target="_blank" rel="noopener">Lodestone's topics</a> announce the next one, usually a week or two ahead.
+        </p>
+      </main>
+      <x-html str="partials/footer.html"/>
+    </div>
+
+    <x-html str="partials/settings.html"/>
+  </body>
+</html>

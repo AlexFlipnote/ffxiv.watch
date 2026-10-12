@@ -1,3 +1,4 @@
+import { maintenance as MAINTENANCE } from "./data/lodestone.json"
 import "./utils/navbar.js"
 import { closable } from "./utils/dialog.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
@@ -17,6 +18,19 @@ const modalWhen = document.getElementById("modal-when")
 const modalInfo = document.getElementById("modal-info")
 const modalList = document.getElementById("modal-list")
 const modalLink = document.getElementById("modal-link")
+
+const MAINTENANCE_AHEAD = 7 * 24 * 60 * 60 * 1000
+const maintenanceEl = document.getElementById("maintenance")
+const [maintenanceStart, maintenanceEnd] = maintenanceEl.querySelectorAll(".maintenance-when time")
+const maintenance = {
+  el: maintenanceEl,
+  name: maintenanceEl.querySelector(".maintenance-name"),
+  patch: maintenanceEl.querySelector(".maintenance-patch"),
+  start: maintenanceStart,
+  end: maintenanceEnd,
+  state: maintenanceEl.querySelector(".maintenance-countdown .detail-state"),
+  countdown: maintenanceEl.querySelector(".maintenance-countdown strong")
+}
 
 // Timer id -> its card's elements
 const cards = new Map()
@@ -174,8 +188,30 @@ function renderEorzeaClock(now) {
   setText(etDate, `${ordinal(et.sun)} Sun of the ${et.moonName}`)
 }
 
+/**
+ * The maintenance bar, from a week before the next All Worlds maintenance until it's over.
+ * @param {number} now
+ */
+function renderMaintenance(now) {
+  const next = MAINTENANCE.find((m) => m.end > now && m.start - now < MAINTENANCE_AHEAD)
+  maintenance.el.hidden = !next
+  if (!next) return
+
+  const started = next.start <= now
+  maintenance.el.href = next.url
+  maintenance.el.classList.toggle("on", started)
+  // "All Worlds Maintenance (Oct. 12-13)", the bar gives the dates
+  setText(maintenance.name, next.name.replace(/\s*\([^)]*\)$/, ""))
+  setText(maintenance.patch, next.patch ? `Patch ${next.patch}` : "")
+  setTime(maintenance.start, new Date(next.start), new Date(now))
+  setTime(maintenance.end, new Date(next.end), new Date(now), { from: new Date(next.start) })
+  setText(maintenance.state, started ? "Back in" : "Starts in")
+  setText(maintenance.countdown, formatCountdown((started ? next.end : next.start) - now))
+}
+
 everyTick((now) => {
   render(now)
   renderEarthClock(now)
   renderEorzeaClock(now)
+  renderMaintenance(now)
 })

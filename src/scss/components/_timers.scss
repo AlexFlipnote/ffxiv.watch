@@ -176,3 +176,89 @@
     color: var(--bg);
   }
 }
+
+.maintenance {
+  @include glass;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: .5rem .875rem;
+  flex-wrap: wrap;
+  padding: .625rem 1.25rem;
+  color: inherit;
+  text-decoration: none;
+  font-size: .9rem;
+  transition: background-color .2s;
+
+  &[hidden] {
+    display: none;
+  }
+
+  @include hover {
+    background-color: var(--chip-background);
+  }
+
+  @include mobile {
+    padding: .625rem 1rem;
+  }
+}
+
+.maintenance-title {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .375rem;
+}
+
+.maintenance-dot {
+  align-self: center;
+  width: .5rem;
+  height: .5rem;
+  margin-right: .125rem;
+  border-radius: 50%;
+  background: var(--danger);
+  animation: maintenance-pulse 3.2s ease-in-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes maintenance-pulse {
+  0%, 100% {
+    box-shadow: 0 0 .25rem 0 color-mix(in srgb, var(--danger) 40%, transparent);
+  }
+
+  50% {
+    box-shadow: 0 0 1rem .375rem color-mix(in srgb, var(--danger) 85%, transparent);
+  }
+}
+
+.maintenance-name {
+  color: var(--danger);
+}
+
+.maintenance-patch {
+  color: var(--font-secondary);
+}
+
+.maintenance-when {
+  padding-left: .875rem;
+  border-left: 1px solid var(--divider);
+  color: var(--font-tertiary);
+  font-variant-numeric: tabular-nums;
+
+  @include mobile {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+.maintenance-countdown {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+
+  @include mobile {
+    margin-left: 0;
+  }
+}
