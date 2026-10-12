@@ -350,7 +350,7 @@ const CHOICES = {
  * Throws on times, weather or fish details the pages can't use, before anything is written.
  * @param {{ name: string, zone: string, times?: [number, number][], weather?: string[], previousWeather?: string[] }[]} list
  */
-function validate(list) {
+export function validate(list) {
   const zones = zoneWeather()
   const problems = []
 

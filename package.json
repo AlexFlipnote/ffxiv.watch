@@ -6,6 +6,7 @@
     "dev": "node build.js watch",
     "build": "node build.js",
     "clean": "node build.js clean",
+    "test": "node --test",
     "weather-data": "node scripts/weather-data.js",
     "gathering-data": "node scripts/gathering-data.js",
     "sightseeing-data": "node scripts/sightseeing-data.js",
