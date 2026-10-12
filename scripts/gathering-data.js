@@ -1,6 +1,10 @@
 import {
-  byId, mapPosition, minutes, nearestAetheryte, plainNames, saveIcons, saveMaps, sheets, spotOf, writeData, writeExpansions
+  byId, mapPosition, minutes, nearestAetheryte, plainNames, saveIcons, saveMaps, scripRewards, sheets, spotOf, writeData, writeExpansions
 } from "./datamining.js"
+
+// The items a node hides, which the node doesn't show until they're revealed, aren't in the game's data. Teamcraft
+// (MIT) keeps them, by GatheringPointBase: https://github.com/ffxiv-teamcraft/ffxiv-teamcraft
+const TEAMCRAFT_NODES = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/nodes.json"
 
 // GatheringPoint.Type. Regular and Diadem nodes are always up, the rest only at their times.
 // Type 8 (the Diadem's umbral nodes) only shows up in umbral weather, which the data doesn't say when
@@ -69,9 +73,10 @@ function recipesByIngredient(recipes, item, levels) {
  * @param {Record<string, string>} it Item row
  * @param {Record<string, Record<string, string>>} uiCategory ItemUICategory by id
  * @param {object[]} recipes From recipesByIngredient
+ * @param {object} [scrips] From scripRewards, for a collectable
  * @returns {object}
  */
-function itemInfo(it, uiCategory, recipes) {
+function itemInfo(it, uiCategory, recipes, scrips) {
   const category = uiCategory[it.ItemUICategory]?.Name
   return {
     description: it.Description,
@@ -84,11 +89,16 @@ function itemInfo(it, uiCategory, recipes) {
     marketable: it.ItemSearchCategory !== "0",
     tradable: it.IsUntradable !== "True",
     hq: it.CanBeHq === "True",
-    recipes: NO_RECIPES.includes(category) ? [] : recipes ?? []
+    recipes: NO_RECIPES.includes(category) ? [] : recipes ?? [],
+    ...(scrips ? { scrips } : {})
   }
 }
 
 async function main() {
+  const res = await fetch(TEAMCRAFT_NODES)
+  if (!res.ok) throw new Error(`${TEAMCRAFT_NODES}: HTTP ${res.status}`)
+  const hiddenItems = new Map(Object.entries(await res.json()).map(([id, n]) => [id, n.hiddenItems ?? []]))
+
   const [
     points, bases, transients, popTimes, gatheringItems, items, levels,
     subCategories, quests, exportedPoints, maps, territories, places, exVersions, aetherytes, markers,
@@ -113,23 +123,35 @@ async function main() {
   const place = byId(plainNames(places))
   const exVersion = byId(exVersions)
   const aetheryteNear = nearestAetheryte({ aetherytes, markers, map, place })
+  const scrips = await scripRewards(item)
+  // A hidden item's GatheringItem row, for its stars and Perception, as the node doesn't list it
+  const gatheringRowOf = new Map(gatheringItems.filter((g) => +g.Item > 0).map((g) => [g.Item, g]))
+
+  /**
+   * @param {Record<string, string> | undefined} g GatheringItem row
+   * @param {boolean} hidden
+   * @returns {object | null}
+   */
+  const nodeItem = (g, hidden) => {
+    const it = g && item[g.Item]
+    if (!it?.Name) return null
+
+    const entry = { id: +g.Item, name: it.Name }
+    const stars = +(level[g.GatheringItemLevel]?.Stars ?? 0)
+    if (stars) entry.stars = stars
+    if (+g.PerceptionReq) entry.perception = +g.PerceptionReq
+    if (hidden || g.IsHidden === "True") entry.hidden = true
+    if (it.IsCollectable === "True" || it.AlwaysCollectable === "True") entry.collectable = true
+    // For the list's search, the item page has the rest
+    if (scrips.has(+g.Item)) entry.scrip = scrips.get(+g.Item).name
+    return entry
+  }
 
   const nodeItems = (b) => {
     const list = []
-    for (let i = 0; b[`Item[${i}]`] !== undefined; i++) {
-      const g = gatheringItem[b[`Item[${i}]`]]
-      const it = g && item[g.Item]
-      if (!it?.Name) continue
-
-      const entry = { id: +g.Item, name: it.Name }
-      const stars = +(level[g.GatheringItemLevel]?.Stars ?? 0)
-      if (stars) entry.stars = stars
-      if (+g.PerceptionReq) entry.perception = +g.PerceptionReq
-      if (g.IsHidden === "True") entry.hidden = true
-      if (it.IsCollectable === "True" || it.AlwaysCollectable === "True") entry.collectable = true
-      list.push(entry)
-    }
-    return list
+    for (let i = 0; b[`Item[${i}]`] !== undefined; i++) list.push(nodeItem(gatheringItem[b[`Item[${i}]`]], false))
+    for (const id of hiddenItems.get(b["#"]) ?? []) list.push(nodeItem(gatheringRowOf.get(String(id)), true))
+    return list.filter(Boolean)
   }
 
   // A node can have several gathering points (spots it can appear at) with the same items and times, keep one
@@ -205,8 +227,8 @@ async function main() {
   const ids = [...new Set(sorted.flatMap((n) => n.node.items.map((i) => i.id)))].sort((a, b) => a - b)
   const uses = recipesByIngredient(recipes, item, byId(recipeLevels))
   const uiCategory = byId(uiCategories)
-  writeData("gathering-items", Object.fromEntries(ids.map((id) => [id, itemInfo(item[id], uiCategory, uses.get(String(id)))])))
-  await saveIcons(ids.map((id) => +item[id].Icon))
+  writeData("gathering-items", Object.fromEntries(ids.map((id) => [id, itemInfo(item[id], uiCategory, uses.get(String(id)), scrips.get(id))])))
+  await saveIcons([...ids.map((id) => +item[id].Icon), ...ids.filter((id) => scrips.has(id)).map((id) => scrips.get(id).icon)])
 }
 
 main().catch((err) => {

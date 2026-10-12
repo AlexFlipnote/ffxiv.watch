@@ -57,6 +57,46 @@
   cursor: help;
 }
 
+// What a collectable is worth at the scrip exchange, under an item or fish's tags
+.scrip-card {
+  @include glass;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .375rem .75rem;
+  margin-top: .75rem;
+  padding: .5rem .75rem;
+  border-radius: .75rem;
+  font-size: .85rem;
+  color: var(--font-secondary);
+
+  > strong {
+    margin-right: .25rem;
+    color: var(--font-primary);
+
+    // The rest of the icon's line on a phone, the tiers together under it
+    @include mobile {
+      flex: 1 0 calc(100% - 3rem);
+    }
+  }
+}
+
+.scrip-tier {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+
+  strong {
+    color: var(--font-primary);
+  }
+}
+
+.gathering-hidden {
+  font-size: .7rem;
+  font-weight: 400;
+  color: var(--font-tertiary);
+  cursor: help;
+}
+
 .bait-path {
   display: inline-flex;
   flex-wrap: wrap;

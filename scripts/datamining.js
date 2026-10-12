@@ -164,6 +164,45 @@ export function nearestAetheryte({ aetherytes, markers, map, place }) {
   }
 }
 
+// CollectablesShopRewardScrip.Currency, as the Item the scrip is: Purple and Orange, Crafters' then Gatherers'
+const SCRIP_ITEMS = { 2: 33913, 4: 33914, 6: 41784, 7: 41785 }
+// CollectablesShop.RewardType of the shops paying in scrips, the rest pay in items
+const SCRIP_SHOP = "1"
+const TIERS = ["Low", "Mid", "High"]
+
+/**
+ * What the collectables are worth at the scrip exchange. The current exchange only, the retired one ("●収集品回収")
+ * still has its rows but no quest unlocking it.
+ * @param {Record<string, Record<string, string>>} item Item by id
+ * @returns {Promise<Map<number, { name: string, icon: number, tiers: [number, number][] }>>} Item id -> the scrip
+ * paid, its icon, and [collectability, scrips] per tier, lowest first
+ */
+export async function scripRewards(item) {
+  const [shops, shopItems, refines, rewards] = await sheets([
+    "CollectablesShop", "CollectablesShopItem", "CollectablesShopRefine", "CollectablesShopRewardScrip"
+  ])
+  const refine = byId(refines)
+  const reward = byId(rewards)
+
+  // A shop has a page per job, ShopItems[n], each a group of CollectablesShopItem rows ("<group>.<n>")
+  const groups = new Set(shops
+    .filter((s) => s.RewardType === SCRIP_SHOP && s.Quest !== "0")
+    .flatMap((s) => Object.keys(s).filter((k) => k.startsWith("ShopItems[")).map((k) => s[k]))
+    .filter((g) => g !== "0"))
+
+  const worth = new Map()
+  for (const row of shopItems) {
+    const r = reward[row.CollectablesShopRewardScrip]
+    const c = refine[row.CollectablesShopRefine]
+    const scrip = r && item[SCRIP_ITEMS[r.Currency]]
+    if (!groups.has(row["#"].split(".")[0]) || !scrip || !c || worth.has(+row.Item)) continue
+
+    const tiers = TIERS.map((t) => [+c[`${t}Collectability`], +r[`${t}Reward`]]).filter(([at, scrips]) => at && scrips)
+    if (tiers.length) worth.set(+row.Item, { name: scrip.Name, icon: +scrip.Icon, tiers })
+  }
+  return worth
+}
+
 /**
  * Writes src/js/data/<name>.json. For data only the build reads, like the text on the detail pages.
  * @param {string} name

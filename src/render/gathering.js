@@ -1,6 +1,6 @@
 import {
   chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText,
-  html, listRow, listRows, locationFacts, mapFigure, pager, readData, readExpansions, slug, xivIcon
+  html, listRow, listRows, locationFacts, mapFigure, pager, readData, readExpansions, scripCard, slug, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
@@ -27,6 +27,10 @@ const itemLink = (item) => itemUrl(item) ? html`<a href="${itemUrl(item)}">${ite
 const itemIcon = (item, info) => html`<img class="item-icon" src="/images/game/${info.icon}.webp" alt="${item.name} icon" width="44" height="44">`
 
 const stars = (item) => item.stars && html`<span class="gathering-stars">${"★".repeat(item.stars)}</span>`
+
+const HIDDEN_TITLE = "Hidden, the node only shows it once it's revealed"
+
+const hiddenMark = (item) => item.hidden && html`<span class="gathering-hidden" title="${HIDDEN_TITLE}">Hidden</span>`
 
 /**
  * @param {object} node
@@ -60,7 +64,7 @@ function nodeRow(key, node) {
   // The stars and collectable mark are part of the link, so its line runs under them too
   const items = node.items.map((item) => {
     const title = item.perception && html` title="Needs ${item.perception} Perception"`
-    const content = html`<strong>${item.name}</strong>${stars(item)}${collectableChip(item)}`
+    const content = html`<strong>${item.name}</strong>${stars(item)}${collectableChip(item)}${hiddenMark(item)}`
     return itemUrl(item)
       ? html`
     <span class="done-entry">${doneButton(item.id)}<a class="gathering-item" href="${itemUrl(item)}"${title}>${content}</a></span>`
@@ -180,7 +184,7 @@ function whereText(item, spots) {
  * @returns {import("./html.js").Html}
  */
 const spotTags = ({ node, item, expansion }) => html`
-  <div class="tags">${nodeTags(node)}${item.collectable && chip(html`${xivIcon("collectable")} Collectable`, "chip-accent")}${item.perception && chip(`${item.perception} Perception`)}${chip(expansion)}</div>`
+  <div class="tags">${nodeTags(node)}${item.collectable && chip(html`${xivIcon("collectable")} Collectable`, "chip-accent")}${item.hidden && chip("Hidden", "", HIDDEN_TITLE)}${item.perception && chip(`${item.perception} Perception`)}${chip(expansion)}</div>`
 
 /**
  * One node an item is at: its timer and where it is, next to the map.
@@ -249,7 +253,7 @@ const itemIntro = (item, info, spots) => html`
         <div class="detail-title-row"><h1 class="detail-title">${item.name}${stars(item)}</h1>${doneButton(item.id, item.name)}</div>
       </div>
     </div>
-    <div class="detail-text">${gameText(info.description)}</div>${spots.length === 1 && spotTags(spots[0])}
+    <div class="detail-text">${gameText(info.description)}</div>${spots.length === 1 && spotTags(spots[0])}${scripCard(info.scrips)}
   </header>
   <section class="item-about">
     <h2 class="detail-subtitle">About ${item.name}</h2>

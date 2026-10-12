@@ -1,5 +1,5 @@
 import {
-  byId, nearestAetheryte, plainNames, round, saveIcons, saveMaps, sheets, spotOf, writeData, writeExpansions, zoneWeather
+  byId, nearestAetheryte, plainNames, round, saveIcons, saveMaps, scripRewards, sheets, spotOf, writeData, writeExpansions, zoneWeather
 } from "./datamining.js"
 import { FACT_ICONS } from "../src/render/fishing.js"
 
@@ -195,6 +195,15 @@ async function main() {
 
   await saveMaps(fishes.map((f) => f.mapId).filter(Boolean))
 
+  // The tracker only marks the fish it keeps as collectable, the scrip exchange knows them all
+  const scrips = await scripRewards(item)
+  for (const { fish } of fishes) {
+    if (!scrips.has(fish.id)) continue
+    fish.collectable = true
+    // For the list's search, the fish page has the rest
+    fish.scrip = scrips.get(fish.id).name
+  }
+
   const sorted = fishes.sort((a, b) => a.territory - b.territory || a.fish.level - b.fish.level || a.fish.id - b.fish.id)
   writeExpansions("fishing", exVersions, sorted.map((f) => ({ expansion: f.expansion, entry: f.fish })))
 
@@ -223,11 +232,15 @@ async function main() {
       icon: +it.Icon,
       ...(category ? { category } : {}),
       level: +it.LevelItem,
-      ...(byFish.has(id) && byFish.get(id).method === "Fishing" ? alsoAt(byFish.get(id)) : {})
+      ...(byFish.has(id) && byFish.get(id).method === "Fishing" ? alsoAt(byFish.get(id)) : {}),
+      ...(byFish.has(id) && scrips.has(id) ? { scrips: scrips.get(id) } : {})
     }]
   })))
   // The actions and folklore tomes the fish pages show next to their facts too
-  await saveIcons([...ids.map((id) => +item[id].Icon), ...Object.values(FACT_ICONS)])
+  await saveIcons([
+    ...ids.map((id) => +item[id].Icon), ...Object.values(FACT_ICONS),
+    ...[...byFish.keys()].filter((id) => scrips.has(id)).map((id) => scrips.get(id).icon)
+  ])
 }
 
 main().catch((err) => {

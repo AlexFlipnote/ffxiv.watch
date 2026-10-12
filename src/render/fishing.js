@@ -1,6 +1,6 @@
 import {
   chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, html, listRow, listRows, locationFacts,
-  mapFigure, pager, readData, readExpansions, slug, xivIcon
+  mapFigure, pager, readData, readExpansions, scripCard, slug, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
@@ -204,7 +204,7 @@ function fishIntro(fish, paged, info, expansion) {
       </div>
     </div>
     <div class="detail-text">${gameText(info[fish.id].description ?? "")}</div>
-    <div class="tags">${fishTags(fish)}${fish.collectable && chip(html`${xivIcon("collectable")} Collectable`, "chip-accent")}${chip(expansion)}</div>
+    <div class="tags">${fishTags(fish)}${fish.collectable && chip(html`${xivIcon("collectable")} Collectable`, "chip-accent")}${chip(expansion)}</div>${scripCard(info[fish.id].scrips)}
   </header>
   ${howTo.some(([, value]) => value) && html`<section class="item-about">
     <h2 class="detail-subtitle">How to catch it</h2>

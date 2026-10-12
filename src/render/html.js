@@ -132,10 +132,24 @@ export const xivIcon = (name, label = null) => label
   : html`<span class="xiv" aria-hidden="true">${XIV_ICONS[name]}</span>`
 
 /**
- * @param {{ collectable?: boolean }} entry An item or fish
+ * @param {{ collectable?: boolean, scrip?: string }} entry An item or fish
  * @returns {Html | undefined} The game's collectable mark, in the colour of the name it follows
  */
-export const collectableChip = (entry) => entry.collectable && html`<span class="gathering-collectable" title="Collectable">${xivIcon("collectable", "Collectable")}</span>`
+export const collectableChip = (entry) => entry.collectable && html`<span class="gathering-collectable" title="${entry.scrip ? `Collectable, for ${entry.scrip}s` : "Collectable"}">${xivIcon("collectable", "Collectable")}</span>`
+
+/**
+ * What a collectable is worth at the scrip exchange, under the header's tags: in the facts next to it, it made them
+ * taller than the header and left a gap under it.
+ * @param {{ name: string, icon: number, tiers: [number, number][] } | undefined} scrips Its entry's in
+ * gathering-items.json or fishing-items.json, [collectability, scrips] per tier
+ * @returns {Html | undefined} Nothing when it isn't taken there
+ */
+export const scripCard = (scrips) => scrips && html`
+    <div class="scrip-card">
+      <img class="bait-icon" src="/images/game/${scrips.icon}.webp" alt="" width="24" height="24">
+      <strong>${scrips.name}s</strong>${scrips.tiers.map(([at, count]) => html`
+      <span class="scrip-tier" title="${count} scrips at ${at} collectability"><strong>${count}</strong> at ${at}</span>`)}
+    </div>`
 
 /**
  * @param {number} minutes ET minutes into the day
