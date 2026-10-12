@@ -2,9 +2,10 @@ const TAPPABLE = [
   ".info-btn", ".region-btn", ".close-btn", ".toast-close",
   ".navbar-hamburger", ".navbar-title", ".navbar-links a", ".settings-button",
   ".settings-btn", ".segmented input", ".settings-check input",
-  ".listing-table a", ".map-zoom",
+  ".listing-table a", ".table-link", ".map-zoom", ".timer .title a", ".modal-link", ".pvp-details summary",
   ".filters-toggle", ".top-button",
-  ".backlink", ".detail-prev-link", ".detail-next-link", ".detail-facts a"
+  ".backlink", ".detail-prev-link", ".detail-next-link", ".detail-facts a",
+  ".maintenance", ".events a", ".weather-zone", ".ocean a"
 ].join(", ")
 
 /**
