@@ -86,7 +86,10 @@
 
       // Glass like the cards, it's a part of the page, but blurred more and less see-through so the rows under it
       // don't get in the way of reading it
+      // As wide as the select, sized to the widest option. Left to its own min-width, Chrome opens it 1px too wide
+      // and snaps it back on the next layout, like a countdown's tick
       &::picker(select) {
+        width: anchor-size(width);
         margin-top: .25rem;
         padding: .25rem;
         border: none;
