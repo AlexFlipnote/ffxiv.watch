@@ -39,5 +39,6 @@ Disallow: /
 
 User-agent: *
 Allow: /
+Disallow: /rows/
 
 Sitemap: https://ffxiv.watch/sitemap.xml
