@@ -141,31 +141,41 @@ function celebrate(button, isDone) {
 }
 
 /**
+ * @param {HTMLButtonElement[]} buttons
+ * @param {Set<number>} done
+ */
+function paint(buttons, done) {
+  for (const button of buttons) {
+    const isDone = done.has(Number(button.dataset.doneId))
+    button.setAttribute("aria-pressed", isDone)
+    button.title = isDone ? "Complete, click to undo" : "Mark as complete"
+  }
+  for (const tr of new Set(buttons.map((b) => b.closest("tr")).filter(Boolean))) {
+    tr.toggleAttribute("data-done", [...tr.querySelectorAll(".done-check")].every((b) => b.getAttribute("aria-pressed") === "true"))
+  }
+}
+
+/**
  * Hooks up the page's done checks (doneButton in src/render/html.js), kept as the top of this file says. A row fades
  * once all its checks are done. Fires "done-change" on the document after each change.
  * @param {string} key "vistas", "fish", "gathering"
+ * @returns {(root: ParentNode) => void} Hooks up the checks in rows added later, a list's fetched rows
  */
 export function doneChecks(key) {
-  const buttons = [...document.querySelectorAll(".done-check")]
-  const rows = [...new Set(buttons.map((b) => b.closest("tr")).filter(Boolean))]
+  const buttons = []
 
   let done = readDone(key)
   // Its own saves are shown by the click, not read back
   let saving = false
 
   const show = () => {
-    for (const button of buttons) {
-      const isDone = done.has(Number(button.dataset.doneId))
-      button.setAttribute("aria-pressed", isDone)
-      button.title = isDone ? "Complete, click to undo" : "Mark as complete"
-    }
-    for (const tr of rows) {
-      tr.toggleAttribute("data-done", [...tr.querySelectorAll(".done-check")].every((b) => b.getAttribute("aria-pressed") === "true"))
-    }
+    paint(buttons, done)
     document.dispatchEvent(new Event("done-change"))
   }
 
-  for (const button of buttons) {
+  const hookUp = (button) => {
+    // A list's row leaves it out, its name is in the <strong> next to it (see doneButton in src/render/html.js)
+    button.dataset.name ??= button.parentElement.querySelector("strong").textContent
     button.setAttribute("aria-label", `${button.dataset.name} complete`)
     button.addEventListener("click", () => {
       const id = Number(button.dataset.doneId)
@@ -183,11 +193,20 @@ export function doneChecks(key) {
     })
   }
 
+  const add = (root) => {
+    const added = [...root.querySelectorAll(".done-check")]
+    for (const button of added) hookUp(button)
+    buttons.push(...added)
+    paint(added, done)
+  }
+
   onStored(storageKey(key), () => {
     if (saving) return
     done = readDone(key)
     show()
   })
 
+  add(document)
   show()
+  return add
 }

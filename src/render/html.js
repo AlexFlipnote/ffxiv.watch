@@ -1,3 +1,4 @@
+import crypto from "crypto"
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
@@ -183,19 +184,50 @@ export const listRow = (key, entry, content) => html`
 /**
  * Every entry's row, keyed by the expansion's file and the entry's id, not its place in the list: a page cached from
  * before a deploy still finds the right rows in the newer data. listing.js keys the data with the same `idOf`.
+ *
+ * Only the expansion a first visit shows has its rows in the page, all of fishing's came to over a megabyte, past what
+ * Bing reads of a page. The others are a file each in /rows/, which listing.js fetches with that expansion's data.
+ * Search engines get a plain link to every entry instead.
+ * @param {string} list "fishing", the rows' folder in /rows/
  * @param {{ file: string, entries: object[] }[]} expansions From readExpansions
+ * @param {string} shown The file of the expansion whose rows are in the page
  * @param {(entry: object) => number} idOf
  * @param {(key: string, entry: object) => Html} row
- * @returns {Html}
+ * @param {(entry: object) => { url: string, name: string }[]} linksOf The pages an entry's row links to
+ * @returns {{ rows: Html, rowFiles: string, links: Html, files: Record<string, string> }} The page's rows, the other
+ * expansions' files for the tbody's data-rows, as JSON, the links, and the files to write, by their path in dist/
  */
-export function listRows(expansions, idOf, row) {
+export function listRows(list, expansions, shown, idOf, row, linksOf) {
   const seen = new Set()
-  return html`${expansions.flatMap((e) => e.entries.map((entry) => {
+  const rowsOf = (e) => html`${e.entries.map((entry) => {
     const key = `${e.file}:${idOf(entry)}`
     if (seen.has(key)) throw new Error(`js/data: two entries are both "${key}"`)
     seen.add(key)
     return row(key, entry)
-  }))}`
+  })}`
+
+  const files = {}
+  const rowFiles = {}
+  let rows = null
+  for (const e of expansions) {
+    if (e.file === shown) {
+      rows = rowsOf(e)
+      continue
+    }
+    const content = String(rowsOf(e)).trim() + "\n"
+    files[`rows/${list}/${e.file}.html`] = content
+    // A new deploy's rows are fetched fresh, like the scripts' ?v=hash
+    rowFiles[e.file] = `/rows/${list}/${e.file}.html?v=${crypto.createHash("md5").update(content).digest("hex").slice(0, 8)}`
+  }
+
+  // An item at several nodes is linked once
+  const links = new Map(expansions.flatMap((e) => e.entries.flatMap(linksOf)).map((link) => [link.url, link.name]))
+  return {
+    rows,
+    rowFiles: JSON.stringify(rowFiles),
+    links: html`${[...links].map(([url, name]) => html`<a href="${url}">${name}</a>\n`)}`,
+    files
+  }
 }
 
 /**
@@ -224,13 +256,13 @@ export function mapFigure(entry, note) {
 /**
  * A check to mark an entry complete, js/utils/done.js hooks it up.
  * @param {number} id
- * @param {string} name What it's for, for the toast and its label. The label and title are set by the script, the page
- * holds the name once (a list has thousands) and the check is hidden without the script anyway. The tick is drawn by
- * the CSS for the same reason
+ * @param {string} [name] What it's for, for the toast and its label. Left out in a list's row, which has the name
+ * next to it already (a list has thousands). The label, title and pressed state are set by the script, the check is
+ * hidden without it anyway. The tick is drawn by the CSS for the same reason
  * @returns {Html}
  */
-export const doneButton = (id, name) =>
-  html`<button class="done-check" data-done-id="${id}" data-name="${name}" aria-pressed="false"></button>`
+export const doneButton = (id, name = null) =>
+  html`<button class="done-check" data-done-id="${id}"${name && html` data-name="${name}"`}></button>`
 
 /**
  * Links to the entries before and after this one, at the bottom of a detail page.

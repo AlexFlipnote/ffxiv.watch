@@ -121,18 +121,22 @@ const fishTags = (fish) => [
  * @returns {import("./html.js").Html}
  */
 const fishRow = (key, fish) => listRow(key, fish, html`
-    <div class="gathering-items"><span class="done-entry">${doneButton(fish.id, fish.name)}<a class="gathering-item" href="${fishUrl(fish)}"><strong>${fish.name}</strong>${collectableChip(fish)}</a></span></div>
+    <div class="gathering-items"><span class="done-entry">${doneButton(fish.id)}<a class="gathering-item" href="${fishUrl(fish)}"><strong>${fish.name}</strong>${collectableChip(fish)}</a></span></div>
     <div class="tags">${fishTags(fish)}</div>`)
 
 /**
- * @returns {{ rows: import("./html.js").Html, defaultExpansion: string, sources: string[] }} Every fish's row, for
- * /fishing/, and the expansion a first visit shows, its data is preloaded
+ * @returns {object} Every fish's row and link for /fishing/, see listRows, and the expansion a first visit shows, its
+ * data is preloaded
  */
 export function fishList() {
   const expansions = readExpansions("fishing")
-  const rows = listRows(expansions, (fish) => fish.id, fishRow)
   const defaultExpansion = expansions.at(-1).file
-  return { rows, defaultExpansion, expansionOptions: expansionOptions(expansions, defaultExpansion), sources: DATA_SOURCES }
+  return {
+    ...listRows("fishing", expansions, defaultExpansion, (fish) => fish.id, fishRow, (fish) => [{ url: fishUrl(fish), name: fish.name }]),
+    defaultExpansion,
+    expansionOptions: expansionOptions(expansions, defaultExpansion),
+    sources: DATA_SOURCES
+  }
 }
 
 /**

@@ -29,10 +29,14 @@
           <thead class="sr-only">
             <tr><th>Vista</th><th>Location</th></tr>
           </thead>
-          <tbody id="vistas">
+          <tbody id="vistas" data-rows="{{ rowFiles }}">
             {{{ rows }}}
           </tbody>
         </table>
+        <!-- Every entry, for search engines: the page only has the first expansion's rows -->
+        <div class="listing-links" hidden>
+          {{{ links }}}
+        </div>
         <p class="table-empty" id="vistas-empty" hidden></p>
       </main>
       <x-html str="partials/footer.html"/>

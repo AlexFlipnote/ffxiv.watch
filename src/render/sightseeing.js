@@ -68,21 +68,21 @@ function vistaWhen(vista) {
  * @returns {import("./html.js").Html}
  */
 const vistaRow = (id, key, vista) => listRow(key, vista, html`
-    <div class="vista-name">${doneButton(id, vistaName(vista))}<span class="vista-number">${vistaNumber(vista)}</span><strong><a href="${vistaUrl(vista)}">${vistaName(vista)}</a></strong></div>
+    <div class="vista-name">${doneButton(id)}<span class="vista-number">${vistaNumber(vista)}</span><strong><a href="${vistaUrl(vista)}">${vistaName(vista)}</a></strong></div>
     <div class="tags">${vistaTags(vista)}</div>`)
 
 /**
- * @returns {{ rows: import("./html.js").Html, defaultExpansion: string, sources: string[] }} Every vista's row, for
- * /sightseeing/, and the expansion a first visit shows, its data is preloaded
+ * @returns {object} Every vista's row and link for /sightseeing/, see listRows, and the expansion a first visit shows, its
+ * data is preloaded
  */
 export function vistaList() {
   const expansions = readExpansions("sightseeing")
   const index = new Map(expansions.map((e, i) => [e.file, i]))
-  const rows = listRows(expansions, (vista) => vista.number, (key, vista) => vistaRow(vistaId(index.get(key.split(":")[0]), vista), key, vista))
+  const row = (key, vista) => vistaRow(vistaId(index.get(key.split(":")[0]), vista), key, vista)
   // A Realm Reborn's are the only ones with times and weather
   const defaultExpansion = expansions[0].file
   return {
-    rows,
+    ...listRows("sightseeing", expansions, defaultExpansion, (vista) => vista.number, row, (vista) => [{ url: vistaUrl(vista), name: vistaName(vista) }]),
     defaultExpansion,
     expansionOptions: expansionOptions(expansions, defaultExpansion),
     sources: ["js/data/sightseeing.json", "js/data/sightseeing"]

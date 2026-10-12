@@ -48,10 +48,14 @@
           <thead class="sr-only">
             <tr><th>Items</th><th>Location</th></tr>
           </thead>
-          <tbody id="nodes">
+          <tbody id="nodes" data-rows="{{ rowFiles }}">
             {{{ rows }}}
           </tbody>
         </table>
+        <!-- Every entry, for search engines: the page only has the first expansion's rows -->
+        <div class="listing-links" hidden>
+          {{{ links }}}
+        </div>
         <p class="table-empty" id="nodes-empty" hidden></p>
       </main>
       <x-html str="partials/footer.html"/>

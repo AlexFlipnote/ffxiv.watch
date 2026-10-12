@@ -116,6 +116,7 @@ const isSkipped = (file) => SKIPPED.includes(path.relative(SRC, file).split(path
 
 /**
  * A page to write. Most come one to a file in src/pages/, a [name].html file gives one per entry of its .data.js.
+ * Its props can have `files`, more files to write, by their path in dist/.
  * @typedef {object} Route
  * @property {string} source "gathering/[item].html", relative to src/pages/
  * @property {string} output Where it goes in dist/: "gathering/cedar-log/index.html"
@@ -475,6 +476,12 @@ async function buildHTML(hashed = true) {
     fs.mkdirSync(path.dirname(outputFile), { recursive: true })
     const html = renderPage(route, hashed)
     fs.writeFileSync(outputFile, withCsp(hashed ? await minify(html, minifyOptions) : html))
+
+    // A list's rows for the expansions its page leaves out, see listRows in src/render/html.js
+    for (const [file, content] of Object.entries(route.props.files ?? {})) {
+      fs.mkdirSync(path.dirname(path.join(OUT, file)), { recursive: true })
+      fs.writeFileSync(path.join(OUT, file), content)
+    }
   }
   log("HTML", `Done rendering ${routes.length} pages`)
   return routes
@@ -533,6 +540,8 @@ async function buildSite(routes, dated = true) {
     ...BLOCKED_BOTS.flatMap(bot => [`User-agent: ${bot}`, "Disallow: /", ""]),
     "User-agent: *",
     "Allow: /",
+    // The lists' rows, only a part of a page, the lists link to every entry themselves
+    "Disallow: /rows/",
     "",
     `Sitemap: https://${DOMAIN}/sitemap.xml`,
     ""

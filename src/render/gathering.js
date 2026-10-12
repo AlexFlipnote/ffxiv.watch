@@ -63,7 +63,7 @@ function nodeRow(key, node) {
     const content = html`<strong>${item.name}</strong>${stars(item)}${collectableChip(item)}`
     return itemUrl(item)
       ? html`
-    <span class="done-entry">${doneButton(item.id, item.name)}<a class="gathering-item" href="${itemUrl(item)}"${title}>${content}</a></span>`
+    <span class="done-entry">${doneButton(item.id)}<a class="gathering-item" href="${itemUrl(item)}"${title}>${content}</a></span>`
       : html`
     <span class="gathering-item"${title}>${content}</span>`
   })
@@ -74,14 +74,19 @@ function nodeRow(key, node) {
 }
 
 /**
- * @returns {{ rows: import("./html.js").Html, defaultExpansion: string, sources: string[] }} Every node's row,
- * for /gathering/, and the expansion a first visit shows, its data is preloaded
+ * @returns {object} Every node's row and link for /gathering/, see listRows, and the expansion a first visit shows, its
+ * data is preloaded
  */
 export function nodeList() {
   const expansions = readExpansions("gathering")
-  const rows = listRows(expansions, (node) => node.id, nodeRow)
   const defaultExpansion = expansions.at(-1).file
-  return { rows, defaultExpansion, expansionOptions: expansionOptions(expansions, defaultExpansion), sources: DATA_SOURCES }
+  const linksOf = (node) => node.items.filter(itemUrl).map((item) => ({ url: itemUrl(item), name: item.name }))
+  return {
+    ...listRows("gathering", expansions, defaultExpansion, (node) => node.id, nodeRow, linksOf),
+    defaultExpansion,
+    expansionOptions: expansionOptions(expansions, defaultExpansion),
+    sources: DATA_SOURCES
+  }
 }
 
 /**

@@ -16,7 +16,8 @@ import { everyTick, formatCountdown, setText, setTime } from "./time.js"
  * @property {(entry: object) => number} idOf The same as the page's rows were keyed with, see listRows in src/render/html.js
  * @property {Record<string, HTMLSelectElement>} selects Filter dropdowns by name, also their names in the URL
  * @property {HTMLInputElement} search
- * @property {HTMLElement} body The table's tbody, with a row for every entry from the build
+ * @property {HTMLElement} body The table's tbody, with the rows of the expansion a first visit shows. Its data-rows has
+ * the other expansions' rows' files, see listRows in src/render/html.js
  * @property {HTMLElement} empty Shown when nothing matches
  * @property {HTMLElement} skeleton Shown in place of the table until the first data is in
  * @property {(entry: object) => string | (string | Node)[]} [mapNote] Shown under the coordinates in the map dialog
@@ -103,7 +104,9 @@ function groupRows(state) {
  * @param {ListingOptions} options
  */
 export function listing({ expansions, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, filter, matches, windowOf, noun, done }) {
-  doneChecks(done)
+  const addDoneChecks = doneChecks(done)
+  // An expansion's file -> where its rows are, when the page came without them
+  const rowFiles = JSON.parse(body.dataset.rows || "{}")
   // "dawntrail:974" -> its row, until the entry it's for has loaded
   const unclaimed = new Map([...body.querySelectorAll("tr[data-key]")].map((tr) => [tr.dataset.key, tr]))
   const keys = new Map()
@@ -120,11 +123,6 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
   let ready = false
   // Not in the URL like the filters, someone a link is shared with has their own done checks
   let hideDone = load(HIDE_DONE_KEY) === "1"
-  // Search engines index the page as the script leaves it, so the links of the rows not on show stay, hidden
-  const links = Object.assign(document.createElement("div"), { hidden: true })
-  links.append(...[...body.querySelectorAll("tr[data-key] a[href]:not(.location)")].map((a) =>
-    Object.assign(document.createElement("a"), { href: a.getAttribute("href"), textContent: (a.querySelector("strong") ?? a).textContent })))
-  body.closest("table").after(links)
 
   // The filters are only in the URL, so a link shares them and a fresh visit starts from what the page picks
   const defaults = Object.fromEntries(Object.entries(selects).map(([name, select]) => [name, select.value]))
@@ -142,9 +140,22 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     toggle.setAttribute("aria-expanded", open)
   })
 
+  /**
+   * Adds an expansion's rows to the ones its entries can claim.
+   * @param {string} url
+   */
+  async function loadRows(url) {
+    const response = await fetch(url)
+    if (!response.ok) throw new Error(`${url}: ${response.status}`)
+    const template = document.createElement("template")
+    template.innerHTML = await response.text()
+    addDoneChecks(template.content)
+    for (const tr of template.content.querySelectorAll("tr[data-key]")) unclaimed.set(tr.dataset.key, tr)
+  }
+
   const loadExpansion = (file) => {
     if (!loaded.has(file)) {
-      loaded.set(file, loadChunk(file).then((entries) => {
+      loaded.set(file, Promise.all([loadChunk(file), rowFiles[file] && loadRows(rowFiles[file])]).then(([entries]) => {
         entries.forEach((entry) => keys.set(entry, `${file}:${idOf(entry)}`))
         return entries
       }))
