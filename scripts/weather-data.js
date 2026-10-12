@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
-import { sheets } from "./datamining.js"
+import { aetherytesByMap, saveIcons, saveMaps, saveZoneArt, sheets, writeData } from "./datamining.js"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const OUT = path.join(__dirname, "../src/js/data/weather.json")
@@ -27,15 +27,22 @@ function groupOf(territory, expansions) {
 }
 
 async function main() {
-  const [territories, rates, weathers, places, exVersions] = await sheets(
-    ["TerritoryType", "WeatherRate", "Weather", "PlaceName", "ExVersion"]
+  const [territories, rates, weathers, places, exVersions, maps, aetherytes, markers, loadingImages] = await sheets(
+    ["TerritoryType", "WeatherRate", "Weather", "PlaceName", "ExVersion", "Map", "Aetheryte", "MapMarker", "LoadingImage"]
   )
 
   const byId = (rows, key = "Name") => Object.fromEntries(rows.map((r) => [r["#"], r[key]]))
   const placeName = byId(places)
   const weatherName = byId(weathers)
+  const weatherIcon = byId(weathers, "Icon")
+  // Weather name -> its icon, for the forecast page
+  const icons = {}
   const expansions = byId(exVersions)
+  const loadingFile = byId(loadingImages, "FileName")
   const rateById = Object.fromEntries(rates.map((r) => [r["#"], r]))
+  const rows = (list) => Object.fromEntries(list.map((r) => [r["#"], r]))
+  const mapRow = rows(maps)
+  const aetherytesOn = aetherytesByMap({ aetherytes, markers, map: mapRow, place: rows(places) })
   const groups = [...exVersions.map((e) => e.Name), "Housing", "Field Operations"]
 
   const zones = new Map()
@@ -52,10 +59,14 @@ async function main() {
     const weather = []
     for (let i = 0; rate[`Rate[${i}]`] !== undefined; i++) {
       const chance = +rate[`Rate[${i}]`]
-      if (chance > 0) weather.push([weatherName[rate[`Weather[${i}]`]], chance])
+      if (chance <= 0) continue
+      const id = rate[`Weather[${i}]`]
+      weather.push([weatherName[id], chance])
+      icons[weatherName[id]] ??= +weatherIcon[id]
     }
 
-    zones.set(name, { use, id: +t["#"], name, group: groupOf(t, expansions), weather })
+    const art = loadingFile[t.LoadingImage] && +t.PlaceNameIcon ? { loading: loadingFile[t.LoadingImage], name: +t.PlaceNameIcon } : null
+    zones.set(name, { use, id: +t["#"], name, group: groupOf(t, expansions), weather, mapRowId: mapRow[t.Map]?.Id ? t.Map : null, art })
   }
 
   const sorted = [...zones.values()]
@@ -65,6 +76,23 @@ async function main() {
   fs.mkdirSync(path.dirname(OUT), { recursive: true })
   fs.writeFileSync(OUT, JSON.stringify(sorted, null, 2) + "\n")
   console.log(`Wrote ${sorted.length} zones to ${path.relative(process.cwd(), OUT)}`)
+
+  writeData("weather-icons", icons)
+  await saveIcons(Object.values(icons))
+
+  // Each zone's map and aetherytes, for its page. Apart from weather.json, which the pages' scripts load
+  const withMap = [...zones.values()].filter((z) => z.mapRowId)
+  writeData("weather-maps", Object.fromEntries(withMap.map((z) => [z.name, {
+    image: mapRow[z.mapRowId].Id.replace("/", "-"),
+    scale: +mapRow[z.mapRowId].SizeFactor,
+    aetherytes: aetherytesOn.get(z.mapRowId) ?? []
+  }])))
+  await saveMaps(withMap.map((z) => mapRow[z.mapRowId].Id))
+
+  // Each zone's loading screen and name, for its link preview
+  const withArt = [...zones.values()].filter((z) => z.art)
+  writeData("weather-art", Object.fromEntries(withArt.map((z) => [z.name, { loading: z.art.loading.replace(/^-/, ""), name: z.art.name }])))
+  await saveZoneArt(withArt.map((z) => z.art))
 }
 
 main().catch((err) => {

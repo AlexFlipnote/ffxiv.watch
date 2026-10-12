@@ -1,0 +1,987 @@
+{
+  "Limsa Lominsa Upper Decks": {
+    "image": "s1t1-01",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "Limsa Lominsa Lower Decks": {
+    "image": "s1t2-01",
+    "scale": 200,
+    "aetherytes": [
+      {
+        "name": "Limsa Lominsa Lower Decks",
+        "x": 9.6,
+        "y": 11.2
+      }
+    ]
+  },
+  "Ul'dah - Steps of Nald": {
+    "image": "w1t1-01",
+    "scale": 200,
+    "aetherytes": [
+      {
+        "name": "Ul'dah - Steps of Nald",
+        "x": 8.4,
+        "y": 7.9
+      }
+    ]
+  },
+  "Ul'dah - Steps of Thal": {
+    "image": "w1t2-01",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "New Gridania": {
+    "image": "f1t1-00",
+    "scale": 200,
+    "aetherytes": [
+      {
+        "name": "New Gridania",
+        "x": 12,
+        "y": 11.8
+      }
+    ]
+  },
+  "Old Gridania": {
+    "image": "f1t2-00",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "Middle La Noscea": {
+    "image": "s1f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Summerford Farms",
+        "x": 26.1,
+        "y": 16.4
+      }
+    ]
+  },
+  "Lower La Noscea": {
+    "image": "s1f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Moraby Drydocks",
+        "x": 24.6,
+        "y": 35
+      }
+    ]
+  },
+  "Mist": {
+    "image": "s1h1-01",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "Eastern La Noscea": {
+    "image": "s1f3-01",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Costa del Sol",
+        "x": 31.3,
+        "y": 30.8
+      },
+      {
+        "name": "Wineport",
+        "x": 21.1,
+        "y": 21.6
+      }
+    ]
+  },
+  "Western La Noscea": {
+    "image": "s1f4-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Swiftperch",
+        "x": 34.6,
+        "y": 31.8
+      },
+      {
+        "name": "Aleport",
+        "x": 26.7,
+        "y": 25.9
+      }
+    ]
+  },
+  "Upper La Noscea": {
+    "image": "s1f5-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Camp Bronze Lake",
+        "x": 30.3,
+        "y": 23.4
+      }
+    ]
+  },
+  "Western Thanalan": {
+    "image": "w1f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Horizon",
+        "x": 22.9,
+        "y": 16.9
+      }
+    ]
+  },
+  "Central Thanalan": {
+    "image": "w1f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Black Brush Station",
+        "x": 21.1,
+        "y": 18.2
+      }
+    ]
+  },
+  "Eastern Thanalan": {
+    "image": "w1f3-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Camp Drybone",
+        "x": 13.8,
+        "y": 24.3
+      }
+    ]
+  },
+  "Southern Thanalan": {
+    "image": "w1f4-01",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Little Ala Mhigo",
+        "x": 18.3,
+        "y": 13.2
+      },
+      {
+        "name": "Forgotten Springs",
+        "x": 15,
+        "y": 29.6
+      }
+    ]
+  },
+  "Northern Thanalan": {
+    "image": "w1f5-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Camp Bluefog",
+        "x": 21.9,
+        "y": 30.6
+      },
+      {
+        "name": "Ceruleum Processing Plant",
+        "x": 21,
+        "y": 20.9
+      }
+    ]
+  },
+  "Central Shroud": {
+    "image": "f1f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Bentbranch Meadows",
+        "x": 21.8,
+        "y": 22.2
+      }
+    ]
+  },
+  "East Shroud": {
+    "image": "f1f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "The Hawthorne Hut",
+        "x": 17.8,
+        "y": 27.5
+      }
+    ]
+  },
+  "South Shroud": {
+    "image": "f1f3-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Quarrymill",
+        "x": 25.1,
+        "y": 20.1
+      },
+      {
+        "name": "Camp Tranquil",
+        "x": 16.9,
+        "y": 28.6
+      }
+    ]
+  },
+  "North Shroud": {
+    "image": "f1f4-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Fallgourd Float",
+        "x": 20.6,
+        "y": 26.1
+      }
+    ]
+  },
+  "Coerthas Central Highlands": {
+    "image": "r1f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Camp Dragonhead",
+        "x": 26,
+        "y": 16.8
+      }
+    ]
+  },
+  "Mor Dhona": {
+    "image": "l1f1-01",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Revenant's Toll",
+        "x": 22.3,
+        "y": 8.1
+      }
+    ]
+  },
+  "Outer La Noscea": {
+    "image": "s1f6-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Camp Overlook",
+        "x": 19.2,
+        "y": 17.2
+      }
+    ]
+  },
+  "Wolves' Den Pier": {
+    "image": "s1p1-00",
+    "scale": 400,
+    "aetherytes": [
+      {
+        "name": "Wolves' Den Pier",
+        "x": 5.4,
+        "y": 5.8
+      }
+    ]
+  },
+  "The Lavender Beds": {
+    "image": "f1h1-01",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "The Goblet": {
+    "image": "w1h1-01",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "Coerthas Western Highlands": {
+    "image": "r2f1-00",
+    "scale": 95,
+    "aetherytes": [
+      {
+        "name": "Falcon's Nest",
+        "x": 32.1,
+        "y": 36.8
+      }
+    ]
+  },
+  "The Dravanian Forelands": {
+    "image": "d2f1-00",
+    "scale": 95,
+    "aetherytes": [
+      {
+        "name": "Tailfeather",
+        "x": 33.2,
+        "y": 23.2
+      },
+      {
+        "name": "Anyx Trine",
+        "x": 16.5,
+        "y": 23.3
+      }
+    ]
+  },
+  "The Dravanian Hinterlands": {
+    "image": "d2f2-00",
+    "scale": 95,
+    "aetherytes": []
+  },
+  "The Churning Mists": {
+    "image": "d2f3-00",
+    "scale": 95,
+    "aetherytes": [
+      {
+        "name": "Moghome",
+        "x": 27.9,
+        "y": 34.3
+      },
+      {
+        "name": "Zenith",
+        "x": 10.8,
+        "y": 28.9
+      }
+    ]
+  },
+  "The Sea of Clouds": {
+    "image": "a2f1-00",
+    "scale": 95,
+    "aetherytes": [
+      {
+        "name": "Camp Cloudtop",
+        "x": 10.3,
+        "y": 33.6
+      },
+      {
+        "name": "Ok' Zundu",
+        "x": 10.5,
+        "y": 14.2
+      }
+    ]
+  },
+  "Azys Lla": {
+    "image": "a2f2-00",
+    "scale": 95,
+    "aetherytes": [
+      {
+        "name": "Helix",
+        "x": 8.1,
+        "y": 10.6
+      }
+    ]
+  },
+  "Foundation": {
+    "image": "r2t1-00",
+    "scale": 200,
+    "aetherytes": [
+      {
+        "name": "Foundation",
+        "x": 10,
+        "y": 12.2
+      }
+    ]
+  },
+  "The Pillars": {
+    "image": "r2t2-00",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "Idyllshire": {
+    "image": "d2t1-00",
+    "scale": 400,
+    "aetherytes": [
+      {
+        "name": "Idyllshire",
+        "x": 7.6,
+        "y": 5.7
+      }
+    ]
+  },
+  "The Fringes": {
+    "image": "g3f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Castrum Oriens",
+        "x": 8.9,
+        "y": 11.3
+      },
+      {
+        "name": "The Peering Stones",
+        "x": 29.8,
+        "y": 26.4
+      }
+    ]
+  },
+  "The Ruby Sea": {
+    "image": "e3f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Tamamizu",
+        "x": 28.7,
+        "y": 16.3
+      },
+      {
+        "name": "Onokoro",
+        "x": 23.3,
+        "y": 9.8
+      }
+    ]
+  },
+  "Yanxia": {
+    "image": "e3f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Namai",
+        "x": 30.2,
+        "y": 19.7
+      },
+      {
+        "name": "The House of the Fierce",
+        "x": 26.4,
+        "y": 13.4
+      }
+    ]
+  },
+  "The Peaks": {
+    "image": "g3f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Ala Gannha",
+        "x": 23.7,
+        "y": 6.5
+      },
+      {
+        "name": "Ala Ghiri",
+        "x": 16.1,
+        "y": 36.4
+      }
+    ]
+  },
+  "The Lochs": {
+    "image": "g3f3-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Porta Praetoria",
+        "x": 8.5,
+        "y": 21.1
+      },
+      {
+        "name": "The Ala Mhigan Quarter",
+        "x": 33.8,
+        "y": 34.5
+      }
+    ]
+  },
+  "The Azim Steppe": {
+    "image": "e3f3-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Reunion",
+        "x": 32.6,
+        "y": 28.3
+      },
+      {
+        "name": "The Dawn Throne",
+        "x": 23.1,
+        "y": 22.2
+      },
+      {
+        "name": "Dhoro Iloh",
+        "x": 6.4,
+        "y": 23.8
+      }
+    ]
+  },
+  "Kugane": {
+    "image": "e3t1-00",
+    "scale": 200,
+    "aetherytes": [
+      {
+        "name": "Kugane",
+        "x": 12.2,
+        "y": 10.5
+      }
+    ]
+  },
+  "Rhalgr's Reach": {
+    "image": "g3t1-00",
+    "scale": 200,
+    "aetherytes": [
+      {
+        "name": "Rhalgr's Reach",
+        "x": 12.8,
+        "y": 13.2
+      }
+    ]
+  },
+  "Shirogane": {
+    "image": "e1h1-01",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "Eureka Anemos": {
+    "image": "z3fa-00",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "The Doman Enclave": {
+    "image": "e3ec-00",
+    "scale": 400,
+    "aetherytes": [
+      {
+        "name": "The Doman Enclave",
+        "x": 7.4,
+        "y": 6.5
+      }
+    ]
+  },
+  "Eureka Pagos": {
+    "image": "z3fb-00",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "Eureka Pyros": {
+    "image": "z3fc-00",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "Lakeland": {
+    "image": "n4f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Fort Jobb",
+        "x": 36.6,
+        "y": 20.9
+      },
+      {
+        "name": "The Ostall Imperative",
+        "x": 6.8,
+        "y": 16.9
+      }
+    ]
+  },
+  "Kholusia": {
+    "image": "n4f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Stilltide",
+        "x": 34.9,
+        "y": 27.3
+      },
+      {
+        "name": "Wright",
+        "x": 16.6,
+        "y": 29.2
+      },
+      {
+        "name": "Tomra",
+        "x": 13,
+        "y": 9
+      }
+    ]
+  },
+  "Amh Araeng": {
+    "image": "n4f3-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Mord Souq",
+        "x": 26.4,
+        "y": 17
+      },
+      {
+        "name": "Twine",
+        "x": 11.3,
+        "y": 17.2
+      },
+      {
+        "name": "The Inn at Journey's Head",
+        "x": 29.5,
+        "y": 27.7
+      }
+    ]
+  },
+  "Il Mheg": {
+    "image": "n4f4-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Lydha Lran",
+        "x": 14.6,
+        "y": 31.7
+      },
+      {
+        "name": "Pla Enni",
+        "x": 20.1,
+        "y": 4.3
+      },
+      {
+        "name": "Wolekdorf",
+        "x": 29.1,
+        "y": 7.7
+      }
+    ]
+  },
+  "The Rak'tika Greatwood": {
+    "image": "n4f5-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Slitherbough",
+        "x": 19.4,
+        "y": 27.4
+      },
+      {
+        "name": "Fanow",
+        "x": 29.1,
+        "y": 17.6
+      }
+    ]
+  },
+  "The Tempest": {
+    "image": "n4f6-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "The Ondo Cups",
+        "x": 32.7,
+        "y": 17.5
+      },
+      {
+        "name": "The Macarenses Angle",
+        "x": 18.7,
+        "y": 25.9
+      }
+    ]
+  },
+  "The Crystarium": {
+    "image": "n4t1-00",
+    "scale": 200,
+    "aetherytes": [
+      {
+        "name": "The Crystarium",
+        "x": 9.9,
+        "y": 11.3
+      }
+    ]
+  },
+  "Eulmore": {
+    "image": "n4t2-01",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "Eureka Hydatos": {
+    "image": "z3fd-01",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "Bozjan Southern Front": {
+    "image": "n4b4-01",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "Labyrinthos": {
+    "image": "k5f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "The Archeion",
+        "x": 30.4,
+        "y": 11.9
+      },
+      {
+        "name": "Sharlayan Hamlet",
+        "x": 21.7,
+        "y": 20.5
+      },
+      {
+        "name": "Aporia",
+        "x": 6.9,
+        "y": 27.5
+      }
+    ]
+  },
+  "Thavnair": {
+    "image": "m5f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Yedlihmad",
+        "x": 25.4,
+        "y": 34.1
+      },
+      {
+        "name": "The Great Work",
+        "x": 11,
+        "y": 22.2
+      },
+      {
+        "name": "Palaka's Stand",
+        "x": 29.6,
+        "y": 16.6
+      }
+    ]
+  },
+  "Garlemald": {
+    "image": "m5f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Camp Broken Glass",
+        "x": 13.3,
+        "y": 31.1
+      },
+      {
+        "name": "Tertium",
+        "x": 31.9,
+        "y": 17.9
+      }
+    ]
+  },
+  "Mare Lamentorum": {
+    "image": "u5f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Sinus Lacrimarum",
+        "x": 10.1,
+        "y": 34.5
+      },
+      {
+        "name": "Bestways Burrow",
+        "x": 21.5,
+        "y": 11.2
+      }
+    ]
+  },
+  "Ultima Thule": {
+    "image": "u5f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Reah Tahra",
+        "x": 10.6,
+        "y": 26.8
+      },
+      {
+        "name": "Abode of the Ea",
+        "x": 22.7,
+        "y": 8.3
+      },
+      {
+        "name": "Base Omicron",
+        "x": 31.3,
+        "y": 28.1
+      }
+    ]
+  },
+  "Elpis": {
+    "image": "n5f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Anagnorisis",
+        "x": 24.7,
+        "y": 24
+      },
+      {
+        "name": "The Twelve Wonders",
+        "x": 8.8,
+        "y": 32.4
+      },
+      {
+        "name": "Poieten Oikos",
+        "x": 10.9,
+        "y": 17.1
+      }
+    ]
+  },
+  "Old Sharlayan": {
+    "image": "k5t1-00",
+    "scale": 200,
+    "aetherytes": [
+      {
+        "name": "Old Sharlayan",
+        "x": 11.3,
+        "y": 11.3
+      }
+    ]
+  },
+  "Radz-at-Han": {
+    "image": "m5t1-00",
+    "scale": 200,
+    "aetherytes": [
+      {
+        "name": "Radz-at-Han",
+        "x": 11.8,
+        "y": 10.7
+      }
+    ]
+  },
+  "Zadnor": {
+    "image": "n4b6-01",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "Empyreum": {
+    "image": "r1h1-01",
+    "scale": 200,
+    "aetherytes": []
+  },
+  "Island Sanctuary": {
+    "image": "h1m2-02",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "Tuliyollal": {
+    "image": "y6t1-00",
+    "scale": 180,
+    "aetherytes": [
+      {
+        "name": "Tuliyollal",
+        "x": 12.9,
+        "y": 11.1
+      }
+    ]
+  },
+  "Solution Nine": {
+    "image": "x6t1-00",
+    "scale": 180,
+    "aetherytes": [
+      {
+        "name": "Solution Nine",
+        "x": 12.4,
+        "y": 14.2
+      }
+    ]
+  },
+  "Urqopacha": {
+    "image": "y6f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Wachunpelo",
+        "x": 28.1,
+        "y": 13.2
+      },
+      {
+        "name": "Worlar's Echo",
+        "x": 30.8,
+        "y": 34.2
+      }
+    ]
+  },
+  "Kozama'uka": {
+    "image": "y6f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Ok'hanu",
+        "x": 18.1,
+        "y": 11.9
+      },
+      {
+        "name": "Many Fires",
+        "x": 32.3,
+        "y": 25.6
+      },
+      {
+        "name": "Earthenshire",
+        "x": 11.9,
+        "y": 27.7
+      },
+      {
+        "name": "Dock Poga",
+        "x": 37.3,
+        "y": 16.8
+      }
+    ]
+  },
+  "Yak T'el": {
+    "image": "y6f3-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Iq Br'aax",
+        "x": 13.5,
+        "y": 12.9
+      },
+      {
+        "name": "Mamook",
+        "x": 35.9,
+        "y": 32
+      }
+    ]
+  },
+  "Shaaloani": {
+    "image": "x6f1-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Hhusatahwi",
+        "x": 29.1,
+        "y": 30.8
+      },
+      {
+        "name": "Sheshenewezi Springs",
+        "x": 15.7,
+        "y": 19.2
+      },
+      {
+        "name": "Mehwahhetsoan",
+        "x": 27.7,
+        "y": 10.1
+      }
+    ]
+  },
+  "Heritage Found": {
+    "image": "x6f2-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Yyasulani Station",
+        "x": 31.8,
+        "y": 25.6
+      },
+      {
+        "name": "The Outskirts",
+        "x": 17.1,
+        "y": 9.8
+      },
+      {
+        "name": "Electrope Strike",
+        "x": 17.1,
+        "y": 23.9
+      }
+    ]
+  },
+  "Living Memory": {
+    "image": "x6f3-00",
+    "scale": 100,
+    "aetherytes": [
+      {
+        "name": "Leynode Mnemo",
+        "x": 21.5,
+        "y": 37.5
+      },
+      {
+        "name": "Leynode Pyro",
+        "x": 34.7,
+        "y": 15.8
+      },
+      {
+        "name": "Leynode Aero",
+        "x": 16.4,
+        "y": 13.6
+      }
+    ]
+  },
+  "South Horn": {
+    "image": "o6b1-01",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "North Horn": {
+    "image": "o6b2-01",
+    "scale": 100,
+    "aetherytes": []
+  }
+}

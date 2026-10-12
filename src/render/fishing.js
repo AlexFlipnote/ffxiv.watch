@@ -11,7 +11,7 @@ const DATA_SOURCES = ["js/data/fishing.json", "js/data/fishing"]
  * @param {{ name: string }} fish
  * @returns {string} "/fishing/cinder-surprise/"
  */
-const fishUrl = (fish) => `/fishing/${slug(fish.name)}/`
+export const fishUrl = (fish) => `/fishing/${slug(fish.name)}/`
 
 /**
  * @param {number} id

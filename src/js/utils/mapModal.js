@@ -65,8 +65,9 @@ function inFrame(e) {
  * Centers the spot, or the spot and the aetheryte together when both fit.
  * @param {{ x: number, y: number }} spot In map pixels
  * @param {{ x: number, y: number }} [near] In map pixels
+ * @param {number} [zoom] 1 is the map at its size, clampZoom keeps it from showing past the edges
  */
-function center(spot, near) {
+function center(spot, near, zoom = 1) {
   let { x, y } = spot
   if (near
     && Math.abs(near.x - spot.x) + 2 * MARGIN < frame.clientWidth
@@ -74,17 +75,19 @@ function center(spot, near) {
     x = (spot.x + near.x) / 2
     y = (spot.y + near.y) / 2
   }
-  moveTo(frame.clientWidth / 2 - x, frame.clientHeight / 2 - y, 1)
+  zoom = clampZoom(zoom)
+  moveTo(frame.clientWidth / 2 - x * zoom, frame.clientHeight / 2 - y * zoom, zoom)
 }
 
 /**
  * Opens the dialog with the zone's map, a circle for the area when there's a radius or a pin when it's an exact spot,
- * and the nearest aetheryte.
- * @param {{ zone: string, spot?: string, map: import("./map.js").MapSpot, aetheryte?: { name: string, x: number, y: number }, note?: string | (string | Node)[] }} entry
- * `note` is shown under the coordinates
+ * and the nearest aetheryte. A whole zone, like a weather page's, has no spot and all its aetherytes instead.
+ * @param {{ zone: string, spot?: string, map: import("./map.js").MapSpot, aetheryte?: { name: string, x: number, y: number }, aetherytes?: { name: string, x: number, y: number }[], note?: string | (string | Node)[] }} entry
+ * `note` is shown under the coordinates. A whole zone's map has no x and y, and the first of its aetherytes is centered
  */
 export function openMap(entry) {
   const { map } = entry
+  const hasSpot = map.x !== undefined
   const place = (el, spot) => {
     el.style.left = `${mapPercent(map, spot.x)}%`
     el.style.top = `${mapPercent(map, spot.y)}%`
@@ -92,7 +95,8 @@ export function openMap(entry) {
   const pixels = (spot) => ({ x: mapPercent(map, spot.x) / 100 * MAP_PIXELS, y: mapPercent(map, spot.y) / 100 * MAP_PIXELS })
 
   title.textContent = entry.zone
-  subtitle.textContent = `${entry.spot ? `${entry.spot}, ` : ""}${coordinates(map)}`
+  subtitle.textContent = hasSpot ? `${entry.spot ? `${entry.spot}, ` : ""}${coordinates(map)}` : ""
+  subtitle.hidden = !hasSpot
   // Another zone's map would sit there until the new one loads, so it's a blank pulsing square until then
   const src = `/images/maps/${map.image}.webp`
   if (image.getAttribute("src") !== src) {
@@ -102,25 +106,38 @@ export function openMap(entry) {
   }
   image.alt = `Map of ${entry.zone}`
 
-  area.hidden = !map.radius
-  area.style.width = area.style.height = `${2 * mapSize(map, map.radius)}%`
-  place(area, map)
-  pin.hidden = Boolean(map.radius)
-  place(pin, map)
+  area.hidden = !hasSpot || !map.radius
+  pin.hidden = !hasSpot || Boolean(map.radius)
+  if (hasSpot) {
+    area.style.width = area.style.height = `${2 * mapSize(map, map.radius)}%`
+    place(area, map)
+    place(pin, map)
+  }
 
-  // Written out too, a phone can't hover the marker for its title
-  aetheryte.hidden = aetheryteName.hidden = !entry.aetheryte
-  if (entry.aetheryte) {
-    place(aetheryte, entry.aetheryte)
-    aetheryte.title = `${entry.aetheryte.name} aetheryte`
-    aetheryteName.textContent = `Nearest aetheryte: ${entry.aetheryte.name}`
+  // Written out too, a phone can't hover the marker for its title. The first is the page's own marker, any more are
+  // copies of it, gone again on the next open
+  const aetherytes = entry.aetherytes ?? (entry.aetheryte ? [entry.aetheryte] : [])
+  for (const extra of canvas.querySelectorAll(".map-aetheryte-extra")) extra.remove()
+  aetheryte.hidden = aetheryteName.hidden = !aetherytes.length
+  aetherytes.forEach((a, i) => {
+    const marker = i ? Object.assign(aetheryte.cloneNode(), { id: "", className: "map-aetheryte map-aetheryte-extra" }) : aetheryte
+    if (i) aetheryte.after(marker)
+    place(marker, a)
+    marker.title = `${a.name} aetheryte`
+  })
+  if (aetherytes.length) {
+    aetheryteName.textContent = entry.aetherytes
+      ? `Aetheryte${aetherytes.length > 1 ? "s" : ""}: ${aetherytes.map((a) => a.name).join(", ")}`
+      : `Nearest aetheryte: ${aetherytes[0].name}`
   }
 
   note.replaceChildren(...[entry.note ?? []].flat())
   note.hidden = !entry.note
   modal.showModal()
   // Once it's on the page, the frame has no size before
-  center(pixels(map), entry.aetheryte && pixels(entry.aetheryte))
+  if (hasSpot) center(pixels(map), entry.aetheryte && pixels(entry.aetheryte))
+  // A whole zone as far out as it goes, so the most of it shows
+  else center(aetherytes.length ? pixels(aetherytes[0]) : { x: MAP_PIXELS / 2, y: MAP_PIXELS / 2 }, null, 0)
 }
 
 for (const event of ["load", "error"]) image.addEventListener(event, () => frame.classList.remove("map-loading"))

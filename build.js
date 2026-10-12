@@ -48,7 +48,8 @@ const BLOCKED_BOTS = [
   "spbot" // OpenLinkProfiler
 ]
 
-const SKIPPED = ["js", "scss", "partials", "pages", "render"]
+// Relative to src/. images/zones is what render/og.js draws the weather zones' previews from
+const SKIPPED = ["js", "scss", "partials", "pages", "render", "images/zones"]
 
 const PAGES = path.join(SRC, "pages")
 
@@ -70,7 +71,7 @@ const jsBuildConfigs = [
   { entryPoints: ["src/js/404.js"], outfile: "dist/js/404.js" },
   // Code split: each expansion's data is its own chunk, and the code the pages share is in shared chunks
   {
-    entryPoints: ["src/js/gathering.js", "src/js/sightseeing.js", "src/js/fishing.js", "src/js/item.js", "src/js/vista.js", "src/js/fish.js", "src/js/ocean.js", "src/js/reset.js"],
+    entryPoints: ["src/js/gathering.js", "src/js/sightseeing.js", "src/js/fishing.js", "src/js/item.js", "src/js/vista.js", "src/js/fish.js", "src/js/weather.js", "src/js/weather-zone.js", "src/js/ocean.js", "src/js/reset.js"],
     outdir: "dist/js",
     format: "esm",
     splitting: true,
@@ -115,7 +116,10 @@ function log(type, message) {
  * @param {string} file Absolute path
  * @returns {boolean} Inside a folder that's compiled or only used inside pages, see SKIPPED
  */
-const isSkipped = (file) => SKIPPED.includes(path.relative(SRC, file).split(path.sep)[0])
+const isSkipped = (file) => {
+  const relative = path.relative(SRC, file).split(path.sep).join("/")
+  return SKIPPED.some(dir => relative === dir || relative.startsWith(`${dir}/`))
+}
 
 /**
  * A page to write. Most come one to a file in src/pages/, a [name].html file gives one per entry of its .data.js.

@@ -1,0 +1,560 @@
+@use "../mixins" as *;
+
+// The zone's name, then now and the periods after it. A phone puts the name on a line of its own over four of them
+.weather {
+  --weather-columns: minmax(9rem, 1.4fr) repeat(6, minmax(0, 1fr));
+  --row-edge: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+
+  @include mobile {
+    --weather-columns: repeat(4, minmax(0, 1fr));
+    --row-edge: .75rem;
+  }
+}
+
+// The weather page's timings, on the body so the navbar and the head share them
+body:has(.weather-head) {
+  // Even, so the navbar is seen reaching down the whole way
+  --reach-ease: cubic-bezier(.4, 0, .2, 1);
+  --reach-time: .35s;
+}
+
+// Every group shares the periods, so their times are said once, kept in view while scrolling. Stuck, the navbar's own
+// background reaches down behind it, so the two are one navbar with the periods in it
+.weather-head {
+  @include glass;
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: 1;
+  display: grid;
+  grid-template-columns: var(--weather-columns);
+  align-items: center;
+  padding: .5rem var(--row-edge);
+  // Its glass as a picture from the bottom up, so the navbar's edge can eat it away from the top as it reaches down
+  // over it, in step with it (see stuck). Unsticking, it grows back up from the bottom as the navbar draws up, and it
+  // stays over the navbar until then, or the navbar's background would cover it
+  background: linear-gradient(var(--blur-background), var(--blur-background)) bottom / 100% 100% no-repeat;
+  transition: background-size var(--reach-time) var(--reach-ease), backdrop-filter 0s, box-shadow 0s,
+    z-index 0s var(--reach-time);
+
+  // With a mouse the page scrolls in .page, whose padding already keeps clear of the navbar (see _global.scss), and a
+  // sticky top counts from inside it
+  @media (hover: hover) and (pointer: fine) {
+    top: 0;
+  }
+
+  // A line over it like the rows' between them, where the navbar ended, opening out from the middle as the navbar
+  // reaches down (see stuck)
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: var(--row-edge);
+    right: var(--row-edge);
+    height: 1px;
+    background-color: var(--divider);
+    transform: scaleX(0);
+    transition: transform var(--reach-time) var(--reach-ease);
+    pointer-events: none;
+  }
+
+  // Stuck, it's drawn over the navbar (z-index 100) and shows only its text, on the navbar's background, its glass
+  // eaten away from the top by the navbar reaching down
+  &.weather-head-stuck {
+    z-index: 101;
+    background-size: 100% 0%;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    transition: background-size var(--reach-time) var(--reach-ease), backdrop-filter 0s var(--reach-time),
+      box-shadow 0s var(--reach-time), z-index 0s;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+// Behind the navbar again while its menus are open, which would otherwise open under it
+body:has(.navbar.opened, .navbar-more.opened) .weather-head {
+  z-index: 1;
+}
+
+@media (hover: hover) and (width > $navbar-fold) {
+  body:has(.navbar-more:hover) .weather-head {
+    z-index: 1;
+  }
+}
+
+// How far down the navbar's background reaches, the stuck head's height, which js/weather.js keeps in --navbar-reach
+body:has(.weather-head) .navbar::before {
+  bottom: calc(-1 * var(--navbar-reach, 0px));
+  transition: bottom var(--reach-time) var(--reach-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .weather-head,
+  .weather-head::after,
+  body:has(.weather-head) .navbar::before {
+    transition: none;
+  }
+}
+
+// Where the head sits when it isn't stuck, js/weather.js watches it scroll under the navbar
+.weather-head-sentinel {
+  position: absolute;
+  top: 0;
+  height: 1px;
+}
+
+.weather-head-zone {
+  font-size: .8rem;
+  color: var(--font-tertiary);
+}
+
+.weather-period {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+
+  strong,
+  time {
+    font-size: .85rem;
+    font-weight: 600;
+  }
+
+  strong {
+    color: var(--accent);
+  }
+}
+
+.weather-period-sub {
+  font-size: .7rem;
+  color: var(--font-tertiary);
+}
+
+.weather-group {
+  filter: var(--group-shadow);
+
+  &[hidden],
+  // The build's first look, until the script picks the region
+  .js .weather:not(.weather-ready) &:not(.weather-group-first) {
+    display: none;
+  }
+}
+
+.weather-group-title {
+  margin: 0;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.weather-zones {
+  padding: 0 var(--row-edge);
+  border-radius: .5rem;
+  background-color: var(--group-background);
+}
+
+.weather-row {
+  display: grid;
+  grid-template-columns: var(--weather-columns);
+  align-items: center;
+  padding: .625rem 0;
+
+  &[hidden] {
+    display: none;
+  }
+
+  // The rows a search leaves are lined up without a line over the first
+  &:not([hidden]) ~ & {
+    border-top: 1px solid var(--divider);
+  }
+}
+
+.weather-zone {
+  min-width: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.weather-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .125rem;
+  // As tall before the script fills it as after, so nothing jumps
+  min-height: 3.25rem;
+  font-size: .75rem;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--font-secondary);
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+// Now, the column the rest is ahead of
+.weather-zone + .weather-cell {
+  color: var(--font-primary);
+}
+
+@include mobile {
+  .weather-head-zone {
+    display: none;
+  }
+
+  .weather-zone {
+    grid-column: 1 / -1;
+    margin-bottom: .375rem;
+  }
+
+  .weather-row > :nth-child(n + 6),
+  .weather-head > :nth-child(n + 6) {
+    display: none;
+  }
+}
+
+// The zone's name links to its page, underlined like the lists' links
+.weather-zone {
+  justify-self: start;
+  color: var(--font-primary);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+  transition: color .2s, text-decoration-color .2s;
+
+  @include hover {
+    color: var(--accent);
+    text-decoration-color: currentColor;
+  }
+}
+
+// A zone's own page: what it is now, its chances, and a finder for the weather to come
+.weather-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.weather-detail-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: .75rem 1rem;
+
+  .detail-title {
+    margin: 0;
+  }
+}
+
+.weather-icon {
+  flex-shrink: 0;
+}
+
+// The weather now and its chances, the map next to them as wide as an item page's
+.weather-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(20rem, 40%);
+  grid-template-areas:
+    "now map"
+    "chances map";
+  align-items: start;
+  gap: 1rem;
+
+  > .weather-now-card {
+    grid-area: now;
+  }
+
+  > .weather-chances-card {
+    grid-area: chances;
+  }
+
+  // Only as tall as what's next to it, so the finder follows right under them. Sized by the grid, not the map in it
+  > .weather-map {
+    grid-area: map;
+    align-self: stretch;
+    aspect-ratio: auto;
+    container-type: size;
+  }
+
+  // One column, the map after the finder, the weather is what a phone comes for, square again
+  @include mobile {
+    display: contents;
+
+    > .weather-map {
+      order: 1;
+      aspect-ratio: 1;
+      container-type: normal;
+    }
+  }
+}
+
+// The whole square map with its aetherytes, slid up or down in the shorter frame to put the main aetheryte in the
+// middle, as far as the map's edges let it
+.weather-map-canvas {
+  position: absolute;
+  left: 0;
+  top: clamp(100cqh - 100cqw, 50cqh - var(--focus) * 100cqw, 0px);
+  width: 100%;
+  aspect-ratio: 1;
+
+  @include mobile {
+    top: 0;
+  }
+}
+
+.weather-now-card {
+  @include glass;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  padding: 1rem 1.25rem;
+
+  > * + * {
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--divider);
+  }
+
+  > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .25rem;
+    min-width: 0;
+  }
+
+  > :first-child {
+    padding-right: 1.25rem;
+  }
+
+  .detail-state strong {
+    color: var(--font-primary);
+  }
+}
+
+.weather-now-name {
+  font-size: 2rem;
+  line-height: 1.1;
+
+  @include mobile {
+    font-size: 1.35rem;
+  }
+
+  // The name wraps under a long one, its icon stays next to it
+  .weather-label {
+    gap: .625rem;
+    white-space: normal;
+  }
+
+  .weather-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    @include mobile {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.weather-next-at {
+  font-size: .8rem;
+  color: var(--font-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.weather-chances-card {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.weather-chances {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    @include glass;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .375rem .75rem .375rem .5rem;
+    border-radius: .75rem;
+    font-size: .85rem;
+    color: var(--font-secondary);
+  }
+
+  strong {
+    color: var(--font-primary);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.weather-finder {
+  @include glass;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  padding: 1rem;
+}
+
+// Not .filters, which folds away behind a toggle on a phone, there are only three here
+.weather-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.25rem;
+  font-size: .85rem;
+  color: var(--font-tertiary);
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+}
+
+.weather-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  white-space: nowrap;
+}
+
+.weather-periods {
+  th,
+  td {
+    @include mobile {
+      padding-inline: .375rem;
+    }
+  }
+
+  td {
+    @include row-line;
+    vertical-align: middle;
+  }
+
+  tbody tr:first-child td {
+    background-image: none;
+  }
+
+  // The period it is now, like the lists' open groups
+  .weather-current td {
+    background-color: var(--group-open-background);
+    color: var(--accent);
+
+    &:first-child {
+      border-radius: .5rem 0 0 .5rem;
+    }
+
+    &:last-child {
+      border-radius: 0 .5rem .5rem 0;
+    }
+  }
+}
+
+.weather-period-weather {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem .5rem;
+  font-weight: 600;
+  color: var(--font-primary);
+}
+
+// The day a period is on when it isn't today, next to its time, under it on a phone
+.weather-day {
+  margin-left: .375rem;
+  font-size: .75rem;
+  color: var(--font-tertiary);
+
+  @include mobile {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+.weather-after {
+  font-size: .75rem;
+  font-weight: 400;
+  color: var(--font-tertiary);
+}
+
+// The fish and vistas that wait on each of the zone's weathers, under the map on a phone
+.weather-needs {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+
+  @include mobile {
+    order: 2;
+  }
+
+  // A weather's label by the first line of its fish and vistas, when they wrap onto more
+  .detail-facts {
+    align-items: start;
+    row-gap: .75rem;
+  }
+
+  dt {
+    color: var(--font-secondary);
+  }
+
+  // [Fog] -> [Clear Skies]: fish, the weathers before, the arrows and the weathers after each in a column of their own.
+  // The <dt> lets its three parts into the grid
+  .weather-changes {
+    grid-template-columns: auto auto auto minmax(0, 1fr);
+
+    dt {
+      display: contents;
+    }
+
+    // A phone keeps the change on one line and puts its fish on the line under it
+    @include mobile {
+      grid-template-columns: auto auto minmax(0, 1fr);
+      row-gap: .25rem;
+
+      dd {
+        grid-column: 1 / -1;
+
+        &:not(:last-child) {
+          margin-bottom: .5rem;
+        }
+      }
+    }
+  }
+
+  // Any of them will do
+  .weather-choices {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // The pager's chevron, flipped to point on to the weather after
+  .weather-arrow {
+    width: 1rem;
+    height: 1.5rem;
+    background-color: var(--font-tertiary);
+    mask: url("/images/ui/chevron.svg") center / 1rem no-repeat;
+    transform: scaleX(-1);
+  }
+
+  // A line of its own as tall as the links' line, inline its icon sat on the text's baseline and pushed it up
+  .weather-label {
+    display: flex;
+    min-height: 1.5rem;
+  }
+}

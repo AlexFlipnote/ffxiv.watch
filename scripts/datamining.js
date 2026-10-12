@@ -84,6 +84,13 @@ const MAP_SIZE = 1024
 
 const ICON_SOURCE = "https://v2.xivapi.com/api/asset"
 const ICONS = path.join(ROOT, "src/images/game")
+// A zone's loading screen and its name as the game writes it on arrival, what its link preview is drawn from
+const ZONES = path.join(ROOT, "src/images/zones")
+// A link preview, and the most of it a zone's name takes up, see src/render/og.js
+const ZONE_WIDTH = 1024
+const ZONE_HEIGHT = 536
+const NAME_WIDTH = 880
+const NAME_HEIGHT = 120
 
 /**
  * @param {string} name
@@ -134,14 +141,14 @@ export function mapPosition(map, x, z, radius = 0) {
 const AETHERYTE_MARKER = "3"
 
 /**
- * Builds a lookup for the aetheryte closest to a spot, on the same map. Aethernet shards don't count, only the ones
- * you can teleport to. Their Level rows aren't in the sheets, so the position comes from the map's marker for it,
- * placed in pixels on the 2048px map texture.
+ * The aetherytes on each map, in the sheet's order, which starts with the zone's main one. Aethernet shards don't
+ * count, only the ones you can teleport to. Their Level rows aren't in the sheets, so the position comes from the map's
+ * marker for it, placed in pixels on the 2048px map texture.
  * @param {{ aetherytes: Record<string, string>[], markers: Record<string, string>[], map: object, place: object }} sheets
  * Aetheryte and MapMarker rows, and Map and PlaceName by id
- * @returns {(mapRowId: string, x: number, y: number) => { name: string, x: number, y: number } | null} x/y are map coordinates
+ * @returns {Map<string, { name: string, x: number, y: number }[]>} Map row id -> its aetherytes, x/y are map coordinates
  */
-export function nearestAetheryte({ aetherytes, markers, map, place }) {
+export function aetherytesByMap({ aetherytes, markers, map, place }) {
   // A MapMarker row id is "<Map.MapMarkerRange>.<n>"
   const marker = new Map(markers
     .filter((mm) => mm.DataType === AETHERYTE_MARKER)
@@ -157,7 +164,16 @@ export function nearestAetheryte({ aetherytes, markers, map, place }) {
     const coord = (px) => round((41 / (+m.SizeFactor / 100)) * (+px / 2048) + 1)
     byMap.set(a.Map, [...byMap.get(a.Map) ?? [], { name, x: coord(mm.X), y: coord(mm.Y) }])
   }
+  return byMap
+}
 
+/**
+ * Builds a lookup for the aetheryte closest to a spot, on the same map, see aetherytesByMap.
+ * @param {{ aetherytes: Record<string, string>[], markers: Record<string, string>[], map: object, place: object }} sheets
+ * @returns {(mapRowId: string, x: number, y: number) => { name: string, x: number, y: number } | null} x/y are map coordinates
+ */
+export function nearestAetheryte(sheets) {
+  const byMap = aetherytesByMap(sheets)
   return (mapRowId, x, y) => {
     const distance = (a) => Math.hypot(a.x - x, a.y - y)
     return byMap.get(mapRowId)?.reduce((best, a) => distance(a) < distance(best) ? a : best) ?? null
@@ -255,6 +271,64 @@ export async function saveIcons(ids) {
     }
   }))
   console.log(`Icons: ${saved} saved, ${new Set(ids).size - saved} already there`)
+}
+
+/**
+ * @param {string} assetPath Like "ui/loadingimage/-nowloading_base12_hr1.tex"
+ * @returns {Promise<import("sharp").Sharp>}
+ */
+async function fetchAsset(assetPath) {
+  const res = await fetch(`${ICON_SOURCE}?path=${assetPath}&format=png`)
+  if (!res.ok) throw new Error(`${assetPath}: HTTP ${res.status}`)
+  return sharp(Buffer.from(await res.arrayBuffer()))
+}
+
+/**
+ * Saves the zones' loading screens to src/images/zones/loading/<file>.webp, cut down from 4K to a link preview, and
+ * their names to src/images/zones/names/<icon>.webp, trimmed to the lettering. Ones already there are kept.
+ * @param {{ loading: string, name: number }[]} art LoadingImage.FileName like "-nowloading_base12", and
+ * TerritoryType.PlaceNameIcon, repeats are fine
+ */
+export async function saveZoneArt(art) {
+  for (const folder of ["loading", "names"]) fs.mkdirSync(path.join(ZONES, folder), { recursive: true })
+  const jobs = [
+    ...new Set(art.map((a) => a.loading)).values().map((file) => ({
+      file: path.join(ZONES, "loading", `${file.replace(/^-/, "")}.webp`),
+      save: async (out) => {
+        const image = await fetchAsset(`ui/loadingimage/${file}_hr1.tex`)
+        const { width, height } = await image.metadata()
+        // The paintings fade into black bars at the top and bottom
+        await image.extract({ left: 0, top: Math.round(height * .05), width, height: Math.round(height * .87) })
+          .resize(ZONE_WIDTH, ZONE_HEIGHT, { fit: "cover" })
+          .webp({ quality: 75, effort: 6 })
+          .toFile(out)
+      }
+    })),
+    ...new Set(art.map((a) => a.name)).values().map((id) => {
+      const padded = String(id).padStart(6, "0")
+      return {
+        file: path.join(ZONES, "names", `${id}.webp`),
+        // Text, so each language has its own, under en/
+        save: async (out) => {
+          const trimmed = await (await fetchAsset(`ui/icon/${padded.slice(0, 3)}000/en/${padded}_hr1.tex`)).trim().toBuffer()
+          await sharp(trimmed)
+            .resize(NAME_WIDTH, NAME_HEIGHT, { fit: "inside", withoutEnlargement: true })
+            .webp({ quality: 60, alphaQuality: 60, effort: 6 })
+            .toFile(out)
+        }
+      }
+    })
+  ]
+  const queue = jobs.filter((job) => !fs.existsSync(job.file))
+  const saved = queue.length
+
+  await Promise.all(Array.from({ length: 4 }, async () => {
+    while (queue.length) {
+      const job = queue.pop()
+      await job.save(job.file)
+    }
+  }))
+  console.log(`Zone art: ${saved} saved, ${jobs.length - saved} already there`)
 }
 
 /**

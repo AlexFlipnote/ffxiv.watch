@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo title="{{ title }}" description="{{ description }}" image="{{ image }}" image-alt="{{ imageAlt }}" image-size="{{ imageSize }}" section="Weather" name="{{ name }}"/>
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="weather-zone.js" module/>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="detail">
+        <a class="backlink" href="/weather/">Weather</a>
+        {{{ content }}}
+      </main>
+      <x-html str="partials/footer.html"/>
+    </div>
+
+    <x-html str="partials/settings.html"/>
+
+    <x-html str="partials/map-modal.html"/>
+  </body>
+</html>

@@ -1,16 +1,16 @@
-import ZONES from "../data/weather.json"
+import ZONES from "../data/weather.json" with { type: "json" }
 import { ET_DAY_EARTH_MS, ET_MINUTE_EARTH_MS } from "./eorzea.js"
 
 const HORIZON = 30 * 24 * 60 * 60 * 1000
 
 /** One weather period (8 ET hours) in Earth ms. */
-const WEATHER_PERIOD = 8 * 175 * 1000
+export const WEATHER_PERIOD = 8 * 175 * 1000
 
 /**
  * @param {number} ms
  * @returns {number} Start of the weather period containing `ms`
  */
-const periodStart = (ms) => Math.floor(ms / WEATHER_PERIOD) * WEATHER_PERIOD
+export const periodStart = (ms) => Math.floor(ms / WEATHER_PERIOD) * WEATHER_PERIOD
 
 /**
  * The game's roll for a weather period, in unsigned 32-bit math like the game.
@@ -34,7 +34,7 @@ function roll(ms) {
  * @param {number} ms
  * @returns {string} The weather at `ms`
  */
-function weatherAt(zone, ms) {
+export function weatherAt(zone, ms) {
   let chance = roll(periodStart(ms))
   for (const [name, rate] of zone.weather) {
     if (chance < rate) return name

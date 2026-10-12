@@ -1,0 +1,322 @@
+{
+  "Limsa Lominsa Upper Decks": {
+    "loading": "nowloading_base01",
+    "name": 123002
+  },
+  "Limsa Lominsa Lower Decks": {
+    "loading": "nowloading_base01",
+    "name": 123003
+  },
+  "Ul'dah - Steps of Nald": {
+    "loading": "nowloading_base02",
+    "name": 123102
+  },
+  "Ul'dah - Steps of Thal": {
+    "loading": "nowloading_base02",
+    "name": 123103
+  },
+  "New Gridania": {
+    "loading": "nowloading_base",
+    "name": 123202
+  },
+  "Old Gridania": {
+    "loading": "nowloading_base",
+    "name": 123203
+  },
+  "Middle La Noscea": {
+    "loading": "nowloading_base01",
+    "name": 123004
+  },
+  "Lower La Noscea": {
+    "loading": "nowloading_base01",
+    "name": 123005
+  },
+  "Mist": {
+    "loading": "nowloading_base01",
+    "name": 123010
+  },
+  "Eastern La Noscea": {
+    "loading": "nowloading_base01",
+    "name": 123006
+  },
+  "Western La Noscea": {
+    "loading": "nowloading_base01",
+    "name": 123007
+  },
+  "Upper La Noscea": {
+    "loading": "nowloading_base01",
+    "name": 123008
+  },
+  "Western Thanalan": {
+    "loading": "nowloading_base02",
+    "name": 123104
+  },
+  "Central Thanalan": {
+    "loading": "nowloading_base02",
+    "name": 123105
+  },
+  "Eastern Thanalan": {
+    "loading": "nowloading_base02",
+    "name": 123106
+  },
+  "Southern Thanalan": {
+    "loading": "nowloading_base02",
+    "name": 123107
+  },
+  "Northern Thanalan": {
+    "loading": "nowloading_base02",
+    "name": 123108
+  },
+  "Central Shroud": {
+    "loading": "nowloading_base",
+    "name": 123204
+  },
+  "East Shroud": {
+    "loading": "nowloading_base",
+    "name": 123205
+  },
+  "South Shroud": {
+    "loading": "nowloading_base",
+    "name": 123206
+  },
+  "North Shroud": {
+    "loading": "nowloading_base",
+    "name": 123207
+  },
+  "Coerthas Central Highlands": {
+    "loading": "nowloading_base03",
+    "name": 123301
+  },
+  "Mor Dhona": {
+    "loading": "nowloading_base04",
+    "name": 123401
+  },
+  "Outer La Noscea": {
+    "loading": "nowloading_base01",
+    "name": 123009
+  },
+  "Wolves' Den Pier": {
+    "loading": "nowloading_base01",
+    "name": 123011
+  },
+  "The Lavender Beds": {
+    "loading": "nowloading_base",
+    "name": 123208
+  },
+  "The Goblet": {
+    "loading": "nowloading_base02",
+    "name": 123109
+  },
+  "Coerthas Western Highlands": {
+    "loading": "nowloading_base03",
+    "name": 123302
+  },
+  "The Dravanian Forelands": {
+    "loading": "nowloading_base07",
+    "name": 123601
+  },
+  "The Dravanian Hinterlands": {
+    "loading": "nowloading_base07",
+    "name": 123602
+  },
+  "The Churning Mists": {
+    "loading": "nowloading_base07",
+    "name": 123603
+  },
+  "The Sea of Clouds": {
+    "loading": "nowloading_base06",
+    "name": 123701
+  },
+  "Azys Lla": {
+    "loading": "nowloading_base06",
+    "name": 123702
+  },
+  "Foundation": {
+    "loading": "nowloading_base03",
+    "name": 123304
+  },
+  "The Pillars": {
+    "loading": "nowloading_base03",
+    "name": 123305
+  },
+  "Idyllshire": {
+    "loading": "nowloading_base07",
+    "name": 123604
+  },
+  "The Fringes": {
+    "loading": "nowloading_base08",
+    "name": 123711
+  },
+  "The Ruby Sea": {
+    "loading": "nowloading_base09",
+    "name": 123721
+  },
+  "Yanxia": {
+    "loading": "nowloading_base09",
+    "name": 123722
+  },
+  "The Peaks": {
+    "loading": "nowloading_base08",
+    "name": 123712
+  },
+  "The Lochs": {
+    "loading": "nowloading_base11",
+    "name": 123713
+  },
+  "The Azim Steppe": {
+    "loading": "nowloading_base09",
+    "name": 123723
+  },
+  "Kugane": {
+    "loading": "nowloading_base10",
+    "name": 123731
+  },
+  "Rhalgr's Reach": {
+    "loading": "nowloading_base08",
+    "name": 123714
+  },
+  "Shirogane": {
+    "loading": "nowloading_base10",
+    "name": 123733
+  },
+  "Eureka Anemos": {
+    "loading": "nowloading_base05",
+    "name": 124748
+  },
+  "The Doman Enclave": {
+    "loading": "nowloading_base09",
+    "name": 123724
+  },
+  "Eureka Pagos": {
+    "loading": "nowloading_base05",
+    "name": 124752
+  },
+  "Eureka Pyros": {
+    "loading": "nowloading_base05",
+    "name": 124753
+  },
+  "Lakeland": {
+    "loading": "nowloading_base12",
+    "name": 123741
+  },
+  "Kholusia": {
+    "loading": "nowloading_base13",
+    "name": 123744
+  },
+  "Amh Araeng": {
+    "loading": "nowloading_base14",
+    "name": 123742
+  },
+  "Il Mheg": {
+    "loading": "nowloading_base15",
+    "name": 123743
+  },
+  "The Rak'tika Greatwood": {
+    "loading": "nowloading_base16",
+    "name": 123745
+  },
+  "The Tempest": {
+    "loading": "nowloading_base17",
+    "name": 123746
+  },
+  "The Crystarium": {
+    "loading": "nowloading_base18",
+    "name": 123747
+  },
+  "Eulmore": {
+    "loading": "nowloading_base19",
+    "name": 123748
+  },
+  "Eureka Hydatos": {
+    "loading": "nowloading_base05",
+    "name": 124756
+  },
+  "Bozjan Southern Front": {
+    "loading": "nowloading_base05",
+    "name": 124763
+  },
+  "Labyrinthos": {
+    "loading": "nowloading_base24",
+    "name": 123752
+  },
+  "Thavnair": {
+    "loading": "nowloading_base22",
+    "name": 123753
+  },
+  "Garlemald": {
+    "loading": "nowloading_base20",
+    "name": 123754
+  },
+  "Mare Lamentorum": {
+    "loading": "nowloading_base25",
+    "name": 123755
+  },
+  "Ultima Thule": {
+    "loading": "nowloading_base27",
+    "name": 123756
+  },
+  "Elpis": {
+    "loading": "nowloading_base26",
+    "name": 123757
+  },
+  "Old Sharlayan": {
+    "loading": "nowloading_base21",
+    "name": 123758
+  },
+  "Radz-at-Han": {
+    "loading": "nowloading_base23",
+    "name": 123759
+  },
+  "Zadnor": {
+    "loading": "nowloading_base05",
+    "name": 124767
+  },
+  "Empyreum": {
+    "loading": "nowloading_base03",
+    "name": 123761
+  },
+  "Island Sanctuary": {
+    "loading": "nowloading_base05",
+    "name": 124053
+  },
+  "Tuliyollal": {
+    "loading": "nowloading_base34",
+    "name": 123773
+  },
+  "Solution Nine": {
+    "loading": "nowloading_base35",
+    "name": 123774
+  },
+  "Urqopacha": {
+    "loading": "nowloading_base28",
+    "name": 123767
+  },
+  "Kozama'uka": {
+    "loading": "nowloading_base29",
+    "name": 123768
+  },
+  "Yak T'el": {
+    "loading": "nowloading_base30",
+    "name": 123769
+  },
+  "Shaaloani": {
+    "loading": "nowloading_base31",
+    "name": 123770
+  },
+  "Heritage Found": {
+    "loading": "nowloading_base32",
+    "name": 123771
+  },
+  "Living Memory": {
+    "loading": "nowloading_base33",
+    "name": 123772
+  },
+  "South Horn": {
+    "loading": "nowloading_base36",
+    "name": 124090
+  },
+  "North Horn": {
+    "loading": "nowloading_base36",
+    "name": 122105
+  }
+}

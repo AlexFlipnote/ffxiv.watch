@@ -85,6 +85,14 @@ export const readData = (file) => JSON.parse(fs.readFileSync(path.join(DATA, fil
  */
 export const readExpansions = (name) => readData(`${name}.json`).map((e) => ({ ...e, entries: readData(`${name}/${e.file}.json`) }))
 
+const WEATHER_ZONES = new Set(readData("weather.json").map((z) => z.name))
+
+/**
+ * @param {string} zone
+ * @returns {string | null} "/weather/middle-la-noscea/", null for a zone without a forecast, like The Diadem
+ */
+export const weatherUrl = (zone) => WEATHER_ZONES.has(zone) ? `/weather/${slug(zone)}/` : null
+
 /**
  * The expansion filter's options, in the page so the select has its width before the script runs: filled in later,
  * a phone wraps it onto a line of its own and the page under it jumps.
@@ -308,7 +316,7 @@ export const facts = (rows) => html`
  * @returns {[string, any][]}
  */
 export const locationFacts = (entry) => [
-  ["Zone", entry.zone],
+  ["Zone", weatherUrl(entry.zone) ? html`<a href="${weatherUrl(entry.zone)}">${entry.zone}</a>` : entry.zone],
   ["Spot", entry.spot],
   ["Coordinates", entry.map && coordinates(entry.map)],
   ["Aetheryte", entry.aetheryte?.name]

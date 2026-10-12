@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="FFXIV Weather Forecast for Every Zone"
+      description="FFXIV weather forecast for every zone, town, housing district and field operation: the weather now and the next periods, in your local time."
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="weather.js" module/>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="listing">
+        <header class="listing-intro">
+          <h1 class="listing-title">Weather forecast</h1>
+          <p class="listing-lead">The weather in every zone of FFXIV, now and for the periods after it, in your local time.</p>
+        </header>
+        <div class="filters">
+          <input class="input search" id="search" type="search" enterkeyhint="search" placeholder="Zone or weather" aria-label="Search">
+          <label>Region <select class="select" id="filter-region">{{{ regionOptions }}}</select></label>
+        </div>
+        <div class="weather" id="weather">
+          {{{ head }}}
+          {{{ groups }}}
+        </div>
+        <p class="table-empty" id="weather-empty" hidden></p>
+      </main>
+      <x-html str="partials/footer.html"/>
+    </div>
+
+    <x-html str="partials/settings.html"/>
+  </body>
+</html>
