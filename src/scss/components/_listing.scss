@@ -428,7 +428,8 @@ $tab-flare: .5rem;
   border-radius: .375rem;
   background: var(--chip-background);
   color: var(--font-secondary);
-  font-size: .7rem;
+  // 12px, the smallest text phones read without zooming
+  font-size: .75rem;
   white-space: nowrap;
 }
 
