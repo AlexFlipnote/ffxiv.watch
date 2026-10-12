@@ -127,7 +127,8 @@
     "hookset": "Precision",
     "tug": "light",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36400,
@@ -609,7 +610,8 @@
     "tug": "medium",
     "folklore": "Northern Fishing Folklore",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 37846,
@@ -978,7 +980,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36425,
@@ -1672,7 +1675,8 @@
     "tug": "medium",
     "folklore": "Northern Fishing Folklore",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36441,
@@ -1705,7 +1709,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36442,
@@ -1834,7 +1839,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36447,
@@ -2106,7 +2112,8 @@
     "tug": "heavy",
     "folklore": "Northern Fishing Folklore",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36522,
@@ -2825,7 +2832,8 @@
     ],
     "gig": "Small",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36536,
@@ -3075,7 +3083,8 @@
     ],
     "gig": "Large",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36547,
@@ -3867,7 +3876,8 @@
     "tug": "heavy",
     "folklore": "Celestial Fishing Folklore",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36473,
@@ -3900,7 +3910,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36475,
@@ -4558,7 +4569,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36506,
@@ -5060,7 +5072,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36516,
@@ -5242,7 +5255,7 @@
   },
   {
     "id": 36521,
-    "name": "Phallaina ",
+    "name": "Phallaina",
     "method": "Fishing",
     "level": 90,
     "zone": "Ultima Thule",
@@ -5287,7 +5300,8 @@
     "tug": "heavy",
     "folklore": "Celestial Fishing Folklore",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 37852,
@@ -5474,7 +5488,7 @@
     "predators": [
       {
         "id": 36521,
-        "name": "Phallaina ",
+        "name": "Phallaina",
         "count": 1
       },
       {
@@ -5701,7 +5715,8 @@
     "tug": "medium",
     "folklore": "Ancient Fishing Folklore",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 37853,
@@ -6591,7 +6606,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36418,

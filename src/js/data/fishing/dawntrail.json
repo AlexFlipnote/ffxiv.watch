@@ -1040,7 +1040,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 43683,
@@ -1194,7 +1195,8 @@
     "lure": "Modest",
     "folklore": "Yok Turali Fishing Folklore",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 43686,
@@ -1595,7 +1597,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 43904,
@@ -3040,7 +3043,8 @@
     "tug": "medium",
     "folklore": "Yok Turali Fishing Folklore",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 43714,
@@ -3360,7 +3364,8 @@
     },
     "anyTime": true,
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 43822,
@@ -3383,7 +3388,8 @@
     },
     "anyTime": true,
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 52001,
@@ -3821,7 +3827,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 43723,
@@ -4376,7 +4383,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 43738,
@@ -4896,7 +4904,7 @@
   },
   {
     "id": 52004,
-    "name": "Bitterbark Caiman ",
+    "name": "Bitterbark Caiman",
     "method": "Fishing",
     "level": 94,
     "zone": "Yak T'el",
@@ -5175,7 +5183,8 @@
     "hookset": "Precision",
     "tug": "light",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 43742,
@@ -5473,7 +5482,8 @@
     "tug": "medium",
     "folklore": "Yok Turali Fishing Folklore",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 44342,
@@ -5816,7 +5826,8 @@
     },
     "anyTime": true,
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 43842,
@@ -5839,7 +5850,8 @@
     },
     "anyTime": true,
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 43750,
@@ -6133,7 +6145,8 @@
     "tug": "medium",
     "lure": "Ambitious",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 44345,
@@ -6345,7 +6358,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 43756,
@@ -6412,7 +6426,8 @@
     "lure": "Modest",
     "folklore": "Xak Turali Fishing Folklore",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 43763,
@@ -7300,7 +7315,8 @@
     "tug": "medium",
     "lure": "Ambitious",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 46188,
@@ -7844,7 +7860,8 @@
     "tug": "medium",
     "folklore": "Alexandrian Fishing Folklore",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 46196,
@@ -8147,7 +8164,8 @@
     "lure": "Ambitious",
     "folklore": "Alexandrian Fishing Folklore",
     "collectable": true,
-    "patch": 7
+    "patch": 7,
+    "scrip": "Orange Gatherers' Scrip"
   },
   {
     "id": 43796,

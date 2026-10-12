@@ -33,12 +33,14 @@
       {
         "id": 32980,
         "name": "Rarefied Titancopper Ore",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32982,
         "name": "Rarefied Raw Petalite",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -230,7 +232,8 @@
       {
         "id": 32990,
         "name": "Rarefied Bluespirit Ore",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -258,7 +261,8 @@
       {
         "id": 33012,
         "name": "Rarefied Bright Flax",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -639,6 +643,12 @@
         "name": "Connoisseur's Soiled Femur",
         "stars": 3,
         "collectable": true
+      },
+      {
+        "id": 39806,
+        "name": "Custom Ice Crystal",
+        "stars": 3,
+        "hidden": true
       }
     ]
   },
@@ -668,6 +678,12 @@
         "name": "Connoisseur's Levin Mint",
         "stars": 2,
         "collectable": true
+      },
+      {
+        "id": 38795,
+        "name": "Adaptive Lightning Crystal",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -914,7 +930,8 @@
       {
         "id": 33003,
         "name": "Rarefied White Oak Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1249,6 +1266,12 @@
         "name": "Connoisseur's Wattle Petribark",
         "stars": 1,
         "collectable": true
+      },
+      {
+        "id": 38789,
+        "name": "Splendorous Earth Shard",
+        "stars": 1,
+        "hidden": true
       }
     ]
   },
@@ -1278,6 +1301,12 @@
         "name": "Connoisseur's Aurum Regis Ore",
         "stars": 3,
         "collectable": true
+      },
+      {
+        "id": 39812,
+        "name": "Brilliant Lightning Cluster",
+        "stars": 3,
+        "hidden": true
       }
     ]
   },
@@ -1696,12 +1725,14 @@
       {
         "id": 33005,
         "name": "Rarefied Sandteak Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 33007,
         "name": "Rarefied Amber Cloves",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1729,7 +1760,8 @@
       {
         "id": 33013,
         "name": "Rarefied Night Pepper",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1831,6 +1863,12 @@
         "name": "Connoisseur's Red Malachite",
         "stars": 2,
         "collectable": true
+      },
+      {
+        "id": 38797,
+        "name": "Adaptive Fire Crystal",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -1860,6 +1898,12 @@
         "name": "Connoisseur's Cloves",
         "stars": 3,
         "collectable": true
+      },
+      {
+        "id": 39814,
+        "name": "Brilliant Earth Cluster",
+        "stars": 3,
+        "hidden": true
       }
     ]
   },
@@ -2187,12 +2231,14 @@
       {
         "id": 33002,
         "name": "Rarefied Pixie Apple",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 33004,
         "name": "Rarefied Miracle Apple Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -2413,6 +2459,12 @@
         "name": "Connoisseur's Prismstone",
         "stars": 1,
         "collectable": true
+      },
+      {
+        "id": 38791,
+        "name": "Splendorous Water Shard",
+        "stars": 1,
+        "hidden": true
       }
     ]
   },
@@ -2442,6 +2494,12 @@
         "name": "Connoisseur's Miracle Apple",
         "stars": 3,
         "collectable": true
+      },
+      {
+        "id": 39808,
+        "name": "Custom Wind Crystal",
+        "stars": 3,
+        "hidden": true
       }
     ]
   },
@@ -2471,6 +2529,12 @@
         "name": "Connoisseur's Asphaltum",
         "stars": 4,
         "collectable": true
+      },
+      {
+        "id": 41287,
+        "name": "Inspirational Wind Cluster",
+        "stars": 4,
+        "hidden": true
       }
     ]
   },
@@ -2508,7 +2572,8 @@
       {
         "id": 32981,
         "name": "Rarefied Raw Lazurite",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -3017,7 +3082,8 @@
       {
         "id": 32991,
         "name": "Rarefied Manasilver Sand",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -3047,6 +3113,12 @@
         "name": "Connoisseur's Gianthive Chip",
         "stars": 4,
         "collectable": true
+      },
+      {
+        "id": 41289,
+        "name": "Inspirational Fire Cluster",
+        "stars": 4,
+        "hidden": true
       }
     ]
   },
@@ -3084,12 +3156,14 @@
       {
         "id": 32983,
         "name": "Rarefied Sea Salt",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32985,
         "name": "Rarefied Raw Onyx",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -3269,13 +3343,15 @@
       {
         "id": 32984,
         "name": "Rarefied Reef Rock",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32986,
         "name": "Rarefied Tungsten Ore",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -3313,13 +3389,15 @@
       {
         "id": 33006,
         "name": "Rarefied Kelp",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 33008,
         "name": "Rarefied Coral",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -3411,6 +3489,12 @@
         "name": "Connoisseur's Raw Onyx",
         "stars": 4,
         "collectable": true
+      },
+      {
+        "id": 41291,
+        "name": "Nightforged Ice Cluster",
+        "stars": 4,
+        "hidden": true
       }
     ]
   },
@@ -3440,6 +3524,12 @@
         "name": "Connoisseur's Glimshroom",
         "stars": 4,
         "collectable": true
+      },
+      {
+        "id": 41293,
+        "name": "Nightforged Water Cluster",
+        "stars": 4,
+        "hidden": true
       }
     ]
   }

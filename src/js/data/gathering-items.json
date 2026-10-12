@@ -11534,11 +11534,219 @@
     "hq": false,
     "recipes": []
   },
+  "7715": {
+    "description": "Paprika seeds suitable for garden cultivation.",
+    "icon": 27455,
+    "category": "Gardening",
+    "level": 11,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7716": {
+    "description": "A wild onion set suitable for garden cultivation.",
+    "icon": 27455,
+    "category": "Gardening",
+    "level": 12,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7717": {
+    "description": "Coerthan carrot seeds suitable for garden cultivation.",
+    "icon": 27455,
+    "category": "Gardening",
+    "level": 13,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7718": {
+    "description": "La Noscean lettuce seeds suitable for garden cultivation.",
+    "icon": 27455,
+    "category": "Gardening",
+    "level": 13,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Alchemist",
+        "level": 30,
+        "item": "Botanist's Garden",
+        "amount": 1
+      }
+    ]
+  },
+  "7719": {
+    "description": "Olive seeds suitable for garden cultivation.",
+    "icon": 27455,
+    "category": "Gardening",
+    "level": 13,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7720": {
+    "description": "A popoto set suitable for garden cultivation.",
+    "icon": 27455,
+    "category": "Gardening",
+    "level": 18,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7721": {
+    "description": "Millioncorn kernels suitable for garden cultivation.",
+    "icon": 27455,
+    "category": "Gardening",
+    "level": 25,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Alchemist",
+        "level": 30,
+        "item": "Botanist's Garden",
+        "amount": 1
+      }
+    ]
+  },
+  "7722": {
+    "description": "Wizard eggplant seeds suitable for garden cultivation.",
+    "icon": 27455,
+    "category": "Gardening",
+    "level": 27,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7723": {
+    "description": "Midland cabbage seeds suitable for garden cultivation.",
+    "icon": 27455,
+    "category": "Gardening",
+    "level": 28,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
   "7724": {
     "description": "Dzemael tomato seeds suitable for garden cultivation.",
     "icon": 27455,
     "category": "Gardening",
     "level": 51,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7725": {
+    "description": "La Noscean orange seeds suitable for garden cultivation.",
+    "icon": 27457,
+    "category": "Gardening",
+    "level": 7,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7726": {
+    "description": "Lowland grape seeds suitable for garden cultivation.",
+    "icon": 27457,
+    "category": "Gardening",
+    "level": 11,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Carpenter",
+        "level": 80,
+        "item": "La Noscean Grape Pergola",
+        "amount": 3
+      }
+    ]
+  },
+  "7727": {
+    "description": "Faerie apple seeds suitable for garden cultivation.",
+    "icon": 27457,
+    "category": "Gardening",
+    "level": 16,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7728": {
+    "description": "Sun lemon seeds suitable for garden cultivation.",
+    "icon": 27457,
+    "category": "Gardening",
+    "level": 17,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7729": {
+    "description": "Pixie plum seeds suitable for garden cultivation.",
+    "icon": 27457,
+    "category": "Gardening",
+    "level": 21,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7730": {
+    "description": "Blood currant seeds suitable for garden cultivation.",
+    "icon": 27457,
+    "category": "Gardening",
+    "level": 36,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7731": {
+    "description": "Mirror apple seeds suitable for garden cultivation.",
+    "icon": 27457,
+    "category": "Gardening",
+    "level": 42,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7732": {
+    "description": "Rolanberry seeds suitable for garden cultivation.",
+    "icon": 27457,
+    "category": "Gardening",
+    "level": 43,
     "price": 1,
     "marketable": true,
     "tradable": true,
@@ -11567,6 +11775,138 @@
     "hq": false,
     "recipes": []
   },
+  "7735": {
+    "description": "Garlic cloves suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 11,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7736": {
+    "description": "Lavender seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 12,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7737": {
+    "description": "Black pepper seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 14,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7738": {
+    "description": "Ala Mhigan mustard seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 23,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7739": {
+    "description": "A pearl ginger root suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 24,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7740": {
+    "description": "Chamomile seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 24,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7741": {
+    "description": "Linseed suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 31,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7742": {
+    "description": "Midland basil seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 32,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7743": {
+    "description": "Mandrake seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 33,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7744": {
+    "description": "Almond seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 40,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7758": {
+    "description": "Grade 1 topsoil obtained in the La Noscean region. Increases the likelihood that plants will yield higher quality crops.",
+    "icon": 27401,
+    "category": "Gardening",
+    "level": 30,
+    "price": 2,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7759": {
+    "description": "Grade 2 topsoil obtained in the La Noscean region. Increases the likelihood that plants will yield higher quality crops.",
+    "icon": 27402,
+    "category": "Gardening",
+    "level": 40,
+    "price": 4,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
   "7760": {
     "description": "Grade 3 topsoil obtained in the La Noscean region. Increases the likelihood that plants will yield higher quality crops.",
     "icon": 27403,
@@ -11578,12 +11918,56 @@
     "hq": false,
     "recipes": []
   },
+  "7761": {
+    "description": "Grade 1 topsoil obtained in the Black Shroud region. Increases the likelihood that plants will yield more crops.",
+    "icon": 27404,
+    "category": "Gardening",
+    "level": 30,
+    "price": 2,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7762": {
+    "description": "Grade 2 topsoil obtained in the Black Shroud region. Increases the likelihood that plants will yield more crops.",
+    "icon": 27405,
+    "category": "Gardening",
+    "level": 40,
+    "price": 4,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
   "7763": {
     "description": "Grade 3 topsoil obtained in the Black Shroud region. Increases the likelihood that plants will yield more crops.",
     "icon": 27406,
     "category": "Gardening",
     "level": 50,
     "price": 5,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7764": {
+    "description": "Grade 1 topsoil obtained in the Thanalan region. Increases the likelihood that plants will intercross with one another.",
+    "icon": 27407,
+    "category": "Gardening",
+    "level": 30,
+    "price": 2,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "7765": {
+    "description": "Grade 2 topsoil obtained in the Thanalan region. Increases the likelihood that plants will intercross with one another.",
+    "icon": 27408,
+    "category": "Gardening",
+    "level": 40,
+    "price": 4,
     "marketable": true,
     "tradable": true,
     "hq": false,
@@ -11718,6 +12102,90 @@
       }
     ]
   },
+  "10092": {
+    "description": "When polished, this rare form of limestone closely resembles marble.",
+    "icon": 21203,
+    "category": "Stone",
+    "level": 70,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Goldsmith",
+        "level": 50,
+        "item": "Monochrome Flooring",
+        "amount": 6
+      },
+      {
+        "job": "Goldsmith",
+        "level": 50,
+        "item": "Syrcus Tower",
+        "amount": 4
+      },
+      {
+        "job": "Goldsmith",
+        "level": 56,
+        "item": "Alpine Flooring",
+        "amount": 3
+      },
+      {
+        "job": "Goldsmith",
+        "level": 56,
+        "item": "Alpine Inner Wall",
+        "amount": 10
+      },
+      {
+        "job": "Goldsmith",
+        "level": 60,
+        "item": "Tribunal Flooring",
+        "amount": 3
+      },
+      {
+        "job": "Carpenter",
+        "level": 70,
+        "item": "Hingan Hot Spring",
+        "amount": 10
+      },
+      {
+        "job": "Goldsmith",
+        "level": 80,
+        "item": "Hades Trophy",
+        "amount": 1
+      },
+      {
+        "job": "Goldsmith",
+        "level": 90,
+        "item": "Watcher's Palace Interior Wall",
+        "amount": 8
+      },
+      {
+        "job": "Goldsmith",
+        "level": 100,
+        "item": "Everkeep Chest",
+        "amount": 2
+      },
+      {
+        "job": "Goldsmith",
+        "level": 100,
+        "item": "Everkeep Kitchen Counter",
+        "amount": 4
+      },
+      {
+        "job": "Weaver",
+        "level": 100,
+        "item": "Everkeep Platform Bed",
+        "amount": 6
+      },
+      {
+        "job": "Goldsmith",
+        "level": 100,
+        "item": "Everkeep Sideboard",
+        "amount": 5
+      }
+    ]
+  },
   "10093": {
     "description": "While all eggs a basilisk lays contain traces of rare ore, the first egg laid in life is thought to contain the highest concentration, making it highly sought after by potion mixers and alchemists.",
     "icon": 21215,
@@ -11732,6 +12200,48 @@
         "job": "Alchemist",
         "level": 50,
         "item": "Tinker's Calm",
+        "amount": 2
+      }
+    ]
+  },
+  "10094": {
+    "description": "While commonly used as bait by fishers across the realm, little worms also make fine chocobo feed, providing a good source of protein for growing birds.",
+    "icon": 27022,
+    "category": "Miscellany",
+    "level": 30,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Acceleration Blend",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Balance Blend",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Endurance Blend",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Speed Blend",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Stamina Blend",
         "amount": 2
       }
     ]
@@ -11808,6 +12318,48 @@
       }
     ]
   },
+  "10097": {
+    "description": "After gysahl greens, there's no other verdure a race chocobo would rather sink its beak into.",
+    "icon": 25009,
+    "category": "Miscellany",
+    "level": 30,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Acceleration Blend",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Balance Blend",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Endurance Blend",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Speed Blend",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 30,
+        "item": "Grade 1 Feed - Stamina Blend",
+        "amount": 2
+      }
+    ]
+  },
   "10098": {
     "description": "Once found growing all across the island of Mazlaya, this bright-green plant was almost completely wiped out when chocobos brought to the island by farmers devoured nearly every one they could find.",
     "icon": 25016,
@@ -11847,6 +12399,180 @@
         "level": 50,
         "item": "Grade 2 Feed - Stamina Blend",
         "amount": 2
+      }
+    ]
+  },
+  "10099": {
+    "description": "For reasons unknown to you, this crystal has completely lost its elemental charge.",
+    "icon": 20019,
+    "category": "Stone",
+    "level": 70,
+    "price": 10,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Capacity",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Company",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Confrontation",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Dedication",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Efficiency",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Industry",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Initiation",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Longeing",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Nutriment",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Observation",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Permanence",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Pilgrimage",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Precision",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Productivity",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Recreation",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Rivalry",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Grade 1 Wheel of Swiftness",
+        "amount": 1
+      }
+    ]
+  },
+  "10335": {
+    "description": "This substance of unknown origin has the faculty to assimilate with other forms of matter, effectively restoring them to their original condition. Pieces this large are quite rare.",
+    "icon": 20407,
+    "category": "Catalyst",
+    "level": 70,
+    "price": 10,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Carpenter",
+        "level": 50,
+        "item": "Magitek Repair Materials",
+        "amount": 1
+      },
+      {
+        "job": "Blacksmith",
+        "level": 50,
+        "item": "Magitek Repair Materials",
+        "amount": 1
+      },
+      {
+        "job": "Armorer",
+        "level": 50,
+        "item": "Magitek Repair Materials",
+        "amount": 1
+      },
+      {
+        "job": "Goldsmith",
+        "level": 50,
+        "item": "Magitek Repair Materials",
+        "amount": 1
+      },
+      {
+        "job": "Leatherworker",
+        "level": 50,
+        "item": "Magitek Repair Materials",
+        "amount": 1
+      },
+      {
+        "job": "Weaver",
+        "level": 50,
+        "item": "Magitek Repair Materials",
+        "amount": 1
+      },
+      {
+        "job": "Alchemist",
+        "level": 50,
+        "item": "Magitek Repair Materials",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 50,
+        "item": "Magitek Repair Materials",
+        "amount": 1
       }
     ]
   },
@@ -11946,6 +12672,78 @@
       }
     ]
   },
+  "12534": {
+    "description": "A decent-sized piece of rock containing the rare metal mythrite.",
+    "icon": 21221,
+    "category": "Stone",
+    "level": 130,
+    "price": 2,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Blacksmith",
+        "level": 52,
+        "item": "Mythrite Ingot",
+        "amount": 4
+      },
+      {
+        "job": "Armorer",
+        "level": 52,
+        "item": "Mythrite Ingot",
+        "amount": 4
+      },
+      {
+        "job": "Goldsmith",
+        "level": 52,
+        "item": "Mythrite Ingot",
+        "amount": 4
+      },
+      {
+        "job": "Blacksmith",
+        "level": 60,
+        "item": "High Mythrite Ingot",
+        "amount": 2
+      },
+      {
+        "job": "Armorer",
+        "level": 60,
+        "item": "High Mythrite Ingot",
+        "amount": 2
+      },
+      {
+        "job": "Blacksmith",
+        "level": 78,
+        "item": "Dwarven Mythril Ingot",
+        "amount": 1
+      },
+      {
+        "job": "Armorer",
+        "level": 78,
+        "item": "Dwarven Mythril Ingot",
+        "amount": 1
+      }
+    ]
+  },
+  "12535": {
+    "description": "A decent-sized piece of rock containing the rare alchemic metal hardsilver.",
+    "icon": 21223,
+    "category": "Stone",
+    "level": 142,
+    "price": 2,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Goldsmith",
+        "level": 56,
+        "item": "Hardsilver Ingot",
+        "amount": 4
+      }
+    ]
+  },
   "12536": {
     "description": "A decent-sized piece of rock containing the rare metal aurum regis.",
     "icon": 21225,
@@ -11961,6 +12759,48 @@
         "level": 60,
         "item": "Aurum Regis Ingot",
         "amount": 2
+      }
+    ]
+  },
+  "12537": {
+    "description": "A decent-sized piece of rock containing the rare metal titanium.",
+    "icon": 21222,
+    "category": "Stone",
+    "level": 136,
+    "price": 2,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Blacksmith",
+        "level": 54,
+        "item": "Titanium Nugget",
+        "amount": 5
+      },
+      {
+        "job": "Armorer",
+        "level": 54,
+        "item": "Titanium Nugget",
+        "amount": 5
+      },
+      {
+        "job": "Blacksmith",
+        "level": 76,
+        "item": "Titanbronze Ingot",
+        "amount": 1
+      },
+      {
+        "job": "Armorer",
+        "level": 76,
+        "item": "Titanbronze Ingot",
+        "amount": 1
+      },
+      {
+        "job": "Goldsmith",
+        "level": 76,
+        "item": "Titanbronze Nugget",
+        "amount": 1
       }
     ]
   },
@@ -12303,6 +13143,30 @@
         "level": 63,
         "item": "Stuffed Dhalmel",
         "amount": 4
+      }
+    ]
+  },
+  "12579": {
+    "description": "A rough-cut log of birch lumber.",
+    "icon": 22421,
+    "category": "Lumber",
+    "level": 148,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Carpenter",
+        "level": 58,
+        "item": "Birch Lumber",
+        "amount": 5
+      },
+      {
+        "job": "Carpenter",
+        "level": 60,
+        "item": "Blank Grade 3 Orchestrion Roll",
+        "amount": 1
       }
     ]
   },
@@ -13560,6 +14424,180 @@
       }
     ]
   },
+  "12878": {
+    "description": "A giant yellow onion often found growing on Abalathia's Spine.",
+    "icon": 25203,
+    "category": "Ingredient",
+    "level": 130,
+    "price": 3,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Culinarian",
+        "level": 50,
+        "item": "Rarefied Dhalmel Gratin",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 52,
+        "item": "Baked Onion Soup",
+        "amount": 3
+      },
+      {
+        "job": "Culinarian",
+        "level": 54,
+        "item": "Dhalmel Gratin",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 57,
+        "item": "Dhalmel Fricassee",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 58,
+        "item": "Cockatrice Meatballs",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 60,
+        "item": "Angler Stew",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 60,
+        "item": "Boscaiola",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 60,
+        "item": "Heavensegg Soup",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 60,
+        "item": "Wildwood Scrambled Eggs",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 62,
+        "item": "Kasha",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 64,
+        "item": "Crab Croquette",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 66,
+        "item": "Nomad Meat Pie",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 70,
+        "item": "Ema Datshi",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 70,
+        "item": "Imam Bayildi",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 75,
+        "item": "Blood Tomato Salad",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 76,
+        "item": "Rarefied Popotoes au Gratin",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 77,
+        "item": "Popotoes au Gratin",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 79,
+        "item": "Blood Bouillabaisse",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 80,
+        "item": "Crab Cakes",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 80,
+        "item": "Farmer's Breakfast",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 80,
+        "item": "Pickled Herring",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 83,
+        "item": "King Crab Cake",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 85,
+        "item": "Carrot Nibbles",
+        "amount": 1
+      }
+    ]
+  },
+  "12879": {
+    "description": "A deep-green legume recently discovered growing on the floating islets above the Sea of Clouds.",
+    "icon": 25353,
+    "category": "Ingredient",
+    "level": 136,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Culinarian",
+        "level": 56,
+        "item": "Emerald Soup",
+        "amount": 3
+      },
+      {
+        "job": "Culinarian",
+        "level": 60,
+        "item": "Morel Salad",
+        "amount": 2
+      }
+    ]
+  },
   "12880": {
     "description": "A variety of dark-colored wheat suited to the rocky soil, shorter days, and colder temperatures of the Coerthas highlands.",
     "icon": 25357,
@@ -13832,6 +14870,54 @@
         "job": "Alchemist",
         "level": 71,
         "item": "Growth Formula Iota",
+        "amount": 1
+      }
+    ]
+  },
+  "12893": {
+    "description": "The spine-encased fruit of the dark chestnut tree.",
+    "icon": 25302,
+    "category": "Ingredient",
+    "level": 136,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": [
+      {
+        "job": "Culinarian",
+        "level": 52,
+        "item": "Rarefied Sohm Al Tart",
+        "amount": 3
+      },
+      {
+        "job": "Culinarian",
+        "level": 54,
+        "item": "Sohm Al Tart",
+        "amount": 3
+      },
+      {
+        "job": "Culinarian",
+        "level": 59,
+        "item": "Marron Glace",
+        "amount": 3
+      },
+      {
+        "job": "Culinarian",
+        "level": 60,
+        "item": "Rarefied Marron Glace",
+        "amount": 2
+      },
+      {
+        "job": "Culinarian",
+        "level": 70,
+        "item": "Steppe Tea",
+        "amount": 1
+      },
+      {
+        "job": "Culinarian",
+        "level": 100,
+        "item": "Kugane-yaki",
         "amount": 1
       }
     ]
@@ -14894,6 +15980,72 @@
         "amount": 1
       }
     ]
+  },
+  "15865": {
+    "description": "Firelight shrub seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 1,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "15866": {
+    "description": "Icelight shrub seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 1,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "15867": {
+    "description": "Windlight shrub seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 1,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "15868": {
+    "description": "Earthlight shrub seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 1,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "15869": {
+    "description": "Levinlight shrub seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 1,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
+  },
+  "15870": {
+    "description": "Waterlight shrub seeds suitable for garden cultivation.",
+    "icon": 27451,
+    "category": "Gardening",
+    "level": 1,
+    "price": 1,
+    "marketable": true,
+    "tradable": true,
+    "hq": false,
+    "recipes": []
   },
   "15948": {
     "description": "A highly fragrant variety of laurel named for the goddess of the moon, Menphina.",
@@ -23851,10 +25003,32 @@
     "hq": false,
     "recipes": []
   },
+  "29670": {
+    "description": "Whether naturalists would wholly approve of the Skysteel Manufactory's appropriation of microfossil-rich powder for industrial purposes is a matter probably best not raised in company of said naturalists, as to do so would likely bring about swift confiscation.",
+    "icon": 21236,
+    "category": "Reagent",
+    "level": 430,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "29671": {
     "description": "It's all about the *sheen*. Apparently.",
     "icon": 21452,
     "category": "Stone",
+    "level": 430,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "29672": {
+    "description": "If Nimie is to be believed, the precise mineral composition by grain is key in sand-related projects.",
+    "icon": 21234,
+    "category": "Reagent",
     "level": 430,
     "price": 7,
     "marketable": false,
@@ -23873,9 +25047,31 @@
     "hq": false,
     "recipes": []
   },
+  "29675": {
+    "description": "Given the detailed nature of their request, one would think that the Skysteel engineers ought to have been able to come up with a more precise means of referring to this so-called “bauble.”",
+    "icon": 26534,
+    "category": "Miscellany",
+    "level": 430,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "29676": {
     "description": "Darker (and more specific) than your average matter.",
     "icon": 20407,
+    "category": "Reagent",
+    "level": 430,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "29677": {
+    "description": "This curious sphere tends to set nearby tinder alight at but a touch, whether such an effect is desired or not.",
+    "icon": 25911,
     "category": "Reagent",
     "level": 430,
     "price": 7,
@@ -24696,11 +25892,33 @@
     "hq": false,
     "recipes": []
   },
+  "31126": {
+    "description": "The original request was simply for green sand, which does not actually leave that many options.",
+    "icon": 22649,
+    "category": "Reagent",
+    "level": 450,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "31127": {
     "description": "Schorl is already in and of itself rather a specific thing to request, and it is somewhat surprising to find that it would play a significant part in improving an artisan's tool of the trade.",
     "icon": 21476,
     "category": "Stone",
     "level": 445,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "31128": {
+    "description": "While sand that is “borne by the land” is actually rather commonplace, the part about it being aetherially charged does make its procurement quite a challenge.",
+    "icon": 21006,
+    "category": "Reagent",
+    "level": 450,
     "price": 7,
     "marketable": false,
     "tradable": false,
@@ -24718,11 +25936,33 @@
     "hq": false,
     "recipes": []
   },
+  "31131": {
+    "description": "The passing of time has rendered this once translucent jewel of the forest as opaque as obsidian. In fact, it may very well be an ordinary stone.",
+    "icon": 22658,
+    "category": "Reagent",
+    "level": 460,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "31132": {
     "description": "Even among its rocky brethren, this specimen is especially ancient, having weathered the passing of ages, and is regarded as the grandfather of all stones. Well, not literally, that would be impossible for reasons far too complex to explain here. Or anywhere, for that matter.",
     "icon": 21225,
     "category": "Stone",
     "level": 455,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "31133": {
+    "description": "The perfect substance for scalekin to dive into and enjoy a good frolic. Of course, it is all fun and games until someone gets dragged down and preserved for future generations to excavate.",
+    "icon": 22685,
+    "category": "Reagent",
+    "level": 460,
     "price": 7,
     "marketable": false,
     "tradable": false,
@@ -25800,7 +27040,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32971": {
     "description": "“If you can't recognize the beauty inherent in its orthorhombic crystal system, then we can't be friends.”\n\n※For collectable submissions only.",
@@ -25811,7 +27069,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32972": {
     "description": "Artistic collectors will swoon over the lustrous ochre pigment that can be produced from this seemingly unremarkable rock of iron ore.\n\n※For collectable submissions only.",
@@ -25822,7 +27098,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32973": {
     "description": "Vanu shamans collect spring water to make the paste they apply to their beaks before rituals. Some Vanu shamans are very, *very* particular about their spring water.\n\n※For collectable submissions only.",
@@ -25833,7 +27127,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32974": {
     "description": "When the aether of one's opus must *flow* unimpeded, one cannot skimp on the conductive component of one's ink.\n\n※For collectable submissions only.",
@@ -25844,7 +27156,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32975": {
     "description": "The potential value of this uncut stone is obvious to the practiced eye. Especially if you love yellow.\n\n※For collectable submissions only.",
@@ -25855,7 +27185,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32976": {
     "description": "Rubies are red. Sapphires are blue. Star spinels are more of a violet, though, and that's the hue glinting from within this promising stone.\n\n※For collectable submissions only.",
@@ -25866,7 +27214,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32977": {
     "description": "“If I can cut this just so, it will provide the perfect accent for a rather rakish turban I've been weaving...”\n\n※For collectable submissions only.",
@@ -25877,7 +27243,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32978": {
     "description": "Be sure to don your swimming trunks before losing yourself in the deep, deep blue of this entrancing raw gemstone.\n\n※For collectable submissions only.",
@@ -25888,7 +27272,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32979": {
     "description": "“It's beautiful! Stunning! Magnificent! Now find me three more.”\n\n※For collectable submissions only.",
@@ -25899,7 +27301,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32980": {
     "description": "Never has titanium and copper existed in a more harmonious blend of minerals. It promises to make a wonderful teapot.\n\n※For collectable submissions only.",
@@ -25910,7 +27330,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32981": {
     "description": "One day, this unfinished gemstone of clearest blue could grace an elegant ring or an exquisite necklace or a face-smashing fist weapon. Possibilities!\n\n※For collectable submissions only.",
@@ -25921,7 +27359,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32982": {
     "description": "Not quite clear and not quite white, you're not quite sure why the jewel hiding in this rock is so valuable.\n\n※For collectable submissions only.",
@@ -25932,7 +27388,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32983": {
     "description": "“Don't you *dare* throw that over your shoulder. Here, use the table salt.”\n\n※For collectable submissions only.",
@@ -25943,7 +27417,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32984": {
     "description": "They say reef rock has been procured for restoration projects in a certain snowbound city. Perhaps this perfectly porous piece is destined for a structure of “holey” importance.\n\n※For collectable submissions only.",
@@ -25954,7 +27446,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32985": {
     "description": "Even in its rough, natural form, the shimmering blackness of this jewel is almost dangerously captivating. So...pretty...\n\n※For collectable submissions only.",
@@ -25965,7 +27475,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32986": {
     "description": "A truly precious find for one invested in the finest facets of tungsten-based fabrication.\n\n※For collectable submissions only.",
@@ -25976,7 +27504,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32987": {
     "description": "“Well, tan my hide! You must have spent *weeks* in the mountains of Eastern Aldenard looking for this stuff.” \n\n※For collectable submissions only.",
@@ -25987,7 +27533,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32988": {
     "description": "Unconfirmed rumors tell of an eccentric Lalafell with plans to use these glowing grains to build a private beach. She'll probably need a few more handfuls...\n\n※For collectable submissions only.",
@@ -25998,7 +27562,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          5
+        ],
+        [
+          1000,
+          15
+        ]
+      ]
+    }
   },
   "32989": {
     "description": "Should probably be saved for the concoction of valuable reisui, but it *does* make for a tasty cup of buckwheat tea.\n\n※For collectable submissions only.",
@@ -26009,7 +27591,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          5
+        ],
+        [
+          1000,
+          15
+        ]
+      ]
+    }
   },
   "32990": {
     "description": "If this mineral was any aether-richer, it would have to pay taxes.\n\n※For collectable submissions only.",
@@ -26020,7 +27620,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          5
+        ],
+        [
+          1000,
+          15
+        ]
+      ]
+    }
   },
   "32991": {
     "description": "The customer requesting this liquid-like sand was oddly specific about the number of grains in the handful.\n\n※For collectable submissions only.",
@@ -26031,7 +27649,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32992": {
     "description": "Rather than experiment with amusing applications for this superior sticky substance, it's perhaps best to relinquish it to a tree sap professional.\n\n※For collectable submissions only.",
@@ -26042,7 +27678,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32993": {
     "description": "Gazing upon this rough-cut log, you cannot help but wonder if its lustrous lumber is destined for a valiant knight's lance or a bilge-bottomed buccaneer's bar stool. Anyone's guess, really.\n\n※For collectable submissions only.",
@@ -26053,7 +27707,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32994": {
     "description": "“Aye, 'twould make a fine sentinel's longbow. But see, I have this prior commission to craft a fishing rod. N-No, that's not my penmanship!”\n\n※For collectable submissions only.",
@@ -26064,7 +27736,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32995": {
     "description": "A champion among chestnuts, predestined for the summit of a Sohm Al tart.\n\n※For collectable submissions only.",
@@ -26075,7 +27765,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32996": {
     "description": "The viscous lifeblood you extracted from a vigorous yet defenseless chestnut tree. You monster.\n\n※For collectable submissions only.",
@@ -26086,7 +27794,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32997": {
     "description": "You wonder if the fact that “larch log” is fun to say has anything to do with its inherent collectability.\n\n※For collectable submissions only.",
@@ -26097,7 +27823,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32998": {
     "description": "Only the finest fungi are foraged for fancy Far Eastern feast tables.\n\n※For collectable submissions only.",
@@ -26108,7 +27852,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "32999": {
     "description": "Larch...sap. No, not nearly so fun to say as “larch log” but apparently just as collectable.\n\n※For collectable submissions only.",
@@ -26119,7 +27881,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33000": {
     "description": "Unsurprisingly, this exceptionally gooey mass is a prime ingredient in certain beetle-based adhesives.\n\n※For collectable submissions only.",
@@ -26130,7 +27910,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33001": {
     "description": "Almost unnaturally straight and true, this log will hopefully be processed into lumber for a future masterpiece of carpentry...and not thrown into some chilly lordling's fireplace.\n\n※For collectable submissions only.",
@@ -26141,7 +27939,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33002": {
     "description": "One bite of this almost unbearably sweet fruit will have you flitting about like a pollen-drunk pixie.\n\n※For collectable submissions only.",
@@ -26152,7 +27968,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33003": {
     "description": "A difficult material to work with, any artisan would nevertheless be eager to craft an enduring handle or lasting piece of furniture from this marvelous hunk of hardwood.\n\n※For collectable submissions only.",
@@ -26163,7 +27997,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33004": {
     "description": "The real miracle here is that any of these trees were left standing after a sudden and inexplicable surge in the demand for applewood staves.\n\n※For collectable submissions only.",
@@ -26174,7 +28026,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33005": {
     "description": "After being carved and then covered with exquisitely woven wool, this attractive lump of timber could serve as the elegant display stand for some staggeringly expensive─and rarely worn─neckwear.\n\n※For collectable submissions only.",
@@ -26185,7 +28055,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33006": {
     "description": "“Yes, an oriental breakfast is generally a simple affair, but that doesn't mean one should settle for any old seaweed in the sea.”\n\n※For collectable submissions only.",
@@ -26196,7 +28084,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33007": {
     "description": "Once dried and enshrined in a sturdy jar, these flavorsome flower buds will take pride of place on a master chef's spice shelf.\n\n※For collectable submissions only.",
@@ -26207,7 +28113,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33008": {
     "description": "“This is it! The perfect piece of coral to complement my perfect coral butterfly. My aquarium is complete!”\n\n※For collectable submissions only.",
@@ -26218,7 +28142,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33009": {
     "description": "Compared to your average cut of timber, the quality of this log is the difference between urunight and urunday.\n\n※For collectable submissions only.",
@@ -26229,7 +28171,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          8
+        ],
+        [
+          800,
+          12
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33010": {
     "description": "Is it gold? Is it blue? Or mayhap green? Folk will spend all day arguing over the color of a dress made from these prismatic cotton fibers.\n\n※For collectable submissions only.",
@@ -26240,7 +28200,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          5
+        ],
+        [
+          1000,
+          15
+        ]
+      ]
+    }
   },
   "33011": {
     "description": "Either this is the bloodiest bloodhemp you've ever harvested, or some small vermin with terrible situational awareness came between the plant and your scythe.\n\n※For collectable submissions only.",
@@ -26251,7 +28229,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          5
+        ],
+        [
+          1000,
+          15
+        ]
+      ]
+    }
   },
   "33012": {
     "description": "This incredibly hardy plant specimen is able to thrive under almost any conditions...except one populated by single-minded botanists.\n\n※For collectable submissions only.",
@@ -26262,7 +28258,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          5
+        ],
+        [
+          1000,
+          15
+        ]
+      ]
+    }
   },
   "33013": {
     "description": "Guaranteed to make you sneeze. Just...aim it away from the cooking pot.\n\n※For collectable submissions only.",
@@ -26273,7 +28287,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "33147": {
     "description": "A carefully prepared blend of soil and decaying leaves.",
@@ -29208,7 +31240,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "36292": {
     "description": "Some say peering into the murky depths of this stone will reveal secret truths of existence─for instance, that staring at a rock for extended periods causes significant ocular discomfort.\n\n※For collectable submissions only.",
@@ -29219,7 +31269,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "36293": {
     "description": "This multicolored beauty was born from the fusion of amethyst and citrine.\n\n※For collectable submissions only.",
@@ -29230,7 +31298,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          9
+        ],
+        [
+          800,
+          14
+        ],
+        [
+          1000,
+          22
+        ]
+      ]
+    }
   },
   "36294": {
     "description": "This mineral may look like a shiny rock, but when oxidized, it becomes a *very* shiny rock.\n\n※For collectable submissions only.",
@@ -29241,7 +31327,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          10
+        ],
+        [
+          800,
+          15
+        ],
+        [
+          1000,
+          24
+        ]
+      ]
+    }
   },
   "36295": {
     "description": "“Everyone talks so much about how salt *tastes* and not enough about how it *looks*.”\n\n※For collectable submissions only.",
@@ -29252,7 +31356,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          11
+        ],
+        [
+          800,
+          16
+        ],
+        [
+          1000,
+          26
+        ]
+      ]
+    }
   },
   "36296": {
     "description": "Not everything that glitters is gold─sometimes it is much more valuable.\n\n※For collectable submissions only.",
@@ -29263,7 +31385,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          12
+        ],
+        [
+          800,
+          17
+        ],
+        [
+          1000,
+          28
+        ]
+      ]
+    }
   },
   "36297": {
     "description": "The brilliance of this sample's blue hue remains nigh unparalleled in the natural world─particularly now that it has been removed from it.\n\n※For collectable submissions only.",
@@ -29274,7 +31414,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          12
+        ],
+        [
+          800,
+          18
+        ],
+        [
+          1000,
+          30
+        ]
+      ]
+    }
   },
   "36298": {
     "description": "No one would call this alumen “rarefied” were it overabundant in the frozen north─certainly not for marketing purposes. Perish the thought!\n\n※For collectable submissions only.",
@@ -29285,7 +31443,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          13
+        ],
+        [
+          800,
+          20
+        ],
+        [
+          1000,
+          32
+        ]
+      ]
+    }
   },
   "36299": {
     "description": "Handling may cause this mineral to fracture or flake, so best not. What do you mean, “too late”?\n\n※For collectable submissions only.",
@@ -29296,7 +31472,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          14
+        ],
+        [
+          800,
+          21
+        ],
+        [
+          1000,
+          34
+        ]
+      ]
+    }
   },
   "36300": {
     "description": "Pewter? I barely know her!\n\n※For collectable submissions only.",
@@ -29307,7 +31501,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          14
+        ],
+        [
+          800,
+          21
+        ],
+        [
+          1000,
+          34
+        ]
+      ]
+    }
   },
   "36301": {
     "description": "This herb's minty aroma is stronger than that of its perilla brethren, easily separating the Thavs from the Thav-nots.\n\n※For collectable submissions only.",
@@ -29318,7 +31530,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "36302": {
     "description": "More wood than iron...which is to say that it is not really iron at all.\n\n※For collectable submissions only.",
@@ -29329,7 +31559,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "36303": {
     "description": "The lack of rings makes this lumber impossible to date─or, as particularly aggravating naturalists might say, “stuck in the frond zone.”\n\n※For collectable submissions only.",
@@ -29340,7 +31588,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          9
+        ],
+        [
+          800,
+          14
+        ],
+        [
+          1000,
+          22
+        ]
+      ]
+    }
   },
   "36304": {
     "description": "While this wood is more red-adjacent than truly red, “red-adjacent pine” does not exactly roll off the tongue.\n\n※For collectable submissions only.",
@@ -29351,7 +31617,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          10
+        ],
+        [
+          800,
+          15
+        ],
+        [
+          1000,
+          24
+        ]
+      ]
+    }
   },
   "36305": {
     "description": "Though this deceptive drupe does not taste like cocoa and it is not a true nut, culinarians tend to overlook these offenses in light of its deliciousness. It is on thin ice with the botanists, however.\n\n※For collectable submissions only.",
@@ -29362,7 +31646,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          11
+        ],
+        [
+          800,
+          16
+        ],
+        [
+          1000,
+          26
+        ]
+      ]
+    }
   },
   "36306": {
     "description": "A succulent symbol of vitality, this fruit pairs nicely with some honey and stone cheese.\n\n※For collectable submissions only.",
@@ -29373,7 +31675,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          12
+        ],
+        [
+          800,
+          17
+        ],
+        [
+          1000,
+          28
+        ]
+      ]
+    }
   },
   "36307": {
     "description": "This hearty grain is a culinarian's delight─though much more so after the tiresome grinding step is complete.\n\n※For collectable submissions only.",
@@ -29384,7 +31704,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          12
+        ],
+        [
+          800,
+          18
+        ],
+        [
+          1000,
+          30
+        ]
+      ]
+    }
   },
   "36308": {
     "description": "This sweet-scented spice is proven to help medicine go down. Consuming an entire spoonful, however, is not recommended.\n\n※For collectable submissions only.",
@@ -29395,7 +31733,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          13
+        ],
+        [
+          800,
+          20
+        ],
+        [
+          1000,
+          32
+        ]
+      ]
+    }
   },
   "36309": {
     "description": "This crisp, refreshing vegetable is often thought to be lacking in flavor, but those who enjoy the flavor of water doubtless find it absolutely overpowering.\n\n※For collectable submissions only.",
@@ -29406,7 +31762,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          14
+        ],
+        [
+          800,
+          21
+        ],
+        [
+          1000,
+          34
+        ]
+      ]
+    }
   },
   "36310": {
     "description": "These bolls are so irresistibly soft that some folks can't help but pluck them and pop them in their ears. Caution: under no circumstances should AR-Caean cotton be placed near the ears.\n\n※For collectable submissions only.",
@@ -29417,7 +31791,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          14
+        ],
+        [
+          800,
+          21
+        ],
+        [
+          1000,
+          34
+        ]
+      ]
+    }
   },
   "36669": {
     "description": "This aetheroconductive feather is destined to become the much-needed quill of a student lacking one.",
@@ -29681,10 +32073,32 @@
     "hq": false,
     "recipes": []
   },
+  "38789": {
+    "description": "A particularly splendorous manifestation of aetheric earth energy.",
+    "icon": 20006,
+    "category": "Reagent",
+    "level": 570,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "38790": {
     "description": "A mineral excavated with the discerning standards of an avid collector in mind. All the colors of the rainbow dance within this mesmerizing rock.",
     "icon": 21232,
     "category": "Stone",
+    "level": 570,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "38791": {
+    "description": "A particularly splendorous manifestation of aetheric water energy.",
+    "icon": 20002,
+    "category": "Reagent",
     "level": 570,
     "price": 7,
     "marketable": false,
@@ -29703,10 +32117,32 @@
     "hq": false,
     "recipes": []
   },
+  "38795": {
+    "description": "A particularly malleable manifestation of aetheric lightning energy.",
+    "icon": 20011,
+    "category": "Reagent",
+    "level": 590,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "38796": {
     "description": "A mineral excavated with the discerning standards of an avid collector in mind. Once ground, this gemstone should provide a striking crimson pigment for use in dyes.",
     "icon": 21468,
     "category": "Stone",
+    "level": 590,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "38797": {
+    "description": "A particularly malleable manifestation of aetheric fire energy.",
+    "icon": 20007,
+    "category": "Reagent",
     "level": 590,
     "price": 7,
     "marketable": false,
@@ -29998,10 +32434,32 @@
     "hq": false,
     "recipes": []
   },
+  "39806": {
+    "description": "A superior manifestation of aetheric ice energy obtained from Qeshi-Trao's hidden resources. Its unique makeup is ideal for enhancing a crystalline tool.",
+    "icon": 20009,
+    "category": "Reagent",
+    "level": 620,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "39807": {
     "description": "A fruit harvested with the discerning standards of an avid collector in mind, and well suited to aetherial reduction (or consumption by hungry artisans).",
     "icon": 25308,
     "category": "Ingredient",
+    "level": 620,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "39808": {
+    "description": "A superior manifestation of aetheric wind energy obtained from Qeshi-Trao's hidden resources. Its unique makeup is ideal for enhancing a crystalline tool.",
+    "icon": 20010,
+    "category": "Reagent",
     "level": 620,
     "price": 7,
     "marketable": false,
@@ -30020,10 +32478,32 @@
     "hq": false,
     "recipes": []
   },
+  "39812": {
+    "description": "A particularly brilliant manifestation of aetheric lightning energy. Due to its unique makeup, it can only be utilized by a master artisan.",
+    "icon": 20017,
+    "category": "Reagent",
+    "level": 625,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "39813": {
     "description": "A material harvested with the discerning standards of an avid collector in mind, and well suited to aetherial reduction. Also, pies.",
     "icon": 25023,
     "category": "Ingredient",
+    "level": 625,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "39814": {
+    "description": "A particularly brilliant manifestation of aetheric earth energy. Due to its unique makeup, it can only be utilized by a master artisan.",
+    "icon": 20018,
+    "category": "Reagent",
     "level": 625,
     "price": 7,
     "marketable": false,
@@ -30119,9 +32599,31 @@
     "hq": false,
     "recipes": []
   },
+  "41287": {
+    "description": "An extraordinary manifestation of aetheric wind energy. Its unique makeup is bound to inspire new innovations.",
+    "icon": 20016,
+    "category": "Reagent",
+    "level": 625,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "41288": {
     "description": "A material harvested with the discerning standards of an avid collector in mind, and well suited to aetherial reduction...or delicious honey.",
     "icon": 22611,
+    "category": "Reagent",
+    "level": 625,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "41289": {
+    "description": "An extraordinary manifestation of aetheric fire energy. Its unique makeup is bound to inspire new innovations.",
+    "icon": 20013,
     "category": "Reagent",
     "level": 625,
     "price": 7,
@@ -30141,10 +32643,32 @@
     "hq": false,
     "recipes": []
   },
+  "41291": {
+    "description": "An incredibly rare manifestation of aetheric ice energy, supposedly formed in the nights before the Flood.",
+    "icon": 20015,
+    "category": "Reagent",
+    "level": 630,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
   "41292": {
     "description": "A material harvested with the discerning standards of an avid collector in mind, and well suited to aetherial reduction. Contains all the luminous convenience of a torch without the fire.",
     "icon": 25412,
     "category": "Ingredient",
+    "level": 630,
+    "price": 7,
+    "marketable": false,
+    "tradable": false,
+    "hq": false,
+    "recipes": []
+  },
+  "41293": {
+    "description": "An incredibly rare manifestation of aetheric water energy, supposedly formed in the nights before the Flood.",
+    "icon": 20014,
+    "category": "Reagent",
     "level": 630,
     "price": 7,
     "marketable": false,
@@ -30249,7 +32773,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "43918": {
     "description": "This stone has been painstakingly sculpted to resemble an impressive find.\n\n※For collectable submissions only.",
@@ -30260,7 +32802,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "43919": {
     "description": "The gemstone of choice for dark goldsmiths.\n\n※For collectable submissions only.",
@@ -30271,7 +32831,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          14
+        ],
+        [
+          800,
+          21
+        ],
+        [
+          1000,
+          35
+        ]
+      ]
+    }
   },
   "43920": {
     "description": "There's gold in these hills! Titanium gold, that is.\n\n※For collectable submissions only.",
@@ -30282,7 +32860,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          15
+        ],
+        [
+          800,
+          22
+        ],
+        [
+          1000,
+          36
+        ]
+      ]
+    }
   },
   "43921": {
     "description": "In addition to its crafting purposes, this ore can be used to deter burglars, provided your aim is true.\n\n※For collectable submissions only.",
@@ -30293,7 +32889,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          600,
+          15
+        ],
+        [
+          800,
+          22
+        ],
+        [
+          1000,
+          36
+        ]
+      ]
+    }
   },
   "43922": {
     "description": "The perfect smithing material for someone with a penchant for black and purple color schemes.\n\n※For collectable submissions only.",
@@ -30304,7 +32918,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          600,
+          16
+        ],
+        [
+          800,
+          23
+        ],
+        [
+          1000,
+          38
+        ]
+      ]
+    }
   },
   "43923": {
     "description": "This faintly warm mixture of ash and soil was harvested from an active volcano by a true daredevil of a gatherer.\n\n※For collectable submissions only.",
@@ -30315,7 +32947,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          600,
+          16
+        ],
+        [
+          800,
+          23
+        ],
+        [
+          1000,
+          38
+        ]
+      ]
+    }
   },
   "43924": {
     "description": "You could keep it in reserve for the next time you require a gemdraught...*or* have yourself a cozy bedtime beverage. Decisions, decisions.\n\n※For collectable submissions only.",
@@ -30326,7 +32976,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "43925": {
     "description": "If you think this agave is wild, just wait until you taste the mezcal distilled from it.\n\n※For collectable submissions only.",
@@ -30337,7 +33005,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          400,
+          3
+        ],
+        [
+          700,
+          7
+        ],
+        [
+          1000,
+          20
+        ]
+      ]
+    }
   },
   "43926": {
     "description": "With this, perhaps you can craft yourself a nice pair of hiking boots to replace the ones you wore out climbing this mountain in the first place.\n\n※For collectable submissions only.",
@@ -30348,7 +33034,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          14
+        ],
+        [
+          800,
+          21
+        ],
+        [
+          1000,
+          35
+        ]
+      ]
+    }
   },
   "43927": {
     "description": "A true chocolate connoisseur will accept no less than this, the sweetest of all kukuru beans, for their sinfully indulgent sachertortes.\n\n※For collectable submissions only.",
@@ -30359,7 +33063,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          15
+        ],
+        [
+          800,
+          22
+        ],
+        [
+          1000,
+          36
+        ]
+      ]
+    }
   },
   "43928": {
     "description": "“Bring me the darkest mahogany you have! Darker, I say! *Darker*!”\n\n※For collectable submissions only.",
@@ -30370,7 +33092,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          600,
+          15
+        ],
+        [
+          800,
+          22
+        ],
+        [
+          1000,
+          36
+        ]
+      ]
+    }
   },
   "43929": {
     "description": "Take this to a skilled carpenter to be processed, and by day's end, you could be the proud owner of a first-rate fork.\n\n※For collectable submissions only.",
@@ -30381,7 +33121,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          600,
+          16
+        ],
+        [
+          800,
+          23
+        ],
+        [
+          1000,
+          38
+        ]
+      ]
+    }
   },
   "43930": {
     "description": "A tisane brewed from this exceptional bay leaf would afford a weaver enough energy to sew nearly three dozen muffed mets. Enjoy in moderation.\n\n※For collectable submissions only.",
@@ -30392,7 +33150,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          600,
+          16
+        ],
+        [
+          800,
+          23
+        ],
+        [
+          1000,
+          38
+        ]
+      ]
+    }
   },
   "43931": {
     "description": "An ore containing trace amounts of electrope.",
@@ -32229,7 +35005,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          16
+        ],
+        [
+          800,
+          23
+        ],
+        [
+          1000,
+          38
+        ]
+      ]
+    }
   },
   "44234": {
     "description": "Used in the tanning of the finest quality hide for a leather so durable, the poor gargantua may one day forgive you for slaying it.\n\n※For collectable submissions only.",
@@ -32240,7 +35034,25 @@
     "marketable": false,
     "tradable": false,
     "hq": false,
-    "recipes": []
+    "recipes": [],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          600,
+          16
+        ],
+        [
+          800,
+          23
+        ],
+        [
+          1000,
+          38
+        ]
+      ]
+    }
   },
   "44844": {
     "description": "The fibrous tendrils that form this peculiar grass have exceptional light-transmitting properties.",

@@ -5,7 +5,7 @@
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
-  "The *Astalicia*": {
+  "The Astalicia": {
     "impression": "\"A flagon or two o' grog havin' filled me 'ead with big ideas, I eyed that 'ive o' villainy from the pier, feelin' as if I could cut down Hyllfyr 'imself. Woke the next mornin' strung up by me ankles. Aye, was lucky to escape with me life.\" Such were the buccaneer's words, and I would see as he saw.",
     "description": "Registered as a trade vessel hailing from foreign waters, this battle-scarred warship captained by the lord of the region's underworld, Hyllfyr, serves as a gathering place for brigands, cutthroats, and the purveyors of sundry other breeds of villainy. It is here that the city–state's many pirate crews find new recruits to join their ranks.",
     "emoteIcon": 246222,
@@ -151,7 +151,7 @@
   },
   "The Navigator": {
     "impression": "\"I've no wife, an' no mind to take one─the only child I'll ever know is the ale I brew. And so, as the cargo ships pull out of the harbor, I say a prayer to the watcher of seas, that She'll see me sons safe to someone's belly somewhere.\" Such were the brewer's words, and I would see as he saw.",
-    "description": "Carved centuries past by a famous Roegadyn sculptor, this massive stone effigy located in the center of Aleport's lower plaza serves as hallowed ground upon which sailors might offer solemn prayers to the watcher of the seas before embarking on their journeys across the untamed deep. ",
+    "description": "Carved centuries past by a famous Roegadyn sculptor, this massive stone effigy located in the center of Aleport's lower plaza serves as hallowed ground upon which sailors might offer solemn prayers to the watcher of the seas before embarking on their journeys across the untamed deep.",
     "emoteIcon": 246264,
     "emoteCommand": "/pray"
   },
@@ -199,7 +199,7 @@
   },
   "Camp Overlook": {
     "impression": "Overheard at an inn: \"You'll want to keep a wide berth of brigands and beastmen both. There's a crumbling gate, overrun by shrubbery. Makes for good cover, and offers an unobstructed view of the road below─two birds with one stone.\"",
-    "description": "Manned by the “meanest shite-kickin' unit in the whole damn Maelstrom,” Camp Overlook serves as the base of operations for the Red Swallows─a privateer levy tasked with the surveillance of kobold activity in outer La Noscea and along the slopes of Mt. O'Ghomoro. ",
+    "description": "Manned by the “meanest shite-kickin' unit in the whole damn Maelstrom,” Camp Overlook serves as the base of operations for the Red Swallows─a privateer levy tasked with the surveillance of kobold activity in outer La Noscea and along the slopes of Mt. O'Ghomoro.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -301,7 +301,7 @@
   },
   "Castrum Marinum": {
     "impression": "\"Say what you will about our foe, you can't deny that the architecture of their outposts has a certain ghastly charm. I would have enjoyed the sunset a while longer, but the cohort doesn't take kindly to tourists.\" Such were the scout's words, and I would see as he saw.",
-    "description": "Situated atop the roiling Rhotano Sea between Aldenard and the eastern coast of Vylbrand, Castrum Marinum serves as the southernmost outpost for the Garlean Empire's XIVth Legion. The cohort stationed on this man-made floating island is primarily tasked with the resupplying of imperial army cohorts deployed in the La Noscea and Thanalan theaters. ",
+    "description": "Situated atop the roiling Rhotano Sea between Aldenard and the eastern coast of Vylbrand, Castrum Marinum serves as the southernmost outpost for the Garlean Empire's XIVth Legion. The cohort stationed on this man-made floating island is primarily tasked with the resupplying of imperial army cohorts deployed in the La Noscea and Thanalan theaters.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -397,7 +397,7 @@
   },
   "Abandoned Amajina Mythril Mine": {
     "impression": "\"I didn't know what those madmen were going to do with me, and I wasn't about to find out. When the fog descended, I snuck out across a collapsed pillar. Lucky to be alive, though I do wish I'd had the luxury to enjoy the view.\" Such were the adventurer's words, and I would see what he saw.",
-    "description": "The discovery of mythril in a small copper mine in Bluefog triggered the Great Rush which saw would-be prospectors flock to the Sea of Spires in search of quick and easy fortune. The veins that ran through the mountains, however, were not deep, and it was but ten summers before the mines ceased to yield the precious metal, forcing many to abandon their claims. ",
+    "description": "The discovery of mythril in a small copper mine in Bluefog triggered the Great Rush which saw would-be prospectors flock to the Sea of Spires in search of quick and easy fortune. The veins that ran through the mountains, however, were not deep, and it was but ten summers before the mines ceased to yield the precious metal, forcing many to abandon their claims.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -517,7 +517,7 @@
   },
   "The Bed of Bones": {
     "impression": "From high atop the western highlands of Coerthas, I looked out upon the realm in all her glory.\nThere I saw a sight that will be sung of for as long as songs are sung.",
-    "description": "It remains to be confirmed whether, as the tales say, yetis prefer to slumber atop makeshift bedding fashioned from the remains of their victims─in large part because prominent naturalists have been reluctant to do the fieldwork necessary to corroborate this claim. ",
+    "description": "It remains to be confirmed whether, as the tales say, yetis prefer to slumber atop makeshift bedding fashioned from the remains of their victims─in large part because prominent naturalists have been reluctant to do the fieldwork necessary to corroborate this claim.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -689,7 +689,7 @@
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
-  "The *Gration*": {
+  "The Gration": {
     "impression": "From high atop Azys Lla, I looked out upon the realm in all her twisted beauty.\nThere I saw a sight that will be sung of for as long as songs are sung.",
     "description": "Flagship of the VIth Legion of the Garlean Empire, of the same make as the fallen *Agrius*. It now lies grounded, its ceruleum engines sealed in aetheric ice by the hand of Shiva, Lady of Frost.",
     "emoteIcon": 246222,
@@ -745,7 +745,7 @@
   },
   "Dragonspit": {
     "impression": "From high atop the western highlands of Coerthas, I looked out upon the realm in all her twisted beauty.\nThere I saw a sight that will be sung of for as long as songs are sung.",
-    "description": "Said to be as scalding as a wyrm's breath, Dragonspit is a colorful analogy for the hot springs nestled between the cliffs near the Slate Mountains. Local wildlife has long been attracted to the warmth of the natural thermal pools, and their numbers have only increased following the advent of the long winter. The steaming springs are also frequented by Ishgardian knights, who laud them for their supposed healing properties.  ",
+    "description": "Said to be as scalding as a wyrm's breath, Dragonspit is a colorful analogy for the hot springs nestled between the cliffs near the Slate Mountains. Local wildlife has long been attracted to the warmth of the natural thermal pools, and their numbers have only increased following the advent of the long winter. The steaming springs are also frequented by Ishgardian knights, who laud them for their supposed healing properties.",
     "emoteIcon": 246254,
     "emoteCommand": "/groundsit"
   },
@@ -757,7 +757,7 @@
   },
   "Whilom River": {
     "impression": "From high atop the Dravanian forelands, I looked out upon the realm in all her twisted beauty.\nThere I saw a sight that will be sung of for as long as songs are sung.",
-    "description": "When asked to explain the origin of its name, the local hunters usually say that while the river courses with tranquility in the present day, it once ran scarlet with the blood of the Dravanians and their foes. Those who fraternize with the dragons refute this interpretation, asserting instead that the river is symbolic of the passage of time since the sorrowful parting of paths between man and dragon.   ",
+    "description": "When asked to explain the origin of its name, the local hunters usually say that while the river courses with tranquility in the present day, it once ran scarlet with the blood of the Dravanians and their foes. Those who fraternize with the dragons refute this interpretation, asserting instead that the river is symbolic of the passage of time since the sorrowful parting of paths between man and dragon.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -773,7 +773,7 @@
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
-  "The Danneroad ": {
+  "The Danneroad": {
     "impression": "From high atop the Dravanian forelands, I looked out upon the realm in all her twisted beauty.\nThere I saw a sight that will be sung of for as long as songs are sung.",
     "description": "This road leading to Anyx Trine was originally called Dran Errn, which roughly translates to “the path of dragon and man.” Due to the difficult pronunciation, the road became known as the Danneroad over time, and its profound meaning was forgotten by all but the Dravanians.",
     "emoteIcon": 246222,
@@ -793,7 +793,7 @@
   },
   "The Old Father": {
     "impression": "From high atop the Churning Mists, I looked out upon the realm in all her twisted beauty.\nThere I saw a sight that will be sung of for as long as songs are sung.",
-    "description": "The moogles consider this ancient tree to be the forebearer of all flora in the Churning Mists. They believe that the Father bore witness to a time before man and dragon descended into their millennium of bloodshed. ",
+    "description": "The moogles consider this ancient tree to be the forebearer of all flora in the Churning Mists. They believe that the Father bore witness to a time before man and dragon descended into their millennium of bloodshed.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -804,7 +804,7 @@
     "emoteCommand": "/lookout"
   },
   "The Shattered Back": {
-    "impression": "From high atop the Sea of Clouds, I looked out upon the realm in all her twisted beauty.\nThere I saw a sight that will be sung of for as long as songs are sung.\n",
+    "impression": "From high atop the Sea of Clouds, I looked out upon the realm in all her twisted beauty.\nThere I saw a sight that will be sung of for as long as songs are sung.",
     "description": "The strong seasonal winds from the north have carved the crags of this floating isle into their unique shapes. The knights of Ishgard called it the Shattered Back for its ominous resemblance to the gnarled rib bones of a great beast.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
@@ -835,7 +835,7 @@
   },
   "Centrifugal Crystal Engine": {
     "impression": "From high atop Azys Lla, I looked out upon the realm in all her twisted beauty.\nThere I saw a sight that will be sung of for as long as songs are sung.",
-    "description": "This seemingly indefatigable engine harnessed the power of the imprisoned Warring Triad to transmute the life force of chimera experiments into synthetic crystal. These manufactured shards would then be used to fuel the cultivation of the chimeras as part of research into the possibility of obtaining limitless power. ",
+    "description": "This seemingly indefatigable engine harnessed the power of the imprisoned Warring Triad to transmute the life force of chimera experiments into synthetic crystal. These manufactured shards would then be used to fuel the cultivation of the chimeras as part of research into the possibility of obtaining limitless power.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -905,7 +905,7 @@
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
-  "*Nyunkrepf's Hope*": {
+  "Nyunkrepf's Hope": {
     "impression": "Roaming the jagged Peaks, I came upon a spectacular vantage point. As I looked out at the breathtaking vista, I knew that I wished to share it with all the world.",
     "description": "When the Sixth Umbral Calamity befell Eorzea and the realm was transformed into a sea, this great vessel, built by a man hailing far from the north named Nyunkrepf, saved full many lives. Having taken aboard countless souls drifting in the floodwaters, it was finally transported by magicks to its current resting place.",
     "emoteIcon": 246222,
@@ -1507,7 +1507,7 @@
   },
   "The Forum": {
     "impression": "As I soaked in all that Old Sharlayan had to offer, I found my gaze drawn in one particular direction. Entranced, I reached for my quill and parchment...",
-    "description": "In order to accommodate the ninety-nine members of the Forum, the seating in their assembly hall is arranged in the shape of a spiral. Viewed from above, one is reminded of the symbol emblazoned upon the Sharlayan flag─the nautilus shell that keeps the water of knowledge. ",
+    "description": "In order to accommodate the ninety-nine members of the Forum, the seating in their assembly hall is arranged in the shape of a spiral. Viewed from above, one is reminded of the symbol emblazoned upon the Sharlayan flag─the nautilus shell that keeps the water of knowledge.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -1543,13 +1543,13 @@
   },
   "Balshahn Bazaar": {
     "impression": "As I soaked in all that Radz-at-Han had to offer, I found my gaze drawn in one particular direction. Entranced, I reached for my quill and parchment...",
-    "description": "If commerce is the lifeblood of Radz–at–Han, then these roofed market stalls would be its heart. Balshahn himself was a legendary merchant who made a vast fortune through trade with other nations. It was his final wish that his estate be spent on the construction of a great bazaar, ever flowing with coin and wares. ",
+    "description": "If commerce is the lifeblood of Radz–at–Han, then these roofed market stalls would be its heart. Balshahn himself was a legendary merchant who made a vast fortune through trade with other nations. It was his final wish that his estate be spent on the construction of a great bazaar, ever flowing with coin and wares.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
   "Nilopala Nourishments": {
     "impression": "As I soaked in all that Radz-at-Han had to offer, I found my gaze drawn in one particular direction. Entranced, I reached for my quill and parchment...",
-    "description": "Hamsa were originally reared for the sole purpose of harvesting their venom, until a breeder by the name of Nilopala devised a technique to remove the creatures' toxin glands. The birds suddenly became a viable source of tender, succulent meat, and, before long, Hamsa dishes were considered a staple of Hannish cuisine. ",
+    "description": "Hamsa were originally reared for the sole purpose of harvesting their venom, until a breeder by the name of Nilopala devised a technique to remove the creatures' toxin glands. The birds suddenly became a viable source of tender, succulent meat, and, before long, Hamsa dishes were considered a staple of Hannish cuisine.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -1699,7 +1699,7 @@
   },
   "Ktisis Hyperboreia": {
     "impression": "As I soaked in all that lay at the end of Dawn's journey, I found my gaze drawn in one particular direction. Entranced, I reached for my quill and parchment...",
-    "description": "The most extensive facility in Elpis, Ktisis Hyperboreia is a sprawling complex of magically simulated environs. Concepts awaiting evaluation are brought here for the last stages of observation, and, upon meeting the appropriate criteria, are finally released into the world at large. ",
+    "description": "The most extensive facility in Elpis, Ktisis Hyperboreia is a sprawling complex of magically simulated environs. Concepts awaiting evaluation are brought here for the last stages of observation, and, upon meeting the appropriate criteria, are finally released into the world at large.",
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
@@ -1841,7 +1841,7 @@
     "emoteIcon": 246222,
     "emoteCommand": "/lookout"
   },
-  "Cave Kikitola ": {
+  "Cave Kikitola": {
     "impression": "The sights of Kozama'uka are wondrous to behold. I would capture this scene in honest words, for the truth requires no embellishment.",
     "description": "This enchanting hollow was carved out by the unrelenting deluge of three waterfalls─Xodune, Xo'onu, and Xopik'. In hours of darkness, the profusion of luminous moss within resembles a dazzling night sky, hence the Hanuhanu name  meaning “overflowing with many stars.”",
     "emoteIcon": 246222,

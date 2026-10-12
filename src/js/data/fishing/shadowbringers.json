@@ -384,7 +384,8 @@
     ],
     "tug": "medium",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27434,
@@ -591,7 +592,8 @@
     "tug": "light",
     "folklore": "Vrandtic Fishing Folklore",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27433,
@@ -1108,7 +1110,8 @@
     ],
     "gig": "Large",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27535,
@@ -1138,7 +1141,8 @@
     ],
     "gig": "Large",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 28925,
@@ -1822,7 +1826,8 @@
     "hookset": "Precision",
     "tug": "light",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27456,
@@ -1872,7 +1877,8 @@
     "fishEyes": true,
     "folklore": "Vrandtic Fishing Folklore",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27457,
@@ -2470,7 +2476,8 @@
     ],
     "tug": "light",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 30434,
@@ -3095,7 +3102,8 @@
     "fishEyes": true,
     "folklore": "Vrandtic Fishing Folklore",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 28927,
@@ -3812,7 +3820,8 @@
     "hookset": "Precision",
     "tug": "light",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 28928,
@@ -4069,7 +4078,8 @@
     "tug": "light",
     "folklore": "Vrandtic Fishing Folklore",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27537,
@@ -4837,7 +4847,8 @@
     ],
     "gig": "Normal",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27567,
@@ -4867,7 +4878,8 @@
     ],
     "gig": "Normal",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 38813,
@@ -5210,7 +5222,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27492,
@@ -5249,7 +5262,8 @@
     "tug": "medium",
     "fishEyes": true,
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27493,
@@ -5740,7 +5754,8 @@
     "fishEyes": true,
     "folklore": "Vrandtic Fishing Folklore",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27568,
@@ -6046,7 +6061,8 @@
     ],
     "gig": "Small",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27581,
@@ -6076,7 +6092,8 @@
     ],
     "gig": "Small",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 33323,
@@ -6784,7 +6801,8 @@
     ],
     "tug": "medium",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27506,
@@ -6903,7 +6921,8 @@
     "fishEyes": true,
     "folklore": "Vrandtic Fishing Folklore",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27509,
@@ -6967,7 +6986,8 @@
     "hookset": "Precision",
     "tug": "light",
     "collectable": true,
-    "patch": 5
+    "patch": 5,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 27513,

@@ -11018,7 +11018,8 @@
     "hookset": "Precision",
     "tug": "light",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 22395,
@@ -11088,16 +11089,12 @@
     "name": "Galadion Goby",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -11114,16 +11111,12 @@
     "name": "Galadion Chovy",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -11140,16 +11133,12 @@
     "name": "Rosy Bream",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -11166,16 +11155,12 @@
     "name": "Tripod Fish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11192,16 +11177,12 @@
     "name": "Sunfly",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11218,16 +11199,12 @@
     "name": "Tarnished Shark",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -11244,16 +11221,12 @@
     "name": "Tossed Dagger",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11270,16 +11243,12 @@
     "name": "Jasperhead",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -11296,16 +11265,12 @@
     "name": "Merlthor Lobster",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11322,16 +11287,12 @@
     "name": "Heavenswimmer",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -11348,16 +11309,12 @@
     "name": "Ghoul Barracuda",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11374,16 +11331,12 @@
     "name": "Leopard Eel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -11400,16 +11353,12 @@
     "name": "Marine Bomb",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11426,16 +11375,12 @@
     "name": "Momora Mora",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11452,16 +11397,12 @@
     "name": "Merlthor Butterfly",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11478,16 +11419,12 @@
     "name": "Gladius",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11504,16 +11441,12 @@
     "name": "Rhotano Wahoo",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -11530,16 +11463,12 @@
     "name": "Rhotano Sardine",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -11556,16 +11485,12 @@
     "name": "Deep Plaice",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -11582,16 +11507,12 @@
     "name": "Crimson Monkfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -11608,16 +11529,12 @@
     "name": "Lampfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -11634,16 +11551,12 @@
     "name": "Ogre Eel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -11660,16 +11573,12 @@
     "name": "Cyan Octopus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -11686,16 +11595,12 @@
     "name": "Chrome Hammerhead",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -11712,16 +11617,12 @@
     "name": "Floefish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11738,16 +11639,12 @@
     "name": "Megasquid",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11764,16 +11661,12 @@
     "name": "Oschon's Stone",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11790,16 +11683,12 @@
     "name": "La Noscean Jelly",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11816,16 +11705,12 @@
     "name": "Shaggy Seadragon",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11842,16 +11727,12 @@
     "name": "Net Crawler",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11868,16 +11749,12 @@
     "name": "Dark Nautilus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -11894,16 +11771,12 @@
     "name": "Elder Dinichthys",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11920,16 +11793,12 @@
     "name": "Drunkfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -11946,16 +11815,12 @@
     "name": "Little Leviathan",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -11972,16 +11837,12 @@
     "name": "Sabaton",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -11998,16 +11859,12 @@
     "name": "Shooting Star",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -12024,16 +11881,13 @@
     "name": "Hammerclaw",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12050,16 +11904,13 @@
     "name": "Heavenskey",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12076,16 +11927,13 @@
     "name": "Ghost Shark",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12102,16 +11950,13 @@
     "name": "Quicksilver Blade",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12128,16 +11973,13 @@
     "name": "Navigator's Print",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12154,16 +11996,13 @@
     "name": "Casket Oyster",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12180,16 +12019,13 @@
     "name": "Fishmonger",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12206,16 +12042,13 @@
     "name": "Mythril Sovereign",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12232,16 +12065,13 @@
     "name": "Nimble Dancer",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12258,16 +12088,13 @@
     "name": "Sea Nettle",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12284,16 +12111,13 @@
     "name": "Great Grandmarlin",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12310,16 +12134,13 @@
     "name": "Shipwreck's Sail",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12336,16 +12157,13 @@
     "name": "Azeyma's Sleeve",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12362,16 +12180,13 @@
     "name": "Hi-aetherlouse",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12388,16 +12203,13 @@
     "name": "Floating Saucer",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12414,16 +12226,13 @@
     "name": "Aetheric Seadragon",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12440,16 +12249,13 @@
     "name": "Coral Seadragon",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12466,16 +12272,13 @@
     "name": "Roguesaurus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12492,16 +12295,13 @@
     "name": "Merman's Mane",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12518,16 +12318,13 @@
     "name": "Sweeper",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12544,16 +12341,13 @@
     "name": "Silencer",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12570,16 +12364,13 @@
     "name": "Deep-sea Eel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12596,16 +12387,13 @@
     "name": "Executioner",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12622,16 +12410,13 @@
     "name": "Wild Urchin",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12648,16 +12433,13 @@
     "name": "True Barramundi",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12674,16 +12456,13 @@
     "name": "Mopbeard",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12700,16 +12479,13 @@
     "name": "Slipsnail",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12726,16 +12502,13 @@
     "name": "Aronnax",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12752,16 +12525,13 @@
     "name": "Coccosteus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12778,16 +12548,13 @@
     "name": "Bartholomew the Chopper",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12804,16 +12571,13 @@
     "name": "Prowler",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12830,16 +12594,13 @@
     "name": "Charlatan Survivor",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12856,16 +12617,13 @@
     "name": "Prodigal Son",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12882,16 +12640,13 @@
     "name": "Gugrusaurus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12908,16 +12663,13 @@
     "name": "Funnel Shark",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12934,16 +12686,13 @@
     "name": "The Fallen One",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -12960,16 +12709,12 @@
     "name": "Spectral Megalodon",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Galadion Bay",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay"
+    },
     "bait": [
       [
         {
@@ -12986,16 +12731,12 @@
     "name": "Spectral Discus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Southern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -13012,16 +12753,12 @@
     "name": "Spectral Sea Bo",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "The Northern Strait of Merlthor",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor"
+    },
     "bait": [
       [
         {
@@ -13038,16 +12775,12 @@
     "name": "Spectral Bass",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Rhotano Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea"
+    },
     "bait": [
       [
         {
@@ -13064,16 +12797,15 @@
     "name": "Sothis",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Galadion Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Galadion Bay",
+      "spectral": true,
+      "blue": true,
+      "time": "Night"
+    },
     "bait": [
       [
         {
@@ -13090,16 +12822,15 @@
     "name": "Coral Manta",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Southern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Southern Strait of Merlthor",
+      "spectral": true,
+      "blue": true,
+      "time": "Night"
+    },
     "bait": [
       [
         {
@@ -13116,16 +12847,15 @@
     "name": "Stonescale",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rhotano Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Rhotano Sea",
+      "spectral": true,
+      "blue": true,
+      "time": "Sunset"
+    },
     "bait": [
       [
         {
@@ -13142,16 +12872,15 @@
     "name": "Elasmosaurus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Northern Merlthor Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Northern Strait of Merlthor",
+      "spectral": true,
+      "blue": true,
+      "time": "Day"
+    },
     "bait": [
       [
         {
@@ -13168,16 +12897,12 @@
     "name": "Tortoiseshell Crab",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13194,16 +12919,12 @@
     "name": "Lady's Cameo",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13220,16 +12941,12 @@
     "name": "Metallic Boxfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13246,16 +12963,12 @@
     "name": "Goobbue Ray",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13272,16 +12985,12 @@
     "name": "Watermoura",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13298,16 +13007,12 @@
     "name": "King Cobrafish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13324,16 +13029,12 @@
     "name": "Mamahi-mahi",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13350,16 +13051,12 @@
     "name": "Lavandin Remora",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13376,16 +13073,12 @@
     "name": "Spectral Butterfly",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13402,16 +13095,12 @@
     "name": "Cieldalaes Geode",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes"
+    },
     "bait": [
       [
         {
@@ -13428,16 +13117,13 @@
     "name": "Titanshell Crab",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13454,16 +13140,13 @@
     "name": "Mythril Boxfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13480,16 +13163,13 @@
     "name": "Mistbeard's Cup",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13506,16 +13186,13 @@
     "name": "Anomalocaris Saron",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13532,16 +13209,13 @@
     "name": "Flaming Eel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13558,16 +13232,13 @@
     "name": "Jetborne Manta",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13584,16 +13255,13 @@
     "name": "Devil's Sting",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13610,16 +13278,13 @@
     "name": "Callichthyid",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13636,16 +13301,13 @@
     "name": "Meandering Mora",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13662,16 +13324,15 @@
     "name": "Hafgufa",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Cieldalaes Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Cieldalaes",
+      "spectral": true,
+      "blue": true,
+      "time": "Night"
+    },
     "bait": [
       [
         {
@@ -13688,16 +13349,12 @@
     "name": "Thaliak Crab",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13714,16 +13371,12 @@
     "name": "Star of the Destroyer",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13740,16 +13393,12 @@
     "name": "True Scad",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13766,16 +13415,12 @@
     "name": "Blooded Wrasse",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13792,16 +13437,12 @@
     "name": "Bloodpolish Crab",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13818,16 +13459,12 @@
     "name": "Blue Stitcher",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13844,16 +13481,12 @@
     "name": "Bloodfresh Tuna",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13870,16 +13503,12 @@
     "name": "Sunken Mask",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13896,16 +13525,12 @@
     "name": "Spectral Eel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13922,16 +13547,12 @@
     "name": "Bareface",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Bloodbrine Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea"
+    },
     "bait": [
       [
         {
@@ -13948,16 +13569,13 @@
     "name": "Oracular Crab",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -13974,16 +13592,13 @@
     "name": "Dravanian Bream",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14000,16 +13615,13 @@
     "name": "Skaldminni",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14026,16 +13638,13 @@
     "name": "Serrated Clam",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14052,16 +13661,13 @@
     "name": "Beatific Vision",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14078,16 +13684,13 @@
     "name": "Exterminator",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14104,16 +13707,13 @@
     "name": "Gory Tuna",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14130,16 +13730,13 @@
     "name": "Ticinepomis",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14156,16 +13753,13 @@
     "name": "Quartz Hammerhead",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14182,16 +13776,15 @@
     "name": "Seafaring Toad",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Bloodbrine Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Bloodbrine Sea",
+      "spectral": true,
+      "blue": true,
+      "time": "Day"
+    },
     "bait": [
       [
         {
@@ -14208,16 +13801,12 @@
     "name": "Crow Puffer",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14234,16 +13823,12 @@
     "name": "Rothlyt Kelp",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14260,16 +13845,12 @@
     "name": "Living Lantern",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14286,16 +13867,12 @@
     "name": "Honeycomb Fish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14312,16 +13889,12 @@
     "name": "Godsbed",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14338,16 +13911,12 @@
     "name": "Lansquenet",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14364,16 +13933,12 @@
     "name": "Thavnairian Shark",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14390,16 +13955,12 @@
     "name": "Nephrite Eel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14416,16 +13977,12 @@
     "name": "Spectresaur",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14442,16 +13999,12 @@
     "name": "Ginkgo Fin",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Outer Rothlyt Sound",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound"
+    },
     "bait": [
       [
         {
@@ -14468,16 +14021,13 @@
     "name": "Garum Jug",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14494,16 +14044,13 @@
     "name": "Smooth Jaguar",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14520,16 +14067,13 @@
     "name": "Rothlyt Mussel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14546,16 +14090,13 @@
     "name": "Levi Elver",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14572,16 +14113,13 @@
     "name": "Pearl Bombfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14598,16 +14136,13 @@
     "name": "Trollfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14624,16 +14159,13 @@
     "name": "Panoptes",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14650,16 +14182,13 @@
     "name": "Crepe Sole",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14676,16 +14205,13 @@
     "name": "Knifejaw",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14702,16 +14228,15 @@
     "name": "Placodus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Rothlyt Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Rothlyt Sound",
+      "spectral": true,
+      "blue": true,
+      "time": "Sunset"
+    },
     "bait": [
       [
         {
@@ -14728,16 +14253,12 @@
     "name": "Pink Shrimp",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
     "bait": [
       [
         {
@@ -14754,16 +14275,12 @@
     "name": "Sirensong Mussel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
     "bait": [
       [
         {
@@ -14780,16 +14297,12 @@
     "name": "Arrowhead",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
     "bait": [
       [
         {
@@ -14806,16 +14319,12 @@
     "name": "Deepshade Sardine",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
     "bait": [
       [
         {
@@ -14832,48 +14341,36 @@
     "name": "Sirensong Mullet",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    }
   },
   {
     "id": 40526,
     "name": "Selkie Puffer",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    }
   },
   {
     "id": 40527,
     "name": "Poet's Pipe",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
     "bait": [
       [
         {
@@ -14890,16 +14387,12 @@
     "name": "Marine Matanga",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
     "bait": [
       [
         {
@@ -14916,16 +14409,12 @@
     "name": "Spectral Coelacanth",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
     "bait": [
       [
         {
@@ -14942,16 +14431,12 @@
     "name": "Dusk Shark",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Sirensong Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
     "bait": [
       [
         {
@@ -14968,16 +14453,13 @@
     "name": "Mermaid Scale",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -14994,16 +14476,13 @@
     "name": "Broadhead",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15020,16 +14499,13 @@
     "name": "Vivid Pink Shrimp",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15046,16 +14522,13 @@
     "name": "Sunken Coelacanth",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15072,16 +14545,13 @@
     "name": "Siren's Sigh",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15098,16 +14568,13 @@
     "name": "Black-jawed Helicoprion",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15124,16 +14591,13 @@
     "name": "Impostopus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15150,16 +14614,13 @@
     "name": "Jade Mantis Shrimp",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15176,16 +14637,13 @@
     "name": "Nymeia's Wheel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15202,16 +14660,15 @@
     "name": "Taniwha",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Sirensong Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true,
+      "blue": true,
+      "time": "Day"
+    },
     "bait": [
       [
         {
@@ -15228,16 +14685,12 @@
     "name": "Ruby Herring",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    },
     "bait": [
       [
         {
@@ -15254,16 +14707,12 @@
     "name": "Whirlpool Turban",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    },
     "bait": [
       [
         {
@@ -15280,16 +14729,12 @@
     "name": "Leopard Prawn",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    },
     "bait": [
       [
         {
@@ -15306,16 +14751,12 @@
     "name": "Spear Squid",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    },
     "bait": [
       [
         {
@@ -15332,48 +14773,36 @@
     "name": "Floating Lantern",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    }
   },
   {
     "id": 40546,
     "name": "Rubescent Tatsunoko",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    }
   },
   {
     "id": 40547,
     "name": "Hatatate",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    },
     "bait": [
       [
         {
@@ -15390,16 +14819,12 @@
     "name": "Silent Shark",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    },
     "bait": [
       [
         {
@@ -15416,16 +14841,12 @@
     "name": "Spectral Wrasse",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    },
     "bait": [
       [
         {
@@ -15442,16 +14863,12 @@
     "name": "Mizuhiki",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Coast",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane"
+    },
     "bait": [
       [
         {
@@ -15468,16 +14885,13 @@
     "name": "Snapping Koban",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15494,16 +14908,13 @@
     "name": "Silkweft Prawn",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15520,16 +14931,13 @@
     "name": "Stingfin Trevally",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15546,16 +14954,13 @@
     "name": "Swordtip Squid",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15572,16 +14977,13 @@
     "name": "Mailfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15598,16 +15000,13 @@
     "name": "Idaten's Bolt",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15624,16 +15023,13 @@
     "name": "Maelstrom Turban",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15650,16 +15046,13 @@
     "name": "Shoshitsuki",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15676,16 +15069,13 @@
     "name": "Spadefish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15702,16 +15092,15 @@
     "name": "Glass Dragon",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Kugane Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true,
+      "blue": true,
+      "time": "Night"
+    },
     "bait": [
       [
         {
@@ -15728,16 +15117,12 @@
     "name": "Crimson Kelp",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
     "bait": [
       [
         {
@@ -15754,16 +15139,12 @@
     "name": "Reef Squid",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
     "bait": [
       [
         {
@@ -15780,48 +15161,36 @@
     "name": "Pinebark Flounder",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    }
   },
   {
     "id": 40564,
     "name": "Mantle Moray",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    }
   },
   {
     "id": 40565,
     "name": "Shisui Goby",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
     "bait": [
       [
         {
@@ -15838,32 +15207,24 @@
     "name": "Sanbaso",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    }
   },
   {
     "id": 40567,
     "name": "Barded Lobster",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
     "bait": [
       [
         {
@@ -15880,16 +15241,12 @@
     "name": "Violet Sentry",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
     "bait": [
       [
         {
@@ -15906,16 +15263,12 @@
     "name": "Spectral Snake Eel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
     "bait": [
       [
         {
@@ -15932,16 +15285,12 @@
     "name": "Heavensent Shark",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Open Ruby Sea",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
     "bait": [
       [
         {
@@ -15958,16 +15307,13 @@
     "name": "Fleeting Squid",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -15984,16 +15330,13 @@
     "name": "Bowbarb Lobster",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16010,16 +15353,13 @@
     "name": "Pitch Pickle",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16036,16 +15376,13 @@
     "name": "Senbei Octopus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16062,16 +15399,13 @@
     "name": "Tentacle Thresher",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16088,16 +15422,13 @@
     "name": "Bekko Rockhugger",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16114,16 +15445,13 @@
     "name": "Yellow Iris",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16140,16 +15468,13 @@
     "name": "Crimson Sentry",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16166,16 +15491,13 @@
     "name": "Flying Squid",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16192,16 +15514,15 @@
     "name": "Hells' Claw",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Ruby Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true,
+      "blue": true,
+      "time": "Sunset"
+    },
     "bait": [
       [
         {
@@ -16218,16 +15539,12 @@
     "name": "Catching Carp",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    },
     "bait": [
       [
         {
@@ -16244,16 +15561,12 @@
     "name": "Garlean Bluegill",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    },
     "bait": [
       [
         {
@@ -16270,16 +15583,12 @@
     "name": "Yanxian Softshell",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    },
     "bait": [
       [
         {
@@ -16296,48 +15605,36 @@
     "name": "Princess Salmon",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    }
   },
   {
     "id": 40585,
     "name": "Calligraph",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    }
   },
   {
     "id": 40586,
     "name": "Singular Shrimp",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    },
     "bait": [
       [
         {
@@ -16354,16 +15651,12 @@
     "name": "Brocade Carp",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    },
     "bait": [
       [
         {
@@ -16380,16 +15673,12 @@
     "name": "Yanxian Sturgeon",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    },
     "bait": [
       [
         {
@@ -16406,16 +15695,12 @@
     "name": "Spectral Kotsu Zetsu",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    },
     "bait": [
       [
         {
@@ -16432,16 +15717,12 @@
     "name": "Fishy Shark",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Lower One River",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River"
+    },
     "bait": [
       [
         {
@@ -16458,16 +15739,13 @@
     "name": "Gensui Shrimp",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16484,16 +15762,13 @@
     "name": "Yato-no-kami",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16510,16 +15785,13 @@
     "name": "Heron's Eel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16536,16 +15808,13 @@
     "name": "Crowshadow Mussel",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16562,16 +15831,13 @@
     "name": "Yanxian Goby",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16588,16 +15854,13 @@
     "name": "Iridescent Trout",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16614,16 +15877,13 @@
     "name": "Un-Namazu",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16640,16 +15900,13 @@
     "name": "Gakugyo",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16666,16 +15923,13 @@
     "name": "Ginrin Goshiki",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16692,16 +15946,15 @@
     "name": "Jewel of Plum Spring",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "One River Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true,
+      "blue": true,
+      "time": "Day"
+    },
     "bait": [
       [
         {
@@ -16718,160 +15971,120 @@
     "name": "First Mate's Finger",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
   },
   {
     "id": 51210,
     "name": "Specterfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
   },
   {
     "id": 51211,
     "name": "Rhotano Permit",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
   },
   {
     "id": 51212,
     "name": "Rhotano Dahlia",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
   },
   {
     "id": 51213,
     "name": "Lodesmate's Pen",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
   },
   {
     "id": 51214,
     "name": "Rhotano Roosterfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
   },
   {
     "id": 51215,
     "name": "Rhotanosaurus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
   },
   {
     "id": 51216,
     "name": "Royal Handmaiden",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
   },
   {
     "id": 51217,
     "name": "Spectral Starfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
   },
   {
     "id": 51218,
     "name": "Frolicsome Fish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island"
+    },
     "bait": [
       [
         {
@@ -16888,16 +16101,13 @@
     "name": "Captain's Finger",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16914,48 +16124,39 @@
     "name": "Bright Red Coral",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    }
   },
   {
     "id": 51221,
     "name": "Royal Favorite",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    }
   },
   {
     "id": 51222,
     "name": "Pirate's Purse",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -16972,48 +16173,39 @@
     "name": "Captain's Pen",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    }
   },
   {
     "id": 51224,
     "name": "Tylosaurus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    }
   },
   {
     "id": 51225,
     "name": "Cieldalaes Roosterfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -17030,16 +16222,13 @@
     "name": "Renegade Rhotanosaurus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -17056,16 +16245,13 @@
     "name": "Red Boarfish",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -17082,16 +16268,15 @@
     "name": "Akupara",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Unnamed Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true,
+      "blue": true,
+      "time": "Night"
+    },
     "bait": [
       [
         {
@@ -17108,144 +16293,108 @@
     "name": "Red Mantis",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    }
   },
   {
     "id": 51230,
     "name": "Datli Gwl",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    }
   },
   {
     "id": 51231,
     "name": "Agama's Strand",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    }
   },
   {
     "id": 51232,
     "name": "Palaka's Blade",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    }
   },
   {
     "id": 51233,
     "name": "Parjanya Wrasse",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    }
   },
   {
     "id": 51234,
     "name": "Simolestes",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    }
   },
   {
     "id": 51235,
     "name": "Thavnasaurus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    }
   },
   {
     "id": 51237,
     "name": "Spectral Grouper",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    }
   },
   {
     "id": 51238,
     "name": "Silkfin",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    },
     "bait": [
       [
         {
@@ -17262,64 +16411,52 @@
     "name": "Great Red Mantis",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
   },
   {
     "id": 51240,
     "name": "Guzel Gwl",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
   },
   {
     "id": 51241,
     "name": "Darpana",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
   },
   {
     "id": 51242,
     "name": "Silverdart",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -17336,16 +16473,13 @@
     "name": "Satrapsaurus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -17362,48 +16496,39 @@
     "name": "Tiger Mantis",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
   },
   {
     "id": 51245,
     "name": "Mehi-mahi",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
   },
   {
     "id": 51246,
     "name": "Pliosaurus",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    },
     "bait": [
       [
         {
@@ -17420,16 +16545,15 @@
     "name": "Manasvin",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Spectral Current",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
     "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true,
+      "blue": true,
+      "time": "Night"
+    },
     "bait": [
       [
         {
@@ -17446,15 +16570,11 @@
     "name": "Junior Jinbei",
     "method": "Fishing",
     "level": 1,
-    "zone": "The *Endeavor*",
+    "zone": "The Endeavor",
     "spot": "Thavnair Margin",
-    "map": {
-      "image": "o1a1-00",
-      "scale": 400,
-      "x": 6.1,
-      "y": 6.1,
-      "radius": 0.2
-    },
-    "anyTime": true
+    "anyTime": true,
+    "ocean": {
+      "stop": "Thavnair"
+    }
   }
 ]

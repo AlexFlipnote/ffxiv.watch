@@ -265,7 +265,8 @@
       {
         "id": 43926,
         "name": "Rarefied Mountain Flax",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -555,7 +556,8 @@
       {
         "id": 43917,
         "name": "Rarefied Raw Ihuykanite",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -583,7 +585,8 @@
       {
         "id": 43924,
         "name": "Rarefied Kozama'uka Chamomile",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -621,7 +624,8 @@
       {
         "id": 43919,
         "name": "Rarefied Raw Dark Amber",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1092,12 +1096,14 @@
       {
         "id": 43927,
         "name": "Rarefied Sweet Kukuru Bean",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 43928,
         "name": "Rarefied Dark Mahogany Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Orange Gatherers' Scrip"
       }
     ]
   },
@@ -1500,12 +1506,14 @@
       {
         "id": 43920,
         "name": "Rarefied Titanium Gold Ore",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 43921,
         "name": "Rarefied Magnesite Ore",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Orange Gatherers' Scrip"
       }
     ]
   },
@@ -1543,13 +1551,15 @@
       {
         "id": 44234,
         "name": "Rarefied Acacia Bark",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 43929,
         "name": "Rarefied Acacia Log",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Orange Gatherers' Scrip"
       }
     ]
   },
@@ -1908,7 +1918,8 @@
       {
         "id": 43925,
         "name": "Rarefied Wild Agave",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Orange Gatherers' Scrip"
       }
     ]
   },
@@ -1946,13 +1957,15 @@
       {
         "id": 44233,
         "name": "Rarefied White Gold Ore",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 43922,
         "name": "Rarefied Ra'Kaznar Ore",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Orange Gatherers' Scrip"
       }
     ]
   },
@@ -2227,7 +2240,8 @@
       {
         "id": 43918,
         "name": "Rarefied Artificial Volcanic Rock",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Orange Gatherers' Scrip"
       }
     ]
   },
@@ -2266,7 +2280,8 @@
         "id": 43923,
         "name": "Rarefied Ash Soil",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Orange Gatherers' Scrip"
       }
     ]
   },
@@ -2305,7 +2320,8 @@
         "id": 43930,
         "name": "Rarefied Windsbalm Bay Leaf",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Orange Gatherers' Scrip"
       }
     ]
   },

@@ -102,6 +102,11 @@
       {
         "id": 9,
         "name": "Ice Crystal"
+      },
+      {
+        "id": 12534,
+        "name": "Mythrite Ore",
+        "hidden": true
       }
     ]
   },
@@ -279,7 +284,8 @@
       {
         "id": 32988,
         "name": "Rarefied Mythrite Sand",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -307,7 +313,8 @@
       {
         "id": 33010,
         "name": "Rarefied Rainbow Cotton Boll",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -791,6 +798,12 @@
         "id": 29671,
         "name": "Oddly Specific Obsidian",
         "stars": 1
+      },
+      {
+        "id": 29672,
+        "name": "Oddly Specific Mineral Sand",
+        "stars": 1,
+        "hidden": true
       }
     ]
   },
@@ -819,6 +832,12 @@
         "id": 29674,
         "name": "Oddly Specific Amber",
         "stars": 2
+      },
+      {
+        "id": 29675,
+        "name": "Oddly Specific Bauble",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -861,6 +880,12 @@
         "id": 13765,
         "name": "Old World Fig Seeds",
         "stars": 3
+      },
+      {
+        "id": 10335,
+        "name": "Dark Matter Cluster",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -903,6 +928,11 @@
       {
         "id": 8,
         "name": "Fire Crystal"
+      },
+      {
+        "id": 12537,
+        "name": "Titanium Ore",
+        "hidden": true
       }
     ]
   },
@@ -979,6 +1009,11 @@
       {
         "id": 8,
         "name": "Fire Crystal"
+      },
+      {
+        "id": 12893,
+        "name": "Dark Chestnut",
+        "hidden": true
       }
     ]
   },
@@ -1013,6 +1048,11 @@
       {
         "id": 8,
         "name": "Fire Crystal"
+      },
+      {
+        "id": 12878,
+        "name": "Cyclops Onion",
+        "hidden": true
       }
     ]
   },
@@ -1050,17 +1090,20 @@
       {
         "id": 32970,
         "name": "Rarefied Pyrite",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32971,
         "name": "Rarefied Chalcocite",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32972,
         "name": "Rarefied Limonite",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1150,17 +1193,20 @@
       {
         "id": 32992,
         "name": "Rarefied Dark Chestnut Sap",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32993,
         "name": "Rarefied Dark Chestnut Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32994,
         "name": "Rarefied Dark Chestnut Branch",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1435,12 +1481,14 @@
       {
         "id": 32995,
         "name": "Rarefied Dark Chestnut",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32996,
         "name": "Rarefied Dark Chestnut Resin",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1500,6 +1548,12 @@
         "id": 29676,
         "name": "Oddly Specific Dark Matter",
         "stars": 2
+      },
+      {
+        "id": 29677,
+        "name": "Oddly Specific Striking Stone",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -1528,6 +1582,12 @@
         "id": 29669,
         "name": "Oddly Specific Latex",
         "stars": 1
+      },
+      {
+        "id": 29670,
+        "name": "Oddly Specific Fossil Dust",
+        "stars": 1,
+        "hidden": true
       }
     ]
   },
@@ -1841,6 +1901,11 @@
       {
         "id": 10,
         "name": "Wind Crystal"
+      },
+      {
+        "id": 12535,
+        "name": "Hardsilver Ore",
+        "hidden": true
       }
     ]
   },
@@ -2001,6 +2066,12 @@
         "id": 29676,
         "name": "Oddly Specific Dark Matter",
         "stars": 2
+      },
+      {
+        "id": 29677,
+        "name": "Oddly Specific Striking Stone",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -2031,6 +2102,11 @@
       {
         "id": 11,
         "name": "Earth Crystal"
+      },
+      {
+        "id": 12879,
+        "name": "Emerald Beans",
+        "hidden": true
       }
     ]
   },
@@ -2617,6 +2693,12 @@
         "id": 29674,
         "name": "Oddly Specific Amber",
         "stars": 2
+      },
+      {
+        "id": 29675,
+        "name": "Oddly Specific Bauble",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -2680,12 +2762,14 @@
       {
         "id": 32973,
         "name": "Rarefied Abalathian Spring Water",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32974,
         "name": "Rarefied Aurum Regis Sand",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -3045,6 +3129,11 @@
       {
         "id": 13,
         "name": "Water Crystal"
+      },
+      {
+        "id": 12579,
+        "name": "Birch Log",
+        "hidden": true
       }
     ]
   },
@@ -3227,6 +3316,12 @@
         "id": 29671,
         "name": "Oddly Specific Obsidian",
         "stars": 1
+      },
+      {
+        "id": 29672,
+        "name": "Oddly Specific Mineral Sand",
+        "stars": 1,
+        "hidden": true
       }
     ]
   },
@@ -3255,6 +3350,12 @@
         "id": 29669,
         "name": "Oddly Specific Latex",
         "stars": 1
+      },
+      {
+        "id": 29670,
+        "name": "Oddly Specific Fossil Dust",
+        "stars": 1,
+        "hidden": true
       }
     ]
   },
@@ -3471,6 +3572,12 @@
         "id": 31130,
         "name": "Oddly Specific Primordial Log",
         "stars": 2
+      },
+      {
+        "id": 31131,
+        "name": "Oddly Specific Primordial Resin",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -3499,6 +3606,12 @@
         "id": 31132,
         "name": "Oddly Specific Primordial Ore",
         "stars": 2
+      },
+      {
+        "id": 31133,
+        "name": "Oddly Specific Primordial Asphaltum",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -3527,6 +3640,12 @@
         "id": 31130,
         "name": "Oddly Specific Primordial Log",
         "stars": 2
+      },
+      {
+        "id": 31131,
+        "name": "Oddly Specific Primordial Resin",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -3555,6 +3674,12 @@
         "id": 31132,
         "name": "Oddly Specific Primordial Ore",
         "stars": 2
+      },
+      {
+        "id": 31133,
+        "name": "Oddly Specific Primordial Asphaltum",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },

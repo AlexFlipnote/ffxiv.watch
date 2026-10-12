@@ -194,7 +194,9 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20088,
@@ -811,7 +813,8 @@
     "fishEyes": true,
     "folklore": "Gyr Abanian Fishing Folklore",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 21174,
@@ -1744,7 +1747,9 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 23065,
@@ -1922,7 +1927,8 @@
     "fishEyes": true,
     "folklore": "Othardian Fishing Folklore",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20101,
@@ -2582,7 +2588,7 @@
     "method": "Spearfishing",
     "level": 65,
     "zone": "The Ruby Sea",
-    "spot": "The *Adventure*",
+    "spot": "The Adventure",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -2708,7 +2714,7 @@
     "method": "Spearfishing",
     "level": 65,
     "zone": "The Ruby Sea",
-    "spot": "The *Adventure*",
+    "spot": "The Adventure",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -2813,7 +2819,7 @@
     "method": "Spearfishing",
     "level": 65,
     "zone": "The Ruby Sea",
-    "spot": "The *Adventure*",
+    "spot": "The Adventure",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -2897,7 +2903,7 @@
     "method": "Spearfishing",
     "level": 65,
     "zone": "The Ruby Sea",
-    "spot": "The *Adventure*",
+    "spot": "The Adventure",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -3136,7 +3142,8 @@
     "hookset": "Powerful",
     "tug": "heavy",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20105,
@@ -3176,7 +3183,7 @@
     "method": "Spearfishing",
     "level": 70,
     "zone": "The Ruby Sea",
-    "spot": "The *Kobayashi Maru*",
+    "spot": "The Kobayashi Maru",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -3197,7 +3204,7 @@
     "method": "Spearfishing",
     "level": 70,
     "zone": "The Ruby Sea",
-    "spot": "The *Kobayashi Maru*",
+    "spot": "The Kobayashi Maru",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -3218,7 +3225,7 @@
     "method": "Spearfishing",
     "level": 70,
     "zone": "The Ruby Sea",
-    "spot": "The *Kobayashi Maru*",
+    "spot": "The Kobayashi Maru",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -3239,7 +3246,7 @@
     "method": "Spearfishing",
     "level": 70,
     "zone": "The Ruby Sea",
-    "spot": "The *Kobayashi Maru*",
+    "spot": "The Kobayashi Maru",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -3282,7 +3289,8 @@
     ],
     "gig": "Large",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20217,
@@ -3290,7 +3298,7 @@
     "method": "Spearfishing",
     "level": 70,
     "zone": "The Ruby Sea",
-    "spot": "The *Kobayashi Maru*",
+    "spot": "The Kobayashi Maru",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -3313,7 +3321,7 @@
     "method": "Spearfishing",
     "level": 70,
     "zone": "The Ruby Sea",
-    "spot": "The *Kobayashi Maru*",
+    "spot": "The Kobayashi Maru",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -3356,7 +3364,8 @@
     ],
     "gig": "Large",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20528,
@@ -3393,7 +3402,7 @@
     "method": "Spearfishing",
     "level": 70,
     "zone": "The Ruby Sea",
-    "spot": "The *Kobayashi Maru*",
+    "spot": "The Kobayashi Maru",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -3421,7 +3430,7 @@
     "method": "Spearfishing",
     "level": 70,
     "zone": "The Ruby Sea",
-    "spot": "*Kobayashi Maru*'s Northern Wake",
+    "spot": "Kobayashi Maru's Northern Wake",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -3904,7 +3913,8 @@
     },
     "anyTime": true,
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36573,
@@ -3934,7 +3944,8 @@
     ],
     "gig": "Small",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36578,
@@ -3964,7 +3975,8 @@
     ],
     "gig": "Large",
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36661,
@@ -4274,7 +4286,8 @@
     },
     "anyTime": true,
     "collectable": true,
-    "patch": 6
+    "patch": 6,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 36581,
@@ -4634,7 +4647,9 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20120,
@@ -5169,7 +5184,9 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20052,
@@ -5903,7 +5920,8 @@
     "tug": "medium",
     "fishEyes": true,
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20051,
@@ -5939,7 +5957,8 @@
     "tug": "heavy",
     "folklore": "Othardian Fishing Folklore",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20119,
@@ -6279,7 +6298,8 @@
     ],
     "gig": "Normal",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20228,
@@ -6353,7 +6373,8 @@
     ],
     "gig": "Normal",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 23068,
@@ -7180,7 +7201,9 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20073,
@@ -7252,7 +7275,8 @@
     "hookset": "Powerful",
     "tug": "heavy",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20075,
@@ -7649,7 +7673,8 @@
     "fishEyes": true,
     "folklore": "Gyr Abanian Fishing Folklore",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20041,
@@ -8069,7 +8094,8 @@
     ],
     "gig": "Large",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20239,
@@ -8099,7 +8125,8 @@
     ],
     "gig": "Large",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 22394,
@@ -8497,7 +8524,8 @@
     "fishEyes": true,
     "folklore": "Othardian Fishing Folklore",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20031,
@@ -8559,7 +8587,9 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20080,
@@ -9739,7 +9769,8 @@
     ],
     "gig": "Small",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20234,
@@ -9769,7 +9800,8 @@
     ],
     "gig": "Small",
     "collectable": true,
-    "patch": 4
+    "patch": 4,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 20054,

@@ -120,12 +120,14 @@
       {
         "id": 36293,
         "name": "Rarefied Raw Ametrine",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 36295,
         "name": "Rarefied Sharlayan Rock Salt",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -331,7 +333,8 @@
       {
         "id": 36292,
         "name": "Rarefied Chloroschist",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -412,13 +415,15 @@
       {
         "id": 36307,
         "name": "Rarefied Dark Rye",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 36309,
         "name": "Rarefied Iceberg Lettuce",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -527,7 +532,8 @@
       {
         "id": 36291,
         "name": "Rarefied High Durium Ore",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -692,7 +698,8 @@
       {
         "id": 36301,
         "name": "Rarefied Thavnairian Perilla Leaf",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -730,12 +737,14 @@
       {
         "id": 36303,
         "name": "Rarefied Palm Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 36305,
         "name": "Rarefied Coconut",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -820,7 +829,8 @@
         "id": 36300,
         "name": "Rarefied Pewter Ore",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1119,7 +1129,8 @@
       {
         "id": 36304,
         "name": "Rarefied Red Pine Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1239,12 +1250,14 @@
       {
         "id": 36296,
         "name": "Rarefied Phrygian Gold Ore",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 36298,
         "name": "Rarefied Eblan Alumen",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1417,7 +1430,8 @@
       {
         "id": 36294,
         "name": "Rarefied Bismuth Ore",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1762,7 +1776,7 @@
     "job": "Botanist",
     "level": 90,
     "zone": "Ultima Thule",
-    "spot": "The *Ragnarok*",
+    "spot": "The Ragnarok",
     "quest": "Inscrutable Tastes",
     "map": {
       "image": "u5f2-00",
@@ -1791,7 +1805,8 @@
         "id": 36310,
         "name": "Rarefied AR-Caean Cotton Boll",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -2049,13 +2064,15 @@
       {
         "id": 36297,
         "name": "Rarefied Blue Zircon",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 36299,
         "name": "Rarefied Annite",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -2164,7 +2181,8 @@
       {
         "id": 36302,
         "name": "Rarefied Ironwood Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -2250,12 +2268,14 @@
       {
         "id": 36306,
         "name": "Rarefied Sykon",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 36308,
         "name": "Rarefied Elder Nutmeg",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },

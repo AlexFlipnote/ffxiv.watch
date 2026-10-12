@@ -2029,7 +2029,7 @@
     "level": 55
   },
   "5026": {
-    "description": "Records of the bowfin being caught in the Black Shroud date back to the time of the first Elezen settlers, and according to the Seedseers of Stillglade Fane, the elementals tell us that the elongated wavekin was one of the first of the Twelve's creations. ",
+    "description": "Records of the bowfin being caught in the Black Shroud date back to the time of the first Elezen settlers, and according to the Seedseers of Stillglade Fane, the elementals tell us that the elongated wavekin was one of the first of the Twelve's creations.",
     "icon": 29290,
     "category": "Seafood",
     "level": 55
@@ -2999,7 +2999,25 @@
     "level": 120,
     "alsoAt": [
       "South Banepool, Coerthas Western Highlands"
-    ]
+    ],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          49,
+          6
+        ],
+        [
+          81,
+          7
+        ],
+        [
+          114,
+          11
+        ]
+      ]
+    }
   },
   "12714": {
     "description": "This bone white cliff-dwelling coral withstands the constant battering of the Sea of Clouds' winds by hiding within a lightweight, yet remarkably sturdy exoskeleton, emerging to feed only when the weather permits.",
@@ -3020,7 +3038,7 @@
     ]
   },
   "12716": {
-    "description": "It is believed that this cylindrical vilekin can locate and devour wind-aspected aether in the Sea of Clouds, in turn, making the creature lighter than air. ",
+    "description": "It is believed that this cylindrical vilekin can locate and devour wind-aspected aether in the Sea of Clouds, in turn, making the creature lighter than air.",
     "icon": 29722,
     "category": "Seafood",
     "level": 120
@@ -3062,7 +3080,25 @@
     "alsoAt": [
       "Whilom River, The Dravanian Forelands",
       "The Smoldering Wastes, The Dravanian Forelands"
-    ]
+    ],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          209,
+          31
+        ],
+        [
+          349,
+          39
+        ],
+        [
+          491,
+          63
+        ]
+      ]
+    }
   },
   "12722": {
     "description": "This freshwater shrimp uses its long, powerful claws to not only tear mussels from the rocks they are attached, but also pry them open and slice the containing flesh clean from the shells.",
@@ -3089,7 +3125,25 @@
     "description": "Concerning the origins of the glacier core, there are two differing theories. One is that the icy beings are the undeveloped larvae of ice sprites. The other is that they are not living creatures at all, but lightweight spheres of manifested aether, not unlike crystals.",
     "icon": 29706,
     "category": "Seafood",
-    "level": 120
+    "level": 120,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          141,
+          13
+        ],
+        [
+          236,
+          16
+        ],
+        [
+          332,
+          26
+        ]
+      ]
+    }
   },
   "12725": {
     "description": "Unable to survive in cold temperatures, the only ogre horn snails left in Coerthas are those which live in the warm waters of thermal springs.",
@@ -3101,7 +3155,25 @@
     "description": "The sorcerer fish has the uncanny ability to manipulate the fire-aspected aether naturally occurring in its sanguine humours to warm the water around its body. This allows the wavekin to survive in temperatures that would most certainly mean death for lesser species.",
     "icon": 29807,
     "category": "Seafood",
-    "level": 125
+    "level": 125,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          294,
+          12
+        ],
+        [
+          492,
+          15
+        ],
+        [
+          691,
+          24
+        ]
+      ]
+    }
   },
   "12727": {
     "description": "The hotrod is similar to the sorcerer fish in that it channels the fire-aspected aether found in its sanguine humours and concentrates it in the whiskers found near its head. The whiskers can then be used as a weapon to stun or even injure prey.",
@@ -3219,7 +3291,25 @@
     "description": "By separating its eyes from its head, the bubble eye goldfish is able to see in far more directions than other wavekin─a trait invaluable in waters where predators might approach from any direction.",
     "icon": 29408,
     "category": "Seafood",
-    "level": 133
+    "level": 133,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          74,
+          9
+        ],
+        [
+          123,
+          11
+        ],
+        [
+          173,
+          18
+        ]
+      ]
+    }
   },
   "12740": {
     "description": "As the name implies, grass carp dine solely on water grasses, shunning the carnivorous eating habits of their cousins for a healthier diet. Unfortunately, this diet gives the fish a very bitter flavor, making it unsuitable for consumption.",
@@ -3241,7 +3331,25 @@
     "description": "A unique variety of brightly mottled catfish which swims upside down in order to confuse both prey and predators.",
     "icon": 29397,
     "category": "Seafood",
-    "level": 133
+    "level": 133,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          72,
+          17
+        ],
+        [
+          120,
+          21
+        ],
+        [
+          170,
+          33
+        ]
+      ]
+    }
   },
   "12743": {
     "description": "To the layman's eye, the repeated pressing of perpetually puckered mouths by two of these wavekin appears to be an act of affection, when in fact, it is heated territorial dispute.",
@@ -3433,7 +3541,25 @@
     "description": "This breed of ancient wavekin is covered in brilliant diamond-shaped scales that blind potential predators. Bichirs feed solely on water-skipping vilekin, making them much hated by the Gnath, who will spear them merely out of spite and leave the corpses to rot in the water.",
     "icon": 29402,
     "category": "Seafood",
-    "level": 139
+    "level": 139,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          311,
+          16
+        ],
+        [
+          520,
+          20
+        ],
+        [
+          731,
+          32
+        ]
+      ]
+    }
   },
   "12768": {
     "description": "No more than a marble oscar lacking pigment, noontide oscars are rare finds simply for the fact that they are unable to blend in with their surroundings, making them more visible to predators. There are those, however, who claim the bone white wavekin possess special powers, making them highly sought after by witches and medicine men.",
@@ -3442,7 +3568,25 @@
     "level": 139,
     "alsoAt": [
       "Diadem Grotto"
-    ]
+    ],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          118,
+          15
+        ],
+        [
+          197,
+          19
+        ],
+        [
+          277,
+          30
+        ]
+      ]
+    }
   },
   "12769": {
     "description": "One cannot visit a tavern in all of Coerthas without hearing tall tales of the great man-eating shadowhisker. In one village, the fish will be five yalms long, in another, five wide. In still another, it will have swallowed a Lalafell whole, in yet another, it will have swallowed a whole lot of Lalafells.",
@@ -3485,7 +3629,25 @@
     "description": "Naturalists who have had the opportunity to examine the rare samples brought back from Azys Lla have come to the tentative conclusion that despite being several times smaller, a completely different color, and bearing strange whisker-like fins, this amphibious creature is most likely a distant relative to the axolotls that reside in lower Eorzea.",
     "icon": 29396,
     "category": "Seafood",
-    "level": 150
+    "level": 150,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          137,
+          17
+        ],
+        [
+          228,
+          22
+        ],
+        [
+          321,
+          34
+        ]
+      ]
+    }
   },
   "12775": {
     "description": "Writings extracted from recently discovered tomestones state that this particular breed of helmet crab was biologically altered by Allagans to produce an impenetrable shell that could be harvested for armor production.",
@@ -3621,7 +3783,25 @@
     "description": "Despite the abundance of other, easier-to-land wavekin in Dravanian waters, Weston bowfin are actively sought by moogle anglers─not for the fish themselves, but for the bright-red eggs which remind the moogles of their pom-poms.",
     "icon": 29302,
     "category": "Seafood",
-    "level": 145
+    "level": 145,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          171,
+          17
+        ],
+        [
+          286,
+          21
+        ],
+        [
+          403,
+          33
+        ]
+      ]
+    }
   },
   "12793": {
     "description": "Legend states that letter puffers were once so abundant in the skies above Dravania that clouds of the creatures would blot out the sun. Rampant hunting to collect the volatile gas contained within their bellies drove the puffers to near extinction, and only recently have their numbers begun to grow.",
@@ -3699,7 +3879,25 @@
     "description": "Selective breeding by the goblin scholars known as the Illuminati has created a new variety of perch so foul smelling that only someone wearing a specially crafted gas mask (conveniently such as a gobbie mask) might withstand the noxious vapors long enough to enjoy the rich, buttery flesh.",
     "icon": 29260,
     "category": "Seafood",
-    "level": 145
+    "level": 145,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          376,
+          13
+        ],
+        [
+          629,
+          16
+        ],
+        [
+          883,
+          26
+        ]
+      ]
+    }
   },
   "12805": {
     "description": "Blindingly fast and possessing almost inexhaustible stamina, the rudderfish is a favorite tool for mother dragons teaching their pups to hunt in the air.",
@@ -3772,7 +3970,25 @@
     "level": 148,
     "alsoAt": [
       "Swirling Cloudtop"
-    ]
+    ],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          508,
+          16
+        ],
+        [
+          850,
+          20
+        ],
+        [
+          1194,
+          31
+        ]
+      ]
+    }
   },
   "12815": {
     "description": "When assaulted by a predator, the oil eel will release copious amounts of a slick, mucus-like substance that prevents adequate purchase, allowing the wavekin to escape. Despite what the name suggests, the secreted substance does not actually contain any oil.",
@@ -3847,7 +4063,25 @@
     "description": "This rare tortoise's ability of flight is granted by its fabulous shell made up of solid wind crystal. As long as the shell remains undamaged, the cloudkin will remain aloft; however, the moment even the smallest of scratches are suffered, it will plummet back to Hydaelyn.",
     "icon": 29703,
     "category": "Seafood",
-    "level": 180
+    "level": 180,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          650,
+          26
+        ],
+        [
+          1088,
+          33
+        ],
+        [
+          1527,
+          53
+        ]
+      ]
+    }
   },
   "12826": {
     "description": "Similar to how the sorcerer fish is able to manipulate its body's fire-aspected aether, the black magefish is able to tap into the ice-aspected aether contained in its phlegmatic humours to perpetually cool its body, allowing it to survive in otherwise deadly molten lava.",
@@ -3859,7 +4093,25 @@
     "description": "The braincase of this dome-headed fish is, unlike the rest of its body, completely transparent and filled with a gel-like substance in which the eyes float. The lack of any even remotely similar creatures in all of the Three Great Continents suggests that this creature may be another one of the Allagan Empire's terrible creations.",
     "icon": 29754,
     "category": "Seafood",
-    "level": 180
+    "level": 180,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          393,
+          250
+        ],
+        [
+          658,
+          313
+        ],
+        [
+          924,
+          500
+        ]
+      ]
+    }
   },
   "12828": {
     "description": "While able to generate an electric charge with its body, this wavekin does not utilize that charge to subdue its prey, but rather locate it by detecting how the electric waves change after being released. Once the eel has determined where its prey is, it will wrap itself about the creature and strangle it.",
@@ -3868,7 +4120,25 @@
     "level": 150,
     "alsoAt": [
       "Diadem Grotto"
-    ]
+    ],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          346,
+          55
+        ],
+        [
+          579,
+          68
+        ],
+        [
+          814,
+          109
+        ]
+      ]
+    }
   },
   "12829": {
     "description": "The catkiller is a freshwater pike which uses its long, whip-like dorsal fin to impale gaelicats who fly too close to the water's surface. Formerly called a “gaelicatkiller,” the amalgamation of three different words into one was deemed by naturalist circles far too difficult to read and subsequently shortened to its current (albeit equally unceremonious) moniker.",
@@ -3880,7 +4150,25 @@
     "description": "This colossal wavekin is, in fact, little more than a common bonytongue that has grown to an enormous size in the relatively safe waters of the Dravanian hinterlands. This phenomenon, however, has allowed scholars to form a correlation between the size of a bonytongue and the softness of its tongue.",
     "icon": 29243,
     "category": "Seafood",
-    "level": 180
+    "level": 180,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          1039,
+          35
+        ],
+        [
+          1740,
+          43
+        ],
+        [
+          2442,
+          69
+        ]
+      ]
+    }
   },
   "12831": {
     "description": "Whereas most of the known world shies away from the fetid odor emitted by Illuminati perch, the Thaliak caiman seems drawn to it, refusing to eat any other manner of flesh if a perch is detected in the vicinity. This eating habit has made the scalekin a target of Illuminati fishers, who will employ heavy crossbows in an attempt to protect the fish (that they eventually plan on catching and eating themselves).",
@@ -3907,7 +4195,25 @@
     "level": 150,
     "alsoAt": [
       "Swirling Cloudtop"
-    ]
+    ],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          557,
+          5
+        ],
+        [
+          932,
+          6
+        ],
+        [
+          1309,
+          10
+        ]
+      ]
+    }
   },
   "12835": {
     "description": "Inside the storm chaser's belly lives a unique type of yeast which breaks down food to create a lighter-than-air gas which allows the fish to float. Short bursts of this gas from its rectum are used for propulsion. Yes, you read that correctly.",
@@ -3925,7 +4231,25 @@
     "description": "During spawning season, a female capelin's belly will be so full of eggs that the fish will almost double in size, making the wavekin a favorite amongst egg-loving Qiqirn.",
     "icon": 29310,
     "category": "Seafood",
-    "level": 180
+    "level": 180,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          19,
+          19
+        ],
+        [
+          54,
+          24
+        ],
+        [
+          90,
+          39
+        ]
+      ]
+    }
   },
   "13727": {
     "description": "Markedly more developed than the proto-hropken, the slightest hint of intelligence can be sensed when staring into this abomination's eyes.",
@@ -3943,7 +4267,25 @@
     "description": "Popular prey for dragonflies, who are said to only require a single adult to sate their appetites, this close cousin of the Abalathian smelt is abundant in the slightly warmer waters of the Dravanian forelands.",
     "icon": 29310,
     "category": "Seafood",
-    "level": 150
+    "level": 150,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          19,
+          33
+        ],
+        [
+          54,
+          41
+        ],
+        [
+          90,
+          66
+        ]
+      ]
+    }
   },
   "13730": {
     "description": "Scholars of marine life believe that heavens coral is merely blue coral that, after prolonged exposure to high concentrations of wind-aspected aether, have taken on a lighter blue tint.",
@@ -3964,10 +4306,28 @@
     "level": 180
   },
   "14211": {
-    "description": "The deep orange patterns on this wavekin's skin are similar to those found on several varieties of highly poisonous mushrooms. This convenient trait helps protect the salamander from hungry predators despite not possessing any toxins in its body...and being quite delicious. The amber salamander, himself, is aware of this fact, and will sometimes resort to cannibalism when other food is scarce. ",
+    "description": "The deep orange patterns on this wavekin's skin are similar to those found on several varieties of highly poisonous mushrooms. This convenient trait helps protect the salamander from hungry predators despite not possessing any toxins in its body...and being quite delicious. The amber salamander, himself, is aware of this fact, and will sometimes resort to cannibalism when other food is scarce.",
     "icon": 29424,
     "category": "Seafood",
-    "level": 210
+    "level": 210,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          622,
+          38
+        ],
+        [
+          761,
+          47
+        ],
+        [
+          901,
+          75
+        ]
+      ]
+    }
   },
   "14212": {
     "description": "The gnomefish is a gruesome creature that lives most of its life cowering beneath boulders in still or slow-moving waters so as to avoid being devoured by other larger fish. The tigerfish is one of these predators and will lurk nearby such boulders waiting for the rare occasion on which a gnomefish emerges to feed.",
@@ -4102,7 +4462,7 @@
     "level": 210
   },
   "15638": {
-    "description": "Unlike euphotic pirarucu which remain near the surface, these wavekin, for some reason, chose to ignore their species' natural attraction to the light and instead remain and feed on the sediment that collects in deep water. The high mineral content of this sediment results in rock-like scales unseen on the aphotic pirarucu's cousins. ",
+    "description": "Unlike euphotic pirarucu which remain near the surface, these wavekin, for some reason, chose to ignore their species' natural attraction to the light and instead remain and feed on the sediment that collects in deep water. The high mineral content of this sediment results in rock-like scales unseen on the aphotic pirarucu's cousins.",
     "icon": 29430,
     "category": "Seafood",
     "level": 210
@@ -4333,7 +4693,25 @@
     "description": "Underneath the undulating currents she flits and flutters, her elegantly decorated dorsal fin darting and dancing hither and thither as though celebrating a glorious triumph, hence her association with victory in local folklore.",
     "icon": 29103,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          19,
+          20
+        ],
+        [
+          32,
+          25
+        ],
+        [
+          46,
+          40
+        ]
+      ]
+    }
   },
   "20020": {
     "description": "Tall tales abound around the One River, but have you heard the one about the fish bigger than a full-grown Hyur? The ecstasy of reeling in the fabled monster is soon offset by the realization one must then haul it all the way back home.",
@@ -4345,7 +4723,25 @@
     "description": "The lay fish seem to avert their eyes as this heaven-sent beauty floats gracefully among them, purifying the waters with her celestial presence as she swims along.",
     "icon": 29446,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          23,
+          18
+        ],
+        [
+          38,
+          23
+        ],
+        [
+          55,
+          37
+        ]
+      ]
+    }
   },
   "20022": {
     "description": "Deep undercover in the seabed, the killer creeps, inching closer and closer to his crustacean mark before lunging with lethal force to shell it alive. Diners had best take caution as well, as the delicate bones that enable his swift, precise movements pose a formidable culinary challenge.",
@@ -4387,7 +4783,25 @@
     "description": "Glaring across a battlefield of blue, the purple-belted combatant hovers unflinching, unyielding about his territory. His stoic features betray no emotion, his mind remains clear as the limpid sea, ready and unhesitant to render his life to defend his honor.",
     "icon": 29461,
     "category": "Seafood",
-    "level": 245
+    "level": 245,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          7,
+          23
+        ],
+        [
+          11,
+          29
+        ],
+        [
+          17,
+          46
+        ]
+      ]
+    }
   },
   "20029": {
     "description": "Cichlids named for the glittering scales unique to adult males, which garner the attention of mates and predators alike. The survival of the species undoubtedly owes more to the subdued, aptly camouflaging blue hue featured by its widows and orphans.",
@@ -4399,7 +4813,25 @@
     "description": "This breed indigenous to the streams of the Azim Steppe protects its eggs by laying them into the calcareous shells of freshwater mollusks, endowing the offspring with a distinctly acrid flavor.",
     "icon": 29464,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          17,
+          33
+        ],
+        [
+          28,
+          41
+        ],
+        [
+          40,
+          66
+        ]
+      ]
+    }
   },
   "20031": {
     "description": "The winsome-faced bottom-feeder wields its fin with the dexterity of a finger, delicately digging into the riverbed to dine on only the finest sediment.",
@@ -4438,7 +4870,25 @@
     "level": 225,
     "alsoAt": [
       "Nem Khaal, The Azim Steppe"
-    ]
+    ],
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          5,
+          34
+        ],
+        [
+          8,
+          43
+        ],
+        [
+          12,
+          68
+        ]
+      ]
+    }
   },
   "20037": {
     "description": "For decades, the taxonomy of this species had been the subject of fierce tripartite debate, driving the aquatic nomenclature community to the brink of schism, until a compromise was reached whereby the creature would simply be known by all three names.",
@@ -4462,7 +4912,25 @@
     "description": "With its sawlike upper jaw this aquatic artist chisels, scrapes, and carves away at rock salt deposits for days on end, tinkering away at a mysterious form that often bears a curious resemblance to the phoebad.",
     "icon": 29922,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          785,
+          250
+        ],
+        [
+          1315,
+          313
+        ],
+        [
+          1846,
+          500
+        ]
+      ]
+    }
   },
   "20041": {
     "description": "Many a diver's gaze has been diverted by the iridescent white orbs that shine forth from this fish's face. The relative safety of its saltwater lake environs has allowed the otherwise conspicuous species to remain as it was ages ago.",
@@ -4486,7 +4954,25 @@
     "description": "Though the breed is generally deemed unfit for consumption, the Mol nevertheless persist in fishing for them per the bidding of their holy men; a case of faith operating contrary to nature's plan.",
     "icon": 29468,
     "category": "Seafood",
-    "level": 245
+    "level": 245,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          23,
+          22
+        ],
+        [
+          38,
+          28
+        ],
+        [
+          55,
+          44
+        ]
+      ]
+    }
   },
   "20045": {
     "description": "One would have to wake up pretty early in the morning to out-slack this notoriously lackadaisical loiterer. Its primary hunting technique consists of lying stagnant in the Slow Wash and waiting for its prey to drift up to it.",
@@ -4531,7 +5017,25 @@
     "description": "Robed in luxurious scales radiating with a distinct nacreous sheen, one is tempted to reach out and feel the fabric of its scales, which are disappointingly slimy. Theories abound as to how it ended up in Plum Spring, but none in particular prevail.",
     "icon": 29455,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          314,
+          45
+        ],
+        [
+          526,
+          56
+        ],
+        [
+          739,
+          89
+        ]
+      ]
+    }
   },
   "20052": {
     "description": "Scales that absorb a citrine pigment in the waters of Prism Lake to glimmer like gold. As for its flavor, one is reminded of the age-old adage “All that glitters isn't food.”",
@@ -4558,7 +5062,7 @@
     "level": 205
   },
   "20056": {
-    "description": "Anyone who's ever been to Gyr Abania is likely to have seen one, and even more likely to have eaten one, as this particular trout is deemed a local specialty. ",
+    "description": "Anyone who's ever been to Gyr Abania is likely to have seen one, and even more likely to have eaten one, as this particular trout is deemed a local specialty.",
     "icon": 29204,
     "category": "Seafood",
     "level": 210,
@@ -4619,7 +5123,7 @@
     "level": 210
   },
   "20064": {
-    "description": "Named for the cheek-puffing posture it manifests when threatened, which can be seen as either intimidating or adorable, depending on your position in the food chain. ",
+    "description": "Named for the cheek-puffing posture it manifests when threatened, which can be seen as either intimidating or adorable, depending on your position in the food chain.",
     "icon": 29233,
     "category": "Seafood",
     "level": 205,
@@ -4634,7 +5138,7 @@
     "level": 205
   },
   "20066": {
-    "description": "This fish gives new meaning to “the sweet kiss of death,” as wars have been waged over its delectable flesh, hence its fateful name. ",
+    "description": "This fish gives new meaning to “the sweet kiss of death,” as wars have been waged over its delectable flesh, hence its fateful name.",
     "icon": 29215,
     "category": "Seafood",
     "level": 215,
@@ -4697,7 +5201,25 @@
     "description": "Custom once dictated that in order to call oneself a freelance proper, the sellsword first had to reel in this fish of prodigious proportions.",
     "icon": 29287,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          377,
+          34
+        ],
+        [
+          631,
+          42
+        ],
+        [
+          887,
+          68
+        ]
+      ]
+    }
   },
   "20075": {
     "description": "This hunter's streamlined brow is tailored to nabbing small fry and insects, and casts a striking contrast against the lofty peaks of Gyr Abania it inhabits.",
@@ -4778,10 +5300,28 @@
     "description": "Midsized, yet critical, link in the food chain of the river valley from which it borrows its name.",
     "icon": 29407,
     "category": "Seafood",
-    "level": 205
+    "level": 205,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          314,
+          23
+        ],
+        [
+          526,
+          29
+        ],
+        [
+          739,
+          46
+        ]
+      ]
+    }
   },
   "20088": {
-    "description": "The rivers of Velodyna and Hathoeva are rife with these hungry natators, whose ebon exterior derives from a dark diet. ",
+    "description": "The rivers of Velodyna and Hathoeva are rife with these hungry natators, whose ebon exterior derives from a dark diet.",
     "icon": 29210,
     "category": "Seafood",
     "level": 220
@@ -4842,7 +5382,7 @@
     "level": 210
   },
   "20096": {
-    "description": "Luckily for the survival of the species, this sapphiric simulant has failed to come in vogue with the Hingan fashion-conscious as has its equally alluring ruby cousin. ",
+    "description": "Luckily for the survival of the species, this sapphiric simulant has failed to come in vogue with the Hingan fashion-conscious as has its equally alluring ruby cousin.",
     "icon": 29061,
     "category": "Seafood",
     "level": 210
@@ -4854,10 +5394,28 @@
     "level": 210
   },
   "20098": {
-    "description": "Though indigenous to southern waters, now and again a papilliferous wanderer will lose its way and flutter mindlessly into the Ruby Sea. ",
+    "description": "Though indigenous to southern waters, now and again a papilliferous wanderer will lose its way and flutter mindlessly into the Ruby Sea.",
     "icon": 29016,
     "category": "Seafood",
-    "level": 215
+    "level": 215,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          53,
+          20
+        ],
+        [
+          88,
+          25
+        ],
+        [
+          125,
+          41
+        ]
+      ]
+    }
   },
   "20099": {
     "description": "From an ancient Far Eastern term for “genius” or “master of its trade,” its name speaks to the inspiring artistry on display in this magnificent specimen.",
@@ -4869,10 +5427,28 @@
     "description": "Fishermen willing to cross blades with this sharp-nosed billfish are in for a scrumptious treat, should they survive the battle.",
     "icon": 29022,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          456,
+          22
+        ],
+        [
+          763,
+          28
+        ],
+        [
+          1072,
+          45
+        ]
+      ]
+    }
   },
   "20101": {
-    "description": "An eccentric protrusion enables this seafarer to evade predators by posing as algae, which it also relies on for cloaking its eggs. ",
+    "description": "An eccentric protrusion enables this seafarer to evade predators by posing as algae, which it also relies on for cloaking its eggs.",
     "icon": 29053,
     "category": "Seafood",
     "level": 215
@@ -4893,7 +5469,25 @@
     "description": "Known to Hingans as the “great king,” this rare kraken maintains a shroud of mystery, only surfacing from deep-sea depths when it truly needs a release.",
     "icon": 29027,
     "category": "Seafood",
-    "level": 260
+    "level": 260,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          470,
+          15
+        ],
+        [
+          787,
+          18
+        ],
+        [
+          1106,
+          30
+        ]
+      ]
+    }
   },
   "20105": {
     "description": "When a ship draws near, this tiny little sucker billows out like the Hingan garment for which it is named, transmogrifying to mammoth proportions before dragging sailors from their decks to the depths, or so an old sailor sings.",
@@ -4995,7 +5589,25 @@
     "description": "The One River is flooded with this species, which is surprisingly nutritious if you can look past its muddy stink and abundance of small sharp bones. Locals are wont to drench it in liquor and sugar and let soak until palatable.",
     "icon": 29239,
     "category": "Seafood",
-    "level": 220
+    "level": 220,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          206,
+          20
+        ],
+        [
+          344,
+          25
+        ],
+        [
+          484,
+          41
+        ]
+      ]
+    }
   },
   "20119": {
     "description": "A compound of the Hingashi terms “kotsu,” meaning “bone,” and “zetsu,” meaning “tongue,” referring to the oral harpoon this fish uses to spear its prey. Its tail is known to grow scarlet with age and bloodguilt.",
@@ -5183,10 +5795,28 @@
     "description": "Devastated by her husband's infidelities, the fisherman's wife hanged herself one night in the woods, and her visage would come to haunt him each day, upon the face of every fish he caught.",
     "icon": 29256,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          99,
+          45
+        ],
+        [
+          165,
+          56
+        ],
+        [
+          233,
+          90
+        ]
+      ]
+    }
   },
   "20143": {
-    "description": "Miniature namesake of the sea serpent Llymlaen is said to have loosed upon the world alongside Thalaos, and the diminutive breed is possessed of a temper akin to that of a little Thalaos. ",
+    "description": "Miniature namesake of the sea serpent Llymlaen is said to have loosed upon the world alongside Thalaos, and the diminutive breed is possessed of a temper akin to that of a little Thalaos.",
     "icon": 29147,
     "category": "Seafood",
     "level": 80
@@ -5492,7 +6122,7 @@
     "level": 230
   },
   "20194": {
-    "description": "Having fallen in a teardrop as the moon above wept into the sea below, this pious disc-in-water offers prayers to the Lover each full moon in hopes of returning home. ",
+    "description": "Having fallen in a teardrop as the moon above wept into the sea below, this pious disc-in-water offers prayers to the Lover each full moon in hopes of returning home.",
     "icon": 29908,
     "category": "Seafood",
     "level": 230
@@ -5558,7 +6188,7 @@
     "level": 245
   },
   "20205": {
-    "description": "These shrimp literally rained from the heavens above Gyr Abania after being swept up in the seismic sea storms of the Calamity. ",
+    "description": "These shrimp literally rained from the heavens above Gyr Abania after being swept up in the seismic sea storms of the Calamity.",
     "icon": 29924,
     "category": "Seafood",
     "level": 245
@@ -5591,7 +6221,25 @@
     "description": "While the shark bears the name of the venerated Far Eastern sea scholar who discovered it, genealogy hints that it is actually an ancestor of the Allagan bladeshark.",
     "icon": 29146,
     "category": "Seafood",
-    "level": 260
+    "level": 260,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          395,
+          7
+        ],
+        [
+          661,
+          11
+        ],
+        [
+          928,
+          18
+        ]
+      ]
+    }
   },
   "20211": {
     "description": "Initially the unintended by-product of rabid inbreeding among market goldfish, the Doman bubble eye has stabilized into a viable species with an eye-popping following, no doubt owing to its vibrant coloring and caricaturish expressions.",
@@ -5651,7 +6299,25 @@
     "description": "The precious shade of pink worn by this adorable little angel tempts one to pinch its heavenly little fish cheeks. These domesticated darlings can be found watching over many an aquatic garden.",
     "icon": 29448,
     "category": "Seafood",
-    "level": 275
+    "level": 275,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          129,
+          7
+        ],
+        [
+          216,
+          11
+        ],
+        [
+          304,
+          18
+        ]
+      ]
+    }
   },
   "20221": {
     "description": "Looming larger than her dawn relative, the dusk herald benights the waters with silver-blue scales of twilight in devout service to Nhaama.",
@@ -5693,7 +6359,25 @@
     "description": "When one predatory trait far exceeds any local resistance, a species is wont to remain largely the same, and such is the case of this immutable scalekin, whose preternatural olfactory sense has allowed it to sniff out prey, track the scent, and stave off adaptation for ages.",
     "icon": 29116,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          403,
+          9
+        ],
+        [
+          675,
+          14
+        ],
+        [
+          948,
+          23
+        ]
+      ]
+    }
   },
   "20228": {
     "description": "Researchers spent decades attempting to mark the spot where this scalekin fell on the ancestral scale between fish and dolphin only to recently find that it had never actually gone extinct.",
@@ -5711,7 +6395,25 @@
     "description": "Possessed of an imposing frame and whiskers that speak to its wisdom, this fish calls to mind the balance of body and spirit embodied by the ancient masters, and appears cognizant of nature's innermost secrets.",
     "icon": 29486,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          147,
+          9
+        ],
+        [
+          245,
+          14
+        ],
+        [
+          345,
+          23
+        ]
+      ]
+    }
   },
   "20231": {
     "description": "The act of swallowing the sun burned a permanent orange hue in to the scales of this hungry fire-eater and brought about the first eclipse, in case there was any question concerning how that astronomical phenomenon occurred.",
@@ -5729,13 +6431,49 @@
     "description": "Unblinking sentinel left in the wake of the Dawn Father and Dusk Mother's departure to watch over the Xaela in their absence.",
     "icon": 29469,
     "category": "Seafood",
-    "level": 275
+    "level": 275,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          20,
+          7
+        ],
+        [
+          33,
+          11
+        ],
+        [
+          48,
+          18
+        ]
+      ]
+    }
   },
   "20234": {
     "description": "According to the existential hierarchy of Xaela reincarnation, fishliness is next to godliness. Horses who serve their masters well in life ascend to the waters afterward, with the most noble of destriers reborn in pristine scales of white.",
     "icon": 29484,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          25,
+          9
+        ],
+        [
+          41,
+          14
+        ],
+        [
+          59,
+          23
+        ]
+      ]
+    }
   },
   "20235": {
     "description": "This fish is said to have been found atop the peaks of Abalathia's Spine following the great deluge of the Calamity, though the claims are widely regarded as wildly inaccurate, if not patently false.",
@@ -5759,13 +6497,49 @@
     "description": "These flat, flaxen fish are instinctively drawn to floating objects, so there's a fair chance a friendly one will swim up to greet visitors in the water. Whether or not to return the hail by harpooning the fish is at the visitor's discretion.",
     "icon": 29912,
     "category": "Seafood",
-    "level": 275
+    "level": 275,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          370,
+          7
+        ],
+        [
+          619,
+          11
+        ],
+        [
+          869,
+          18
+        ]
+      ]
+    }
   },
   "20239": {
     "description": "Infighting among this breed of scalekin is rampant, as merely being a member of the species atop the food chain of Loch Seld will not suffice for these bloodthirsty despots, who seek utter and total dominance over all.",
     "icon": 29904,
     "category": "Seafood",
-    "level": 290
+    "level": 290,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          402,
+          9
+        ],
+        [
+          673,
+          14
+        ],
+        [
+          945,
+          23
+        ]
+      ]
+    }
   },
   "20524": {
     "description": "Though bred specially for traversing the five seas and beyond, this captivating cloudkin slipped away from his stables before his swimming lessons were complete, and as a result, can barely keep upright in water without the aid of his trusty life preserver.",
@@ -6520,13 +7294,49 @@
     "description": "A ferocious hunter that lurks in shallow waters, waiting for its prey to stray too close before it strikes. When its pure white body bursts through the surface of a bloodstained lake, it resembles nothing more than a blob of fresh cream atop a rolanberry coulis. But with more teeth.",
     "icon": 29563,
     "category": "Seafood",
-    "level": 390
+    "level": 390,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          346,
+          9
+        ],
+        [
+          579,
+          12
+        ],
+        [
+          814,
+          19
+        ]
+      ]
+    }
   },
   "27432": {
     "description": "A freshwater fish with beautiful, iridescent fins. Though native to the First, the name “guppy” was bestowed upon it by the Crystal Exarch himself, apparently after a naturalist from his native land.",
     "icon": 29564,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          9,
+          34
+        ],
+        [
+          14,
+          42
+        ],
+        [
+          21,
+          67
+        ]
+      ]
+    }
   },
   "27433": {
     "description": "A translucent fish whose internal organs can be seen through its skin, shining redly like the setting sun. When raised in an aquarium, the organs redden even further, perhaps in embarrassment at having their private parts put on display.",
@@ -6570,7 +7380,7 @@
     ]
   },
   "27439": {
-    "description": "The sweet, chewy flesh of these mollusks, flavored with aromatic herbs, is a staple of Kholusian cuisine. The culinary tome “Of Ye Kholusian Kytchenne” also lists recipes for the waffle wasp and the mousse louse─the only known reference to either creature. This has led some scholars to doubt the book's authenticity. ",
+    "description": "The sweet, chewy flesh of these mollusks, flavored with aromatic herbs, is a staple of Kholusian cuisine. The culinary tome “Of Ye Kholusian Kytchenne” also lists recipes for the waffle wasp and the mousse louse─the only known reference to either creature. This has led some scholars to doubt the book's authenticity.",
     "icon": 29244,
     "category": "Seafood",
     "level": 390,
@@ -6599,7 +7409,25 @@
     "description": "This wavekin's bloated belly and long tail lend it the silhouette of a hand axe, leading the metal-smelting dwarves of Kholusia to venerate it as a guardian spirit of the toolcrafting industry.",
     "icon": 29571,
     "category": "Seafood",
-    "level": 415
+    "level": 415,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          6,
+          15
+        ],
+        [
+          9,
+          18
+        ],
+        [
+          14,
+          30
+        ]
+      ]
+    }
   },
   "27443": {
     "description": "The emerald hue and peacock pattern of this flatfish is reminiscent of the fans favored by the nobles of Eulmore. Many of those refused entry to the city dream of exchanging the two, so that the pampered peers take a wet fish to the face.",
@@ -6690,13 +7518,49 @@
     "description": "A frond-finned creature named for its resemblance to the sunny-hued leaves of the shellfracture kelp, not for its puniness. Although, in a fight between a weedy seadragon and a strip of seaweed, a wise man might bet on the latter.",
     "icon": 29175,
     "category": "Seafood",
-    "level": 395
+    "level": 395,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          62,
+          12
+        ],
+        [
+          104,
+          15
+        ],
+        [
+          147,
+          23
+        ]
+      ]
+    }
   },
   "27456": {
     "description": "A type of primordial turtle with a wide, flat shell. Its name means “one tooth” in an ancient tongue, in reference to the single molar in each corner of its mouth. That, along with its wrinkled skin, has led some to nickname it the “Old Man of the Sea.”",
     "icon": 29176,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          157,
+          122
+        ],
+        [
+          262,
+          153
+        ],
+        [
+          369,
+          244
+        ]
+      ]
+    }
   },
   "27457": {
     "description": "Every part of this marine mollusk can be eaten, from the sharp point of the hood that earns it its name, to the ink that flows forth when it is angered. Soldiers of the Eulmoran Army are known to devour a squid in its entirety before battle, believing it lends them martial might.",
@@ -6775,7 +7639,25 @@
     "description": "The spiny plates that cover this scalekin from the top of its nose to tip of its tail have led some to nickname it the knight of the desert. It traverses the sands by biting its tail and rolling along like a tumbleweed.",
     "icon": 29619,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          944,
+          156
+        ],
+        [
+          1581,
+          195
+        ],
+        [
+          2220,
+          311
+        ]
+      ]
+    }
   },
   "27468": {
     "description": "This freshwater fish's translucent fins flutter like a butterfly as it swims, while its golden scales shine like a suit of polished mail. If the butterflies were ever to don armor and take up arms against the adventuring races, their swarms might overpower us all.",
@@ -6878,13 +7760,49 @@
     "description": "Prized as a status symbol by the noble families of Eulmore, who will often dispatch bonded servants to Il Mheg in search of a shiny prize. Alas, the fae folk have other ideas, more often than not transforming the trespassing lobster hunters into leafmen.",
     "icon": 29586,
     "category": "Seafood",
-    "level": 403
+    "level": 403,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          96,
+          11
+        ],
+        [
+          160,
+          14
+        ],
+        [
+          225,
+          23
+        ]
+      ]
+    }
   },
   "27481": {
     "description": "Some scholars say that the large, bubble-like bags under its eyes are this shortsighted wavekin's way to make predators believe it sees more than it does. Others insist that it is merely sleep-deprived.",
     "icon": 29587,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          26,
+          32
+        ],
+        [
+          43,
+          40
+        ],
+        [
+          62,
+          64
+        ]
+      ]
+    }
   },
   "27482": {
     "description": "A small crustacean named for its oversized left pincer, which lends it the appearance of an archer holding a greatbow. As one might expect, the crab is unable to shoot arrows from its arms—only dirty looks from its beady eyes.",
@@ -6972,13 +7890,49 @@
     "description": "In ancient Ronka, the eryops was revered as a sacred animal, believing it to be the bringer of prosperity to one's children. Those whose offspring have been bitten by these beasts for the crime of swimming in their waters may beg to differ.",
     "icon": 29593,
     "category": "Seafood",
-    "level": 409
+    "level": 409,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          314,
+          100
+        ],
+        [
+          526,
+          125
+        ],
+        [
+          739,
+          200
+        ]
+      ]
+    }
   },
   "27492": {
     "description": "A silvery cousin of the yellow pipira, this fish's brightly shining scales have earned it the enmity of the Children of the Everlasting Dark. But no matter how many the Children lift from the lakes, they cannot seem to eliminate them entirely.",
     "icon": 29594,
     "category": "Seafood",
-    "level": 409
+    "level": 409,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          201,
+          16
+        ],
+        [
+          336,
+          20
+        ],
+        [
+          472,
+          32
+        ]
+      ]
+    }
   },
   "27493": {
     "description": "A small, silvery fish with feline whiskers that is oft seen basking on the riverbed like a cat resting in the sun. It is possessed of catlike reflexes too, pouncing on passing prey.",
@@ -6990,7 +7944,25 @@
     "description": "A fish found only in the deepest, darkest parts of deep, dark caves. It is completely blind, with naught but scales where other wavekin have eyes, making them both revered and envied by the Children of the Everlasting Dark.",
     "icon": 29596,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          14,
+          20
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          32,
+          40
+        ]
+      ]
+    }
   },
   "27495": {
     "description": "Violet-colored coral that blooms only in the bathyal depths. An ancient prophecy dictates that any pieces found on the shore should be offered to the nobility to stave off disaster—dark tidings of smoke upon the water and fire filling the sky...",
@@ -7065,7 +8037,25 @@
     "description": "Named for its resemblance to the fish people's hunting implements. It is unknown whether the similarity is merely incidental, or if the original Ondo took inspiration from the shark's unusual shape when crafting their weapons.",
     "icon": 29182,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          236,
+          16
+        ],
+        [
+          394,
+          21
+        ],
+        [
+          554,
+          33
+        ]
+      ]
+    }
   },
   "27503": {
     "description": "Easily identified by its bright blue skin, these sharks have long brought terror to the seabed settlements of the Ondo. Only those who have bested the blue bane in single combat are allowed to call themselves true warriors.",
@@ -7101,7 +8091,25 @@
     "description": "A rare, iridescent cousin of the nautilus. Fisherfolk consider it an omen of future fortune to find one in their nets—and not only because goldsmiths pay a high price for their scooped-out shells.",
     "icon": 29188,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          314,
+          250
+        ],
+        [
+          526,
+          313
+        ],
+        [
+          739,
+          500
+        ]
+      ]
+    }
   },
   "27509": {
     "description": "Feared by sailors as a demon of the deep, this misunderstood cephalopod's habit of wrapping its slimy tentacles around mariners' legs and dragging them into the ink-stained seas is merely its way of showing affection.",
@@ -7113,7 +8121,25 @@
     "description": "This deep-sea octopus is well-known, and well loved, for its plump and adorable form. However, when lifted from the water, it is unable to maintain its shape against the force of gravity and falls as flat as a pancake.",
     "icon": 29190,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          31,
+          13
+        ],
+        [
+          51,
+          16
+        ],
+        [
+          73,
+          26
+        ]
+      ]
+    }
   },
   "27511": {
     "description": "The fang-like serrations along its shell lend this mollusk a menacing appearance, but it is in fact a filter feeder whose jaws close but sluggishly. Not to say that a man-eater clam could not do the deed, just that said man would have to be deep in his cups at the time.",
@@ -7257,13 +8283,49 @@
     "description": "Long has the legend of Bismarck, the great spirit of the water, been passed down among the peoples of the Source. This fish is named for the single, sharp horn it shares with its fabular brother, though its purpose is unknown─the wavekin hunts with its teeth alone.",
     "icon": 28435,
     "category": "Seafood",
-    "level": 403
+    "level": 403,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          362,
+          7
+        ],
+        [
+          605,
+          11
+        ],
+        [
+          850,
+          18
+        ]
+      ]
+    }
   },
   "27535": {
     "description": "One of an ancient order of armored fish, the bothriolepis's body is protected by thick, chitinous plates. Unlike many of its cousins it is not a skilled hunter, preferring to stir up the lakebed sand with its fins and feasting on whatever it finds.",
     "icon": 28436,
     "category": "Seafood",
-    "level": 406
+    "level": 406,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          417,
+          9
+        ],
+        [
+          698,
+          14
+        ],
+        [
+          980,
+          23
+        ]
+      ]
+    }
   },
   "27536": {
     "description": "This fish was once a fixture on the dining tables of Voeburt, oft served stewed with a heady mix of aromatic herbs and spices. Whether this was in order to complement the fish's strong, sulphurous taste, or to mask it, is a matter for the historians.",
@@ -7449,13 +8511,49 @@
     "description": "Legend has it that this wavekin was once a butterfly, before being transformed into a fish by a mischievous pixie's magick. Instead of feeding on flower nectar, it nourishes itself by nibbling away at underwater weeds.",
     "icon": 28461,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          181,
+          9
+        ],
+        [
+          302,
+          14
+        ],
+        [
+          424,
+          23
+        ]
+      ]
+    }
   },
   "27567": {
     "description": "Notable for its four fins that resemble a bird's wings. Only the most skilled of faerie pranksters are capable of taking on this form.",
     "icon": 28462,
     "category": "Seafood",
-    "level": 418
+    "level": 418,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          62,
+          7
+        ],
+        [
+          104,
+          11
+        ],
+        [
+          147,
+          18
+        ]
+      ]
+    }
   },
   "27568": {
     "description": "Native to the waterways of the Rak'tika Greatwood, this small, stone-colored crab will hide itself among the riverbed rubble, attacking the ankles of any passing animals with its viselike pincers.",
@@ -7533,13 +8631,49 @@
     "description": "These soft-bodied sea slugs are named for their resemblance to the long, pointed ears of the Viis. The people of Fanow reject this comparison─be sure not to speak the slug's sobriquet in the vicinity of the village, lest you find yourself on the pointy end of the rabbit ladies' lances.",
     "icon": 28468,
     "category": "Seafood",
-    "level": 420
+    "level": 420,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          31,
+          9
+        ],
+        [
+          51,
+          14
+        ],
+        [
+          73,
+          23
+        ]
+      ]
+    }
   },
   "27581": {
     "description": "The long, flexible fins extending from this wavekin's belly allow it to steer through the water at will, describing loops and rolls with almost impertinent ease. Its movements are almost impossible to predict, resulting in many a perplexed predator.",
     "icon": 28469,
     "category": "Seafood",
-    "level": 418
+    "level": 418,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          29,
+          7
+        ],
+        [
+          48,
+          11
+        ],
+        [
+          69,
+          18
+        ]
+      ]
+    }
   },
   "27582": {
     "description": "A nascent wriggler torn from the fragrant fruit's flesh in which it hatched. Live bait for freshwater fishing.",
@@ -7674,7 +8808,7 @@
     "level": 395
   },
   "28193": {
-    "description": "Until recent years, it was believed that these ungainly wavekin were swallowed by the Flood of Light, unable to escape due to the unbelievably slow pace at which they move. Whether they survived thanks to their natural resilience or through sheer luck remains a mystery, though many were glad to see these edible crustaceans return in great numbers to the waters of Kholusia. ",
+    "description": "Until recent years, it was believed that these ungainly wavekin were swallowed by the Flood of Light, unable to escape due to the unbelievably slow pace at which they move. Whether they survived thanks to their natural resilience or through sheer luck remains a mystery, though many were glad to see these edible crustaceans return in great numbers to the waters of Kholusia.",
     "icon": 29056,
     "category": "Seafood",
     "level": 400
@@ -7704,7 +8838,7 @@
     "level": 460
   },
   "28927": {
-    "description": "This wavekin's hide becomes sturdier and heavier as it ages, perhaps to protect it from the ocean's myriad predators. Of particular note are records from Nabaath Areng of a peculiar punishment in which criminals were made to wear attire fashioned from this hide, its weight serving as a literal burden of guilt. ",
+    "description": "This wavekin's hide becomes sturdier and heavier as it ages, perhaps to protect it from the ocean's myriad predators. Of particular note are records from Nabaath Areng of a peculiar punishment in which criminals were made to wear attire fashioned from this hide, its weight serving as a literal burden of guilt.",
     "icon": 29621,
     "category": "Seafood",
     "level": 460
@@ -7722,13 +8856,13 @@
     "level": 460
   },
   "28930": {
-    "description": "Yearning for the life his people left behind under the tides, an unnamed Ondo submerged his head beneath the ocean surface and gave cry. His silent lament gave form not to countless bubbles, but to a single fish, its size matching the depth of the Ondo's longing. ",
+    "description": "Yearning for the life his people left behind under the tides, an unnamed Ondo submerged his head beneath the ocean surface and gave cry. His silent lament gave form not to countless bubbles, but to a single fish, its size matching the depth of the Ondo's longing.",
     "icon": 29197,
     "category": "Seafood",
     "level": 460
   },
   "28937": {
-    "description": "Sail to any part of the high seas and it is almost a given that some species of goby is swimming under the deck, and Galadion waters are no exception. A discerning eye will see that this particular goby has a somewhat wider dorsal fin than its counterpart found in the Strait of Merlthor. ",
+    "description": "Sail to any part of the high seas and it is almost a given that some species of goby is swimming under the deck, and Galadion waters are no exception. A discerning eye will see that this particular goby has a somewhat wider dorsal fin than its counterpart found in the Strait of Merlthor.",
     "icon": 29003,
     "category": "Seafood",
     "level": 1
@@ -8058,7 +9192,7 @@
     "level": 1
   },
   "29761": {
-    "description": "Some sailors doubt the existence of the so-called “spectral currents,” but one look at this wavekin is enough to set their misgivings to rest for good. It is also enough to set their minds racing with images of finding such an abomination on the decks of their ships─or worse, under their bedcovers.   ",
+    "description": "Some sailors doubt the existence of the so-called “spectral currents,” but one look at this wavekin is enough to set their misgivings to rest for good. It is also enough to set their minds racing with images of finding such an abomination on the decks of their ships─or worse, under their bedcovers.",
     "icon": 29089,
     "category": "Seafood",
     "level": 1
@@ -8172,7 +9306,7 @@
     "level": 1
   },
   "29780": {
-    "description": "Despite having grown to a far larger size than considered necessary for his kind, he continues to roam the waters of the world in search of what a fish would consider a good time, rather than return to his spawning grounds to produce offspring. ",
+    "description": "Despite having grown to a far larger size than considered necessary for his kind, he continues to roam the waters of the world in search of what a fish would consider a good time, rather than return to his spawning grounds to produce offspring.",
     "icon": 29331,
     "category": "Seafood",
     "level": 1
@@ -8244,7 +9378,7 @@
     "level": 1
   },
   "30136": {
-    "description": "The ingredients of this pungent, pasty ball are a closely guarded Skysteel Manufactory secret. Processed bait specially designed for snaring certain species. ",
+    "description": "The ingredients of this pungent, pasty ball are a closely guarded Skysteel Manufactory secret. Processed bait specially designed for snaring certain species.",
     "icon": 27007,
     "category": "Fishing Tackle",
     "level": 430
@@ -8280,7 +9414,7 @@
     "level": 460
   },
   "30437": {
-    "description": "The Viis tell stories of ravenous catfish that lurk just below the surface of shallow lakes, lying in wait until a creature is foolish enough to slake its thirst. For all their wisdom, many a Qitari would fall prey to this trick, and get dragged into the depths along with their accumulated knowledge. That the Viis named this wavekin thusly may indicate which of those losses they viewed to be more egregious. ",
+    "description": "The Viis tell stories of ravenous catfish that lurk just below the surface of shallow lakes, lying in wait until a creature is foolish enough to slake its thirst. For all their wisdom, many a Qitari would fall prey to this trick, and get dragged into the depths along with their accumulated knowledge. That the Viis named this wavekin thusly may indicate which of those losses they viewed to be more egregious.",
     "icon": 28485,
     "category": "Seafood",
     "level": 460
@@ -8538,7 +9672,7 @@
     "level": 1
   },
   "32078": {
-    "description": "This species of wrasse does, in fact, owe its name to the Bloodbrine Sea in which it dwells. It was merely a happy coincidence that the habit these wavekin have of smashing their lumpy heads together often gives them a scarlet-stained appearance. ",
+    "description": "This species of wrasse does, in fact, owe its name to the Bloodbrine Sea in which it dwells. It was merely a happy coincidence that the habit these wavekin have of smashing their lumpy heads together often gives them a scarlet-stained appearance.",
     "icon": 29174,
     "category": "Seafood",
     "level": 1
@@ -8778,7 +9912,7 @@
     "level": 355
   },
   "33222": {
-    "description": "In Far Eastern legend, this eye-catching mollusk is fabled to project its aura as a shimmering mirage above the water. Those who procure such wondrous shells are known to treasure them as incense holders, often gilding the interior with gold or other precious metals. ",
+    "description": "In Far Eastern legend, this eye-catching mollusk is fabled to project its aura as a shimmering mirage above the water. Those who procure such wondrous shells are known to treasure them as incense holders, often gilding the interior with gold or other precious metals.",
     "icon": 28437,
     "category": "Seafood",
     "level": 380
@@ -8826,13 +9960,13 @@
     "level": 490
   },
   "33316": {
-    "description": "This ultramarine starfish takes center stage in Crystarium lessons on the night sky, with educators placing it amongst the lesser asteroidea to represent the brightest celestial bodies. ",
+    "description": "This ultramarine starfish takes center stage in Crystarium lessons on the night sky, with educators placing it amongst the lesser asteroidea to represent the brightest celestial bodies.",
     "icon": 28491,
     "category": "Seafood",
     "level": 490
   },
   "33317": {
-    "description": "The mottled, python-like pattern of this fish is prized by artisans of all kinds. Rumor has it that one Eulmoran fop employed as many as fifty fisherfolk to trawl the seas in order to have an entire suit fashioned from the elusive wavekin's scales. ",
+    "description": "The mottled, python-like pattern of this fish is prized by artisans of all kinds. Rumor has it that one Eulmoran fop employed as many as fifty fisherfolk to trawl the seas in order to have an entire suit fashioned from the elusive wavekin's scales.",
     "icon": 28494,
     "category": "Seafood",
     "level": 490
@@ -9014,7 +10148,25 @@
     "description": "A diminutive wavekin known for its adaptability in the face of both pollution and extreme temperature changes. It feeds on foreign contaminants and the eggs of insects found in the waters circulating from Unmoved Source Alpha.",
     "icon": 28405,
     "category": "Seafood",
-    "level": 430
+    "level": 430,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          18,
+          22
+        ],
+        [
+          30,
+          28
+        ],
+        [
+          44,
+          45
+        ]
+      ]
+    }
   },
   "36400": {
     "description": "A variety of peacock bass whose large stripes distinguish it from others of its kind. As its habitat dictates its pigmentation and patterns, this wavekin is of great interest to researchers in Labyrinthos for both scientific and aesthetic reasons.",
@@ -9071,7 +10223,7 @@
     "level": 510
   },
   "36411": {
-    "description": "Known for its ominous scales of shimmering sable, legend has it this wavekin is the living manifestation of a thief's blade. Such tall tales were quickly revealed as fiction, though, when ichthyologists began to rear them in hatcheries. ",
+    "description": "Known for its ominous scales of shimmering sable, legend has it this wavekin is the living manifestation of a thief's blade. Such tall tales were quickly revealed as fiction, though, when ichthyologists began to rear them in hatcheries.",
     "icon": 28416,
     "category": "Seafood",
     "level": 520
@@ -9086,7 +10238,25 @@
     "description": "Though classified as a freshwater wavekin, this fish is capable of surviving in both polluted environs and saltwater. Their copious numbers in Labyrinthos are likely an indication of the quality of their breeding grounds.",
     "icon": 28418,
     "category": "Seafood",
-    "level": 570
+    "level": 570,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          398,
+          35
+        ],
+        [
+          666,
+          44
+        ],
+        [
+          936,
+          71
+        ]
+      ]
+    }
   },
   "36415": {
     "description": "The trunk-like snout for which this wavekin is known is adored by the Matanga of Thavnair. Legend has it that the creature's ancestor─a sadly trunkless fellow, as fish are wont to be─fell so deeply in love with an Arkasodara maiden that it grew its nose out through sheer force of will in the hopes of impressing her.",
@@ -9098,7 +10268,25 @@
     "description": "The waters that flank Meghaduta are teeming with these wavekin, whose fatty flesh makes them exceptionally toothsome. They are often served at dinners hosted by the satrap with a heaping helping of spice-rich sauce.",
     "icon": 28419,
     "category": "Seafood",
-    "level": 500
+    "level": 500,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          188,
+          23
+        ],
+        [
+          315,
+          29
+        ],
+        [
+          443,
+          47
+        ]
+      ]
+    }
   },
   "36418": {
     "description": "At the tip of the longear sunfish's opercular bones sit rounded protrusions that greatly resemble ears, which is likely how this wavekin earned its name. In reality, these protuberances are part of its gills, and the faster it swims, the more the “ears” undulate.",
@@ -9142,7 +10330,25 @@
     "description": "Similar to the beast from which its name derives, this wavekin's defining brown spots stretch across the whole of its body. In the grouper's case, however, said spots confuse potential predators by their semblance to eyes rather than acting as camouflage.",
     "icon": 28044,
     "category": "Seafood",
-    "level": 520
+    "level": 520,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          217,
+          22
+        ],
+        [
+          363,
+          28
+        ],
+        [
+          510,
+          45
+        ]
+      ]
+    }
   },
   "36425": {
     "description": "The dazzling colors of this wavekin's scales oft inspire comparison to Thavnair's vibrant silks. In Thavnair's fishing hamlets, a bride will weave the pattern of a fate's design caught by her betrothed into garments for the ceremony.",
@@ -9222,13 +10428,49 @@
     "description": "Due to both its habitat's proximity to the markets and its highly palatable flesh, this large wavekin fills the bellies of many of Radz–at–Han's citizens on a daily basis.",
     "icon": 28503,
     "category": "Seafood",
-    "level": 570
+    "level": 570,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          417,
+          26
+        ],
+        [
+          698,
+          32
+        ],
+        [
+          980,
+          51
+        ]
+      ]
+    }
   },
   "36441": {
     "description": "Sporting fiery fins, this wavekin is thought to be a wayward ingot sent flying up and out of the Great Work's forge and into the river in which it now calls home.",
     "icon": 28504,
     "category": "Seafood",
-    "level": 534
+    "level": 534,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          211,
+          30
+        ],
+        [
+          352,
+          37
+        ],
+        [
+          495,
+          60
+        ]
+      ]
+    }
   },
   "36442": {
     "description": "As its nomenclature implies, this wavekin's long snout is its defining feature─and a killing machine. Its hydrodynamic shape allows the fish to dart through the waters at high speed and catch prey off guard.",
@@ -9255,7 +10497,25 @@
     "description": "This eel's similarities to the fruit from which it takes its name are impossible to deny. This serves the wavekin just fine, however, as it uses its unique coloration to entice unsuspecting prey who just want a nice, wet banana.",
     "icon": 28508,
     "category": "Seafood",
-    "level": 547
+    "level": 547,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          385,
+          29
+        ],
+        [
+          645,
+          37
+        ],
+        [
+          906,
+          59
+        ]
+      ]
+    }
   },
   "36447": {
     "description": "With its golden head, mottled scales, and overall rotundity, this wavekin bears something of a resemblance to Thavnair's beloved hamsa. Even the fish's darting, unpredictable movements are reminiscent of its land-dwelling namesake.",
@@ -9303,7 +10563,25 @@
     "description": "A sea monster with teeth as deadly and piercing as sharpened lances. Despite having every appearance of a sea-dweller, this serpentine creature is incapable of remaining underwater for long periods of time. As such, it keeps to shallow areas.",
     "icon": 28052,
     "category": "Seafood",
-    "level": 570
+    "level": 570,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          1055,
+          78
+        ],
+        [
+          1766,
+          98
+        ],
+        [
+          2478,
+          157
+        ]
+      ]
+    }
   },
   "36456": {
     "description": "Not even the freezing temperatures of the Eblan Rime can keep this large wavekin from swimming its icy waters. The fatty deposits it uses to keep from becoming a fish-shaped icicle have the added benefit of making this trout so delicious, it can be enjoyed raw.",
@@ -9402,13 +10680,49 @@
     "description": "One theory posits that one or more of these eons-old creatures was cast down to Hydaelyn via a chance encounter with a comet, and there spawned such wonders as the sand-dwelling Olgoi-Khorkhoi.",
     "icon": 29765,
     "category": "Seafood",
-    "level": 570
+    "level": 570,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          1181,
+          109
+        ],
+        [
+          1977,
+          136
+        ],
+        [
+          2774,
+          218
+        ]
+      ]
+    }
   },
   "36473": {
     "description": "A parasitic wavekin found lurking in the crevices of the regotoise's large shell. Its resemblance to the pillars of Zodiark's imprisonment that lie scattered across the moon's surface gave rise to its needlessly grandiose name.",
     "icon": 29766,
     "category": "Seafood",
-    "level": 534
+    "level": 534,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          244,
+          39
+        ],
+        [
+          408,
+          49
+        ],
+        [
+          573,
+          78
+        ]
+      ]
+    }
   },
   "36475": {
     "description": "This turtle's subtle shell allows it to become one with the bleak and barren lunar surface. Loporrits enjoy attempting to convince unsuspecting people that the moon itself is simply a large accretion of these turtles─though this is, of course, a fiction.",
@@ -9452,7 +10766,25 @@
     "description": "Stout and thick, this golden wavekin looks more like an ingot with fins than a fish. Residents of Elpis, however, do not ascribe any particular importance to gold, and thus the mangar's extravagance is largely lost on them.",
     "icon": 28523,
     "category": "Seafood",
-    "level": 570
+    "level": 570,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          501,
+          55
+        ],
+        [
+          838,
+          68
+        ],
+        [
+          1177,
+          109
+        ]
+      ]
+    }
   },
   "36481": {
     "description": "What this wavekin lacks in size is made up for in silvery luster. However, as its shine is the product of the luminescent microbial parasites covering its scales rather than its natural coloration─a dull dirt brown─it is hard to credit the fish's creator for their aesthetic sensibilities.",
@@ -9511,10 +10843,28 @@
     "level": 554
   },
   "36494": {
-    "description": "A creature whose origins can be traced back to the Dragonstar. Though this herbivore is relatively low on the food chain, its subsistence by means of riding aetheric wind currents across the stars to graze upon tree leaves was nonetheless impressive─until it was caught and unceremoniously grounded. ",
+    "description": "A creature whose origins can be traced back to the Dragonstar. Though this herbivore is relatively low on the food chain, its subsistence by means of riding aetheric wind currents across the stars to graze upon tree leaves was nonetheless impressive─until it was caught and unceremoniously grounded.",
     "icon": 29772,
     "category": "Seafood",
-    "level": 560
+    "level": 560,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          433,
+          30
+        ],
+        [
+          724,
+          37
+        ],
+        [
+          1017,
+          59
+        ]
+      ]
+    }
   },
   "36495": {
     "description": "Similar to what men might call “chirurgeon fish,” these wavekin can be found attached to the scales of grown wyrms, nibbling away at the parasites upon which they feed and other detritus.",
@@ -9654,7 +11004,25 @@
     "description": "This intimidating ball of spindly spikes hides a soft underbelly which tastes a great deal like urchin. The taste is so similar, in fact, it lends credence to the theories which suggest Hydaelyn's urchins can trace their lineage to the sea of stars.",
     "icon": 28959,
     "category": "Seafood",
-    "level": 560
+    "level": 560,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          330,
+          28
+        ],
+        [
+          552,
+          35
+        ],
+        [
+          776,
+          56
+        ]
+      ]
+    }
   },
   "36516": {
     "description": "Once sentient and vaguely manlike, this creature accidentally transformed itself into a desiccated husk following a botched attempt at immortality. Now, it can do naught save drift sadly along the currents of the cosmos.",
@@ -9690,7 +11058,25 @@
     "description": "This oddly proportioned, sharklike creature sails the wispy aether currents of the sea of stars on wings more expansive than it is long. Despite every appearance to the contrary, its physical composition has more in common with flora than the fauna it resembles.",
     "icon": 28965,
     "category": "Seafood",
-    "level": 570
+    "level": 570,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          1181,
+          375
+        ],
+        [
+          1977,
+          469
+        ],
+        [
+          2774,
+          750
+        ]
+      ]
+    }
   },
   "36522": {
     "description": "Watching their bloated, gelatinous forms drift through the waters would not whet many an appetite, but these wavekin make for a tasty treat when sufficiently dehydrated. Thus can they oft be found sun-drying on long sticks in Thavnairian fishing hamlets.",
@@ -9765,7 +11151,7 @@
     "level": 547
   },
   "36534": {
-    "description": "A jellyfish that glides through the seas subtly as a susurrus. Its cloud-like form calls to mind the satrap's residence, Meghaduta─and if ever Radz–at–Han's ruler needed a messenger, it would surely make for a stunning one. ",
+    "description": "A jellyfish that glides through the seas subtly as a susurrus. Its cloud-like form calls to mind the satrap's residence, Meghaduta─and if ever Radz–at–Han's ruler needed a messenger, it would surely make for a stunning one.",
     "icon": 29005,
     "category": "Seafood",
     "level": 547
@@ -9774,7 +11160,25 @@
     "description": "A small tropical fish that inhabits the coral reefs off of Tebqeyiq. Males boast bright blue and yellow patterning to court females, which keep to an arguably drab grey-black.",
     "icon": 28066,
     "category": "Seafood",
-    "level": 560
+    "level": 560,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          33,
+          51
+        ],
+        [
+          54,
+          77
+        ],
+        [
+          77,
+          128
+        ]
+      ]
+    }
   },
   "36536": {
     "description": "A docile wavekin that keeps to the shadows of kelp and rocks. It makes a delicious addition to most any meal, as its every part down to the most unappealing of organs has been found to be a delight for the palate.",
@@ -9840,7 +11244,25 @@
     "description": "Primordial beings with glimmering teeth so sharp as to earn them the name “blade's ray.” Known to hunt birds in addition to other fish, they propel themselves through the surface with powerful strokes before their prey gets any hint of danger.",
     "icon": 28065,
     "category": "Seafood",
-    "level": 560
+    "level": 560,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          423,
+          13
+        ],
+        [
+          708,
+          20
+        ],
+        [
+          995,
+          33
+        ]
+      ]
+    }
   },
   "36547": {
     "description": "Contrary to its terrifying appearance, this sea-dweller is a rather docile creature. That is not to say it is easy prey, however─when threatened, it bears its visibly lethal fangs, and only desperate fishermen looking to exchange flesh for delicious flesh are foolish enough to face it.",
@@ -9909,7 +11331,7 @@
     "level": 520
   },
   "36558": {
-    "description": "With its armored scales and beastly fangs, few creatures are fool enough to encroach upon this wavekin's territory. Local legends claim it spawned from the blood of a fisherman who died protecting Isari from piratical pillaging. ",
+    "description": "With its armored scales and beastly fangs, few creatures are fool enough to encroach upon this wavekin's territory. Local legends claim it spawned from the blood of a fisherman who died protecting Isari from piratical pillaging.",
     "icon": 29569,
     "category": "Seafood",
     "level": 520
@@ -9972,7 +11394,25 @@
     "description": "Small sky blue dots pattern this creature's otherwise monochrome body. While its few larger black markings may be suspected of camouflaging the true location of its eyes, they in fact are a by-product of this fish's aether-sensitive organs, and─rather dangerously─mark said organs' position.",
     "icon": 28086,
     "category": "Seafood",
-    "level": 560
+    "level": 560,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          181,
+          8
+        ],
+        [
+          302,
+          12
+        ],
+        [
+          424,
+          20
+        ]
+      ]
+    }
   },
   "36569": {
     "description": "From the reaches of the Glass Ocean to the depths of the Ruby Sea, this creature dwells far and wide─and goes by many names. While its white flesh is light, it has a pleasing texture, and its roe is known for its rich flavor.",
@@ -10002,7 +11442,25 @@
     "description": "Inhabiting the coral reef and its neighboring sands, this creature peeks out from its abode to expose the white, arrow-shaped pattern on its head only once in a blue moon. Though it lacks many a spot compared to the garden eels it so resembles, it at least shares their bulging and slightly confused eyes.",
     "icon": 28084,
     "category": "Seafood",
-    "level": 527
+    "level": 527,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          31,
+          15
+        ],
+        [
+          51,
+          23
+        ],
+        [
+          73,
+          38
+        ]
+      ]
+    }
   },
   "36574": {
     "description": "A fish with tawny-brown coloring on the side it prefers to show to the world, and pale white where it lies upon the sea floor. Among this species one will find the occasional giant, some spanning up to five yalms in size.",
@@ -10032,7 +11490,25 @@
     "description": "With a head shape eerily reminiscent of a samurai's helmet, it is no surprise that warriors once attempted to don this fish's skull as a form of protection. One will also not be shocked to hear that it was far from effective, being easily penetrated by enemy katana.",
     "icon": 28083,
     "category": "Seafood",
-    "level": 520
+    "level": 520,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          400,
+          11
+        ],
+        [
+          669,
+          17
+        ],
+        [
+          940,
+          28
+        ]
+      ]
+    }
   },
   "36579": {
     "description": "Always on the prowl for prey, this wavekin devours fish up to its own size and even the hardest of crustaceans. Its beautiful fins are known for their ability to capture aether from the surrounding waters, and shine a deep blue as it cruises the seas.",
@@ -10044,7 +11520,25 @@
     "description": "A leisurely shark partial to life at the bottom of the seas. While many mistakenly believe it to have skin tougher than armor, this is but a misnomer wrapped in an old wives' tale. Though comparably inflexible for a creature of the deep seas, when brought ashore, its hide is far from what it is cracked up to be.",
     "icon": 28085,
     "category": "Seafood",
-    "level": 560
+    "level": 560,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          425,
+          11
+        ],
+        [
+          711,
+          17
+        ],
+        [
+          998,
+          28
+        ]
+      ]
+    }
   },
   "36581": {
     "description": "This creature's defining feature is its tooth-lined jaw, which spirals out and forward in a horrific loop. This exposed lower mandible can never be completely closed, but this is hardly necessary with the level of carnage that simply whipping its head around to saw through its prey creates.",
@@ -10569,7 +12063,7 @@
     "level": 1
   },
   "40533": {
-    "description": "Aether-rich spectral currents are believed to be the secret of this shrimp's brilliant pink shade, as well as its exceedingly resilient shell. Indeed, the crustacean's carapace is so strong that shipwrights often fashion its legs and pincers into nails for their vessels. ",
+    "description": "Aether-rich spectral currents are believed to be the secret of this shrimp's brilliant pink shade, as well as its exceedingly resilient shell. Indeed, the crustacean's carapace is so strong that shipwrights often fashion its legs and pincers into nails for their vessels.",
     "icon": 28104,
     "category": "Seafood",
     "level": 1
@@ -10605,7 +12099,7 @@
     "level": 1
   },
   "40539": {
-    "description": "Legends say that each time the goddess Nymeia drops a spinning wheel, it falls from the heavens and becomes a shell for one of these enormous tortoises. The sheer number of these wavekin suggests that even the Twelve are fallible. ",
+    "description": "Legends say that each time the goddess Nymeia drops a spinning wheel, it falls from the heavens and becomes a shell for one of these enormous tortoises. The sheer number of these wavekin suggests that even the Twelve are fallible.",
     "icon": 29198,
     "category": "Seafood",
     "level": 1
@@ -10677,7 +12171,7 @@
     "level": 1
   },
   "40551": {
-    "description": "Spectral currents make the blue skin of this wavekin almost transparent, causing its yellow fins and mouth to appear as coins floating just under the ocean's surface. Many a greedy sailor has fallen overboard after reaching out a little too far over the bulwark. ",
+    "description": "Spectral currents make the blue skin of this wavekin almost transparent, causing its yellow fins and mouth to appear as coins floating just under the ocean's surface. Many a greedy sailor has fallen overboard after reaching out a little too far over the bulwark.",
     "icon": 28102,
     "category": "Seafood",
     "level": 1
@@ -10719,7 +12213,7 @@
     "level": 1
   },
   "40558": {
-    "description": "The speed of these enormous sharks has seen them named for the demons that fleet-footed Idaten pursued across the firmament. A single fearsome pod can hold dominion over a territory stretching from the Ruby Sea to Kugane. ",
+    "description": "The speed of these enormous sharks has seen them named for the demons that fleet-footed Idaten pursued across the firmament. A single fearsome pod can hold dominion over a territory stretching from the Ruby Sea to Kugane.",
     "icon": 29158,
     "category": "Seafood",
     "level": 1
@@ -10827,7 +12321,7 @@
     "level": 1
   },
   "40576": {
-    "description": "The spread of these wavekin to various regions is credited to spectral currents, which are the only force strong enough to wrest them from their rocky homes. Their tendency to settle on the ocean floor has earned them the favor of the Kojin, who sense a kindred spirit in the fish.   ",
+    "description": "The spread of these wavekin to various regions is credited to spectral currents, which are the only force strong enough to wrest them from their rocky homes. Their tendency to settle on the ocean floor has earned them the favor of the Kojin, who sense a kindred spirit in the fish.",
     "icon": 28092,
     "category": "Seafood",
     "level": 1
@@ -10845,7 +12339,7 @@
     "level": 1
   },
   "40579": {
-    "description": "Perhaps due to spending less time in the ocean than its seabound cousins, flying squid is considered inferior in flavor to other varieties of dried squid. Due to its low price and high availability, however, it is a staple among the commonfolk. ",
+    "description": "Perhaps due to spending less time in the ocean than its seabound cousins, flying squid is considered inferior in flavor to other varieties of dried squid. Due to its low price and high availability, however, it is a staple among the commonfolk.",
     "icon": 28100,
     "category": "Seafood",
     "level": 1
@@ -11148,7 +12642,7 @@
     "level": 645
   },
   "43669": {
-    "description": "Named after its alleged resemblance to the red face of an inveterate drunkard, the colloquialism has all but superseded the wavekin's original Yok Huy name. The fish itself seems unperturbed by the unflattering comparisons. ",
+    "description": "Named after its alleged resemblance to the red face of an inveterate drunkard, the colloquialism has all but superseded the wavekin's original Yok Huy name. The fish itself seems unperturbed by the unflattering comparisons.",
     "icon": 28117,
     "category": "Seafood",
     "level": 645
@@ -11178,7 +12672,7 @@
     "level": 645
   },
   "43674": {
-    "description": "The golden fins of this saltwater fish are often likened to the honed tip of a halberd. Seen as protectors of the capital's harbor, these wavekin are venerated by Tuliyollan sailors. ",
+    "description": "The golden fins of this saltwater fish are often likened to the honed tip of a halberd. Seen as protectors of the capital's harbor, these wavekin are venerated by Tuliyollan sailors.",
     "icon": 28122,
     "category": "Seafood",
     "level": 650
@@ -11229,7 +12723,25 @@
     "description": "Said to have been named after a cowardly Yok Huy, this timid silver amphibian is often seen paddling around saltwater pools. One can only imagine the burning shame Zorlortor must have felt being associated with such a creature.",
     "icon": 29939,
     "category": "Seafood",
-    "level": 645
+    "level": 645,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          135,
+          18
+        ],
+        [
+          225,
+          23
+        ],
+        [
+          317,
+          37
+        ]
+      ]
+    }
   },
   "43683": {
     "description": "Folklore describes this wavekin as the remnant of a fallen star come to life, from an era in which the skies above Tural blazed with meteor showers. Indeed, when seen glinting in the water on a moonlit night, it is easily confused for the reflection of a comet arcing across the heavens.",
@@ -11247,7 +12759,25 @@
     "description": "Endemic to Karvarhur the First, on average, these amphibians grow no larger than a single handspan. Girthier specimens have been observed, however─some bulking up to be wider than the waist of a Pelupelu. Admittedly, this is hardly an awe-inspiring metric.",
     "icon": 28569,
     "category": "Seafood",
-    "level": 700
+    "level": 700,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          70,
+          30
+        ],
+        [
+          117,
+          37
+        ],
+        [
+          166,
+          60
+        ]
+      ]
+    }
   },
   "43686": {
     "description": "Roughly translated, the Yok Huy name of this wavekin means “fish of never-ending blooms.” A fitting name for a creature bearing such a close resemblance to a delicate petal.",
@@ -11309,7 +12839,25 @@
     "description": "This prolific crustacean is a popular food source for many living in Yok Tural, and with good reason. For a crab, it is impressively large and meaty─more than fit for a feast.",
     "icon": 28573,
     "category": "Seafood",
-    "level": 650
+    "level": 650,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          151,
+          22
+        ],
+        [
+          252,
+          27
+        ],
+        [
+          354,
+          44
+        ]
+      ]
+    }
   },
   "43695": {
     "description": "Burrowing into flesh through open wounds and other orifices, this truly frightful wavekin consumes its prey from the inside out. To be surrounded by a shoal of these voracious predators is all but a death sentence.",
@@ -11435,7 +12983,25 @@
     "description": "When viewed on the peacock bass spectrum, this species is on the gaudier end of the scale. Despite its brazen coloring, however, this wavekin is adept at concealing itself amongst the reeds while on the hunt for prey.",
     "icon": 28588,
     "category": "Seafood",
-    "level": 700
+    "level": 700,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          348,
+          113
+        ],
+        [
+          817,
+          192
+        ],
+        [
+          859,
+          497
+        ]
+      ]
+    }
   },
   "43714": {
     "description": "This peculiar catfish has a slender body that tapers towards the mouth. This characteristic, along with its long barbels, helps the wavekin trawl the substrate in search for tasty insects and microbial organisms.",
@@ -11497,7 +13063,25 @@
     "description": "This carp is adorned with dull, mirrorlike scales which dimly reflect driftwood and other waterborne detritus, allowing it to better conceal itself. Possessing a very mild temperament, it meanders through the waters of its habitat with an unhurried grace.",
     "icon": 28595,
     "category": "Seafood",
-    "level": 660
+    "level": 660,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          503,
+          17
+        ],
+        [
+          842,
+          22
+        ],
+        [
+          1183,
+          34
+        ]
+      ]
+    }
   },
   "43723": {
     "description": "In the Xbr'aal language, “mu” means “sun,” while “tsoly” refers to a cenote. A fitting name for this vibrant red wavekin, which is easily mistaken for a mysterious light source when spotted in the depths.",
@@ -11599,7 +13183,25 @@
     "description": "On rare occasions, this species rises to the surface for air. Some have suggested perhaps these sociable creatures have grown lonely in the time since Moxutural Zooj was abandoned.",
     "icon": 28604,
     "category": "Seafood",
-    "level": 670
+    "level": 670,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          480,
+          25
+        ],
+        [
+          1128,
+          42
+        ],
+        [
+          1185,
+          108
+        ]
+      ]
+    }
   },
   "43738": {
     "description": "One theory has it that this fish was purposely brought here from the Ut'ohmu Horizon, where other similarly vibrant species have been documented.",
@@ -11623,7 +13225,25 @@
     "description": "Exposed to the unusual aether of the meteorites, this species has developed a faint, shimmering glow. In Mamook, they are typically given as a wedding gift to young couples.",
     "icon": 28608,
     "category": "Seafood",
-    "level": 670
+    "level": 670,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          56,
+          26
+        ],
+        [
+          93,
+          33
+        ],
+        [
+          132,
+          53
+        ]
+      ]
+    }
   },
   "43742": {
     "description": "It is said that this thin brown fish evolved to resemble a fallen branch or tree root in order to evade predators. Its algae-based diet helps to “clean up” the water in which it resides.",
@@ -11671,7 +13291,25 @@
     "description": "While originally native to the Indigo Deep, a number of these sharks migrated to the cenotes in search of prey and simply never went back.",
     "icon": 28125,
     "category": "Seafood",
-    "level": 700
+    "level": 700,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          491,
+          227
+        ],
+        [
+          1154,
+          386
+        ],
+        [
+          1213,
+          1000
+        ]
+      ]
+    }
   },
   "43750": {
     "description": "In contrast with their stout heads and bodies, these fish have extremely thin tails─some little more than skin and bone, hence the name. The caudal fin is forked deeply.",
@@ -11713,7 +13351,25 @@
     "description": "The Tonawawta traditional swimming style is said to have taken inspiration from the strong and steady movements of the Toari sucker.",
     "icon": 28614,
     "category": "Seafood",
-    "level": 680
+    "level": 680,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          508,
+          29
+        ],
+        [
+          1194,
+          49
+        ],
+        [
+          1255,
+          128
+        ]
+      ]
+    }
   },
   "43756": {
     "description": "The black roe laid by this paddlefish has long been treasured as a delicacy in Shaaloani. Some are even willing to pay for it in gold.",
@@ -11752,13 +13408,49 @@
     "description": "This carnivorous predator primarily targets cloudfish, but may sometimes dive at pedestrians crossing Zorgor the Boundless, especially if they appear to be carrying a tasty snack.",
     "icon": 29954,
     "category": "Seafood",
-    "level": 690
+    "level": 690,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          469,
+          50
+        ],
+        [
+          785,
+          62
+        ],
+        [
+          1102,
+          99
+        ]
+      ]
+    }
   },
   "43762": {
     "description": "Colonies of cloud wasps nest in the trestles of Zorgor the Boundless, serving and protecting their queen in much the same fashion as honeybees.",
     "icon": 29955,
     "category": "Seafood",
-    "level": 700
+    "level": 700,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          89,
+          104
+        ],
+        [
+          149,
+          130
+        ],
+        [
+          210,
+          209
+        ]
+      ]
+    }
   },
   "43763": {
     "description": "Traditionally, the meat is hung to dry for many hours. Locals often recount the story of a traveler who, upon tasting it, leapt straight into the falls from Zorgor the Boundless, spear in hand.",
@@ -11851,7 +13543,25 @@
     "description": "A resplendent golden wavekin found amongst the submerged ruins of Alexandria. The excess lightning energy that permeates the area has imbued its scales with metallic strength and a chrome-like sheen.",
     "icon": 28622,
     "category": "Seafood",
-    "level": 690
+    "level": 690,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          440,
+          39
+        ],
+        [
+          737,
+          49
+        ],
+        [
+          1035,
+          79
+        ]
+      ]
+    }
   },
   "43776": {
     "description": "This crustacean is found in waterways throughout Everkeep. A culinary favorite, steamed yabby is often paired with a variety of colorful but questionable sauces.",
@@ -11916,7 +13626,7 @@
     "level": 690
   },
   "43785": {
-    "description": "Possessing primitive lungs, this sizable fish is often seen surfacing for air. When observing such behavior, even the most experienced naturalists have been known to mistake its blunt head for that of a scalekin. ",
+    "description": "Possessing primitive lungs, this sizable fish is often seen surfacing for air. When observing such behavior, even the most experienced naturalists have been known to mistake its blunt head for that of a scalekin.",
     "icon": 28629,
     "category": "Seafood",
     "level": 690
@@ -11967,7 +13677,25 @@
     "description": "Favoring warm, temperate waters, this wavekin once roamed oceans far and wide. Sadly, its present habitat rather curtails these migratory tendencies.",
     "icon": 28129,
     "category": "Seafood",
-    "level": 700
+    "level": 700,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          1078,
+          64
+        ],
+        [
+          2534,
+          108
+        ],
+        [
+          2663,
+          281
+        ]
+      ]
+    }
   },
   "43793": {
     "description": "A beige bivalve originally hailing from a region of expansive shallows. This highly nutritious and exquisitely flavorsome creature was once a frequent fixture on dining tables across Alexandria.",
@@ -11985,7 +13713,25 @@
     "description": "Relatives of this gargantuan rust-tinged shark voraciously stalk their prey in temperate seas. This particular species is comparatively docile, and seems content to trawl the waters of Living Memory for plankton and other microbial organisms.",
     "icon": 28131,
     "category": "Seafood",
-    "level": 700
+    "level": 700,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          1141,
+          78
+        ],
+        [
+          1911,
+          97
+        ],
+        [
+          2682,
+          156
+        ]
+      ]
+    }
   },
   "43796": {
     "description": "This wavekin and its dull golden scales has become a symbol of nostalgic reminiscence─calling to mind the faded glory of bygone days. Despite the somber association, the sight of this charming fish has soothed many an onlooker over the years.",
@@ -12123,13 +13869,49 @@
     "description": "The black stripe to the rear of this wavekin's body gives the impression of a forked tail, or even a pair of leg-like appendages─prompting wonder or revulsion, depending on the observer. This intriguing illusion has earned the fish a nickname: “the two-legged swimmer.”",
     "icon": 28643,
     "category": "Seafood",
-    "level": 665
+    "level": 665,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          182,
+          16
+        ],
+        [
+          304,
+          24
+        ],
+        [
+          428,
+          40
+        ]
+      ]
+    }
   },
   "43822": {
     "description": "Said to have once inhabited a vast stretch of Ihuykatumu, this colossal predator is without match in present-day Marsh Ligaka.",
     "icon": 28644,
     "category": "Seafood",
-    "level": 655
+    "level": 655,
+    "scrips": {
+      "name": "Purple Gatherers' Scrip",
+      "icon": 65087,
+      "tiers": [
+        [
+          401,
+          11
+        ],
+        [
+          671,
+          17
+        ],
+        [
+          942,
+          28
+        ]
+      ]
+    }
   },
   "43823": {
     "description": "This crab's carapace is almost indistinguishable from the deep blue waters of the caldera lakes it calls home, lending it an advantage when hunting prey and avoiding predators. Turning bright red when boiled, its shell is soft, tender, and very much edible.",
@@ -12243,13 +14025,49 @@
     "description": "Roughly translated, “Iq Rrax” means “fresh blood”─a fitting name for a crustacean that consumes exactly that. Capable of filling its claws with the blood of its prey, it will draw on these grisly reserves during times of scarcity.",
     "icon": 28655,
     "category": "Seafood",
-    "level": 690
+    "level": 690,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          21,
+          63
+        ],
+        [
+          34,
+          95
+        ],
+        [
+          49,
+          158
+        ]
+      ]
+    }
   },
   "43842": {
     "description": "This colossal cod bears a passing resemblance to the mounts favored by the Mamool Ja. According to one legend, this species came into being when a fleeing wivre plunged into the water and promptly underwent a remarkable transformation.",
     "icon": 28656,
     "category": "Seafood",
-    "level": 690
+    "level": 690,
+    "scrips": {
+      "name": "Orange Gatherers' Scrip",
+      "icon": 65109,
+      "tiers": [
+        [
+          425,
+          18
+        ],
+        [
+          711,
+          27
+        ],
+        [
+          998,
+          45
+        ]
+      ]
+    }
   },
   "43843": {
     "description": "This diminutive wavekin possesses a highly efficient aether storage gland. Using the accumulated energy to manipulate the currents around it, the warmouth can propel itself to frightening speeds.",
@@ -12588,7 +14406,7 @@
     "level": 750
   },
   "49796": {
-    "description": "Some scholars have likened this wavekin's form to an ear of corn. Indeed, the sight of these fish basking in the sun with their silk-like tailfins aquiver is akin to that of a golden field, ripe kernels ready to harvest. ",
+    "description": "Some scholars have likened this wavekin's form to an ear of corn. Indeed, the sight of these fish basking in the sun with their silk-like tailfins aquiver is akin to that of a golden field, ripe kernels ready to harvest.",
     "icon": 28750,
     "category": "Seafood",
     "level": 750
@@ -12660,7 +14478,7 @@
     "level": 1
   },
   "51215": {
-    "description": "Unlike its mosasaur cousins that stalk the waters of inland Gyr Abania, this scalekin freely roams the realm's oceans. Despite presiding over a much larger habitat, its innate ferocity remains unchanged. ",
+    "description": "Unlike its mosasaur cousins that stalk the waters of inland Gyr Abania, this scalekin freely roams the realm's oceans. Despite presiding over a much larger habitat, its innate ferocity remains unchanged.",
     "icon": 28147,
     "category": "Seafood",
     "level": 1
@@ -12857,7 +14675,7 @@
     "category": "Minion",
     "level": 1,
     "alsoAt": [
-      "Thavnair Spectral Current, The *Endeavor*"
+      "Thavnair Spectral Current, The Endeavor"
     ]
   },
   "51999": {

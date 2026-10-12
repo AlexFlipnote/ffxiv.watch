@@ -194,7 +194,8 @@
     "hookset": "Precision",
     "tug": "light",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12766,
@@ -354,7 +355,8 @@
     "hookset": "Precision",
     "tug": "light",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12726,
@@ -399,7 +401,8 @@
     "tug": "medium",
     "fishEyes": true,
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12748,
@@ -1313,7 +1316,8 @@
     "fishEyes": true,
     "folklore": "Coerthan Fishing Folklore",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 14216,
@@ -1578,7 +1582,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12722,
@@ -1866,7 +1871,8 @@
     "tug": "medium",
     "fishEyes": true,
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12769,
@@ -1930,7 +1936,8 @@
     "hookset": "Precision",
     "tug": "light",
     "collectable": true,
-    "patch": 3.1
+    "patch": 3.1,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 15629,
@@ -2293,7 +2300,8 @@
     "tug": "medium",
     "fishEyes": true,
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 14211,
@@ -2333,7 +2341,8 @@
     "fishEyes": true,
     "folklore": "Dravanian Fishing Folklore",
     "collectable": true,
-    "patch": 3.2
+    "patch": 3.2,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 15631,
@@ -3048,7 +3057,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12819,
@@ -3325,7 +3335,8 @@
     "fishEyes": true,
     "folklore": "Dravanian Fishing Folklore",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 14212,
@@ -3819,7 +3830,8 @@
     "tug": "light",
     "fishEyes": true,
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12743,
@@ -3952,7 +3964,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12771,
@@ -4053,7 +4066,8 @@
     "tug": "medium",
     "fishEyes": true,
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12793,
@@ -5041,7 +5055,8 @@
     "tug": "medium",
     "fishEyes": true,
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12802,
@@ -5623,7 +5638,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12822,
@@ -5687,7 +5703,8 @@
     "hookset": "Powerful",
     "tug": "medium",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 13730,
@@ -6606,7 +6623,8 @@
     "tug": "light",
     "fishEyes": true,
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12777,
@@ -6917,7 +6935,8 @@
     "tug": "heavy",
     "folklore": "Abalathian Fishing Folklore",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12827,
@@ -6959,7 +6978,8 @@
     "tug": "medium",
     "folklore": "Abalathian Fishing Folklore",
     "collectable": true,
-    "patch": 3
+    "patch": 3,
+    "scrip": "Purple Gatherers' Scrip"
   },
   {
     "id": 12833,

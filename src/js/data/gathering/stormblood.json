@@ -157,12 +157,14 @@
       {
         "id": 32975,
         "name": "Rarefied Raw Triphane",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32977,
         "name": "Rarefied Raw Kyanite",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -318,7 +320,8 @@
       {
         "id": 32989,
         "name": "Rarefied Gyr Abanian Mineral Water",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -346,7 +349,8 @@
       {
         "id": 33011,
         "name": "Rarefied Bloodhemp",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -571,7 +575,8 @@
         "id": 32987,
         "name": "Rarefied Gyr Abanian Alumen",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -671,7 +676,8 @@
       {
         "id": 32976,
         "name": "Rarefied Raw Star Spinel",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -977,12 +983,14 @@
       {
         "id": 32997,
         "name": "Rarefied Larch Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32999,
         "name": "Rarefied Larch Sap",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1020,7 +1028,8 @@
       {
         "id": 32998,
         "name": "Rarefied Shiitake Mushroom",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1107,7 +1116,7 @@
     "job": "Miner",
     "level": 75,
     "zone": "The Ruby Sea",
-    "spot": "The *Kobayashi Maru*",
+    "spot": "The Kobayashi Maru",
     "map": {
       "image": "e3f1-00",
       "scale": 100,
@@ -1638,12 +1647,14 @@
       {
         "id": 33000,
         "name": "Rarefied Pine Resin",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 33001,
         "name": "Rarefied Pine Log",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -1703,6 +1714,12 @@
         "id": 31125,
         "name": "Oddly Specific Dark Chestnut Log",
         "stars": 2
+      },
+      {
+        "id": 31126,
+        "name": "Oddly Specific Leafborne Aethersand",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -1731,6 +1748,12 @@
         "id": 31127,
         "name": "Oddly Specific Schorl",
         "stars": 2
+      },
+      {
+        "id": 31128,
+        "name": "Oddly Specific Landborne Aethersand",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -2231,7 +2254,8 @@
         "id": 33009,
         "name": "Rarefied Urunday Log",
         "stars": 1,
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
@@ -2636,6 +2660,12 @@
         "id": 31125,
         "name": "Oddly Specific Dark Chestnut Log",
         "stars": 2
+      },
+      {
+        "id": 31126,
+        "name": "Oddly Specific Leafborne Aethersand",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -2664,6 +2694,12 @@
         "id": 31127,
         "name": "Oddly Specific Schorl",
         "stars": 2
+      },
+      {
+        "id": 31128,
+        "name": "Oddly Specific Landborne Aethersand",
+        "stars": 2,
+        "hidden": true
       }
     ]
   },
@@ -2701,12 +2737,14 @@
       {
         "id": 32978,
         "name": "Rarefied Raw Azurite",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       },
       {
         "id": 32979,
         "name": "Rarefied Silvergrace Ore",
-        "collectable": true
+        "collectable": true,
+        "scrip": "Purple Gatherers' Scrip"
       }
     ]
   },
