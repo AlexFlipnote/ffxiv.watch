@@ -147,6 +147,17 @@
   i:last-child:not(:first-child) {
     transform: rotate(12deg);
   }
+
+  // A medium tug's two have no upright one between them, at a heavy's lean their tops fan apart. Leaning half as much
+  // and a bit closer, they keep together like a heavy's
+  i:first-child + i:last-child {
+    margin-left: -.21875rem;
+    transform: rotate(6deg);
+  }
+
+  i:first-child:nth-last-child(2) {
+    transform: rotate(-6deg);
+  }
 }
 
 .emote-command {
