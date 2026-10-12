@@ -37,6 +37,35 @@
   }
 }
 
+// A select and its options' text in one grid cell, the select stretched to the widest (see sizeSelects in build.js)
+.select-box {
+  display: inline-grid;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+
+  > select {
+    width: 100%;
+  }
+}
+
+// Only there for its width: the same padding and font as the select, no height, nothing to see or read. Under
+// .select-box, to outrank the styled select's own display further down
+.select-box > .select-sizer {
+  display: grid;
+  height: 0;
+  padding-block: 0;
+  overflow: hidden;
+  visibility: hidden;
+  background: none;
+
+  > span {
+    grid-area: 1 / 1;
+    white-space: nowrap;
+  }
+}
+
 // The open list styled too, where the browser lets it (Chrome and Edge 135+, the rest keep their own). Only with a
 // mouse, a phone's own picker is easier to use with a finger
 @supports (appearance: base-select) {

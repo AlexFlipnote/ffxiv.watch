@@ -98,24 +98,6 @@ function groupRows(state) {
 }
 
 /**
- * A styled select (base-select, see _controls.scss) is as wide as its picked option, so the filters would shift with
- * every pick. Held at its widest option's width instead, like a native one.
- * @param {HTMLSelectElement} select
- */
-function steadyWidth(select) {
-  if (getComputedStyle(select).appearance !== "base-select") return
-  const picked = select.value
-  select.style.minWidth = ""
-  let widest = 0
-  for (const option of select.options) {
-    select.value = option.value
-    widest = Math.max(widest, select.getBoundingClientRect().width)
-  }
-  select.value = picked
-  if (widest) select.style.minWidth = `${widest}px`
-}
-
-/**
  * Wires up a table page: remembered filters, the search in the URL, one expansion's data at a time, and rows sorted
  * and grouped by when they're up. The rows come with the page, each marked with the entry it's for.
  * @param {ListingOptions} options
@@ -152,17 +134,12 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     if ([...select.options].some((o) => o.value === value)) select.value = value
   }
   search.value = params.get("q") ?? ""
-  const steadySelects = () => Object.values(selects).forEach(steadyWidth)
-  steadySelects()
-  document.fonts.ready.then(steadySelects)
 
   const filters = search.closest(".filters")
   const toggle = filters.querySelector(".filters-toggle")
   toggle?.addEventListener("click", () => {
     const open = filters.classList.toggle("filters-open")
     toggle.setAttribute("aria-expanded", open)
-    // Hidden until now, they had no width to measure
-    if (open) steadySelects()
   })
 
   const loadExpansion = (file) => {

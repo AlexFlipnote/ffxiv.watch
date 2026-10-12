@@ -401,12 +401,24 @@ function preloadChunks(route, file) {
  * @param {boolean} hashed Add ?v=hash to the assets
  * @returns {string} The finished HTML
  */
+/**
+ * A styled select (base-select, see _controls.scss) is as wide as its picked option, so the filters would shift with
+ * every pick, and on the first one. Each gets its options' text, invisible, in the same grid cell, so it's as wide as
+ * the widest from the first paint, like a native one.
+ * @param {string} html
+ * @returns {string}
+ */
+const sizeSelects = (html) => html.replace(/<select class="select"[^>]*>([\s\S]*?)<\/select>/g, (select, options) => {
+  const texts = [...options.matchAll(/<option[^>]*>([^<]*)<\/option>/g)].map(([, text]) => `<span>${text}</span>`)
+  return `<span class="select-box">${select}<span class="select select-sizer" aria-hidden="true">${texts.join("")}</span></span>`
+})
+
 function renderPage(route, hashed) {
   if (!templates.has(route.source)) {
     templates.set(route.source, includeHtml(fs.readFileSync(path.join(PAGES, route.source), "utf8"), `pages/${route.source}`))
   }
 
-  return fillPlaceholders(templates.get(route.source), route.props, `pages/${route.source}`)
+  return sizeSelects(fillPlaceholders(templates.get(route.source), route.props, `pages/${route.source}`))
     .replace(/^([ \t]*)<x-seo\s+([^>]*?)\s*\/?>/gm, (_, indent, attrs) =>
       seoTags(route, attrs).map(tag => indent + tag).join("\n"))
     .replace(/^([ \t]*)<x-js\s+src="([^"]+)"(\s+module)?(?:\s+preload="([^"]+)")?\s*\/?>/gm, (_, indent, file, module, preload) => [
