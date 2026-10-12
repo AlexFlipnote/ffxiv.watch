@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="FFXIV PvP Maps: Frontline & Crystalline Conflict Rotation"
+      description="Today's FFXIV Frontline map and the Crystalline Conflict map this hour, when they change and what comes next, in your local time."
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="pvp.js" module/>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="listing pvp">
+        <header class="listing-intro">
+          <h1 class="listing-title">PvP maps</h1>
+          <p class="listing-lead">Today's Frontline and this hour's Crystalline Conflict map, when they change and what comes after, in your local time.</p>
+        </header>
+        <div class="pvp-grid">
+          <section class="pvp-card" id="pvp-frontline">
+            <h2 class="pvp-title">Frontline <span class="pvp-subtitle">Daily challenge, changes at the daily reset</span></h2>
+            <div class="pvp-now">
+              <span class="detail-state">Today</span>
+              <strong class="pvp-map"></strong>
+              <span class="pvp-change"><span class="detail-state">Changes in</span> <strong class="pvp-countdown"></strong></span>
+            </div>
+            <ol class="pvp-upcoming" aria-label="The days after"></ol>
+            <details class="pvp-details">
+              <summary>Rotation</summary>
+              {{{ frontlineOrder }}}
+            </details>
+          </section>
+          <section class="pvp-card" id="pvp-crystalline-conflict">
+            <h2 class="pvp-title">Crystalline Conflict <span class="pvp-subtitle">A new map every hour</span></h2>
+            <div class="pvp-now">
+              <span class="detail-state">Now</span>
+              <strong class="pvp-map"></strong>
+              <span class="pvp-change"><span class="detail-state">Changes in</span> <strong class="pvp-countdown"></strong></span>
+            </div>
+            <ol class="pvp-upcoming" aria-label="The hours after"></ol>
+            <details class="pvp-details">
+              <summary>Rotation</summary>
+              {{{ crystallineConflictOrder }}}
+            </details>
+          </section>
+        </div>
+      </main>
+      <x-html str="partials/footer.html"/>
+    </div>
+
+    <x-html str="partials/settings.html"/>
+  </body>
+</html>

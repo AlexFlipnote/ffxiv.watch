@@ -1,0 +1,106 @@
+@use "../mixins" as *;
+
+// Frontline's day and Crystalline Conflict's hour side by side, one above the other on a phone
+.pvp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.pvp-card {
+  @include glass;
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+  padding: 1rem 1.25rem;
+}
+
+.pvp-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.pvp-subtitle {
+  display: block;
+  margin-top: .125rem;
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--font-tertiary);
+}
+
+.pvp-now {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding-bottom: .875rem;
+  border-bottom: 1px solid var(--divider);
+}
+
+.pvp-map {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--accent);
+
+  @include mobile {
+    font-size: 1.3rem;
+  }
+}
+
+.pvp-change {
+  font-size: .85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--font-tertiary);
+
+  strong {
+    color: var(--font-primary);
+  }
+}
+
+.pvp-upcoming {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: .9rem;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .375rem 0;
+
+    + li {
+      border-top: 1px solid var(--divider);
+    }
+  }
+
+  time {
+    flex-shrink: 0;
+    color: var(--font-tertiary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  span {
+    text-align: right;
+  }
+}
+
+.pvp-details {
+  font-size: .85rem;
+  color: var(--font-secondary);
+
+  summary {
+    cursor: pointer;
+    color: var(--font-tertiary);
+  }
+}
+
+.pvp-order {
+  margin: .5rem 0 0;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
