@@ -33,6 +33,7 @@ listing({
     && (typeSelect.value === ALL ? !fish.anyTime : TYPES[typeSelect.value]?.(fish)),
   matches: (fish, query) => [
     fish.name, fish.zone, fish.spot, fish.folklore, fish.method, fish.big && "Big fish", fish.scrip,
+    fish.ocean && "Ocean fishing", fish.ocean?.stop, fish.ocean?.blue && "Blue fish",
     ...(fish.weather ?? []), ...(fish.previousWeather ?? []),
     ...(fish.bait ?? []).flat().map((b) => b.name), ...(fish.predators ?? []).map((p) => p.name)
   ].some((text) => text?.toLowerCase().includes(query)),

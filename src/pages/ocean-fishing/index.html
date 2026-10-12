@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="FFXIV Ocean Fishing: Schedule, Routes & Fish"
+      description="FFXIV ocean fishing schedule in your local time: the next voyages on the Indigo and Ruby routes, the time of day at each stop, and every stop's fish, spectral current and blue fish with their bait."
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="ocean.js" module/>
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="listing ocean ocean-pending">
+        <header class="listing-intro">
+          <h1 class="listing-title">Ocean fishing</h1>
+          <p class="listing-lead">The next voyages on both routes in your local time, with the time of day at each stop, and what bites at every stop and in its spectral current.</p>
+        </header>
+        <section class="ocean-next" aria-label="Next voyage">
+          <div class="ocean-next-head">
+            <span class="detail-state" id="ocean-state">Next voyage in</span>
+            <strong class="detail-countdown" id="ocean-countdown">00:00:00</strong>
+            <time class="ocean-when" id="ocean-when">Mon 1 Jan, 00:00</time>
+          </div>
+          <div class="ocean-routes">
+            {{{ next }}}
+          </div>
+        </section>
+        <section class="ocean-upcoming">
+          <h2 class="ocean-heading">Coming voyages</h2>
+          <ol class="ocean-schedule" id="ocean-schedule">{{{ schedule }}}</ol>
+        </section>
+        {{{ stops }}}
+      </main>
+      <x-html str="partials/footer.html"/>
+    </div>
+
+    <x-html str="partials/settings.html"/>
+  </body>
+</html>

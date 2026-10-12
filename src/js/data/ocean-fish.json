@@ -1,0 +1,2992 @@
+{
+  "stops": [
+    {
+      "place": "Galadion Bay",
+      "route": "Indigo",
+      "fish": [
+        {
+          "id": 28937,
+          "name": "Galadion Goby",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 28938,
+          "name": "Galadion Chovy",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29723,
+          "name": "Leopard Eel",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29719,
+          "name": "Jasperhead",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 28942,
+          "name": "Tarnished Shark",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 28939,
+          "name": "Rosy Bream",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29734,
+          "name": "Cyan Octopus",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29721,
+          "name": "Heavenswimmer",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29784,
+          "name": "Spectral Megalodon",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 29744,
+          "name": "Drunkfish",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 28938,
+              "name": "Galadion Chovy",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 29766,
+          "name": "Merman's Mane",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29749,
+          "name": "Heavenskey",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29750,
+          "name": "Ghost Shark",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29754,
+          "name": "Fishmonger",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29752,
+          "name": "Navigator's Print",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29753,
+          "name": "Casket Oyster",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29751,
+          "name": "Quicksilver Blade",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29782,
+          "name": "Funnel Shark",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 29756,
+          "name": "Nimble Dancer",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29788,
+          "name": "Sothis",
+          "blue": true,
+          "time": "Night",
+          "bait": {
+            "id": 2603,
+            "name": "Glowworm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 29752,
+              "name": "Navigator's Print",
+              "count": 1
+            },
+            {
+              "id": 29749,
+              "name": "Heavenskey",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "The Southern Strait of Merlthor",
+      "route": "Indigo",
+      "fish": [
+        {
+          "id": 29722,
+          "name": "Ghoul Barracuda",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29739,
+          "name": "La Noscean Jelly",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 28941,
+          "name": "Sunfly",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29724,
+          "name": "Marine Bomb",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29740,
+          "name": "Shaggy Seadragon",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29725,
+          "name": "Momora Mora",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 29726,
+          "name": "Merlthor Butterfly",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29727,
+          "name": "Gladius",
+          "bait": {
+            "id": 29722,
+            "name": "Ghoul Barracuda"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29785,
+          "name": "Spectral Discus",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "heavy"
+        },
+        {
+          "id": 29745,
+          "name": "Little Leviathan",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 29727,
+              "name": "Gladius",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 29757,
+          "name": "Sea Nettle",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29758,
+          "name": "Great Grandmarlin",
+          "bait": {
+            "id": 29761,
+            "name": "Hi-aetherlouse"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29759,
+          "name": "Shipwreck's Sail",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29779,
+          "name": "Charlatan Survivor",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29761,
+          "name": "Hi-aetherlouse",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29760,
+          "name": "Azeyma's Sleeve",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29763,
+          "name": "Aetheric Seadragon",
+          "bait": {
+            "id": 29761,
+            "name": "Hi-aetherlouse"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29755,
+          "name": "Mythril Sovereign",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29765,
+          "name": "Roguesaurus",
+          "bait": {
+            "id": 29761,
+            "name": "Hi-aetherlouse"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 29789,
+          "name": "Coral Manta",
+          "blue": true,
+          "time": "Night",
+          "bait": {
+            "id": 2613,
+            "name": "Shrimp Cage Feeder"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 29758,
+              "name": "Great Grandmarlin",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "The Northern Strait of Merlthor",
+      "route": "Indigo",
+      "fish": [
+        {
+          "id": 29736,
+          "name": "Floefish",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29737,
+          "name": "Megasquid",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29738,
+          "name": "Oschon's Stone",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29718,
+          "name": "Tossed Dagger",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 28940,
+          "name": "Tripod Fish",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29741,
+          "name": "Net Crawler",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29720,
+          "name": "Merlthor Lobster",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29743,
+          "name": "Elder Dinichthys",
+          "bait": {
+            "id": 29718,
+            "name": "Tossed Dagger"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29786,
+          "name": "Spectral Sea Bo",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "heavy"
+        },
+        {
+          "id": 29747,
+          "name": "Shooting Star",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 29743,
+              "name": "Elder Dinichthys",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 29748,
+          "name": "Hammerclaw",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29776,
+          "name": "Coccosteus",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29777,
+          "name": "Bartholomew the Chopper",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29778,
+          "name": "Prowler",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29773,
+          "name": "Mopbeard",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29771,
+          "name": "Wild Urchin",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29781,
+          "name": "Gugrusaurus",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 29764,
+          "name": "Coral Seadragon",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29783,
+          "name": "The Fallen One",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29791,
+          "name": "Elasmosaurus",
+          "blue": true,
+          "time": "Day",
+          "bait": {
+            "id": 2619,
+            "name": "Heavy Steel Jig"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 29781,
+              "name": "Gugrusaurus",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "Rhotano Sea",
+      "route": "Indigo",
+      "fish": [
+        {
+          "id": 29728,
+          "name": "Rhotano Wahoo",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29729,
+          "name": "Rhotano Sardine",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29730,
+          "name": "Deep Plaice",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29731,
+          "name": "Crimson Monkfish",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29735,
+          "name": "Chrome Hammerhead",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 29733,
+          "name": "Ogre Eel",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29742,
+          "name": "Dark Nautilus",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29732,
+          "name": "Lampfish",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29787,
+          "name": "Spectral Bass",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 29746,
+          "name": "Sabaton",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 29731,
+              "name": "Crimson Monkfish",
+              "count": 2
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 29775,
+          "name": "Aronnax",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29767,
+          "name": "Sweeper",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29768,
+          "name": "Silencer",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29769,
+          "name": "Deep-sea Eel",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29770,
+          "name": "Executioner",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 29762,
+          "name": "Floating Saucer",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29772,
+          "name": "True Barramundi",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29780,
+          "name": "Prodigal Son",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 29774,
+          "name": "Slipsnail",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 29790,
+          "name": "Stonescale",
+          "blue": true,
+          "time": "Sunset",
+          "bait": {
+            "id": 2591,
+            "name": "Rat Tail"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 29768,
+              "name": "Silencer",
+              "count": 1
+            },
+            {
+              "id": 29769,
+              "name": "Deep-sea Eel",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "The Cieldalaes",
+      "route": "Indigo",
+      "fish": [
+        {
+          "id": 32055,
+          "name": "Tortoiseshell Crab",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32056,
+          "name": "Lady's Cameo",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32057,
+          "name": "Metallic Boxfish",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32058,
+          "name": "Goobbue Ray",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32059,
+          "name": "Watermoura",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32060,
+          "name": "King Cobrafish",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32061,
+          "name": "Mamahi-mahi",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32062,
+          "name": "Lavandin Remora",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32063,
+          "name": "Spectral Butterfly",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "heavy"
+        },
+        {
+          "id": 32064,
+          "name": "Cieldalaes Geode",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 32057,
+              "name": "Metallic Boxfish",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 32065,
+          "name": "Titanshell Crab",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32066,
+          "name": "Mythril Boxfish",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32067,
+          "name": "Mistbeard's Cup",
+          "bait": {
+            "id": 27590,
+            "name": "Squid Strip"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32068,
+          "name": "Anomalocaris Saron",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32069,
+          "name": "Flaming Eel",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32070,
+          "name": "Jetborne Manta",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32071,
+          "name": "Devil's Sting",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32072,
+          "name": "Callichthyid",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32073,
+          "name": "Meandering Mora",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32074,
+          "name": "Hafgufa",
+          "blue": true,
+          "time": "Night",
+          "bait": {
+            "id": 27590,
+            "name": "Squid Strip"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 32067,
+              "name": "Mistbeard's Cup",
+              "count": 1
+            },
+            {
+              "id": 32070,
+              "name": "Jetborne Manta",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "The Bloodbrine Sea",
+      "route": "Indigo",
+      "fish": [
+        {
+          "id": 32075,
+          "name": "Thaliak Crab",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32076,
+          "name": "Star of the Destroyer",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32077,
+          "name": "True Scad",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32078,
+          "name": "Blooded Wrasse",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32079,
+          "name": "Bloodpolish Crab",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32080,
+          "name": "Blue Stitcher",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32081,
+          "name": "Bloodfresh Tuna",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32082,
+          "name": "Sunken Mask",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32083,
+          "name": "Spectral Eel",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32084,
+          "name": "Bareface",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 32082,
+              "name": "Sunken Mask",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 32085,
+          "name": "Oracular Crab",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32086,
+          "name": "Dravanian Bream",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32087,
+          "name": "Skaldminni",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32088,
+          "name": "Serrated Clam",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32089,
+          "name": "Beatific Vision",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32090,
+          "name": "Exterminator",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32091,
+          "name": "Gory Tuna",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32092,
+          "name": "Ticinepomis",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32093,
+          "name": "Quartz Hammerhead",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32094,
+          "name": "Seafaring Toad",
+          "blue": true,
+          "time": "Day",
+          "bait": {
+            "id": 2587,
+            "name": "Pill Bug"
+          },
+          "hookset": "Precision",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 32089,
+              "name": "Beatific Vision",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "The Rothlyt Sound",
+      "route": "Indigo",
+      "fish": [
+        {
+          "id": 32095,
+          "name": "Crow Puffer",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32096,
+          "name": "Rothlyt Kelp",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32097,
+          "name": "Living Lantern",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32098,
+          "name": "Honeycomb Fish",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32099,
+          "name": "Godsbed",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32100,
+          "name": "Lansquenet",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32101,
+          "name": "Thavnairian Shark",
+          "bait": {
+            "id": 29717,
+            "name": "Versatile Lure"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32102,
+          "name": "Nephrite Eel",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32103,
+          "name": "Spectresaur",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 32104,
+          "name": "Ginkgo Fin",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 32096,
+              "name": "Rothlyt Kelp",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 32105,
+          "name": "Garum Jug",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32106,
+          "name": "Smooth Jaguar",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32107,
+          "name": "Rothlyt Mussel",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32108,
+          "name": "Levi Elver",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32109,
+          "name": "Pearl Bombfish",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32110,
+          "name": "Trollfish",
+          "bait": {
+            "id": 32107,
+            "name": "Rothlyt Mussel"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32111,
+          "name": "Panoptes",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32112,
+          "name": "Crepe Sole",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 32113,
+          "name": "Knifejaw",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 32114,
+          "name": "Placodus",
+          "blue": true,
+          "time": "Sunset",
+          "bait": {
+            "id": 32107,
+            "name": "Rothlyt Mussel"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 32110,
+              "name": "Trollfish",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "The Sirensong Sea",
+      "route": "Ruby",
+      "fish": [
+        {
+          "id": 40524,
+          "name": "Deepshade Sardine",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40522,
+          "name": "Sirensong Mussel",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40523,
+          "name": "Arrowhead",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40521,
+          "name": "Pink Shrimp",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40525,
+          "name": "Sirensong Mullet"
+        },
+        {
+          "id": 40526,
+          "name": "Selkie Puffer"
+        },
+        {
+          "id": 40527,
+          "name": "Poet's Pipe",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40528,
+          "name": "Marine Matanga",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40529,
+          "name": "Spectral Coelacanth",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40530,
+          "name": "Dusk Shark",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 40527,
+              "name": "Poet's Pipe",
+              "count": 2
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 40531,
+          "name": "Mermaid Scale",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40532,
+          "name": "Broadhead",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40533,
+          "name": "Vivid Pink Shrimp",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40534,
+          "name": "Sunken Coelacanth",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40535,
+          "name": "Siren's Sigh",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40536,
+          "name": "Black-jawed Helicoprion",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40537,
+          "name": "Impostopus",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40538,
+          "name": "Jade Mantis Shrimp",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40539,
+          "name": "Nymeia's Wheel",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40540,
+          "name": "Taniwha",
+          "blue": true,
+          "time": "Day",
+          "bait": {
+            "id": 36593,
+            "name": "Mackerel Strip"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 40534,
+              "name": "Sunken Coelacanth",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "Kugane",
+      "route": "Ruby",
+      "fish": [
+        {
+          "id": 40541,
+          "name": "Ruby Herring",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40542,
+          "name": "Whirlpool Turban",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40543,
+          "name": "Leopard Prawn",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40544,
+          "name": "Spear Squid",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40545,
+          "name": "Floating Lantern"
+        },
+        {
+          "id": 40546,
+          "name": "Rubescent Tatsunoko"
+        },
+        {
+          "id": 40547,
+          "name": "Hatatate",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40548,
+          "name": "Silent Shark",
+          "bait": {
+            "id": 40543,
+            "name": "Leopard Prawn"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40549,
+          "name": "Spectral Wrasse",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40550,
+          "name": "Mizuhiki",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 40548,
+              "name": "Silent Shark",
+              "count": 2
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 40551,
+          "name": "Snapping Koban",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40552,
+          "name": "Silkweft Prawn",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40553,
+          "name": "Stingfin Trevally",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40554,
+          "name": "Swordtip Squid",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40555,
+          "name": "Mailfish",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40556,
+          "name": "Idaten's Bolt",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40557,
+          "name": "Maelstrom Turban",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40558,
+          "name": "Shoshitsuki",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40559,
+          "name": "Spadefish",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40560,
+          "name": "Glass Dragon",
+          "blue": true,
+          "time": "Night",
+          "bait": {
+            "id": 40551,
+            "name": "Snapping Koban"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 40558,
+              "name": "Shoshitsuki",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "The Ruby Sea",
+      "route": "Ruby",
+      "fish": [
+        {
+          "id": 40561,
+          "name": "Crimson Kelp",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40562,
+          "name": "Reef Squid",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40563,
+          "name": "Pinebark Flounder"
+        },
+        {
+          "id": 40564,
+          "name": "Mantle Moray"
+        },
+        {
+          "id": 40567,
+          "name": "Barded Lobster",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40566,
+          "name": "Sanbaso"
+        },
+        {
+          "id": 40565,
+          "name": "Shisui Goby",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40568,
+          "name": "Violet Sentry",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40569,
+          "name": "Spectral Snake Eel",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40570,
+          "name": "Heavensent Shark",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 40561,
+              "name": "Crimson Kelp",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 40571,
+          "name": "Fleeting Squid",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40572,
+          "name": "Bowbarb Lobster",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40573,
+          "name": "Pitch Pickle",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40574,
+          "name": "Senbei Octopus",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40575,
+          "name": "Tentacle Thresher",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40576,
+          "name": "Bekko Rockhugger",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40577,
+          "name": "Yellow Iris",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40578,
+          "name": "Crimson Sentry",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40579,
+          "name": "Flying Squid",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40580,
+          "name": "Hells' Claw",
+          "blue": true,
+          "time": "Sunset",
+          "bait": {
+            "id": 27590,
+            "name": "Squid Strip"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 40579,
+              "name": "Flying Squid",
+              "count": 1
+            },
+            {
+              "id": 40571,
+              "name": "Fleeting Squid",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "The One River",
+      "route": "Ruby",
+      "fish": [
+        {
+          "id": 40581,
+          "name": "Catching Carp",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40582,
+          "name": "Garlean Bluegill",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40583,
+          "name": "Yanxian Softshell",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40584,
+          "name": "Princess Salmon"
+        },
+        {
+          "id": 40585,
+          "name": "Calligraph"
+        },
+        {
+          "id": 40586,
+          "name": "Singular Shrimp",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40587,
+          "name": "Brocade Carp",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40588,
+          "name": "Yanxian Sturgeon",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40589,
+          "name": "Spectral Kotsu Zetsu",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40590,
+          "name": "Fishy Shark",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 40581,
+              "name": "Catching Carp",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 40591,
+          "name": "Gensui Shrimp",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40592,
+          "name": "Yato-no-kami",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40593,
+          "name": "Heron's Eel",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40594,
+          "name": "Crowshadow Mussel",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40595,
+          "name": "Yanxian Goby",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40596,
+          "name": "Iridescent Trout",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 40597,
+          "name": "Un-Namazu",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40598,
+          "name": "Gakugyo",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 40599,
+          "name": "Ginrin Goshiki",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 40600,
+          "name": "Jewel of Plum Spring",
+          "blue": true,
+          "time": "Day",
+          "bait": {
+            "id": 12704,
+            "name": "Stonefly Nymph"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 40595,
+              "name": "Yanxian Goby",
+              "count": 2
+            },
+            {
+              "id": 40591,
+              "name": "Gensui Shrimp",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "Unnamed Island",
+      "route": "Ruby",
+      "fish": [
+        {
+          "id": 51209,
+          "name": "First Mate's Finger"
+        },
+        {
+          "id": 51210,
+          "name": "Specterfish"
+        },
+        {
+          "id": 51211,
+          "name": "Rhotano Permit"
+        },
+        {
+          "id": 51212,
+          "name": "Rhotano Dahlia"
+        },
+        {
+          "id": 51213,
+          "name": "Lodesmate's Pen"
+        },
+        {
+          "id": 51214,
+          "name": "Rhotano Roosterfish"
+        },
+        {
+          "id": 51215,
+          "name": "Rhotanosaurus"
+        },
+        {
+          "id": 51216,
+          "name": "Royal Handmaiden"
+        },
+        {
+          "id": 51217,
+          "name": "Spectral Starfish"
+        },
+        {
+          "id": 51218,
+          "name": "Frolicsome Fish",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 51212,
+              "name": "Rhotano Dahlia",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 51219,
+          "name": "Captain's Finger",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 51220,
+          "name": "Bright Red Coral"
+        },
+        {
+          "id": 51221,
+          "name": "Royal Favorite"
+        },
+        {
+          "id": 51222,
+          "name": "Pirate's Purse",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
+        },
+        {
+          "id": 51223,
+          "name": "Captain's Pen"
+        },
+        {
+          "id": 51224,
+          "name": "Tylosaurus"
+        },
+        {
+          "id": 51225,
+          "name": "Cieldalaes Roosterfish",
+          "bait": {
+            "id": 51223,
+            "name": "Captain's Pen"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 51226,
+          "name": "Renegade Rhotanosaurus",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 51227,
+          "name": "Red Boarfish",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 51228,
+          "name": "Akupara",
+          "blue": true,
+          "time": "Night",
+          "bait": {
+            "id": 51225,
+            "name": "Cieldalaes Roosterfish"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 51225,
+              "name": "Cieldalaes Roosterfish",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "place": "Thavnair",
+      "route": "Ruby",
+      "fish": [
+        {
+          "id": 51229,
+          "name": "Red Mantis"
+        },
+        {
+          "id": 51230,
+          "name": "Datli Gwl"
+        },
+        {
+          "id": 51231,
+          "name": "Agama's Strand"
+        },
+        {
+          "id": 51232,
+          "name": "Palaka's Blade"
+        },
+        {
+          "id": 51233,
+          "name": "Parjanya Wrasse"
+        },
+        {
+          "id": 51234,
+          "name": "Simolestes"
+        },
+        {
+          "id": 51235,
+          "name": "Thavnasaurus"
+        },
+        {
+          "id": 51687,
+          "name": "Junior Jinbei"
+        },
+        {
+          "id": 51237,
+          "name": "Spectral Grouper"
+        },
+        {
+          "id": 51238,
+          "name": "Silkfin",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 51229,
+              "name": "Red Mantis",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "spectral": [
+        {
+          "id": 51239,
+          "name": "Great Red Mantis"
+        },
+        {
+          "id": 51240,
+          "name": "Guzel Gwl"
+        },
+        {
+          "id": 51241,
+          "name": "Darpana"
+        },
+        {
+          "id": 51242,
+          "name": "Silverdart",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
+        },
+        {
+          "id": 51243,
+          "name": "Satrapsaurus",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 51244,
+          "name": "Tiger Mantis"
+        },
+        {
+          "id": 51245,
+          "name": "Mehi-mahi"
+        },
+        {
+          "id": 51687,
+          "name": "Junior Jinbei"
+        },
+        {
+          "id": 51246,
+          "name": "Pliosaurus",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
+        },
+        {
+          "id": 51247,
+          "name": "Manasvin",
+          "blue": true,
+          "time": "Night",
+          "bait": {
+            "id": 2591,
+            "name": "Rat Tail"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy",
+          "predators": [
+            {
+              "id": 51243,
+              "name": "Satrapsaurus",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icons": {
+    "2587": 27005,
+    "2591": 27001,
+    "2603": 27021,
+    "2613": 27053,
+    "2619": 27065,
+    "12704": 27028,
+    "27590": 27041,
+    "28937": 29003,
+    "28938": 29034,
+    "28939": 29009,
+    "28940": 29152,
+    "28941": 29016,
+    "28942": 29011,
+    "29714": 27004,
+    "29715": 27023,
+    "29716": 27015,
+    "29717": 27051,
+    "29718": 29042,
+    "29719": 29043,
+    "29720": 29013,
+    "29721": 29033,
+    "29722": 29035,
+    "29723": 29126,
+    "29724": 29046,
+    "29725": 29021,
+    "29726": 29167,
+    "29727": 29022,
+    "29728": 29025,
+    "29729": 29004,
+    "29730": 29048,
+    "29731": 29049,
+    "29732": 29516,
+    "29733": 29045,
+    "29734": 29051,
+    "29735": 29026,
+    "29736": 29310,
+    "29737": 29027,
+    "29738": 29100,
+    "29739": 29755,
+    "29740": 29053,
+    "29741": 29111,
+    "29742": 29811,
+    "29743": 29019,
+    "29744": 29373,
+    "29745": 29147,
+    "29746": 29077,
+    "29747": 29157,
+    "29748": 29082,
+    "29749": 29069,
+    "29750": 29065,
+    "29751": 29759,
+    "29752": 29073,
+    "29753": 29067,
+    "29754": 29070,
+    "29755": 29078,
+    "29756": 28001,
+    "29757": 29434,
+    "29758": 29095,
+    "29759": 29084,
+    "29760": 29161,
+    "29761": 29089,
+    "29762": 29661,
+    "29763": 29074,
+    "29764": 29155,
+    "29765": 28002,
+    "29766": 29072,
+    "29767": 29085,
+    "29768": 29156,
+    "29769": 29088,
+    "29770": 29092,
+    "29771": 29813,
+    "29772": 29546,
+    "29773": 29374,
+    "29774": 28003,
+    "29775": 29816,
+    "29776": 29093,
+    "29777": 29075,
+    "29778": 29066,
+    "29779": 29086,
+    "29780": 29331,
+    "29781": 29162,
+    "29782": 29731,
+    "29783": 28004,
+    "29784": 28005,
+    "29785": 28006,
+    "29786": 28007,
+    "29787": 28008,
+    "29788": 28009,
+    "29789": 28010,
+    "29790": 28011,
+    "29791": 28012,
+    "32055": 29110,
+    "32056": 29902,
+    "32057": 29118,
+    "32058": 29130,
+    "32059": 29494,
+    "32060": 29710,
+    "32061": 29142,
+    "32062": 29038,
+    "32063": 28027,
+    "32064": 28021,
+    "32065": 28023,
+    "32066": 28020,
+    "32067": 29079,
+    "32068": 29658,
+    "32069": 28024,
+    "32070": 29663,
+    "32071": 29195,
+    "32072": 28475,
+    "32073": 28017,
+    "32074": 28030,
+    "32075": 29441,
+    "32076": 29553,
+    "32077": 29135,
+    "32078": 29174,
+    "32079": 28013,
+    "32080": 29179,
+    "32081": 29018,
+    "32082": 28016,
+    "32083": 28028,
+    "32084": 29746,
+    "32085": 28025,
+    "32086": 29080,
+    "32087": 28022,
+    "32088": 29817,
+    "32089": 29098,
+    "32090": 29347,
+    "32091": 29083,
+    "32092": 29091,
+    "32093": 28026,
+    "32094": 28032,
+    "32095": 29504,
+    "32096": 29063,
+    "32097": 29170,
+    "32098": 29582,
+    "32099": 29047,
+    "32100": 29114,
+    "32101": 29122,
+    "32102": 29257,
+    "32103": 28029,
+    "32104": 28490,
+    "32105": 29365,
+    "32106": 29159,
+    "32107": 28019,
+    "32108": 29355,
+    "32109": 29087,
+    "32110": 29439,
+    "32111": 29340,
+    "32112": 28472,
+    "32113": 28018,
+    "32114": 28031,
+    "36593": 27048,
+    "40521": 29186,
+    "40522": 29196,
+    "40523": 29177,
+    "40524": 28046,
+    "40525": 28078,
+    "40526": 28039,
+    "40527": 28067,
+    "40528": 29182,
+    "40529": 28109,
+    "40530": 28098,
+    "40531": 28107,
+    "40532": 28096,
+    "40533": 28104,
+    "40534": 28106,
+    "40535": 29197,
+    "40536": 28105,
+    "40537": 28036,
+    "40538": 28015,
+    "40539": 29198,
+    "40540": 28113,
+    "40541": 29010,
+    "40542": 29112,
+    "40543": 29145,
+    "40544": 29932,
+    "40545": 29170,
+    "40546": 29040,
+    "40547": 28050,
+    "40548": 28072,
+    "40549": 28110,
+    "40550": 28099,
+    "40551": 28102,
+    "40552": 28095,
+    "40553": 28094,
+    "40554": 29934,
+    "40555": 28037,
+    "40556": 29071,
+    "40557": 28097,
+    "40558": 29158,
+    "40559": 28087,
+    "40560": 28115,
+    "40561": 29169,
+    "40562": 29132,
+    "40563": 29052,
+    "40564": 29143,
+    "40565": 28042,
+    "40566": 29120,
+    "40567": 29138,
+    "40568": 29904,
+    "40569": 28111,
+    "40570": 28093,
+    "40571": 28091,
+    "40572": 28108,
+    "40573": 28101,
+    "40574": 28014,
+    "40575": 29163,
+    "40576": 28092,
+    "40577": 29068,
+    "40578": 29199,
+    "40579": 28100,
+    "40580": 28114,
+    "40581": 29286,
+    "40582": 28423,
+    "40583": 28536,
+    "40584": 29285,
+    "40585": 29267,
+    "40586": 28557,
+    "40587": 29283,
+    "40588": 29287,
+    "40589": 28112,
+    "40590": 28556,
+    "40591": 28558,
+    "40592": 28555,
+    "40593": 28553,
+    "40594": 28550,
+    "40595": 29530,
+    "40596": 29535,
+    "40597": 29533,
+    "40598": 29345,
+    "40599": 29332,
+    "40600": 28559,
+    "51209": 28145,
+    "51210": 28118,
+    "51211": 28119,
+    "51212": 29137,
+    "51213": 28120,
+    "51214": 28051,
+    "51215": 28147,
+    "51216": 28071,
+    "51217": 28152,
+    "51218": 28153,
+    "51219": 28146,
+    "51220": 28159,
+    "51221": 28160,
+    "51222": 28135,
+    "51223": 28161,
+    "51224": 28142,
+    "51225": 28162,
+    "51226": 28148,
+    "51227": 28163,
+    "51228": 28155,
+    "51229": 28149,
+    "51230": 28043,
+    "51231": 29131,
+    "51232": 28625,
+    "51233": 28048,
+    "51234": 29115,
+    "51235": 28548,
+    "51237": 28151,
+    "51238": 28164,
+    "51239": 28150,
+    "51240": 28088,
+    "51241": 28165,
+    "51242": 28554,
+    "51243": 28767,
+    "51244": 28154,
+    "51245": 28166,
+    "51246": 28158,
+    "51247": 28156,
+    "51687": 28157
+  }
+}

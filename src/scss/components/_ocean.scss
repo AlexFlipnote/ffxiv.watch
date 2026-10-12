@@ -1,0 +1,304 @@
+@use "../mixins" as *;
+
+.ocean {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  // The intro's own margin, the gap spaces the rest
+  .listing-intro {
+    margin-bottom: 0;
+  }
+}
+
+// The build's voyages, out of date, keep the room until js/ocean.js writes the current ones in (see oceanPage)
+.ocean-pending {
+  .ocean-next-head,
+  .ocean-routes,
+  .ocean-schedule {
+    visibility: hidden;
+  }
+}
+
+.ocean-next {
+  @include glass;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.ocean-next-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .25rem .5rem;
+
+  .ocean-boarding & .detail-countdown {
+    color: var(--accent);
+  }
+}
+
+.ocean-when {
+  font-size: .85rem;
+  color: var(--font-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.ocean-routes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.ocean-route {
+  padding-top: .75rem;
+  border-top: 1px solid var(--divider);
+}
+
+.ocean-route-name {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.ocean-route-from {
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--font-tertiary);
+}
+
+.ocean-destination {
+  margin: .125rem 0 .5rem;
+  font-size: .85rem;
+  color: var(--font-secondary);
+
+  &::before {
+    content: "To ";
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+.ocean-stops {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  margin: 0;
+  padding-left: 1.25rem;
+
+  li {
+    padding-left: .25rem;
+  }
+}
+
+.ocean-next,
+.ocean-schedule {
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    text-underline-offset: .2em;
+    margin-right: .375rem;
+
+    @include hover {
+      color: var(--accent);
+      text-decoration-color: currentColor;
+    }
+  }
+}
+
+.ocean-stop-part {
+  white-space: nowrap;
+}
+
+// The blue fish the next voyage can catch at a stop, a chip rather than one of the underlined place links
+.ocean-next {
+  // Outlined, the Day chips are gold too. Its own word, it wraps under the stop where there's no room
+  .ocean-blue-chip {
+    display: inline-block;
+    margin: 0 0 0 .375rem;
+    color: var(--gold);
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gold) 55%, transparent);
+
+    @include hover {
+      color: var(--gold);
+      background-color: color-mix(in srgb, var(--gold) 20%, var(--chip-background));
+    }
+  }
+}
+
+// The time of day at a stop, which decides the blue fish that can bite there
+.ocean-time {
+  font-size: .75rem;
+}
+
+.ocean-day {
+  color: var(--gold);
+}
+
+.ocean-sunset {
+  color: var(--warning);
+}
+
+.ocean-night {
+  color: var(--accent);
+}
+
+.ocean-heading {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.ocean-upcoming {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.ocean-schedule {
+  @include glass;
+  margin: 0;
+  padding: .25rem 1rem;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: .25rem 1rem;
+    padding: .625rem 0;
+
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    + li {
+      border-top: 1px solid var(--divider);
+    }
+  }
+
+  time {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.ocean-schedule-route {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem;
+  font-size: .85rem;
+
+  @include mobile {
+    grid-column: 1;
+  }
+
+  strong {
+    width: 3.5rem;
+    color: var(--font-tertiary);
+    font-weight: 400;
+  }
+
+  .chip {
+    margin-right: .5rem;
+  }
+}
+
+// Clear of the sticky navbar when a stop's link scrolls to it
+.ocean-stop {
+  @include glass;
+  padding: 1rem;
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
+}
+
+.ocean-stop-name {
+  margin: 0 0 .75rem;
+  font-size: 1.1rem;
+}
+
+.ocean-lists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.ocean-list-title {
+  margin: 0 0 .25rem;
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--font-tertiary);
+}
+
+.ocean-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ocean-fish {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem .5rem;
+  padding: .375rem 0;
+
+  + .ocean-fish {
+    border-top: 1px solid var(--divider);
+  }
+
+  // Underlined like the lists' links, each opens the fish's page
+  a {
+    color: var(--font-primary);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .2em;
+    transition: color .2s, text-decoration-color .2s;
+
+    @include hover {
+      color: var(--accent);
+      text-decoration-color: currentColor;
+    }
+  }
+}
+
+.ocean-blue a {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+// What it bites on goes to the right, or under the name when there's no room
+.ocean-catch {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem .5rem;
+  margin-left: auto;
+  font-size: .8rem;
+  color: var(--font-secondary);
+}
+
+.ocean-bait {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem;
+}
+
+.ocean-intuition {
+  flex-basis: 100%;
+  font-size: .75rem;
+  color: var(--warning);
+}

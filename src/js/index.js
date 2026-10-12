@@ -16,6 +16,7 @@ const modalTitle = document.getElementById("modal-title")
 const modalWhen = document.getElementById("modal-when")
 const modalInfo = document.getElementById("modal-info")
 const modalList = document.getElementById("modal-list")
+const modalLink = document.getElementById("modal-link")
 
 // Timer id -> its card's elements
 const cards = new Map()
@@ -67,7 +68,8 @@ function bindCard(timer) {
   return {
     card,
     regionBtns,
-    title: card.querySelector(".title"),
+    // The link's text when the title links to its own page, so the link stays
+    title: card.querySelector(".title a") ?? card.querySelector(".title"),
     countdown: card.querySelector(".countdown"),
     targetLabel: card.querySelector(".target strong"),
     targetDate: card.querySelector(".target time"),
@@ -115,6 +117,8 @@ function renderModal(timer) {
     return li
   }))
   modalList.hidden = timer.list.length === 0
+  modalLink.hidden = !timer.link
+  if (timer.link) Object.assign(modalLink, { href: timer.link.url, textContent: timer.link.text })
 }
 
 /** @param {string} id Timer id */

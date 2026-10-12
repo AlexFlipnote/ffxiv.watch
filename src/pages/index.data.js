@@ -13,6 +13,7 @@ function timerCard(timer) {
     ?? html`<p>${timer.info}</p>`
   const when = timer.when && html`<p>${timer.when}</p>`
   const list = timer.list && html`<ul>${timer.list.map((item) => html`<li>${item}</li>`)}</ul>`
+  const link = timer.link && html`<p><a href="${timer.link.url}">${timer.link.text}</a></p>`
   const regions = timer.regions && html`
     <div class="region-picker" role="group" aria-label="Region">
       ${timer.regions.map((region) => html`<button class="region-btn">${region.name}</button>`)}
@@ -31,7 +32,7 @@ function timerCard(timer) {
     </div>
     <div class="side-col" hidden><div class="sub-title"></div></div>
   </div>
-  <div class="timer-details" hidden>${when}${details}${list}</div>
+  <div class="timer-details" hidden>${when}${details}${list}${link}</div>
 </div>`
 }
 

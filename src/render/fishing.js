@@ -43,7 +43,7 @@ const withIcon = (name, text) => html`<span class="bait-step"><img class="bait-i
  * @param {"light" | "medium" | "heavy"} tug
  * @returns {import("./html.js").Html} The game's ! to !!! over the character's head, then the word
  */
-const tugMarks = (tug) => html`<span class="bait-step"><span class="tug" aria-hidden="true">${Array.from({ length: { light: 1, medium: 2, heavy: 3 }[tug] }, () => html`<i></i>`)}</span>${tug[0].toUpperCase() + tug.slice(1)}</span>`
+export const tugMarks = (tug) => html`<span class="bait-step"><span class="tug" aria-hidden="true">${Array.from({ length: { light: 1, medium: 2, heavy: 3 }[tug] }, () => html`<i></i>`)}</span>${tug[0].toUpperCase() + tug.slice(1)}</span>`
 
 /** @returns {boolean} Bites only at some times or in some weather */
 const isTimed = (fish) => Boolean(fish.times || fish.weather || fish.previousWeather)
@@ -109,7 +109,10 @@ const windowData = (fish) => isTimed(fish)
  */
 const fishTags = (fish) => [
   fish.big && chip("Big fish", "chip-gold"),
-  chip(`${fish.method === "Spearfishing" ? "Spearfishing" : "Fisher"} Lv.${fish.level}`),
+  // An ocean fish's level is the boat's 1, its stop says more
+  fish.ocean
+    ? [fish.ocean.blue && chip(fish.ocean.time ? `Blue fish, ${fish.ocean.time}` : "Blue fish", "chip-gold"), chip("Ocean fishing", "chip-accent")]
+    : chip(`${fish.method === "Spearfishing" ? "Spearfishing" : "Fisher"} Lv.${fish.level}`),
   weatherText(fish) && chip(weatherText(fish), "chip-accent", `Bites ${whenText(fish)}`),
   fish.predators && chip(`Intuition: ${predatorText(fish)}`, "chip-warning", `Catch ${predatorText(fish)} first`),
   fish.folklore && chip(fish.folklore)
@@ -145,9 +148,16 @@ export function fishList() {
  */
 function fishSeo(fish) {
   const timed = isTimed(fish)
-  const where = `${fish.spot ? `${fish.spot}, ` : ""}${fish.zone}${fish.map ? ` (${coordinates(fish.map)})` : ""}`
-  const extras = [fish.bait ? `, with ${baitText(fish)}` : "", timed ? `, bites ${whenText(fish)}` : ""]
-  const text = extras.reduce((out, extra) => (out + extra).length < 159 ? out + extra : out, `Where to catch ${fish.name} in FFXIV: ${where}`)
+  // An ocean fish's zone is the boat, its stop and the time of day there say where
+  const where = fish.ocean
+    ? `FFXIV ocean fishing: ${fish.spot}, at ${fish.ocean.stop}${fish.ocean.time ? ` at ${fish.ocean.time.toLowerCase()}` : ""}`
+    : `FFXIV: ${fish.spot ? `${fish.spot}, ` : ""}${fish.zone}${fish.map ? ` (${coordinates(fish.map)})` : ""}`
+  const extras = [
+    fish.bait ? `, with ${baitText(fish)}` : "",
+    timed ? `, bites ${whenText(fish)}` : "",
+    fish.hookset && fish.tug ? `, ${fish.hookset} Hookset on a ${fish.tug} tug` : ""
+  ]
+  const text = extras.reduce((out, extra) => (out + extra).length < 159 ? out + extra : out, `Where to catch ${fish.name} in ${where}`)
   return {
     title: `${fish.name}: FFXIV ${fish.big ? "Big Fish" : "Fish"} Location${timed ? " & Times" : ""}`,
     description: `${text}.`
@@ -225,8 +235,9 @@ function spotCard(fish, info, others, paged) {
   return html`
 <section class="detail-card gathering-node">
   ${fish.map && mapFigure(fish, fish.name)}
-  ${detailTimer(windowData(fish), isTimed(fish) ? `Bites ${whenText(fish)}` : "Bites any time")}
+  ${fish.ocean ? oceanTimer(fish) : detailTimer(windowData(fish), isTimed(fish) ? `Bites ${whenText(fish)}` : "Bites any time")}
   ${facts([
+    ...oceanFacts(fish),
     // Next to the timer, as it's caught before the window
     ["Intuition", fish.predators && html`Catch ${fish.predators.map((p, i) => html`${i > 0 && " and "}${p.count}x ${paged.has(p.id) ? html`<a href="${fishUrl(p)}">${p.name}</a>` : p.name} ${predatorWindow(paged.get(p.id))}`)} first${fish.intuition && `, it lasts ${duration(fish.intuition)}`}`],
     ...locationFacts(fish),
@@ -235,6 +246,25 @@ function spotCard(fish, info, others, paged) {
   ])}
 </section>`
 }
+
+/**
+ * An ocean fish bites on the voyages, at its stop, so it has no timer of its own. The ocean fishing page has the voyages.
+ * @param {object} fish
+ * @returns {import("./html.js").Html}
+ */
+const oceanTimer = (fish) => detailTimer(null, fish.ocean.time
+  ? `Bites on voyages that reach ${fish.ocean.stop} at ${fish.ocean.time.toLowerCase()}`
+  : "Bites on ocean fishing voyages")
+
+/**
+ * @param {object} fish
+ * @returns {[string, any][]} Where on the voyage it bites, for an ocean fish
+ */
+const oceanFacts = (fish) => fish.ocean ? [
+  ["Stop", html`<a href="/ocean-fishing/#${slug(fish.ocean.stop)}">${fish.ocean.stop}</a>`],
+  ["Bites", fish.ocean.spectral ? "In the spectral current" : "Outside the spectral current"],
+  ["Voyages", html`<a href="/ocean-fishing/">The next voyages and the time of day at each stop</a>`]
+] : []
 
 /** @returns {object[]} A page per fish, see [fish].data.js */
 export function fishPages() {

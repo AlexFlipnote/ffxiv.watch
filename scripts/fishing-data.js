@@ -10,6 +10,10 @@ const TRACKER = "https://raw.githubusercontent.com/icykoneko/ff14-fish-tracker-a
 const TEAMCRAFT = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/fishing-sources.json"
 const HOOKSETS = { 1: "Powerful", 2: "Precision" }
 const TUGS = { 0: "medium", 1: "heavy", 2: "light" }
+// Teamcraft's oceanFishingTime, the time of day a blue fish needs at its stop, like ocean-fishing-data.js
+const OCEAN_TIMES = { 1: "Sunset", 2: "Day", 3: "Night" }
+// Item.Rarity of the blue fish
+const BLUE_FISH = "3"
 
 const ET_DAY = 24 * 60
 
@@ -65,13 +69,13 @@ function biteTimes(start, end) {
 async function main() {
   const [tracker, teamcraft, [
     spots, notebooks, fishParams, spearItems, items, weathers, maps, territories, places, exVersions, aetherytes, markers,
-    uiCategories
+    uiCategories, oceanSpots
   ]] = await Promise.all([
     trackerData(),
     get(TEAMCRAFT).then((res) => res.json()),
     sheets([
       "FishingSpot", "SpearfishingNotebook", "FishParameter", "SpearfishingItem", "Item", "Weather", "Map", "TerritoryType",
-      "PlaceName", "ExVersion", "Aetheryte", "MapMarker", "ItemUICategory"
+      "PlaceName", "ExVersion", "Aetheryte", "MapMarker", "ItemUICategory", "IKDSpot"
     ])
   ])
 
@@ -87,6 +91,11 @@ async function main() {
   const exVersion = byId(exVersions)
   const uiCategory = byId(uiCategories)
   const aetheryteNear = nearestAetheryte({ aetherytes, markers, map, place })
+  // Ocean fishing's spots, a stop's own and its spectral current's: the ship is their zone, its map shows nothing
+  const oceanStop = new Map(oceanSpots.filter((s) => s.SpotMain !== "0").flatMap((s) => [
+    [s.SpotMain, { stop: place[s.PlaceName].Name }],
+    [s.SpotSub, { stop: place[s.PlaceName].Name, spectral: true }]
+  ]))
   const inLog = (rows) => rows.filter((r) => +r.Item > 0 && r.IsInLog === "True")
   const logSpot = Object.fromEntries(inLog(fishParams).map((p) => [p.Item, p.FishingSpot]))
   const logText = Object.fromEntries([...fishParams, ...spearItems].map((p) => [p.Item, p.Text ?? p.Description]))
@@ -117,11 +126,14 @@ async function main() {
       fish = { ...fish, [key]: fish[key].filter((w) => !never.includes(w)) }
     }
 
-    const m = map[t.Map]
+    const ocean = location.spotId && oceanStop.get(location.spotId)
+    const m = !ocean && map[t.Map]
     const position = m ? mapPixels(m, location.x, location.y, location.row.Radius) : null
     const aetheryte = position && aetheryteNear(t.Map, position.x, position.y)
-    // Nothing to wait for, the list hides these until asked (see js/fishing.js)
-    const anyTime = !fish.big && !fish.times && !fish.weather && !fish.previousWeather && !fish.predators
+    // Nothing to wait for, the list hides these until asked (see js/fishing.js). Nor for an ocean fish, a voyage's
+    // stop decides when it bites, which the list's windows don't know
+    const anyTime = Boolean(ocean) || (!fish.big && !fish.times && !fish.weather && !fish.previousWeather && !fish.predators)
+    const blueTime = ocean && it.Rarity === BLUE_FISH && OCEAN_TIMES[teamcraft[id]?.find((s) => String(s.spot) === location.spotId)?.oceanFishingTime]
 
     return {
       territory: +location.row.TerritoryType,
@@ -137,6 +149,7 @@ async function main() {
         ...(position ? { map: position } : {}),
         ...(aetheryte ? { aetheryte } : {}),
         ...(anyTime ? { anyTime } : {}),
+        ...(ocean ? { ocean: { ...ocean, ...(it.Rarity === BLUE_FISH ? { blue: true } : {}), ...(blueTime ? { time: blueTime } : {}) } } : {}),
         ...fish
       }
     }

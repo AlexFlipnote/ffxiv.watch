@@ -1,31 +1,9 @@
-import DATA from "../data/ocean-fishing.json" with { type: "json" }
 import { formatDate, formatEnGB } from "./time.js"
+import { VOYAGE, voyageAt } from "./voyages.js"
 
 const MINUTE = 60 * 1000
 const HOUR = 60 * MINUTE
 const DAY = 24 * HOUR
-
-const VOYAGE = 2 * 60 * 60 * 1000
-// Voyages leave every 2 hours from Unix time 0, which was this far into the schedule
-const OFFSET = 88
-
-/**
- * @typedef {object} Voyage
- * @property {number} start When boarding opens, ms
- * @property {string} destination
- * @property {{ place: string, time: string }[]} stops In order, with the time of day at each: "Day", "Sunset", "Night"
- */
-
-/**
- * @param {"indigo" | "ruby"} route Indigo leaves from Limsa Lominsa, Ruby from Kugane
- * @param {number} time Any time in the voyage's 2 hours
- * @returns {Voyage}
- */
-function voyageAt(route, time) {
-  const n = Math.floor(time / VOYAGE)
-  const id = DATA.schedule[(n + OFFSET) % DATA.schedule.length][route]
-  return { start: n * VOYAGE, ...DATA.routes[id] }
-}
 
 /**
  * @typedef {object} RecurringTimer Fires every `every` ms, at Unix epoch + `offset`
@@ -43,6 +21,8 @@ function voyageAt(route, time) {
  * @property {string} [when] When it fires, in words. Daily and weekly ones get it from `every` and `offset`
  * @property {string} [info]
  * @property {string[]} [list]
+ * @property {{ url: string, text: string }} [link] A page with more, under the details
+ * @property {string} [page] Its own page, the card's title links to it
  * @property {(start: number, now: number, region?: string) => { note?: string, list: string[] }} [upcoming] What's
  * coming, from the time it fires next (or fired, while open): the details' list, and maybe a note on the card
  */
@@ -119,6 +99,29 @@ export const TIMERS = [
   },
   {
     kind: "recurring",
+    id: "ocean_fishing",
+    name: "Ocean Fishing",
+    question: "When is FFXIV Ocean Fishing?",
+    when: "Every 2 hours, on even hours UTC (00:00, 02:00, 04:00 and so on), boarding is open for 15 minutes.",
+    every: VOYAGE,
+    offset: 0, // Every even hour UTC
+    window: 15 * MINUTE,
+    windowName: "Boarding",
+    page: "/ocean-fishing/",
+    link: { url: "/ocean-fishing/", text: "What bites at each stop, and more voyages" },
+    info: "The Indigo route leaves from Dryskthota in Limsa Lominsa Lower Decks, the Ruby route from Kugane once Stormblood's main story is done (Endwalker's for Thavnair). Both leave at the same times, the next voyages with the time of day at each stop:",
+    upcoming: (start, now) => {
+      const stops = (voyage) => voyage.stops.map((s) => `${s.place} (${s.time})`).join(", ")
+      return {
+        list: Array.from({ length: 3 }, (_, i) => {
+          const time = start + i * VOYAGE
+          return `${formatDate(new Date(time), new Date(now))}\nIndigo: ${stops(voyageAt("indigo", time))}\nRuby: ${stops(voyageAt("ruby", time))}`
+        })
+      }
+    }
+  },
+  {
+    kind: "recurring",
     id: "gc",
     name: "Grand Company Daily Reset",
     question: "When do FFXIV Grand Company supply and provisioning missions reset?",
@@ -168,28 +171,6 @@ export const TIMERS = [
       jumboCactpot("jp", "JP", 2 * DAY + 12 * HOUR, "Elemental, Gaia, Mana, and Meteor", ["jp"]), // Saturday 12:00 UTC
       jumboCactpot("oce", "OCE", 2 * DAY + 9 * HOUR, "Materia", ["au"]) // Saturday 09:00 UTC
     ]
-  },
-  {
-    kind: "recurring",
-    id: "ocean_fishing",
-    name: "Ocean Fishing",
-    question: "When is FFXIV Ocean Fishing?",
-    when: "Every 2 hours, on even hours UTC (00:00, 02:00, 04:00 and so on), boarding is open for 15 minutes.",
-    every: VOYAGE,
-    offset: 0, // Every even hour UTC
-    window: 15 * MINUTE,
-    windowName: "Boarding",
-    small: true,
-    info: "The Indigo route leaves from Dryskthota in Limsa Lominsa Lower Decks, the Ruby route from Kugane once Stormblood's main story is done (Endwalker's for Thavnair). Both leave at the same times, the next voyages with the time of day at each stop:",
-    upcoming: (start, now) => {
-      const stops = (voyage) => voyage.stops.map((s) => `${s.place} (${s.time})`).join(", ")
-      return {
-        list: Array.from({ length: 3 }, (_, i) => {
-          const time = start + i * VOYAGE
-          return `${formatDate(new Date(time), new Date(now))}\nIndigo: ${stops(voyageAt("indigo", time))}\nRuby: ${stops(voyageAt("ruby", time))}`
-        })
-      }
-    }
   }
 ]
 
@@ -273,6 +254,7 @@ for (const timer of TIMERS) {
  * @property {string} [when] When it fires, in words
  * @property {string} info
  * @property {string[]} list
+ * @property {{ url: string, text: string }} [link]
  * @property {object[]} regions
  * @property {string} [region] The picked region's id
  * @property {string} [note] On the card under the countdown, like the next phase
@@ -302,6 +284,7 @@ function getTimerState(timer, now, regionId) {
       when: region ? region.when : timer.when,
       info: region ? region.info : timer.info,
       list: upcoming?.list ?? timer.list ?? [],
+      link: timer.link,
       regions: timer.regions ?? [],
       region: region?.id,
       note: upcoming?.note
