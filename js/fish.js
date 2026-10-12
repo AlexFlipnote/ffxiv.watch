@@ -1,1 +1,1 @@
-import{a as e}from"./chunks/chunk-GRKTQ6JT.js";import"./chunks/chunk-NINCSDQJ.js";import{e as r}from"./chunks/chunk-74KKYR3S.js";import"./chunks/chunk-WIA6FQZJ.js";import"./chunks/chunk-ARR6HII7.js";e("fish",r);
+import{a as e}from"./chunks/chunk-ZK5GTQEO.js";import"./chunks/chunk-WFVXG2IT.js";import{e as r}from"./chunks/chunk-H3ZLHY5B.js";import"./chunks/chunk-U25V5DOD.js";import"./chunks/chunk-ARR6HII7.js";e("fish",r);
