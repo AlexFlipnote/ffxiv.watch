@@ -7,6 +7,15 @@ $ease: cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
 
+// The navbar's links need more room than the page does, it folds into the menu a bit wider than mobile (825px)
+$navbar-fold: 51.5625rem;
+
+@mixin navbar-folded {
+  @media (max-width: $navbar-fold) {
+    @content;
+  }
+}
+
 // Fingers instead of a mouse, so taps need room
 @mixin touch {
   @media (pointer: coarse) {

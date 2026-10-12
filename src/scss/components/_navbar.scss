@@ -1,7 +1,7 @@
 @use "../mixins" as *;
 
 @mixin frosted {
-  background-color: var(--surface);
+  background-color: var(--navbar-surface);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   box-shadow: var(--navbar-shadow);
@@ -86,6 +86,128 @@
       transform: rotate(45deg);
       background-color: var(--font-secondary);
     }
+  }
+}
+
+// "More" and its dropdown, the pages that aren't worth a link of their own up here
+.navbar-more {
+  position: relative;
+  display: flex;
+  align-self: stretch;
+}
+
+.navbar-more-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 1.125rem;
+  color: var(--font-secondary);
+  cursor: pointer;
+  transition: color .2s;
+
+  @include hover {
+    color: var(--font-primary);
+  }
+
+  // The diamond between it and the link before, like the links' own
+  &::before {
+    content: "";
+    width: .625rem;
+    height: .625rem;
+    margin: 0 .625rem;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    background-color: var(--font-secondary);
+  }
+
+  // The chevron
+  &::after {
+    content: "";
+    width: .375rem;
+    height: .375rem;
+    margin: -.25rem 0 0 .5rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform .2s $ease, margin .2s $ease;
+  }
+
+  .navbar-more.opened & {
+    color: var(--font-primary);
+
+    &::after {
+      margin-top: .25rem;
+      transform: rotate(225deg);
+    }
+  }
+
+  @media (hover: hover) and (width > $navbar-fold) {
+    .navbar-more:hover & {
+      color: var(--font-primary);
+
+      &::after {
+        margin-top: .25rem;
+        transform: rotate(225deg);
+      }
+    }
+  }
+
+  // On one of its pages
+  .navbar-more:has([aria-current]) & {
+    color: var(--accent);
+  }
+}
+
+.navbar-more-menu {
+  @include frosted;
+  position: absolute;
+  top: calc(100% - .5rem);
+  left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 11rem;
+  padding: .375rem;
+  border-radius: .75rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-.25rem);
+  transition: opacity .15s, transform .2s $ease, visibility 0s linear .2s;
+
+  .navbar-more.opened &,
+  // Without the script, which opens it on a click
+  :root:not(.js) .navbar-more:hover & {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity .15s, transform .2s $ease, visibility 0s;
+  }
+
+  .navbar-links & a {
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    white-space: nowrap;
+
+    @include hover {
+      background-color: var(--chip-background);
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+// A mouse opens it by hovering, its top overlaps the button's so moving down to it never leaves the hover. Not in a
+// phone's menu, where its links are rows of their own
+@media (hover: hover) and (width > $navbar-fold) {
+  .navbar-more:hover .navbar-more-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity .15s, transform .2s $ease, visibility 0s;
   }
 }
 
@@ -195,7 +317,7 @@
   display: none;
 }
 
-@include mobile {
+@include navbar-folded {
   .navbar-inner {
     box-sizing: border-box;
     width: 100%;
@@ -274,6 +396,26 @@
     }
   }
 
+  // Its links join the menu's, in the same rows, shown and hidden with it rather than the dropdown, whose hidden would
+  // carry down to them
+  .navbar-more,
+  .navbar-more-menu {
+    display: contents;
+  }
+
+  .navbar-more-menu {
+    visibility: inherit;
+  }
+
+  .navbar-more-button {
+    display: none;
+  }
+
+  .navbar-links .navbar-more-menu a {
+    padding: 1rem 1.25rem;
+    border-radius: 0;
+  }
+
   .navbar.opened .navbar-links {
     clip-path: inset(0 0 -1rem);
     visibility: visible;
@@ -289,6 +431,13 @@
         transition-delay: 0s, 0s, #{$i * 40ms}, #{$i * 40ms};
       }
     }
+
+    // After the four links before them
+    @for $i from 1 through 3 {
+      .navbar-more-menu a:nth-child(#{$i}) {
+        transition-delay: 0s, 0s, #{($i + 4) * 40ms}, #{($i + 4) * 40ms};
+      }
+    }
   }
 }
 
@@ -296,6 +445,8 @@
   .navbar-links,
   .navbar-links a,
   .navbar.opened .navbar-links a,
+  .navbar-more-button::after,
+  .navbar-more-menu,
   .navbar-backdrop,
   .navbar-hamburger line,
   .settings-button svg {

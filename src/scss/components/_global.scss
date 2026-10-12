@@ -29,6 +29,8 @@
   --text-shadow: 0 0 .5rem #000;
 
   --surface: rgba(26, 26, 26, .75);
+  // The navbar's, darker: the page scrolls behind it
+  --navbar-surface: rgba(26, 26, 26, .88);
   --surface-solid: #1a1a1a;
   --scrollbar-track: #121212;
   --scrollbar-thumb: #3a3a3a;
@@ -41,10 +43,10 @@
 
   color-scheme: dark;
 
-  // Shorter on phones, where it stays on screen as the page scrolls, see _navbar.scss
+  // Shorter once it folds into the menu, as on phones, where it stays on screen as the page scrolls, see _navbar.scss
   --navbar-height: 4.5rem;
 
-  @include mobile {
+  @include navbar-folded {
     --navbar-height: 3.5rem;
   }
 
@@ -75,6 +77,7 @@
   --text-shadow: none;
 
   --surface: rgba(250, 250, 250, .8);
+  --navbar-surface: rgba(250, 250, 250, .9);
   --surface-solid: #f7f7f7;
   --scrollbar-track: #e2e2e2;
   --scrollbar-thumb: #b8b8b8;
