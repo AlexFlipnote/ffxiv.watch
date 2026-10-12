@@ -32,7 +32,8 @@ const ALL = ""
 // An option with no value, "Any" or "All", in the URL
 const ANY = "any"
 const STATE_ORDER = { open: 0, later: 1, always: 2, none: 3 }
-// Laying out a row is what's slow, a search for "a" matches nearly every fish. The soonest are the ones that matter
+// Laying out a row is what's slow, a search for "a" matches nearly every fish. The soonest are the ones that matter.
+// Only every expansion at once is cut down, one has a few hundred at most
 const MAX_ROWS = 100
 
 /**
@@ -114,6 +115,8 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
   let groups = new Map()
   const loaded = new Map()
   let shown = []
+  // maxRows when every expansion is on show, all of them for one
+  let limit = Infinity
   let onPage = []
   // Bumped by every filter change, so a slow chunk load can't overwrite a newer pick
   let generation = 0
@@ -132,6 +135,8 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     if ([...select.options].some((o) => o.value === value)) select.value = value
   }
   search.value = params.get("q") ?? ""
+  // Raised by "Show more" under a cut-down list, ?results= in the URL so a reload or a shared link keeps them
+  let maxRows = Math.max(MAX_ROWS, Math.floor(Number(params.get("results"))) || 0)
 
   const filters = search.closest(".filters")
   const toggle = filters.querySelector(".filters-toggle")
@@ -195,6 +200,8 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     const query = search.value.trim()
     if (query) url.searchParams.set("q", query)
     else url.searchParams.delete("q")
+    if (maxRows > MAX_ROWS) url.searchParams.set("results", maxRows)
+    else url.searchParams.delete("results")
     if (url.href !== location.href) history.replaceState(history.state, "", url)
   }
 
@@ -206,7 +213,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     groups = new Map()
     onPage = []
     body.replaceChildren()
-    const retry = Object.assign(document.createElement("button"), { className: "table-retry", textContent: "Try again" })
+    const retry = Object.assign(document.createElement("button"), { className: "table-link", textContent: "Try again" })
     retry.addEventListener("click", () => location.reload())
     empty.replaceChildren(`Couldn't load the ${noun}, check your connection. `, retry)
     empty.hidden = false
@@ -230,6 +237,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     }
     if (current !== generation) return
 
+    limit = files.length > 1 ? maxRows : Infinity
     shown = entries.filter((entry) => rowOf(entry)
       && !(hideDone && rowOf(entry).tr.hasAttribute("data-done"))
       && (query ? matches(entry, query) : !filter || filter(entry)))
@@ -250,7 +258,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     const sorted = [...shown].sort((a, b) => compareWindows(windows.get(a), windows.get(b)))
 
     const runs = []
-    for (const entry of sorted.slice(0, MAX_ROWS)) {
+    for (const entry of sorted.slice(0, limit)) {
       const w = windows.get(entry)
       const key = groupKey(w)
       if (runs.at(-1)?.key !== key) runs.push({ key, w, state: stateOf(w), entries: [] })
@@ -282,14 +290,28 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
       body.replaceChildren(...trs)
     }
 
-    setText(empty, shown.length
-      ? `Showing the ${MAX_ROWS} soonest of ${shown.length.toLocaleString("en-US")} ${noun}, search or filter to narrow them down.`
+    // A failed load put its own note there
+    if (empty.firstChild !== emptyText) empty.replaceChildren(emptyText, more)
+    setText(emptyText, shown.length
+      ? `Showing the ${limit} soonest of ${shown.length.toLocaleString("en-US")} ${noun}, search or filter to narrow them down. `
       : `No ${noun} match.`)
-    const hide = shown.length > 0 && shown.length <= MAX_ROWS
+    const cut = shown.length > limit
+    if (more.hidden === cut) more.hidden = !cut
+    const hide = shown.length > 0 && shown.length <= limit
     if (empty.hidden !== hide) empty.hidden = hide
     // Nothing coming up rechecks once a minute
     return { runs, until: Math.min(until, now + 60 * 1000) }
   }
+
+  const emptyText = document.createTextNode("")
+  const more = Object.assign(document.createElement("button"), { className: "table-link", textContent: "Show more" })
+  more.addEventListener("click", () => {
+    maxRows += MAX_ROWS
+    limit = maxRows
+    saveUrl()
+    layout = null
+    render(Date.now())
+  })
 
   // Every tick only the countdowns change, the groups are rebuilt when one opens or closes
   function render(now) {

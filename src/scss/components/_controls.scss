@@ -173,8 +173,8 @@
   font-style: italic;
 }
 
-// In the note when a listing's data fails to load, see listing.js
-.table-retry {
+// "Try again" and "Show more" in the note under a listing, see listing.js
+.table-link {
   padding: 0;
   border: none;
   background: none;
