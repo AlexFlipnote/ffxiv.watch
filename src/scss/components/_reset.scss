@@ -1,0 +1,56 @@
+@use "../mixins" as *;
+
+// A reset's own page: the countdown, then what resets next to when it is around the world
+
+.reset-now {
+  @include glass;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.reset-countdown {
+  // As tall before the script fills it in, so what's under it doesn't move down then
+  min-height: 1.1em;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+.reset-at {
+  font-size: .85rem;
+  color: var(--font-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.reset-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.reset-card {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.reset-list {
+  @include glass;
+  margin: 0;
+  padding: .75rem 1rem .75rem 2rem;
+  line-height: 1.7;
+  color: var(--font-secondary);
+}

@@ -48,6 +48,20 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 0.25rem;
+
+  // A title linking to the timer's own page, underlined like the lists' links
+  .title a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .2em;
+    transition: text-decoration-color .2s;
+
+    @include hover {
+      text-decoration-color: currentColor;
+    }
+  }
 }
 
 .timer-body {

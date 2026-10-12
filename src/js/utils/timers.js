@@ -35,6 +35,8 @@ const DAY = 24 * HOUR
  * @property {number} startTime
  * @property {{ name: string, duration: number, info: string }[]} phases
  * @property {boolean} [small]
+ * @property {string} [page] Its own page, the card's title links to it
+ * @property {string} [pageName] What its page calls it, when that's more than the card's name
  * @property {string} [question]
  * @property {string} [when]
  */
@@ -48,6 +50,7 @@ export const TIMERS = [
     kind: "recurring",
     id: "weekly",
     name: "Weekly Reset",
+    page: "/weekly-reset/",
     question: "When is the FFXIV weekly reset?",
     every: 7 * DAY,
     offset: 5 * DAY + 8 * HOUR, // Tuesday 08:00 UTC
@@ -72,6 +75,7 @@ export const TIMERS = [
     kind: "recurring",
     id: "daily",
     name: "Daily Reset",
+    page: "/daily-reset/",
     question: "When is the FFXIV daily reset?",
     every: DAY,
     offset: 15 * HOUR,
@@ -89,6 +93,8 @@ export const TIMERS = [
     kind: "phased",
     id: "housing",
     name: "Housing",
+    page: "/housing-lottery/",
+    pageName: "Housing Lottery",
     question: "When is the FFXIV housing lottery?",
     when: "The housing lottery runs in 9-day cycles: 5 days to place an entry, then 4 days to claim a winning plot.",
     startTime: 1653577200000,
@@ -237,6 +243,28 @@ function schedule(every, offset, zones) {
   return `Every ${every === DAY ? "day" : utc.weekday} at ${utc.time} UTC, which is ${list}.`
 }
 
+// The zones' names on a reset's own page, which lists them all
+const ZONE_NAMES = { pt: "US Pacific", et: "US Eastern", uk: "UK", ce: "Central Europe", jp: "Japan", au: "Australia (Sydney)" }
+
+/**
+ * When a daily or weekly timer fires in each of ZONES, summer and winter both.
+ * @param {RecurringTimer} timer
+ * @returns {{ zone: string, time: string }[]} "US Pacific", "Tuesday 1:00 AM PDT / 12:00 AM PST"
+ */
+export function zoneTimes(timer) {
+  const firstAfter = (time) => Math.ceil((time - timer.offset) / timer.every) * timer.every + timer.offset
+  const times = [firstAfter(Date.UTC(2026, 6, 1)), firstAfter(Date.UTC(2026, 0, 1))]
+  return Object.entries(ZONES).map(([key, zone]) => {
+    const parts = times.map((time) => partsAt(time, zone))
+    const clocks = [...new Set(parts.map((p, i) => `${p.time} ${zone.names[i]}`))].join(" / ")
+    // A weekly one's day, once when summer and winter share it
+    const days = [...new Set(parts.map((p) => p.weekday))]
+    const time = timer.every === DAY ? clocks
+      : days.length === 1 ? `${days[0]} ${clocks}` : parts.map((p, i) => `${p.weekday} ${p.time} ${zone.names[i]}`).join(" / ")
+    return { zone: ZONE_NAMES[key], time }
+  })
+}
+
 for (const timer of TIMERS) {
   if (timer.kind !== "recurring" || timer.every < DAY) continue
   for (const region of timer.regions ?? []) region.when = schedule(timer.every, region.offset, region.zones)
@@ -317,6 +345,24 @@ function getTimerState(timer, now, regionId) {
     regions: [],
     note: `Next: ${next.name}`
   }
+}
+
+/**
+ * When a phased timer's phases next begin, for its page to list.
+ * @param {PhasedTimer} timer
+ * @param {number} from
+ * @param {number} count
+ * @returns {{ name: string, start: number }[]} The phases beginning after `from`, in order
+ */
+export function phaseChanges(timer, from, count) {
+  const total = timer.phases.reduce((sum, p) => sum + p.duration, 0)
+  let start = timer.startTime + Math.floor((from - timer.startTime) / total) * total
+  const changes = []
+  for (let i = 0; changes.length < count; i = (i + 1) % timer.phases.length) {
+    if (start > from) changes.push({ name: timer.phases[i].name, start })
+    start += timer.phases[i].duration
+  }
+  return changes
 }
 
 /**

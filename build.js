@@ -52,6 +52,9 @@ const SKIPPED = ["js", "scss", "partials", "pages", "render"]
 
 const PAGES = path.join(SRC, "pages")
 
+// The timers' own pages, see src/render/resets.js
+const RESET_PAGES = "[reset].html"
+
 // GitHub Pages looks for it in the root of dist/
 const NOT_FOUND = "404.html"
 
@@ -67,7 +70,7 @@ const jsBuildConfigs = [
   { entryPoints: ["src/js/404.js"], outfile: "dist/js/404.js" },
   // Code split: each expansion's data is its own chunk, and the code the pages share is in shared chunks
   {
-    entryPoints: ["src/js/gathering.js", "src/js/sightseeing.js", "src/js/fishing.js", "src/js/item.js", "src/js/vista.js", "src/js/fish.js", "src/js/ocean.js"],
+    entryPoints: ["src/js/gathering.js", "src/js/sightseeing.js", "src/js/fishing.js", "src/js/item.js", "src/js/vista.js", "src/js/fish.js", "src/js/ocean.js", "src/js/reset.js"],
     outdir: "dist/js",
     format: "esm",
     splitting: true,
@@ -243,7 +246,7 @@ async function buildCSS() {
   - {{ name }}                            the value as text
   - {{{ name }}}                          the value as HTML, on a line of its own each line is indented like it
   Links to the page they're on get aria-current="page", which marks the active navbar link. Links to the section
-  it's in, like /gathering/ on an item's page, get aria-current="true".
+  it's in, like /gathering/ on an item's page, get aria-current="true", and so does / on the timers' own pages.
 */
 
 // Per build: "/js/index.js" -> "/js/index.js?v=hash", and a page's file -> its HTML with the partials pasted in
@@ -432,6 +435,8 @@ function renderPage(route, hashed) {
     .replace(/<a\b([^>]*\bhref="([^"]+)"[^>]*)>/g, (tag, attrs, href) => {
       if (href === route.url) return `<a${attrs} aria-current="page">`
       if (href !== "/" && href.endsWith("/") && route.url.startsWith(href)) return `<a${attrs} aria-current="true">`
+      // The reset pages are the timers', though not under / like a section's pages are under theirs
+      if (href === "/" && route.source === RESET_PAGES) return `<a${attrs} aria-current="true">`
       return tag
     })
 }
