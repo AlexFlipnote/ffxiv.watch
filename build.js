@@ -429,7 +429,8 @@ function withCsp(html) {
   const hashes = [...html.matchAll(/<script(?![^>]*\ssrc=)([^>]*)>([\s\S]*?)<\/script>/g)]
     // JSON-LD is data, it never runs
     .filter(([, attrs]) => !attrs.includes("application/ld+json"))
-    .map(([, , code]) => `'sha256-${crypto.createHash("sha256").update(code).digest("base64")}'`)
+    // Over the text as the browser reads it, which turns every line break into a \n: the partials are CRLF on Windows
+    .map(([, , code]) => `'sha256-${crypto.createHash("sha256").update(code.replace(/\r\n?/g, "\n")).digest("base64")}'`)
   const policy = [
     "default-src 'self'",
     `script-src 'self' ${[...new Set(hashes)].join(" ")}`,
