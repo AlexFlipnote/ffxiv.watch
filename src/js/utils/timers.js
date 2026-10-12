@@ -124,6 +124,7 @@ export const TIMERS = [
     question: "When do FFXIV Grand Company supply and provisioning missions reset?",
     every: DAY,
     offset: 20 * HOUR,
+    small: true,
     info: "At this time, the following resets:",
     list: [
       "Adventurer Squadron training allowances",
@@ -132,18 +133,15 @@ export const TIMERS = [
   },
   {
     kind: "recurring",
-    id: "gates",
-    name: "Gold Saucer GATEs",
-    question: "When do FFXIV Gold Saucer GATEs start?",
-    when: "Every 20 minutes: on the hour, and at 20 and 40 minutes past.",
-    every: 20 * MINUTE,
-    offset: 0, // Aligns with xx:00, xx:20, xx:40
+    id: "leves",
+    name: "Leve allowances",
+    question: "When do FFXIV leve allowances refill?",
+    when: "Every 12 hours, at 00:00 and 12:00 UTC.",
+    every: 12 * HOUR,
+    offset: 0, // 00:00 and 12:00 UTC
     small: true,
-    info: "Gold Saucer Active Time Maneuvers begin:",
-    list: [
-      "GATE registration opens",
-      "A random Gold Saucer minigame spawns"
-    ]
+    info: "At this time, you're given:",
+    list: ["3 more leve allowances, up to 100"]
   },
   {
     kind: "recurring",
