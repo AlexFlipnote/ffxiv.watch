@@ -7,6 +7,7 @@
     "build": "node build.js",
     "clean": "node build.js clean",
     "test": "node --test",
+    "game-data": "npm run weather-data && npm run gathering-data && npm run sightseeing-data && npm run fishing-data && npm run ocean-fishing-data",
     "weather-data": "node scripts/weather-data.js",
     "gathering-data": "node scripts/gathering-data.js",
     "sightseeing-data": "node scripts/sightseeing-data.js",
