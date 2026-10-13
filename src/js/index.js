@@ -214,4 +214,6 @@ everyTick((now) => {
   renderEarthClock(now)
   renderEorzeaClock(now)
   renderMaintenance(now)
+  // The build's countdowns are replaced, see timerCard in src/pages/index.data.js
+  document.querySelector(".timers-pending")?.classList.remove("timers-pending")
 })

@@ -13,19 +13,24 @@
 
     <div class="page">
       <h1 class="sr-only">FFXIV Reset Timers and Eorzea Time</h1>
-      <main class="timers" id="timers">
-        <a class="maintenance" id="maintenance" target="_blank" rel="noopener" hidden>
-          <span class="maintenance-title"><span class="maintenance-dot" aria-hidden="true"></span><strong class="maintenance-name"></strong> <span class="maintenance-patch"></span></span>
-          <span class="maintenance-when"><time></time> - <time></time></span>
-          <span class="maintenance-countdown"><span class="detail-state"></span> <strong></strong></span>
-        </a>
+      <main class="timers timers-pending" id="timers">
+        {{{ maintenance }}}
+        <!-- Shown before the first paint, as index.js would, from a week before until it's over, so the page doesn't
+             drop down under it when index.js runs. The week is MAINTENANCE_AHEAD in js/index.js -->
+        <script>
+          (() => {
+            const bar = document.getElementById("maintenance")
+            const now = Date.now()
+            bar.hidden = !(bar.dataset.end > now && bar.dataset.start - now < 7 * 24 * 60 * 60 * 1000)
+          })()
+        </script>
         <section class="clock">
           <div class="clock-time" id="et-time">00:00</div>
           <div class="clock-details">
             <div class="clock-date" id="et-date"></div>
             <div class="clock-earth">
-              <div><strong>Local (<span id="local-zone">GMT</span>)</strong> <span id="local-time"></span></div>
-              <div><strong>Server (UTC)</strong> <span id="server-time"></span></div>
+              <div><strong>Local (<span id="local-zone">GMT+0</span>)</strong> <span id="local-time">00:00:00</span></div>
+              <div><strong>Server (UTC)</strong> <span id="server-time">00:00:00</span></div>
             </div>
           </div>
         </section>

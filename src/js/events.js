@@ -59,4 +59,6 @@ everyTick((ms) => {
   now.closest("section").hidden = !now.children.length
   soon.closest("section").hidden = !soon.children.length
   empty.hidden = !!(now.children.length || soon.children.length)
+  // The build's countdowns are replaced, see eventCard in src/pages/events/index.data.js
+  document.querySelector(".events-pending")?.classList.remove("events-pending")
 })

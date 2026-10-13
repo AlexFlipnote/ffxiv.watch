@@ -41,6 +41,8 @@
 }
 
 .clock-date {
+  // As tall before the script fills it in, so what's under it doesn't move down then
+  min-height: 1lh;
   color: var(--accent);
   font-weight: bold;
 }

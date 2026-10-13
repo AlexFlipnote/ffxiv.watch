@@ -64,6 +64,11 @@
   }
 }
 
+// The build's countdowns, out of date, keep the room until js/index.js writes the current ones in
+.timers-pending .timer-body {
+  visibility: hidden;
+}
+
 .timer-body {
   display: flex;
   align-items: center;

@@ -84,6 +84,11 @@
   }
 }
 
+// The build's countdowns, out of date, keep the room until js/events.js writes the current ones in
+.events-pending .event-countdown {
+  visibility: hidden;
+}
+
 .event-countdown {
   margin: 0;
   white-space: nowrap;

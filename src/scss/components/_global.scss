@@ -251,3 +251,8 @@ input {
   white-space: nowrap;
   border: 0;
 }
+
+// Only without the script, like the UTC after a time it swaps for the visitor's own
+.js .no-js {
+  display: none;
+}
