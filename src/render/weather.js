@@ -8,7 +8,7 @@ import { periodStart, WEATHER_PERIOD, weatherAt } from "../js/utils/windows.js"
 
 // Now and the periods after it. A phone shows the first four, see _weather.scss
 const PERIODS = 6
-// The coming weather on a zone's page, js/weather-zone.js lists as many as the build's rows
+// Rows in a zone's coming weather
 const SHOWN = 12
 const DATA_SOURCES = ["js/data/weather.json"]
 const ICONS = readData("weather-icons.json")
@@ -190,8 +190,7 @@ function weatherNeeds(zone, waiting) {
 }
 
 /**
- * The coming weather as js/weather-zone.js writes it, as of the build. Hidden until it puts the current ones in their
- * place (.weather-periods-pending), they take the room those will, so what's under the table doesn't move when they do
+ * The coming weather as of the build, hidden until js/weather-zone.js writes the current rows in their place
  * @param {object} zone
  * @returns {import("./html.js").Html}
  */

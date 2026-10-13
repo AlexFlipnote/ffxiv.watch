@@ -7,7 +7,7 @@ const definition = TIMERS.find((t) => t.id === now.dataset.timer)
 const state = now.querySelector(".reset-state")
 const countdown = now.querySelector(".reset-countdown")
 const at = now.querySelector("time")
-// A phased timer's coming phase changes, as many as the build's empty rows
+// A phased timer's coming phase changes
 const dates = document.querySelector(".reset-dates")
 const phases = dates?.children.length
 

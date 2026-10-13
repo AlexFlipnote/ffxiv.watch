@@ -23,7 +23,7 @@ function detailTimers(windowsOf) {
     state: el.querySelector(".detail-state"),
     countdown: el.querySelector(".detail-countdown"),
     list: el.querySelector(".detail-upcoming"),
-    // The build's empty rows, as many as it lists, so the list takes its room before the script fills it
+    // As many as the build's empty rows
     size: el.querySelector(".detail-upcoming").children.length,
     listed: []
   }))

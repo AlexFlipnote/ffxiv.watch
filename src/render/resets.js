@@ -68,8 +68,7 @@ const resetColumns = (timer) => html`
 </div>`
 
 /**
- * A phased timer: its phases, and when they next begin, filled in by js/reset.js in the reader's time. The dates
- * start as empty rows like it writes, as many as it lists, so they take their room before the script fills them
+ * A phased timer: its phases, and when they next begin, filled in by js/reset.js in the reader's time.
  * @param {object} timer One of TIMERS
  * @returns {import("./html.js").Html}
  */

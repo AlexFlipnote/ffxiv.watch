@@ -55,8 +55,7 @@
   color: var(--font-secondary);
 }
 
-// On a phone the phase over its date, two lines each whatever the phase, so the build's empty rows take the room the
-// dates will
+// The phase over its date on a phone, so every row is two lines like the build's empty ones
 .reset-dates strong {
   @include mobile {
     display: block;

@@ -79,8 +79,7 @@
       border-top: 1px solid var(--divider);
     }
 
-    // On a phone the time over the map, two lines each whatever the map, a long one would wrap next to the time. So the
-    // build's empty rows take the room the maps will
+    // The time over the map on a phone, so every row is two lines like the build's empty ones
     @include mobile {
       flex-direction: column;
       gap: .125rem;

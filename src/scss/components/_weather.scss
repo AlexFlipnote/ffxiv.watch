@@ -347,8 +347,7 @@ body:has(.weather-head) .navbar::before {
     color: var(--font-primary);
   }
 
-  // As tall before the script fills it in. With it, the next column is the taller one whatever the weather is called,
-  // so the card is as tall before as after
+  // As tall before the script fills it in, so the card is too
   .detail-countdown {
     min-height: 1lh;
   }

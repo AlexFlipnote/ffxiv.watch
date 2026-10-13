@@ -15,8 +15,7 @@
       <h1 class="sr-only">FFXIV Reset Timers and Eorzea Time</h1>
       <main class="timers timers-pending" id="timers">
         {{{ maintenance }}}
-        <!-- Shown before the first paint, as index.js would, from a week before until it's over, so the page doesn't
-             drop down under it when index.js runs. The week is MAINTENANCE_AHEAD in js/index.js -->
+        <!-- Shown before the first paint, so the page doesn't drop under it. The week is MAINTENANCE_AHEAD in js/index.js -->
         <script>
           (() => {
             const bar = document.getElementById("maintenance")

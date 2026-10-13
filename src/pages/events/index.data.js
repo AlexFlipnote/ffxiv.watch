@@ -11,9 +11,8 @@ const utc = (ms) => new Date(ms).toLocaleString("en-GB", {
 
 /**
  * An event's card, in the page for search engines and without the script. events.js fills in the countdown and moves
- * it between the sections as it starts and ends. The countdown as of the build, hidden until then (.events-pending),
- * takes the room the current one will. The times say they're UTC only without the script, so with it the line is as
- * long as the visitor's own times and wraps where they will
+ * it between the sections as it starts and ends. The countdown as of the build holds its room until then. UTC is only
+ * said without the script, so the line wraps where the visitor's own times will
  * @param {object} event One of lodestone.json's events
  * @param {number} now
  * @returns {import("../../render/html.js").Html}

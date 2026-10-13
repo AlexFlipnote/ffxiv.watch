@@ -12,8 +12,8 @@ const utc = (ms) => new Date(ms).toLocaleString("en-GB", {
 
 /**
  * The timer cards as HTML, so search engines can read them without running JS. index.js finds them by data-id and
- * fills in the countdowns. The countdowns as of the build, hidden until then (.timers-pending), take the room the
- * current ones will, so nothing under them moves. The hidden details are the modal's text, for search engines only.
+ * fills in the countdowns, the build's hold their room until then. The hidden details are the modal's text, for search
+ * engines only.
  * @param {object} timer One of TIMERS
  * @param {import("../js/utils/timers.js").TimerState} state Its state as of the build
  * @param {number} now
@@ -49,8 +49,7 @@ function timerCard(timer, state, now) {
 }
 
 /**
- * The maintenance bar as index.js fills it, with the next maintenance as of the build, so it takes the same room. The
- * script after it in index.html shows it before the first paint, index.js then keeps it up to date.
+ * The maintenance bar with the next maintenance as of the build, index.js keeps it up to date.
  * @param {number} now
  * @returns {import("../render/html.js").Html}
  */

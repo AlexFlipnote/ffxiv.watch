@@ -14,7 +14,7 @@ const nextName = document.getElementById("weather-next")
 const countdown = document.getElementById("weather-countdown")
 const changeAt = document.getElementById("weather-change-at")
 const body = document.getElementById("weather-periods")
-// As many as the build's stand-in rows, see periodRows in src/render/weather.js
+// As many as the build's rows
 const SHOWN = body.children.length
 const empty = document.getElementById("weather-periods-empty")
 // The map opens in the dialog, with the zone's aetherytes, rather than as the image on its own

@@ -5,7 +5,7 @@ import { everyTick, formatCountdown, setText, setTime } from "./utils/time.js"
 /**
  * @typedef {object} Card
  * @property {(time: number) => { map: string, start: number, end: number }} at
- * @property {number} coming How many after the current one are listed, as many as the build's empty rows
+ * @property {number} coming How many after the current one are listed
  * @property {HTMLElement} map
  * @property {HTMLElement} countdown
  * @property {HTMLOListElement} upcoming
