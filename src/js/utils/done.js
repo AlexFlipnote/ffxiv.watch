@@ -1,4 +1,3 @@
-import { buzz } from "./haptics.js"
 import { load, onStored, store } from "./storage.js"
 import { toast } from "./toast.js"
 
@@ -116,7 +115,7 @@ const SPARKS = 8
 export const CELEBRATE_MS = 600
 
 /**
- * A pop, a burst of sparks and a buzz when it's checked, a quick shrink when it's unchecked.
+ * A pop and a burst of sparks when it's checked, a quick shrink when it's unchecked.
  * @param {HTMLButtonElement} button
  * @param {boolean} isDone
  */
@@ -125,7 +124,6 @@ function celebrate(button, isDone) {
   // Restarts the animation when it's clicked again before it ended
   void button.offsetWidth
   button.classList.add(isDone ? "done-pop" : "done-unpop")
-  buzz(isDone ? [12, 60, 12] : 10)
   if (!isDone) return
 
   const burst = document.createElement("span")

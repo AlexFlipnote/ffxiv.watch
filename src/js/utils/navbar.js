@@ -1,4 +1,3 @@
-import "./haptics.js"
 import "./theme.js"
 import { openSettings } from "./settings.js"
 
