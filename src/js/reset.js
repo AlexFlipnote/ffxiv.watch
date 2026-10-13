@@ -7,12 +7,13 @@ const definition = TIMERS.find((t) => t.id === now.dataset.timer)
 const state = now.querySelector(".reset-state")
 const countdown = now.querySelector(".reset-countdown")
 const at = now.querySelector("time")
-// A phased timer's coming phase changes
+// A phased timer's coming phase changes, as many as the build's empty rows
 const dates = document.querySelector(".reset-dates")
+const phases = dates?.children.length
 
 /** @param {number} time */
 function fillDates(time) {
-  dates.replaceChildren(...phaseChanges(definition, time, +dates.dataset.phases).map((change) => {
+  dates.replaceChildren(...phaseChanges(definition, time, phases).map((change) => {
     const li = document.createElement("li")
     li.dataset.start = change.start
     li.append(Object.assign(document.createElement("strong"), { textContent: change.name }), " from ", document.createElement("time"))

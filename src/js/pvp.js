@@ -5,7 +5,7 @@ import { everyTick, formatCountdown, setText, setTime } from "./utils/time.js"
 /**
  * @typedef {object} Card
  * @property {(time: number) => { map: string, start: number, end: number }} at
- * @property {number} coming How many after the current one are listed
+ * @property {number} coming How many after the current one are listed, as many as the build's empty rows
  * @property {HTMLElement} map
  * @property {HTMLElement} countdown
  * @property {HTMLOListElement} upcoming
@@ -15,23 +15,22 @@ import { everyTick, formatCountdown, setText, setTime } from "./utils/time.js"
 /**
  * @param {string} id
  * @param {Card["at"]} at
- * @param {number} coming
  * @returns {Card}
  */
-function card(id, at, coming) {
+function card(id, at) {
   const el = document.getElementById(id)
+  const upcoming = el.querySelector(".pvp-upcoming")
   return {
     at,
-    coming,
+    coming: upcoming.children.length,
     map: el.querySelector(".pvp-map"),
     countdown: el.querySelector(".pvp-countdown"),
-    upcoming: el.querySelector(".pvp-upcoming"),
+    upcoming,
     shown: null
   }
 }
 
-// A week of Frontline, and the next few hours of Crystalline Conflict, about a day and a third of its rotation
-const cards = [card("pvp-frontline", frontlineAt, 7), card("pvp-crystalline-conflict", crystallineConflictAt, 8)]
+const cards = [card("pvp-frontline", frontlineAt), card("pvp-crystalline-conflict", crystallineConflictAt)]
 
 /**
  * @param {Card} c

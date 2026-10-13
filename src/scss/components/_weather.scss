@@ -135,6 +135,12 @@ body:has(.weather-head) .navbar::before {
   }
 }
 
+// As tall before the script fills them in, so the head doesn't grow then
+.weather-period time,
+.weather-period-sub {
+  min-height: 1lh;
+}
+
 .weather-period-sub {
   font-size: .7rem;
   color: var(--font-tertiary);
@@ -340,6 +346,12 @@ body:has(.weather-head) .navbar::before {
   .detail-state strong {
     color: var(--font-primary);
   }
+
+  // As tall before the script fills it in. With it, the next column is the taller one whatever the weather is called,
+  // so the card is as tall before as after
+  .detail-countdown {
+    min-height: 1lh;
+  }
 }
 
 .weather-now-name {
@@ -432,6 +444,11 @@ body:has(.weather-head) .navbar::before {
   align-items: center;
   gap: .5rem;
   white-space: nowrap;
+}
+
+// The build's periods, out of date, keep the room until js/weather-zone.js writes the current ones in
+.weather-periods-pending tbody {
+  visibility: hidden;
 }
 
 .weather-periods {

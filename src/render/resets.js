@@ -68,7 +68,8 @@ const resetColumns = (timer) => html`
 </div>`
 
 /**
- * A phased timer: its phases, and when they next begin, filled in by js/reset.js in the reader's time.
+ * A phased timer: its phases, and when they next begin, filled in by js/reset.js in the reader's time. The dates
+ * start as empty rows like it writes, as many as it lists, so they take their room before the script fills them
  * @param {object} timer One of TIMERS
  * @returns {import("./html.js").Html}
  */
@@ -82,7 +83,7 @@ const phaseColumns = (timer) => html`
   </section>
   <section class="reset-card">
     <h2 class="detail-subtitle">Coming dates</h2>
-    <ol class="reset-list reset-dates" data-phases="6"></ol>
+    <ol class="reset-list reset-dates">${Array.from({ length: 6 }, () => html`<li><strong>&nbsp;</strong>&nbsp;</li>`)}</ol>
   </section>
 </div>`
 

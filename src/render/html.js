@@ -322,6 +322,9 @@ export const locationFacts = (entry) => [
   ["Aetheryte", entry.aetheryte?.name]
 ]
 
+// How many windows the list under the countdown shows, the current one included. js/utils/detail.js counts the rows
+const UPCOMING = 5
+
 /**
  * A countdown to the next window, filled in by js/utils/detail.js, with the ET times written out under it.
  * @param {string | null} data JSON for the page's script to work the windows out from, null when it's always up
@@ -333,7 +336,7 @@ export const detailTimer = (data, when) => data
     <div class="detail-timer" data-window="${data}">
       <div class="detail-next"><span class="detail-state">Next window</span> <strong class="detail-countdown"></strong></div>
       <p class="detail-when">${when}</p>
-      <ol class="detail-upcoming" aria-label="Upcoming windows, in your time"></ol>
+      <ol class="detail-upcoming" aria-label="Upcoming windows, in your time">${Array.from({ length: UPCOMING }, () => html`<li>&nbsp;</li>`)}</ol>
     </div>`
   : html`
     <div class="detail-timer detail-always">

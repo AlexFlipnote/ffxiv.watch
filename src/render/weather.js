@@ -2,10 +2,14 @@ import { facts, html, pager, readData, readExpansions, slug, weatherUrl } from "
 import { fishUrl } from "./fishing.js"
 import { ogZone } from "./og.js"
 import { vistaNumber, vistaUrl } from "./sightseeing.js"
+import { toEorzea } from "../js/utils/eorzea.js"
 import { mapPercent } from "../js/utils/map.js"
+import { periodStart, WEATHER_PERIOD, weatherAt } from "../js/utils/windows.js"
 
 // Now and the periods after it. A phone shows the first four, see _weather.scss
 const PERIODS = 6
+// The coming weather on a zone's page, js/weather-zone.js lists as many as the build's rows
+const SHOWN = 12
 const DATA_SOURCES = ["js/data/weather.json"]
 const ICONS = readData("weather-icons.json")
 // Zone -> its map in src/images/maps/, the one the gathering and fishing pages use, and its aetherytes
@@ -186,6 +190,22 @@ function weatherNeeds(zone, waiting) {
 }
 
 /**
+ * The coming weather as js/weather-zone.js writes it, as of the build. Hidden until it puts the current ones in their
+ * place (.weather-periods-pending), they take the room those will, so what's under the table doesn't move when they do
+ * @param {object} zone
+ * @returns {import("./html.js").Html}
+ */
+function periodRows(zone) {
+  const start = periodStart(Date.now())
+  return html`${Array.from({ length: SHOWN }, (_, i) => {
+    const at = start + i * WEATHER_PERIOD
+    const weather = weatherAt(zone, at)
+    return html`
+      <tr><td>${String(toEorzea(at).hours).padStart(2, "0")}:00</td><td class="weather-period-weather"><span class="weather-label">${weatherIcon(weather)}<span>${weather}</span></span></td><td><time>00:00</time></td><td>${i ? "00:00:00" : "Now"}</td></tr>`
+  })}`
+}
+
+/**
  * @param {object} zone
  * @param {object[]} waiting See weatherNeeds
  * @returns {import("./html.js").Html}
@@ -219,9 +239,10 @@ const zoneContent = (zone, waiting) => html`
   </div>
   <section class="weather-finder">
     <h2 class="detail-subtitle">Coming weather</h2>${finderFilters(zone)}
-    <table class="table weather-periods">
+    <table class="table weather-periods weather-periods-pending">
       <thead><tr><th>ET</th><th>Weather</th><th>Your time</th><th>In</th></tr></thead>
-      <tbody id="weather-periods"></tbody>
+      <tbody id="weather-periods">${periodRows(zone)}
+      </tbody>
     </table>
     <p class="table-empty" id="weather-periods-empty" hidden></p>
   </section>${weatherNeeds(zone, waiting)}

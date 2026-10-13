@@ -23,7 +23,8 @@
           <div class="ocean-next-head">
             <span class="detail-state" id="ocean-state">Next voyage in</span>
             <strong class="detail-countdown" id="ocean-countdown">00:00:00</strong>
-            <time class="ocean-when" id="ocean-when">Mon 1 Jan, 00:00</time>
+            <!-- As js/ocean.js writes it, a voyage leaves every two hours so it's nearly always today, without the day -->
+            <time class="ocean-when" id="ocean-when">00:00</time>
           </div>
           <div class="ocean-routes">
             {{{ next }}}

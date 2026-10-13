@@ -7,7 +7,6 @@ import { periodStart, WEATHER_PERIOD, weatherAt } from "./utils/windows.js"
 
 // As far ahead as the fish and vista windows look
 const HORIZON = 30 * 24 * 60 * 60 * 1000
-const SHOWN = 12
 
 const zone = JSON.parse(document.querySelector(".weather-detail").dataset.zone)
 const nowName = document.getElementById("weather-now")
@@ -15,6 +14,8 @@ const nextName = document.getElementById("weather-next")
 const countdown = document.getElementById("weather-countdown")
 const changeAt = document.getElementById("weather-change-at")
 const body = document.getElementById("weather-periods")
+// As many as the build's stand-in rows, see periodRows in src/render/weather.js
+const SHOWN = body.children.length
 const empty = document.getElementById("weather-periods-empty")
 // The map opens in the dialog, with the zone's aetherytes, rather than as the image on its own
 const map = document.querySelector(".weather-map[data-map]")
@@ -140,6 +141,7 @@ everyTick((now) => {
     changeAt.dataset.at = change
     // The first row has moved on
     fillPeriods(now)
+    document.querySelector(".weather-periods-pending")?.classList.remove("weather-periods-pending")
   }
 
   const change = +changeAt.dataset.at

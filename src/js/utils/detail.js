@@ -3,9 +3,6 @@ import { doneChecks } from "./done.js"
 import { openMap } from "./mapModal.js"
 import { everyTick, formatCountdown, setText, setTime } from "./time.js"
 
-// How many windows the list under the countdown shows, the current one included
-const UPCOMING = 5
-
 /**
  * @typedef {object} WindowSource What a timer on a detail page works its windows out with
  * @property {(now: number) => import("./listing.js").Window} current Called every tick, so keep it cheap
@@ -26,6 +23,8 @@ function detailTimers(windowsOf) {
     state: el.querySelector(".detail-state"),
     countdown: el.querySelector(".detail-countdown"),
     list: el.querySelector(".detail-upcoming"),
+    // The build's empty rows, as many as it lists, so the list takes its room before the script fills it
+    size: el.querySelector(".detail-upcoming").children.length,
     listed: []
   }))
 
@@ -35,7 +34,7 @@ function detailTimers(windowsOf) {
    */
   function relist(timer, first) {
     timer.listed = [first]
-    while (timer.listed.length < UPCOMING) {
+    while (timer.listed.length < timer.size) {
       const next = timer.after(timer.listed.at(-1).end)
       if (!next) break
       timer.listed.push(next)
