@@ -68,6 +68,7 @@ export const TIMERS = [
       "Custom deliveries allowances/individual allowances",
       "Doman Enclave Reconstruction Effort donations",
       "Adventurer Squadron Priority mission",
+      "Elite Mark Bills on the hunt boards",
       "Fashion Report Theme Reveal"
     ]
   },
@@ -84,6 +85,7 @@ export const TIMERS = [
       "Allied society daily quest allowances",
       "Duty Roulette daily bonuses",
       "Daily repeatable quests",
+      "Daily Mark Bills on the hunt boards",
       "Frontline Duty Availability",
       "Housing Message",
       "Mini Cactpot"
