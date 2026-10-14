@@ -31,6 +31,9 @@ Disallow: /
 User-agent: SEOkicks
 Disallow: /
 
+User-agent: SERankingBacklinksBot
+Disallow: /
+
 User-agent: serpstatbot
 Disallow: /
 
