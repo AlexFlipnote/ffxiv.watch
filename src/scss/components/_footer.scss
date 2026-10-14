@@ -25,13 +25,32 @@
   }
 }
 
-.footer-dot {
-  display: inline-block;
-  width: .4rem;
-  height: .4rem;
-  margin: 0 .5rem;
-  border-radius: 1px;
-  transform: rotate(45deg);
-  vertical-align: middle;
-  background-color: var(--font-tertiary);
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: .75rem;
+
+  a {
+    display: flex;
+    opacity: .6;
+    transition: opacity .2s;
+
+    @include hover {
+      opacity: 1;
+    }
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.footer-discord {
+  height: 1rem;
+}
+
+.footer-github {
+  height: 1.4rem;
 }
