@@ -141,7 +141,7 @@ everyTick((now) => {
     changeAt.dataset.at = change
     // The first row has moved on
     fillPeriods(now)
-    document.querySelector(".weather-periods-pending")?.classList.remove("weather-periods-pending")
+    document.querySelector(".weather-pending")?.classList.remove("weather-pending")
   }
 
   const change = +changeAt.dataset.at

@@ -41,6 +41,21 @@ $navbar-fold: 51.5625rem;
   border-radius: 1rem;
 }
 
+// A box the script hasn't filled in yet: its content hidden, the box pulsing like the lists' skeleton
+@mixin ghost {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+  // Its own text too, like a group's tab
+  color: transparent;
+
+  > * {
+    visibility: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
 // Divider along the top of a table row, drawn as a background so it can stop short of the table's sides
 // and never bends around a rounded corner like a border would. $left/$right: how far in it starts and ends
 

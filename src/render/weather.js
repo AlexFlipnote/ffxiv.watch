@@ -210,7 +210,7 @@ function periodRows(zone) {
  * @returns {import("./html.js").Html}
  */
 const zoneContent = (zone, waiting) => html`
-<div class="weather-detail" data-zone="${JSON.stringify(zone)}">
+<div class="weather-detail weather-pending" data-zone="${JSON.stringify(zone)}">
   <header class="weather-detail-header">
     <div>
       <p class="detail-kicker">${zone.group} · Weather forecast</p>
@@ -238,7 +238,7 @@ const zoneContent = (zone, waiting) => html`
   </div>
   <section class="weather-finder">
     <h2 class="detail-subtitle">Coming weather</h2>${finderFilters(zone)}
-    <table class="table weather-periods weather-periods-pending">
+    <table class="table weather-periods">
       <thead><tr><th>ET</th><th>Weather</th><th>Your time</th><th>In</th></tr></thead>
       <tbody id="weather-periods">${periodRows(zone)}
       </tbody>

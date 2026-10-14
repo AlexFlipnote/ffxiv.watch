@@ -12,6 +12,14 @@
   text-align: center;
 }
 
+// Ghosts until js/reset.js fills in the countdown and dates
+.js .reset-pending {
+  .reset-now,
+  .reset-dates {
+    @include ghost;
+  }
+}
+
 .reset-countdown {
   // As tall before the script fills it in, so what's under it doesn't move down then
   min-height: 1.1em;

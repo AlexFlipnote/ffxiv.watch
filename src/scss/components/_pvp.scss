@@ -18,6 +18,11 @@
   flex-direction: column;
   gap: .875rem;
   padding: 1rem 1.25rem;
+
+  // Ghosts until js/pvp.js fills in the maps
+  .js .pvp-pending & {
+    @include ghost;
+  }
 }
 
 .pvp-title {

@@ -64,9 +64,13 @@
   }
 }
 
-// The build's countdowns, out of date, keep the room until js/index.js writes the current ones in
-.timers-pending .timer-body {
-  visibility: hidden;
+// The build's clock and countdowns, out of date, ghost until js/index.js writes the current ones in
+.js .timers-pending {
+  .clock,
+  .timer,
+  .maintenance {
+    @include ghost;
+  }
 }
 
 .timer-body {

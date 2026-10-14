@@ -26,6 +26,7 @@ everyTick((time) => {
   const timer = getAllTimerStates(time).find((t) => t.id === definition.id)
   setText(countdown, formatCountdown(timer.target - time))
   setTime(at, new Date(timer.target), new Date(time))
+  document.querySelector(".reset-pending")?.classList.remove("reset-pending")
 
   if (definition.kind !== "phased") return
   // "Housing: Results Period" -> "Results Period ends in"

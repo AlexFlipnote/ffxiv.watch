@@ -59,4 +59,5 @@ everyTick((now) => {
     setText(c.countdown, formatCountdown(on.end - now))
     for (const li of c.upcoming.children) setTime(li.firstChild, new Date(+li.dataset.start), new Date(now))
   }
+  document.querySelector(".pvp-pending")?.classList.remove("pvp-pending")
 })

@@ -156,6 +156,15 @@ body:has(.weather-head) .navbar::before {
   }
 }
 
+// Ghosts until js/weather.js fills in the forecast
+.js .weather:not(.weather-ready) {
+  .weather-head,
+  .group-tab,
+  .weather-zones {
+    @include ghost;
+  }
+}
+
 .weather-group-title {
   margin: 0;
   font-size: .9rem;
@@ -445,9 +454,12 @@ body:has(.weather-head) .navbar::before {
   white-space: nowrap;
 }
 
-// The build's periods, out of date, keep the room until js/weather-zone.js writes the current ones in
-.weather-periods-pending tbody {
-  visibility: hidden;
+// The build's weather and periods, out of date, ghost until js/weather-zone.js writes the current ones in
+.js .weather-pending {
+  .weather-now-card,
+  .weather-finder {
+    @include ghost;
+  }
 }
 
 .weather-periods {
