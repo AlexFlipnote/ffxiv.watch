@@ -44,6 +44,7 @@ const BLOCKED_BOTS = [
   "rogerbot", // Moz
   "SemrushBot",
   "SEOkicks",
+  "SERankingBacklinksBot", // seranking.com
   "serpstatbot",
   "spbot" // OpenLinkProfiler
 ]
