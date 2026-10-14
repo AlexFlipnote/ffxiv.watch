@@ -974,8 +974,28 @@
       }
     ]
   },
+  "Sinus Ardorum": {
+    "image": "c1w1-02",
+    "scale": 100,
+    "aetherytes": []
+  },
   "South Horn": {
     "image": "o6b1-01",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "Phaenna": {
+    "image": "c1w2-02",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "Oizys": {
+    "image": "c1w3-02",
+    "scale": 100,
+    "aetherytes": []
+  },
+  "Auxesia": {
+    "image": "c1w4-02",
     "scale": 100,
     "aetherytes": []
   },

@@ -2122,36 +2122,6 @@
     ]
   },
   {
-    "name": "Island Sanctuary",
-    "group": "Field Operations",
-    "weather": [
-      [
-        "Clear Skies",
-        25
-      ],
-      [
-        "Fair Skies",
-        45
-      ],
-      [
-        "Clouds",
-        10
-      ],
-      [
-        "Rain",
-        10
-      ],
-      [
-        "Fog",
-        5
-      ],
-      [
-        "Showers",
-        5
-      ]
-    ]
-  },
-  {
     "name": "South Horn",
     "group": "Field Operations",
     "weather": [
@@ -2207,6 +2177,108 @@
       ],
       [
         "Illusory Disturbances",
+        5
+      ]
+    ]
+  },
+  {
+    "name": "Sinus Ardorum",
+    "group": "Field Operations",
+    "weather": [
+      [
+        "Moon Dust",
+        15
+      ],
+      [
+        "Fair Skies",
+        70
+      ],
+      [
+        "Umbral Wind",
+        15
+      ]
+    ]
+  },
+  {
+    "name": "Phaenna",
+    "group": "Field Operations",
+    "weather": [
+      [
+        "Fair Skies",
+        60
+      ],
+      [
+        "Clouds",
+        20
+      ],
+      [
+        "Rain",
+        20
+      ]
+    ]
+  },
+  {
+    "name": "Oizys",
+    "group": "Field Operations",
+    "weather": [
+      [
+        "Clouds",
+        20
+      ],
+      [
+        "Fair Skies",
+        60
+      ],
+      [
+        "Clear Skies",
+        20
+      ]
+    ]
+  },
+  {
+    "name": "Auxesia",
+    "group": "Field Operations",
+    "weather": [
+      [
+        "Clouds",
+        20
+      ],
+      [
+        "Fair Skies",
+        60
+      ],
+      [
+        "Clear Skies",
+        20
+      ]
+    ]
+  },
+  {
+    "name": "Island Sanctuary",
+    "group": "Field Operations",
+    "weather": [
+      [
+        "Clear Skies",
+        25
+      ],
+      [
+        "Fair Skies",
+        45
+      ],
+      [
+        "Clouds",
+        10
+      ],
+      [
+        "Rain",
+        10
+      ],
+      [
+        "Fog",
+        5
+      ],
+      [
+        "Showers",
         5
       ]
     ]

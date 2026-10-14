@@ -10,7 +10,7 @@ const TOWN = 0
 const OVERWORLD = 1
 const HOUSING = 13
 const ISLAND_SANCTUARY = 49
-const FIELD_OPERATIONS = [41, 48, 61] // Eureka, Bozja and Zadnor, Occult Crescent
+const FIELD_OPERATIONS = [41, 48, 61, 60] // Eureka, Bozja and Zadnor, Occult Crescent, Cosmic Exploration
 
 const USE_PRIORITY = [OVERWORLD, HOUSING, ...FIELD_OPERATIONS, ISLAND_SANCTUARY, TOWN]
 
@@ -69,8 +69,10 @@ async function main() {
     zones.set(name, { use, id: +t["#"], name, group: groupOf(t, expansions), weather, mapRowId: mapRow[t.Map]?.Id ? t.Map : null, art })
   }
 
+  // Field operations by content, as their ids interleave (Cosmic Exploration's planets land between Occult Crescent's horns)
+  const contentOrder = (z) => z.group === "Field Operations" ? USE_PRIORITY.indexOf(z.use) : 0
   const sorted = [...zones.values()]
-    .sort((a, b) => groups.indexOf(a.group) - groups.indexOf(b.group) || a.id - b.id)
+    .sort((a, b) => groups.indexOf(a.group) - groups.indexOf(b.group) || contentOrder(a) - contentOrder(b) || a.id - b.id)
     .map(({ name, group, weather }) => ({ name, group, weather }))
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true })

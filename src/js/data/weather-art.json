@@ -311,9 +311,25 @@
     "loading": "nowloading_base33",
     "name": 123772
   },
+  "Sinus Ardorum": {
+    "loading": "nowloading_base05",
+    "name": 124092
+  },
   "South Horn": {
     "loading": "nowloading_base36",
     "name": 124090
+  },
+  "Phaenna": {
+    "loading": "nowloading_base05",
+    "name": 124097
+  },
+  "Oizys": {
+    "loading": "nowloading_base05",
+    "name": 124080
+  },
+  "Auxesia": {
+    "loading": "nowloading_base05",
+    "name": 122108
   },
   "North Horn": {
     "loading": "nowloading_base36",
