@@ -1,6 +1,6 @@
 @use "../mixins" as *;
 
-// The about page: the logo next to its title and intro, and the text the whole column wide, it's the page's only content
+// The about page: the logo next to its title and intro on a computer, and the text the whole column wide, it's the page's only content
 
 .about .detail-text {
   max-width: none;
@@ -21,8 +21,8 @@
   width: 6rem;
   height: 6rem;
 
+  // The navbar already has it, next to the intro it only squeezes the text into a thin column
   @include mobile {
-    width: 4.5rem;
-    height: 4.5rem;
+    display: none;
   }
 }
