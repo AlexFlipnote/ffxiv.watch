@@ -60,6 +60,9 @@ const RESET_PAGES = "[reset].html"
 // GitHub Pages looks for it in the root of dist/
 const NOT_FOUND = "404.html"
 
+// The sections with a page per entry get a sitemap each, everything else shares sitemap-pages.xml
+const SITEMAP_SECTIONS = ["fishing", "gathering", "sightseeing", "weather"]
+
 const minifyOptions = {
   collapseWhitespace: true,
   removeComments: true,
@@ -532,25 +535,39 @@ function lastModified(files) {
  * @param {boolean} [dated] Add each page's lastmod, from git, which takes a moment
  */
 async function buildSite(routes, dated = true) {
-  log("SITE", "Writing CNAME, sitemap.xml and robots.txt")
+  log("SITE", "Writing CNAME, the sitemaps and robots.txt")
 
   // Every deploy wipes gh-pages, so the custom domain has to be written each time
   fs.writeFileSync(path.join(OUT, "CNAME"), DOMAIN + "\n")
 
-  const urls = routes
-    .filter(route => route.source !== NOT_FOUND)
-    .map(route => {
-      const lastmod = dated && lastModified(route.sources)
-      return `  <url><loc>https://${DOMAIN}${route.url}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}</url>`
-    })
+  // A sitemap per section behind a sitemap index, so Search Console shows how each one is indexed on its own
+  const sitemaps = new Map()
+  for (const route of routes.filter(route => route.source !== NOT_FOUND)) {
+    const section = route.url.split("/")[1]
+    const name = SITEMAP_SECTIONS.includes(section) ? section : "pages"
+    if (!sitemaps.has(name)) sitemaps.set(name, [])
+    sitemaps.get(name).push({ url: route.url, lastmod: dated && lastModified(route.sources) })
+  }
 
-  fs.writeFileSync(path.join(OUT, "sitemap.xml"), [
+  const xml = (tag, entries) => [
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
-    "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">",
-    ...urls,
-    "</urlset>",
+    `<${tag} xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
+    ...entries,
+    `</${tag}>`,
     ""
-  ].join("\n"))
+  ].join("\n")
+  const entry = (tag, loc, lastmod) => `  <${tag}><loc>${loc}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}</${tag}>`
+
+  const index = []
+  for (const [name, pages] of sitemaps) {
+    const file = `sitemap-${name}.xml`
+    fs.writeFileSync(path.join(OUT, file), xml("urlset", pages.map(p => entry("url", `https://${DOMAIN}${p.url}`, p.lastmod))))
+    // YYYY-MM-DD sorts as text, so the newest is the last
+    const newest = pages.map(p => p.lastmod).filter(Boolean).sort().at(-1)
+    index.push(entry("sitemap", `https://${DOMAIN}/${file}`, newest))
+  }
+  fs.writeFileSync(path.join(OUT, "sitemap.xml"), xml("sitemapindex", index))
+  const urls = [...sitemaps.values()].flat()
 
   fs.writeFileSync(path.join(OUT, "robots.txt"), [
     ...BLOCKED_BOTS.flatMap(bot => [`User-agent: ${bot}`, "Disallow: /", ""]),
