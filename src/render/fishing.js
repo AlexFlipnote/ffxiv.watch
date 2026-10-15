@@ -155,7 +155,13 @@ function fishSeo(fish) {
   const extras = [
     fish.bait ? `, with ${baitText(fish)}` : "",
     timed ? `, bites ${whenText(fish)}` : "",
-    fish.hookset && fish.tug ? `, ${fish.hookset} Hookset on a ${fish.tug} tug` : ""
+    fish.hookset && fish.tug ? `, ${fish.hookset} Hookset on a ${fish.tug} tug` : "",
+    // Fill out what's left for fish with no bait or window, so Google doesn't write its own snippet for them
+    !timed && !fish.ocean ? ", bites any time" : "",
+    fish.ocean && !fish.ocean.time ? ", bites on every voyage that stops there, at any time of day" : "",
+    fish.ocean ? "" : `, ${fish.method === "Spearfishing" ? "Spearfishing" : "Fisher"} Lv.${fish.level}`,
+    fish.aetheryte ? `, nearest aetheryte ${fish.aetheryte.name}` : "",
+    fish.gig ? `, ${fish.gig} gig` : ""
   ]
   const text = extras.reduce((out, extra) => (out + extra).length < 159 ? out + extra : out, `Where to catch ${fish.name} in ${where}`)
   return {

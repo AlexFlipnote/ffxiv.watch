@@ -139,8 +139,11 @@ function fitted(text, extras) {
 /** @returns {string} ", used in 12 crafting recipes", "" for none */
 const usedIn = ({ recipes }) => recipes.length ? `, used in ${recipes.length} crafting recipe${recipes.length === 1 ? "" : "s"}` : ""
 
-/** @returns {string} ", nearest aetheryte Helix", only for an item at one node */
-const aetheryteText = (spots) => spots.length === 1 && spots[0].node.aetheryte ? `, nearest aetheryte ${spots[0].node.aetheryte.name}` : ""
+/** @returns {string} ", nearest aetheryte Helix", only when every node has the same one */
+function aetheryteText(spots) {
+  const name = same(spots.map((s) => s.node.aetheryte?.name ?? ""))
+  return name ? `, nearest aetheryte ${name}` : ""
+}
 
 /**
  * @param {object} item
@@ -169,7 +172,11 @@ function whereText(item, spots) {
   const job = same(nodes.map((n) => n.job))
 
   if (nodes.length > 1) {
-    return `Where to gather ${item.name} in FFXIV: ${nodes.length} ${job ? `${job} ` : ""}nodes, in ${zoneList(nodes)}, with their maps${timed ? " and spawn times" : ""}`
+    const level = same(nodes.map((n) => n.level))
+    const jobs = job ?? [...new Set(nodes.map((n) => n.job))].join(" and ")
+    const text = (lv) => `Where to gather ${item.name} in FFXIV: ${nodes.length} ${lv}${jobs} nodes, in ${zoneList(nodes)}, with their maps${timed ? " and spawn times" : ""}`
+    // The level is the first to go, so a long one still ends on the spawn times
+    return level && text(`Lv.${level} `).length < 160 ? text(`Lv.${level} `) : text("")
   }
 
   const [node] = nodes
