@@ -357,13 +357,14 @@ function seoTags(route, attrs) {
     ? [jsonLd({ "@context": "https://schema.org", "@type": "WebSite", name: DOMAIN, url })]
     : []
 
-  // A page in a section, section="Gathering" name="Cedar Log", shows as ffxiv.watch › Gathering › Cedar Log in results
+  // A page in a section, section="Gathering" name="Cedar Log", shows as ffxiv.watch › Gathering › Cedar Log in results,
+  // a section's own page, name="Gathering", as ffxiv.watch › Gathering
   const crumbs = [
     [DOMAIN, `https://${DOMAIN}/`],
-    [attr("section"), `https://${DOMAIN}${route.url.replace(/[^/]+\/$/, "")}`],
+    ...attr("section") ? [[attr("section"), `https://${DOMAIN}${route.url.replace(/[^/]+\/$/, "")}`]] : [],
     [attr("name"), url]
   ]
-  const breadcrumbs = attr("section") && attr("name")
+  const breadcrumbs = attr("name")
     ? [jsonLd({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
