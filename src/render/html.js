@@ -325,9 +325,10 @@ export function listRows(list, expansions, shown, idOf, row, linksOf) {
  * It links to the map image, js/utils/detail.js opens it bigger in the map dialog instead, with what data-map holds.
  * @param {{ zone: string, spot?: string, map: import("../js/utils/map.js").MapSpot, aetheryte?: { name: string, x: number, y: number } }} entry
  * @param {string} [note] Shown under the coordinates in the dialog
+ * @param {boolean} [lazy] Further down the page, loaded once it's scrolled near. An item at many nodes has a map each
  * @returns {Html}
  */
-export function mapFigure(entry, note) {
+export function mapFigure(entry, note, lazy) {
   const { map } = entry
   const at = (spot) => `left: ${mapPercent(map, spot.x).toFixed(2)}%; top: ${mapPercent(map, spot.y).toFixed(2)}%`
   const size = `${(2 * mapSize(map, map.radius)).toFixed(2)}%`
@@ -335,7 +336,7 @@ export function mapFigure(entry, note) {
 
   return html`
     <a class="map map-zoom" href="/images/maps/${map.image}.webp" data-map="${data}" title="Show a bigger map">
-      <img src="/images/maps/${map.image}.webp" alt="Map of ${entry.zone}, marked at ${coordinates(map)}" width="1024" height="1024">
+      <img src="/images/maps/${map.image}.webp" alt="Map of ${entry.zone}, marked at ${coordinates(map)}" width="1024" height="1024"${lazy && html` loading="lazy"`}>
       ${map.radius ? html`<span class="map-area" style="${at(map)}; width: ${size}; height: ${size}"></span>` : ""}
       ${entry.aetheryte ? html`<span class="map-aetheryte" style="${at(entry.aetheryte)}"></span>` : ""}
       ${map.radius ? "" : html`<span class="map-pin" style="${at(map)}"></span>`}

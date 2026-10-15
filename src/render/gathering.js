@@ -198,9 +198,10 @@ const spotTags = ({ node, item, expansion }) => html`
  * @param {{ node: object, item: object, expansion: string }} spot
  * @param {boolean} named One of several nodes: it gets the zone as its heading, and its own tags. A single node's tags
  * are in the item's header
+ * @param {boolean} below Not the first node, its map waits until it's scrolled near
  * @returns {import("./html.js").Html}
  */
-function nodeCard(spot, named) {
+function nodeCard(spot, named, below) {
   const { node, item } = spot
   const others = node.items.filter((i) => i.id !== item.id)
 
@@ -209,7 +210,7 @@ function nodeCard(spot, named) {
   <div class="detail-top">
     <h2 class="detail-node">${node.zone}</h2>${spotTags(spot)}
   </div>`}
-  ${node.map && mapFigure(node, node.items.map((i) => i.name).join(", "))}
+  ${node.map && mapFigure(node, node.items.map((i) => i.name).join(", "), below)}
   ${detailTimer(node.times ? JSON.stringify({ times: node.times }) : null, node.times ? `Up ${etWindows(node.times)}` : "Always up", node.times && howOften(node, "Up"))}
   ${facts([
     ...locationFacts(node),
@@ -311,7 +312,7 @@ export function itemPages() {
     name: item.name,
     ...itemSeo(item, spots, info[item.id]),
     ...ogIcon(info[item.id].icon, item.name),
-    content: html`${itemIntro(item, info[item.id], spots)}${itemUses(info[item.id])}${spots.map((spot) => nodeCard(spot, spots.length > 1))}
+    content: html`${itemIntro(item, info[item.id], spots)}${itemUses(info[item.id])}${spots.map((spot, i) => nodeCard(spot, spots.length > 1, i > 0))}
 ${pager(pagerTo(all[i - 1]), pagerTo(all[i + 1]), "Previous and next item")}`,
     // Only the expansions it and its pager links are in, so a patch's new nodes don't change every item's lastmod
     sources: ["js/data/gathering-items.json", ...new Set([all[i - 1], all[i], all[i + 1]].filter(Boolean).flatMap((e) => e.spots.map((s) => `js/data/gathering/${s.file}.json`)))]
