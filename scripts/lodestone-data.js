@@ -84,6 +84,20 @@ async function get(url) {
 }
 
 /**
+ * @param {string} url A link from a topic
+ * @returns {Promise<string>} Where it ends up, following sqex.to shortlinks without loading their destination
+ */
+async function resolve(url) {
+  for (let hops = 0; hops < 5 && url.startsWith("https://sqex.to/"); hops++) {
+    const res = await fetch(url, { redirect: "manual" })
+    const next = res.headers.get("location")
+    if (!next) throw new Error(`${url}: HTTP ${res.status}, no redirect`)
+    url = new URL(next, url).href
+  }
+  return url
+}
+
+/**
  * @param {string} xml An Atom feed
  * @returns {{ title: string, url: string, category: string, html: string, image: string, updated: string }[]} Its
  * entries, `image` the banner's URL or ""
@@ -219,8 +233,17 @@ async function readTopic(entry) {
 
   let unread = false
   for (const [, link] of body.matchAll(/href="(https:\/\/sqex\.to\/[^"]+|https:\/\/eu\.finalfantasyxiv\.com\/lodestone\/special\/[^"]+)"/g)) {
-    const res = await get(link)
-    if (!res.url.startsWith(`${LODESTONE}/special/`)) continue
+    let res
+    try {
+      const target = await resolve(link)
+      if (!target.startsWith(`${LODESTONE}/special/`)) continue
+      res = await get(target)
+    } catch (err) {
+      // Read again next run rather than cached as "not an event"
+      warn(`Couldn't open ${link} in "${entry.title}" ${entry.url}: ${err.message}`)
+      unread = true
+      continue
+    }
     const period = periodOf(textOf(await res.text()))
     if (period) return { url: res.url, ...period }
     // Story pages have no dates, and some events, like Yo-kai Watch's, only give them in pictures
