@@ -256,6 +256,14 @@
   }
 }
 
+.detail-often {
+  margin: .625rem 0 0;
+  padding: .625rem 0 0;
+  border-top: 1px solid var(--divider);
+  font-size: .85rem;
+  color: var(--font-secondary);
+}
+
 .detail-facts {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -360,6 +368,10 @@ $item-side: min(20rem, 40%);
   .detail-when {
     margin: 0;
     text-align: right;
+  }
+
+  .detail-often {
+    grid-column: 1 / -1;
   }
 
   .detail-upcoming {

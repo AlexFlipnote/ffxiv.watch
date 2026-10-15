@@ -1,5 +1,5 @@
 import {
-  chip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText,
+  chip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, howOften,
   html, listRow, listRows, locationFacts, mapFigure, pager, readData,
   readExpansions, slug
 } from "./html.js"
@@ -128,7 +128,7 @@ export function vistaPages() {
     <div class="tags">${vistaTags(vista)}</div>
   </div>
   ${vista.map && mapFigure(vista, `${name}: use the ${vista.emote} emote here`)}
-  ${detailTimer(timed ? JSON.stringify({ zone: vista.zone, times: vista.times, weather: vista.weather }) : null, when)}
+  ${detailTimer(timed ? JSON.stringify({ zone: vista.zone, times: vista.times, weather: vista.weather }) : null, when, timed && howOften(vista, "Up"))}
   ${facts([["Emote", vista.emote && emoteFact(vista.emote, text[vista.name])], ...locationFacts(vista), ["Level", vista.level], ["Unlocked by", vista.unlock && unlockText(vista.unlock)]])}
 </section>
 ${pager(pagerTo(all[i - 1], expansion), pagerTo(all[i + 1], expansion), "Previous and next vista")}`,

@@ -1,5 +1,5 @@
 import {
-  chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText,
+  chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, howOften,
   html, listRow, listRows, locationFacts, mapFigure, pager, readData, readExpansions, scripCard, slug, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
@@ -210,7 +210,7 @@ function nodeCard(spot, named) {
     <h2 class="detail-node">${node.zone}</h2>${spotTags(spot)}
   </div>`}
   ${node.map && mapFigure(node, node.items.map((i) => i.name).join(", "))}
-  ${detailTimer(node.times ? JSON.stringify({ times: node.times }) : null, node.times ? `Up ${etWindows(node.times)}` : "Always up")}
+  ${detailTimer(node.times ? JSON.stringify({ times: node.times }) : null, node.times ? `Up ${etWindows(node.times)}` : "Always up", node.times && howOften(node, "Up"))}
   ${facts([
     ...locationFacts(node),
     ["Folklore", node.folklore],

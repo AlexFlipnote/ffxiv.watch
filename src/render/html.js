@@ -2,7 +2,9 @@ import crypto from "crypto"
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
+import { ET_DAY_EARTH_MS } from "../js/utils/eorzea.js"
 import { coordinates, mapPercent, mapSize } from "../js/utils/map.js"
+import { windowsBetween } from "../js/utils/windows.js"
 
 /*
   Builds HTML for the pages at build time, imported by the pages' .data.js files and build.js.
@@ -174,6 +176,71 @@ const etClock = (minutes) => {
  */
 export const etWindows = (times) => `${times.map(([start, duration]) => `${etClock(start)} - ${etClock(start + duration)}`).join(" and ")} ET`
 
+// A year of weather from a fixed day, so the numbers only change with the data
+const ODDS_FROM = Date.UTC(2026, 0, 1)
+const ODDS_YEAR = 365 * 24 * 60 * 60 * 1000
+// Enough for one that only needs a time, it's the same every ET day
+const ODDS_DAYS = 20
+
+/**
+ * @param {number} ms
+ * @returns {[number, string]} Rounded to what's worth knowing at that length: [85, "second"], [6, "minute"], [1.5, "hour"]
+ */
+function roughly(ms) {
+  const minutes = ms / 60000
+  if (minutes < 2) return [Math.round(minutes * 12) * 5, "second"]
+  if (minutes < 90) return [Math.round(minutes), "minute"]
+  if (minutes < 10 * 60) return [Math.round(minutes / 30) / 2, "hour"]
+  if (minutes < 36 * 60) return [Math.round(minutes / 60), "hour"]
+  return [Math.round(minutes / 1440), "day"]
+}
+
+/** @returns {string} "6 minutes" */
+const spanText = (ms) => {
+  const [n, unit] = roughly(ms)
+  return `${n} ${unit}${n === 1 ? "" : "s"}`
+}
+
+/** @returns {string} "a 6-minute", "an 8-minute" */
+const lengthText = (ms) => {
+  const [n, unit] = roughly(ms)
+  return `${/^(8|1[18](\D|$))/.test(n) ? "an" : "a"} ${n}-${unit}`
+}
+
+/** @returns {number} The mean, of a list that isn't empty */
+const mean = (list) => list.reduce((a, b) => a + b, 0) / list.length
+
+/** @returns {boolean} All within a second of each other */
+const even = (list) => Math.max(...list) - Math.min(...list) < 1000
+
+/**
+ * How often it's up, in Earth time, which only the timer shows otherwise. Worked out from a year of its windows when it
+ * needs a weather, the forecast is the same for everyone.
+ * @param {import("../js/utils/windows.js").Timed} entry Up only at some times or in some weather
+ * @param {string} verb "Up", "Bites"
+ * @returns {string | null} "Up 8.3% of the time: a 6-minute window every 35 minutes.", null when it never comes up
+ */
+export function howOften(entry, verb) {
+  const weather = Boolean(entry.weather || entry.previousWeather)
+  const from = weather ? ODDS_FROM : Math.ceil(ODDS_FROM / ET_DAY_EARTH_MS) * ET_DAY_EARTH_MS
+  const to = from + (weather ? ODDS_YEAR : ODDS_DAYS * ET_DAY_EARTH_MS)
+  const windows = windowsBetween(entry, from, to)
+  if (!windows.length) return null
+
+  const up = windows.reduce((sum, w) => sum + Math.min(w.end, to) - w.start, 0) / (to - from)
+  const percent = up < .01 ? "under 1%" : `${weather ? "about " : ""}${up < .1 ? Math.round(up * 1000) / 10 : Math.round(up * 100)}%`
+  if (windows.length < 3) return `${verb} ${percent} of the time, only ${windows.length === 1 ? "once" : "twice"} in a year of weather.`
+
+  const lengths = windows.map((w) => w.end - w.start)
+  const intervals = windows.slice(1).map((w, i) => w.start - windows[i].start)
+  const average = even(lengths) && even(intervals) ? "" : "on average "
+  const text = `${verb} ${percent} of the time: ${average}${lengthText(mean(lengths))} window every ${spanText(mean(intervals))}.`
+  if (!weather) return text
+
+  const longest = Math.max(...windows.slice(1).map((w, i) => w.start - windows[i].end))
+  return `${text} The longest wait in a year of weather is ${spanText(longest)}.`
+}
+
 /**
  * Zone and spot, written once: against the map icon on a computer, a line under the chips on a phone (see _listing.scss).
  * @param {{ zone: string, spot?: string }} entry
@@ -329,14 +396,16 @@ const UPCOMING = 5
  * A countdown to the next window, filled in by js/utils/detail.js, with the ET times written out under it.
  * @param {string | null} data JSON for the page's script to work the windows out from, null when it's always up
  * @param {string} when The times as text, for search engines and before the script runs
+ * @param {string | null} [often] How often it's up, see howOften, under the windows
  * @returns {Html}
  */
-export const detailTimer = (data, when) => data
+export const detailTimer = (data, when, often) => data
   ? html`
     <div class="detail-timer" data-window="${data}">
       <div class="detail-next"><span class="detail-state">Next window</span> <strong class="detail-countdown"></strong></div>
       <p class="detail-when">${when}</p>
-      <ol class="detail-upcoming" aria-label="Upcoming windows, in your time">${Array.from({ length: UPCOMING }, () => html`<li>&nbsp;</li>`)}</ol>
+      <ol class="detail-upcoming" aria-label="Upcoming windows, in your time">${Array.from({ length: UPCOMING }, () => html`<li>&nbsp;</li>`)}</ol>${often && html`
+      <p class="detail-often">${often}</p>`}
     </div>`
   : html`
     <div class="detail-timer detail-always">

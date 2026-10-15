@@ -1,6 +1,6 @@
 import {
-  chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, html, listRow, listRows, locationFacts,
-  mapFigure, pager, readData, readExpansions, scripCard, slug, xivIcon
+  chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, howOften, html, listRow, listRows,
+  locationFacts, mapFigure, pager, readData, readExpansions, scripCard, slug, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
@@ -241,7 +241,7 @@ function spotCard(fish, info, others, paged) {
   return html`
 <section class="detail-card gathering-node">
   ${fish.map && mapFigure(fish, fish.name)}
-  ${fish.ocean ? oceanTimer(fish) : detailTimer(windowData(fish), isTimed(fish) ? `Bites ${whenText(fish)}` : "Bites any time")}
+  ${fish.ocean ? oceanTimer(fish) : detailTimer(windowData(fish), isTimed(fish) ? `Bites ${whenText(fish)}` : "Bites any time", isTimed(fish) && howOften(fish, "Bites"))}
   ${facts([
     ...oceanFacts(fish),
     // Next to the timer, as it's caught before the window

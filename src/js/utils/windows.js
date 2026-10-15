@@ -77,6 +77,42 @@ function timeSegments(times, from, to) {
 }
 
 /**
+ * @param {Timed} entry
+ * @returns {(start: number) => [number, number][]} The parts of the weather period starting at `start` it's up in
+ */
+function periodSegments(entry) {
+  const zone = (entry.weather || entry.previousWeather) && ZONES.find((z) => z.name === entry.zone)
+
+  return (start) => {
+    const weatherOk = !zone
+      || ((!entry.weather || entry.weather.includes(weatherAt(zone, start)))
+        && (!entry.previousWeather || entry.previousWeather.includes(weatherAt(zone, start - WEATHER_PERIOD))))
+    return weatherOk ? timeSegments(entry.times, start, start + WEATHER_PERIOD) : []
+  }
+}
+
+/**
+ * Every window that starts between two times, for the build to work out how often it's up.
+ * @param {Timed} entry Up only at some times or in some weather
+ * @param {number} from
+ * @param {number} to
+ * @returns {{ start: number, end: number }[]} Joined where one carries on into the next period, the last can run past `to`
+ */
+export function windowsBetween(entry, from, to) {
+  const segmentsIn = periodSegments(entry)
+  const windows = []
+  for (let start = periodStart(from); ; start += WEATHER_PERIOD) {
+    const segments = segmentsIn(start)
+    // Past the end, only to finish the window that's still open, for up to 30 days
+    if (start >= to && (windows.at(-1)?.end !== start || start >= to + HORIZON)) return windows.filter((w) => w.start >= from)
+    for (const [s, e] of segments) {
+      if (windows.at(-1)?.end === s) windows.at(-1).end = e
+      else if (s < to) windows.push({ start: s, end: e })
+    }
+  }
+}
+
+/**
  * The window it's up in now, or else its next one. Walks the weather periods ahead, joining a window that carries on
  * into the next period.
  * @param {Timed} entry
@@ -86,18 +122,7 @@ function timeSegments(times, from, to) {
 export function nextWeatherWindow(entry, now) {
   if (!entry.times && !entry.weather && !entry.previousWeather) return { always: true }
 
-  const zone = (entry.weather || entry.previousWeather) && ZONES.find((z) => z.name === entry.zone)
-
-  /**
-   * @param {number} start A weather period's start
-   * @returns {[number, number][]} The parts of it the entry is up in
-   */
-  const segmentsIn = (start) => {
-    const weatherOk = !zone
-      || ((!entry.weather || entry.weather.includes(weatherAt(zone, start)))
-        && (!entry.previousWeather || entry.previousWeather.includes(weatherAt(zone, start - WEATHER_PERIOD))))
-    return weatherOk ? timeSegments(entry.times, start, start + WEATHER_PERIOD) : []
-  }
+  const segmentsIn = periodSegments(entry)
 
   /**
    * The walk starts at this period, so a window that's open may have opened in the ones before, walked back for its
