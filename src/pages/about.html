@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html str="partials/head.html"/>
+    <x-seo
+      title="About ffxiv.watch: Who Makes It & Where the Data Comes From"
+      description="Who makes ffxiv.watch, where its FFXIV timers, gathering, fishing, sightseeing and weather data come from, and how often it's updated."
+      name="About"
+    />
+  </head>
+
+  <body>
+    <x-html str="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="detail about">
+        <header class="about-header">
+          <img class="about-logo" src="/images/logo.svg" alt="">
+          <div>
+            <h1 class="detail-title">About ffxiv.watch</h1>
+            <p class="detail-text">FFXIV timers, gathering nodes, fish, vistas and weather, in your local time. Made for the phone in your hand while you play, with no account, no ads and no trackers. Your settings and progress stay in your browser.</p>
+          </div>
+        </header>
+
+        <section>
+          <h2 class="detail-subtitle">Who makes it</h2>
+          <div class="detail-text">
+            <p>Hi, I'm Alex, better known online as <a href="https://alexflipnote.dev">AlexFlipnote</a>. I've been coding for around {{ codingYears }} years, making Discord bots like <a href="https://xela.dev">xelA</a> and <a href="https://kawaiibot.dev">KawaiiBot</a>, open source tools like <a href="https://github.com/AlexFlipnote/discord.http">discord.http</a>, and browser extensions like <a href="https://github.com/AlexFlipnote/homepage_plusplus">Homepage++</a>, a clean new tab page. Whatever I make, I keep going over it until it's quick and light, the optimising is half the fun for me.</p>
+            <p>ffxiv.watch is a one-person project, the code is open source on <a href="https://github.com/AlexFlipnote/ffxiv.watch">GitHub</a>, so anyone can see how it works and where every number comes from. If something's wrong, missing or could be better, tell me there or on <a href="https://discord.gg/yqb7vATbjH">Discord</a>. Feedback, bug reports and ideas are all welcome.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="detail-subtitle">Where the data comes from</h2>
+          <div class="detail-text">
+            <ul>
+              <li><strong>The game's own data</strong>, datamined by <a href="https://github.com/xivapi/ffxiv-datamining">XIVAPI's ffxiv-datamining</a>: the nodes, fish, vistas, zones and weather rates, with the maps and icons from <a href="https://v2.xivapi.com/">XIVAPI</a>.</li>
+              <li><strong>When each fish bites</strong>, its bait and intuition, from <a href="https://github.com/icykoneko/ff14-fish-tracker-app">Carbuncle Plushy's fish tracker</a>.</li>
+              <li><strong>The other fish's bait, hookset and tug</strong>, blue fish times and hidden node items, from <a href="https://github.com/ffxiv-teamcraft/ffxiv-teamcraft">Teamcraft</a>.</li>
+              <li><strong>Maintenance and events</strong>, from the official <a href="https://eu.finalfantasyxiv.com/lodestone/">Lodestone</a>.</li>
+              <li><strong>The PvP map rotations</strong>, from <a href="https://pvpc.nbb.fan/">PvP Calendar</a>.</li>
+            </ul>
+            <p>The timers and weather forecasts are worked out from the game's own rules, the same way the game does it, so they don't wait on anyone reporting them. How often something is up, and the longest wait for it, comes from a year of those forecasts.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="detail-subtitle">How often it's updated</h2>
+          <div class="detail-text">
+            <p>The Lodestone is checked every hour, so new maintenance and events show up on their own. The game data is updated after each patch, once the datamined files have it.</p>
+          </div>
+        </section>
+
+      </main>
+      <x-html str="partials/footer.html"/>
+    </div>
+
+    <x-html str="partials/settings.html"/>
+
+    <x-js src="page.js"/>
+  </body>
+</html>

@@ -72,7 +72,7 @@ const minifyOptions = {
 
 const jsBuildConfigs = [
   { entryPoints: ["src/js/index.js"], outfile: "dist/js/index.js" },
-  { entryPoints: ["src/js/404.js"], outfile: "dist/js/404.js" },
+  { entryPoints: ["src/js/page.js"], outfile: "dist/js/page.js" },
   // Code split: each expansion's data is its own chunk, and the code the pages share is in shared chunks
   {
     entryPoints: [
@@ -387,6 +387,8 @@ function seoTags(route, attrs) {
     `<title>${title}</title>`,
     meta("name", "description", description),
     `<link rel="canonical" href="${url}">`,
+    // Lets Google show the preview image big, in results and Discover, it otherwise picks a size itself
+    meta("name", "robots", "max-image-preview:large"),
     meta("property", "og:locale", "en_US"),
     meta("property", "og:type", "website"),
     meta("property", "og:site_name", DOMAIN),
