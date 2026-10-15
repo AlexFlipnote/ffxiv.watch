@@ -1,28 +1,9 @@
-@use "../mixins" as *;
-
-// The about page: the logo next to its title and intro on a computer, and the text the whole column wide, it's the page's only content
+// The about page: the text the whole column wide, it's the page's only content
 
 .about .detail-text {
   max-width: none;
 }
 
-.about-header {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-
-  .detail-text {
-    margin: .375rem 0 0;
-  }
-}
-
-.about-logo {
-  flex-shrink: 0;
-  width: 6rem;
-  height: 6rem;
-
-  // The navbar already has it, next to the intro it only squeezes the text into a thin column
-  @include mobile {
-    display: none;
-  }
+.about-header .detail-text {
+  margin: .375rem 0 0;
 }
