@@ -213,7 +213,7 @@
   font-variant-numeric: tabular-nums;
 
   &.window-hint-open {
-    color: var(--accent);
+    color: var(--open);
   }
 }
 
@@ -222,7 +222,7 @@
   font-variant-numeric: tabular-nums;
 
   .detail-open & {
-    color: var(--accent);
+    color: var(--open);
   }
 
   .detail-always & {

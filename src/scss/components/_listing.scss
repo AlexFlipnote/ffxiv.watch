@@ -297,7 +297,7 @@
 
   .group-open strong,
   .group-open .gathering-item {
-    color: var(--accent);
+    color: var(--open);
   }
 
   .group-header td {
@@ -391,7 +391,7 @@ $tab-flare: .5rem;
   font-size: .95rem;
 
   .group-open & {
-    color: var(--accent);
+    color: var(--open);
   }
 
   .group-always &,
