@@ -479,10 +479,10 @@ body:has(.weather-head) .navbar::before {
     background-image: none;
   }
 
-  // The period it is now, cyan where the lists' open groups are green
+  // The period it is now, like the lists' open groups
   .weather-current td {
-    background-color: var(--current-background);
-    color: var(--accent);
+    background-color: var(--group-open-background);
+    color: var(--open);
 
     &:first-child {
       border-radius: .5rem 0 0 .5rem;
