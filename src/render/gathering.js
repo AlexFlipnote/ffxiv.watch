@@ -26,6 +26,12 @@ const itemLink = (item) => itemUrl(item) ? html`<a href="${itemUrl(item)}">${ite
  */
 const itemIcon = (item, info) => html`<img class="item-icon" src="/images/game/${info.icon}.webp" alt="${item.name} icon" width="44" height="44">`
 
+/**
+ * @param {number} icon Item.Icon
+ * @returns {import("./html.js").Html} Small, next to a name in a list
+ */
+const smallIcon = (icon) => html`<img class="bait-icon" src="/images/game/${icon}.webp" alt="" width="24" height="24">`
+
 const stars = (item) => item.stars && html`<span class="gathering-stars">${"★".repeat(item.stars)}</span>`
 
 const HIDDEN_TITLE = "Hidden, the node only shows it once it's revealed"
@@ -199,9 +205,10 @@ const spotTags = ({ node, item, expansion }) => html`
  * @param {boolean} named One of several nodes: it gets the zone as its heading, and its own tags. A single node's tags
  * are in the item's header
  * @param {boolean} below Not the first node, its map waits until it's scrolled near
+ * @param {object} info gathering-items.json
  * @returns {import("./html.js").Html}
  */
-function nodeCard(spot, named, below) {
+function nodeCard(spot, named, below, info) {
   const { node, item } = spot
   const others = node.items.filter((i) => i.id !== item.id)
 
@@ -216,7 +223,7 @@ function nodeCard(spot, named, below) {
     ...locationFacts(node),
     ["Folklore", node.folklore],
     ["Unlocked by", node.quest],
-    ["Also here", others.length && html`<span class="detail-list">${others.map((i) => html`<span>${itemLink(i)}</span>`)}</span>`]
+    ["Also here", others.length && html`<span class="detail-list">${others.map((i) => html`<span class="bait-step">${smallIcon(info[i.id].icon)}${itemLink(i)}</span>`)}</span>`]
   ])}
 </section>`
 }
@@ -312,7 +319,7 @@ export function itemPages() {
     name: item.name,
     ...itemSeo(item, spots, info[item.id]),
     ...ogIcon(info[item.id].icon, item.name),
-    content: html`${itemIntro(item, info[item.id], spots)}${itemUses(info[item.id])}${spots.map((spot, i) => nodeCard(spot, spots.length > 1, i > 0))}
+    content: html`${itemIntro(item, info[item.id], spots)}${itemUses(info[item.id])}${spots.map((spot, i) => nodeCard(spot, spots.length > 1, i > 0, info))}
 ${pager(pagerTo(all[i - 1]), pagerTo(all[i + 1]), "Previous and next item")}`,
     // Only the expansions it and its pager links are in, so a patch's new nodes don't change every item's lastmod
     sources: ["js/data/gathering-items.json", ...new Set([all[i - 1], all[i], all[i + 1]].filter(Boolean).flatMap((e) => e.spots.map((s) => `js/data/gathering/${s.file}.json`)))]

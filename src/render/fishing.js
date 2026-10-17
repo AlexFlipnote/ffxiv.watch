@@ -234,9 +234,10 @@ function fishIntro(fish, paged, info, expansion) {
 
 /**
  * @param {object[]} list
+ * @param {object} info fishing-items.json
  * @returns {import("./html.js").Html}
  */
-const fishLinks = (list) => html`<span class="detail-list">${list.map((f) => html`<span><a href="${fishUrl(f)}">${f.name}</a></span>`)}</span>`
+const fishLinks = (list, info) => html`<span class="detail-list">${list.map((f) => html`<span class="bait-step">${baitIcon(f.id, info)}<a href="${fishUrl(f)}">${f.name}</a></span>`)}</span>`
 
 /**
  * Where it bites: its timer and spot, next to the map.
@@ -257,11 +258,11 @@ function spotCard(fish, info, others, paged) {
   ${facts([
     ...oceanFacts(fish),
     // Next to the timer, as it's caught before the window
-    ["Intuition", fish.predators && html`Catch ${fish.predators.map((p, i) => html`${i > 0 && " and "}${p.count}x ${paged.has(p.id) ? html`<a href="${fishUrl(p)}">${p.name}</a>` : p.name} ${predatorWindow(paged.get(p.id))}`)} first${fish.intuition && `, it lasts ${duration(fish.intuition)}`}`],
+    ["Intuition", fish.predators && html`<span class="bait-path">Catch ${fish.predators.map((p, i) => html`${i > 0 && " and "}${p.count}x <span class="bait-step">${baitIcon(p.id, info)}${paged.has(p.id) ? html`<a href="${fishUrl(p)}">${p.name}</a>` : p.name}</span> ${predatorWindow(paged.get(p.id))}`)} first${fish.intuition && `, it lasts ${duration(fish.intuition)}`}</span>`],
     ...locationFacts(fish),
     ["Also bites at", info[fish.id].alsoAt && html`<span class="detail-list">${info[fish.id].alsoAt.map((s) => html`<span>${s}</span>`)}</span>`],
-    ["Also same tug", fish.tug && (shared.length ? fishLinks(shared) : `None, every ${fish.tug} tug here is this fish`)],
-    ["Also here", rest.length && fishLinks(rest)]
+    ["Also same tug", fish.tug && (shared.length ? fishLinks(shared, info) : `None, every ${fish.tug} tug here is this fish`)],
+    ["Also here", rest.length && fishLinks(rest, info)]
   ])}
 </section>`
 }
