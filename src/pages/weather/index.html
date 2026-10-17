@@ -22,11 +22,32 @@
         </header>
         <div class="filters">
           <input class="input search" id="search" type="search" enterkeyhint="search" placeholder="Zone or weather" aria-label="Search">
-          <label>Region <select class="select" id="filter-region">{{{ regionOptions }}}</select></label>
+          <label>Region <select class="select" id="filter-region"><option value="">All</option><x-each items="weather.groups" as="group"><option value="{{ group.slug }}" selected="{{ group.selected }}">{{ group.name }}</option></x-each></select></label>
         </div>
         <div class="weather" id="weather">
-          {{{ head }}}
-          {{{ groups }}}
+          <!-- Now and the periods after it, js/weather.js fills them in. A phone shows the first four, see _weather.scss -->
+          <div class="weather-head-sentinel" id="weather-head-sentinel"></div>
+          <div class="weather-head" id="weather-head">
+            <span class="weather-head-zone">Zone</span>
+            <span class="weather-period"><strong>Now</strong><span class="weather-period-sub" id="weather-change"></span></span>
+            <span class="weather-period"><time></time><span class="weather-period-sub"></span></span>
+            <span class="weather-period"><time></time><span class="weather-period-sub"></span></span>
+            <span class="weather-period"><time></time><span class="weather-period-sub"></span></span>
+            <span class="weather-period"><time></time><span class="weather-period-sub"></span></span>
+            <span class="weather-period"><time></time><span class="weather-period-sub"></span></span>
+          </div>
+          <x-each items="weather.groups" as="group">
+            <section class="{{ group.class }}" data-group="{{ group.slug }}">
+              <h2 class="weather-group-title"><span class="group-tab">{{ group.name }}</span></h2>
+              <div class="weather-zones">
+                <x-each items="group.zones" as="zone">
+                  <div class="weather-row" data-zone="{{ zone.name }}">
+                    <a class="weather-zone" href="{{ zone.url }}">{{ zone.name }}</a><span class="weather-cell"></span><span class="weather-cell"></span><span class="weather-cell"></span><span class="weather-cell"></span><span class="weather-cell"></span><span class="weather-cell"></span>
+                  </div>
+                </x-each>
+              </div>
+            </section>
+          </x-each>
         </div>
         <p class="table-empty" id="weather-empty" hidden></p>
       </main>

@@ -65,7 +65,7 @@ function guessCactpotRegion() {
 }
 
 /**
- * Hooks up a card the build wrote into the page (see timerCard in src/pages/index.data.js).
+ * Hooks up a card the build wrote into the page (see src/pages/index.html).
  * @param {import("./utils/timers.js").TimerState} timer
  */
 function bindCard(timer) {
@@ -214,6 +214,6 @@ everyTick((now) => {
   renderEarthClock(now)
   renderEorzeaClock(now)
   renderMaintenance(now)
-  // The build's countdowns are replaced, see timerCard in src/pages/index.data.js
+  // The build's countdowns are replaced, see src/pages/index.html
   document.querySelector(".timers-pending")?.classList.remove("timers-pending")
 })

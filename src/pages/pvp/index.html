@@ -28,10 +28,23 @@
               <strong class="pvp-map"></strong>
               <span class="pvp-change"><span class="detail-state">Changes in</span> <strong class="pvp-countdown"></strong></span>
             </div>
-            <ol class="pvp-upcoming" aria-label="The days after">{{{ frontlineUpcoming }}}</ol>
+            <!-- A week, empty so the list takes its room before js/pvp.js fills it, it counts the rows -->
+            <ol class="pvp-upcoming" aria-label="The days after">
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+            </ol>
             <details class="pvp-details">
               <summary>Rotation</summary>
-              {{{ frontlineOrder }}}
+              <ol class="pvp-order">
+                <x-each items="pvp.frontline" as="map">
+                  <li>{{ map }}</li>
+                </x-each>
+              </ol>
             </details>
           </section>
           <section class="pvp-card" id="pvp-crystalline-conflict">
@@ -41,10 +54,24 @@
               <strong class="pvp-map"></strong>
               <span class="pvp-change"><span class="detail-state">Changes in</span> <strong class="pvp-countdown"></strong></span>
             </div>
-            <ol class="pvp-upcoming" aria-label="The hours after">{{{ crystallineConflictUpcoming }}}</ol>
+            <!-- The next few hours, about a day and a third of the rotation -->
+            <ol class="pvp-upcoming" aria-label="The hours after">
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+            </ol>
             <details class="pvp-details">
               <summary>Rotation</summary>
-              {{{ crystallineConflictOrder }}}
+              <ol class="pvp-order">
+                <x-each items="pvp.crystallineConflict" as="map">
+                  <li>{{ map }}</li>
+                </x-each>
+              </ol>
             </details>
           </section>
         </div>

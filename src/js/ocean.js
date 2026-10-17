@@ -89,6 +89,6 @@ everyTick((now) => {
   setText(countdown, formatCountdown((boarding ? start + BOARDING : start) - now))
   setTime(when, new Date(start), new Date(now))
   for (const li of schedule.children) setTime(li.firstChild, new Date(+li.dataset.start), new Date(now))
-  // The build's stand-ins are replaced, see oceanPage in src/render/ocean.js
+  // The build's stand-ins are replaced, see src/data/ocean.js
   document.querySelector(".ocean-pending")?.classList.remove("ocean-pending")
 })

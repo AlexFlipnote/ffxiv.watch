@@ -1,0 +1,4 @@
+<!-- Links to the entries before and after this one, at the bottom of a detail page. The links touch, a line between them would put a space in -->
+<nav class="detail-pager" aria-label="{{ page.pager.label }}">
+  <x-if value="page.pager.prev"><a class="detail-prev-link" href="{{ page.pager.prev.url }}" rel="prev">{{ page.pager.prev.text }}</a></x-if><x-if not="page.pager.prev"><span></span></x-if><x-if value="page.pager.next"><a class="detail-next-link" href="{{ page.pager.next.url }}" rel="next">{{ page.pager.next.text }}</a></x-if><x-if not="page.pager.next"><span></span></x-if>
+</nav>

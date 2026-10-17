@@ -20,15 +20,23 @@
           <h1 class="listing-title">Events</h1>
           <p class="listing-lead">The seasonal and collaboration events on now and coming up, when each starts and ends in your local time, from the Lodestone.</p>
         </header>
-        <section class="events-section" id="events-now" aria-labelledby="events-now-title"{{{ nowHidden }}}>
+        <section class="events-section" id="events-now" aria-labelledby="events-now-title" hidden="{{ events.noneOn }}">
           <h2 class="events-heading" id="events-now-title">On now</h2>
-          <div class="events-grid">{{{ now }}}</div>
+          <div class="events-grid">
+            <x-each items="events.on" as="event">
+              <x-html src="partials/event-card.html"/>
+            </x-each>
+          </div>
         </section>
-        <section class="events-section" id="events-soon" aria-labelledby="events-soon-title"{{{ soonHidden }}}>
+        <section class="events-section" id="events-soon" aria-labelledby="events-soon-title" hidden="{{ events.noneSoon }}">
           <h2 class="events-heading" id="events-soon-title">Coming up</h2>
-          <div class="events-grid">{{{ soon }}}</div>
+          <div class="events-grid">
+            <x-each items="events.soon" as="event">
+              <x-html src="partials/event-card.html"/>
+            </x-each>
+          </div>
         </section>
-        <p class="events-empty" id="events-empty"{{{ emptyHidden }}}>
+        <p class="events-empty" id="events-empty" hidden="{{ events.anyLive }}">
           Nothing's on right now. The <a href="https://eu.finalfantasyxiv.com/lodestone/topics/" target="_blank" rel="noopener">Lodestone's topics</a> announce the next one, usually a week or two ahead.
         </p>
       </main>

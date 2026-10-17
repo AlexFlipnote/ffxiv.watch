@@ -1,4 +1,3 @@
-// When Alex started coding, the same date and math as alexflipnote.dev
 const CODING_SINCE = Date.parse("2015-08-01")
 const YEAR = 1000 * 60 * 60 * 24 * 365
 

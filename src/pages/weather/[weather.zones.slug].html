@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html src="partials/head.html"/>
+    <x-seo title="{{ page.title }}" description="{{ page.description }}" image="{{ page.image }}" image-alt="{{ page.imageAlt }}" image-size="{{ page.imageSize }}" section="Weather" name="{{ page.name }}"/>
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="/js/weather-zone.js" module/>
+  </head>
+
+  <body>
+    <x-html src="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="detail">
+        <a class="backlink" href="/weather/">Weather</a>
+        <div class="weather-detail weather-pending" data-zone="{{ page.data }}">
+          <header class="weather-detail-header">
+            <div>
+              <p class="detail-kicker">{{ page.group }} · Weather forecast</p>
+              <h1 class="detail-title">{{ page.name }}</h1>
+            </div>
+          </header>
+          <div class="weather-overview">
+          <section class="weather-now-card" aria-label="Weather now">
+            <div class="weather-now">
+              <span class="detail-state">Now</span>
+              <strong class="weather-now-name" id="weather-now"></strong>
+            </div>
+            <div class="weather-next">
+              <span class="detail-state">Next: <strong id="weather-next"></strong></span>
+              <strong class="detail-countdown" id="weather-countdown"></strong>
+              <span class="weather-next-at">Changes at <time id="weather-change-at"></time></span>
+            </div>
+          </section>
+          <section class="weather-chances-card">
+            <h2 class="detail-subtitle">Weather chances</h2>
+            <ul class="weather-chances">
+              <x-each items="page.chances" as="chance">
+              <li><img class="weather-icon" src="/images/game/{{ chance.icon }}.webp" alt="" width="24" height="24"><span>{{ chance.weather }}</span><strong>{{ chance.rate }}%</strong></li>
+              </x-each>
+            </ul>
+          </section>
+          <x-if value="page.map">
+            <!-- No spot marked, the weather is the same all over it. Cut to the height next to it on a computer, around its main aetheryte -->
+            <a class="map map-zoom weather-map" href="/images/maps/{{ page.map.image }}.webp" data-map="{{ page.map.data }}" style="--focus: {{ page.map.focus }}" title="Show a bigger map">
+              <span class="weather-map-canvas">
+                <img src="/images/maps/{{ page.map.image }}.webp" alt="Map of {{ page.name }}" width="1024" height="1024">
+                <x-each items="page.map.aetherytes" as="aetheryte">
+                <span class="map-aetheryte" style="{{ aetheryte.style }}" title="{{ aetheryte.name }} aetheryte"></span>
+                </x-each>
+              </span>
+            </a>
+          </x-if>
+          </div>
+          <section class="weather-finder">
+            <h2 class="detail-subtitle">Coming weather</h2>
+            <div class="weather-filters">
+              <label>From <select class="select" id="weather-from"><option value="">Any</option><x-each items="page.weathers" as="weather"><option>{{ weather }}</option></x-each></select></label>
+              <label>To <select class="select" id="weather-to"><option value="">Any</option><x-each items="page.weathers" as="weather"><option>{{ weather }}</option></x-each></select></label>
+              <label>At (ET) <select class="select" id="weather-at"><option value="">Any</option><option value="0">00:00</option><option value="8">08:00</option><option value="16">16:00</option></select></label>
+            </div>
+            <table class="table weather-periods">
+              <thead><tr><th>ET</th><th>Weather</th><th>Your time</th><th>In</th></tr></thead>
+              <!-- The coming weather as of the build, hidden until js/weather-zone.js writes the current rows in their place -->
+              <tbody id="weather-periods">
+                <x-each items="page.periods" as="period">
+                <tr><td>{{ period.hour }}:00</td><td class="weather-period-weather"><span class="weather-label"><img class="weather-icon" src="/images/game/{{ period.icon }}.webp" alt="" width="24" height="24"><span>{{ period.weather }}</span></span></td><td><time>00:00</time></td><td>{{ period.in }}</td></tr>
+                </x-each>
+              </tbody>
+            </table>
+            <p class="table-empty" id="weather-periods-empty" hidden></p>
+          </section>
+          <x-if value="page.needs">
+          <section class="weather-needs">
+            <x-if value="page.needs.steady">
+            <h2 class="detail-subtitle">Fish and vistas that wait on the weather</h2>
+            <dl class="detail-facts">
+              <x-each items="page.needs.steady" as="row">
+              <dt><x-html src="partials/weather-label.html"/></dt><dd><span class="detail-list"><x-each items="row.links" as="link"><span><a href="{{ link.url }}">{{ link.text }}</a></span></x-each></span></dd>
+              </x-each>
+            </dl>
+            </x-if>
+            <x-if value="page.needs.changes">
+            <h2 class="detail-subtitle">Fish that wait on the weather to change</h2>
+            <dl class="detail-facts weather-changes">
+              <x-each items="page.needs.changes" as="change">
+              <dt><span class="weather-choices"><x-each items="change.previous" as="row"><x-html src="partials/weather-label.html"/></x-each></span><span class="weather-arrow" role="img" aria-label="to"></span><span class="weather-choices"><x-each items="change.weather" as="row"><x-html src="partials/weather-label.html"/></x-each></span></dt>
+              <dd><span class="detail-list"><x-each items="change.links" as="link"><span><a href="{{ link.url }}">{{ link.text }}</a></span></x-each></span></dd>
+              </x-each>
+            </dl>
+            </x-if>
+          </section>
+          </x-if>
+        </div>
+        <x-html src="partials/pager.html"/>
+      </main>
+      <x-html src="partials/footer.html"/>
+    </div>
+
+    <x-html src="partials/settings.html"/>
+
+    <x-html src="partials/map-modal.html"/>
+  </body>
+</html>

@@ -27,15 +27,52 @@
             <!-- A voyage every two hours is nearly always today, which js/ocean.js writes without the day -->
             <time class="ocean-when" id="ocean-when">00:00</time>
           </div>
+          <!-- The voyages as of the build, hidden until js/ocean.js puts the current ones in their place, so nothing under them moves when it does -->
           <div class="ocean-routes">
-            {{{ next }}}
+            <x-each items="ocean.next" as="voyage">
+            <div class="ocean-route" data-route="{{ voyage.route }}">
+              <h2 class="ocean-route-name">{{ voyage.name }} route <span class="ocean-route-from">from {{ voyage.from }}</span></h2>
+              <p class="ocean-destination">{{ voyage.destination }}</p>
+              <ol class="ocean-stops"><x-each items="voyage.stops" as="stop"><li><x-html src="partials/ocean-stop.html"/><x-if value="stop.blue"><a class="chip chip-gold ocean-blue-chip" href="{{ stop.blue.url }}">{{ stop.blue.name }}</a></x-if></li></x-each></ol>
+            </div>
+            </x-each>
           </div>
         </section>
         <section class="ocean-upcoming">
           <h2 class="ocean-heading">Coming voyages</h2>
-          <ol class="ocean-schedule" id="ocean-schedule">{{{ schedule }}}</ol>
+          <ol class="ocean-schedule" id="ocean-schedule">
+            <x-each items="ocean.schedule" as="voyage">
+            <li><time>Mon 1 Jan, 00:00</time><x-each items="voyage.routes" as="route"><span class="ocean-schedule-route"><strong>{{ route.name }}</strong><x-each items="route.stops" as="stop"><x-html src="partials/ocean-stop.html"/></x-each></span></x-each></li>
+            </x-each>
+          </ol>
         </section>
-        {{{ stops }}}
+        <x-each items="ocean.routes" as="route">
+        <h2 class="ocean-heading">{{ route.route }} route stops</h2>
+        <x-each items="route.stops" as="stop">
+        <!-- Linked to from the voyages, by the place's slug -->
+        <section class="ocean-stop" id="{{ stop.id }}" data-place="{{ stop.place }}" data-blue="{{ stop.blue }}">
+          <h3 class="ocean-stop-name">{{ stop.place }}</h3>
+          <div class="ocean-lists">
+            <div>
+              <h4 class="ocean-list-title">Fish</h4>
+              <ul class="ocean-list">
+                <x-each items="stop.fish" as="fish">
+                <x-html src="partials/ocean-fish.html"/>
+                </x-each>
+              </ul>
+            </div>
+            <div>
+              <h4 class="ocean-list-title">Spectral current</h4>
+              <ul class="ocean-list">
+                <x-each items="stop.spectral" as="fish">
+                <x-html src="partials/ocean-fish.html"/>
+                </x-each>
+              </ul>
+            </div>
+          </div>
+        </section>
+        </x-each>
+        </x-each>
       </main>
       <x-html src="partials/footer.html"/>
     </div>

@@ -56,7 +56,7 @@ export default defineConfig({
   },
   cname: true,
   // The reset pages are the timers', though not under / like a section's pages are under theirs
-  activeLinks: (href, route) => href === "/" && route.source === "[reset].html" ? "section" : undefined,
+  activeLinks: (href, route) => href === "/" && route.source === "[resets.slug].html" ? "section" : undefined,
   transforms: [sizeSelects],
   // The link preview images the pages asked for, left out of dev builds as they take a while
   after: [async ({ site, dev }) => {

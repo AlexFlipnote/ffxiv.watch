@@ -14,7 +14,11 @@
     <div class="page">
       <h1 class="sr-only">FFXIV Reset Timers and Eorzea Time</h1>
       <main class="timers timers-pending" id="timers">
-        {{{ maintenance }}}
+        <a class="{{ maintenance.class }}" id="maintenance" href="{{ maintenance.url }}" data-start="{{ maintenance.start }}" data-end="{{ maintenance.end }}" target="_blank" rel="noopener" hidden>
+          <span class="maintenance-title"><span class="maintenance-dot" aria-hidden="true"></span><strong class="maintenance-name">{{ maintenance.name }}</strong> <span class="maintenance-patch">{{ maintenance.patch }}</span></span>
+          <span class="maintenance-when"><time datetime="{{ maintenance.startIso }}">{{ maintenance.startText }}</time> - <time datetime="{{ maintenance.endIso }}">{{ maintenance.endText }}</time></span>
+          <span class="maintenance-countdown"><span class="detail-state">{{ maintenance.state }}</span> <strong>{{ maintenance.countdown }}</strong></span>
+        </a>
         <!-- Shown before the first paint, so the page doesn't drop under it. The week is MAINTENANCE_AHEAD in js/index.js -->
         <script>
           (() => {
@@ -33,7 +37,26 @@
             </div>
           </div>
         </section>
-        {{{ timers }}}
+        <!-- As of the build, index.js finds them by data-id and fills in the countdowns. The hidden details are the modal's text, for search engines only -->
+        <x-each items="timers" as="timer">
+        <div class="{{ timer.class }}" data-id="{{ timer.id }}">
+          <div class="timer-header">
+            <h2 class="title"><x-if value="timer.page"><a href="{{ timer.page }}">{{ timer.name }}</a></x-if><x-if not="timer.page">{{ timer.name }}</x-if></h2>
+            <button class="info-btn" title="Details" aria-label="Details about {{ timer.name }}">i</button>
+          </div><x-if value="timer.regions">
+          <div class="region-picker" role="group" aria-label="Region">
+            <x-each items="timer.regions" as="region"><button class="region-btn">{{ region }}</button></x-each>
+          </div></x-if>
+          <div class="timer-body">
+            <div>
+              <div class="countdown">{{ timer.countdown }}</div>
+              <div class="target"><strong>{{ timer.targetLabel }}:</strong> <time>{{ timer.target }}</time></div>
+            </div>
+            <div class="side-col" hidden="{{ timer.noNote }}"><div class="sub-title">{{ timer.note }}</div></div>
+          </div>
+          <div class="timer-details" hidden><x-if value="timer.when"><p>{{ timer.when }}</p></x-if><x-each items="timer.details" as="detail"><p>{{ detail }}</p></x-each><x-if value="timer.list"><ul><x-each items="timer.list" as="item"><li>{{ item }}</li></x-each></ul></x-if><x-if value="timer.link"><p><a href="{{ timer.link.url }}">{{ timer.link.text }}</a></p></x-if></div>
+        </div>
+        </x-each>
       </main>
       <x-html src="partials/footer.html"/>
     </div>

@@ -1,0 +1,12 @@
+<!-- events.js fills in the countdown and moves the card as it starts and ends. "UTC" is only said without the script, so the line wraps where the visitor's own times will -->
+<article class="event-card" data-start="{{ event.start }}" data-end="{{ event.endData }}" data-until="{{ event.untilData }}">
+  <x-if value="event.image"><a class="event-banner" href="{{ event.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="{{ event.image }}" width="720" height="188" alt="" loading="lazy"></a></x-if>
+  <div class="event-body">
+    <div class="event-head">
+      <h3 class="event-title"><a href="{{ event.url }}" target="_blank" rel="noopener">{{ event.name }}</a></h3>
+      <p class="event-countdown"><span class="detail-state">{{ event.state }}</span> <strong>{{ event.countdown }}</strong></p>
+    </div>
+    <p class="event-when"><time datetime="{{ event.startIso }}">{{ event.startText }}</time><span class="no-js"> UTC</span> - <x-if value="event.endIso"><time datetime="{{ event.endIso }}">{{ event.endText }}</time><span class="no-js"> UTC</span></x-if><x-if not="event.endIso">until Patch {{ event.until }}</x-if></p>
+    <x-if value="event.lead"><p class="event-lead" title="{{ event.lead }}">{{ event.lead }}</p></x-if>
+  </div>
+</article>

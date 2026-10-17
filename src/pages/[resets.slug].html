@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html src="partials/head.html"/>
+    <x-seo title="{{ page.title }}" description="{{ page.description }}" section="Timers" name="{{ page.name }}"/>
+    <script type="application/ld+json">{{{ page.faq }}}</script>
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="/js/reset.js" module/>
+  </head>
+
+  <body>
+    <x-html src="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="detail reset reset-pending">
+        <a class="backlink" href="/">Timers</a>
+        <header class="detail-header">
+          <h1 class="detail-title">FFXIV {{ page.name }}</h1>
+          <p class="detail-text">{{ page.when }}</p>
+        </header>
+        <section class="reset-now" data-timer="{{ page.id }}">
+          <span class="detail-state reset-state">{{ page.countdown }}</span>
+          <strong class="reset-countdown"></strong>
+          <span class="reset-at">Your time: <time></time></span>
+        </section>
+        <x-if value="page.phased">
+        <div class="reset-columns">
+          <section class="reset-card">
+            <h2 class="detail-subtitle">The phases</h2>
+            <dl class="detail-facts reset-zones">
+              <x-each items="page.phases" as="phase"><dt>{{ phase.name }}</dt><dd>{{ phase.text }}</dd></x-each>
+            </dl>
+          </section>
+          <section class="reset-card">
+            <h2 class="detail-subtitle">Coming dates</h2>
+            <!-- Filled in by js/reset.js in the reader's time -->
+            <ol class="reset-list reset-dates"><li><strong>&nbsp;</strong>&nbsp;</li><li><strong>&nbsp;</strong>&nbsp;</li><li><strong>&nbsp;</strong>&nbsp;</li><li><strong>&nbsp;</strong>&nbsp;</li><li><strong>&nbsp;</strong>&nbsp;</li><li><strong>&nbsp;</strong>&nbsp;</li></ol>
+          </section>
+        </div>
+        </x-if>
+        <x-if not="page.phased">
+        <div class="reset-columns">
+          <section class="reset-card">
+            <h2 class="detail-subtitle">What resets</h2>
+            <ul class="reset-list">
+              <x-each items="page.list" as="item">
+              <li>{{ item }}</li>
+              </x-each>
+            </ul>
+          </section>
+          <section class="reset-card">
+            <h2 class="detail-subtitle">Around the world</h2>
+            <dl class="detail-facts reset-zones">
+              <x-each items="page.zones" as="zone"><dt>{{ zone.zone }}</dt><dd>{{ zone.time }}</dd></x-each>
+            </dl>
+          </section>
+        </div>
+        </x-if>
+      </main>
+      <x-html src="partials/footer.html"/>
+    </div>
+
+    <x-html src="partials/settings.html"/>
+  </body>
+</html>
