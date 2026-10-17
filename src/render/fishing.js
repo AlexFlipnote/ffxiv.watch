@@ -233,6 +233,12 @@ function fishIntro(fish, paged, info, expansion) {
 }
 
 /**
+ * @param {object[]} list
+ * @returns {import("./html.js").Html}
+ */
+const fishLinks = (list) => html`<span class="detail-list">${list.map((f) => html`<span><a href="${fishUrl(f)}">${f.name}</a></span>`)}</span>`
+
+/**
  * Where it bites: its timer and spot, next to the map.
  * @param {object} fish
  * @param {object} info fishing-items.json
@@ -241,6 +247,9 @@ function fishIntro(fish, paged, info, expansion) {
  * @returns {import("./html.js").Html}
  */
 function spotCard(fish, info, others, paged) {
+  // Split by tug so no fish is listed twice, with no tug to go by they all stay in "Also here"
+  const shared = fish.tug ? others.filter((f) => f.tug === fish.tug) : []
+  const rest = others.filter((f) => !shared.includes(f))
   return html`
 <section class="detail-card gathering-node">
   ${fish.map && mapFigure(fish, fish.name)}
@@ -251,7 +260,8 @@ function spotCard(fish, info, others, paged) {
     ["Intuition", fish.predators && html`Catch ${fish.predators.map((p, i) => html`${i > 0 && " and "}${p.count}x ${paged.has(p.id) ? html`<a href="${fishUrl(p)}">${p.name}</a>` : p.name} ${predatorWindow(paged.get(p.id))}`)} first${fish.intuition && `, it lasts ${duration(fish.intuition)}`}`],
     ...locationFacts(fish),
     ["Also bites at", info[fish.id].alsoAt && html`<span class="detail-list">${info[fish.id].alsoAt.map((s) => html`<span>${s}</span>`)}</span>`],
-    ["Also here", others.length && html`<span class="detail-list">${others.map((f) => html`<span><a href="${fishUrl(f)}">${f.name}</a></span>`)}</span>`]
+    ["Also same tug", fish.tug && (shared.length ? fishLinks(shared) : `None, every ${fish.tug} tug here is this fish`)],
+    ["Also here", rest.length && fishLinks(rest)]
   ])}
 </section>`
 }
