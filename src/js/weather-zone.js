@@ -2,7 +2,7 @@ import "./utils/navbar.js"
 import ICONS from "./data/weather-icons.json"
 import { toEorzea } from "./utils/eorzea.js"
 import { openMap } from "./utils/mapModal.js"
-import { everyTick, formatCountdown, setText, setTime } from "./utils/time.js"
+import { everyTick, formatCountdown, formatIn, setText, setTime } from "./utils/time.js"
 import { periodStart, WEATHER_PERIOD, weatherAt } from "./utils/windows.js"
 
 // As far ahead as the fish and vista windows look
@@ -101,12 +101,14 @@ function fillPeriods(now) {
 
 /** @param {number} now */
 function tickPeriods(now) {
+  // Only the first one to come ticks by the second, the rest would be a column of changing digits
+  const next = rows.find((row) => row.start > now)
   for (const row of rows) {
     const open = row.start <= now
     row.tr.classList.toggle("weather-current", open)
     // Only the time, the day is next to it, the full date is in its hover title
     setTime(row.time, new Date(row.start), new Date(row.start))
-    setText(row.left, open ? "Now" : formatCountdown(row.start - now))
+    setText(row.left, open ? "Now" : row === next ? formatCountdown(row.start - now) : formatIn(row.start - now))
   }
 }
 
@@ -127,6 +129,15 @@ for (const [name, select] of Object.entries(selects)) {
     fillPeriods(Date.now())
     tickPeriods(Date.now())
     saveUrl()
+  })
+}
+
+// A small extra: a chance picks its weather in the finder's "To", and picking it again lets it go
+for (const chance of document.querySelectorAll(".weather-chances li")) {
+  chance.addEventListener("click", () => {
+    const weather = chance.querySelector("span").textContent
+    selects.to.value = selects.to.value === weather ? "" : weather
+    selects.to.dispatchEvent(new Event("change"))
   })
 }
 

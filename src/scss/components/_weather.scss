@@ -416,6 +416,27 @@ body:has(.weather-head) .navbar::before {
     border-radius: .75rem;
     font-size: .85rem;
     color: var(--font-secondary);
+    // Picks the finder's "To", see js/weather-zone.js
+    cursor: pointer;
+    user-select: none;
+  }
+
+  // Underlined like the links, the hint that they do something
+  span {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .2em;
+    transition: color .2s, text-decoration-color .2s;
+  }
+
+  li {
+    @include hover {
+      span {
+        color: var(--accent);
+        text-decoration-color: currentColor;
+      }
+    }
   }
 
   strong {

@@ -67,6 +67,20 @@ export function formatCountdown(ms) {
 }
 
 /**
+ * A countdown without the seconds, for times far enough off that ticking ones would only be noise. Rounded up to the
+ * minute like formatCountdown, so it never says "0m" before the time comes.
+ * @param {number} ms
+ * @returns {string} "12m", "1h 5m", or "2d 3h"
+ */
+export function formatIn(ms) {
+  const m = Math.ceil(ms / 60_000)
+  const h = Math.floor(m / 60)
+  const d = Math.floor(h / 24)
+  if (d > 0) return `${d}d ${h % 24}h`
+  return h > 0 ? `${h}h ${m % 60}m` : `${m}m`
+}
+
+/**
  * @param {Date} date
  * @param {Date} [now] Or any other day to leave the day out on
  * @returns {string} "Tue 13 Oct, 10:00", or "10:00" when it's the same day as `now`, 12-hour when picked
