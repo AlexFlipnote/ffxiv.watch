@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <x-seo
       title="FFXIV Events: Seasonal & Collaboration Events On Now"
       description="The FFXIV seasonal and collaboration events on now and coming up, when each starts and ends in your local time, from the Lodestone."
       name="Events"
     />
     <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
-    <x-js src="events.js" module/>
+    <x-js src="/js/events.js" module/>
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <main class="listing events events-pending">
@@ -32,9 +32,9 @@
           Nothing's on right now. The <a href="https://eu.finalfantasyxiv.com/lodestone/topics/" target="_blank" rel="noopener">Lodestone's topics</a> announce the next one, usually a week or two ahead.
         </p>
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
   </body>
 </html>

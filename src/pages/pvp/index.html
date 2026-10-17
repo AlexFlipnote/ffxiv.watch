@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <x-seo
       title="FFXIV PvP Maps: Frontline & Crystalline Conflict Rotation"
       description="Today's FFXIV Frontline map and the Crystalline Conflict map this hour, when they change and what comes next, in your local time."
       name="PvP"
     />
     <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
-    <x-js src="pvp.js" module/>
+    <x-js src="/js/pvp.js" module/>
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <main class="listing pvp pvp-pending">
@@ -49,9 +49,9 @@
           </section>
         </div>
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
   </body>
 </html>

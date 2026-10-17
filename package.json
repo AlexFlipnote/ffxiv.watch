@@ -3,9 +3,9 @@
   "author": "AlexFlipnote",
   "type": "module",
   "scripts": {
-    "dev": "node build.js watch",
-    "build": "node build.js",
-    "clean": "node build.js clean",
+    "dev": "mothwing dev",
+    "build": "mothwing build",
+    "clean": "mothwing clean",
     "test": "node --test",
     "game-data": "npm run weather-data && npm run gathering-data && npm run sightseeing-data && npm run fishing-data && npm run ocean-fishing-data",
     "weather-data": "node scripts/weather-data.js",
@@ -16,10 +16,9 @@
     "lodestone-data": "node scripts/lodestone-data.js"
   },
   "devDependencies": {
-    "esbuild": "0.28.1",
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
-    "html-minifier-terser": "7.2.0",
+    "mothwing": "0.0.3",
     "sass": "^1.93.3",
     "sharp": "0.35.5"
   }

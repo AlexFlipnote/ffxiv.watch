@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <x-seo
       title="FFXIV Ocean Fishing: Schedule, Routes & Fish"
       description="FFXIV ocean fishing schedule in your local time: the next voyages on the Indigo and Ruby routes, the time of day at each stop, and every stop's fish, spectral current and blue fish with their bait."
       name="Ocean Fishing"
     />
     <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
-    <x-js src="ocean.js" module/>
+    <x-js src="/js/ocean.js" module/>
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <main class="listing ocean ocean-pending">
@@ -37,9 +37,9 @@
         </section>
         {{{ stops }}}
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
   </body>
 </html>

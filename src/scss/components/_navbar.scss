@@ -72,7 +72,7 @@
       color: var(--font-primary);
     }
 
-    // Set by build.js on links pointing at the current page, or the section it's in
+    // Set by mothwing (activeLinks) on links pointing at the current page, or the section it's in
     &[aria-current] {
       color: var(--accent);
     }

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <title>Page Not Found - ffxiv.watch</title>
     <meta name="robots" content="noindex">
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <main class="not-found">
@@ -15,11 +15,11 @@
         <p>This page doesn't exist, maybe it moved or the link has a typo.</p>
         <a href="/">Back to the timers</a>
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
 
-    <x-js src="page.js"/>
+    <x-js src="/js/page.js"/>
   </body>
 </html>

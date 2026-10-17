@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <x-seo
       title="About ffxiv.watch: Who Makes It & Where the Data Comes From"
       description="Who makes ffxiv.watch, where its FFXIV timers, gathering, fishing, sightseeing and weather data come from, and how often it's updated."
@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <main class="detail about">
@@ -49,11 +49,11 @@
         </section>
 
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
 
-    <x-js src="page.js"/>
+    <x-js src="/js/page.js"/>
   </body>
 </html>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <x-seo
       title="FFXIV Sightseeing Log: Vista Times & Weather"
       description="FFXIV sightseeing log for every vista, with the emote, map location, unlock quests, and when the time and weather line up next, in your local time."
       name="Sightseeing"
     />
     <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
-    <x-js src="sightseeing.js" module preload="data/sightseeing/{{ defaultExpansion }}.json"/>
+    <x-js src="/js/sightseeing.js" module preload="/js/data/sightseeing/{{ defaultExpansion }}.json"/>
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <main class="listing">
@@ -25,7 +25,7 @@
           <button class="filters-toggle" type="button" aria-expanded="false" aria-label="Filters" title="Filters"></button>
           <label>Expansion <select class="select" id="filter-expansion">{{{ expansionOptions }}}</select></label>
         </div>
-        <x-html str="partials/listing-skeleton.html"/>
+        <x-html src="partials/listing-skeleton.html"/>
         <table class="table listing-table">
           <thead class="sr-only">
             <tr><th>Vista</th><th>Location</th></tr>
@@ -40,11 +40,11 @@
         </div>
         <p class="table-empty" id="vistas-empty" hidden></p>
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
 
-    <x-html str="partials/map-modal.html"/>
+    <x-html src="partials/map-modal.html"/>
   </body>
 </html>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <x-seo
       title="FFXIV Gathering Nodes & Timers"
       description="Every FFXIV gathering node and where to find each item, with timers for unspoiled, legendary and ephemeral nodes, folklore books and maps."
       name="Gathering"
     />
     <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
-    <x-js src="gathering.js" module preload="data/gathering/{{ defaultExpansion }}.json"/>
+    <x-js src="/js/gathering.js" module preload="/js/data/gathering/{{ defaultExpansion }}.json"/>
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <main class="listing">
@@ -43,7 +43,7 @@
             </select>
           </label>
         </div>
-        <x-html str="partials/listing-skeleton.html"/>
+        <x-html src="partials/listing-skeleton.html"/>
         <table class="table listing-table">
           <thead class="sr-only">
             <tr><th>Items</th><th>Location</th></tr>
@@ -58,11 +58,11 @@
         </div>
         <p class="table-empty" id="nodes-empty" hidden></p>
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
 
-    <x-html str="partials/map-modal.html"/>
+    <x-html src="partials/map-modal.html"/>
   </body>
 </html>

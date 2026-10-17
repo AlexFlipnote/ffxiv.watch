@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <x-seo
       title="FFXIV Timers: Daily & Weekly Resets, Eorzea Time"
       description="Live FFXIV timers: daily reset at 15:00 UTC, weekly reset Tuesdays at 08:00 UTC, housing lottery, leve allowances, Jumbo Cactpot, Ocean Fishing and Eorzea time."
@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <h1 class="sr-only">FFXIV Reset Timers and Eorzea Time</h1>
@@ -35,10 +35,10 @@
         </section>
         {{{ timers }}}
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
 
     <dialog class="modal" id="modal" closedby="any" aria-labelledby="modal-title">
       <div class="modal-header">
@@ -53,6 +53,6 @@
       </div>
     </dialog>
 
-    <x-js src="index.js"/>
+    <x-js src="/js/index.js"/>
   </body>
 </html>

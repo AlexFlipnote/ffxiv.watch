@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <x-seo
       title="FFXIV Fishing: Big Fish Times, Weather & Bait"
       description="Every FFXIV fish, with when big fish and fish with a time or weather bite next in your local time, plus bait and mooch, intuition, maps and where to stand."
       name="Fishing"
     />
     <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
-    <x-js src="fishing.js" module preload="data/fishing/{{ defaultExpansion }}.json"/>
+    <x-js src="/js/fishing.js" module preload="/js/data/fishing/{{ defaultExpansion }}.json"/>
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <main class="listing">
@@ -42,7 +42,7 @@
             </select>
           </label>
         </div>
-        <x-html str="partials/listing-skeleton.html"/>
+        <x-html src="partials/listing-skeleton.html"/>
         <table class="table listing-table">
           <thead class="sr-only">
             <tr><th>Fish</th><th>Location</th></tr>
@@ -57,11 +57,11 @@
         </div>
         <p class="table-empty" id="fish-empty" hidden></p>
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
 
-    <x-html str="partials/map-modal.html"/>
+    <x-html src="partials/map-modal.html"/>
   </body>
 </html>

@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html str="partials/head.html"/>
+    <x-html src="partials/head.html"/>
     <x-seo title="{{ title }}" description="{{ description }}" image="{{ image }}" image-alt="{{ imageAlt }}" image-size="{{ imageSize }}" section="Sightseeing" name="{{ name }}"/>
     <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
-    <x-js src="vista.js" module/>
+    <x-js src="/js/vista.js" module/>
   </head>
 
   <body>
-    <x-html str="partials/navbar.html"/>
+    <x-html src="partials/navbar.html"/>
 
     <div class="page">
       <main class="detail vista-detail">
         <a class="backlink" href="/sightseeing/">Sightseeing</a>
         {{{ content }}}
       </main>
-      <x-html str="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <x-html str="partials/settings.html"/>
+    <x-html src="partials/settings.html"/>
 
-    <x-html str="partials/map-modal.html"/>
+    <x-html src="partials/map-modal.html"/>
   </body>
 </html>
