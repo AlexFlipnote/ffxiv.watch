@@ -1,6 +1,9 @@
 import {
-  chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, howOften, html, listRow, listRows,
-  locationFacts, mapFigure, pager, readData, readExpansions, scripCard, slug, xivIcon
+  chip, collectableChip, detailTimer, doneButton,
+  etWindows, expansionOptions, facts,
+  gameText, howOften, html, listRow, listRows,
+  locationFacts, mapFigure, pager, readData, readExpansions,
+  scripCard, slug, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
