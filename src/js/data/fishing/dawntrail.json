@@ -1695,7 +1695,17 @@
       "x": 18.1,
       "y": 11.9
     },
-    "anyTime": true
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 43689,
