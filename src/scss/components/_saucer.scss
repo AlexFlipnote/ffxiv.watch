@@ -1,0 +1,136 @@
+@use "../mixins" as *;
+
+.saucer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  // The intro's own margin, the gap spaces the rest
+  .listing-intro {
+    margin-bottom: 0;
+  }
+}
+
+// The build's timers, out of date, keep the room until js/saucer.js writes the current ones in (see src/data/saucer.js)
+.saucer-pending {
+  .saucer-head,
+  .saucer-rows,
+  .saucer-phase,
+  .region-picker {
+    visibility: hidden;
+  }
+}
+
+.saucer-pair,
+.saucer-trio {
+  display: grid;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.saucer-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.saucer-trio {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+// After the columns, so it wins over them
+.saucer-pair,
+.saucer-trio {
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .75rem;
+  }
+}
+
+.saucer-card {
+  @include glass;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem;
+
+  .region-picker {
+    margin: 0;
+  }
+}
+
+.saucer-name {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.saucer-phase {
+  margin: 0;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.saucer-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .25rem .5rem;
+
+  // Open now: registration, or the tournament week
+  .saucer-open & .detail-countdown {
+    color: var(--open);
+  }
+}
+
+.saucer-info {
+  margin: 0;
+  font-size: .85rem;
+  color: var(--font-secondary);
+}
+
+.saucer-rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    align-items: center;
+    gap: .25rem 1rem;
+    padding: .5rem 0;
+    border-top: 1px solid var(--divider);
+
+    // Beside the time while they fit, a GATE's three wrap under it
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: .75rem;
+    }
+  }
+
+  time {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  // The next one
+  li:first-child time {
+    color: var(--accent);
+  }
+}
+
+.saucer-range {
+  grid-column: 1 / -1;
+}
+
+.saucer-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .375rem;
+  font-size: .85rem;
+}
+
+// Air Force One's two places
+.saucer-where {
+  font-size: .75rem;
+  color: var(--font-tertiary);
+}

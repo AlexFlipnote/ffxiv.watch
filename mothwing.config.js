@@ -19,7 +19,7 @@ export default defineConfig({
     scripts: ["js/index.js", "js/page.js"],
     modules: [
       "js/gathering.js", "js/sightseeing.js", "js/fishing.js", "js/item.js", "js/vista.js", "js/fish.js",
-      "js/weather.js", "js/weather-zone.js", "js/ocean.js", "js/pvp.js", "js/events.js", "js/reset.js"
+      "js/weather.js", "js/weather-zone.js", "js/ocean.js", "js/saucer.js", "js/pvp.js", "js/events.js", "js/reset.js"
     ]
   },
   sass: { "scss/index.scss": "css/index.css" },

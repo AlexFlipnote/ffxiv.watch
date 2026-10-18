@@ -3,6 +3,7 @@ import fs from "node:fs"
 import { describe, it } from "node:test"
 import { ET_DAY_EARTH_MS, ET_MINUTE_EARTH_MS, nextWindow, toEorzea } from "../src/js/utils/eorzea.js"
 import { crystallineConflictAt, frontlineAt } from "../src/js/utils/pvp.js"
+import { FASHION_REPORT, gatesAfter, openTournaments, phaseAt, tournaments } from "../src/js/utils/saucer.js"
 import { getAllTimerStates } from "../src/js/utils/timers.js"
 import { nextWeatherWindow } from "../src/js/utils/windows.js"
 import ZONES from "../src/js/data/weather.json" with { type: "json" }
@@ -168,5 +169,41 @@ describe("PvP maps", () => {
     for (const now of samples()) {
       for (const on of [frontlineAt(now), crystallineConflictAt(now)]) assert.ok(on.map && on.start <= now && on.end > now)
     }
+  })
+})
+
+describe("Gold Saucer", () => {
+  it("picks the GATE pool by the minute past the hour it starts at", () => {
+    const [first, second, third, fourth] = gatesAfter(Date.UTC(2026, 9, 18, 12, 5), 4)
+    assert.equal(first.start, Date.UTC(2026, 9, 18, 12, 20))
+    assert.ok(first.pool.some((g) => g.name === "Any Way the Wind Blows"))
+    assert.ok(second.pool.some((g) => g.name === "Leap of Faith") && second.pool.some((g) => g.name === "The Slice Is Right"))
+    assert.ok(third.pool.some((g) => g.name === "Cliffhanger"))
+    assert.equal(fourth.pool, first.pool)
+  })
+
+  it("opens tournament registration on odd hours UTC, as the game's schedule showed on 18 October 2026", () => {
+    // 12:18 UTC, the official said the next one begins in 41 minutes
+    const [next, after, third] = openTournaments(Date.UTC(2026, 9, 18, 12, 18), 3)
+    assert.deepEqual([next.start, next.open, next.ruleset], [Date.UTC(2026, 9, 18, 13), false, "Advanced"])
+    assert.equal(after.ruleset, "Basic")
+    assert.equal(third.ruleset, "Advanced")
+    assert.equal(openTournaments(Date.UTC(2026, 9, 18, 23), 1)[0].ruleset, "Basic")
+
+    const [current] = openTournaments(Date.UTC(2026, 9, 18, 13, 29), 1)
+    assert.deepEqual([current.start, current.open], [Date.UTC(2026, 9, 18, 13), true])
+    assert.equal(openTournaments(Date.UTC(2026, 9, 18, 13, 30), 1)[0].start, Date.UTC(2026, 9, 18, 15))
+  })
+
+  it("runs the tournament every other week from the weekly reset", () => {
+    assert.deepEqual(tournaments(Date.UTC(2026, 9, 18, 12), 1)[0], { start: Date.UTC(2026, 9, 13, 8), end: Date.UTC(2026, 9, 20, 8) })
+    assert.equal(tournaments(Date.UTC(2026, 9, 20, 8), 1)[0].start, Date.UTC(2026, 9, 27, 8))
+    assert.equal(tournaments(Date.UTC(2026, 9, 1), 1)[0].start, Date.UTC(2026, 8, 29, 8))
+  })
+
+  it("judges the Fashion Report from Friday until the weekly reset", () => {
+    assert.equal(phaseAt(FASHION_REPORT, Date.UTC(2026, 9, 15, 12)).name, "Theme revealed")
+    const judging = phaseAt(FASHION_REPORT, Date.UTC(2026, 9, 18, 12))
+    assert.deepEqual([judging.name, judging.start, judging.end], ["Judging", Date.UTC(2026, 9, 16, 8), Date.UTC(2026, 9, 20, 8)])
   })
 })

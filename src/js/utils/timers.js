@@ -158,21 +158,25 @@ export const TIMERS = [
     kind: "recurring",
     id: "fashion_judging",
     name: "Fashion Report",
+    page: "/gold-saucer/",
     question: "When does FFXIV Fashion Report judging start?",
     every: 7 * DAY,
     offset: 1 * DAY + 8 * HOUR, // Friday 08:00 UTC
     small: true,
     info: "At this time, the Masked Rose begins judging:",
-    list: ["Fashion Report judging begins"]
+    list: ["Fashion Report judging begins"],
+    link: { url: "/gold-saucer/", text: "GATEs, Triple Triad tournaments and more Gold Saucer timers" }
   },
   {
     kind: "recurring",
     id: "jumbo_cactpot",
     name: "Jumbo Cactpot",
+    page: "/gold-saucer/",
     question: "When is the FFXIV Jumbo Cactpot drawing?",
     every: 7 * DAY,
     small: true,
     list: ["Jumbo Cactpot drawing", "Early bird bonus active for 1 hour"],
+    link: { url: "/gold-saucer/", text: "GATEs, Triple Triad tournaments and more Gold Saucer timers" },
     regions: [
       jumboCactpot("eu", "EU", 2 * DAY + 19 * HOUR, "Chaos and Light", ["uk", "ce"]), // Saturday 19:00 UTC
       jumboCactpot("na", "NA", 3 * DAY + 2 * HOUR, "Aether, Primal, Crystal, and Dynamis", ["pt", "et"]), // Sunday 02:00 UTC

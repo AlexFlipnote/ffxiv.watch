@@ -10,6 +10,8 @@ const TOWN = 0
 const OVERWORLD = 1
 const HOUSING = 13
 const ISLAND_SANCTUARY = 49
+// No weather of its own, only its art for the Gold Saucer page's link preview
+const GOLD_SAUCER = 23
 const FIELD_OPERATIONS = [41, 48, 61, 60] // Eureka, Bozja and Zadnor, Occult Crescent, Cosmic Exploration
 
 const USE_PRIORITY = [OVERWORLD, HOUSING, ...FIELD_OPERATIONS, ISLAND_SANCTUARY, TOWN]
@@ -45,6 +47,9 @@ async function main() {
   const aetherytesOn = aetherytesByMap({ aetherytes, markers, map: mapRow, place: rows(places) })
   const groups = [...exVersions.map((e) => e.Name), "Housing", "Field Operations"]
 
+  /** @returns {{ loading: string, name: number } | null} Its loading screen and name, as the game shows them on arrival */
+  const artOf = (t) => loadingFile[t.LoadingImage] && +t.PlaceNameIcon ? { loading: loadingFile[t.LoadingImage], name: +t.PlaceNameIcon } : null
+
   const zones = new Map()
   for (const t of territories) {
     const use = +t.TerritoryIntendedUse
@@ -65,8 +70,7 @@ async function main() {
       icons[weatherName[id]] ??= +weatherIcon[id]
     }
 
-    const art = loadingFile[t.LoadingImage] && +t.PlaceNameIcon ? { loading: loadingFile[t.LoadingImage], name: +t.PlaceNameIcon } : null
-    zones.set(name, { use, id: +t["#"], name, group: groupOf(t, expansions), weather, mapRowId: mapRow[t.Map]?.Id ? t.Map : null, art })
+    zones.set(name, { use, id: +t["#"], name, group: groupOf(t, expansions), weather, mapRowId: mapRow[t.Map]?.Id ? t.Map : null, art: artOf(t) })
   }
 
   // Field operations by content, as their ids interleave (Cosmic Exploration's planets land between Occult Crescent's horns)
@@ -92,7 +96,8 @@ async function main() {
   await saveMaps(withMap.map((z) => mapRow[z.mapRowId].Id))
 
   // Each zone's loading screen and name, for its link preview
-  const withArt = [...zones.values()].filter((z) => z.art)
+  const saucer = territories.find((t) => +t.TerritoryIntendedUse === GOLD_SAUCER && artOf(t))
+  const withArt = [...zones.values(), { name: placeName[saucer.PlaceName], art: artOf(saucer) }].filter((z) => z.art)
   writeData("weather-art", Object.fromEntries(withArt.map((z) => [z.name, { loading: z.art.loading.replace(/^-/, ""), name: z.art.name }])))
   await saveZoneArt(withArt.map((z) => z.art))
 }

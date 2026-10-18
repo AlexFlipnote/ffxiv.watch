@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html src="partials/head.html"/>
+    <x-seo
+      title="FFXIV Gold Saucer: GATE Timer, Triple Triad & Cactpot"
+      description="FFXIV Gold Saucer timers in your local time: the next GATE and the three it can be, Triple Triad open tournaments and their rules, the tournament week, Fashion Report, Jumbo and Mini Cactpot."
+      image="{{ saucer.og.image }}"
+      image-alt="{{ saucer.og.imageAlt }}"
+      image-size="{{ saucer.og.imageSize }}"
+      name="Gold Saucer"
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="/js/saucer.js" module/>
+  </head>
+
+  <body>
+    <x-html src="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="listing saucer saucer-pending">
+        <header class="listing-intro">
+          <h1 class="listing-title">Gold Saucer</h1>
+          <p class="listing-lead">The next GATE and the three it can be, Triple Triad tournaments, the Fashion Report and both Cactpots, in your local time.</p>
+        </header>
+        <!-- The timers as of the build, hidden until js/saucer.js puts the current ones in their place, so nothing under them moves when it does -->
+        <section class="saucer-card" id="gates">
+          <h2 class="saucer-name">GATEs</h2>
+          <div class="saucer-head">
+            <span class="detail-state">Next GATE in</span>
+            <strong class="detail-countdown">{{ saucer.gate.countdown }}</strong>
+          </div>
+          <p class="saucer-info">One starts every 20 minutes, picked at random from the three that time of the hour can run.</p>
+          <ol class="saucer-rows">
+            <x-each items="saucer.gates" as="gate">
+            <li><time>{{ gate.time }}</time><span class="saucer-chips"><x-each items="gate.pool" as="pool"><span class="chip">{{ pool.name }}<x-if value="pool.where"> <span class="saucer-where">{{ pool.where }}</span></x-if></span></x-each></span></li>
+            </x-each>
+          </ol>
+        </section>
+        <div class="saucer-pair">
+          <section class="saucer-card" id="open">
+            <h2 class="saucer-name">Triple Triad open tournament</h2>
+            <div class="saucer-head">
+              <span class="detail-state">{{ saucer.open.state }}</span>
+              <strong class="detail-countdown">{{ saucer.open.countdown }}</strong>
+            </div>
+            <p class="saucer-info">Registration opens for 30 minutes every 2 hours, on odd hours UTC, at the Open Tournament Official in Card Square. The Advanced rules' extras change, the official's schedule lists them.</p>
+            <ol class="saucer-rows">
+              <x-each items="saucer.openRows" as="row">
+              <li><time>{{ row.time }}</time><span class="saucer-chips"><span class="chip">{{ row.ruleset }}</span></span></li>
+              </x-each>
+            </ol>
+          </section>
+          <section class="saucer-card" id="tournament">
+            <h2 class="saucer-name">Triple Triad tournament</h2>
+            <div class="saucer-head">
+              <span class="detail-state">{{ saucer.tournament.state }}</span>
+              <strong class="detail-countdown">{{ saucer.tournament.countdown }}</strong>
+            </div>
+            <p class="saucer-info">{{ saucer.tournament.info }} One runs a week from the weekly reset, every other week.</p>
+            <ol class="saucer-rows">
+              <x-each items="saucer.tournamentRows" as="row">
+              <li><span class="saucer-range">{{ row.time }}</span></li>
+              </x-each>
+            </ol>
+          </section>
+        </div>
+        <div class="saucer-trio">
+          <section class="saucer-card" id="fashion">
+            <h2 class="saucer-name">Fashion Report</h2>
+            <p class="saucer-phase">{{ saucer.fashion.name }}</p>
+            <div class="saucer-head">
+              <span class="detail-state">Ends in</span>
+              <strong class="detail-countdown">{{ saucer.fashion.countdown }}</strong>
+            </div>
+            <p class="saucer-info">{{ saucer.fashion.info }}</p>
+          </section>
+          <section class="saucer-card" id="jumbo">
+            <h2 class="saucer-name">Jumbo Cactpot</h2>
+            <div class="region-picker" role="group" aria-label="Region">
+              <x-each items="saucer.jumbo.regions" as="region"><button class="region-btn">{{ region }}</button></x-each>
+            </div>
+            <div class="saucer-head">
+              <span class="detail-state">Drawing in</span>
+              <strong class="detail-countdown">{{ saucer.jumbo.countdown }}</strong>
+            </div>
+            <p class="saucer-info">{{ saucer.jumbo.info }}</p>
+          </section>
+          <section class="saucer-card" id="mini">
+            <h2 class="saucer-name">Mini Cactpot</h2>
+            <div class="saucer-head">
+              <span class="detail-state">Resets in</span>
+              <strong class="detail-countdown">{{ saucer.mini.countdown }}</strong>
+            </div>
+            <p class="saucer-info">Three new tickets a day, on the daily reset at 15:00 UTC.</p>
+          </section>
+        </div>
+      </main>
+      <x-html src="partials/footer.html"/>
+    </div>
+
+    <x-html src="partials/settings.html"/>
+  </body>
+</html>

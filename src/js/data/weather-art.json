@@ -334,5 +334,9 @@
   "North Horn": {
     "loading": "nowloading_base36",
     "name": 122105
+  },
+  "The Gold Saucer": {
+    "loading": "nowloading_base02",
+    "name": 124117
   }
 }

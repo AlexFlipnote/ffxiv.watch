@@ -2,7 +2,7 @@ import { maintenance as MAINTENANCE } from "./data/lodestone.json"
 import "./utils/navbar.js"
 import { closable } from "./utils/dialog.js"
 import { ordinal, toEorzea } from "./utils/eorzea.js"
-import { load, store } from "./utils/storage.js"
+import { pickRegion, regions } from "./utils/regions.js"
 import { everyTick, formatCountdown, formatEnGB, gmtOffset, hour12, setText, setTime } from "./utils/time.js"
 import { getAllTimerStates } from "./utils/timers.js"
 
@@ -37,33 +37,6 @@ const cards = new Map()
 let openId = null
 let renderedModal = null
 
-// Timer id -> picked region id
-const REGIONS_KEY = "regions"
-const regions = { jumbo_cactpot: guessCactpotRegion(), ...loadRegions() }
-
-/** @returns {Record<string, string>} */
-function loadRegions() {
-  try {
-    return JSON.parse(load(REGIONS_KEY)) ?? {}
-  } catch {
-    return {}
-  }
-}
-
-const saveRegions = () => store(REGIONS_KEY, JSON.stringify(regions))
-
-/**
- * The Jumbo Cactpot region on a first visit, from the time zone.
- * @returns {"eu" | "oce" | "jp" | "na"}
- */
-function guessCactpotRegion() {
-  const zone = Intl.DateTimeFormat().resolvedOptions().timeZone ?? ""
-  if (zone.startsWith("Europe/") || zone.startsWith("Africa/")) return "eu"
-  if (zone.startsWith("Australia/") || zone === "Pacific/Auckland") return "oce"
-  if (zone.startsWith("Asia/")) return "jp"
-  return "na"
-}
-
 /**
  * Hooks up a card the build wrote into the page (see src/pages/index.html).
  * @param {import("./utils/timers.js").TimerState} timer
@@ -74,8 +47,7 @@ function bindCard(timer) {
 
   const regionBtns = [...card.querySelectorAll(".region-btn")]
   regionBtns.forEach((btn, i) => btn.addEventListener("click", () => {
-    regions[timer.id] = timer.regions[i].id
-    saveRegions()
+    pickRegion(timer.id, timer.regions[i].id)
     render(Date.now())
   }))
 
