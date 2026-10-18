@@ -192,11 +192,11 @@ const place = (entry) =>
 
 /**
  * The map column, its icon drawn by the CSS. It links to the map, listing.js opens it in the map dialog instead.
- * @param {{ map?: { image: string } }} entry
+ * @param {{ zone: string, map?: { image: string } }} entry
  * @returns {Html}
  */
 const locationCell = (entry) => html`
-  <td class="location-cell">${entry.map ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" title="Show on map"></a>` : ""}</td>`
+  <td class="location-cell">${entry.map ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" aria-label="Show ${entry.zone} on map" title="Show on map"></a>` : ""}</td>`
 
 /**
  * A table row, matched up with its entry by data-key when listing.js loads the data. Lists have thousands, so each
