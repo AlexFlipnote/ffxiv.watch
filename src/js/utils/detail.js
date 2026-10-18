@@ -74,6 +74,7 @@ function detailTimers(windowsOf) {
         setTime(to, new Date(listed.end), date, { from: start })
       })
     }
+    for (const timer of timers) timer.el.classList.remove("detail-pending")
   }
 }
 

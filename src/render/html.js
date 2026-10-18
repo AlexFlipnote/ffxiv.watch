@@ -343,7 +343,7 @@ const UPCOMING = 5
  */
 export const detailTimer = (data, when, often) => data
   ? html`
-    <div class="detail-timer" data-window="${data}">
+    <div class="detail-timer detail-pending" data-window="${data}">
       <div class="detail-next"><span class="detail-state">Next window</span> <strong class="detail-countdown"></strong></div>
       <p class="detail-when">${when}</p>
       <ol class="detail-upcoming" aria-label="Upcoming windows, in your time">${Array.from({ length: UPCOMING }, () => html`<li>&nbsp;</li>`)}</ol>${often && html`
