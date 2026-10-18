@@ -11,12 +11,11 @@
   }
 }
 
-// The build's voyages, out of date, keep the room until js/ocean.js writes the current ones in (see src/data/ocean.js)
-.ocean-pending {
-  .ocean-next-head,
-  .ocean-routes,
+// The build's voyages, out of date, ghost until js/ocean.js writes the current ones in (see src/data/ocean.js)
+.js .ocean-pending {
+  .ocean-next,
   .ocean-schedule {
-    visibility: hidden;
+    @include ghost;
   }
 }
 

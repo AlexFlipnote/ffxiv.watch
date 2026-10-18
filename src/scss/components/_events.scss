@@ -84,9 +84,9 @@
   }
 }
 
-// The build's countdowns, out of date, keep the room until js/events.js writes the current ones in
-.events-pending .event-countdown {
-  visibility: hidden;
+// The build's countdowns, out of date, ghost until js/events.js writes the current ones in
+.js .events-pending .event-card {
+  @include ghost;
 }
 
 .event-countdown {

@@ -11,14 +11,9 @@
   }
 }
 
-// The build's timers, out of date, keep the room until js/saucer.js writes the current ones in (see src/data/saucer.js)
-.saucer-pending {
-  .saucer-head,
-  .saucer-rows,
-  .saucer-phase,
-  .region-picker {
-    visibility: hidden;
-  }
+// The build's timers, out of date, ghost until js/saucer.js writes the current ones in (see src/data/saucer.js)
+.js .saucer-pending .saucer-card {
+  @include ghost;
 }
 
 .saucer-pair,
