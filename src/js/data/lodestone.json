@@ -1,6 +1,14 @@
 {
   "fixes": {},
-  "maintenance": [],
+  "maintenance": [
+    {
+      "name": "All Worlds Maintenance (Oct. 20)",
+      "url": "https://eu.finalfantasyxiv.com/lodestone/news/detail/3c35b05c651ed0d0fd2f2d505e8f1ab997ab8274",
+      "start": 1792468800000,
+      "end": 1792490400000,
+      "patch": "7.57"
+    }
+  ],
   "events": [
     {
       "id": "c54a06f0d6da3970becea20a63e01f5c25f6e74e",
