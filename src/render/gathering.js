@@ -14,7 +14,7 @@ const DATA_SOURCES = ["js/data/gathering.json", "js/data/gathering"]
  * @param {{ id: number, name: string }} item
  * @returns {string | null} "/gathering/cedar-log/", null for the crystals
  */
-const itemUrl = (item) => item.id >= FIRST_PAGED_ITEM ? `/gathering/${slug(item.name)}/` : null
+export const itemUrl = (item) => item.id >= FIRST_PAGED_ITEM ? `/gathering/${slug(item.name)}/` : null
 
 const itemLink = (item) => itemUrl(item) ? html`<a href="${itemUrl(item)}">${item.name}</a>` : item.name
 

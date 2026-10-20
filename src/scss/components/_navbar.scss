@@ -265,8 +265,14 @@
   }
 }
 
-.settings-button {
+// Search and settings, one grid cell together on a phone
+.navbar-actions {
   margin-left: auto;
+  display: flex;
+  gap: .25rem;
+}
+
+.navbar-action {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -302,14 +308,24 @@
     transition: transform .4s $ease;
   }
 
+  :root:not(.js) & {
+    visibility: hidden;
+  }
+}
+
+.settings-button {
   @include hover {
     svg {
       transform: rotate(30deg);
     }
   }
+}
 
-  :root:not(.js) & {
-    visibility: hidden;
+.search-button {
+  @include hover {
+    svg {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -341,8 +357,9 @@
     display: flex;
   }
 
-  .settings-button {
+  .navbar-actions {
     justify-self: end;
+    gap: 0;
   }
 
   // Dims the page next to the open menu, and takes the tap that closes it so it can't also hit what's under it
@@ -449,7 +466,7 @@
   .navbar-more-menu,
   .navbar-backdrop,
   .navbar-hamburger line,
-  .settings-button svg {
+  .navbar-action svg {
     transition: none !important;
   }
 }

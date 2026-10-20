@@ -1,0 +1,153 @@
+@use "../mixins" as *;
+
+// The search behind the magnifier and Ctrl+K, see js/utils/search.js. The frame is the .modal's, near the top like a
+// command palette so the results grow down instead of the box jumping around as they change
+.search-modal {
+  max-width: 36rem;
+  margin-top: 12vh;
+  padding: .75rem;
+
+  @include mobile {
+    margin-top: 1rem;
+    padding: .75rem;
+  }
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  padding: 0 .25rem 0 .625rem;
+  border-bottom: .05rem solid var(--divider);
+  padding-bottom: .5rem;
+
+  svg {
+    flex: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: var(--font-tertiary);
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  .close-btn {
+    margin: 0;
+  }
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  padding: .5rem 0;
+  border: none;
+  background: none;
+  color: var(--font-primary);
+  font: inherit;
+  font-size: 1.125rem;
+  outline: none;
+
+  // A phone zooms into anything smaller than 16px
+  @include touch {
+    font-size: max(1rem, 1em);
+  }
+
+  &::placeholder {
+    color: var(--font-tertiary);
+  }
+
+  // The browser's own ×, the dialog has one already
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+}
+
+.search-results {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: min(26rem, 60vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  &:not(:empty) {
+    margin-top: .5rem;
+  }
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .375rem .625rem;
+  border-radius: .5rem;
+  color: var(--font-primary);
+  text-decoration: none;
+
+  [aria-selected="true"] > & {
+    background-color: var(--chip-background);
+
+    .search-name {
+      color: var(--accent);
+    }
+  }
+}
+
+.search-icon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  // The ones without a game icon get their section's, as a mask so they take the text's color
+  &[data-kind]::before {
+    content: "";
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--font-tertiary);
+    mask: center / contain no-repeat;
+  }
+
+  &[data-kind="vista"]::before {
+    mask-image: url("/images/ui/map-search.svg");
+  }
+
+  &[data-kind="weather"]::before {
+    mask-image: url("/images/ui/theme-light.svg");
+  }
+
+  &[data-kind="page"]::before {
+    mask-image: url("/images/ui/arrow.svg");
+  }
+}
+
+.search-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-kind {
+  flex: none;
+  font-size: .75rem;
+  color: var(--font-tertiary);
+}
+
+.search-note {
+  margin: .75rem .625rem .25rem;
+  font-size: .85rem;
+  color: var(--font-tertiary);
+
+  &:empty {
+    display: none;
+  }
+}

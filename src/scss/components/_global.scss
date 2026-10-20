@@ -230,7 +230,7 @@ input {
   touch-action: manipulation;
 }
 
-:where(.backlink, .detail-prev-link, .detail-next-link, .info-btn, .region-btn, .navbar-hamburger, .settings-button,
+:where(.backlink, .detail-prev-link, .detail-next-link, .info-btn, .region-btn, .navbar-hamburger, .navbar-action,
   .filters-toggle, .top-button, .toast-close, .close-btn, .settings-btn):active {
   transform: scale(.94);
 }
