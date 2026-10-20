@@ -44,7 +44,7 @@ modal.setAttribute("aria-label", "Search")
 modal.innerHTML = `
   <div class="search-field">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input class="search-input" type="search" placeholder="Search fish, items, vistas, zones..." autocomplete="off"
+    <input class="search-input" id="search-input" type="search" placeholder="Search fish, items, vistas, zones..." autocomplete="off"
       spellcheck="false" role="combobox" aria-expanded="true" aria-controls="search-results" aria-label="Search">
     <button class="close-btn" aria-label="Close">&times;</button>
   </div>
