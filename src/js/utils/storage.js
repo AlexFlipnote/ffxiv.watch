@@ -9,7 +9,8 @@ const fallback = new Map()
  */
 export function load(key) {
   try {
-    return localStorage.getItem(key)
+    // Through window, Node's own localStorage warns when the build touches it
+    return window.localStorage.getItem(key)
   } catch {
     return fallback.get(key) ?? null
   }
@@ -21,8 +22,8 @@ export function load(key) {
  */
 export function store(key, value) {
   try {
-    if (value === null) localStorage.removeItem(key)
-    else localStorage.setItem(key, value)
+    if (value === null) window.localStorage.removeItem(key)
+    else window.localStorage.setItem(key, value)
   } catch {
     if (value === null) fallback.delete(key)
     else fallback.set(key, value)
