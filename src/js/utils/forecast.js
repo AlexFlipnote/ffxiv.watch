@@ -1,6 +1,6 @@
 import { ET_DAY_EARTH_MS, ET_MINUTE_EARTH_MS } from "./eorzea.js"
 
-// When a fish or vista is up, from the weather odds it's given, see windows.js
+// When a fish or vista is up, from the weather odds it's given, see windows.js, and when its alarm rings
 
 const HORIZON = 30 * 24 * 60 * 60 * 1000
 
@@ -162,6 +162,40 @@ export function nextWeatherWindow(entry, now, zone) {
   }
 
   return found && finish(found)
+}
+
+// How late a ring can still be, a hidden tab's timers run up to a minute late
+const GRACE = 90 * 1000
+
+/**
+ * @param {import("./alarmBells.js").Alarm} alarm
+ * @param {number} now
+ * @returns {import("./listing.js").Window} Its window now or next, from its own times and weather odds
+ */
+export const alarmWindow = (alarm, now) => nextWeatherWindow(alarm, now, alarm.rates && { weather: alarm.rates })
+
+/**
+ * Which alarms ring now, and when to look again.
+ * @param {import("./alarmBells.js").Alarm[]} alarms
+ * @param {number} now
+ * @param {number} lead Earth ms before a window they ring
+ * @returns {{ due: [object, { start: number, end: number }][], next: number }} `next` is Infinity when nothing's coming
+ */
+export function alarmsDue(alarms, now, lead) {
+  const due = []
+  let next = Infinity
+  for (const alarm of alarms) {
+    let w = alarmWindow(alarm, now)
+    if (!w || w.always) continue
+    // One that just opened still rings, unless it has
+    if (w.open && (alarm.rung === w.start || now - w.start > GRACE)) w = alarmWindow(alarm, w.end)
+    if (!w) continue
+    if (w.start - lead > now) next = Math.min(next, w.start - lead)
+    else if (alarm.rung !== w.start) due.push([alarm, w])
+    // Rung, looks again once it opens
+    else next = Math.min(next, w.start)
+  }
+  return { due, next }
 }
 
 /**

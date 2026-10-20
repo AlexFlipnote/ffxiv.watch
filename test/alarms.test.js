@@ -1,0 +1,57 @@
+import assert from "node:assert/strict"
+import fs from "node:fs"
+import { describe, it } from "node:test"
+import { ET_DAY_EARTH_MS, ET_MINUTE_EARTH_MS } from "../src/js/utils/eorzea.js"
+import { alarmsDue, alarmWindow } from "../src/js/utils/forecast.js"
+import { alarmTiming, nextWeatherWindow } from "../src/js/utils/windows.js"
+
+const ET_HOUR = 60 * ET_MINUTE_EARTH_MS
+// An ET midnight in October 2026
+const DAY = Math.ceil(Date.UTC(2026, 9, 20) / ET_DAY_EARTH_MS) * ET_DAY_EARTH_MS
+// Up 10:00 to 11:00 ET every day
+const alarm = (extra = {}) => ({ id: "node:1", name: "Test Ore", url: "/", place: "Here", times: [[600, 60]], ...extra })
+const START = DAY + 10 * ET_HOUR
+const TOMORROW = START + ET_DAY_EARTH_MS
+
+describe("Alarms", () => {
+  it("waits for the window when it rings as it opens", () => {
+    assert.deepEqual(alarmsDue([alarm()], START - 1000, 0), { due: [], next: START })
+  })
+
+  it("rings for a window that has just opened", () => {
+    const { due } = alarmsDue([alarm()], START + 5000, 0)
+    assert.equal(due.length, 1)
+    assert.equal(due[0][1].start, START)
+  })
+
+  it("rings once per window, then waits for the next", () => {
+    assert.deepEqual(alarmsDue([alarm({ rung: START })], START + 5000, 0), { due: [], next: TOMORROW })
+  })
+
+  it("skips a window that opened too long ago to still ring", () => {
+    assert.deepEqual(alarmsDue([alarm()], START + 5 * 60 * 1000, 0), { due: [], next: TOMORROW })
+  })
+
+  it("rings the lead time before the window", () => {
+    const lead = 2 * ET_HOUR
+    assert.deepEqual(alarmsDue([alarm()], START - 3 * ET_HOUR, lead), { due: [], next: START - lead })
+    assert.equal(alarmsDue([alarm()], START - ET_HOUR, lead).due.length, 1)
+  })
+
+  it("rings alarms due together in one go", () => {
+    const { due } = alarmsDue([alarm(), alarm({ id: "node:2" })], START + 1000, 0)
+    assert.deepEqual(due.map(([a]) => a.id), ["node:1", "node:2"])
+  })
+
+  it("works out a weather fish's windows from what it keeps, the same as the list does", () => {
+    const fish = fs.readdirSync("src/js/data/fishing")
+      .flatMap((file) => JSON.parse(fs.readFileSync(`src/js/data/fishing/${file}`, "utf8")))
+      .filter((f) => f.weather || f.previousWeather)
+      .filter((_, i) => i % 10 === 0)
+    assert.ok(fish.length > 10)
+    for (const f of fish) {
+      const kept = JSON.parse(JSON.stringify(alarmTiming(f)))
+      assert.deepEqual(alarmWindow(kept, START), nextWeatherWindow(f, START), f.name)
+    }
+  })
+})

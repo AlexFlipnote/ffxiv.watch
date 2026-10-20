@@ -1,7 +1,7 @@
 import { ALARMS_KEY, DEFAULT_LEAD, LEAD_KEY, NEXT_KEY, paintPill, readAlarms, soundUrl } from "./alarmBells.js"
 import { closable } from "./dialog.js"
 import { ET_MINUTE_EARTH_MS } from "./eorzea.js"
-import { cachedWindows, nextWeatherWindow } from "./forecast.js"
+import { alarmsDue, alarmWindow, cachedWindows } from "./forecast.js"
 import { load, onStored, store } from "./storage.js"
 import { everyTick, formatCountdown, formatIn, setText } from "./time.js"
 import { toast } from "./toast.js"
@@ -26,24 +26,7 @@ export function leadText() {
   return `${hours} ET hour${hours === 1 ? "" : "s"} (${Math.floor(earth / 60)}:${String(earth % 60).padStart(2, "0")}) before it's up`
 }
 
-/** @param {Alarm} alarm @returns {import("./forecast.js").Zone | undefined} */
-const zoneOf = (alarm) => alarm.rates && { weather: alarm.rates }
-const find = (alarm, now) => nextWeatherWindow(alarm, now, zoneOf(alarm))
-const current = cachedWindows(find)
-
-// How late a ring can still be, a hidden tab's timers run up to a minute late
-const GRACE = 90 * 1000
-
-/**
- * @param {Alarm} alarm
- * @param {number} now
- * @returns {{ start: number, end: number } | null} One that just opened and hasn't rung, or else the next
- */
-function upcoming(alarm, now) {
-  const w = find(alarm, now)
-  if (!w || w.always) return null
-  return w.open && (alarm.rung === w.start || now - w.start > GRACE) ? find(alarm, w.end) : w
-}
+const current = cachedWindows(alarmWindow)
 
 /**
  * Adds the alarm, or takes it away when it's set.
@@ -104,19 +87,7 @@ let saving = false
 function schedule() {
   clearTimeout(timer)
   const now = Date.now()
-  const lead = leadMinutes() * ET_MINUTE_EARTH_MS
-  const due = []
-  let next = Infinity
-
-  for (const alarm of alarms) {
-    const w = upcoming(alarm, now)
-    if (!w) continue
-    if (w.start - lead > now) next = Math.min(next, w.start - lead)
-    else if (alarm.rung !== w.start) due.push([alarm, w])
-    // Rung, looks again once it opens
-    else next = Math.min(next, w.start)
-  }
-
+  const { due, next } = alarmsDue(alarms, now, leadMinutes() * ET_MINUTE_EARTH_MS)
   if (due.length) {
     for (const [alarm, w] of due) alarm.rung = w.start
     saving = true
