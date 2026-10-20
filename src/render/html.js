@@ -191,12 +191,33 @@ const place = (entry) =>
   html`<div class="place"><span class="zone">${entry.zone}</span>${entry.spot ? html`<span class="spot">${entry.spot}</span>` : ""}</div>`
 
 /**
- * The map column, its icon drawn by the CSS. It links to the map, listing.js opens it in the map dialog instead.
- * @param {{ zone: string, map?: { image: string } }} entry
+ * What a detail page's alarm is for, by the same id as its list row's.
+ * @param {string} id "fish:4869", "node:974", "vista:112"
+ * @param {string} name
+ * @param {{ zone: string, spot?: string }} entry
+ * @param {number} icon Its game icon
+ * @returns {{ id: string, name: string, place: string, icon: number }}
+ */
+export const alarmFor = (id, name, entry, icon) => ({ id, name, place: [entry.zone, entry.spot].filter(Boolean).join(", "), icon })
+
+/**
+ * The alarm bell, off until the script knows what it's for.
+ * @param {{ id: string, name: string, place: string, icon: number } | null} [alarm] On a detail page, what it's for
+ * @param {number | null} [icon] In a list's row, its game icon
  * @returns {Html}
  */
-const locationCell = (entry) => html`
-  <td class="location-cell">${entry.map ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" aria-label="Show ${entry.zone} on map" title="Show on map"></a>` : ""}</td>`
+export const alarmButton = (alarm = null, icon = null) =>
+  html`<button class="alarm-bell" disabled${alarm && html` data-alarm="${JSON.stringify(alarm)}"`}${icon && html` data-icon="${icon}"`}></button>`
+
+/**
+ * The last column, the alarm bell and the map. The map links to its image, listing.js opens it in the map dialog
+ * instead.
+ * @param {{ zone: string, map?: { image: string } }} entry
+ * @param {number | null} icon See alarmButton
+ * @returns {Html}
+ */
+const locationCell = (entry, icon) => html`
+  <td class="location-cell"><div class="row-actions">${alarmButton(null, icon)}${entry.map ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" aria-label="Show ${entry.zone} on map" title="Show on map"></a>` : ""}</div></td>`
 
 /**
  * A table row, matched up with its entry by data-key when listing.js loads the data. Lists have thousands, so each
@@ -206,9 +227,9 @@ const locationCell = (entry) => html`
  * @param {Html} content The first column, the place is added next to it
  * @returns {Html}
  */
-export const listRow = (key, entry, content) => html`
+export const listRow = (key, entry, content, icon = null) => html`
 <tr data-key="${key}">
-  <td><div class="row-body"><div class="row-main">${content}</div>${place(entry)}</div></td>${locationCell(entry)}
+  <td><div class="row-body"><div class="row-main">${content}</div>${place(entry)}</div></td>${locationCell(entry, icon)}
 </tr>`
 
 /**
@@ -339,12 +360,13 @@ const UPCOMING = 5
  * @param {string | null} data JSON for the page's script to work the windows out from, null when it's always up
  * @param {string} when The times as text, for search engines and before the script runs
  * @param {string | null} [often] How often it's up, see howOften, under the windows
+ * @param {{ id: string, name: string, place: string }} [alarm] What its alarm is for, see alarmFor
  * @returns {Html}
  */
-export const detailTimer = (data, when, often) => data
+export const detailTimer = (data, when, often, alarm = null) => data
   ? html`
     <div class="detail-timer detail-pending" data-window="${data}">
-      <div class="detail-next"><span class="detail-state">Next window</span> <strong class="detail-countdown"></strong></div>
+      <div class="detail-next"><span class="detail-state">Next window</span> <strong class="detail-countdown"></strong>${alarm && alarmButton(alarm)}</div>
       <p class="detail-when">${when}</p>
       <ol class="detail-upcoming" aria-label="Upcoming windows, in your time">${Array.from({ length: UPCOMING }, () => html`<li>&nbsp;</li>`)}</ol>${often && html`
       <p class="detail-often">${often}</p>`}

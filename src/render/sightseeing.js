@@ -1,5 +1,5 @@
 import {
-  chip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, howOften,
+  alarmFor, chip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, howOften,
   html, listRow, listRows, locationFacts, mapFigure, pager, readData,
   readExpansions, slug
 } from "./html.js"
@@ -59,11 +59,12 @@ function vistaWhen(vista) {
  * @param {number} id From vistaId
  * @param {string} key See listRow
  * @param {object} vista
+ * @param {number} [icon] Its emote's, for the alarm list
  * @returns {import("./html.js").Html}
  */
-const vistaRow = (id, key, vista) => listRow(key, vista, html`
+const vistaRow = (id, key, vista, icon) => listRow(key, vista, html`
     <div class="vista-name">${doneButton(id)}<span class="vista-number">${vistaNumber(vista)}</span><strong><a href="${vistaUrl(vista)}">${vista.name}</a></strong></div>
-    <div class="tags">${vistaTags(vista)}</div>`)
+    <div class="tags">${vistaTags(vista)}</div>`, (vista.times || vista.weather) && icon)
 
 /**
  * @returns {object} Every vista's row and link for /sightseeing/, see listRows, and the expansion a first visit shows, its
@@ -72,7 +73,8 @@ const vistaRow = (id, key, vista) => listRow(key, vista, html`
 export function vistaList() {
   const expansions = readExpansions("sightseeing")
   const index = new Map(expansions.map((e, i) => [e.file, i]))
-  const row = (key, vista) => vistaRow(vistaId(index.get(key.split(":")[0]), vista), key, vista)
+  const text = readData("sightseeing-text.json")
+  const row = (key, vista) => vistaRow(vistaId(index.get(key.split(":")[0]), vista), key, vista, text[vista.name].emoteIcon)
   // A Realm Reborn's are the only ones with times and weather
   const defaultExpansion = expansions[0].file
   return {
@@ -128,7 +130,7 @@ export function vistaPages() {
     <div class="tags">${vistaTags(vista)}</div>
   </div>
   ${vista.map && mapFigure(vista, `${name}: use the ${vista.emote} emote here`)}
-  ${detailTimer(timed ? JSON.stringify({ zone: vista.zone, times: vista.times, weather: vista.weather }) : null, when, timed && howOften(vista, "Up"))}
+  ${detailTimer(timed ? JSON.stringify({ zone: vista.zone, times: vista.times, weather: vista.weather }) : null, when, timed && howOften(vista, "Up"), alarmFor(`vista:${id}`, name, vista, text[vista.name].emoteIcon))}
   ${facts([["Emote", vista.emote && emoteFact(vista.emote, text[vista.name])], ...locationFacts(vista), ["Level", vista.level], ["Unlocked by", vista.unlock && unlockText(vista.unlock)]])}
 </section>
 ${pager(pagerTo(all[i - 1], expansion), pagerTo(all[i + 1], expansion), "Previous and next vista")}`,

@@ -1,6 +1,7 @@
 import EXPANSIONS from "./data/sightseeing.json"
+import { placeOf } from "./utils/alarmBells.js"
 import { listing } from "./utils/listing.js"
-import { cachedWeatherWindows } from "./utils/windows.js"
+import { alarmTiming, cachedWeatherWindows } from "./utils/windows.js"
 
 listing({
   expansions: EXPANSIONS,
@@ -23,5 +24,10 @@ listing({
   matches: (vista, query) => [
     `#${String(vista.number).padStart(3, "0")}`, vista.name, vista.zone, vista.spot, vista.emote, ...(vista.weather ?? []), vista.unlock?.quest
   ].some((text) => text?.toLowerCase().includes(query)),
-  windowOf: cachedWeatherWindows()
+  windowOf: cachedWeatherWindows(),
+  // Its done check's id, as on its own page
+  alarmOf: (vista, tr) => vista.times || vista.weather ? {
+    id: `vista:${tr.querySelector(".done-check").dataset.doneId}`, name: vista.name, url: tr.querySelector("strong a").pathname,
+    place: placeOf(vista), ...alarmTiming(vista)
+  } : null
 })

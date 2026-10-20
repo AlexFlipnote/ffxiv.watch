@@ -1,4 +1,5 @@
 import "./navbar.js"
+import { alarmBell } from "./alarmBells.js"
 import { CELEBRATE_MS, doneChecks, HIDE_DONE_KEY } from "./done.js"
 import { openMap } from "./mapModal.js"
 import { load, onStored } from "./storage.js"
@@ -24,6 +25,8 @@ import { everyTick, formatCountdown, setText, setTime } from "./time.js"
  * @property {(entry: object) => boolean} [filter] The page's own dropdowns, skipped while searching
  * @property {(entry: object, query: string) => boolean} matches The search, `query` is lowercase and never ""
  * @property {(entry: object, now: number) => Window} windowOf Called every tick, so keep it cheap
+ * @property {(entry: object, tr: HTMLTableRowElement) => import("./alarmBells.js").Alarm | null} alarmOf Null when it's
+ * always up
  * @property {string} noun "nodes", "vistas"
  * @property {string} done Its done checks, see doneChecks
  */
@@ -104,7 +107,7 @@ function groupRows(state) {
  * and grouped by when they're up. The rows come with the page, each marked with the entry it's for.
  * @param {ListingOptions} options
  */
-export function listing({ expansions, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, filter, matches, windowOf, noun, done }) {
+export function listing({ expansions, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, filter, matches, windowOf, alarmOf, noun, done }) {
   const addDoneChecks = doneChecks(done)
   // An expansion's file -> where its rows are, when the page came without them
   const rowFiles = JSON.parse(body.dataset.rows || "{}")
@@ -183,6 +186,10 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
           openMap({ ...entry, note: mapNote?.(entry) })
         })
       }
+      const bell = tr.querySelector(".alarm-bell")
+      const alarm = alarmOf(entry, tr)
+      // The build put its icon on the bell
+      alarmBell(bell, alarm && { ...alarm, icon: Number(bell.dataset.icon) || undefined })
       rows.set(entry, { tr })
     }
     return rows.get(entry)

@@ -1,6 +1,7 @@
 import EXPANSIONS from "./data/fishing.json"
+import { placeOf } from "./utils/alarmBells.js"
 import { listing } from "./utils/listing.js"
-import { cachedWeatherWindows } from "./utils/windows.js"
+import { alarmTiming, cachedWeatherWindows } from "./utils/windows.js"
 
 const methodSelect = document.getElementById("filter-method")
 const typeSelect = document.getElementById("filter-type")
@@ -37,5 +38,8 @@ listing({
     ...(fish.weather ?? []), ...(fish.previousWeather ?? []),
     ...(fish.bait ?? []).flat().map((b) => b.name), ...(fish.predators ?? []).map((p) => p.name)
   ].some((text) => text?.toLowerCase().includes(query)),
-  windowOf: cachedWeatherWindows()
+  windowOf: cachedWeatherWindows(),
+  alarmOf: (fish, tr) => TYPES.timed(fish) ? {
+    id: `fish:${fish.id}`, name: fish.name, url: tr.querySelector(".gathering-item").pathname, place: placeOf(fish), ...alarmTiming(fish)
+  } : null
 })

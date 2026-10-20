@@ -1,4 +1,4 @@
 import { detailPage } from "./utils/detail.js"
-import { weatherSource } from "./utils/windows.js"
+import { alarmTiming, weatherSource } from "./utils/windows.js"
 
-detailPage("vistas", weatherSource)
+detailPage("vistas", weatherSource, alarmTiming)

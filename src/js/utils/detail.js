@@ -1,4 +1,5 @@
 import "./navbar.js"
+import { alarmBell } from "./alarmBells.js"
 import { doneChecks } from "./done.js"
 import { openMap } from "./mapModal.js"
 import { everyTick, formatCountdown, setText, setTime } from "./time.js"
@@ -102,6 +103,17 @@ function windowHints(windowsOf) {
 }
 
 /**
+ * Hooks up the bells by the timers' countdowns.
+ * @param {(data: object) => object} timingOf What an alarm keeps of a timer's data
+ */
+function alarmBells(timingOf) {
+  for (const bell of document.querySelectorAll(".detail-timer[data-window] .alarm-bell[data-alarm]")) {
+    const data = JSON.parse(bell.closest(".detail-timer").dataset.window)
+    alarmBell(bell, { ...JSON.parse(bell.dataset.alarm), url: location.pathname, ...timingOf(data) })
+  }
+}
+
+/**
  * The link back to the list. Coming from the list, it goes back in history instead, which brings the list back as it
  * was left: the filters, the search and how far down it was scrolled.
  */
@@ -136,11 +148,13 @@ function mapZoom() {
  * Starts an item's, fish's or vista's own page: its done check, its timers and the links on it.
  * @param {string} doneKey See doneChecks
  * @param {(data: object) => WindowSource} windowsOf See detailTimers
+ * @param {(data: object) => object} [timingOf] See alarmBells
  */
-export function detailPage(doneKey, windowsOf) {
+export function detailPage(doneKey, windowsOf, timingOf = (data) => data) {
   backlink()
   mapZoom()
   doneChecks(doneKey)
+  alarmBells(timingOf)
   const timers = detailTimers(windowsOf)
   const hints = windowHints(windowsOf)
   everyTick((now) => {

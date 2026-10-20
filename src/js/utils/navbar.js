@@ -1,6 +1,8 @@
 import "./theme.js"
+import { ALARMS_KEY, paintPill, readAlarms, savedNext } from "./alarmBells.js"
 import { loadIndex, openSearch } from "./search.js"
 import { openSettings } from "./settings.js"
+import { onStored } from "./storage.js"
 
 const navbar = document.querySelector(".navbar")
 const hamburger = navbar.querySelector(".navbar-hamburger")
@@ -52,3 +54,11 @@ searchButton.addEventListener("click", () => {
 const preload = () => loadIndex().catch(() => {})
 searchButton.addEventListener("pointerenter", preload, { once: true })
 searchButton.addEventListener("focus", preload, { once: true })
+
+// The pill from what the last page saved, so it's there before alarms.js loads
+if (readAlarms().length) paintPill(readAlarms().length, savedNext(Date.now()), Date.now())
+
+// Only loaded once there's an alarm, here or in another tab
+const loadAlarms = () => readAlarms().length && import("./alarms.js")
+loadAlarms()
+onStored(ALARMS_KEY, loadAlarms)

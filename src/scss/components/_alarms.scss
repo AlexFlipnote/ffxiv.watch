@@ -1,0 +1,300 @@
+@use "../mixins" as *;
+
+// The alarm bells, the pill and its list, see js/utils/alarms.js
+
+.row-actions {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+}
+
+// Like the map icon, a white file as a mask so it takes the text color
+.alarm-bell {
+  position: relative;
+  isolation: isolate;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--font-tertiary);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: currentColor;
+    mask: url("/images/ui/alarm-add.svg") center / contain no-repeat;
+  }
+
+  // A rounded square on hover, also what a finger taps
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -.375rem;
+    z-index: -1;
+    border-radius: .5rem;
+  }
+
+  &[aria-pressed="true"] {
+    color: var(--accent);
+
+    &::before {
+      mask-image: url("/images/ui/alarm-on.svg");
+    }
+  }
+
+  // Always up
+  &:disabled {
+    opacity: .35;
+    cursor: default;
+
+    &::before {
+      mask-image: url("/images/ui/alarm-off.svg");
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::after {
+      outline: .125rem solid var(--accent);
+    }
+  }
+
+  &:not(:disabled):active::after {
+    background: var(--chip-background);
+  }
+
+  @include hover {
+    &:not(:disabled) {
+      color: var(--accent);
+
+      &::after {
+        background: var(--chip-background);
+      }
+    }
+  }
+
+  // Nothing to set without the script
+  :root:not(.js) & {
+    visibility: hidden;
+  }
+}
+
+.detail-next {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+
+  .alarm-bell {
+    margin-left: .5rem;
+  }
+}
+
+.alarm-pill {
+  position: fixed;
+  left: calc(1rem + env(safe-area-inset-left));
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  height: 3rem;
+  padding: 0 1.125rem 0 .875rem;
+  border: none;
+  border-radius: 1.5rem;
+  background: var(--surface-solid);
+  box-shadow: var(--box-shadow);
+  color: var(--font-primary);
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background-color .2s;
+
+  &[hidden] {
+    display: none;
+  }
+
+  @include hover {
+    background: color-mix(in srgb, var(--surface-solid), var(--font-primary) 6%);
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+    outline-offset: .125rem;
+  }
+}
+
+.alarm-pill-icon {
+  width: 1.375rem;
+  height: 1.375rem;
+  background-color: var(--accent);
+  mask: url("/images/ui/alarm.svg") center / contain no-repeat;
+}
+
+.alarm-pill-count {
+  font-weight: bold;
+}
+
+.alarm-pill-next {
+  color: var(--font-secondary);
+
+  &:empty {
+    display: none;
+  }
+}
+
+// Back to the top above the pill, and on a phone the toasts above both
+body[data-alarms] .top-button {
+  bottom: calc(4.5rem + env(safe-area-inset-bottom));
+}
+
+@include mobile {
+  body[data-alarms] .toasts {
+    bottom: calc(4.75rem + env(safe-area-inset-bottom));
+  }
+
+  body[data-alarms][data-top-button] .toasts {
+    bottom: calc(8.25rem + env(safe-area-inset-bottom));
+  }
+}
+
+.alarms-modal {
+  max-width: 30rem;
+}
+
+.alarms-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  // On a phone the status goes under the place, so the name has the width
+  li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    grid-template-areas: "icon entry status remove";
+    align-items: center;
+    column-gap: .75rem;
+    padding: .625rem 0;
+    border-bottom: .05rem solid var(--divider);
+
+    @include mobile {
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      grid-template-areas: "icon entry remove" "icon status remove";
+    }
+
+    // The header's line is over the first one already
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+// The bell for alarms set before icons
+.alarms-icon {
+  grid-area: icon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+
+  img {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  &:empty::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--font-tertiary);
+    mask: url("/images/ui/alarm.svg") center / contain no-repeat;
+  }
+}
+
+.alarms-entry {
+  grid-area: entry;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.alarms-name {
+  overflow: hidden;
+  color: var(--font-primary);
+  font-weight: bold;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @include hover {
+    color: var(--accent);
+  }
+}
+
+.alarms-place {
+  overflow: hidden;
+  color: var(--font-tertiary);
+  font-size: .8rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alarms-status {
+  grid-area: status;
+  color: var(--font-secondary);
+  font-size: .85rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+
+  @include mobile {
+    font-size: .8rem;
+    text-align: left;
+  }
+}
+
+// A finger-sized ×, like the dialog's own
+.alarms-remove {
+  grid-area: remove;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-right: -.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--font-tertiary);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+
+  @include hover {
+    color: var(--warning);
+    background: var(--chip-background);
+  }
+}
+
+// Green like the list pages' open groups
+.alarm-pill-next.alarms-open,
+.alarms-status.alarms-open {
+  color: var(--open);
+  font-weight: bold;
+}
+
+.alarms-note {
+  margin: 1rem 0 0;
+  color: var(--font-tertiary);
+  font-size: .85rem;
+  line-height: 1.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alarm-pill {
+    transition: none;
+  }
+}

@@ -1,5 +1,5 @@
 import {
-  chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, howOften,
+  alarmFor, chip, collectableChip, detailTimer, doneButton, etWindows, expansionOptions, facts, gameText, howOften,
   html, listRow, listRows, locationFacts, mapFigure, pager, readData, readExpansions, scripCard, slug, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
@@ -64,9 +64,10 @@ function perceptionChip(node) {
 /**
  * @param {string} key See listRow
  * @param {object} node
+ * @param {object} info gathering-items.json
  * @returns {import("./html.js").Html}
  */
-function nodeRow(key, node) {
+function nodeRow(key, node, info) {
   // The stars and collectable mark are part of the link, so its line runs under them too
   const items = node.items.map((item) => {
     const title = item.perception && html` title="Needs ${item.perception} Perception"`
@@ -80,7 +81,7 @@ function nodeRow(key, node) {
 
   return listRow(key, node, html`
     <div class="gathering-items">${items}</div>
-    <div class="tags">${nodeTags(node)}${perceptionChip(node)}</div>`)
+    <div class="tags">${nodeTags(node)}${perceptionChip(node)}</div>`, node.times && info[node.items.find(itemUrl)?.id]?.icon)
 }
 
 /**
@@ -91,8 +92,9 @@ export function nodeList() {
   const expansions = readExpansions("gathering")
   const defaultExpansion = expansions.at(-1).file
   const linksOf = (node) => node.items.filter(itemUrl).map((item) => ({ url: itemUrl(item), name: item.name }))
+  const info = readData("gathering-items.json")
   return {
-    ...listRows("gathering", expansions, defaultExpansion, (node) => node.id, nodeRow, linksOf),
+    ...listRows("gathering", expansions, defaultExpansion, (node) => node.id, (key, node) => nodeRow(key, node, info), linksOf),
     defaultExpansion,
     expansionOptions: expansionOptions(expansions, defaultExpansion),
     sources: DATA_SOURCES
@@ -218,7 +220,7 @@ function nodeCard(spot, named, below, info) {
     <h2 class="detail-node">${node.zone}</h2>${spotTags(spot)}
   </div>`}
   ${node.map && mapFigure(node, node.items.map((i) => i.name).join(", "), below)}
-  ${detailTimer(node.times ? JSON.stringify({ times: node.times }) : null, node.times ? `Up ${etWindows(node.times)}` : "Always up", node.times && howOften(node, "Up"))}
+  ${detailTimer(node.times ? JSON.stringify({ times: node.times }) : null, node.times ? `Up ${etWindows(node.times)}` : "Always up", node.times && howOften(node, "Up"), alarmFor(`node:${node.id}`, item.name, node, info[item.id].icon))}
   ${facts([
     ...locationFacts(node),
     ["Folklore", node.folklore],

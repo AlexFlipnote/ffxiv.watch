@@ -1,3 +1,4 @@
+import { DEFAULT_LEAD, DEFAULT_SOUND, LEAD_KEY, SOUND_KEY, soundUrl } from "./alarmBells.js"
 import { closable } from "./dialog.js"
 import { decodeBackup, encodeBackup, HIDE_DONE_KEY, LISTS, readDone, storageKey, writeDone } from "./done.js"
 import { load, onStored, store } from "./storage.js"
@@ -9,6 +10,9 @@ const modal = document.getElementById("settings")
 const themes = [...modal.querySelectorAll("input[name=theme]")]
 const clocks = [...modal.querySelectorAll("input[name=clock]")]
 const hideDone = document.getElementById("settings-hide-done")
+const leads = [...modal.querySelectorAll("input[name=alarm-lead]")]
+const alarmSound = document.getElementById("settings-alarm-sound")
+const alarmPreview = document.getElementById("settings-alarm-preview")
 const lists = document.getElementById("settings-lists")
 const code = document.getElementById("settings-code")
 const copy = document.getElementById("settings-copy")
@@ -85,16 +89,37 @@ function showProgress() {
   code.value = encodeBackup()
 }
 
+function showAlarms() {
+  const lead = load(LEAD_KEY) ?? String(DEFAULT_LEAD)
+  for (const input of leads) input.checked = input.value === lead
+  const sound = load(SOUND_KEY) ?? DEFAULT_SOUND
+  alarmSound.value = [...alarmSound.options].some((o) => o.value === sound) ? sound : DEFAULT_SOUND
+  alarmPreview.disabled = alarmSound.value === "off"
+}
+
 function show() {
   for (const input of themes) input.checked = input.value === pickedTheme()
   for (const input of clocks) input.checked = input.value === pickedClock()
   hideDone.checked = load(HIDE_DONE_KEY) === "1"
+  showAlarms()
   showProgress()
 }
 
 for (const input of themes) input.addEventListener("change", () => pickTheme(input.value))
 for (const input of clocks) input.addEventListener("change", () => pickClock(input.value))
 hideDone.addEventListener("change", () => store(HIDE_DONE_KEY, hideDone.checked ? "1" : null))
+for (const input of leads) input.addEventListener("change", () => store(LEAD_KEY, input.value === String(DEFAULT_LEAD) ? null : input.value))
+const preview = () => {
+  const url = soundUrl(alarmSound.value)
+  if (url) new Audio(url).play().catch(() => {})
+}
+alarmSound.addEventListener("change", () => {
+  store(SOUND_KEY, alarmSound.value === DEFAULT_SOUND ? null : alarmSound.value)
+  alarmPreview.disabled = alarmSound.value === "off"
+  // Plays once so you hear it
+  preview()
+})
+alarmPreview.addEventListener("click", preview)
 
 copy.addEventListener("click", async () => {
   try {
@@ -133,6 +158,8 @@ restoreCode.addEventListener("keydown", (e) => {
 
 for (const { key } of LISTS) onStored(storageKey(key), showProgress)
 onStored(HIDE_DONE_KEY, () => hideDone.checked = load(HIDE_DONE_KEY) === "1")
+onStored(LEAD_KEY, showAlarms)
+onStored(SOUND_KEY, showAlarms)
 onStored("theme", () => themes.forEach((input) => input.checked = input.value === pickedTheme()))
 onStored("clock", () => clocks.forEach((input) => input.checked = input.value === pickedClock()))
 

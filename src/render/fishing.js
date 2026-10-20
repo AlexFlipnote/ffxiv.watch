@@ -1,5 +1,5 @@
 import {
-  chip, collectableChip, detailTimer, doneButton,
+  alarmFor, chip, collectableChip, detailTimer, doneButton,
   etWindows, expansionOptions, facts,
   gameText, howOften, html, listRow, listRows,
   locationFacts, mapFigure, pager, readData, readExpansions,
@@ -124,11 +124,12 @@ const fishTags = (fish) => [
 /**
  * @param {string} key See listRow
  * @param {object} fish
+ * @param {object} info fishing-items.json
  * @returns {import("./html.js").Html}
  */
-const fishRow = (key, fish) => listRow(key, fish, html`
+const fishRow = (key, fish, info) => listRow(key, fish, html`
     <div class="gathering-items"><span class="done-entry">${doneButton(fish.id)}<a class="gathering-item" href="${fishUrl(fish)}"><strong>${fish.name}</strong>${collectableChip(fish)}</a></span></div>
-    <div class="tags">${fishTags(fish)}</div>`)
+    <div class="tags">${fishTags(fish)}</div>`, isTimed(fish) && info[fish.id].icon)
 
 /**
  * @returns {object} Every fish's row and link for /fishing/, see listRows, and the expansion a first visit shows, its
@@ -137,8 +138,9 @@ const fishRow = (key, fish) => listRow(key, fish, html`
 export function fishList() {
   const expansions = readExpansions("fishing")
   const defaultExpansion = expansions.at(-1).file
+  const info = readData("fishing-items.json")
   return {
-    ...listRows("fishing", expansions, defaultExpansion, (fish) => fish.id, fishRow, (fish) => [{ url: fishUrl(fish), name: fish.name }]),
+    ...listRows("fishing", expansions, defaultExpansion, (fish) => fish.id, (key, fish) => fishRow(key, fish, info), (fish) => [{ url: fishUrl(fish), name: fish.name }]),
     defaultExpansion,
     expansionOptions: expansionOptions(expansions, defaultExpansion),
     sources: DATA_SOURCES
@@ -254,7 +256,7 @@ function spotCard(fish, info, others, paged) {
   return html`
 <section class="detail-card gathering-node">
   ${fish.map && mapFigure(fish, fish.name)}
-  ${fish.ocean ? oceanTimer(fish) : detailTimer(windowData(fish), isTimed(fish) ? `Bites ${whenText(fish)}` : "Bites any time", isTimed(fish) && howOften(fish, "Bites"))}
+  ${fish.ocean ? oceanTimer(fish) : detailTimer(windowData(fish), isTimed(fish) ? `Bites ${whenText(fish)}` : "Bites any time", isTimed(fish) && howOften(fish, "Bites"), alarmFor(`fish:${fish.id}`, fish.name, fish, info[fish.id].icon))}
   ${facts([
     ...oceanFacts(fish),
     // Next to the timer, as it's caught before the window

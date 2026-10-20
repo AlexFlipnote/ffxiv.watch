@@ -224,6 +224,31 @@
   }
 }
 
+// The sound picker fills what the Play button leaves
+.settings-sound .select-box {
+  flex: 1;
+  min-width: 0;
+}
+
+// A muted speaker by "No sound", where the open list can be styled
+@supports (appearance: base-select) {
+  @media (pointer: fine) {
+    #settings-alarm-sound option[value="off"] {
+      display: flex;
+      align-items: center;
+      gap: .375rem;
+
+      &::before {
+        content: "";
+        width: 1.125rem;
+        height: 1.125rem;
+        background-color: currentColor;
+        mask: url("/images/ui/no-sound.svg") center / contain no-repeat;
+      }
+    }
+  }
+}
+
 .settings-btn {
   flex: none;
   padding: .5rem .875rem;

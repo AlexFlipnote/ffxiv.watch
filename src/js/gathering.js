@@ -1,4 +1,5 @@
 import EXPANSIONS from "./data/gathering.json"
+import { placeOf } from "./utils/alarmBells.js"
 import { nextWindow } from "./utils/eorzea.js"
 import { listing } from "./utils/listing.js"
 
@@ -27,5 +28,15 @@ listing({
   matches: (node, query) => [node.zone, node.spot, node.type, node.job, node.folklore, node.quest, ...node.items.flatMap((i) => [i.name, i.scrip])]
     .some((text) => text?.toLowerCase().includes(query)),
   // Regular and Diadem nodes have no times, they're always up
-  windowOf: (node, now) => node.times ? nextWindow(node, now) : { always: true }
+  windowOf: (node, now) => node.times ? nextWindow(node, now) : { always: true },
+  // The crystals have no page
+  alarmOf: (node, tr) => {
+    if (!node.times) return null
+    const link = tr.querySelector("a.gathering-item")
+    const named = node.items.filter((i) => i.id >= 20)
+    return {
+      id: `node:${node.id}`, name: named.length > 1 ? `${named[0].name} +${named.length - 1}` : named[0]?.name ?? node.spot,
+      url: link?.pathname ?? "/gathering/", place: placeOf(node), times: node.times
+    }
+  }
 })
