@@ -1,13 +1,22 @@
 import { slug } from "mothwing/html"
 import { closable } from "./dialog.js"
+import { load, store } from "./storage.js"
 
-// More would only be scrolled past, and every row is DOM a phone has to keep
+// Every row is DOM a phone has to keep
 const SHOWN = 20
+// The URLs of the results last opened, shown before anything's typed
+const RECENT_KEY = "search-recent"
+const RECENT_SHOWN = 5
 const KINDS = {
   fish: { label: "Fish", url: (name) => `/fishing/${slug(name)}/` },
   gathering: { label: "Gathering", url: (name) => `/gathering/${slug(name)}/` },
   sightseeing: { label: "Vista", url: (name) => `/sightseeing/${slug(name)}/` },
   weather: { label: "Weather", url: (name) => `/weather/${slug(name)}/` }
+}
+// A word naming a kind, "fish ruby" or "weather kugane", puts that kind first
+const KIND_WORDS = {
+  fish: "Fish", item: "Gathering", items: "Gathering", gathering: "Gathering", node: "Gathering",
+  vista: "Vista", vistas: "Vista", sightseeing: "Vista", weather: "Weather", zone: "Weather", page: "Page"
 }
 
 /**
@@ -38,7 +47,7 @@ function searchable(name, keywords = "") {
 }
 
 const modal = document.createElement("dialog")
-modal.className = "modal search-modal"
+modal.className = "modal modal-top search-modal"
 modal.setAttribute("closedby", "any")
 modal.setAttribute("aria-label", "Search")
 modal.innerHTML = `
@@ -48,6 +57,7 @@ modal.innerHTML = `
       spellcheck="false" role="combobox" aria-expanded="true" aria-controls="search-results" aria-label="Search">
     <button class="close-btn" aria-label="Close">&times;</button>
   </div>
+  <p class="search-label" id="search-label" hidden>Recent</p>
   <ul class="search-results" id="search-results" role="listbox" aria-label="Results"></ul>
   <p class="search-note" aria-live="polite"></p>
 `
@@ -56,18 +66,21 @@ document.body.append(modal)
 const input = modal.querySelector(".search-input")
 const list = modal.querySelector(".search-results")
 const note = modal.querySelector(".search-note")
+const label = modal.querySelector(".search-label")
 closable(modal, modal.querySelector(".close-btn"))
 
 /** @type {Promise<Entry[]> | null} */
 let loading = null
 /** @type {Entry[]} */
 let entries = []
+/** @type {Map<string, Entry>} */
+let byUrl = new Map()
 /** @type {Entry[]} */
 let shown = []
 let active = 0
 
-/** @returns {Promise<Entry[]>} The index, fetched once, from where the navbar's button says, see data/search.js */
-export function load() {
+/** @returns {Promise<Entry[]>} The index, fetched once from the URL on the navbar's button */
+export function loadIndex() {
   loading ??= fetch(document.querySelector(".search-button").dataset.index).then((r) => r.json()).then((index) => {
     const all = []
     for (const [key, { label, url }] of Object.entries(KINDS)) {
@@ -88,12 +101,11 @@ export function load() {
 const startsWord = (key, i) => i === 0 || key[i - 1] === " "
 
 /**
- * The word's letters in order through the key, like "grtwd" in "greatwood" or "dufi" in "duty finder", the first at
- * the start of one of its words. Tried jumping to word starts first, as that's how people shorten names, then without.
+ * The word's letters in order through the key, like "grtwd" in "greatwood", the first starting a word.
  * @param {string} word
  * @param {string} key
  * @param {boolean} [jump]
- * @returns {number} 0 when they aren't there, up to 3 a letter: letters starting words and next to each other count most
+ * @returns {number} 0 when they aren't there, up to 3 a letter, most for word starts and letters in a row
  */
 function abbreviation(word, key, jump = true) {
   let pos = -1
@@ -114,8 +126,7 @@ function abbreviation(word, key, jump = true) {
 }
 
 /**
- * How well one of the query's words is in the entry: a whole word of its name, then the start of one, then anywhere
- * in it or its keywords, then its letters in order (see abbreviation), always below the rest.
+ * How well one of the query's words is in the entry, an abbreviation always last.
  * @param {Entry} entry
  * @param {string} word
  * @returns {number} 0 when it isn't
@@ -132,9 +143,7 @@ function wordScore(entry, word) {
 }
 
 /**
- * Every word of the query has to be in it, in any order. The name being the query comes first, "The" left out like
- * people leave it out of "The Ruby Sea", then the query as whole words in it, so "la noscea" finds the zones before
- * La Noscean Leek.
+ * Every word of the query has to be in it. The exact name comes first, a leading "The" optional, then whole words.
  * @param {Entry} entry
  * @param {string} query Folded
  * @param {string[]} words The query's words
@@ -143,7 +152,8 @@ function wordScore(entry, word) {
 function score(entry, query, words) {
   let total = 0
   for (const word of words) {
-    const points = wordScore(entry, word)
+    // Alone it's still a search for the word, not every fish
+    const points = words.length > 1 && KIND_WORDS[word] === entry.kind ? 110 : wordScore(entry, word)
     if (!points) return 0
     total += points
   }
@@ -152,6 +162,8 @@ function score(entry, query, words) {
   else if (key.startsWith(` ${query} `)) total += 200
   else if (key.includes(` ${query} `)) total += 150
   else if (entry.key.startsWith(query)) total += 100
+  // "fish" means Fishing before Hook Fish
+  if (entry.kind === "Page") total += 100
   return total
 }
 
@@ -164,16 +176,34 @@ function setActive(i) {
   li.scrollIntoView({ block: "nearest" })
 }
 
+/** @returns {string[]} The recent results' URLs, newest first */
+function recentUrls() {
+  try {
+    const urls = JSON.parse(load(RECENT_KEY))
+    return Array.isArray(urls) ? urls : []
+  } catch {
+    return []
+  }
+}
+
+/** @param {string} url */
+function remember(url) {
+  store(RECENT_KEY, JSON.stringify([url, ...recentUrls().filter((u) => u !== url)].slice(0, RECENT_SHOWN)))
+}
+
 function update() {
   const query = fold(input.value.trim())
   const words = query.split(" ").filter(Boolean)
 
+  // A page renamed since isn't in the index
   shown = query ? entries
     .map((entry) => ({ entry, rank: score(entry, query, words) }))
     .filter((e) => e.rank > 0)
     .sort((a, b) => b.rank - a.rank || a.entry.key.length - b.entry.key.length)
     .slice(0, SHOWN)
-    .map((e) => e.entry) : []
+    .map((e) => e.entry) : recentUrls().map((url) => byUrl.get(url)).filter(Boolean)
+  label.hidden = !!query || !shown.length
+  list.setAttribute("aria-label", query ? "Results" : "Recent")
 
   list.replaceChildren(...shown.map((entry, i) => {
     const li = document.createElement("li")
@@ -202,6 +232,11 @@ function update() {
 }
 
 input.addEventListener("input", update)
+// Enter clicks the result too, so this catches both
+list.addEventListener("click", (e) => {
+  const a = e.target.closest("a")
+  if (a) remember(a.getAttribute("href"))
+})
 input.addEventListener("keydown", (e) => {
   if (e.key === "ArrowDown" || e.key === "ArrowUp") {
     e.preventDefault()
@@ -218,7 +253,8 @@ export async function openSearch() {
   input.select()
   update()
   try {
-    entries = await load()
+    entries = await loadIndex()
+    byUrl = new Map(entries.map((entry) => [entry.url, entry]))
   } catch {
     note.textContent = "Couldn't load the search, check your connection and try again"
     return
@@ -226,7 +262,7 @@ export async function openSearch() {
   update()
 }
 
-// Ctrl+K, ⌘K on a Mac, or / like most sites with a search, unless it's typed into a field
+// Ctrl+K, ⌘K, or / outside a field
 document.addEventListener("keydown", (e) => {
   const typing = e.target.closest?.("input, textarea, select, [contenteditable]")
   if ((e.key.toLowerCase() === "k" && (e.ctrlKey || e.metaKey)) || (e.key === "/" && !typing && !e.ctrlKey && !e.metaKey && !e.altKey)) {

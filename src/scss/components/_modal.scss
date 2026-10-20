@@ -77,6 +77,15 @@
   }
 }
 
+// Held near the top, so a list in it grows and shrinks below instead of the box moving
+.modal-top {
+  margin-top: 12vh;
+
+  @include mobile {
+    margin-top: 1rem;
+  }
+}
+
 .modal-header {
   display: flex;
   justify-content: space-between;

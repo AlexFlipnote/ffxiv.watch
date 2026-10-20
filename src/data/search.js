@@ -2,10 +2,7 @@ import { asset } from "mothwing"
 import { itemUrl } from "../render/gathering.js"
 import { readData, readExpansions } from "../render/html.js"
 
-// No `sources`: every page links to it from the navbar, and a patch or Lodestone update shouldn't redate them all in
-// the sitemap. Dev still renders it again when the game data changes, see rerender in mothwing.config.js
-
-// The pages that aren't a fish, item, vista or zone, with the words people might look for them by
+// The other pages, with the words people might look for them by
 const PAGES = [
   ["Timers", "/", "eorzea time clock"],
   ["Sightseeing log", "/sightseeing/", "vistas"],
@@ -23,8 +20,7 @@ const PAGES = [
 ]
 
 /**
- * Everything the search in the navbar finds, see js/utils/search.js. Names only: the script works out the URLs with
- * the same slug() the pages are named by, which keeps it a third smaller.
+ * Everything the navbar's search finds. Names only, the script slugs them into URLs.
  * @returns {{ fish: [string, number][], gathering: [string, number][], sightseeing: string[], weather: string[], pages: string[][] }}
  */
 function searchIndex() {
@@ -49,5 +45,5 @@ function searchIndex() {
   }
 }
 
-/** {{ search.index }}, the index's URL with a hash of it, so a deploy that changes it is fetched fresh */
+// No `sources`, every page links to it and a data update shouldn't redate them all in the sitemap
 export default () => ({ index: asset("search.json", JSON.stringify(searchIndex())) })

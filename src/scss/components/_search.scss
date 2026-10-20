@@ -1,14 +1,11 @@
 @use "../mixins" as *;
 
-// The search behind the magnifier and Ctrl+K, see js/utils/search.js. The frame is the .modal's, near the top like a
-// command palette so the results grow down instead of the box jumping around as they change
+// Near the top, so the results grow down instead of moving the box
 .search-modal {
   max-width: 36rem;
-  margin-top: 12vh;
   padding: .75rem;
 
   @include mobile {
-    margin-top: 1rem;
     padding: .75rem;
   }
 }
@@ -62,6 +59,16 @@
   }
 }
 
+// Over the recent results
+.search-label {
+  margin: .75rem .625rem 0;
+  font-size: .75rem;
+  font-weight: bold;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--font-tertiary);
+}
+
 .search-results {
   margin: 0;
   padding: 0;
@@ -106,7 +113,7 @@
     height: 2rem;
   }
 
-  // The ones without a game icon get their section's, as a mask so they take the text's color
+  // Without a game icon, its section's as a mask
   &[data-kind]::before {
     content: "";
     width: 1.25rem;
@@ -123,8 +130,10 @@
     mask-image: url("/images/ui/theme-light.svg");
   }
 
+  // The arrow file points back, a page is somewhere to go
   &[data-kind="page"]::before {
     mask-image: url("/images/ui/arrow.svg");
+    transform: scaleX(-1);
   }
 }
 

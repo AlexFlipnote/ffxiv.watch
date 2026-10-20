@@ -1,5 +1,5 @@
 import "./theme.js"
-import { load, openSearch } from "./search.js"
+import { loadIndex, openSearch } from "./search.js"
 import { openSettings } from "./settings.js"
 
 const navbar = document.querySelector(".navbar")
@@ -48,7 +48,7 @@ searchButton.addEventListener("click", () => {
   openSearch()
 })
 
-// Fetched on the way to a click, so it's often there when the dialog opens. A failure here is shown once it does
-const preload = () => load().catch(() => {})
+// Fetched on the way to a click, a failure shows once it opens
+const preload = () => loadIndex().catch(() => {})
 searchButton.addEventListener("pointerenter", preload, { once: true })
 searchButton.addEventListener("focus", preload, { once: true })
