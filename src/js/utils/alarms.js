@@ -27,6 +27,8 @@ export function leadText() {
 }
 
 const current = cachedWindows(alarmWindow)
+// Phones pause a page in the background, so its alarms can't ring
+const touch = matchMedia("(pointer: coarse)").matches
 
 /**
  * Adds the alarm, or takes it away when it's set.
@@ -163,8 +165,8 @@ function buildList() {
   }))
 
   const blocked = globalThis.Notification?.permission === "denied"
-  note.textContent = `Each rings ${leadText()}, while ffxiv.watch is open in a tab.${blocked
-    ? " Notifications are blocked for this site, so it only plays the sound and shows it here." : ""}`
+  note.textContent = `Rings ${leadText()}, while a tab is open.${touch ? " Keep the page open on phone screen." : ""}${blocked
+    ? " Notifications are blocked for this site." : ""}`
 }
 
 function render(now) {
