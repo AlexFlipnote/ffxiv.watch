@@ -1,7 +1,7 @@
 import { ALARMS_KEY, DEFAULT_LEAD, LEAD_KEY, NEXT_KEY, paintPill, readAlarms, soundUrl } from "./alarmBells.js"
 import { closable } from "./dialog.js"
 import { ET_MINUTE_EARTH_MS } from "./eorzea.js"
-import { alarmsDue, alarmWindow, cachedWindows } from "./forecast.js"
+import { alarmsDue, alarmWindow, cachedWindows, ringDue } from "./forecast.js"
 import { load, onStored, store } from "./storage.js"
 import { everyTick, formatCountdown, formatIn, setText } from "./time.js"
 import { toast } from "./toast.js"
@@ -27,7 +27,7 @@ export function leadText() {
 }
 
 const current = cachedWindows(alarmWindow)
-// Phones pause a page in the background, so its alarms can't ring
+// Phones pause a page in the background, and only show notifications through a service worker
 const touch = matchMedia("(pointer: coarse)").matches
 
 /**
@@ -69,8 +69,14 @@ function ring(alarm, w) {
   const left = w.start - Date.now()
   const text = left > 1000 ? `${alarm.name} is up in ${formatIn(left)}` : `${alarm.name} is up now`
   toast(text, { tone: "success", duration: 15000 })
-  if (globalThis.Notification?.permission !== "granted") return
-  const notification = new Notification(text, { body: alarm.place, icon: "/images/icon-192.png", tag: `${alarm.id}:${w.start}` })
+  if (touch || globalThis.Notification?.permission !== "granted") return
+  let notification
+  try {
+    notification = new Notification(text, { body: alarm.place, icon: "/images/icon-192.png", tag: `${alarm.id}:${w.start}` })
+  } catch {
+    // Some browsers only show them through a service worker
+    return
+  }
   notification.addEventListener("click", () => {
     focus()
     notification.close()
@@ -95,9 +101,7 @@ function schedule() {
     saving = true
     store(ALARMS_KEY, JSON.stringify(alarms))
     saving = false
-    for (const [alarm, w] of due) ring(alarm, w)
-    // Once, several would play over each other
-    playSound()
+    ringDue(due, playSound, ring)
     schedule()
     return
   }

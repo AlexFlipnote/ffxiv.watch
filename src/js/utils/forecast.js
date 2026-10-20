@@ -199,6 +199,24 @@ export function alarmsDue(alarms, now, lead) {
 }
 
 /**
+ * Rings what alarmsDue found: the sound once, then each alarm's toast and notification.
+ * @param {[object, object][]} due
+ * @param {() => void} play
+ * @param {(alarm: object, w: object) => void} show
+ */
+export function ringDue(due, play, show) {
+  // First, so a notification that throws can't keep it quiet
+  play()
+  for (const [alarm, w] of due) {
+    try {
+      show(alarm, w)
+    } catch (err) {
+      console.error(err)
+    }
+  }
+}
+
+/**
  * A window finder with a cache per entry, looked up again once the window is over, or a minute later when none came up.
  * @param {(entry: object, now: number) => import("./listing.js").Window} find
  * @returns {(entry: object, now: number) => import("./listing.js").Window}

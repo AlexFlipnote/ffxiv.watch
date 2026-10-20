@@ -2,7 +2,7 @@ import assert from "node:assert/strict"
 import fs from "node:fs"
 import { describe, it } from "node:test"
 import { ET_DAY_EARTH_MS, ET_MINUTE_EARTH_MS } from "../src/js/utils/eorzea.js"
-import { alarmsDue, alarmWindow } from "../src/js/utils/forecast.js"
+import { alarmsDue, alarmWindow, ringDue } from "../src/js/utils/forecast.js"
 import { alarmTiming, nextWeatherWindow } from "../src/js/utils/windows.js"
 
 const ET_HOUR = 60 * ET_MINUTE_EARTH_MS
@@ -41,6 +41,22 @@ describe("Alarms", () => {
   it("rings alarms due together in one go", () => {
     const { due } = alarmsDue([alarm(), alarm({ id: "node:2" })], START + 1000, 0)
     assert.deepEqual(due.map(([a]) => a.id), ["node:1", "node:2"])
+  })
+
+  it("plays the sound once and first, however many ring", () => {
+    const calls = []
+    ringDue([[alarm(), {}], [alarm({ id: "node:2" }), {}]], () => calls.push("sound"), (a) => calls.push(a.id))
+    assert.deepEqual(calls, ["sound", "node:1", "node:2"])
+  })
+
+  it("rings the rest when one's notification throws, like on Android", (t) => {
+    t.mock.method(console, "error", () => {})
+    const rung = []
+    ringDue([[alarm(), {}], [alarm({ id: "node:2" }), {}]], () => {}, (a) => {
+      if (a.id === "node:1") throw new TypeError("Illegal constructor")
+      rung.push(a.id)
+    })
+    assert.deepEqual(rung, ["node:2"])
   })
 
   it("works out a weather fish's windows from what it keeps, the same as the list does", () => {

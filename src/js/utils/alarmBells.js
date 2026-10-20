@@ -138,8 +138,10 @@ export function alarmBell(button, alarm) {
   button.addEventListener("click", () => {
     const alarm = bells.get(button)
     if (!alarm) return
-    // Browsers ignore an ask that isn't right in the click
-    if (!ids().has(alarm.id) && globalThis.Notification?.permission === "default") Notification.requestPermission()
+    // Browsers ignore an ask that isn't right in the click. A phone can't show them without a service worker
+    if (!ids().has(alarm.id) && globalThis.Notification?.permission === "default" && !matchMedia("(pointer: coarse)").matches) {
+      Notification.requestPermission()
+    }
     import("./alarms.js").then((m) => m.toggleAlarm(alarm))
   })
 }
