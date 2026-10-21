@@ -19,6 +19,16 @@
       "start": 1792051200000,
       "end": 1793631540000,
       "image": "/images/events/1a2f450a10369c614dcae06468c478ec815e642d.webp"
+    },
+    {
+      "id": "08ee0babf2893172a422c7a4da2f5e07f025a860",
+      "name": "Keybound Brawler Arrives 28 October",
+      "lead": "Keybound Brawler, a new event that tests your typing prowess, is coming to the Manderville Gold Saucer! The first iteration of the event will be a special collaboration with the FINAL FANTASY VII REMAKE series.",
+      "url": "https://eu.finalfantasyxiv.com/lodestone/topics/detail/08ee0babf2893172a422c7a4da2f5e07f025a860",
+      "start": 1793174400000,
+      "end": null,
+      "until": "8.0",
+      "image": "/images/events/08ee0babf2893172a422c7a4da2f5e07f025a860.webp"
     }
   ],
   "topics": {
@@ -82,10 +92,6 @@
         "end": 1791903540000
       }
     },
-    "c0c35ad1c308851fd0f16aacdb03dd34599ee6b8": {
-      "updated": "2026-09-17T07:00:00Z",
-      "found": null
-    },
     "76c20a92afbe7c5506f4cd491603a317cb5e5cd1": {
       "updated": "2026-10-13T06:30:00Z",
       "found": null
@@ -113,6 +119,15 @@
     "14be574eb8355d44b3352c0cd735a54a94457e9f": {
       "updated": "2026-10-20T07:00:00Z",
       "found": null
+    },
+    "08ee0babf2893172a422c7a4da2f5e07f025a860": {
+      "updated": "2026-10-21T08:00:00Z",
+      "found": {
+        "url": "https://eu.finalfantasyxiv.com/lodestone/topics/detail/08ee0babf2893172a422c7a4da2f5e07f025a860",
+        "start": 1793174400000,
+        "end": null,
+        "until": "8.0"
+      }
     }
   }
 }
