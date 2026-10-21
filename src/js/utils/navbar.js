@@ -55,6 +55,50 @@ const preload = () => loadIndex().catch(() => {})
 searchButton.addEventListener("pointerenter", preload, { once: true })
 searchButton.addEventListener("focus", preload, { once: true })
 
+// Firefox and Safari don't run the speculation rules in head.html, so a link held hovered like "moderate" there gets
+// its page fetched here instead. The pages are cached for 10 minutes, so the click then takes it from the cache
+if (!HTMLScriptElement.supports?.("speculationrules")) {
+  // Safari has no rel=prefetch, a plain fetch fills the same cache
+  const linkPrefetch = document.createElement("link").relList.supports("prefetch")
+  const fetched = new Set()
+  let timer
+
+  /** @param {HTMLAnchorElement} a */
+  const prefetch = (a) => {
+    const url = a.href.split("#")[0]
+    if (fetched.has(url)) return
+    fetched.add(url)
+    if (linkPrefetch) document.head.append(Object.assign(document.createElement("link"), { rel: "prefetch", href: url }))
+    else fetch(url, { priority: "low" }).catch(() => {})
+  }
+
+  /** @param {Event} e */
+  const linkOf = (e) => {
+    const a = e.target.closest?.("a[href]")
+    if (a && a.origin === location.origin && a.pathname !== location.pathname && !a.target && !a.hasAttribute("download")) return a
+  }
+
+  // The same 200ms Chrome waits, so moving the mouse across the page doesn't fetch every link it passes
+  document.addEventListener("pointerover", (e) => {
+    const a = linkOf(e)
+    if (!a || e.pointerType === "touch") return
+    clearTimeout(timer)
+    timer = setTimeout(() => prefetch(a), 200)
+  })
+  document.addEventListener("pointerout", (e) => {
+    if (linkOf(e)) clearTimeout(timer)
+  })
+  // A tap has no hover, this still starts it the moment before the click
+  document.addEventListener("pointerdown", (e) => {
+    const a = linkOf(e)
+    if (a) prefetch(a)
+  })
+  document.addEventListener("focusin", (e) => {
+    const a = linkOf(e)
+    if (a) prefetch(a)
+  })
+}
+
 // The pill from what the last page saved, so it's there before alarms.js loads
 if (readAlarms().length) paintPill(readAlarms().length, savedNext(Date.now()), Date.now())
 
