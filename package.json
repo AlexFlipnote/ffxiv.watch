@@ -18,7 +18,7 @@
   "devDependencies": {
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
-    "mothwing": "^0.1.2",
+    "mothwing": "^0.1.3",
     "sass": "^1.93.3",
     "sharp": "0.35.5"
   }
