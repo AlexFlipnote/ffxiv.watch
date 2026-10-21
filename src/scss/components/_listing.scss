@@ -165,8 +165,16 @@
   flex-direction: column;
   gap: 1.25rem;
 
+  // Held invisible but still taking space, so a fast load swaps straight to the rows instead of flashing a different shape
   .js &:not([hidden]) {
     display: flex;
+    animation: skeleton-delay 0s 200ms both;
+  }
+}
+
+@keyframes skeleton-delay {
+  from {
+    visibility: hidden;
   }
 }
 
