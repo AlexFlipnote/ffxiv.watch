@@ -84,14 +84,6 @@
       "updated": "2026-09-17T08:30:00Z",
       "found": null
     },
-    "ce9a589b2272b39e2987a7ef349b445c29b537b3": {
-      "updated": "2026-09-17T08:00:00Z",
-      "found": {
-        "url": "https://eu.finalfantasyxiv.com/lodestone/topics/detail/ce9a589b2272b39e2987a7ef349b445c29b537b3",
-        "start": 1790236800000,
-        "end": 1791903540000
-      }
-    },
     "76c20a92afbe7c5506f4cd491603a317cb5e5cd1": {
       "updated": "2026-10-13T06:30:00Z",
       "found": null
@@ -128,6 +120,10 @@
         "end": null,
         "until": "8.0"
       }
+    },
+    "fd07292cf49a3e0b98888265c62794e0ca211e99": {
+      "updated": "2026-10-22T07:00:00Z",
+      "found": null
     }
   }
 }
