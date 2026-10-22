@@ -54,7 +54,6 @@ export default defineConfig({
     ],
     disallow: ["/rows/"]
   },
-  cname: true,
   // The reset pages are the timers', though not under / like a section's pages are under theirs
   activeLinks: (href, route) => href === "/" && route.source === "[resets.slug].html" ? "section" : undefined,
   transforms: [sizeSelects],
