@@ -179,16 +179,17 @@ export const alarmWindow = (alarm, now) => nextWeatherWindow(alarm, now, alarm.r
  * @param {import("./alarmBells.js").Alarm[]} alarms
  * @param {number} now
  * @param {number} lead Earth ms before a window they ring
+ * @param {(alarm: object, now: number) => import("./listing.js").Window} [windowOf] An alarm's window now or next
  * @returns {{ due: [object, { start: number, end: number }][], next: number }} `next` is Infinity when nothing's coming
  */
-export function alarmsDue(alarms, now, lead) {
+export function alarmsDue(alarms, now, lead, windowOf = alarmWindow) {
   const due = []
   let next = Infinity
   for (const alarm of alarms) {
-    let w = alarmWindow(alarm, now)
+    let w = windowOf(alarm, now)
     if (!w || w.always) continue
     // One that just opened still rings, unless it has
-    if (w.open && (alarm.rung === w.start || now - w.start > GRACE)) w = alarmWindow(alarm, w.end)
+    if (w.open && (alarm.rung === w.start || now - w.start > GRACE)) w = windowOf(alarm, w.end)
     if (!w) continue
     if (w.start - lead > now) next = Math.min(next, w.start - lead)
     else if (alarm.rung !== w.start) due.push([alarm, w])

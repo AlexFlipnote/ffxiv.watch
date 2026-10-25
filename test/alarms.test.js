@@ -3,6 +3,7 @@ import fs from "node:fs"
 import { describe, it } from "node:test"
 import { ET_DAY_EARTH_MS, ET_MINUTE_EARTH_MS } from "../src/js/utils/eorzea.js"
 import { alarmsDue, alarmWindow, ringDue } from "../src/js/utils/forecast.js"
+import { nextVoyageTo } from "../src/js/utils/voyages.js"
 import { alarmTiming, nextWeatherWindow } from "../src/js/utils/windows.js"
 
 const ET_HOUR = 60 * ET_MINUTE_EARTH_MS
@@ -30,6 +31,16 @@ describe("Alarms", () => {
 
   it("skips a window that opened too long ago to still ring", () => {
     assert.deepEqual(alarmsDue([alarm()], START + 5 * 60 * 1000, 0), { due: [], next: TOMORROW })
+  })
+
+  it("rings an ocean fish's alarm as boarding opens for the voyage to its stop", () => {
+    const sothis = alarm({ id: "fish:29788", ocean: { stop: "Galadion Bay", time: "Night" } })
+    const voyages = (a, now) => nextVoyageTo(a.ocean, now)
+    const boarding = nextVoyageTo(sothis.ocean, START)
+    assert.deepEqual(alarmsDue([sothis], boarding.start - 1000, 0, voyages), { due: [], next: boarding.start })
+    assert.equal(alarmsDue([sothis], boarding.start + 5000, 0, voyages).due[0][1].start, boarding.start)
+    const later = alarmsDue([{ ...sothis, rung: boarding.start }], boarding.start + 5000, 0, voyages).next
+    assert.equal(later, nextVoyageTo(sothis.ocean, boarding.end).start)
   })
 
   it("rings the lead time before the window", () => {

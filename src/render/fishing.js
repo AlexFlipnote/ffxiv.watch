@@ -3,10 +3,11 @@ import {
   etWindows, expansionOptions, facts,
   gameText, howOften, html, listRow, listRows,
   locationFacts, mapFigure, pager, readData, readExpansions,
-  scripCard, slug, xivIcon
+  scripCard, slug, spanText, xivIcon
 } from "./html.js"
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
+import { CYCLE, nextVoyageTo } from "../js/utils/voyages.js"
 
 const DATA_SOURCES = ["js/data/fishing.json", "js/data/fishing"]
 
@@ -170,7 +171,8 @@ function fishSeo(fish) {
   ]
   const text = extras.reduce((out, extra) => (out + extra).length < 159 ? out + extra : out, `Where to catch ${fish.name} in ${where}`)
   return {
-    title: `${fish.name}: FFXIV ${fish.big ? "Big Fish" : "Fish"} Location${timed ? " & Times" : ""}`,
+    // An ocean fish's times are its voyages'
+    title: `${fish.name}: FFXIV ${fish.big ? "Big Fish" : "Fish"} Location${timed || fish.ocean ? " & Times" : ""}`,
     description: `${text}.`
   }
 }
@@ -256,7 +258,7 @@ function spotCard(fish, info, others, paged) {
   return html`
 <section class="detail-card gathering-node">
   ${fish.map && mapFigure(fish, fish.name)}
-  ${fish.ocean ? oceanTimer(fish) : detailTimer(windowData(fish), isTimed(fish) ? `Bites ${whenText(fish)}` : "Bites any time", isTimed(fish) && howOften(fish, "Bites"), alarmFor(`fish:${fish.id}`, fish.name, fish, info[fish.id].icon))}
+  ${fish.ocean ? oceanTimer(fish, info) : detailTimer(windowData(fish), isTimed(fish) ? `Bites ${whenText(fish)}` : "Bites any time", isTimed(fish) && howOften(fish, "Bites"), alarmFor(`fish:${fish.id}`, fish.name, fish, info[fish.id].icon))}
   ${facts([
     ...oceanFacts(fish),
     // Next to the timer, as it's caught before the window
@@ -270,13 +272,35 @@ function spotCard(fish, info, others, paged) {
 }
 
 /**
- * An ocean fish bites on the voyages, at its stop, so it has no timer of its own. The ocean fishing page has the voyages.
+ * How often a voyage gets to its stop, over the schedule's 12 days, which then repeat.
+ * @param {import("../js/utils/voyages.js").OceanStop} ocean
+ * @returns {string} "6 voyages in every 12 days get there at night: one every 2 days on average, ..."
+ */
+function voyagesOften(ocean) {
+  const starts = []
+  for (let w = nextVoyageTo(ocean, 0); w && w.start < CYCLE; w = nextVoyageTo(ocean, w.end)) starts.push(w.start)
+  // Round the end into the start of the next 12 days
+  const waits = starts.map((start, i) => (starts[i + 1] ?? starts[0] + CYCLE) - start)
+  const average = waits.every((w) => w === waits[0]) ? "" : " on average"
+  const longest = average && `, the longest wait is ${spanText(Math.max(...waits))}`
+  return `${starts.length} voyages in every 12 days get there${ocean.time ? ` at ${ocean.time.toLowerCase()}` : ""}: one every ${spanText(CYCLE / starts.length)}${average}${longest}. The times are when boarding opens, for 15 minutes.`
+}
+
+/**
+ * An ocean fish bites on the voyages that get to its stop, at the time of day it needs there, which the schedule says.
+ * The spectral current and the weather on board are down to luck.
  * @param {object} fish
+ * @param {object} info fishing-items.json
  * @returns {import("./html.js").Html}
  */
-const oceanTimer = (fish) => detailTimer(null, fish.ocean.time
-  ? `Bites on voyages that reach ${fish.ocean.stop} at ${fish.ocean.time.toLowerCase()}`
-  : "Bites on ocean fishing voyages")
+const oceanTimer = (fish, info) => detailTimer(
+  JSON.stringify({ ocean: { stop: fish.ocean.stop, time: fish.ocean.time } }),
+  fish.ocean.time
+    ? `Bites on voyages that reach ${fish.ocean.stop} at ${fish.ocean.time.toLowerCase()}`
+    : `Bites on every voyage that stops at ${fish.ocean.stop}`,
+  voyagesOften(fish.ocean),
+  alarmFor(`fish:${fish.id}`, fish.name, fish, info[fish.id].icon)
+)
 
 /**
  * @param {object} fish

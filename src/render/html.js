@@ -137,7 +137,7 @@ function roughly(ms) {
 }
 
 /** @returns {string} "6 minutes" */
-const spanText = (ms) => {
+export const spanText = (ms) => {
   const [n, unit] = roughly(ms)
   return `${n} ${unit}${n === 1 ? "" : "s"}`
 }

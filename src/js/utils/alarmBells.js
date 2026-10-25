@@ -38,6 +38,7 @@ export function soundUrl(name = load(SOUND_KEY) ?? DEFAULT_SOUND) {
  * @property {string[]} [weather]
  * @property {string[]} [previousWeather]
  * @property {[string, number][]} [rates] Its zone's weather odds, when it waits for weather
+ * @property {import("./voyages.js").OceanStop} [ocean] An ocean fish's stop, it rings for the voyages there
  * @property {number} [rung] The start of the last window it rang for
  */
 

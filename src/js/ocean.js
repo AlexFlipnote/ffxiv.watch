@@ -1,8 +1,7 @@
 import "./utils/navbar.js"
 import { everyTick, formatCountdown, setText, setTime } from "./utils/time.js"
-import { VOYAGE, voyageAt } from "./utils/voyages.js"
+import { BOARDING, VOYAGE, voyageAt } from "./utils/voyages.js"
 
-const BOARDING = 15 * 60 * 1000
 // The voyages listed after the next one
 const COMING = 6
 

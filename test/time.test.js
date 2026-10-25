@@ -5,6 +5,7 @@ import { ET_DAY_EARTH_MS, ET_MINUTE_EARTH_MS, nextWindow, toEorzea } from "../sr
 import { crystallineConflictAt, frontlineAt } from "../src/js/utils/pvp.js"
 import { FASHION_REPORT, gatesAfter, openTournaments, phaseAt, tournaments } from "../src/js/utils/saucer.js"
 import { getAllTimerStates } from "../src/js/utils/timers.js"
+import { BOARDING, CYCLE, nextVoyageTo, voyageAt } from "../src/js/utils/voyages.js"
 import { nextWeatherWindow } from "../src/js/utils/windows.js"
 import ZONES from "../src/js/data/weather.json" with { type: "json" }
 
@@ -169,6 +170,26 @@ describe("PvP maps", () => {
     for (const now of samples()) {
       for (const on of [frontlineAt(now), crystallineConflictAt(now)]) assert.ok(on.map && on.start <= now && on.end > now)
     }
+  })
+})
+
+describe("Ocean fish voyages", () => {
+  const ocean = entries("fishing").filter((fish) => fish.ocean)
+
+  it("finds a voyage to every ocean fish's stop, at its time of day, within the 12-day schedule", () => {
+    for (const fish of ocean) {
+      const w = nextVoyageTo(fish.ocean, NOW)
+      assert.ok(w && w.start < NOW + CYCLE, fish.name)
+      const stops = ["indigo", "ruby"].flatMap((route) => voyageAt(route, w.start).stops)
+      assert.ok(stops.some((s) => s.place === fish.ocean.stop && (!fish.ocean.time || s.time === fish.ocean.time)), fish.name)
+    }
+  })
+
+  it("counts the voyage boarding now, and moves on once boarding closes", () => {
+    const sothis = ocean.find((fish) => fish.name === "Sothis").ocean
+    const next = nextVoyageTo(sothis, NOW)
+    assert.deepEqual(nextVoyageTo(sothis, next.start + 60_000), { start: next.start, end: next.start + BOARDING, open: true })
+    assert.ok(nextVoyageTo(sothis, next.end).start > next.start)
   })
 })
 

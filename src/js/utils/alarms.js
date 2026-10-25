@@ -5,6 +5,7 @@ import { alarmsDue, alarmWindow, cachedWindows, ringDue } from "./forecast.js"
 import { load, onStored, store } from "./storage.js"
 import { everyTick, formatCountdown, formatIn, setText } from "./time.js"
 import { toast } from "./toast.js"
+import { nextVoyageTo } from "./voyages.js"
 
 // Longer timers misfire in some browsers
 const MAX_WAIT = 60 * 60 * 1000
@@ -26,7 +27,13 @@ export function leadText() {
   return `${hours} ET hour${hours === 1 ? "" : "s"} (${Math.floor(earth / 60)}:${String(earth % 60).padStart(2, "0")}) before it's up`
 }
 
-const current = cachedWindows(alarmWindow)
+/**
+ * @param {Alarm} alarm
+ * @param {number} now
+ * @returns {import("./listing.js").Window} Its window now or next, an ocean fish's is its voyage's boarding
+ */
+const windowOf = (alarm, now) => alarm.ocean ? nextVoyageTo(alarm.ocean, now) : alarmWindow(alarm, now)
+const current = cachedWindows(windowOf)
 // Phones pause a page in the background, and only show notifications through a service worker
 const touch = matchMedia("(pointer: coarse)").matches
 
@@ -67,7 +74,9 @@ function playSound() {
  */
 function ring(alarm, w) {
   const left = w.start - Date.now()
-  const text = left > 1000 ? `${alarm.name} is up in ${formatIn(left)}` : `${alarm.name} is up now`
+  const text = alarm.ocean
+    ? left > 1000 ? `The voyage for ${alarm.name} boards in ${formatIn(left)}` : `The voyage for ${alarm.name} is boarding now`
+    : left > 1000 ? `${alarm.name} is up in ${formatIn(left)}` : `${alarm.name} is up now`
   toast(text, { tone: "success", duration: 15000 })
   if (touch || globalThis.Notification?.permission !== "granted") return
   let notification
@@ -95,7 +104,7 @@ let saving = false
 function schedule() {
   clearTimeout(timer)
   const now = Date.now()
-  const { due, next } = alarmsDue(alarms, now, leadMinutes() * ET_MINUTE_EARTH_MS)
+  const { due, next } = alarmsDue(alarms, now, leadMinutes() * ET_MINUTE_EARTH_MS, windowOf)
   if (due.length) {
     for (const [alarm, w] of due) alarm.rung = w.start
     saving = true
