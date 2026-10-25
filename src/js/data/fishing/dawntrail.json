@@ -1,5 +1,577 @@
 [
   {
+    "id": 51209,
+    "name": "First Mate's Finger",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
+  },
+  {
+    "id": 51210,
+    "name": "Specterfish",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
+  },
+  {
+    "id": 51211,
+    "name": "Rhotano Permit",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
+  },
+  {
+    "id": 51212,
+    "name": "Rhotano Dahlia",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
+  },
+  {
+    "id": 51213,
+    "name": "Lodesmate's Pen",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
+  },
+  {
+    "id": 51214,
+    "name": "Rhotano Roosterfish",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
+  },
+  {
+    "id": 51215,
+    "name": "Rhotanosaurus",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
+  },
+  {
+    "id": 51216,
+    "name": "Royal Handmaiden",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
+  },
+  {
+    "id": 51217,
+    "name": "Spectral Starfish",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    }
+  },
+  {
+    "id": 51218,
+    "name": "Frolicsome Fish",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Margin",
+    "ocean": {
+      "stop": "Unnamed Island"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy"
+  },
+  {
+    "id": 51219,
+    "name": "Captain's Finger",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 51220,
+    "name": "Bright Red Coral",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    }
+  },
+  {
+    "id": 51221,
+    "name": "Royal Favorite",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    }
+  },
+  {
+    "id": 51222,
+    "name": "Pirate's Purse",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 51223,
+    "name": "Captain's Pen",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    }
+  },
+  {
+    "id": 51224,
+    "name": "Tylosaurus",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    }
+  },
+  {
+    "id": 51225,
+    "name": "Cieldalaes Roosterfish",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 51223,
+          "name": "Captain's Pen"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 51226,
+    "name": "Renegade Rhotanosaurus",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 51227,
+    "name": "Red Boarfish",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 51228,
+    "name": "Akupara",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Unnamed Spectral Current",
+    "ocean": {
+      "stop": "Unnamed Island",
+      "spectral": true,
+      "blue": true,
+      "time": "Night"
+    },
+    "bait": [
+      [
+        {
+          "id": 51225,
+          "name": "Cieldalaes Roosterfish"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 51229,
+    "name": "Red Mantis",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    }
+  },
+  {
+    "id": 51230,
+    "name": "Datli Gwl",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    }
+  },
+  {
+    "id": 51231,
+    "name": "Agama's Strand",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    }
+  },
+  {
+    "id": 51232,
+    "name": "Palaka's Blade",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    }
+  },
+  {
+    "id": 51233,
+    "name": "Parjanya Wrasse",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    }
+  },
+  {
+    "id": 51234,
+    "name": "Simolestes",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    }
+  },
+  {
+    "id": 51235,
+    "name": "Thavnasaurus",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    }
+  },
+  {
+    "id": 51237,
+    "name": "Spectral Grouper",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    }
+  },
+  {
+    "id": 51238,
+    "name": "Silkfin",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 51239,
+    "name": "Great Red Mantis",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Spectral Current",
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
+  },
+  {
+    "id": 51240,
+    "name": "Guzel Gwl",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Spectral Current",
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
+  },
+  {
+    "id": 51241,
+    "name": "Darpana",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Spectral Current",
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
+  },
+  {
+    "id": 51242,
+    "name": "Silverdart",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Spectral Current",
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 51243,
+    "name": "Satrapsaurus",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Spectral Current",
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 51244,
+    "name": "Tiger Mantis",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Spectral Current",
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
+  },
+  {
+    "id": 51245,
+    "name": "Mehi-mahi",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Spectral Current",
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    }
+  },
+  {
+    "id": 51246,
+    "name": "Pliosaurus",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Spectral Current",
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 51247,
+    "name": "Manasvin",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Spectral Current",
+    "ocean": {
+      "stop": "Thavnair",
+      "spectral": true,
+      "blue": true,
+      "time": "Night"
+    },
+    "bait": [
+      [
+        {
+          "id": 2591,
+          "name": "Rat Tail"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 51687,
+    "name": "Junior Jinbei",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Thavnair Margin",
+    "ocean": {
+      "stop": "Thavnair"
+    }
+  },
+  {
     "id": 43664,
     "name": "Mosquito Fish",
     "method": "Fishing",

@@ -1,5 +1,1643 @@
 [
   {
+    "id": 40521,
+    "name": "Pink Shrimp",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40522,
+    "name": "Sirensong Mussel",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40523,
+    "name": "Arrowhead",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40524,
+    "name": "Deepshade Sardine",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40525,
+    "name": "Sirensong Mullet",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    }
+  },
+  {
+    "id": 40526,
+    "name": "Selkie Puffer",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    }
+  },
+  {
+    "id": 40527,
+    "name": "Poet's Pipe",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40528,
+    "name": "Marine Matanga",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40529,
+    "name": "Spectral Coelacanth",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40530,
+    "name": "Dusk Shark",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Sirensong Sea",
+    "ocean": {
+      "stop": "The Sirensong Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40531,
+    "name": "Mermaid Scale",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40532,
+    "name": "Broadhead",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40533,
+    "name": "Vivid Pink Shrimp",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40534,
+    "name": "Sunken Coelacanth",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40535,
+    "name": "Siren's Sigh",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40536,
+    "name": "Black-jawed Helicoprion",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40537,
+    "name": "Impostopus",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40538,
+    "name": "Jade Mantis Shrimp",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40539,
+    "name": "Nymeia's Wheel",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40540,
+    "name": "Taniwha",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Sirensong Spectral Current",
+    "ocean": {
+      "stop": "The Sirensong Sea",
+      "spectral": true,
+      "blue": true,
+      "time": "Day"
+    },
+    "bait": [
+      [
+        {
+          "id": 36593,
+          "name": "Mackerel Strip"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40541,
+    "name": "Ruby Herring",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40542,
+    "name": "Whirlpool Turban",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40543,
+    "name": "Leopard Prawn",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40544,
+    "name": "Spear Squid",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40545,
+    "name": "Floating Lantern",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    }
+  },
+  {
+    "id": 40546,
+    "name": "Rubescent Tatsunoko",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    }
+  },
+  {
+    "id": 40547,
+    "name": "Hatatate",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40548,
+    "name": "Silent Shark",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    },
+    "bait": [
+      [
+        {
+          "id": 40543,
+          "name": "Leopard Prawn"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40549,
+    "name": "Spectral Wrasse",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40550,
+    "name": "Mizuhiki",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Coast",
+    "ocean": {
+      "stop": "Kugane"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy"
+  },
+  {
+    "id": 40551,
+    "name": "Snapping Koban",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40552,
+    "name": "Silkweft Prawn",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40553,
+    "name": "Stingfin Trevally",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40554,
+    "name": "Swordtip Squid",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40555,
+    "name": "Mailfish",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40556,
+    "name": "Idaten's Bolt",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40557,
+    "name": "Maelstrom Turban",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40558,
+    "name": "Shoshitsuki",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40559,
+    "name": "Spadefish",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40560,
+    "name": "Glass Dragon",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Kugane Spectral Current",
+    "ocean": {
+      "stop": "Kugane",
+      "spectral": true,
+      "blue": true,
+      "time": "Night"
+    },
+    "bait": [
+      [
+        {
+          "id": 40551,
+          "name": "Snapping Koban"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40561,
+    "name": "Crimson Kelp",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40562,
+    "name": "Reef Squid",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40563,
+    "name": "Pinebark Flounder",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    }
+  },
+  {
+    "id": 40564,
+    "name": "Mantle Moray",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    }
+  },
+  {
+    "id": 40565,
+    "name": "Shisui Goby",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40566,
+    "name": "Sanbaso",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    }
+  },
+  {
+    "id": 40567,
+    "name": "Barded Lobster",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40568,
+    "name": "Violet Sentry",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40569,
+    "name": "Spectral Snake Eel",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40570,
+    "name": "Heavensent Shark",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Open Ruby Sea",
+    "ocean": {
+      "stop": "The Ruby Sea"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40571,
+    "name": "Fleeting Squid",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40572,
+    "name": "Bowbarb Lobster",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40573,
+    "name": "Pitch Pickle",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40574,
+    "name": "Senbei Octopus",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40575,
+    "name": "Tentacle Thresher",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40576,
+    "name": "Bekko Rockhugger",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40577,
+    "name": "Yellow Iris",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40578,
+    "name": "Crimson Sentry",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40579,
+    "name": "Flying Squid",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40580,
+    "name": "Hells' Claw",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Ruby Spectral Current",
+    "ocean": {
+      "stop": "The Ruby Sea",
+      "spectral": true,
+      "blue": true,
+      "time": "Sunset"
+    },
+    "bait": [
+      [
+        {
+          "id": 27590,
+          "name": "Squid Strip"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40581,
+    "name": "Catching Carp",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40582,
+    "name": "Garlean Bluegill",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40583,
+    "name": "Yanxian Softshell",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40584,
+    "name": "Princess Salmon",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    }
+  },
+  {
+    "id": 40585,
+    "name": "Calligraph",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    }
+  },
+  {
+    "id": 40586,
+    "name": "Singular Shrimp",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40587,
+    "name": "Brocade Carp",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40588,
+    "name": "Yanxian Sturgeon",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40589,
+    "name": "Spectral Kotsu Zetsu",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40590,
+    "name": "Fishy Shark",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "Lower One River",
+    "ocean": {
+      "stop": "The One River"
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40591,
+    "name": "Gensui Shrimp",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40592,
+    "name": "Yato-no-kami",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40593,
+    "name": "Heron's Eel",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40594,
+    "name": "Crowshadow Mussel",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40595,
+    "name": "Yanxian Goby",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40596,
+    "name": "Iridescent Trout",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
+  },
+  {
+    "id": 40597,
+    "name": "Un-Namazu",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40598,
+    "name": "Gakugyo",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
+    "id": 40599,
+    "name": "Ginrin Goshiki",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
+  },
+  {
+    "id": 40600,
+    "name": "Jewel of Plum Spring",
+    "method": "Fishing",
+    "level": 1,
+    "zone": "The Endeavor",
+    "spot": "One River Spectral Current",
+    "ocean": {
+      "stop": "The One River",
+      "spectral": true,
+      "blue": true,
+      "time": "Day"
+    },
+    "bait": [
+      [
+        {
+          "id": 12704,
+          "name": "Stonefly Nymph"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
+  },
+  {
     "id": 35604,
     "name": "Giant Aetherlouse",
     "method": "Fishing",

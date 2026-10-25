@@ -8,6 +8,10 @@ import { FACT_ICONS } from "../src/render/fishing.js"
 const TRACKER = "https://raw.githubusercontent.com/icykoneko/ff14-fish-tracker-app/master/js/app/data.js"
 // The rest of the fishing log bites any time. Teamcraft (MIT) has their bait, hookset and tug, per spot
 const TEAMCRAFT = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/fishing-sources.json"
+// Every ocean stop is on the same ship, an A Realm Reborn zone. Teamcraft's patch per item, from the game's versions, and
+// each patch's expansion (its ExVersion row) say which expansion added the stop's fish
+const TEAMCRAFT_PATCHES = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/item-patch.json"
+const TEAMCRAFT_PATCH_NAMES = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/patch-names.json"
 const HOOKSETS = { 1: "Powerful", 2: "Precision" }
 const TUGS = { 0: "medium", 1: "heavy", 2: "light" }
 // Teamcraft's oceanFishingTime, the time of day a blue fish needs at its stop, like ocean-fishing-data.js
@@ -67,12 +71,14 @@ function biteTimes(start, end) {
 }
 
 async function main() {
-  const [tracker, teamcraft, [
+  const [tracker, teamcraft, itemPatches, patchNames, [
     spots, notebooks, fishParams, spearItems, items, weathers, maps, territories, places, exVersions, aetherytes, markers,
     uiCategories, oceanSpots
   ]] = await Promise.all([
     trackerData(),
     get(TEAMCRAFT).then((res) => res.json()),
+    get(TEAMCRAFT_PATCHES).then((res) => res.json()),
+    get(TEAMCRAFT_PATCH_NAMES).then((res) => res.json()),
     sheets([
       "FishingSpot", "SpearfishingNotebook", "FishParameter", "SpearfishingItem", "Item", "Weather", "Map", "TerritoryType",
       "PlaceName", "ExVersion", "Aetheryte", "MapMarker", "ItemUICategory", "IKDSpot"
@@ -130,14 +136,15 @@ async function main() {
     const m = !ocean && map[t.Map]
     const position = m ? mapPixels(m, location.x, location.y, location.row.Radius) : null
     const aetheryte = position && aetheryteNear(t.Map, position.x, position.y)
-    // Nothing to wait for, the list hides these until asked (see js/fishing.js). Nor for an ocean fish, a voyage's
-    // stop decides when it bites, which the list's windows don't know
-    const anyTime = Boolean(ocean) || (!fish.big && !fish.times && !fish.weather && !fish.previousWeather && !fish.predators)
+    // Nothing to wait for, the list hides these until asked (see js/fishing.js). An ocean fish waits for the voyages
+    const anyTime = !ocean && !fish.big && !fish.times && !fish.weather && !fish.previousWeather && !fish.predators
+    const oceanExpansion = ocean && exVersion[patchNames[itemPatches[id]]?.ex]?.Name
+    if (ocean && !oceanExpansion) throw new Error(`${it.Name}: no patch for the ocean fish in Teamcraft's item-patch.json`)
     const blueTime = ocean && it.Rarity === BLUE_FISH && OCEAN_TIMES[teamcraft[id]?.find((s) => String(s.spot) === location.spotId)?.oceanFishingTime]
 
     return {
       territory: +location.row.TerritoryType,
-      expansion: exVersion[t.ExVersion].Name,
+      expansion: oceanExpansion || exVersion[t.ExVersion].Name,
       mapId: position ? m.Id : null,
       fish: {
         id: +id,

@@ -210,14 +210,24 @@ export const alarmButton = (alarm = null, icon = null) =>
   html`<button class="alarm-bell" disabled${alarm && html` data-alarm="${JSON.stringify(alarm)}"`}${icon && html` data-icon="${icon}"`}></button>`
 
 /**
- * The last column, the alarm bell and the map. The map links to its image, listing.js opens it in the map dialog
- * instead.
- * @param {{ zone: string, map?: { image: string } }} entry
+ * @param {{ zone: string, map?: { image: string }, ocean?: { stop: string } }} entry
+ * @returns {Html | string} The map, linked to its image, listing.js opens it in the map dialog instead. An ocean fish
+ * has no map, a boat links to its stop on the ocean fishing page in its place
+ */
+const locationLink = (entry) => entry.map
+  ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" aria-label="Show ${entry.zone} on map" title="Show on map"></a>`
+  : entry.ocean
+    ? html`<a class="location location-ocean" href="/ocean-fishing/#${slug(entry.ocean.stop)}" aria-label="${entry.ocean.stop} on the ocean fishing page" title="Voyages and fish at ${entry.ocean.stop}"></a>`
+    : ""
+
+/**
+ * The last column, the alarm bell and the map.
+ * @param {{ zone: string, map?: { image: string }, ocean?: { stop: string } }} entry
  * @param {number | null} icon See alarmButton
  * @returns {Html}
  */
 const locationCell = (entry, icon) => html`
-  <td class="location-cell"><div class="row-actions">${alarmButton(null, icon)}${entry.map ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" aria-label="Show ${entry.zone} on map" title="Show on map"></a>` : ""}</div></td>`
+  <td class="location-cell"><div class="row-actions">${alarmButton(null, icon)}${locationLink(entry)}</div></td>`
 
 /**
  * A table row, matched up with its entry by data-key when listing.js loads the data. Lists have thousands, so each

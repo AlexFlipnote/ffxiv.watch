@@ -130,7 +130,7 @@ const fishTags = (fish) => [
  */
 const fishRow = (key, fish, info) => listRow(key, fish, html`
     <div class="gathering-items"><span class="done-entry">${doneButton(fish.id)}<a class="gathering-item" href="${fishUrl(fish)}"><strong>${fish.name}</strong>${collectableChip(fish)}</a></span></div>
-    <div class="tags">${fishTags(fish)}</div>`, isTimed(fish) && info[fish.id].icon)
+    <div class="tags">${fishTags(fish)}</div>`, (isTimed(fish) || fish.ocean) && info[fish.id].icon)
 
 /**
  * @returns {object} Every fish's row and link for /fishing/, see listRows, and the expansion a first visit shows, its

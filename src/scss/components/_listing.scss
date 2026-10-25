@@ -483,6 +483,11 @@ $tab-flare: .5rem;
     mask: url("/images/ui/map-search.svg") center / contain no-repeat;
   }
 
+  // An ocean fish's, a boat to its stop on the ocean fishing page
+  &.location-ocean::before {
+    mask-image: url("/images/ui/sailing.svg");
+  }
+
   // A rounded square around the icon on hover, a bit bigger than it, also what a finger taps
   &::after {
     content: "";
