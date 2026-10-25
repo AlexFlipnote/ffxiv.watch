@@ -46,11 +46,19 @@
 
   color-scheme: dark;
 
-  // Shorter once it folds into the menu, as on phones, where it stays on screen as the page scrolls, see _navbar.scss
-  --navbar-height: 4.5rem;
+  // Shorter once it folds into the menu, as on phones, see _navbar.scss.
+  // The alarms' strip under it counts, so whatever keeps clear of the navbar keeps clear of that too
+  --navbar-base: 4.5rem;
+  --alarm-strip: 0rem;
+  --navbar-height: calc(var(--navbar-base) + var(--alarm-strip));
 
   @include navbar-folded {
-    --navbar-height: 3.5rem;
+    --navbar-base: 3.5rem;
+  }
+
+  // Set before the first paint when there are alarms (see partials/head.html), so the page doesn't move down for it
+  &[data-alarms] {
+    --alarm-strip: 2.25rem;
   }
 
   // --bg and --glow change with the Eorzea time, see the day/night tint below

@@ -13,7 +13,7 @@ export const DEFAULT_LEAD = 0
 // A file's name in /sounds/alarms/, or "off"
 export const SOUND_KEY = "alarm-sound"
 export const DEFAULT_SOUND = "brightline"
-// The soonest window, saved by alarms.js so the next page can draw the pill before that loads
+// The soonest window and whose it is, saved by alarms.js so the next page can fill in the strip before that loads
 export const NEXT_KEY = "alarms-next"
 
 /**
@@ -72,30 +72,25 @@ export function savedNext(now) {
 }
 
 /**
- * Draws the pill in the lower left, made the first time.
+ * Fills in the strip under the navbar (partials/navbar.html), shown while there are alarms.
  * @param {number} count
- * @param {{ start: number, end: number } | null} w The soonest window
+ * @param {{ start: number, end: number, name?: string } | null} w The soonest window, and whose it is
  * @param {number} now
  */
-export function paintPill(count, w, now) {
-  let pill = document.querySelector(".alarm-pill")
-  if (!pill) {
-    pill = document.createElement("button")
-    pill.className = "alarm-pill"
-    pill.setAttribute("aria-haspopup", "dialog")
-    pill.innerHTML = "<span class=\"alarm-pill-icon\" aria-hidden=\"true\"></span><span class=\"alarm-pill-count\"></span><span class=\"alarm-pill-next\"></span>"
-    document.body.append(pill)
-  }
-  pill.hidden = !count
-  document.body.toggleAttribute("data-alarms", count > 0)
-  if (!count) return
+export function paintStrip(count, w, now) {
+  document.documentElement.toggleAttribute("data-alarms", count > 0)
+  const strip = document.querySelector(".alarm-strip")
+  if (!strip || !count) return
 
   const open = Boolean(w && w.start <= now)
-  const next = pill.querySelector(".alarm-pill-next")
-  setText(pill.querySelector(".alarm-pill-count"), String(count))
-  setText(next, !w ? "" : open ? "Up now" : formatCountdown(w.start - now))
+  // Saved by a version before the name was, for a page or two
+  const name = w?.name ?? "Next alarm"
+  const next = strip.querySelector(".alarm-strip-next")
+  const text = !w ? "Nothing in the next 30 days" : open ? `${name} is up now` : `${name} up in ${formatCountdown(w.start - now)}`
+  setText(next, text)
   next.classList.toggle("alarms-open", open)
-  pill.setAttribute("aria-label", `${count} alarm${count === 1 ? "" : "s"}${!w ? "" : open ? ", one up now" : `, next up in ${formatCountdown(w.start - now)}`}`)
+  setText(strip.querySelector(".alarm-strip-count"), `${count} alarm${count === 1 ? "" : "s"}`)
+  strip.setAttribute("aria-label", `${count} alarm${count === 1 ? "" : "s"}, ${text}`)
 }
 
 // Each bell's alarm, null when it's always up

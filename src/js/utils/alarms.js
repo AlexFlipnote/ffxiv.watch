@@ -1,4 +1,4 @@
-import { ALARMS_KEY, DEFAULT_LEAD, LEAD_KEY, NEXT_KEY, paintPill, readAlarms, soundUrl } from "./alarmBells.js"
+import { ALARMS_KEY, DEFAULT_LEAD, LEAD_KEY, NEXT_KEY, paintStrip, readAlarms, soundUrl } from "./alarmBells.js"
 import { closable } from "./dialog.js"
 import { ET_MINUTE_EARTH_MS } from "./eorzea.js"
 import { alarmsDue, alarmWindow, cachedWindows, ringDue } from "./forecast.js"
@@ -117,8 +117,7 @@ function schedule() {
   if (next < Infinity) timer = setTimeout(schedule, Math.min(next - now, MAX_WAIT))
 }
 
-paintPill(alarms.length, null, Date.now())
-const pill = document.querySelector(".alarm-pill")
+const strip = document.querySelector(".alarm-strip")
 // What NEXT_KEY last saved
 let saved = load(NEXT_KEY)
 
@@ -183,9 +182,9 @@ function buildList() {
 }
 
 function render(now) {
-  const w = alarms.length ? sorted(now)[0].w : null
-  const soonest = w && !w.always ? { start: w.start, end: w.end } : null
-  paintPill(alarms.length, soonest, now)
+  const first = alarms.length ? sorted(now)[0] : null
+  const soonest = first?.w && !first.w.always ? { start: first.w.start, end: first.w.end, name: first.alarm.name } : null
+  paintStrip(alarms.length, soonest, now)
   const json = soonest && JSON.stringify(soonest)
   if (json !== saved) store(NEXT_KEY, saved = json)
 
@@ -199,7 +198,7 @@ function render(now) {
 }
 
 // Opened first, render skips a closed list
-pill.addEventListener("click", () => {
+strip.addEventListener("click", () => {
   buildList()
   modal.showModal()
   render(Date.now())

@@ -122,10 +122,17 @@ everyTick((now) => {
 const head = document.getElementById("weather-head")
 const reach = () => document.documentElement.style.setProperty("--navbar-reach",
   head.classList.contains("weather-head-stuck") ? `${head.offsetHeight}px` : "0px")
-new IntersectionObserver(([entry]) => {
-  head.classList.toggle("weather-head-stuck", !entry.isIntersecting && entry.boundingClientRect.top < entry.rootBounds.top)
-  reach()
-}, { rootMargin: `-${document.querySelector(".navbar").offsetHeight}px 0px 0px 0px` }).observe(document.getElementById("weather-head-sentinel"))
+const navbar = document.querySelector(".navbar")
+let stuck = null
+// Again whenever the navbar's height changes, as the alarms' strip comes and goes with them
+new ResizeObserver(() => {
+  stuck?.disconnect()
+  stuck = new IntersectionObserver(([entry]) => {
+    head.classList.toggle("weather-head-stuck", !entry.isIntersecting && entry.boundingClientRect.top < entry.rootBounds.top)
+    reach()
+  }, { rootMargin: `-${navbar.offsetHeight}px 0px 0px 0px` })
+  stuck.observe(document.getElementById("weather-head-sentinel"))
+}).observe(navbar)
 // A phone turned sideways, say, changes how tall it is
 new ResizeObserver(reach).observe(head)
 

@@ -1,5 +1,5 @@
 import "./theme.js"
-import { ALARMS_KEY, paintPill, readAlarms, savedNext } from "./alarmBells.js"
+import { ALARMS_KEY, paintStrip, readAlarms, savedNext } from "./alarmBells.js"
 import { loadIndex, openSearch } from "./search.js"
 import { openSettings } from "./settings.js"
 import { onStored } from "./storage.js"
@@ -99,8 +99,8 @@ if (!HTMLScriptElement.supports?.("speculationrules")) {
   })
 }
 
-// The pill from what the last page saved, so it's there before alarms.js loads
-if (readAlarms().length) paintPill(readAlarms().length, savedNext(Date.now()), Date.now())
+// The strip from what the last page saved, so it's filled in before alarms.js loads
+if (readAlarms().length) paintStrip(readAlarms().length, savedNext(Date.now()), Date.now())
 
 // Only loaded once there's an alarm, here or in another tab
 const loadAlarms = () => readAlarms().length && import("./alarms.js")

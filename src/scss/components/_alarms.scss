@@ -1,6 +1,6 @@
 @use "../mixins" as *;
 
-// The alarm bells, the pill and its list, see js/utils/alarms.js
+// The alarm bells, the strip under the navbar and its list, see js/utils/alarms.js
 
 .row-actions {
   display: flex;
@@ -95,71 +95,70 @@
   }
 }
 
-.alarm-pill {
-  position: fixed;
-  left: calc(1rem + env(safe-area-inset-left));
-  bottom: calc(1rem + env(safe-area-inset-bottom));
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  height: 3rem;
-  padding: 0 1.125rem 0 .875rem;
+// Under the navbar, part of it: the soonest alarm and how many there are. Its height is --alarm-strip, which only has
+// room while there are alarms (see _global.scss)
+.alarm-strip {
+  display: none;
+  flex: none;
+  justify-content: center;
+  width: 100%;
+  height: var(--alarm-strip);
+  padding: 0;
   border: none;
-  border-radius: 1.5rem;
-  background: var(--surface-solid);
-  box-shadow: var(--box-shadow);
-  color: var(--font-primary);
+  border-top: 1px solid var(--divider);
+  background: none;
+  color: var(--font-secondary);
   font: inherit;
+  font-size: .875rem;
   font-variant-numeric: tabular-nums;
   cursor: pointer;
   transition: background-color .2s;
 
-  &[hidden] {
-    display: none;
+  :root[data-alarms] & {
+    display: flex;
   }
 
   @include hover {
-    background: color-mix(in srgb, var(--surface-solid), var(--font-primary) 6%);
+    background: var(--chip-background);
   }
 
   &:focus-visible {
     outline: .125rem solid var(--accent);
-    outline-offset: .125rem;
+    outline-offset: -.125rem;
   }
 }
 
-.alarm-pill-icon {
-  width: 1.375rem;
-  height: 1.375rem;
+.alarm-strip-inner {
+  @include content-column;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-width: 0;
+}
+
+.alarm-strip-icon {
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
   background-color: var(--accent);
   mask: url("/images/ui/alarm.svg") center / contain no-repeat;
 }
 
-.alarm-pill-count {
-  font-weight: bold;
+.alarm-strip-next {
+  overflow: hidden;
+  color: var(--font-primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.alarm-pill-next {
-  color: var(--font-secondary);
+// With an arrow, as it opens the list
+.alarm-strip-count {
+  flex: none;
+  margin-left: auto;
+  color: var(--font-tertiary);
 
-  &:empty {
-    display: none;
-  }
-}
-
-// Back to the top above the pill, and on a phone the toasts above both
-body[data-alarms] .top-button {
-  bottom: calc(4.5rem + env(safe-area-inset-bottom));
-}
-
-@include mobile {
-  body[data-alarms] .toasts {
-    bottom: calc(4.75rem + env(safe-area-inset-bottom));
-  }
-
-  body[data-alarms][data-top-button] .toasts {
-    bottom: calc(8.25rem + env(safe-area-inset-bottom));
+  &::after {
+    content: " ›";
   }
 }
 
@@ -280,7 +279,7 @@ body[data-alarms] .top-button {
 }
 
 // Green like the list pages' open groups
-.alarm-pill-next.alarms-open,
+.alarm-strip-next.alarms-open,
 .alarms-status.alarms-open {
   color: var(--open);
   font-weight: bold;
@@ -294,7 +293,7 @@ body[data-alarms] .top-button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .alarm-pill {
+  .alarm-strip {
     transition: none;
   }
 }

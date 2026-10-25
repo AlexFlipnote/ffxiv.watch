@@ -14,6 +14,9 @@
     root.dataset.theme = theme
     document.querySelector("meta[name=theme-color]").content = theme === "light" ? "#f7f7f7" : "#1a1a1a"
 
+    // Room for the alarms' strip under the navbar, so the page doesn't move down once the script fills it in
+    try { if (JSON.parse(localStorage.getItem("alarms"))?.length) root.toggleAttribute("data-alarms", true) } catch {}
+
     // The same phases as PHASES in js/utils/theme.js, which can't be imported here before the first paint
     const hour = Math.floor(Date.now() / 175000) % 24
     root.dataset.time = hour < 5 ? "night" : hour < 8 ? "dawn" : hour < 17 ? "day" : hour < 20 ? "dusk" : "night"
