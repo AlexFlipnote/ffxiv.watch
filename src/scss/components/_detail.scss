@@ -391,6 +391,17 @@ $item-side: min(20rem, 40%);
   }
 }
 
+// Without a map the timer only has half the card, a long line like an ocean fish's stop would squeeze the countdown, so
+// it goes under it like on a phone
+.gathering-node:not(:has(> .map)) .detail-timer[data-window] {
+  grid-template-columns: minmax(0, 1fr);
+
+  .detail-when {
+    margin-top: .25rem;
+    text-align: left;
+  }
+}
+
 .detail-recipes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -496,10 +507,13 @@ $item-side: min(20rem, 40%);
   }
 
   // The ET times under the countdown again, next to it they'd squeeze it
-  .gathering-node .detail-timer[data-window] .detail-when {
-    grid-column: 1 / -1;
-    margin-top: .25rem;
-    text-align: left;
+  .gathering-node .detail-timer[data-window] {
+    grid-template-columns: minmax(0, 1fr);
+
+    .detail-when {
+      margin-top: .25rem;
+      text-align: left;
+    }
   }
 
   // One column, where it's gathered first: what the item's worth and the recipes go after the nodes
