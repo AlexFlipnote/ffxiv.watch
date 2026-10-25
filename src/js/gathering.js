@@ -8,6 +8,8 @@ const typeSelect = document.getElementById("filter-type")
 
 const ALL = ""
 const TIMED = "Timed"
+// Nodes with an item that shows only once it's revealed, the rest of their items aren't
+const HIDDEN = "Hidden"
 
 listing({
   expansions: EXPANSIONS,
@@ -24,8 +26,12 @@ listing({
   mapNote: (node) => node.items.map((i) => i.name).join(", "),
 
   filter: (node) => (jobSelect.value === ALL || node.job === jobSelect.value)
-    && (typeSelect.value === TIMED ? !!node.times : typeSelect.value === ALL || node.type === typeSelect.value),
-  matches: (node, query) => [node.zone, node.spot, node.type, node.job, node.folklore, node.quest, ...node.items.flatMap((i) => [i.name, i.scrip])]
+    && (typeSelect.value === TIMED ? !!node.times
+      : typeSelect.value === HIDDEN ? node.items.some((i) => i.hidden)
+        : typeSelect.value === ALL || node.type === typeSelect.value),
+  matches: (node, query) => [
+    node.zone, node.spot, node.type, node.job, node.folklore, node.quest, ...node.items.flatMap((i) => [i.name, i.scrip, i.hidden && HIDDEN])
+  ]
     .some((text) => text?.toLowerCase().includes(query)),
   // Regular and Diadem nodes have no times, they're always up
   windowOf: (node, now) => node.times ? nextWindow(node, now) : { always: true },
