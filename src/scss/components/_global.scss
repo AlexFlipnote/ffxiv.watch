@@ -34,6 +34,8 @@
   --surface: rgba(26, 26, 26, .75);
   // The navbar's, darker: the page scrolls behind it
   --navbar-surface: rgba(26, 26, 26, .88);
+  // The bar itself, more see-through than its menus, with more blur to make up for it
+  --navbar-glass: rgba(26, 26, 26, .65);
   --surface-solid: #1a1a1a;
   --scrollbar-track: #121212;
   --scrollbar-thumb: #3a3a3a;
@@ -91,6 +93,7 @@
 
   --surface: rgba(250, 250, 250, .8);
   --navbar-surface: rgba(250, 250, 250, .9);
+  --navbar-glass: rgba(250, 250, 250, .75);
   --surface-solid: #f7f7f7;
   --scrollbar-track: #e2e2e2;
   --scrollbar-thumb: #b8b8b8;
@@ -210,18 +213,10 @@ body {
   align-items: center;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  body {
-    height: 100dvh;
-    overflow: hidden;
-  }
-
-  .page {
-    flex: 1;
-    min-height: 0;
-    overflow-y: auto;
-    scrollbar-gutter: stable both-edges;
-  }
+// The window scrolls, so the page passes under the navbar's glass. Room for a scrollbar on every page, so short and long
+// ones line up
+:root {
+  scrollbar-gutter: stable;
 }
 
 a {

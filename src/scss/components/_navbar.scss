@@ -7,10 +7,32 @@
   box-shadow: var(--navbar-shadow);
 }
 
+// The bar's own glass, more see-through than the dropdown's, with more blur to make up for it
+@mixin bar-glass {
+  background-color: var(--navbar-glass);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+// The frosted background, a layer of its own under the navbar rather than part of it: the weather page's head sits
+// between the two once stuck, over the background but under the navbar's menus (see _weather.scss)
+body::before {
+  @include frosted;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--navbar-height);
+  @include bar-glass;
+  pointer-events: none;
+}
+
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 102;
   isolation: isolate;
   box-sizing: border-box;
   width: 100%;
@@ -20,19 +42,12 @@
   flex-direction: column;
   align-items: center;
   user-select: none;
-
-  // The frosted background lives on its own layer
-  &::before {
-    @include frosted;
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-  }
 }
 
 .navbar-inner {
   @include content-column;
+  flex: none;
+  height: var(--navbar-base);
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -46,8 +61,6 @@
   white-space: nowrap;
   display: flex;
   align-items: center;
-  flex: none;
-  height: var(--navbar-base);
   gap: .625rem;
 }
 
@@ -365,7 +378,9 @@
     gap: 0;
   }
 
-  // Dims the page next to the open menu, and takes the tap that closes it so it can't also hit what's under it
+  // Dims the page below the open menu, and takes the tap that closes it so it can't also hit what's under it. Not under
+  // the menu, whose glass would show the page darker than the navbar's does (js/utils/navbar.js measures it). Its top
+  // edge goes down and back up with the glass's bottom edge, in step with it
   .navbar-backdrop {
     display: block;
     position: fixed;
@@ -373,17 +388,19 @@
     background: rgba(0, 0, 0, .4);
     opacity: 0;
     visibility: hidden;
-    transition: opacity .25s ease-in-out, visibility 0s linear .25s;
+    transition: top .3s $ease, opacity .25s ease-in-out, visibility 0s linear .3s;
   }
 
   .navbar.opened .navbar-backdrop {
+    top: calc(var(--navbar-height) + var(--menu-height, 0px));
     opacity: 1;
     visibility: visible;
-    transition: opacity .25s ease-in-out, visibility 0s;
+    transition: top .3s $ease, opacity .25s ease-in-out, visibility 0s;
   }
 
+  // No glass of its own: the navbar's reaches down behind it while it's open (see below), one pane from the top rather
+  // than two meeting at a seam
   .navbar-links {
-    @include frosted;
     position: fixed;
     top: var(--navbar-height);
     left: 0;
@@ -401,7 +418,8 @@
 
     a {
       padding: 1rem 1.25rem;
-      border-bottom: .05rem solid var(--divider);
+      // Over each, so the first is set apart from the navbar and nothing hangs under the last
+      border-top: .05rem solid var(--divider);
       opacity: 0;
       transform: translateY(-.5rem);
       transition: color .2s, background-color .2s, opacity .2s, transform .3s $ease;
@@ -436,6 +454,20 @@
     border-radius: 0;
   }
 
+  // The navbar's glass reaches down behind the open menu, as it opens, js/utils/navbar.js measures how far
+  body::before {
+    transition: height .3s $ease;
+  }
+
+  body:has(.navbar.opened)::before {
+    height: calc(var(--navbar-height) + var(--menu-height, 0px));
+  }
+
+  // Under the glass while the menu is open, which would otherwise show the head through it
+  body:has(.navbar.opened) .weather-head {
+    z-index: 1;
+  }
+
   .navbar.opened .navbar-links {
     clip-path: inset(0 0 -1rem);
     visibility: visible;
@@ -468,6 +500,7 @@
   .navbar-more-button::after,
   .navbar-more-menu,
   .navbar-backdrop,
+  body::before,
   .navbar-hamburger line,
   .navbar-action svg {
     transition: none !important;

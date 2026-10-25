@@ -41,12 +41,6 @@ body:has(.weather-head) {
   transition: background-size var(--reach-time) var(--reach-ease), backdrop-filter 0s, box-shadow 0s,
     z-index 0s var(--reach-time);
 
-  // With a mouse the page scrolls in .page, whose padding already keeps clear of the navbar (see _global.scss), and a
-  // sticky top counts from inside it
-  @media (hover: hover) and (pointer: fine) {
-    top: 0;
-  }
-
   // A line over it like the rows' between them, where the navbar ended, opening out from the middle as the navbar
   // reaches down (see stuck)
   &::after {
@@ -62,8 +56,9 @@ body:has(.weather-head) {
     pointer-events: none;
   }
 
-  // Stuck, it's drawn over the navbar (z-index 100) and shows only its text, on the navbar's background, its glass
-  // eaten away from the top by the navbar reaching down
+  // Stuck, it's drawn over the navbar's background (z-index 100, see _navbar.scss) and shows only its text, on that
+  // background, its glass eaten away from the top by the background reaching down. Still under the navbar itself
+  // (z-index 102), so its menus open over it
   &.weather-head-stuck {
     z-index: 101;
     background-size: 100% 0%;
@@ -79,27 +74,16 @@ body:has(.weather-head) {
   }
 }
 
-// Behind the navbar again while its menus are open, which would otherwise open under it
-body:has(.navbar.opened, .navbar-more.opened) .weather-head {
-  z-index: 1;
-}
-
-@media (hover: hover) and (width > $navbar-fold) {
-  body:has(.navbar-more:hover) .weather-head {
-    z-index: 1;
-  }
-}
-
 // How far down the navbar's background reaches, the stuck head's height, which js/weather.js keeps in --navbar-reach
-body:has(.weather-head) .navbar::before {
-  bottom: calc(-1 * var(--navbar-reach, 0px));
-  transition: bottom var(--reach-time) var(--reach-ease);
+body:has(.weather-head)::before {
+  height: calc(var(--navbar-height) + var(--navbar-reach, 0px));
+  transition: height var(--reach-time) var(--reach-ease);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .weather-head,
   .weather-head::after,
-  body:has(.weather-head) .navbar::before {
+  body:has(.weather-head)::before {
     transition: none;
   }
 }

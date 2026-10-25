@@ -11,6 +11,8 @@ const moreButton = more.querySelector(".navbar-more-button")
 
 /** @param {boolean} opened */
 function setOpened(opened) {
+  // How far the navbar's glass reaches down behind the menu, and where the dimmed page below it starts (_navbar.scss)
+  if (opened) document.documentElement.style.setProperty("--menu-height", `${navbar.querySelector(".navbar-links").offsetHeight}px`)
   navbar.classList.toggle("opened", opened)
   hamburger.setAttribute("aria-expanded", opened)
 }
