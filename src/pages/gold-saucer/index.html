@@ -25,7 +25,7 @@
         </header>
         <!-- The timers as of the build, hidden until js/saucer.js puts the current ones in their place, so nothing under them moves when it does -->
         <section class="saucer-card" id="gates">
-          <h2 class="saucer-name">GATEs</h2>
+          <h2 class="saucer-name"><a href="#gates">GATEs</a></h2>
           <div class="saucer-head">
             <span class="detail-state">Next GATE in</span>
             <strong class="detail-countdown">{{ saucer.gate.countdown }}</strong>
@@ -38,8 +38,8 @@
           </ol>
         </section>
         <div class="saucer-pair">
-          <section class="saucer-card" id="open">
-            <h2 class="saucer-name">Triple Triad open tournament</h2>
+          <section class="saucer-card" id="triad-open">
+            <h2 class="saucer-name"><a href="#triad-open">Triple Triad open tournament</a></h2>
             <div class="saucer-head">
               <span class="detail-state">{{ saucer.open.state }}</span>
               <strong class="detail-countdown">{{ saucer.open.countdown }}</strong>
@@ -51,8 +51,8 @@
               </x-each>
             </ol>
           </section>
-          <section class="saucer-card" id="tournament">
-            <h2 class="saucer-name">Triple Triad tournament</h2>
+          <section class="saucer-card" id="triad-tournament">
+            <h2 class="saucer-name"><a href="#triad-tournament">Triple Triad tournament</a></h2>
             <div class="saucer-head">
               <span class="detail-state">{{ saucer.tournament.state }}</span>
               <strong class="detail-countdown">{{ saucer.tournament.countdown }}</strong>
@@ -67,7 +67,7 @@
         </div>
         <div class="saucer-trio">
           <section class="saucer-card" id="fashion">
-            <h2 class="saucer-name">Fashion Report</h2>
+            <h2 class="saucer-name"><a href="#fashion">Fashion Report</a></h2>
             <p class="saucer-phase">{{ saucer.fashion.name }}</p>
             <div class="saucer-head">
               <span class="detail-state">Ends in</span>
@@ -76,7 +76,7 @@
             <p class="saucer-info">{{ saucer.fashion.info }}</p>
           </section>
           <section class="saucer-card" id="jumbo">
-            <h2 class="saucer-name">Jumbo Cactpot</h2>
+            <h2 class="saucer-name"><a href="#jumbo">Jumbo Cactpot</a></h2>
             <div class="region-picker" role="group" aria-label="Region">
               <x-each items="saucer.jumbo.regions" as="region"><button class="region-btn">{{ region }}</button></x-each>
             </div>
@@ -87,7 +87,7 @@
             <p class="saucer-info">{{ saucer.jumbo.info }}</p>
           </section>
           <section class="saucer-card" id="mini">
-            <h2 class="saucer-name">Mini Cactpot</h2>
+            <h2 class="saucer-name"><a href="#mini">Mini Cactpot</a></h2>
             <div class="saucer-head">
               <span class="detail-state">Resets in</span>
               <strong class="detail-countdown">{{ saucer.mini.countdown }}</strong>

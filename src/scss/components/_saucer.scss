@@ -20,7 +20,6 @@
 .saucer-trio {
   display: grid;
   gap: 1.25rem;
-  align-items: start;
 }
 
 .saucer-pair {
@@ -62,6 +61,20 @@
 .saucer-name {
   margin: 0;
   font-size: 1.1rem;
+
+  // Its own card's anchor, to copy and share, underlined like the home page's timer titles
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .2em;
+    transition: text-decoration-color .2s;
+
+    @include hover {
+      text-decoration-color: currentColor;
+    }
+  }
 }
 
 .saucer-phase {
@@ -89,13 +102,21 @@
 }
 
 .saucer-rows {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
 
+  @include mobile {
+    display: block;
+  }
+
   li {
     display: grid;
+    grid-column: 1 / -1;
     grid-template-columns: 9rem minmax(0, 1fr);
+    grid-template-columns: subgrid;
     align-items: center;
     gap: .25rem 1rem;
     padding: .5rem 0;
@@ -112,10 +133,11 @@
   time {
     font-weight: 600;
     font-variant-numeric: tabular-nums;
+    white-space: nowrap;
   }
 
   // The next one
-  li:first-child time {
+  li:first-child :is(time, .saucer-range) {
     color: var(--accent);
   }
 }

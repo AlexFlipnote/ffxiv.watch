@@ -27,8 +27,8 @@ function bindCard(id) {
 }
 
 const gates = bindCard("gates")
-const open = bindCard("open")
-const tournament = bindCard("tournament")
+const open = bindCard("triad-open")
+const tournament = bindCard("triad-tournament")
 const fashion = bindCard("fashion")
 const jumbo = bindCard("jumbo")
 const mini = bindCard("mini")
