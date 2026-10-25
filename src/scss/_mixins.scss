@@ -32,10 +32,9 @@ $navbar-fold: 51.5625rem;
   }
 }
 
-// Frosted see-through panel: the background shows through, blurred
+// See-through panel over the page's glow. No backdrop blur.
+// Old phones cannot render backdrop blur well, still getting same effect.
 @mixin glass {
-  -webkit-backdrop-filter: var(--blur-amount-ui);
-  backdrop-filter: var(--blur-amount-ui);
   background-color: var(--blur-background);
   box-shadow: var(--card-shadow);
   border-radius: 1rem;

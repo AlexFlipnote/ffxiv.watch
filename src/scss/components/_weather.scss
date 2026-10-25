@@ -27,6 +27,8 @@ body:has(.weather-head) {
 // background reaches down behind it, so the two are one navbar with the periods in it
 .weather-head {
   @include glass;
+  -webkit-backdrop-filter: var(--blur-amount-ui);
+  backdrop-filter: var(--blur-amount-ui);
   position: sticky;
   top: var(--navbar-height);
   z-index: 1;
