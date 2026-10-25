@@ -32,6 +32,10 @@ body:has(.weather-head) {
   z-index: 1;
   display: grid;
   grid-template-columns: var(--weather-columns);
+
+  @media (hover: hover) and (pointer: fine) {
+    top: 0;
+  }
   align-items: center;
   padding: .5rem var(--row-edge);
   // Its glass as a picture from the bottom up, so the navbar's edge can eat it away from the top as it reaches down

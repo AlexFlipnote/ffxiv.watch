@@ -158,7 +158,7 @@ export const TIMERS = [
     kind: "recurring",
     id: "fashion_judging",
     name: "Fashion Report",
-    page: "/gold-saucer/",
+    page: "/gold-saucer/#fashion",
     question: "When does FFXIV Fashion Report judging start?",
     every: 7 * DAY,
     offset: 1 * DAY + 8 * HOUR, // Friday 08:00 UTC
@@ -171,7 +171,7 @@ export const TIMERS = [
     kind: "recurring",
     id: "jumbo_cactpot",
     name: "Jumbo Cactpot",
-    page: "/gold-saucer/",
+    page: "/gold-saucer/#jumbo",
     question: "When is the FFXIV Jumbo Cactpot drawing?",
     every: 7 * DAY,
     small: true,

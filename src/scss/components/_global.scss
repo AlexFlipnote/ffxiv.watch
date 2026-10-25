@@ -138,12 +138,17 @@
 }
 
 // Scrollbars in the theme: Chrome, Edge and Firefox use scrollbar-color, Safari the ::-webkit-scrollbar rules
-:root {
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+@supports not selector(::-webkit-scrollbar) {
+  :root {
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
 }
 
 ::-webkit-scrollbar {
   width: .75rem;
+}
+
+::-webkit-scrollbar-track {
   background-color: var(--scrollbar-track);
 }
 
@@ -219,10 +224,23 @@ body {
   align-items: center;
 }
 
-// The window scrolls, so the page passes under the navbar's glass. Room for a scrollbar on every page, so short and long
-// ones line up
-:root {
-  scrollbar-gutter: stable;
+@media (hover: hover) and (pointer: fine) {
+  body {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .page {
+    flex: 1;
+    min-height: 0;
+    padding-top: var(--navbar-height);
+    overflow-y: auto;
+    scrollbar-gutter: stable both-edges;
+  }
+
+  .page::-webkit-scrollbar-track {
+    margin-top: var(--navbar-height);
+  }
 }
 
 a {

@@ -46,6 +46,13 @@
   flex-direction: column;
   gap: .5rem;
   padding: 1rem;
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
+
+  // The one the link was for
+  &:target {
+    outline: .125rem solid var(--accent);
+    outline-offset: .125rem;
+  }
 
   .region-picker {
     margin: 0;
