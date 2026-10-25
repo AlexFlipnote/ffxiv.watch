@@ -42,8 +42,10 @@
     }
   }
 
+  // The width and height attributes only give the ratio, the height below sizes them
   img {
     display: block;
+    width: auto;
   }
 }
 

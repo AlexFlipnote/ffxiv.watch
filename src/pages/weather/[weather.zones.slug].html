@@ -44,7 +44,7 @@
             <!-- No spot marked, the weather is the same all over it. Cut to the height next to it on a computer, around its main aetheryte -->
             <a class="map map-zoom weather-map" href="/images/maps/{{ page.map.image }}.webp" data-map="{{ page.map.data }}" style="--focus: {{ page.map.focus }}" title="Show a bigger map">
               <span class="weather-map-canvas">
-                <img src="/images/maps/{{ page.map.image }}.webp" alt="Map of {{ page.name }}" width="1024" height="1024">
+                <img src="/images/maps/{{ page.map.image }}.webp" alt="Map of {{ page.name }}" width="1024" height="1024" fetchpriority="high">
                 <x-each items="page.map.aetherytes" as="aetheryte">
                 <span class="map-aetheryte" style="{{ aetheryte.style }}" title="{{ aetheryte.name }} aetheryte"></span>
                 </x-each>
