@@ -197,10 +197,16 @@ body {
   flex-direction: column;
   align-items: center;
 
-  // Gives the glass panels something to blur
   background-color: var(--bg);
-  background-image: radial-gradient(ellipse 120% 70% at 50% 0%, var(--glow), transparent 70%);
-  background-attachment: fixed;
+
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(ellipse 120% 70% at 50% 0%, var(--glow), transparent 70%);
+    pointer-events: none;
+  }
 }
 
 .page {

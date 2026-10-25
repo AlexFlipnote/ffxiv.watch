@@ -278,7 +278,7 @@ export function listRows(list, expansions, shown, idOf, row, linksOf) {
     const content = String(rowsOf(e)).trim() + "\n"
     files[`rows/${list}/${e.file}.html`] = content
     // A new deploy's rows are fetched fresh, like the scripts' ?v=hash
-    rowFiles[e.file] = `/rows/${list}/${e.file}.html?v=${crypto.createHash("md5").update(content).digest("hex").slice(0, 8)}`
+    rowFiles[e.file] = `/rows/${list}/${e.file}.html?v=${crypto.createHash("md5").update(content).digest("hex").slice(0, 10)}`
   }
 
   // An item at several nodes is linked once
