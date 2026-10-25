@@ -223,21 +223,7 @@
   margin-right: .125rem;
   border-radius: 50%;
   background: var(--danger);
-  animation: maintenance-pulse 3.2s ease-in-out infinite;
-
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
-  }
-}
-
-@keyframes maintenance-pulse {
-  0%, 100% {
-    box-shadow: 0 0 .25rem 0 color-mix(in srgb, var(--danger) 40%, transparent);
-  }
-
-  50% {
-    box-shadow: 0 0 1rem .375rem color-mix(in srgb, var(--danger) 85%, transparent);
-  }
+  box-shadow: 0 0 .25rem 0 color-mix(in srgb, var(--danger) 40%, transparent);
 }
 
 .maintenance-name {

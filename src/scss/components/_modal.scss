@@ -2,9 +2,7 @@
 
 .modal {
   @include glass;
-  background-color: var(--surface);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  background-color: var(--surface-solid);
   border: none;
   color: var(--font-primary);
   padding: 1.5rem;
@@ -23,11 +21,11 @@
   transition: opacity var(--modal-out) $ease, transform var(--modal-out) $ease,
     overlay var(--modal-out) allow-discrete, display var(--modal-out) allow-discrete;
 
+  // Darkened only, no blur
   &::backdrop {
     background-color: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(0);
-    transition: background-color var(--modal-out), backdrop-filter var(--modal-out),
-      overlay var(--modal-out) allow-discrete, display var(--modal-out) allow-discrete;
+    transition: background-color var(--modal-out), overlay var(--modal-out) allow-discrete,
+      display var(--modal-out) allow-discrete;
   }
 
   &[open] {
@@ -36,7 +34,6 @@
 
     &::backdrop {
       background-color: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(2px);
     }
   }
 
@@ -48,7 +45,6 @@
 
     &[open]::backdrop {
       background-color: rgba(0, 0, 0, 0);
-      backdrop-filter: blur(0);
     }
   }
 
