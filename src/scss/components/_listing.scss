@@ -440,7 +440,8 @@ $tab-flare: .5rem;
   color: var(--font-secondary);
   // 12px, the smallest text phones read without zooming
   font-size: .75rem;
-  white-space: nowrap;
+  // Only a chip wider than the row wraps its text
+  min-width: 0;
 }
 
 .chip-gold {
@@ -482,14 +483,14 @@ $tab-flare: .5rem;
     width: 1.75rem;
     height: 1.75rem;
     background-color: currentColor;
-    mask: url("/images/ui/map-search.svg") center / contain no-repeat;
     -webkit-mask: url("/images/ui/map-search.svg") center / contain no-repeat;
+    mask: url("/images/ui/map-search.svg") center / contain no-repeat;
   }
 
   // An ocean fish's, a boat to its stop on the ocean fishing page
   &.location-ocean::before {
-    mask-image: url("/images/ui/sailing.svg");
     -webkit-mask-image: url("/images/ui/sailing.svg");
+    mask-image: url("/images/ui/sailing.svg");
   }
 
   // A rounded square around the icon on hover, a bit bigger than it, also what a finger taps

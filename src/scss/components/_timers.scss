@@ -8,9 +8,8 @@
   margin-top: 1.25rem;
   padding-bottom: 1.25rem;
 
-  // Two columns on a phone too, the small timers pair up so more of them fit on the first screen
   @include mobile {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: .75rem;
   }
 }
@@ -26,6 +25,11 @@
   &.small {
     grid-column: span 1;
     padding: 1rem;
+
+    // Lines up with the big ones on a phone
+    @include mobile {
+      padding: 1.25rem;
+    }
 
     .title {
       font-size: 0.95rem;

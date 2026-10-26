@@ -118,7 +118,7 @@ const fishTags = (fish) => [
     ? [fish.ocean.blue && chip(fish.ocean.time ? `Blue fish, ${fish.ocean.time}` : "Blue fish", "chip-gold"), chip("Ocean fishing", "chip-accent")]
     : chip(`${fish.method === "Spearfishing" ? "Spearfishing" : "Fisher"} Lv.${fish.level}`),
   weatherText(fish) && chip(weatherText(fish), "chip-accent", `Bites ${whenText(fish)}`),
-  fish.predators && chip(`Intuition: ${predatorText(fish)}`, "chip-warning", `Catch ${predatorText(fish)} first`),
+  fish.predators && chip("Intuition", "chip-warning", `Catch ${predatorText(fish)} first`),
   fish.folklore && chip(fish.folklore)
 ]
 

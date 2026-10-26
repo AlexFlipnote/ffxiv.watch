@@ -30,7 +30,9 @@
 
 .settings-note {
   margin: 0;
+  font-size: .8rem;
   line-height: 1.4;
+  color: var(--font-tertiary);
 }
 
 .segmented {
@@ -102,27 +104,27 @@
       position: absolute;
       inset: 0;
       background-color: currentColor;
+      -webkit-mask: center / contain no-repeat;
       mask: center / contain no-repeat;
       transition: transform .4s $ease;
-      -webkit-mask: center / contain no-repeat;
     }
   }
 
   input[value="system"] + span .theme-icon::before {
+    -webkit-mask-image: url("/images/ui/theme-system.svg");
     mask-image: url("/images/ui/theme-system.svg");
   }
-    -webkit-mask-image: url("/images/ui/theme-system.svg");
 
   input[value="light"] + span .theme-icon::before {
+    -webkit-mask-image: url("/images/ui/theme-light.svg");
     mask-image: url("/images/ui/theme-light.svg");
   }
-    -webkit-mask-image: url("/images/ui/theme-light.svg");
 
   input[value="dark"] + span .theme-icon {
     &::before {
+      -webkit-mask-image: url("/images/ui/theme-dark.svg");
       mask-image: url("/images/ui/theme-dark.svg");
     }
-      -webkit-mask-image: url("/images/ui/theme-dark.svg");
 
     // Stars by the moon, in the open side of it
     &::after {
@@ -133,9 +135,9 @@
       width: .95rem;
       height: .95rem;
       background-color: var(--gold);
+      -webkit-mask: url("/images/ui/theme-stars.svg") center / contain no-repeat;
       mask: url("/images/ui/theme-stars.svg") center / contain no-repeat;
       opacity: 0;
-      -webkit-mask: url("/images/ui/theme-stars.svg") center / contain no-repeat;
       transform: scale(.3) rotate(-45deg);
       transition: transform .4s $ease, opacity .4s $ease;
     }
@@ -248,9 +250,9 @@
         width: 1.125rem;
         height: 1.125rem;
         background-color: currentColor;
+        -webkit-mask: url("/images/ui/no-sound.svg") center / contain no-repeat;
         mask: url("/images/ui/no-sound.svg") center / contain no-repeat;
       }
-        -webkit-mask: url("/images/ui/no-sound.svg") center / contain no-repeat;
     }
   }
 }
@@ -284,10 +286,6 @@
     opacity: .4;
     cursor: default;
     background-color: var(--chip-background);
-  }
-
-  &.settings-danger {
-    color: var(--warning);
   }
 
   // Waiting for the second click

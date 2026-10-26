@@ -70,7 +70,7 @@ const rows = LISTS.map(({ key, name, noun }) => {
   li.innerHTML = `
     <span class="settings-list-name"></span>
     <span class="settings-list-count"></span>
-    <button class="settings-btn settings-danger">Reset</button>
+    <button class="settings-btn">Reset</button>
   `
   li.querySelector(".settings-list-name").textContent = name
   const button = li.querySelector("button")

@@ -42,7 +42,7 @@ const vistaTags = (vista) => [
   chip(vista.emote),
   ...(vista.weather ?? []).map((w) => chip(w, "chip-accent")),
   vista.level && chip(`Lv.${vista.level}`),
-  vista.unlock && chip(`Quest: ${vista.unlock.quest}`, "chip-warning", `Unlocked by the quest ${unlockText(vista.unlock)}`)
+  vista.unlock && chip("Quest", "chip-warning", `Unlocked by the quest ${unlockText(vista.unlock)}`)
 ]
 
 /**
