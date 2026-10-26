@@ -276,7 +276,12 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     const used = new Map()
     let until = Infinity
     for (const [i, run] of runs.entries()) {
-      run.group = groups.get(run.key) ?? groupRows(run.state)
+      if (!groups.has(run.key)) {
+        const group = groupRows(run.state)
+        nearScreen.observe(group.header)
+        groups.set(run.key, group)
+      }
+      run.group = groups.get(run.key)
       used.set(run.key, run.group)
       if (run.state === "open") until = Math.min(until, run.w.end)
       if (run.state === "later") until = Math.min(until, run.w.start)
@@ -289,6 +294,11 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
         if (row.tr.className !== rowClass) row.tr.className = rowClass
         trs.push(row.tr)
       }
+    }
+    for (const [key, group] of groups) {
+      if (used.has(key)) continue
+      nearScreen.unobserve(group.header)
+      shownHeaders.delete(group.header)
     }
     groups = used
 
@@ -320,6 +330,16 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     render(Date.now())
   })
 
+  // The group headers on screen or half a screen from it.
+  const shownHeaders = new Set()
+  const nearScreen = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) shownHeaders.add(entry.target)
+      else shownHeaders.delete(entry.target)
+    }
+    render(Date.now())
+  }, { rootMargin: "50% 0px" })
+
   // Every tick only the countdowns change, the groups are rebuilt when one opens or closes
   function render(now) {
     if (!ready) return
@@ -327,6 +347,9 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
 
     const date = new Date(now)
     for (const { state, w, group } of layout.runs) {
+      // Filled once when made, so one far off isn't blank
+      if (group.filled && !shownHeaders.has(group.header)) continue
+      group.filled = true
       if (state === "open" || state === "later") {
         setText(group.countdown, formatCountdown((w.open ? w.end : w.start) - now))
         // Up now, only the end is shown, "Up until 21:03", so its day goes by today's instead

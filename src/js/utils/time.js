@@ -49,7 +49,20 @@ const clockOptions = () => (hour12()
  * @param {Intl.DateTimeFormatOptions} options
  * @returns {string}
  */
-export const formatEnGB = (date, options) => date.toLocaleString("en-GB", options).replace(/\b[ap]m\b/, (p) => p.toUpperCase())
+export const formatEnGB = (date, options) => formatterFor(options).format(date).replace(/\b[ap]m\b/, (p) => p.toUpperCase())
+
+// toLocaleString() builds a new formatter every call, slow with a list's hundred <time>s
+const formatters = new Map()
+
+/**
+ * @param {Intl.DateTimeFormatOptions} options
+ * @returns {Intl.DateTimeFormat}
+ */
+function formatterFor(options) {
+  const key = JSON.stringify(options)
+  if (!formatters.has(key)) formatters.set(key, new Intl.DateTimeFormat("en-GB", options))
+  return formatters.get(key)
+}
 
 /**
  * Rounded up to the second, so it reaches 00:00:00 right as the time comes, not a second before.
@@ -172,5 +185,7 @@ export function everyTick(fn) {
  * @param {string} text
  */
 export function setText(el, text) {
-  if (el.textContent !== text) el.textContent = text
+  if (el.textContent === text) return
+  if (el.childNodes.length === 1 && el.firstChild.nodeType === Node.TEXT_NODE) el.firstChild.data = text
+  else el.textContent = text
 }
