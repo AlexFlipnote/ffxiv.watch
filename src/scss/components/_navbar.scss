@@ -29,6 +29,15 @@ body::before {
   pointer-events: none;
 }
 
+// Effects' Light, a slow phone stutters scrolling under the blur
+:root[data-effects="light"] {
+  body::before,
+  .navbar-more-menu {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
 .navbar {
   position: sticky;
   top: 0;

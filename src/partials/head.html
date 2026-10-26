@@ -14,6 +14,12 @@
     root.dataset.theme = theme
     document.querySelector("meta[name=theme-color]").content = theme === "light" ? "#f7f7f7" : "#1a1a1a"
 
+    // The same as autoEffects in js/utils/effects.js
+    let effects = null
+    try { effects = localStorage.getItem("effects") } catch {}
+    if (effects !== "full" && effects !== "light") effects = navigator.deviceMemory <= 4 ? "light" : "full"
+    root.dataset.effects = effects
+
     // Room for the alarms' strip under the navbar, so the page doesn't move down once the script fills it in
     try { if (JSON.parse(localStorage.getItem("alarms"))?.length) root.toggleAttribute("data-alarms", true) } catch {}
 

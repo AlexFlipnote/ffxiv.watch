@@ -106,6 +106,17 @@
   color-scheme: light;
 }
 
+// Effects' Light: solid, without the blur the page showing through looks muddy
+:root[data-effects="light"] {
+  --navbar-surface: #1a1a1a;
+  --navbar-glass: #1a1a1a;
+
+  &[data-theme="light"] {
+    --navbar-surface: #fafafa;
+    --navbar-glass: #fafafa;
+  }
+}
+
 // The day/night tint, set by js/utils/theme.js
 @property --bg {
   syntax: "<color>";

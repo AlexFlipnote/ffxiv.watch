@@ -1,6 +1,7 @@
 import { DEFAULT_LEAD, DEFAULT_SOUND, LEAD_KEY, SOUND_KEY, soundUrl } from "./alarmBells.js"
 import { closable } from "./dialog.js"
 import { decodeBackup, encodeBackup, HIDE_DONE_KEY, LISTS, readDone, storageKey, writeDone } from "./done.js"
+import { autoEffects, pickedEffects, pickEffects } from "./effects.js"
 import { load, onStored, store } from "./storage.js"
 import { pickedTheme, pickTheme } from "./theme.js"
 import { pickClock, pickedClock } from "./time.js"
@@ -9,6 +10,8 @@ import { toast } from "./toast.js"
 const modal = document.getElementById("settings")
 const themes = [...modal.querySelectorAll("input[name=theme]")]
 const clocks = [...modal.querySelectorAll("input[name=clock]")]
+const effects = [...modal.querySelectorAll("input[name=effects]")]
+const effectsNote = document.getElementById("settings-effects-note")
 const hideDone = document.getElementById("settings-hide-done")
 const leads = [...modal.querySelectorAll("input[name=alarm-lead]")]
 const alarmSound = document.getElementById("settings-alarm-sound")
@@ -97,9 +100,29 @@ function showAlarms() {
   alarmPreview.disabled = alarmSound.value === "off"
 }
 
+const EFFECTS_TEXT = {
+  full: "Frosted glass behind the navbar.",
+  light: "No blur behind the navbar, smoother scrolling on slower phones."
+}
+
+function showEffects() {
+  const picked = pickedEffects()
+  for (const input of effects) input.checked = input.value === picked
+  if (picked !== "auto") {
+    effectsNote.textContent = EFFECTS_TEXT[picked]
+    return
+  }
+  const { effects: auto, memory } = autoEffects()
+  // The browser says 8 for anything with more
+  const why = memory === undefined ? "this browser doesn't say how much memory the device has"
+    : `this device has ${memory >= 8 ? "8 GB of memory or more" : `${memory} GB of memory`}`
+  effectsNote.textContent = `Using ${auto === "light" ? "Light" : "Full"}, ${why}.`
+}
+
 function show() {
   for (const input of themes) input.checked = input.value === pickedTheme()
   for (const input of clocks) input.checked = input.value === pickedClock()
+  showEffects()
   hideDone.checked = load(HIDE_DONE_KEY) === "1"
   showAlarms()
   showProgress()
@@ -107,6 +130,7 @@ function show() {
 
 for (const input of themes) input.addEventListener("change", () => pickTheme(input.value))
 for (const input of clocks) input.addEventListener("change", () => pickClock(input.value))
+for (const input of effects) input.addEventListener("change", () => pickEffects(input.value))
 hideDone.addEventListener("change", () => store(HIDE_DONE_KEY, hideDone.checked ? "1" : null))
 for (const input of leads) input.addEventListener("change", () => store(LEAD_KEY, input.value === String(DEFAULT_LEAD) ? null : input.value))
 const preview = () => {
@@ -162,6 +186,7 @@ onStored(LEAD_KEY, showAlarms)
 onStored(SOUND_KEY, showAlarms)
 onStored("theme", () => themes.forEach((input) => input.checked = input.value === pickedTheme()))
 onStored("clock", () => clocks.forEach((input) => input.checked = input.value === pickedClock()))
+onStored("effects", showEffects)
 
 closable(modal, document.getElementById("settings-close"))
 modal.addEventListener("close", () => confirms.forEach((reset) => reset()))

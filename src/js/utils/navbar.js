@@ -1,3 +1,4 @@
+import "./effects.js"
 import "./theme.js"
 import { ALARMS_KEY, paintStrip, readAlarms, savedNext } from "./alarmBells.js"
 import { loadIndex, openSearch } from "./search.js"
