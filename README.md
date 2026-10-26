@@ -17,6 +17,14 @@ Everything is shown in your local time, with your progress kept on your device.
 ## How it's built
 Static pages with no framework and no backend. Each list loads only the expansion it shows, and the timers only wake when something on screen can change, so it stays light on a phone.
 
+## Tested on
+- **Samsung Galaxy A40**: the low end it's tuned for
+- iPhone 14 and newer
+- Google Pixel 10 Pro XL
+- A high-end desktop PC
+
+In Chrome, Firefox, Edge, Safari and Samsung Internet.
+
 ## Credits
 - **[Carbuncle Plushy's fish tracker](https://github.com/icykoneko/ff14-fish-tracker-app)** for when each fish bites, its bait and intuition
 - **[Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft)** for the bait, hookset and tug of the other fish, blue fish times and hidden node items
