@@ -25,6 +25,11 @@
 
   @include hover {
     --line: currentColor;
+  // No color-mix() before Chromium 111
+  @supports not (color: color-mix(in srgb, red, red)) {
+    --line: rgba(128, 128, 128, .5);
+  }
+
   }
 }
 
@@ -134,6 +139,7 @@
     background-color: var(--accent);
     mask: url("/images/ui/tug.svg") center / contain no-repeat;
     transform-origin: 50% 100%;
+    -webkit-mask: url("/images/ui/tug.svg") center / contain no-repeat;
   }
 
   i + i {

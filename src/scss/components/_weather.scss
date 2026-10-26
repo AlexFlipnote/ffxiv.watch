@@ -17,7 +17,7 @@
 }
 
 // The weather page's timings, on the body so the navbar and the head share them
-body:has(.weather-head) {
+body.weather-page {
   // Even, so the navbar is seen reaching down the whole way
   --reach-ease: cubic-bezier(.4, 0, .2, 1);
   --reach-time: .35s;
@@ -81,7 +81,7 @@ body:has(.weather-head) {
 }
 
 // How far down the navbar's background reaches, the stuck head's height, which js/weather.js keeps in --navbar-reach
-body:has(.weather-head)::before {
+body.weather-page::before {
   height: calc(var(--navbar-height) + var(--navbar-reach, 0px));
   transition: height var(--reach-time) var(--reach-ease);
 }
@@ -89,7 +89,7 @@ body:has(.weather-head)::before {
 @media (prefers-reduced-motion: reduce) {
   .weather-head,
   .weather-head::after,
-  body:has(.weather-head)::before {
+  body.weather-page::before {
     transition: none;
   }
 }
@@ -233,7 +233,7 @@ body:has(.weather-head)::before {
   justify-self: start;
   color: var(--font-primary);
   text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  @include faint-underline;
   text-decoration-thickness: 1px;
   text-underline-offset: .2em;
   transition: color .2s, text-decoration-color .2s;
@@ -414,7 +414,7 @@ body:has(.weather-head)::before {
   // Underlined like the links, the hint that they do something
   span {
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    @include faint-underline;
     text-decoration-thickness: 1px;
     text-underline-offset: .2em;
     transition: color .2s, text-decoration-color .2s;
@@ -587,6 +587,7 @@ body:has(.weather-head)::before {
     width: 1rem;
     height: 1.5rem;
     background-color: var(--font-tertiary);
+    -webkit-mask: url("/images/ui/chevron.svg") center / 1rem no-repeat;
     mask: url("/images/ui/chevron.svg") center / 1rem no-repeat;
     transform: scaleX(-1);
   }

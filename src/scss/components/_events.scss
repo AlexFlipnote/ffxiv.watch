@@ -23,19 +23,25 @@
 
 .event-card {
   @include glass;
-  display: grid;
-  grid-template-columns: 20rem minmax(0, 1fr);
+  // Flex, so one without a banner takes the width without :has()
+  display: flex;
   align-items: center;
   gap: 1.25rem;
   padding: .625rem;
 
-  &:not(:has(.event-banner)) {
-    grid-template-columns: minmax(0, 1fr);
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .75rem;
   }
+}
+
+.event-banner {
+  flex: none;
+  width: 20rem;
 
   @include mobile {
-    grid-template-columns: minmax(0, 1fr);
-    gap: .75rem;
+    width: auto;
   }
 }
 
@@ -47,6 +53,8 @@
 }
 
 .event-body {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: .25rem;

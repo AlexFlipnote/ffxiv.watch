@@ -101,7 +101,7 @@
   a {
     color: inherit;
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    @include faint-underline;
     text-underline-offset: .2em;
     margin-right: .375rem;
 
@@ -261,7 +261,7 @@
   a {
     color: var(--font-primary);
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    @include faint-underline;
     text-decoration-thickness: 1px;
     text-underline-offset: .2em;
     transition: color .2s, text-decoration-color .2s;

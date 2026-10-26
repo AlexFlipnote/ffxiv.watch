@@ -119,19 +119,23 @@
     width: 1.25rem;
     height: 1.25rem;
     background-color: var(--font-tertiary);
+    -webkit-mask: center / contain no-repeat;
     mask: center / contain no-repeat;
   }
 
   &[data-kind="vista"]::before {
+    -webkit-mask-image: url("/images/ui/map-search.svg");
     mask-image: url("/images/ui/map-search.svg");
   }
 
   &[data-kind="weather"]::before {
+    -webkit-mask-image: url("/images/ui/theme-light.svg");
     mask-image: url("/images/ui/theme-light.svg");
   }
 
   // The arrow file points back, a page is somewhere to go
   &[data-kind="page"]::before {
+    -webkit-mask-image: url("/images/ui/arrow.svg");
     mask-image: url("/images/ui/arrow.svg");
     transform: scaleX(-1);
   }

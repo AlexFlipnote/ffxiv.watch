@@ -66,6 +66,12 @@ $navbar-fold: 51.5625rem;
   background-size: calc(100% - #{$left} - #{$right}) 1px;
 }
 
+// Grey where color-mix() is missing (Chromium before 111)
+@mixin faint-underline {
+  text-decoration-color: rgba(128, 128, 128, .5);
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+
 // Full-width column that lines up across pages, with a 1rem gutter on each side
 @mixin content-column {
   width: calc(100% - 2rem);

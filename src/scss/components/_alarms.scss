@@ -27,6 +27,7 @@
     width: 1.5rem;
     height: 1.5rem;
     background-color: currentColor;
+    -webkit-mask: url("/images/ui/alarm-add.svg") center / contain no-repeat;
     mask: url("/images/ui/alarm-add.svg") center / contain no-repeat;
   }
 
@@ -43,6 +44,7 @@
     color: var(--accent);
 
     &::before {
+      -webkit-mask-image: url("/images/ui/alarm-on.svg");
       mask-image: url("/images/ui/alarm-on.svg");
     }
   }
@@ -53,6 +55,7 @@
     cursor: default;
 
     &::before {
+      -webkit-mask-image: url("/images/ui/alarm-off.svg");
       mask-image: url("/images/ui/alarm-off.svg");
     }
   }
@@ -141,6 +144,7 @@
   width: 1.125rem;
   height: 1.125rem;
   background-color: var(--accent);
+  -webkit-mask: url("/images/ui/alarm.svg") center / contain no-repeat;
   mask: url("/images/ui/alarm.svg") center / contain no-repeat;
 }
 
@@ -212,6 +216,7 @@
     width: 1.5rem;
     height: 1.5rem;
     background-color: var(--font-tertiary);
+    -webkit-mask: url("/images/ui/alarm.svg") center / contain no-repeat;
     mask: url("/images/ui/alarm.svg") center / contain no-repeat;
   }
 }

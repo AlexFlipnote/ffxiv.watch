@@ -114,7 +114,7 @@ export function vistaPages() {
       title: `${name}: FFXIV Sightseeing Log ${vistaNumber(vista)}`,
       description: `FFXIV ${expansion.name} sightseeing log ${vistaNumber(vista)}, ${name}: use the ${vista.emote} emote in ${vista.zone}${vista.map ? ` at ${coordinates(vista.map)}` : ""}${timed ? `, ${when}` : ""}.`,
       content: html`
-<section class="detail-card vista-card">
+<section class="detail-card vista-card${vista.map ? " has-map" : ""}">
   <div class="detail-top">
     <header class="detail-header">
       <div class="item-heading">

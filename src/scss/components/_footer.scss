@@ -14,7 +14,7 @@
     white-space: nowrap;
     color: var(--font-secondary);
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    @include faint-underline;
     text-underline-offset: .2em;
     transition: color .2s, text-decoration-color .2s;
 

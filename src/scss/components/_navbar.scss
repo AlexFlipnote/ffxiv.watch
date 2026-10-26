@@ -412,8 +412,13 @@ body::before {
     left: 0;
     right: 0;
     height: auto;
-    // Stops short of the home bar instead of padding for it, Android's counts even with the menu nowhere near it
-    max-height: calc(100dvh - var(--navbar-height) - env(safe-area-inset-bottom));
+    // Stops short of the home bar instead of padding for it, Android's counts even with the menu nowhere near it.
+    // dvh in @supports, with a var() in it a plain fallback before it wouldn't apply
+    max-height: calc(100vh - var(--navbar-height) - env(safe-area-inset-bottom));
+
+    @supports (height: 100dvh) {
+      max-height: calc(100dvh - var(--navbar-height) - env(safe-area-inset-bottom));
+    }
     padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
     flex-direction: column;
     align-items: stretch;
@@ -465,12 +470,13 @@ body::before {
     transition: height .3s $ease;
   }
 
-  body:has(.navbar.opened)::before {
+  // Set by js/utils/navbar.js
+  body.navbar-opened::before {
     height: calc(var(--navbar-height) + var(--menu-height, 0px));
   }
 
   // Under the glass while the menu is open, which would otherwise show the head through it
-  body:has(.navbar.opened) .weather-head {
+  body.navbar-opened .weather-head {
     z-index: 1;
   }
 

@@ -33,6 +33,7 @@
     width: 1rem;
     height: 1rem;
     background-color: currentColor;
+    -webkit-mask: center / contain no-repeat;
     mask: center / contain no-repeat;
   }
 
@@ -56,6 +57,7 @@
   align-self: flex-start;
 
   &::before {
+    -webkit-mask-image: url("/images/ui/arrow.svg");
     mask-image: url("/images/ui/arrow.svg");
   }
 }
@@ -149,7 +151,7 @@
   gap: 1rem;
 
   // A node without a map position, like the Diadem's
-  &:not(:has(.map)) {
+  &:not(.has-map) {
     grid-template-areas:
       "top top"
       "timer facts";
@@ -292,7 +294,7 @@
 // A vista's text runs up to its map, which is narrower than its half. The text takes the whole row with room kept for
 // the map on its right, so the timer and facts under them stay half and half
 @media (width > 36rem) {
-  .detail-card.vista-card:has(> .map) {
+  .detail-card.vista-card.has-map {
     grid-template-areas:
       "top top"
       "timer facts";
@@ -343,7 +345,7 @@ $item-side: min(20rem, 40%);
   font-size: 1rem;
 }
 
-.detail-card.gathering-node:has(> .map) {
+.detail-card.gathering-node.has-map {
   grid-template-columns: minmax(0, 1fr) $item-side;
   grid-template-rows: auto auto 1fr;
   grid-template-areas:
@@ -352,7 +354,7 @@ $item-side: min(20rem, 40%);
     "facts map";
 
   // Only an item at several nodes has a heading on each
-  &:not(:has(> .detail-top)) {
+  &:not(.has-top) {
     grid-template-rows: auto 1fr;
     grid-template-areas:
       "timer map"
@@ -393,7 +395,7 @@ $item-side: min(20rem, 40%);
 
 // Without a map the timer only has half the card, a long line like an ocean fish's stop would squeeze the countdown, so
 // it goes under it like on a phone
-.gathering-node:not(:has(> .map)) .detail-timer[data-window] {
+.gathering-node:not(.has-map) .detail-timer[data-window] {
   grid-template-columns: minmax(0, 1fr);
 
   .detail-when {
@@ -455,6 +457,7 @@ $item-side: min(20rem, 40%);
 
   .detail-prev-link::before,
   .detail-next-link::before {
+    -webkit-mask-image: url("/images/ui/chevron.svg");
     mask-image: url("/images/ui/chevron.svg");
   }
 
@@ -475,7 +478,7 @@ $item-side: min(20rem, 40%);
 // Two columns still fit a narrow window, only a phone stacks them
 @media (max-width: 36rem) {
   .detail-card,
-  .detail-card:not(:has(.map)) {
+  .detail-card:not(.has-map) {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "top"
@@ -488,7 +491,7 @@ $item-side: min(20rem, 40%);
     }
   }
 
-  .detail-card.gathering-node:has(> .map) {
+  .detail-card.gathering-node.has-map {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: none;
     grid-template-areas:
@@ -497,7 +500,7 @@ $item-side: min(20rem, 40%);
       "facts"
       "map";
 
-    &:not(:has(> .detail-top)) {
+    &:not(.has-top) {
       grid-template-rows: none;
       grid-template-areas:
         "timer"

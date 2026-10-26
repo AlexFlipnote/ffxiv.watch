@@ -120,6 +120,8 @@ everyTick((now) => {
 // Stuck once where it started has scrolled up under the navbar. The navbar's background then reaches down behind it,
 // as far as it's tall (see _weather.scss)
 const head = document.getElementById("weather-head")
+// For body::before, without :has() (Chromium before 105)
+document.body.classList.add("weather-page")
 const reach = () => document.documentElement.style.setProperty("--navbar-reach",
   head.classList.contains("weather-head-stuck") ? `${head.offsetHeight}px` : "0px")
 const navbar = document.querySelector(".navbar")

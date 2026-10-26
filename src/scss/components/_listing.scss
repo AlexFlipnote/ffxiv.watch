@@ -64,6 +64,7 @@
     width: 1.25rem;
     height: 1.25rem;
     background-color: currentColor;
+    -webkit-mask: url("/images/ui/filter.svg") center / contain no-repeat;
     mask: url("/images/ui/filter.svg") center / contain no-repeat;
   }
 
@@ -141,6 +142,7 @@
     width: 1.5rem;
     height: 1.5rem;
     background-color: currentColor;
+    -webkit-mask: url("/images/ui/arrow.svg") center / contain no-repeat;
     mask: url("/images/ui/arrow.svg") center / contain no-repeat;
     // The arrow points left
     transform: rotate(90deg);
@@ -255,7 +257,7 @@
   td a:where(:not(.location)) {
     color: inherit;
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    @include faint-underline;
     text-decoration-thickness: 1px;
     text-underline-offset: .2em;
     transition: color .2s, text-decoration-color .2s;
@@ -481,11 +483,13 @@ $tab-flare: .5rem;
     height: 1.75rem;
     background-color: currentColor;
     mask: url("/images/ui/map-search.svg") center / contain no-repeat;
+    -webkit-mask: url("/images/ui/map-search.svg") center / contain no-repeat;
   }
 
   // An ocean fish's, a boat to its stop on the ocean fishing page
   &.location-ocean::before {
     mask-image: url("/images/ui/sailing.svg");
+    -webkit-mask-image: url("/images/ui/sailing.svg");
   }
 
   // A rounded square around the icon on hover, a bit bigger than it, also what a finger taps

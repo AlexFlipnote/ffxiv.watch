@@ -256,7 +256,7 @@ function spotCard(fish, info, others, paged) {
   const shared = fish.tug ? others.filter((f) => f.tug === fish.tug) : []
   const rest = others.filter((f) => !shared.includes(f))
   return html`
-<section class="detail-card gathering-node">
+<section class="detail-card gathering-node${fish.map ? " has-map" : ""}">
   ${fish.map && mapFigure(fish, fish.name)}
   ${fish.ocean ? oceanTimer(fish, info) : detailTimer(windowData(fish), isTimed(fish) ? `Bites ${whenText(fish)}` : "Bites any time", isTimed(fish) && howOften(fish, "Bites"), alarmFor(`fish:${fish.id}`, fish.name, fish, info[fish.id].icon))}
   ${facts([

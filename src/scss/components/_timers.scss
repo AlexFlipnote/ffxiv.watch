@@ -51,7 +51,7 @@
   .title a {
     color: inherit;
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    @include faint-underline;
     text-decoration-thickness: 1px;
     text-underline-offset: .2em;
     transition: text-decoration-color .2s;

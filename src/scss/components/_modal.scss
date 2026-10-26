@@ -10,6 +10,9 @@
   box-sizing: border-box;
   max-width: 38rem;
   width: 90%;
+  // Chromium before 114 doesn't cap a modal itself
+  max-height: calc(100% - 2em - 6px);
+  overflow: auto;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
 
   // Transitions instead of an animation so closing it any way plays the way out too. overlay and display hold it in
@@ -55,6 +58,8 @@
     &.modal-full {
       width: 100%;
       max-width: none;
+      // No dvh before Chromium 108
+      height: 100%;
       height: 100dvh;
       max-height: none;
       margin: 0;
@@ -111,6 +116,12 @@
 
   @include hover {
     color: var(--accent);
+  }
+
+  // Outlines ignore border-radius before Chromium 94
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 .125rem var(--accent);
   }
 }
 

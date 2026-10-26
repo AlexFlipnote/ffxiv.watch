@@ -51,6 +51,12 @@
   animation: toastIn .25s $ease;
   transition: opacity .2s, transform .2s $ease;
 
+  // No color-mix() before Chromium 111, with a var() in it a plain fallback first wouldn't apply
+  @supports not (color: color-mix(in srgb, red, red)) {
+    border-color: var(--tone);
+    background-color: var(--surface-solid);
+  }
+
   @include mobile {
     width: 100%;
   }

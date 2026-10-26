@@ -215,7 +215,7 @@ function nodeCard(spot, named, below, info) {
   const others = node.items.filter((i) => i.id !== item.id)
 
   return html`
-<section class="detail-card gathering-node">${named && html`
+<section class="detail-card gathering-node${node.map ? " has-map" : ""}${named ? " has-top" : ""}">${named && html`
   <div class="detail-top">
     <h2 class="detail-node">${node.zone}</h2>${spotTags(spot)}
   </div>`}
