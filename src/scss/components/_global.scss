@@ -3,7 +3,8 @@
 :root {
   --font-primary: #fff;
   --font-secondary: rgba(255, 255, 255, .75);
-  --font-tertiary: rgba(255, 255, 255, .5);
+  // .52 for 4.5:1 on the open groups' green
+  --font-tertiary: rgba(255, 255, 255, .52);
   // The dropdown chevron, an SVG can't take a CSS color so each theme has its own
   --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1.5 1.75l4.5 4.5 4.5-4.5' fill='none' stroke='%23fff' stroke-opacity='.6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   --accent: #14bae4;
@@ -69,11 +70,12 @@
 :root[data-theme="light"] {
   --font-primary: #1a1a1a;
   --font-secondary: rgba(0, 0, 0, .7);
-  --font-tertiary: rgba(0, 0, 0, .5);
+  --font-tertiary: rgba(0, 0, 0, .6);
   --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1.5 1.75l4.5 4.5 4.5-4.5' fill='none' stroke='%23000' stroke-opacity='.55' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  --accent: #0b7fa0;
-  --gold: #a87b06;
-  --warning: #b45309;
+  // Dark enough for 4.5:1 on the darkest spot they sit on, a chip on the night page (#c8cbd3)
+  --accent: #085c75;
+  --gold: #6d5004;
+  --warning: #894007;
   --danger: #cf222e;
   --success: #1a7f37;
   --divider: rgba(0, 0, 0, .1);
@@ -85,7 +87,7 @@
   --navbar-shadow: 0 1px 6px rgba(0, 0, 0, .08);
   --chip-background: rgba(0, 0, 0, .06);
   --group-background: rgba(255, 255, 255, .85);
-  --open: #15803d;
+  --open: #10622f;
   // A faint tint, so the open ones stand out instead of looking dimmed
   --group-open-background: rgba(228, 248, 234, .95);
   --group-shadow: drop-shadow(0 1px 3px rgba(0, 0, 0, .08));
