@@ -21,6 +21,7 @@ Static pages with no framework and no backend. Each list loads only the expansio
 - **Samsung Galaxy A40**: the low end it's tuned for
 - iPhone 14 and newer
 - Google Pixel 10 Pro XL
+- A locked-down office PC (Intel i5-9500T, integrated UHD 630)
 - A high-end desktop PC
 
 In Chrome, Firefox, Edge, Safari and Samsung Internet.
