@@ -12,8 +12,8 @@
     <x-html src="partials/navbar.html"/>
 
     <div class="page">
-      <h1 class="sr-only">FFXIV Reset Timers and Eorzea Time</h1>
       <main class="timers timers-pending" id="timers">
+        <h1 class="sr-only">FFXIV Reset Timers and Eorzea Time</h1>
         <a class="{{ maintenance.class }}" id="maintenance" href="{{ maintenance.url }}" data-start="{{ maintenance.start }}" data-end="{{ maintenance.end }}" target="_blank" rel="noopener" hidden>
           <span class="maintenance-title"><span class="maintenance-dot" aria-hidden="true"></span><strong class="maintenance-name">{{ maintenance.name }}</strong> <span class="maintenance-patch">{{ maintenance.patch }}</span></span>
           <span class="maintenance-when"><time datetime="{{ maintenance.startIso }}">{{ maintenance.startText }}</time> - <time datetime="{{ maintenance.endIso }}">{{ maintenance.endText }}</time></span>
