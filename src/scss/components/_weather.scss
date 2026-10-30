@@ -86,6 +86,13 @@ body.weather-page::before {
   transition: height var(--reach-time) var(--reach-ease);
 }
 
+// The open menu's reach instead, which the rule above would otherwise override (see _navbar.scss)
+@include navbar-folded {
+  body.weather-page.navbar-opened::before {
+    height: calc(var(--navbar-height) + var(--menu-height, 0px));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .weather-head,
   .weather-head::after,
