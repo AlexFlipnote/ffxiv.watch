@@ -3,15 +3,6 @@
   "maintenance": [],
   "events": [
     {
-      "id": "1a2f450a10369c614dcae06468c478ec815e642d",
-      "name": "All Saints' Wake",
-      "lead": "That spookiest of seasons is upon us again! With thoroughfares and plazas across the realm festooned with frightful decorations, a few fiends in particular are attempting to entertain their mortal counterparts...",
-      "url": "https://eu.finalfantasyxiv.com/lodestone/special/2026/All_Saints_Wake/tfrx2rkv52",
-      "start": 1792051200000,
-      "end": 1793631540000,
-      "image": "/images/events/1a2f450a10369c614dcae06468c478ec815e642d.webp"
-    },
-    {
       "id": "08ee0babf2893172a422c7a4da2f5e07f025a860",
       "name": "Keybound Brawler Arrives 28 October",
       "lead": "Keybound Brawler, a new event that tests your typing prowess, is coming to the Manderville Gold Saucer! The first iteration of the event will be a special collaboration with the FINAL FANTASY VII REMAKE series.",
@@ -30,14 +21,6 @@
         "start": 1792051200000,
         "end": 1793631540000
       }
-    },
-    "91817b8d3336d9376d4ba19eb0236d03de2c2e76": {
-      "updated": "2026-10-08T07:00:00Z",
-      "found": null
-    },
-    "16bfaaa447127825fac89a065bad47a6194793a8": {
-      "updated": "2026-10-02T10:00:00Z",
-      "found": null
     },
     "76c20a92afbe7c5506f4cd491603a317cb5e5cd1": {
       "updated": "2026-10-13T06:30:00Z",
@@ -110,6 +93,14 @@
     },
     "f614b50997ea4024e9efc3125af15363dbe100a6": {
       "updated": "2026-10-31T04:40:00Z",
+      "found": null
+    },
+    "5c3b0f9e2fa2295dfc32c19e02e57e4e0614a09c": {
+      "updated": "2026-11-02T08:00:00Z",
+      "found": null
+    },
+    "74bc2f518effac0ba7dd05ab7c971b315795a373": {
+      "updated": "2026-11-02T07:00:00Z",
       "found": null
     }
   }
