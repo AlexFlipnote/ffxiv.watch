@@ -14,14 +14,6 @@
     }
   ],
   "topics": {
-    "1a2f450a10369c614dcae06468c478ec815e642d": {
-      "updated": "2026-10-08T08:00:00Z",
-      "found": {
-        "url": "https://eu.finalfantasyxiv.com/lodestone/special/2026/All_Saints_Wake/tfrx2rkv52",
-        "start": 1792051200000,
-        "end": 1793631540000
-      }
-    },
     "76c20a92afbe7c5506f4cd491603a317cb5e5cd1": {
       "updated": "2026-10-13T06:30:00Z",
       "found": null
@@ -101,6 +93,10 @@
     },
     "74bc2f518effac0ba7dd05ab7c971b315795a373": {
       "updated": "2026-11-02T07:00:00Z",
+      "found": null
+    },
+    "1ce048bb8e6f66cb681604f8636bb139ce2fff9b": {
+      "updated": "2026-11-04T11:45:00Z",
       "found": null
     }
   }
