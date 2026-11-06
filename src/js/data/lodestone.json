@@ -1,6 +1,14 @@
 {
   "fixes": {},
-  "maintenance": [],
+  "maintenance": [
+    {
+      "name": "All Worlds Maintenance (Nov. 9-10)",
+      "url": "https://eu.finalfantasyxiv.com/lodestone/news/detail/fae7a5d1c9e7f2967f2edd1db9ae78f14b3d0377",
+      "start": 1794218400000,
+      "end": 1794304800000,
+      "patch": "7.58"
+    }
+  ],
   "events": [
     {
       "id": "08ee0babf2893172a422c7a4da2f5e07f025a860",
@@ -16,10 +24,6 @@
   "topics": {
     "76c20a92afbe7c5506f4cd491603a317cb5e5cd1": {
       "updated": "2026-10-13T06:30:00Z",
-      "found": null
-    },
-    "c2ff39950554725002fdf574e65f3728060cfc23": {
-      "updated": "2026-10-13T06:15:00Z",
       "found": null
     },
     "e41da6752959f17135a8ba313faafb87bf5d899a": {
@@ -97,6 +101,10 @@
     },
     "1ce048bb8e6f66cb681604f8636bb139ce2fff9b": {
       "updated": "2026-11-04T11:45:00Z",
+      "found": null
+    },
+    "4a75a55e696e2606faa50f7a788f4b4994866d85": {
+      "updated": "2026-11-06T08:00:00Z",
       "found": null
     }
   }
