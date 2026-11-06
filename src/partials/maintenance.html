@@ -1,0 +1,12 @@
+<a class="{{ maintenance.class }}" id="maintenance" href="{{ maintenance.url }}" data-start="{{ maintenance.start }}" data-end="{{ maintenance.end }}" target="_blank" rel="noopener" hidden>
+  <span class="maintenance-title"><span class="maintenance-dot" aria-hidden="true"></span><strong class="maintenance-name">{{ maintenance.name }}</strong> <span class="maintenance-patch">{{ maintenance.patch }}</span></span>
+  <span class="maintenance-when"><time datetime="{{ maintenance.startIso }}">{{ maintenance.startText }}</time> - <time datetime="{{ maintenance.endIso }}">{{ maintenance.endText }}</time></span>
+  <span class="maintenance-countdown"><span class="detail-state">{{ maintenance.state }}</span> <strong>{{ maintenance.countdown }}</strong></span>
+</a>
+<script>
+  (() => {
+    const bar = document.getElementById("maintenance")
+    const now = Date.now()
+    bar.hidden = !(bar.dataset.end > now && bar.dataset.start - now < 7 * 24 * 60 * 60 * 1000)
+  })()
+</script>

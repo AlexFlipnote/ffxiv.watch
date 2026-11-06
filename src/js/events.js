@@ -1,5 +1,20 @@
+import { maintenance as MAINTENANCE } from "./data/lodestone.json"
 import "./utils/navbar.js"
 import { everyTick, formatCountdown, setText, setTime } from "./utils/time.js"
+
+const MAINTENANCE_AHEAD = 7 * 24 * 60 * 60 * 1000
+
+const maintenanceEl = document.getElementById("maintenance")
+const [maintenanceStart, maintenanceEnd] = maintenanceEl.querySelectorAll(".maintenance-when time")
+const maintenance = {
+  el: maintenanceEl,
+  name: maintenanceEl.querySelector(".maintenance-name"),
+  patch: maintenanceEl.querySelector(".maintenance-patch"),
+  start: maintenanceStart,
+  end: maintenanceEnd,
+  state: maintenanceEl.querySelector(".maintenance-countdown .detail-state"),
+  countdown: maintenanceEl.querySelector(".maintenance-countdown strong")
+}
 
 const now = document.querySelector("#events-now .events-grid")
 const soon = document.querySelector("#events-soon .events-grid")
@@ -33,6 +48,20 @@ const cards = [...document.querySelectorAll(".event-card")].map((el) => {
 })
 
 everyTick((ms) => {
+  const next = MAINTENANCE.find((m) => m.end > ms && m.start - ms < MAINTENANCE_AHEAD)
+  maintenance.el.hidden = !next
+  if (next) {
+    const started = next.start <= ms
+    maintenance.el.href = next.url
+    maintenance.el.classList.toggle("on", started)
+    setText(maintenance.name, next.name.replace(/\s*\([^)]*\)$/, ""))
+    setText(maintenance.patch, next.patch ? `Patch ${next.patch}` : "")
+    setTime(maintenance.start, new Date(next.start), new Date(ms))
+    setTime(maintenance.end, new Date(next.end), new Date(ms), { from: new Date(next.start) })
+    setText(maintenance.state, started ? "Back in" : "Starts in")
+    setText(maintenance.countdown, formatCountdown((started ? next.end : next.start) - ms))
+  }
+
   const date = new Date(ms)
   for (const card of cards) {
     if (card.end !== null && card.end <= ms) {
