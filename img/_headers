@@ -6,9 +6,5 @@
 /maps/*
   Cache-Control: public, max-age=604800
 
-# The link previews, a new look keeps an icon's or zone's name
-/og/*
-  Cache-Control: public, max-age=604800
-
 /*
   X-Content-Type-Options: nosniff

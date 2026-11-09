@@ -24,9 +24,8 @@ export default defineConfig({
     ]
   },
   sass: { "scss/index.scss": "css/index.css" },
-  // images/zones is what render/og.js draws the weather zones' previews from
   // Served by img.ffxiv.watch
-  exclude: ["js", "scss", "render", "images/zones", "images/game", "images/maps"],
+  exclude: ["js", "scss", "render", "images/game", "images/maps"],
   // The game data the pages read with fs
   rerender: ["js/data"],
   seo: {

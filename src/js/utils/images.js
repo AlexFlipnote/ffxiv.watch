@@ -1,4 +1,4 @@
-// The game's icons, maps and link previews are their own Worker, see img/wrangler.jsonc
+// The game's icons and maps are their own Worker, see img/wrangler.jsonc
 export const IMAGES = "https://img.ffxiv.watch"
 
 /**

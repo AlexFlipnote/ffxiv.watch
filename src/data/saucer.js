@@ -1,10 +1,10 @@
 import { formatCountdown, formatDate } from "../js/utils/time.js"
 import { readData } from "../render/html.js"
-import { ogZone } from "../render/og.js"
+import { ogIcon } from "../render/og.js"
 import { FASHION_REPORT, gatesAfter, openTournaments, phaseAt, TOURNAMENT, tournaments } from "../js/utils/saucer.js"
 import { getAllTimerStates, TIMERS } from "../js/utils/timers.js"
 
-export const sources = ["js/utils/saucer.js", "js/utils/timers.js", "js/data/weather-art.json"]
+export const sources = ["js/utils/saucer.js", "js/utils/timers.js", "js/data/zone-icons.json"]
 
 // The rows each list shows, js/saucer.js writes as many as the build did
 const GATE_ROWS = 3
@@ -32,8 +32,8 @@ export default () => {
   const daily = states.find((t) => t.id === "daily")
 
   return {
-    // Its loading screen with its name, like a weather zone's
-    og: ogZone("The Gold Saucer", readData("weather-art.json")["The Gold Saucer"]),
+    // Its crest, like a weather zone's
+    og: ogIcon(readData("zone-icons.json")["The Gold Saucer"], "The Gold Saucer"),
     gates: gatesAfter(now, GATE_ROWS).map((gate) => ({
       // "XX:40", the slot rather than a time already gone by the time anyone reads it
       time: `XX:${String(new Date(gate.start).getUTCMinutes()).padStart(2, "0")}`,

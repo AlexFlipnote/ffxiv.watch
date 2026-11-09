@@ -1,6 +1,6 @@
 import { fishUrl } from "../render/fishing.js"
 import { readData, readExpansions, slug, weatherUrl } from "../render/html.js"
-import { ogZone } from "../render/og.js"
+import { ogIcon } from "../render/og.js"
 import { vistaNumber, vistaUrl } from "../render/sightseeing.js"
 import { toEorzea } from "../js/utils/eorzea.js"
 import { mapPercent } from "../js/utils/map.js"
@@ -13,8 +13,8 @@ const SHOWN = 12
 const ICONS = readData("weather-icons.json")
 // Zone -> its map in src/images/maps/, the one the gathering and fishing pages use, and its aetherytes
 const MAPS = readData("weather-maps.json")
-// Zone -> its loading screen and name, for its link preview
-const ART = readData("weather-art.json")
+// Zone -> its town's crest or the aetheryte, as the teleport list shows it, for its link preview
+const ZONE_ICONS = readData("zone-icons.json")
 
 /**
  * @param {string} weather
@@ -141,7 +141,7 @@ export default () => {
         name: zone.name,
         group: zone.group,
         title: `${zone.name} Weather Forecast: FFXIV`,
-        ...ogZone(zone.name, ART[zone.name]),
+        ...ogIcon(ZONE_ICONS[zone.name], zone.name),
         description: `FFXIV weather forecast for ${zone.name}: the weather now, when it changes, and when the weather you're after comes up next, in your local time. ${chances.map(([w, rate]) => `${w} ${rate}%`).join(", ")}.`,
         data: JSON.stringify(zone),
         chances: chances.map(([w, rate]) => ({ ...label(w), rate })),
@@ -150,7 +150,7 @@ export default () => {
         periods: periodRows(zone),
         needs: weatherNeeds(zone, waiting),
         pager: { label: "Previous and next zone", prev: pagerTo(zones[i - 1]), next: pagerTo(zones[i + 1]) },
-        sources: [...sources, "js/data/weather-maps.json", "js/data/weather-art.json", ...new Set(waiting.map((entry) => entry.file))]
+        sources: [...sources, "js/data/weather-maps.json", "js/data/zone-icons.json", ...new Set(waiting.map((entry) => entry.file))]
       }
     })
   }

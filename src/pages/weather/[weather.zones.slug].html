@@ -15,9 +15,12 @@
         <a class="backlink" href="/weather/">Weather</a>
         <div class="weather-detail weather-pending" data-zone="{{ page.data }}">
           <header class="weather-detail-header">
-            <div>
-              <p class="detail-kicker">{{ page.group }} · Weather forecast</p>
-              <h1 class="detail-title">{{ page.name }}</h1>
+            <div class="item-heading">
+              <img class="item-icon" src="{{ page.image }}" alt="" width="44" height="44">
+              <div>
+                <p class="detail-kicker">{{ page.group }} · Weather forecast</p>
+                <h1 class="detail-title">{{ page.name }}</h1>
+              </div>
             </div>
           </header>
           <div class="weather-overview">
