@@ -37,6 +37,9 @@ jobs:
 
       - name: Build site
         run: npm run build
+        env:
+          # The crafting pages take it past Node's default heap, the runner has 16 GB
+          NODE_OPTIONS: --max-old-space-size=8192
 
       - name: Deploy
         uses: nick-fields/retry@v3
