@@ -1,6 +1,5 @@
 // Teamcraft (MIT, (c) 2017 Flavien Normand): https://github.com/ffxiv-teamcraft/ffxiv-teamcraft
 // Only for what isn't in the game's files, the server sends it:
-// - nodes.json: the items a node hides until it's revealed, the node doesn't list them
 // - fishing-sources.json: the bait, hookset and tug of the fish that bite any time, and of the ocean fish
 // - shops.json: only for a shop no sheet links to its NPC, as the game's scripts pick it, like the Shadowbringers gemstone
 //   traders' by FATE rank

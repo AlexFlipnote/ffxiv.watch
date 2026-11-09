@@ -90,6 +90,8 @@ async function main() {
     const sub = subCategory[p.GatheringSubCategory]
     return sub && sub.Item !== "0" ? [[p.Item, sub.FolkloreBook]] : []
   }))
+  // A big fish is one the log hides until it's caught
+  const bigFish = new Set([...fishParams, ...spearItems].filter((p) => +p.Item > 0 && p.IsHidden === "True").map((p) => p.Item))
   const spearSpotOf = Object.fromEntries(spearItems.filter((s) => +s.Item > 0).map((s) => [s.Item, s.SpearfishingNotebook]))
 
   const named = (id) => ({ id: +id, name: item[id].Name })
@@ -163,7 +165,7 @@ async function main() {
     const bait = fish.bestCatchPath.map((step) => (Array.isArray(step) ? step : [step]).map(named))
 
     add(fish._id, entry(fish._id, location, {
-      ...(fish.bigFish ? { big: true } : {}),
+      ...(bigFish.has(String(fish._id)) ? { big: true } : {}),
       ...(times ? { times } : {}),
       ...(fish.weatherSet.length ? { weather: weatherNames(fish.weatherSet) } : {}),
       ...(fish.previousWeatherSet.length ? { previousWeather: weatherNames(fish.previousWeatherSet) } : {}),

@@ -1,8 +1,6 @@
 import { mapPosition, minutes, nearestAetheryte, scripRewards, spotOf, writeData, writeExpansions } from "../common.js"
 import { byId, plainNames, saveIcons, saveMaps, sheets } from "../sources/game.js"
-import { teamcraft } from "../sources/teamcraft.js"
 
-// The items a node hides, which it doesn't show until they're revealed, aren't in the game's files: they're Teamcraft's
 // GatheringPoint.Type. Regular and Diadem nodes are always up, the rest only at their times.
 // Type 8 (the Diadem's umbral nodes) only shows up in umbral weather, which the data doesn't say when
 const NODE_TYPES = { 1: "Regular", 2: "Unspoiled", 4: "Ephemeral", 5: "Legendary", 7: "Diadem" }
@@ -92,16 +90,15 @@ function itemInfo(it, uiCategory, recipes, scrips) {
 }
 
 async function main() {
-  const hiddenItems = new Map(Object.entries(await teamcraft("nodes.json")).map(([id, n]) => [id, n.hiddenItems ?? []]))
-
   const [
     points, bases, transients, popTimes, gatheringItems, items, levels,
     subCategories, quests, exportedPoints, maps, territories, places, exVersions, aetherytes, markers,
-    recipes, recipeLevels, uiCategories
+    recipes, recipeLevels, uiCategories, itemPoints
   ] = await sheets([
     "GatheringPoint", "GatheringPointBase", "GatheringPointTransient", "GatheringRarePopTimeTable", "GatheringItem", "Item",
     "GatheringItemLevelConvertTable", "GatheringSubCategory", "Quest", "ExportedGatheringPoint", "Map",
-    "TerritoryType", "PlaceName", "ExVersion", "Aetheryte", "MapMarker", "Recipe", "RecipeLevelTable", "ItemUICategory"
+    "TerritoryType", "PlaceName", "ExVersion", "Aetheryte", "MapMarker", "Recipe", "RecipeLevelTable", "ItemUICategory",
+    "GatheringItemPoint"
   ])
 
   const base = byId(bases)
@@ -121,6 +118,17 @@ async function main() {
   const scrips = await scripRewards(item)
   // A hidden item's GatheringItem row, for its stars and Perception, as the node doesn't list it
   const gatheringRowOf = new Map(gatheringItems.filter((g) => +g.Item > 0).map((g) => [g.Item, g]))
+  // The items a node hides until they're revealed aren't in its own list. GatheringItemPoint has every point each item can
+  // be at, "<GatheringItem>.<n>", the hidden ones included
+  const hiddenItems = new Map()
+  const point = byId(points)
+  for (const row of itemPoints) {
+    const g = gatheringItem[row["#"].split(".")[0]]
+    const base = point[row.GatheringPoint]?.GatheringPointBase
+    if (g?.IsHidden !== "True" || !base) continue
+    const list = hiddenItems.get(base) ?? []
+    if (!list.includes(g.Item)) hiddenItems.set(base, [...list, g.Item])
+  }
 
   /**
    * @param {Record<string, string> | undefined} g GatheringItem row
