@@ -474,6 +474,14 @@ body::before {
     border-radius: 0;
   }
 
+  // Every link without scrolling on a short phone, still a finger's height
+  @media (max-height: 45rem) {
+    .navbar-links a,
+    .navbar-links .navbar-more-menu a {
+      padding-block: .75rem;
+    }
+  }
+
   // The navbar's glass reaches down behind the open menu, as it opens, js/utils/navbar.js measures how far
   body::before {
     transition: height .3s $ease;
