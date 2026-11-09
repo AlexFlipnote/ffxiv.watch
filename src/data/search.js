@@ -1,4 +1,5 @@
 import { asset } from "mothwing"
+import { searchRecipes } from "../render/crafting.js"
 import { itemUrl } from "../render/gathering.js"
 import { readData, readExpansions } from "../render/html.js"
 
@@ -8,6 +9,8 @@ const PAGES = [
   ["Sightseeing log", "/sightseeing/", "vistas"],
   ["Gathering", "/gathering/", "nodes miner botanist timed legendary"],
   ["Fishing", "/fishing/", "big fish"],
+  ["Crafting", "/crafting/", "recipes crafter materials"],
+  ["Lists", "/lists/", "crafting list planner shopping"],
   ["Weather", "/weather/", "forecast"],
   ["Ocean fishing", "/ocean-fishing/", "voyages routes"],
   ["Gold Saucer", "/gold-saucer/", "gate jumbo cactpot fashion report"],
@@ -21,7 +24,7 @@ const PAGES = [
 
 /**
  * Everything the navbar's search finds. Names only, the script slugs them into URLs.
- * @returns {{ fish: [string, number][], gathering: [string, number][], sightseeing: string[], weather: string[], pages: string[][] }}
+ * @returns {{ fish: [string, number][], gathering: [string, number][], crafting: [string, number][], sightseeing: string[], weather: string[], pages: string[][] }}
  */
 function searchIndex() {
   const fishInfo = readData("fishing-items.json")
@@ -39,6 +42,7 @@ function searchIndex() {
   return {
     fish: readExpansions("fishing").flatMap((e) => e.entries.map((fish) => [fish.name, fishInfo[fish.id].icon])),
     gathering: [...items.values()],
+    crafting: searchRecipes(),
     sightseeing: readExpansions("sightseeing").flatMap((e) => e.entries.map((vista) => vista.name)),
     weather: readData("weather.json").map((zone) => zone.name),
     pages: PAGES

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html src="partials/head.html"/>
+    <x-seo
+      title="FFXIV Crafting Lists"
+      description="Plan everything you want to craft in FFXIV in one list: the combined materials, when each gathering node and fish is up next, and the crafts in order."
+      name="Lists"
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="/js/lists.js" module/>
+  </head>
+
+  <body>
+    <x-html src="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="detail lists-page">
+        <!-- Filled in by js/lists.js -->
+        <div class="lists-top" id="lists-top" hidden>
+          <a class="backlink" href="/lists/">Lists</a>
+          <div class="lists-top-actions" id="lists-top-actions"></div>
+        </div>
+
+        <header class="listing-intro" id="lists-intro">
+          <h1 class="listing-title">Lists</h1>
+          <p class="listing-lead">Everything you want to craft in one place: what it all takes, what's up to gather next, and the crafts in order. Kept on this device, shared by link.</p>
+        </header>
+
+        <noscript><p class="crafting-note">The lists need JavaScript, they're kept in your browser.</p></noscript>
+
+        <section class="lists-shared" id="lists-shared" hidden>
+          <p>Someone shared <strong id="lists-shared-name"></strong> with you.</p>
+          <button class="solid-button" id="lists-save" type="button">Save to my lists</button>
+        </section>
+
+        <section class="lists-index" id="lists-index" hidden>
+          <ul class="lists-cards" id="lists-cards"></ul>
+        </section>
+
+        <div class="lists-view" id="lists-view" hidden>
+          <section class="crafting-recipe">
+            <div class="lists-head">
+              <input class="input lists-name" id="lists-name" type="text" maxlength="60" aria-label="List name" title="Rename the list" enterkeyhint="done">
+              <div class="lists-actions" id="lists-actions"></div>
+            </div>
+            <ul class="crafting-ingredients lists-items" id="lists-items"></ul>
+            <div class="lists-add-row" id="lists-add-row">
+              <button class="text-button lists-add" id="lists-add" type="button"><span>Add an item</span></button>
+            </div>
+          </section>
+
+          <section class="crafting-full" id="lists-plan">
+            <h2 class="detail-subtitle">Everything it takes</h2>
+            <p class="crafting-note" id="lists-status"></p>
+            <div class="planner-body" id="lists-plan-body"></div>
+          </section>
+
+          <section class="crafting-full crafting-crafts" id="lists-crafts" hidden>
+            <h2 class="detail-subtitle">Crafts, in order</h2>
+          </section>
+        </div>
+      </main>
+      <x-html src="partials/footer.html"/>
+    </div>
+
+    <x-html src="partials/settings.html"/>
+  </body>
+</html>

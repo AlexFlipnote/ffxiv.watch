@@ -1,0 +1,1108 @@
+@use "../mixins" as *;
+
+// The recipe list, recipe pages and /lists/
+
+// Like a gathering item's name, blue on hover with its stars
+.crafting-name {
+  color: var(--font-primary);
+
+  strong {
+    color: inherit;
+  }
+}
+
+.crafting-recipe,
+.crafting-full {
+  @include glass;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  padding: .75rem 1rem;
+}
+
+.crafting-recipe-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(20rem, 40%);
+  align-items: start;
+  gap: 1rem;
+}
+
+.crafting-heading {
+  margin: 0 0 .5rem;
+  font-size: .8rem;
+  font-weight: normal;
+  color: var(--font-tertiary);
+}
+
+.crafting-note {
+  margin: -.5rem 0 0;
+  font-size: .875rem;
+  color: var(--font-tertiary);
+}
+
+.crafting-ingredients,
+.crafting-steps {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .375rem;
+  }
+}
+
+.crafting-amount {
+  min-width: 1.75rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--font-secondary);
+}
+
+.crafting-ingredient {
+  margin-right: .25rem;
+}
+
+.crafting-crystals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .375rem .75rem;
+  margin: .75rem 0 0;
+  font-size: .875rem;
+  color: var(--font-secondary);
+}
+
+[data-job][hidden] {
+  display: none;
+}
+
+// Side by side where there's room, a list's keep to one column for its counts
+.crafting-detail .planner-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem 1.5rem;
+
+  > .planner-group + .planner-group {
+    margin-top: 0;
+  }
+
+  > .planner-crystals {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
+
+.planner-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+
+  .detail-subtitle {
+    margin: 0;
+  }
+}
+
+.planner-head-actions {
+  display: flex;
+  gap: .5rem;
+}
+
+.crafting-full {
+  container-type: inline-size;
+}
+
+@container (max-width: 30rem) {
+  .planner-head-actions .text-button {
+    width: 2.25rem;
+    padding: 0;
+
+    > span {
+      display: none;
+    }
+  }
+}
+
+.planner-body {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+
+  > .crafting-heading {
+    margin-bottom: -.25rem;
+  }
+
+  > .crafting-note {
+    margin: 0;
+  }
+}
+
+// Every control in a row is this tall, so they line up
+$control: 2.25rem;
+
+// [+][n][-] as one control
+.planner-stepper {
+  display: inline-flex;
+  align-items: center;
+  border-radius: .5rem;
+  background: var(--chip-background);
+
+  > .planner-step,
+  > .planner-input {
+    border-radius: 0;
+    background: none;
+  }
+
+  > :first-child {
+    border-radius: .5rem 0 0 .5rem;
+  }
+
+  > :last-child {
+    border-radius: 0 .5rem .5rem 0;
+  }
+
+  > :only-child {
+    border-radius: .5rem;
+  }
+
+  // The dividers, on the buttons as an input can't have a pseudo-element
+  > .planner-step {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12.5%;
+      bottom: 12.5%;
+      width: .0625rem;
+      background-color: var(--divider);
+    }
+
+    &:first-child::after {
+      right: 0;
+    }
+
+    &:last-child::after {
+      left: 0;
+    }
+
+    @include hover {
+      background-color: var(--chip-background);
+    }
+  }
+
+  > .planner-input:focus-visible {
+    outline: .125rem solid var(--accent);
+    outline-offset: -.125rem;
+  }
+}
+
+// As wide as its --digits
+.planner-input {
+  box-sizing: border-box;
+  width: calc(var(--digits, 1) * 1ch + 1.75rem);
+  min-width: 2.5rem;
+  height: $control;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.crafting-job {
+  box-sizing: border-box;
+  height: 1.875rem;
+  margin-block: -.25rem;
+}
+
+.planner-new-option {
+  color: var(--font-tertiary);
+}
+
+.planner-step,
+.craft-toggle,
+.craft-fold {
+  border: none;
+  border-radius: .375rem;
+  background: var(--chip-background);
+  color: var(--font-secondary);
+  font: inherit;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+  }
+
+  @include hover {
+    color: var(--accent);
+  }
+}
+
+.planner-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $control;
+  height: $control;
+  padding: 0;
+  border-radius: .5rem;
+  font-size: 1.1rem;
+}
+
+// A button with an --icon, alone or with its label
+.icon-button,
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  box-sizing: border-box;
+  height: $control;
+  border: none;
+  border-radius: .5rem;
+  background: var(--chip-background);
+  color: var(--font-secondary);
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: currentColor;
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+  }
+
+  @include hover {
+    color: var(--accent);
+  }
+}
+
+.icon-button {
+  width: $control;
+  padding: 0;
+}
+
+.text-button {
+  padding: 0 .875rem 0 .625rem;
+
+  > span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.solid-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  box-sizing: border-box;
+  height: $control;
+  padding: 0 1rem;
+  border: none;
+  border-radius: .5rem;
+  background: var(--accent);
+  color: var(--bg);
+  font: inherit;
+  font-weight: bold;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: box-shadow .2s;
+
+  &.text-button {
+    padding-left: .75rem;
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--font-primary);
+    outline-offset: .125rem;
+  }
+
+  @include hover {
+    color: var(--bg);
+    box-shadow: var(--box-shadow);
+  }
+}
+
+.danger-button {
+  color: var(--danger);
+
+  @include hover {
+    color: var(--danger);
+    background: color-mix(in srgb, var(--danger) 18%, transparent);
+  }
+}
+
+// The whole label is the alarm's button, in the label's colours. Its tap area reaches past it, unseen
+.planner-when.alarm-bell,
+.planner-when.alarm-bell[aria-pressed="true"] {
+  gap: .25rem;
+  padding: .0625rem .375rem .0625rem .3125rem;
+  background: var(--chip-background);
+  color: var(--font-secondary);
+  font: inherit;
+  font-size: .75rem;
+  font-variant-numeric: tabular-nums;
+  transition: background-color .2s;
+
+  &::before {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-block: -.125rem;
+  }
+
+  &::after {
+    inset: -.375rem 0;
+  }
+
+  // The bell alone in the accent once it's set, easy to tell from the ones that aren't
+  &[aria-pressed="true"]::before {
+    background-color: var(--accent);
+  }
+
+  &:not(:disabled):active::after {
+    background: none;
+  }
+
+  @include hover {
+    &:not(:disabled) {
+      color: var(--font-secondary);
+      background: color-mix(in srgb, var(--font-primary) 14%, transparent);
+
+      &::after {
+        background: none;
+      }
+    }
+  }
+}
+
+.planner-when {
+  font-variant-numeric: tabular-nums;
+}
+
+// The text see-through like the grey label's, or the browser smooths the two differently and one looks bolder
+.planner-up .planner-when.alarm-bell,
+.planner-up .planner-when {
+  background: color-mix(in srgb, var(--open) 16%, transparent);
+  color: color-mix(in srgb, var(--open) 90%, transparent);
+
+  @include hover {
+    &:not(:disabled) {
+      background: color-mix(in srgb, var(--open) 26%, transparent);
+      color: color-mix(in srgb, var(--open) 90%, transparent);
+    }
+  }
+}
+
+// A size down from the controls, the summary has a lot of rows
+.planner-has {
+  flex-wrap: nowrap;
+
+  .craft-label {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.planner-have {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  margin-left: auto;
+
+  .planner-step {
+    width: 1.875rem;
+    height: 1.875rem;
+    font-size: 1rem;
+  }
+
+  .planner-input {
+    height: 1.875rem;
+  }
+}
+
+// Every counted row reaches the card's sides, so a done row's green moves nothing
+.crafting-ingredients:has(> .planner-has),
+.crafting-steps:has(> .planner-has) {
+  gap: .25rem;
+}
+
+.planner-has {
+  margin-inline: -1rem;
+  padding: 0 1rem;
+  transition: background-color .3s $ease;
+
+  > :not(.planner-have) {
+    transition: opacity .3s $ease;
+  }
+
+  .crafting-ingredient {
+    text-decoration: line-through transparent;
+    transition: text-decoration-color .3s $ease;
+  }
+
+  .planner-have {
+    transition: opacity .2s $ease;
+  }
+}
+
+// The count fades back too, but not while it's being changed
+.planner-done {
+  background-color: var(--group-open-background);
+
+  > :not(.planner-have) {
+    opacity: .5;
+  }
+
+  .crafting-ingredient {
+    text-decoration-color: currentColor;
+  }
+
+  .planner-have {
+    opacity: .45;
+
+    &:hover,
+    &:focus-within {
+      opacity: 1;
+    }
+  }
+}
+
+.planner-extra {
+  margin-left: .5rem;
+  color: var(--gold);
+}
+
+.planner-group + .planner-group {
+  margin-top: 1rem;
+}
+
+.planner-has .bait-icon {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+// Folded away and not counted, the bag's always full of them
+.planner-crystals {
+  margin-top: 1rem;
+
+  summary {
+    width: fit-content;
+    font-size: .8rem;
+    color: var(--font-tertiary);
+    cursor: pointer;
+
+    @include hover {
+      color: var(--accent);
+    }
+  }
+
+  .crafting-ingredients {
+    margin-top: .5rem;
+  }
+}
+
+// As wide as its longest option, not the one picked
+@supports (appearance: base-select) {
+  @media (pointer: fine) {
+    .list-add-modal .select::picker(select),
+    .crafting-job::picker(select) {
+      width: max-content;
+      min-width: anchor-size(width);
+    }
+  }
+}
+
+.title-list-add {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.list-add-modal {
+  max-width: 24rem;
+}
+
+.list-add-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  > span {
+    color: var(--font-secondary);
+  }
+
+  > .select,
+  > .input {
+    box-sizing: border-box;
+    width: 13rem;
+    max-width: 60%;
+    height: $control;
+  }
+}
+
+.list-add-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.craft-unfold {
+  animation: craft-unfold .25s $ease;
+}
+
+@keyframes craft-unfold {
+  from {
+    opacity: 0;
+    translate: 0 -.375rem;
+  }
+}
+
+.planner-step,
+.icon-button,
+.text-button,
+.solid-button,
+.craft-toggle,
+.craft-fold,
+.lists-card-new {
+  transition-property: color, background-color, border-color, box-shadow, transform;
+  transition-duration: .15s;
+  transition-timing-function: $ease;
+
+  &:active {
+    transform: scale(.94);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crafting-full::before,
+  .planner-has,
+  .planner-has .planner-have,
+  .planner-has > :not(.planner-have),
+  .planner-has .crafting-ingredient,
+  .planner-complete.planner-open > :not(h2) {
+    transition: none;
+  }
+
+  .planner-complete > h2::before,
+  .craft-unfold {
+    animation: none;
+  }
+
+  .planner-complete > h2::after {
+    transition: none;
+  }
+
+  .planner-step,
+  .icon-button,
+  .text-button,
+  .solid-button,
+  .craft-toggle,
+  .craft-fold,
+  .lists-card-new {
+    &:active {
+      transform: none;
+    }
+  }
+}
+
+.craft-tree {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: .9rem;
+
+  ul {
+    margin: 0 0 0 .75rem;
+    padding: 0 0 0 .75rem;
+    border-left: .0625rem solid var(--chip-background);
+    list-style: none;
+  }
+
+  li {
+    margin-top: .375rem;
+  }
+}
+
+.craft-node {
+  display: flex;
+  align-items: flex-start;
+  gap: .375rem;
+
+  > .bait-icon,
+  > .crafting-amount,
+  > .craft-fold,
+  > .craft-fold-space {
+    margin-top: .0625rem;
+  }
+
+  > .crafting-amount {
+    line-height: 1.5rem;
+  }
+}
+
+.craft-label {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem .375rem;
+  min-width: 0;
+  min-height: 1.625rem;
+}
+
+.craft-fold,
+.craft-fold-space {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.craft-fold {
+  position: relative;
+  padding: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: currentColor;
+    -webkit-mask: url("/images/ui/chevron.svg") center / .875rem no-repeat;
+    mask: url("/images/ui/chevron.svg") center / .875rem no-repeat;
+    transform: rotate(-90deg);
+    transition: transform .15s $ease;
+  }
+
+  &[aria-expanded="false"]::before {
+    transform: rotate(180deg);
+  }
+}
+
+.craft-toggle {
+  padding: .0625rem .5rem;
+  font-size: .75rem;
+
+  &[aria-pressed="true"] {
+    color: var(--accent);
+  }
+
+  &[aria-pressed="false"] {
+    color: var(--font-tertiary);
+  }
+}
+
+// /lists/
+.lists-page {
+  .listing-intro {
+    margin-bottom: 0;
+  }
+}
+
+.lists-shared {
+  @include glass;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem 1rem;
+  padding: .75rem 1rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.lists-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lists-card {
+  @include glass;
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  height: 100%;
+  box-sizing: border-box;
+  padding: .75rem 1rem;
+  color: var(--font-primary);
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+  }
+
+  @include hover {
+    strong {
+      color: var(--accent);
+    }
+  }
+}
+
+.lists-card-count {
+  font-size: .8rem;
+  color: var(--font-tertiary);
+}
+
+.lists-card-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem;
+  margin-top: auto;
+}
+
+.lists-card-more {
+  font-size: .8rem;
+  color: var(--font-tertiary);
+}
+
+.lists-card-new {
+  align-items: center;
+  justify-content: center;
+  min-height: 6.5rem;
+  width: 100%;
+  border: .125rem dashed var(--chip-background);
+  background: none;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  color: var(--font-secondary);
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+
+  @include hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.lists-card-new-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: currentColor;
+  -webkit-mask: url("/images/ui/list-add.svg") center / contain no-repeat;
+  mask: url("/images/ui/list-add.svg") center / contain no-repeat;
+}
+
+// A list with every count done, folded to its title
+.crafting-full {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background-color: var(--group-open-background);
+    opacity: 0;
+    transition: opacity .4s $ease;
+    pointer-events: none;
+  }
+}
+
+.planner-complete {
+  &::before {
+    opacity: 1;
+  }
+
+  // The card's green says it already, a row's on top of it would stack
+  .planner-done {
+    background-color: transparent;
+  }
+
+  > h2 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--open);
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 1.125rem;
+      height: 1.125rem;
+      background-color: currentColor;
+      -webkit-mask: url("/images/ui/check.svg") center / contain no-repeat;
+      mask: url("/images/ui/check.svg") center / contain no-repeat;
+      animation: planner-tick .35s $ease;
+    }
+
+    // The chevron file points left
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: auto;
+      background-color: var(--font-secondary);
+      -webkit-mask: url("/images/ui/chevron.svg") center / contain no-repeat;
+      mask: url("/images/ui/chevron.svg") center / contain no-repeat;
+      transform: rotate(-90deg);
+      transition: transform .25s $ease;
+    }
+
+    @include hover {
+      &::after {
+        background-color: var(--accent);
+      }
+    }
+
+    &:focus-visible {
+      outline: .125rem solid var(--accent);
+      outline-offset: .25rem;
+      border-radius: .25rem;
+    }
+  }
+
+  &:not(.planner-open) > :not(h2) {
+    display: none;
+  }
+
+  &.planner-open > h2::after {
+    transform: rotate(90deg);
+  }
+
+  &.planner-open > :not(h2) {
+    transition: opacity .3s $ease, translate .3s $ease;
+
+    @starting-style {
+      opacity: 0;
+      translate: 0 -.375rem;
+    }
+  }
+}
+
+@keyframes planner-tick {
+  from {
+    transform: scale(.3);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+}
+
+.planner-tree-modal {
+  max-width: 48rem;
+}
+
+.planner-tree-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem 1rem;
+}
+
+.lists-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+// Their display would otherwise show them while hidden
+.lists-view[hidden],
+.lists-index[hidden],
+.lists-shared[hidden],
+.lists-add[hidden],
+.crafting-full[hidden],
+.title-list-add[hidden],
+.list-add-row[hidden],
+.lists-map[hidden] {
+  display: none;
+}
+
+.lists-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+
+  &[hidden] {
+    display: none;
+  }
+
+  .text-button {
+    height: 2rem;
+    font-size: .85rem;
+  }
+}
+
+// Share stays beside the name, as its icon alone when narrow
+.lists-head {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  container-type: inline-size;
+
+  .lists-name {
+    min-width: 0;
+  }
+}
+
+@container (max-width: 26rem) {
+  .lists-head .lists-actions .text-button {
+    width: $control;
+    padding: 0;
+
+    > span {
+      display: none;
+    }
+  }
+}
+
+.lists-name {
+  flex: 1 1 12rem;
+  box-sizing: border-box;
+  height: $control;
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  &:read-only {
+    background: none;
+  }
+}
+
+.lists-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.lists-items {
+  gap: .25rem;
+}
+
+.lists-item {
+  flex-wrap: nowrap;
+
+  .bait-icon {
+    width: $control;
+    height: $control;
+  }
+
+  .craft-label {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .planner-stepper {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+}
+
+.lists-remove.icon-button {
+  flex-shrink: 0;
+  width: $control;
+  color: var(--font-tertiary);
+
+  &::before {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  @include hover {
+    color: var(--danger);
+  }
+}
+
+.lists-add-row {
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+  padding-top: .625rem;
+  border-top: .0625rem solid var(--chip-background);
+  container-type: inline-size;
+}
+
+@container (max-width: 20rem) {
+  .lists-add-row .lists-add {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .lists-add-row .lists-map {
+    flex-shrink: 0;
+    width: $control;
+    padding: 0;
+
+    > span {
+      display: none;
+    }
+  }
+}
+
+.lists-add {
+  --icon: url("/images/ui/list-add.svg");
+}
+
+button.search-result {
+  width: 100%;
+  border: none;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+@media (max-width: 36rem) {
+  .crafting-recipe-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lists-item {
+    .planner-step,
+    .bait-icon,
+    .lists-remove.icon-button {
+      width: 1.875rem;
+      height: 1.875rem;
+    }
+
+    .planner-input {
+      height: 1.875rem;
+    }
+  }
+
+  // A deep tree would squeeze the names
+  .craft-tree ul {
+    margin-left: .625rem;
+    padding-left: .375rem;
+  }
+
+  // After the facts and uses _detail.scss moves down
+  .crafting-detail .detail-pager {
+    order: 2;
+  }
+}

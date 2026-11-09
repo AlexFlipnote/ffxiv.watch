@@ -117,7 +117,7 @@ function alarmBells(timingOf) {
  * The link back to the list. Coming from the list, it goes back in history instead, which brings the list back as it
  * was left: the filters, the search and how far down it was scrolled.
  */
-function backlink() {
+export function backlink() {
   const link = document.querySelector(".backlink")
   link?.addEventListener("click", (e) => {
     let from = null

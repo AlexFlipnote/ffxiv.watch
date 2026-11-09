@@ -320,7 +320,8 @@
     background: none;
   }
 
-  .group-header + .group-row {
+  .group-header + .group-row,
+  .group-first {
     td:first-child {
       border-top-left-radius: .5rem;
     }

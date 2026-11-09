@@ -24,11 +24,10 @@ import { everyTick, formatCountdown, setText, setTime } from "./time.js"
  * @property {(entry: object) => string | (string | Node)[]} [mapNote] Shown under the coordinates in the map dialog
  * @property {(entry: object) => boolean} [filter] The page's own dropdowns, skipped while searching
  * @property {(entry: object, query: string) => boolean} matches The search, `query` is lowercase and never ""
- * @property {(entry: object, now: number) => Window} windowOf Called every tick, so keep it cheap
- * @property {(entry: object, tr: HTMLTableRowElement) => import("./alarmBells.js").Alarm | null} alarmOf Null when it's
- * always up
+ * @property {(entry: object, now: number) => Window} [windowOf] Called every tick, left out for a list with no times
+ * @property {(entry: object, tr: HTMLTableRowElement) => import("./alarmBells.js").Alarm | null} [alarmOf] Null when it's always up
  * @property {string} noun "nodes", "vistas"
- * @property {string} done Its done checks, see doneChecks
+ * @property {string} [done] See doneChecks
  */
 
 const ALL = ""
@@ -108,7 +107,8 @@ function groupRows(state) {
  * @param {ListingOptions} options
  */
 export function listing({ expansions, loadChunk, idOf, selects, search, body, empty, skeleton, mapNote, filter, matches, windowOf, alarmOf, noun, done }) {
-  const addDoneChecks = doneChecks(done)
+  const addDoneChecks = done ? doneChecks(done) : () => {}
+  const timed = Boolean(windowOf)
   // An expansion's file -> where its rows are, when the page came without them
   const rowFiles = JSON.parse(body.dataset.rows || "{}")
   // "dawntrail:974" -> its row, until the entry it's for has loaded
@@ -187,9 +187,11 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
         })
       }
       const bell = tr.querySelector(".alarm-bell")
-      const alarm = alarmOf(entry, tr)
-      // The build put its icon on the bell
-      alarmBell(bell, alarm && { ...alarm, icon: Number(bell.dataset.icon) || undefined })
+      if (bell && alarmOf) {
+        const alarm = alarmOf(entry, tr)
+        // The build put its icon on the bell
+        alarmBell(bell, alarm && { ...alarm, icon: Number(bell.dataset.icon) || undefined })
+      }
       rows.set(entry, { tr })
     }
     return rows.get(entry)
@@ -244,7 +246,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     }
     if (current !== generation) return
 
-    limit = files.length > 1 ? maxRows : Infinity
+    limit = files.length > 1 || !timed ? maxRows : Infinity
     shown = entries.filter((entry) => rowOf(entry)
       && !(hideDone && rowOf(entry).tr.hasAttribute("data-done"))
       && (query ? matches(entry, query) : !filter || filter(entry)))
@@ -261,7 +263,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
    * first group opens or closes, the layout holds until then
    */
   function buildLayout(now) {
-    const windows = new Map(shown.map((entry) => [entry, windowOf(entry, now)]))
+    const windows = new Map(shown.map((entry) => [entry, timed ? windowOf(entry, now) : { always: true }]))
     const sorted = [...shown].sort((a, b) => compareWindows(windows.get(a), windows.get(b)))
 
     const runs = []
@@ -286,11 +288,15 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
       if (run.state === "open") until = Math.min(until, run.w.end)
       if (run.state === "later") until = Math.min(until, run.w.start)
 
-      if (i > 0) trs.push(run.group.gap)
-      trs.push(run.group.header)
+      // A list with no times is one run, with no header to show for it
+      if (timed) {
+        if (i > 0) trs.push(run.group.gap)
+        trs.push(run.group.header)
+      }
       for (const [j, entry] of run.entries.entries()) {
         const row = rowOf(entry)
-        const rowClass = `group-row group-${run.state}${j === run.entries.length - 1 ? " group-last" : ""}`
+        // With no header over it, the first row rounds its own top corners
+        const rowClass = `group-row group-${run.state}${!timed && j === 0 ? " group-first" : ""}${j === run.entries.length - 1 ? " group-last" : ""}`
         if (row.tr.className !== rowClass) row.tr.className = rowClass
         trs.push(row.tr)
       }
@@ -310,7 +316,7 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     // A failed load put its own note there
     if (empty.firstChild !== emptyText) empty.replaceChildren(emptyText, more)
     setText(emptyText, shown.length
-      ? `Showing the ${limit} soonest of ${shown.length.toLocaleString("en-US")} ${noun}, search or filter to narrow them down. `
+      ? `Showing the ${timed ? `${limit} soonest` : `first ${limit}`} of ${shown.length.toLocaleString("en-US")} ${noun}, search or filter to narrow them down. `
       : `No ${noun} match.`)
     const cut = shown.length > limit
     if (more.hidden === cut) more.hidden = !cut

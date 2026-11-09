@@ -1,6 +1,7 @@
 import { slug } from "mothwing/html"
 import { closable } from "./dialog.js"
 import { load, store } from "./storage.js"
+import { gameIcon } from "./images.js"
 
 // Every row is DOM a phone has to keep
 const SHOWN = 20
@@ -10,13 +11,15 @@ const RECENT_SHOWN = 5
 const KINDS = {
   fish: { label: "Fish", url: (name) => `/fishing/${slug(name)}/` },
   gathering: { label: "Gathering", url: (name) => `/gathering/${slug(name)}/` },
+  crafting: { label: "Recipe", url: (name) => `/crafting/${slug(name)}/` },
   sightseeing: { label: "Vista", url: (name) => `/sightseeing/${slug(name)}/` },
   weather: { label: "Weather", url: (name) => `/weather/${slug(name)}/` }
 }
 // A word naming a kind, "fish ruby" or "weather kugane", puts that kind first
 const KIND_WORDS = {
   fish: "Fish", item: "Gathering", items: "Gathering", gathering: "Gathering", node: "Gathering",
-  vista: "Vista", vistas: "Vista", sightseeing: "Vista", weather: "Weather", zone: "Weather", page: "Page"
+  vista: "Vista", vistas: "Vista", sightseeing: "Vista", weather: "Weather", zone: "Weather", page: "Page",
+  recipe: "Recipe", recipes: "Recipe", craft: "Recipe", crafting: "Recipe"
 }
 
 /**
@@ -128,6 +131,8 @@ function score(entry, query, words) {
   else if (entry.key.startsWith(query)) total += 100
   // "fish" means Fishing before Hook Fish
   if (entry.kind === "Page") total += 100
+  // Ten times as many recipes as the rest, they'd crowd out close calls ("fish" finding Fish Oil)
+  if (entry.kind === "Recipe") total -= 30
   return total
 }
 
@@ -213,7 +218,7 @@ function update() {
     a.href = entry.url
     a.querySelector(".search-name").textContent = entry.name
     a.querySelector(".search-kind").textContent = entry.kind
-    if (entry.icon) a.querySelector(".search-icon").innerHTML = `<img src="/images/game/${entry.icon}.webp" alt="" width="32" height="32">`
+    if (entry.icon) a.querySelector(".search-icon").innerHTML = `<img src="${gameIcon(entry.icon)}" alt="" width="32" height="32">`
     else a.querySelector(".search-icon").dataset.kind = entry.kind.toLowerCase()
     a.addEventListener("pointermove", () => active !== i && setActive(i))
     return li
