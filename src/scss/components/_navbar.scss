@@ -499,16 +499,16 @@ body::before {
       transform: none;
     }
 
-    @for $i from 1 through 6 {
+    @for $i from 1 through 4 {
       a:nth-child(#{$i}) {
-        transition-delay: 0s, 0s, #{$i * 40ms}, #{$i * 40ms};
+        transition-delay: 0s, 0s, #{$i * 30ms}, #{$i * 30ms};
       }
     }
 
-    // After the four links before them
-    @for $i from 1 through 5 {
+    // After the four links before them, a few spare for new pages
+    @for $i from 1 through 10 {
       .navbar-more-menu a:nth-child(#{$i}) {
-        transition-delay: 0s, 0s, #{($i + 4) * 40ms}, #{($i + 4) * 40ms};
+        transition-delay: 0s, 0s, #{($i + 4) * 30ms}, #{($i + 4) * 30ms};
       }
     }
   }
