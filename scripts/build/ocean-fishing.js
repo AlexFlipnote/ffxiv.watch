@@ -1,10 +1,10 @@
-import { byId, plainNames, saveIcons, sheets, writeData } from "./datamining.js"
+import { writeData } from "../common.js"
+import { byId, plainNames, saveIcons, sheets } from "../sources/game.js"
+import { teamcraft } from "../sources/teamcraft.js"
 
 // IKDRoute's Time values. The sheet doesn't name them, these match the blue fish each voyage can catch
 const TIMES = { 1: "Sunset", 2: "Night", 3: "Day" }
-// The bait, hookset and tug of each fish at each stop, from Teamcraft (MIT) like the fish that bite any time (see
-// fishing-data.js)
-const TEAMCRAFT = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/fishing-sources.json"
+// The bait, hookset and tug of each fish at each stop are Teamcraft's, like the fish that bite any time (see fishing.js)
 const HOOKSETS = { 1: "Powerful", 2: "Precision" }
 const TUGS = { 0: "medium", 1: "heavy", 2: "light" }
 // Teamcraft's oceanFishingTime, the time of day a fish needs at its stop. 0 is any
@@ -13,9 +13,7 @@ const OCEAN_TIMES = { 1: "Sunset", 2: "Day", 3: "Night" }
 const BLUE_FISH = "3"
 
 async function main() {
-  const res = await fetch(TEAMCRAFT)
-  if (!res.ok) throw new Error(`${TEAMCRAFT}: HTTP ${res.status}`)
-  const teamcraft = await res.json()
+  const sources = await teamcraft("fishing-sources.json")
 
   const [routes, table, spots, places, fishingSpots, items] = await sheets([
     "IKDRoute", "IKDRouteTable", "IKDSpot", "PlaceName", "FishingSpot", "Item"
@@ -54,8 +52,8 @@ async function main() {
       const id = row[`Item[${i}]`]
       if (+id <= 0 || !item[id]?.Name) continue
 
-      // A row per bait it's been caught on, the first is the one to use, like fishing-data.js does
-      const source = (teamcraft[id] ?? []).find((s) => String(s.spot) === spotId)
+      // A row per bait it's been caught on, the first is the one to use, like fishing.js does
+      const source = (sources[id] ?? []).find((s) => String(s.spot) === spotId)
       list.push({
         ...named(id),
         ...(item[id].Rarity === BLUE_FISH ? { blue: true } : {}),

@@ -1,4 +1,5 @@
-import { byId, mapPosition, minutes, nearestAetheryte, plainNames, saveIcons, saveMaps, sheets, writeData, writeExpansions } from "./datamining.js"
+import { mapPosition, minutes, nearestAetheryte, writeData, writeExpansions } from "../common.js"
+import { byId, plainNames, saveIcons, saveMaps, sheets } from "../sources/game.js"
 
 const ET_DAY = 24 * 60
 

@@ -662,7 +662,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 12715,
@@ -1110,7 +1111,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 12725,
@@ -1245,7 +1247,8 @@
     ],
     "hookset": "Precision",
     "tug": "light",
-    "snagging": true
+    "snagging": true,
+    "folklore": "Coerthan Fishing Folklore"
   },
   {
     "id": 12824,
@@ -1415,7 +1418,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 17577,
@@ -2099,7 +2103,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 12745,
@@ -2735,7 +2740,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 12800,
@@ -3465,7 +3471,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 17585,
@@ -3583,7 +3590,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 12790,
@@ -3791,7 +3799,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 12742,
@@ -4365,7 +4374,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 17586,
@@ -4435,7 +4445,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 36662,
@@ -4466,7 +4477,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 12770,
@@ -4782,7 +4794,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "heavy"
+    "tug": "heavy",
+    "folklore": "Dravanian Fishing Folklore"
   },
   {
     "id": 16742,
@@ -5172,7 +5185,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 12732,
@@ -5915,7 +5929,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 12749,
@@ -6017,7 +6032,8 @@
     ],
     "hookset": "Precision",
     "tug": "light",
-    "snagging": true
+    "snagging": true,
+    "collectable": true
   },
   {
     "id": 17579,
@@ -6550,7 +6566,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 12751,
@@ -7358,6 +7375,7 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   }
 ]

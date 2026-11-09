@@ -1,96 +1,13 @@
 import fs from "fs"
 import path from "path"
-import sharp from "sharp"
 import { fileURLToPath } from "url"
+import { byId, sheets } from "./sources/game.js"
 
-const SHEETS = "https://raw.githubusercontent.com/xivapi/ffxiv-datamining/master/csv/en"
-
-/**
- * @param {string} name Sheet name, like "TerritoryType"
- * @returns {Promise<Record<string, string>[]>} One object per row, keyed by column name
- */
-export async function sheet(name) {
-  const res = await fetch(`${SHEETS}/${name}.csv`)
-  if (!res.ok) throw new Error(`${name}.csv: HTTP ${res.status}`)
-  return parseCsv(await res.text())
-}
-
-/**
- * @param {string[]} names
- * @returns {Promise<Record<string, string>[][]>} In the same order as `names`
- */
-export const sheets = (names) => Promise.all(names.map(sheet))
-
-/**
- * @param {Record<string, string>[]} rows
- * @returns {Record<string, Record<string, string>>} Row id ("#" column) -> row
- */
-export const byId = (rows) => Object.fromEntries(rows.map((r) => [r["#"], r]))
-
-/**
- * The game wraps a ship's name in asterisks for italics, "The *Kobayashi Maru*". Names go into titles, descriptions
- * and alt text, which can't show italics, so they're kept plain.
- * @param {Record<string, string>[]} rows A sheet with a Name column, like PlaceName
- * @returns {Record<string, string>[]}
- */
-export const plainNames = (rows) => rows.map((r) => ({ ...r, Name: r.Name.replaceAll("*", "") }))
-
-/**
- * @param {string} text CSV with a header row, quoted fields can hold commas, quotes and newlines
- * @returns {Record<string, string>[]} Each field trimmed, a few names end in a space ("Phallaina "), which a link's
- * underline then runs into
- */
-function parseCsv(text) {
-  const rows = []
-  let row = []
-  let field = ""
-  let quoted = false
-
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i]
-    if (quoted) {
-      if (c !== "\"") field += c
-      else if (text[i + 1] === "\"") field += text[++i]
-      else quoted = false
-    } else if (c === "\"") {
-      quoted = true
-    } else if (c === ",") {
-      row.push(field)
-      field = ""
-    } else if (c === "\n") {
-      row.push(field.replace(/\r$/, ""))
-      rows.push(row)
-      row = []
-      field = ""
-    } else {
-      field += c
-    }
-  }
-  if (field || row.length) rows.push([...row, field])
-
-  const [header, ...data] = rows
-  return data
-    .filter((r) => r.length === header.length)
-    .map((r) => Object.fromEntries(header.map((h, i) => [h, r[i].trim()])))
-}
+// What the builders in build/ share: names, map math, aetherytes, scrips, and writing and checking the data. Nothing
+// here goes online, that's for the files in sources/, one per place the data comes from
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..")
 const DATA = path.join(ROOT, "src/js/data")
-const MAPS = path.join(ROOT, "src/images/maps")
-
-// XIVAPI puts the map texture and its parchment background together, 2048px square
-const MAP_SOURCE = "https://v2.xivapi.com/api/asset/map"
-const MAP_SIZE = 1024
-
-const ICON_SOURCE = "https://v2.xivapi.com/api/asset"
-const ICONS = path.join(ROOT, "src/images/game")
-// A zone's loading screen and its name as the game writes it on arrival, what its link preview is drawn from
-const ZONES = path.join(ROOT, "src/images/zones")
-// A link preview, and the most of it a zone's name takes up, see src/render/og.js
-const ZONE_WIDTH = 1024
-const ZONE_HEIGHT = 536
-const NAME_WIDTH = 880
-const NAME_HEIGHT = 120
 
 /**
  * @param {string} name
@@ -181,7 +98,7 @@ export function nearestAetheryte(sheets) {
 }
 
 // CollectablesShopRewardScrip.Currency, as the Item the scrip is: Purple and Orange, Crafters' then Gatherers'
-const SCRIP_ITEMS = { 2: 33913, 4: 33914, 6: 41784, 7: 41785 }
+export const SCRIP_ITEMS = { 2: 33913, 4: 33914, 6: 41784, 7: 41785 }
 // CollectablesShop.RewardType of the shops paying in scrips, the rest pay in items
 const SCRIP_SHOP = "1"
 const TIERS = ["Low", "Mid", "High"]
@@ -219,6 +136,19 @@ export async function scripRewards(item) {
   return worth
 }
 
+// Each expansion's level cap, past the last is the newest
+const LEVEL_CAPS = [50, 60, 70, 80, 90]
+
+/**
+ * @param {number} level
+ * @param {Record<string, string>[]} exVersions
+ * @returns {string} The expansion a level belongs to, 51 to 60 Heavensward
+ */
+export function expansionOf(level, exVersions) {
+  const index = LEVEL_CAPS.findIndex((cap) => level <= cap)
+  return exVersions[Math.min(index === -1 ? LEVEL_CAPS.length : index, exVersions.length - 1)].Name
+}
+
 /**
  * Writes src/js/data/<name>.json. For data only the build reads, like the text on the detail pages.
  * @param {string} name
@@ -227,108 +157,6 @@ export async function scripRewards(item) {
 export function writeData(name, value) {
   fs.writeFileSync(path.join(DATA, `${name}.json`), JSON.stringify(value, null, 2) + "\n")
   console.log(`Wrote ${Object.keys(value).length} to src/js/data/${name}.json`)
-}
-
-/**
- * Saves maps to src/images/maps/ as WebP, one at a time since XIVAPI renders each on request.
- * Maps already there are kept, delete one to fetch it again after a patch redraws it.
- * @param {string[]} ids Map.Id values like "r2f1/00", repeats are fine
- */
-export async function saveMaps(ids) {
-  fs.mkdirSync(MAPS, { recursive: true })
-  let saved = 0
-  for (const id of new Set(ids)) {
-    const file = path.join(MAPS, `${id.replace("/", "-")}.webp`)
-    if (fs.existsSync(file)) continue
-
-    const res = await fetch(`${MAP_SOURCE}/${id}`)
-    if (!res.ok) throw new Error(`map ${id}: HTTP ${res.status}`)
-    await sharp(Buffer.from(await res.arrayBuffer())).resize(MAP_SIZE).webp({ quality: 70 }).toFile(file)
-    saved++
-  }
-  console.log(`Maps: ${saved} saved, ${new Set(ids).size - saved} already there`)
-}
-
-/**
- * Saves the game's icons (items, actions, emotes) to src/images/game/<id>.webp, so the site serves its own copies. The
- * game's 80px, compressed hard, as the lists show hundreds of them. A few at a time, XIVAPI renders each on request.
- * Icons already there are kept.
- * @param {number[]} ids Icon values from the sheets, like Item.Icon, repeats are fine
- */
-export async function saveIcons(ids) {
-  fs.mkdirSync(ICONS, { recursive: true })
-  const queue = [...new Set(ids)].filter((id) => !fs.existsSync(path.join(ICONS, `${id}.webp`)))
-  const saved = queue.length
-
-  await Promise.all(Array.from({ length: 6 }, async () => {
-    while (queue.length) {
-      const id = queue.pop()
-      // ui/icon/022000/022408_hr1.tex, a folder per thousand
-      const folder = String(Math.floor(id / 1000) * 1000).padStart(6, "0")
-      const res = await fetch(`${ICON_SOURCE}?path=ui/icon/${folder}/${String(id).padStart(6, "0")}_hr1.tex&format=png`)
-      if (!res.ok) throw new Error(`icon ${id}: HTTP ${res.status}`)
-      await sharp(Buffer.from(await res.arrayBuffer())).webp({ quality: 60, effort: 6 }).toFile(path.join(ICONS, `${id}.webp`))
-    }
-  }))
-  console.log(`Icons: ${saved} saved, ${new Set(ids).size - saved} already there`)
-}
-
-/**
- * @param {string} assetPath Like "ui/loadingimage/-nowloading_base12_hr1.tex"
- * @returns {Promise<import("sharp").Sharp>}
- */
-async function fetchAsset(assetPath) {
-  const res = await fetch(`${ICON_SOURCE}?path=${assetPath}&format=png`)
-  if (!res.ok) throw new Error(`${assetPath}: HTTP ${res.status}`)
-  return sharp(Buffer.from(await res.arrayBuffer()))
-}
-
-/**
- * Saves the zones' loading screens to src/images/zones/loading/<file>.webp, cut down from 4K to a link preview, and
- * their names to src/images/zones/names/<icon>.webp, trimmed to the lettering. Ones already there are kept.
- * @param {{ loading: string, name: number }[]} art LoadingImage.FileName like "-nowloading_base12", and
- * TerritoryType.PlaceNameIcon, repeats are fine
- */
-export async function saveZoneArt(art) {
-  for (const folder of ["loading", "names"]) fs.mkdirSync(path.join(ZONES, folder), { recursive: true })
-  const jobs = [
-    ...new Set(art.map((a) => a.loading)).values().map((file) => ({
-      file: path.join(ZONES, "loading", `${file.replace(/^-/, "")}.webp`),
-      save: async (out) => {
-        const image = await fetchAsset(`ui/loadingimage/${file}_hr1.tex`)
-        const { width, height } = await image.metadata()
-        // The paintings fade into black bars at the top and bottom
-        await image.extract({ left: 0, top: Math.round(height * .05), width, height: Math.round(height * .87) })
-          .resize(ZONE_WIDTH, ZONE_HEIGHT, { fit: "cover" })
-          .webp({ quality: 75, effort: 6 })
-          .toFile(out)
-      }
-    })),
-    ...new Set(art.map((a) => a.name)).values().map((id) => {
-      const padded = String(id).padStart(6, "0")
-      return {
-        file: path.join(ZONES, "names", `${id}.webp`),
-        // Text, so each language has its own, under en/
-        save: async (out) => {
-          const trimmed = await (await fetchAsset(`ui/icon/${padded.slice(0, 3)}000/en/${padded}_hr1.tex`)).trim().toBuffer()
-          await sharp(trimmed)
-            .resize(NAME_WIDTH, NAME_HEIGHT, { fit: "inside", withoutEnlargement: true })
-            .webp({ quality: 60, alphaQuality: 60, effort: 6 })
-            .toFile(out)
-        }
-      }
-    })
-  ]
-  const queue = jobs.filter((job) => !fs.existsSync(job.file))
-  const saved = queue.length
-
-  await Promise.all(Array.from({ length: 4 }, async () => {
-    while (queue.length) {
-      const job = queue.pop()
-      await job.save(job.file)
-    }
-  }))
-  console.log(`Zone art: ${saved} saved, ${jobs.length - saved} already there`)
 }
 
 /**

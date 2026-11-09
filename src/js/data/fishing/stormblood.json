@@ -1003,7 +1003,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 24209,
@@ -1077,7 +1078,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 33221,
@@ -1108,7 +1110,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 20018,
@@ -1410,7 +1413,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "heavy"
+    "tug": "heavy",
+    "folklore": "Othardian Fishing Folklore"
   },
   {
     "id": 24214,
@@ -1487,7 +1491,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 24882,
@@ -1820,7 +1825,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 20022,
@@ -2185,7 +2191,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 24215,
@@ -2309,7 +2316,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 20034,
@@ -2895,7 +2903,8 @@
       "x": 28.7,
       "y": 16.3
     },
-    "anyTime": true
+    "anyTime": true,
+    "collectable": true
   },
   {
     "id": 20181,
@@ -2916,7 +2925,8 @@
       "x": 28.7,
       "y": 16.3
     },
-    "anyTime": true
+    "anyTime": true,
+    "collectable": true
   },
   {
     "id": 20182,
@@ -3047,7 +3057,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 20038,
@@ -3997,7 +4008,8 @@
       "x": 28.7,
       "y": 16.3
     },
-    "anyTime": true
+    "anyTime": true,
+    "collectable": true
   },
   {
     "id": 41060,
@@ -5069,7 +5081,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 24889,
@@ -5881,7 +5894,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 20021,
@@ -6811,7 +6825,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 24991,
@@ -8284,7 +8299,8 @@
       "x": 8.5,
       "y": 21.1
     },
-    "anyTime": true
+    "anyTime": true,
+    "collectable": true
   },
   {
     "id": 36582,
@@ -9506,7 +9522,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 20191,

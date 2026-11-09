@@ -1,6 +1,6 @@
 import assert from "node:assert/strict"
 import { describe, it } from "node:test"
-import { entriesOf, eventName, leadOf, patchNumber, patchOf, periodOf, windowOf } from "../scripts/lodestone-data.js"
+import { entriesOf, eventName, leadOf, patchNumber, patchOf, periodOf, windowOf } from "../scripts/sources/lodestone.js"
 
 /**
  * @param {number | null} ms

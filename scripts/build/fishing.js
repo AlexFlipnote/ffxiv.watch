@@ -1,20 +1,13 @@
-import {
-  byId, nearestAetheryte, plainNames, round, saveIcons, saveMaps, scripRewards, sheets, spotOf, writeData, writeExpansions, zoneWeather
-} from "./datamining.js"
-import { FACT_ICONS } from "../src/render/fishing.js"
+import { expansionOf, nearestAetheryte, round, scripRewards, spotOf, writeData, writeExpansions, zoneWeather } from "../common.js"
+import { byId, plainNames, saveIcons, saveMaps, sheets } from "../sources/game.js"
+import { trackerData } from "../sources/fish-tracker.js"
+import { teamcraft } from "../sources/teamcraft.js"
+import { FACT_ICONS } from "../../src/render/fishing.js"
 
-// When each fish bites, what with and after which weather isn't in the game's data. Carbuncle Plushy's fish tracker
-// (MIT) keeps it, for the fish with a condition and every big fish: https://github.com/icykoneko/ff14-fish-tracker-app
-const TRACKER = "https://raw.githubusercontent.com/icykoneko/ff14-fish-tracker-app/master/js/app/data.js"
-// The rest of the fishing log bites any time. Teamcraft (MIT) has their bait, hookset and tug, per spot
-const TEAMCRAFT = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/fishing-sources.json"
-// Every ocean stop is on the same ship, an A Realm Reborn zone. Teamcraft's patch per item, from the game's versions, and
-// each patch's expansion (its ExVersion row) say which expansion added the stop's fish
-const TEAMCRAFT_PATCHES = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/item-patch.json"
-const TEAMCRAFT_PATCH_NAMES = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/patch-names.json"
+// The rest of the fishing log bites any time, their bait, hookset and tug are Teamcraft's, per spot
 const HOOKSETS = { 1: "Powerful", 2: "Precision" }
 const TUGS = { 0: "medium", 1: "heavy", 2: "light" }
-// Teamcraft's oceanFishingTime, the time of day a blue fish needs at its stop, like ocean-fishing-data.js
+// Teamcraft's oceanFishingTime, the time of day a blue fish needs at its stop, like ocean-fishing.js
 const OCEAN_TIMES = { 1: "Sunset", 2: "Day", 3: "Night" }
 // Item.Rarity of the blue fish
 const BLUE_FISH = "3"
@@ -22,32 +15,12 @@ const BLUE_FISH = "3"
 const ET_DAY = 24 * 60
 
 /**
- * @param {string} url
- * @returns {Promise<Response>}
- */
-async function get(url) {
-  const res = await fetch(url)
-  if (!res.ok) throw new Error(`${url}: HTTP ${res.status}`)
-  return res
-}
-
-/**
- * The tracker's data is a script, `const DATA = { FISH: {...}, ... }`. Only its keys aren't JSON, so it's read as
- * that rather than run.
- * @returns {Promise<{ FISH: object, FOLKLORE: object }>}
- */
-async function trackerData() {
-  const text = await (await get(TRACKER)).text()
-  return JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1).replace(/^(\s*)([A-Z_]+):/gm, "$1\"$2\":"))
-}
-
-/**
  * FishingSpot and SpearfishingNotebook place a spot in pixels on the 2048px map texture, its radius in tenths of those.
  * @param {Record<string, string>} map Map sheet row
  * @param {number | string} x
  * @param {number | string} y
  * @param {number | string} radius
- * @returns {{ image: string, scale: number, x: number, y: number, radius: number }} Like mapPosition in datamining.js
+ * @returns {{ image: string, scale: number, x: number, y: number, radius: number }} Like mapPosition in common.js
  */
 function mapPixels(map, x, y, radius) {
   const scale = +map.SizeFactor / 100
@@ -71,24 +44,21 @@ function biteTimes(start, end) {
 }
 
 async function main() {
-  const [tracker, teamcraft, itemPatches, patchNames, [
+  const [tracker, sources, [
     spots, notebooks, fishParams, spearItems, items, weathers, maps, territories, places, exVersions, aetherytes, markers,
-    uiCategories, oceanSpots
+    uiCategories, oceanSpots, levelTable, subCategories
   ]] = await Promise.all([
     trackerData(),
-    get(TEAMCRAFT).then((res) => res.json()),
-    get(TEAMCRAFT_PATCHES).then((res) => res.json()),
-    get(TEAMCRAFT_PATCH_NAMES).then((res) => res.json()),
+    teamcraft("fishing-sources.json"),
     sheets([
       "FishingSpot", "SpearfishingNotebook", "FishParameter", "SpearfishingItem", "Item", "Weather", "Map", "TerritoryType",
-      "PlaceName", "ExVersion", "Aetheryte", "MapMarker", "ItemUICategory", "IKDSpot"
+      "PlaceName", "ExVersion", "Aetheryte", "MapMarker", "ItemUICategory", "IKDSpot",
+      "GatheringItemLevelConvertTable", "GatheringSubCategory"
     ])
   ])
 
   const spot = byId(spots)
   const notebook = byId(notebooks)
-  // The tracker places spearfishing fish by the notebook entry's GatheringPointBase
-  const notebookByBase = Object.fromEntries(notebooks.map((n) => [n.GatheringPointBase, n]))
   const item = byId(items)
   const weather = byId(weathers)
   const map = byId(maps)
@@ -102,9 +72,25 @@ async function main() {
     [s.SpotMain, { stop: place[s.PlaceName].Name }],
     [s.SpotSub, { stop: place[s.PlaceName].Name, spectral: true }]
   ]))
+  // Every ocean stop is on the same ship, an A Realm Reborn zone. A stop's fish are the level cap of the expansion that
+  // added it, 80 for the first voyages in Shadowbringers
+  const level = byId(levelTable)
+  const stopLevel = new Map()
+  for (const p of fishParams) {
+    const stop = oceanStop.get(p.FishingSpot)?.stop
+    const lv = +level[p.GatheringItemLevel]?.GatheringItemLevel
+    if (stop && lv > (stopLevel.get(stop) ?? 0)) stopLevel.set(stop, lv)
+  }
   const inLog = (rows) => rows.filter((r) => +r.Item > 0 && r.IsInLog === "True")
   const logSpot = Object.fromEntries(inLog(fishParams).map((p) => [p.Item, p.FishingSpot]))
   const logText = Object.fromEntries([...fishParams, ...spearItems].map((p) => [p.Item, p.Text ?? p.Description]))
+  // A fish's folklore tome, by the part of the log it's in, and a spearfishing fish's spot
+  const subCategory = byId(subCategories)
+  const folkloreOf = Object.fromEntries([...fishParams, ...spearItems].filter((p) => +p.Item > 0).flatMap((p) => {
+    const sub = subCategory[p.GatheringSubCategory]
+    return sub && sub.Item !== "0" ? [[p.Item, sub.FolkloreBook]] : []
+  }))
+  const spearSpotOf = Object.fromEntries(spearItems.filter((s) => +s.Item > 0).map((s) => [s.Item, s.SpearfishingNotebook]))
 
   const named = (id) => ({ id: +id, name: item[id].Name })
   const weatherNames = (ids) => ids.map((id) => weather[id].Name)
@@ -138,9 +124,9 @@ async function main() {
     const aetheryte = position && aetheryteNear(t.Map, position.x, position.y)
     // Nothing to wait for, the list hides these until asked (see js/fishing.js). An ocean fish waits for the voyages
     const anyTime = !ocean && !fish.big && !fish.times && !fish.weather && !fish.previousWeather && !fish.predators
-    const oceanExpansion = ocean && exVersion[patchNames[itemPatches[id]]?.ex]?.Name
-    if (ocean && !oceanExpansion) throw new Error(`${it.Name}: no patch for the ocean fish in Teamcraft's item-patch.json`)
-    const blueTime = ocean && it.Rarity === BLUE_FISH && OCEAN_TIMES[teamcraft[id]?.find((s) => String(s.spot) === location.spotId)?.oceanFishingTime]
+    if (ocean && !stopLevel.has(ocean.stop)) throw new Error(`${ocean.stop}: no level for the ocean stop's fish`)
+    const oceanExpansion = ocean && expansionOf(stopLevel.get(ocean.stop), exVersions)
+    const blueTime = ocean && it.Rarity === BLUE_FISH && OCEAN_TIMES[sources[id]?.find((s) => String(s.spot) === location.spotId)?.oceanFishingTime]
 
     return {
       territory: +location.row.TerritoryType,
@@ -171,7 +157,7 @@ async function main() {
 
   for (const fish of Object.values(tracker.FISH)) {
     // A few have no spot in the tracker, the fishing log has one
-    const location = fish.gig ? spearSpot(notebookByBase[fish.location]) : fishingSpot(String(fish.location ?? logSpot[fish._id]))
+    const location = fish.gig ? spearSpot(notebook[spearSpotOf[fish._id]]) : fishingSpot(String(fish.location ?? logSpot[fish._id]))
     const times = biteTimes(fish.startHour, fish.endHour)
     // A step of the catch path can be a list, of fish that work as well as each other
     const bait = fish.bestCatchPath.map((step) => (Array.isArray(step) ? step : [step]).map(named))
@@ -193,35 +179,35 @@ async function main() {
       ...(fish.snagging ? { snagging: true } : {}),
       // Fish Eyes lets it bite outside its times, not its weather
       ...(fish.fishEyes && times ? { fishEyes: true } : {}),
-      ...(fish.folklore ? { folklore: tracker.FOLKLORE[fish.folklore].book_en } : {}),
-      ...(fish.collectable ? { collectable: true } : {}),
+      ...(folkloreOf[fish._id] ? { folklore: folkloreOf[fish._id] } : {}),
+      ...(item[fish._id].IsCollectable === "True" ? { collectable: true } : {}),
       patch: fish.patch
     }))
   }
 
   for (const p of inLog(fishParams).filter((p) => !tracker.FISH[p.Item])) {
-    const source = teamcraft[p.Item]?.find((s) => String(s.spot) === p.FishingSpot) ?? teamcraft[p.Item]?.[0]
+    const source = sources[p.Item]?.find((s) => String(s.spot) === p.FishingSpot) ?? sources[p.Item]?.[0]
     add(p.Item, entry(p.Item, fishingSpot(p.FishingSpot), {
       ...(source?.bait && item[source.bait]?.Name ? { bait: [[named(source.bait)]] } : {}),
       ...(HOOKSETS[source?.hookset] ? { hookset: HOOKSETS[source.hookset] } : {}),
       ...(TUGS[source?.tug] ? { tug: TUGS[source.tug] } : {}),
-      ...(source?.snagging ? { snagging: true } : {})
+      ...(source?.snagging ? { snagging: true } : {}),
+      ...(folkloreOf[p.Item] ? { folklore: folkloreOf[p.Item] } : {})
     }))
   }
   for (const s of inLog(spearItems).filter((s) => !tracker.FISH[s.Item])) {
-    add(s.Item, entry(s.Item, spearSpot(notebook[s.SpearfishingNotebook]), {}))
+    add(s.Item, entry(s.Item, spearSpot(notebook[s.SpearfishingNotebook]), folkloreOf[s.Item] ? { folklore: folkloreOf[s.Item] } : {}))
   }
   if (skipped.length) console.log(`No spot for ${skipped.length}: ${skipped.join(", ")}`)
 
   await saveMaps(fishes.map((f) => f.mapId).filter(Boolean))
 
-  // The tracker only marks the fish it keeps as collectable, the scrip exchange knows them all
+  // A fish that can be caught as a collectable, and the scrips the exchange pays for it, for the list's search (the fish
+  // page has the rest)
   const scrips = await scripRewards(item)
   for (const { fish } of fishes) {
-    if (!scrips.has(fish.id)) continue
-    fish.collectable = true
-    // For the list's search, the fish page has the rest
-    fish.scrip = scrips.get(fish.id).name
+    if (item[fish.id].IsCollectable === "True" || scrips.has(fish.id)) fish.collectable = true
+    if (scrips.has(fish.id)) fish.scrip = scrips.get(fish.id).name
   }
 
   const sorted = fishes.sort((a, b) => a.territory - b.territory || a.fish.level - b.fish.level || a.fish.id - b.fish.id)

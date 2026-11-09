@@ -1,11 +1,8 @@
-import {
-  byId, mapPosition, minutes, nearestAetheryte, plainNames, saveIcons, saveMaps, scripRewards, sheets, spotOf, writeData, writeExpansions
-} from "./datamining.js"
+import { mapPosition, minutes, nearestAetheryte, scripRewards, spotOf, writeData, writeExpansions } from "../common.js"
+import { byId, plainNames, saveIcons, saveMaps, sheets } from "../sources/game.js"
+import { teamcraft } from "../sources/teamcraft.js"
 
-// The items a node hides, which the node doesn't show until they're revealed, aren't in the game's data. Teamcraft
-// (MIT) keeps them, by GatheringPointBase: https://github.com/ffxiv-teamcraft/ffxiv-teamcraft
-const TEAMCRAFT_NODES = "https://raw.githubusercontent.com/ffxiv-teamcraft/ffxiv-teamcraft/staging/libs/data/src/lib/json/nodes.json"
-
+// The items a node hides, which it doesn't show until they're revealed, aren't in the game's files: they're Teamcraft's
 // GatheringPoint.Type. Regular and Diadem nodes are always up, the rest only at their times.
 // Type 8 (the Diadem's umbral nodes) only shows up in umbral weather, which the data doesn't say when
 const NODE_TYPES = { 1: "Regular", 2: "Unspoiled", 4: "Ephemeral", 5: "Legendary", 7: "Diadem" }
@@ -95,9 +92,7 @@ function itemInfo(it, uiCategory, recipes, scrips) {
 }
 
 async function main() {
-  const res = await fetch(TEAMCRAFT_NODES)
-  if (!res.ok) throw new Error(`${TEAMCRAFT_NODES}: HTTP ${res.status}`)
-  const hiddenItems = new Map(Object.entries(await res.json()).map(([id, n]) => [id, n.hiddenItems ?? []]))
+  const hiddenItems = new Map(Object.entries(await teamcraft("nodes.json")).map(([id, n]) => [id, n.hiddenItems ?? []]))
 
   const [
     points, bases, transients, popTimes, gatheringItems, items, levels,

@@ -23,7 +23,7 @@ const itemLink = (item) => itemUrl(item) ? html`<a href="${itemUrl(item)}">${ite
  * Only on the item's own page, hundreds of them would slow the list down.
  * @param {object} item
  * @param {{ icon: number }} info The item's entry in gathering-items.json
- * @returns {import("./html.js").Html} Its icon, saved by scripts/datamining.js
+ * @returns {import("./html.js").Html} Its icon, saved by scripts/sources/xivapi.js
  */
 const itemIcon = (item, info) => html`<img class="item-icon" src="${gameIcon(info.icon)}" alt="${item.name} icon" width="44" height="44">`
 

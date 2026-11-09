@@ -1,17 +1,17 @@
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
-import { byId, saveIcons, sheets, slug, writeData, writeExpansions } from "./datamining.js"
+import { expansionOf, slug, writeData, writeExpansions } from "../common.js"
+import { byId, saveIcons, sheets } from "../sources/game.js"
+import { UNLOCK_ICONS } from "../../src/js/utils/crafting.js"
 
-// Runs after gathering-data.js and fishing-data.js, it reads what they wrote
-const DATA = path.join(path.dirname(fileURLToPath(import.meta.url)), "../src/js/data")
+// Runs after gathering.js and fishing.js, it reads what they wrote
+const DATA = path.join(path.dirname(fileURLToPath(import.meta.url)), "../../src/js/data")
 
 // By Recipe.CraftType, the CraftType sheet names the craft rather than the job
 const CRAFTERS = ["Carpenter", "Blacksmith", "Armorer", "Goldsmith", "Leatherworker", "Weaver", "Alchemist", "Culinarian"]
 // Item ids 2-19 are the shards, crystals and clusters
 const LAST_CRYSTAL = 19
-// Each expansion's level cap, past the last is the newest
-const LEVEL_CAPS = [50, 60, 70, 80, 90]
 
 /**
  * @param {string} name "gathering" or "fishing"
@@ -19,16 +19,6 @@ const LEVEL_CAPS = [50, 60, 70, 80, 90]
  */
 const readList = (name) => fs.readdirSync(path.join(DATA, name))
   .flatMap((file) => JSON.parse(fs.readFileSync(path.join(DATA, name, file), "utf8")))
-
-/**
- * @param {number} level
- * @param {Record<string, string>[]} exVersions
- * @returns {string}
- */
-function expansionOf(level, exVersions) {
-  const index = LEVEL_CAPS.findIndex((cap) => level <= cap)
-  return exVersions[Math.min(index === -1 ? LEVEL_CAPS.length : index, exVersions.length - 1)].Name
-}
 
 /**
  * @param {Record<string, string>} recipe
@@ -174,7 +164,7 @@ async function main() {
   }
   writeData("crafting-items", info)
 
-  await saveIcons(Object.values(info).map((i) => i.icon))
+  await saveIcons([...Object.values(info).map((i) => i.icon), ...Object.values(UNLOCK_ICONS)])
 }
 
 main().catch((err) => {

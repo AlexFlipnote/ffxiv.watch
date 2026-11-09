@@ -63,6 +63,9 @@ export function materials(wants, recipeOf) {
   return { crafts: crafts.reverse(), materials: out, crystals }
 }
 
+// Item.Icon of a master recipe book, the first few share it, and of the folklore tomes, which all share one
+export const UNLOCK_ICONS = { book: 26155, folklore: 26164 }
+
 // The preferred crafter in the settings, none for the first listed
 export const CRAFTER_KEY = "crafting-crafter"
 

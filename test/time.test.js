@@ -154,11 +154,11 @@ describe("Timers", () => {
 })
 
 describe("PvP maps", () => {
-  it("rotates Frontline at the daily reset, like PvP Calendar's", () => {
+  it("rotates Frontline at the daily reset, as the game's data has it", () => {
     assert.equal(frontlineAt(Date.UTC(2026, 9, 11, 14)).map, "Onsal Hakair (Danshig Naadam)")
     assert.equal(frontlineAt(Date.UTC(2026, 9, 11, 15)).map, "Worqor Chirteh (Triumph)")
-    assert.equal(frontlineAt(Date.UTC(2026, 9, 13, 16)).map, "Borderland Ruins (Secure)")
-    assert.equal(frontlineAt(Date.UTC(2026, 9, 17, 16)).map, "Fields of Glory (Shatter)")
+    assert.equal(frontlineAt(Date.UTC(2026, 9, 13, 16)).map, "The Borderland Ruins (Secure)")
+    assert.equal(frontlineAt(Date.UTC(2026, 9, 17, 16)).map, "The Fields of Glory (Shatter)")
   })
 
   it("rotates Crystalline Conflict on the hour", () => {

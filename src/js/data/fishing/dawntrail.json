@@ -8,7 +8,17 @@
     "spot": "Unnamed Margin",
     "ocean": {
       "stop": "Unnamed Island"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51210,
@@ -19,7 +29,17 @@
     "spot": "Unnamed Margin",
     "ocean": {
       "stop": "Unnamed Island"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 51211,
@@ -30,7 +50,17 @@
     "spot": "Unnamed Margin",
     "ocean": {
       "stop": "Unnamed Island"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 51212,
@@ -41,7 +71,17 @@
     "spot": "Unnamed Margin",
     "ocean": {
       "stop": "Unnamed Island"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51213,
@@ -52,7 +92,17 @@
     "spot": "Unnamed Margin",
     "ocean": {
       "stop": "Unnamed Island"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 51214,
@@ -63,7 +113,17 @@
     "spot": "Unnamed Margin",
     "ocean": {
       "stop": "Unnamed Island"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 51215,
@@ -74,7 +134,17 @@
     "spot": "Unnamed Margin",
     "ocean": {
       "stop": "Unnamed Island"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
   },
   {
     "id": 51216,
@@ -85,7 +155,17 @@
     "spot": "Unnamed Margin",
     "ocean": {
       "stop": "Unnamed Island"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51217,
@@ -96,7 +176,17 @@
     "spot": "Unnamed Margin",
     "ocean": {
       "stop": "Unnamed Island"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "heavy"
   },
   {
     "id": 51218,
@@ -151,7 +241,17 @@
     "ocean": {
       "stop": "Unnamed Island",
       "spectral": true
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51221,
@@ -163,7 +263,17 @@
     "ocean": {
       "stop": "Unnamed Island",
       "spectral": true
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51222,
@@ -197,7 +307,17 @@
     "ocean": {
       "stop": "Unnamed Island",
       "spectral": true
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 51224,
@@ -209,7 +329,17 @@
     "ocean": {
       "stop": "Unnamed Island",
       "spectral": true
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
   },
   {
     "id": 51225,
@@ -288,7 +418,7 @@
       "stop": "Unnamed Island",
       "spectral": true,
       "blue": true,
-      "time": "Night"
+      "time": "Sunset"
     },
     "bait": [
       [
@@ -310,7 +440,17 @@
     "spot": "Thavnair Margin",
     "ocean": {
       "stop": "Thavnair"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51230,
@@ -321,7 +461,17 @@
     "spot": "Thavnair Margin",
     "ocean": {
       "stop": "Thavnair"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 51231,
@@ -332,7 +482,17 @@
     "spot": "Thavnair Margin",
     "ocean": {
       "stop": "Thavnair"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51232,
@@ -343,7 +503,17 @@
     "spot": "Thavnair Margin",
     "ocean": {
       "stop": "Thavnair"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51233,
@@ -354,7 +524,17 @@
     "spot": "Thavnair Margin",
     "ocean": {
       "stop": "Thavnair"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 51234,
@@ -365,7 +545,17 @@
     "spot": "Thavnair Margin",
     "ocean": {
       "stop": "Thavnair"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 51235,
@@ -376,7 +566,17 @@
     "spot": "Thavnair Margin",
     "ocean": {
       "stop": "Thavnair"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
   },
   {
     "id": 51237,
@@ -387,7 +587,17 @@
     "spot": "Thavnair Margin",
     "ocean": {
       "stop": "Thavnair"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 2606,
+          "name": "Northern Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
   },
   {
     "id": 51238,
@@ -420,7 +630,17 @@
     "ocean": {
       "stop": "Thavnair",
       "spectral": true
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51240,
@@ -432,7 +652,17 @@
     "ocean": {
       "stop": "Thavnair",
       "spectral": true
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 51241,
@@ -444,7 +674,17 @@
     "ocean": {
       "stop": "Thavnair",
       "spectral": true
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51242,
@@ -500,7 +740,17 @@
     "ocean": {
       "stop": "Thavnair",
       "spectral": true
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 51245,
@@ -512,7 +762,17 @@
     "ocean": {
       "stop": "Thavnair",
       "spectral": true
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "heavy"
   },
   {
     "id": 51246,
@@ -569,7 +829,17 @@
     "spot": "Thavnair Margin",
     "ocean": {
       "stop": "Thavnair"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 43664,
@@ -868,7 +1138,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 44339,
@@ -1148,7 +1419,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 43776,
@@ -2277,7 +2549,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 43689,
@@ -2500,7 +2773,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 47989,
@@ -3428,7 +3702,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 49795,
@@ -4148,7 +4423,18 @@
       "x": 13.5,
       "y": 12.9
     },
-    "anyTime": true
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 43715,
@@ -5169,7 +5455,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 44338,
@@ -5200,7 +5487,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 46191,
@@ -6875,7 +7163,18 @@
       "x": 29.1,
       "y": 30.8
     },
-    "anyTime": true
+    "anyTime": true,
+    "bait": [
+      [
+        {
+          "id": 28634,
+          "name": "Metal Spinner"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 43754,
@@ -7735,7 +8034,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 43771,

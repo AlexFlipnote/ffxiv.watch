@@ -28,9 +28,8 @@ In Chrome, Firefox, Edge, Safari and Samsung Internet.
 
 ## Credits
 - **[Carbuncle Plushy's fish tracker](https://github.com/icykoneko/ff14-fish-tracker-app)** for when each fish bites, its bait and intuition
-- **[Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft)** for the bait, hookset and tug of the other fish, blue fish times and hidden node items
-- [PvP Calendar](https://pvpc.nbb.fan/) for the Frontline and Crystalline Conflict rotations
-- [XIVAPI's ffxiv-datamining](https://github.com/xivapi/ffxiv-datamining) for the game data, and [XIVAPI](https://v2.xivapi.com/) for the maps and icons
+- **[Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft)** for the bait, hookset and tug of the other fish, blue fish times, hidden node items, and the few shops the game only links to their NPC in its scripts
+- [XIVAPI's ffxiv-datamining](https://github.com/xivapi/ffxiv-datamining) for the names of the game sheets' columns. The game's data, icons and maps are read from its own files, see [.env.example](.env.example)
 - [Google Sans Flex](https://fonts.google.com/specimen/Google+Sans+Flex) (OFL), [Material Symbols](https://fonts.google.com/icons) (Apache 2.0) and the Lodestone's icon font via [ffxiv-axis-font-icons](https://github.com/thewakingsands/ffxiv-axis-font-icons)
 
 ## License

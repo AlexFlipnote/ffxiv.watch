@@ -1629,11 +1629,23 @@
         },
         {
           "id": 40525,
-          "name": "Sirensong Mullet"
+          "name": "Sirensong Mullet",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 40526,
-          "name": "Selkie Puffer"
+          "name": "Selkie Puffer",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 40527,
@@ -1841,11 +1853,23 @@
         },
         {
           "id": 40545,
-          "name": "Floating Lantern"
+          "name": "Floating Lantern",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 40546,
-          "name": "Rubescent Tatsunoko"
+          "name": "Rubescent Tatsunoko",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 40547,
@@ -2033,11 +2057,23 @@
         },
         {
           "id": 40563,
-          "name": "Pinebark Flounder"
+          "name": "Pinebark Flounder",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 40564,
-          "name": "Mantle Moray"
+          "name": "Mantle Moray",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 40567,
@@ -2051,7 +2087,13 @@
         },
         {
           "id": 40566,
-          "name": "Sanbaso"
+          "name": "Sanbaso",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 40565,
@@ -2254,11 +2296,23 @@
         },
         {
           "id": 40584,
-          "name": "Princess Salmon"
+          "name": "Princess Salmon",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 40585,
-          "name": "Calligraph"
+          "name": "Calligraph",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 40586,
@@ -2294,8 +2348,8 @@
           "id": 40589,
           "name": "Spectral Kotsu Zetsu",
           "bait": {
-            "id": 29716,
-            "name": "Plump Worm"
+            "id": 29715,
+            "name": "Krill"
           },
           "hookset": "Powerful",
           "tug": "heavy"
@@ -2441,39 +2495,93 @@
       "fish": [
         {
           "id": 51209,
-          "name": "First Mate's Finger"
+          "name": "First Mate's Finger",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51210,
-          "name": "Specterfish"
+          "name": "Specterfish",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 51211,
-          "name": "Rhotano Permit"
+          "name": "Rhotano Permit",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 51212,
-          "name": "Rhotano Dahlia"
+          "name": "Rhotano Dahlia",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51213,
-          "name": "Lodesmate's Pen"
+          "name": "Lodesmate's Pen",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 51214,
-          "name": "Rhotano Roosterfish"
+          "name": "Rhotano Roosterfish",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 51215,
-          "name": "Rhotanosaurus"
+          "name": "Rhotanosaurus",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
         },
         {
           "id": 51216,
-          "name": "Royal Handmaiden"
+          "name": "Royal Handmaiden",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51217,
-          "name": "Spectral Starfish"
+          "name": "Spectral Starfish",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "heavy"
         },
         {
           "id": 51218,
@@ -2506,11 +2614,23 @@
         },
         {
           "id": 51220,
-          "name": "Bright Red Coral"
+          "name": "Bright Red Coral",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51221,
-          "name": "Royal Favorite"
+          "name": "Royal Favorite",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51222,
@@ -2524,11 +2644,23 @@
         },
         {
           "id": 51223,
-          "name": "Captain's Pen"
+          "name": "Captain's Pen",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 51224,
-          "name": "Tylosaurus"
+          "name": "Tylosaurus",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
         },
         {
           "id": 51225,
@@ -2564,7 +2696,7 @@
           "id": 51228,
           "name": "Akupara",
           "blue": true,
-          "time": "Night",
+          "time": "Sunset",
           "bait": {
             "id": 51225,
             "name": "Cieldalaes Roosterfish"
@@ -2587,39 +2719,93 @@
       "fish": [
         {
           "id": 51229,
-          "name": "Red Mantis"
+          "name": "Red Mantis",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51230,
-          "name": "Datli Gwl"
+          "name": "Datli Gwl",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 51231,
-          "name": "Agama's Strand"
+          "name": "Agama's Strand",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51232,
-          "name": "Palaka's Blade"
+          "name": "Palaka's Blade",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51233,
-          "name": "Parjanya Wrasse"
+          "name": "Parjanya Wrasse",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 51234,
-          "name": "Simolestes"
+          "name": "Simolestes",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 51235,
-          "name": "Thavnasaurus"
+          "name": "Thavnasaurus",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
         },
         {
           "id": 51687,
-          "name": "Junior Jinbei"
+          "name": "Junior Jinbei",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51237,
-          "name": "Spectral Grouper"
+          "name": "Spectral Grouper",
+          "bait": {
+            "id": 2606,
+            "name": "Northern Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
         },
         {
           "id": 51238,
@@ -2642,15 +2828,33 @@
       "spectral": [
         {
           "id": 51239,
-          "name": "Great Red Mantis"
+          "name": "Great Red Mantis",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51240,
-          "name": "Guzel Gwl"
+          "name": "Guzel Gwl",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Powerful",
+          "tug": "medium"
         },
         {
           "id": 51241,
-          "name": "Darpana"
+          "name": "Darpana",
+          "bait": {
+            "id": 29715,
+            "name": "Krill"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51242,
@@ -2674,15 +2878,33 @@
         },
         {
           "id": 51244,
-          "name": "Tiger Mantis"
+          "name": "Tiger Mantis",
+          "bait": {
+            "id": 29714,
+            "name": "Ragworm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51245,
-          "name": "Mehi-mahi"
+          "name": "Mehi-mahi",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Powerful",
+          "tug": "heavy"
         },
         {
           "id": 51687,
-          "name": "Junior Jinbei"
+          "name": "Junior Jinbei",
+          "bait": {
+            "id": 29716,
+            "name": "Plump Worm"
+          },
+          "hookset": "Precision",
+          "tug": "light"
         },
         {
           "id": 51246,
@@ -2720,6 +2942,7 @@
     "2587": 27005,
     "2591": 27001,
     "2603": 27021,
+    "2606": 27023,
     "2613": 27053,
     "2619": 27065,
     "12704": 27028,

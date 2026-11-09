@@ -1,0 +1,29 @@
+{
+  "frontline": {
+    "start": 1517065200000,
+    "every": 86400000,
+    "maps": [
+      "Seal Rock (Seize)",
+      "The Fields of Glory (Shatter)",
+      "Onsal Hakair (Danshig Naadam)",
+      "Worqor Chirteh (Triumph)",
+      "Seal Rock (Seize)",
+      "The Borderland Ruins (Secure)",
+      "Onsal Hakair (Danshig Naadam)",
+      "Worqor Chirteh (Triumph)"
+    ]
+  },
+  "crystallineConflict": {
+    "start": 1517065200000,
+    "every": 3600000,
+    "maps": [
+      "The Palaistra",
+      "The Volcanic Heart",
+      "The Bayside Battleground",
+      "Cloud Nine",
+      "The Clockwork Castletown",
+      "Archeia Harmonias",
+      "The Red Sands"
+    ]
+  }
+}

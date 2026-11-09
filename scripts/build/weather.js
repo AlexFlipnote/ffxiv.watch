@@ -1,16 +1,17 @@
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
-import { aetherytesByMap, saveIcons, saveMaps, saveZoneArt, sheets, writeData } from "./datamining.js"
+import { aetherytesByMap, writeData } from "../common.js"
+import { saveIcons, saveMaps, sheets } from "../sources/game.js"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const OUT = path.join(__dirname, "../src/js/data/weather.json")
+const OUT = path.join(__dirname, "../../src/js/data/weather.json")
 
 const TOWN = 0
 const OVERWORLD = 1
 const HOUSING = 13
 const ISLAND_SANCTUARY = 49
-// No weather of its own, only its art for the Gold Saucer page's link preview
+// No weather of its own, only its icon for the Gold Saucer page's link preview
 const GOLD_SAUCER = 23
 const FIELD_OPERATIONS = [41, 48, 61, 60] // Eureka, Bozja and Zadnor, Occult Crescent, Cosmic Exploration
 
@@ -28,9 +29,30 @@ function groupOf(territory, expansions) {
   return expansions[territory.ExVersion]
 }
 
+/**
+ * A zone's icon as the teleport list shows it: its town's crest when its region has a town, the aetheryte otherwise. A
+ * town's own zones are named after it ("The Crystarium" for Crystarium), which says what region is the town's.
+ * @param {Record<string, string>[]} territories TerritoryType rows
+ * @param {Record<string, string>[]} towns Town rows
+ * @param {Record<string, string>[]} symbols MapSymbol rows
+ * @param {Record<string, string>} placeName PlaceName id -> name
+ * @returns {(territory: Record<string, string>) => number} Its icon
+ */
+function iconsOf(territories, towns, symbols, placeName) {
+  const crest = new Map()
+  for (const town of towns) {
+    if (!(+town.Icon > 0)) continue
+    const home = territories.find((t) => [town.Name, `The ${town.Name}`].includes(placeName[t.PlaceNameZone]))
+    if (home) crest.set(home.PlaceNameRegion, +town.Icon)
+  }
+  const aetheryte = symbols.find((s) => placeName[s.PlaceName] === "Aetheryte")
+  if (!aetheryte) throw new Error("No aetheryte in MapSymbol, has it changed?")
+  return (t) => crest.get(t.PlaceNameRegion) ?? +aetheryte.Icon
+}
+
 async function main() {
-  const [territories, rates, weathers, places, exVersions, maps, aetherytes, markers, loadingImages] = await sheets(
-    ["TerritoryType", "WeatherRate", "Weather", "PlaceName", "ExVersion", "Map", "Aetheryte", "MapMarker", "LoadingImage"]
+  const [territories, rates, weathers, places, exVersions, maps, aetherytes, markers, towns, symbols] = await sheets(
+    ["TerritoryType", "WeatherRate", "Weather", "PlaceName", "ExVersion", "Map", "Aetheryte", "MapMarker", "Town", "MapSymbol"]
   )
 
   const byId = (rows, key = "Name") => Object.fromEntries(rows.map((r) => [r["#"], r[key]]))
@@ -40,15 +62,12 @@ async function main() {
   // Weather name -> its icon, for the forecast page
   const icons = {}
   const expansions = byId(exVersions)
-  const loadingFile = byId(loadingImages, "FileName")
+  const iconOf = iconsOf(territories, towns, symbols, placeName)
   const rateById = Object.fromEntries(rates.map((r) => [r["#"], r]))
   const rows = (list) => Object.fromEntries(list.map((r) => [r["#"], r]))
   const mapRow = rows(maps)
   const aetherytesOn = aetherytesByMap({ aetherytes, markers, map: mapRow, place: rows(places) })
   const groups = [...exVersions.map((e) => e.Name), "Housing", "Field Operations"]
-
-  /** @returns {{ loading: string, name: number } | null} Its loading screen and name, as the game shows them on arrival */
-  const artOf = (t) => loadingFile[t.LoadingImage] && +t.PlaceNameIcon ? { loading: loadingFile[t.LoadingImage], name: +t.PlaceNameIcon } : null
 
   const zones = new Map()
   for (const t of territories) {
@@ -70,7 +89,7 @@ async function main() {
       icons[weatherName[id]] ??= +weatherIcon[id]
     }
 
-    zones.set(name, { use, id: +t["#"], name, group: groupOf(t, expansions), weather, mapRowId: mapRow[t.Map]?.Id ? t.Map : null, art: artOf(t) })
+    zones.set(name, { use, id: +t["#"], name, group: groupOf(t, expansions), weather, mapRowId: mapRow[t.Map]?.Id ? t.Map : null, icon: iconOf(t) })
   }
 
   // Field operations by content, as their ids interleave (Cosmic Exploration's planets land between Occult Crescent's horns)
@@ -95,11 +114,12 @@ async function main() {
   }])))
   await saveMaps(withMap.map((z) => mapRow[z.mapRowId].Id))
 
-  // Each zone's loading screen and name, for its link preview
-  const saucer = territories.find((t) => +t.TerritoryIntendedUse === GOLD_SAUCER && artOf(t))
-  const withArt = [...zones.values(), { name: placeName[saucer.PlaceName], art: artOf(saucer) }].filter((z) => z.art)
-  writeData("weather-art", Object.fromEntries(withArt.map((z) => [z.name, { loading: z.art.loading.replace(/^-/, ""), name: z.art.name }])))
-  await saveZoneArt(withArt.map((z) => z.art))
+  // Each zone's icon, for its link preview
+  const saucer = territories.find((t) => +t.TerritoryIntendedUse === GOLD_SAUCER)
+  const zoneIcons = Object.fromEntries([...zones.values()].map((z) => [z.name, z.icon]))
+  zoneIcons[placeName[saucer.PlaceName]] = iconOf(saucer)
+  writeData("zone-icons", zoneIcons)
+  await saveIcons(Object.values(zoneIcons))
 }
 
 main().catch((err) => {

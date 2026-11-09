@@ -92,7 +92,17 @@
     "spot": "Open Sirensong Sea",
     "ocean": {
       "stop": "The Sirensong Sea"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 40526,
@@ -103,7 +113,17 @@
     "spot": "Open Sirensong Sea",
     "ocean": {
       "stop": "The Sirensong Sea"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 40527,
@@ -504,7 +524,17 @@
     "spot": "Kugane Coast",
     "ocean": {
       "stop": "Kugane"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 40546,
@@ -515,7 +545,17 @@
     "spot": "Kugane Coast",
     "ocean": {
       "stop": "Kugane"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 40547,
@@ -874,7 +914,17 @@
     "spot": "Open Ruby Sea",
     "ocean": {
       "stop": "The Ruby Sea"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 40564,
@@ -885,7 +935,17 @@
     "spot": "Open Ruby Sea",
     "ocean": {
       "stop": "The Ruby Sea"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29715,
+          "name": "Krill"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 40565,
@@ -917,7 +977,17 @@
     "spot": "Open Ruby Sea",
     "ocean": {
       "stop": "The Ruby Sea"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 40567,
@@ -1297,7 +1367,17 @@
     "spot": "Lower One River",
     "ocean": {
       "stop": "The One River"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29714,
+          "name": "Ragworm"
+        }
+      ]
+    ],
+    "hookset": "Precision",
+    "tug": "light"
   },
   {
     "id": 40585,
@@ -1308,7 +1388,17 @@
     "spot": "Lower One River",
     "ocean": {
       "stop": "The One River"
-    }
+    },
+    "bait": [
+      [
+        {
+          "id": 29716,
+          "name": "Plump Worm"
+        }
+      ]
+    ],
+    "hookset": "Powerful",
+    "tug": "medium"
   },
   {
     "id": 40586,
@@ -1386,8 +1476,8 @@
     "bait": [
       [
         {
-          "id": 29716,
-          "name": "Plump Worm"
+          "id": 29715,
+          "name": "Krill"
         }
       ]
     ],
@@ -2746,7 +2836,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 37847,
@@ -3175,7 +3266,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 36436,
@@ -3915,7 +4007,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 36686,
@@ -5125,7 +5218,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 41409,
@@ -5376,7 +5470,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 36468,

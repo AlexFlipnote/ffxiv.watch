@@ -556,7 +556,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 27432,
@@ -1273,7 +1274,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 38811,
@@ -1569,7 +1571,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 26747,
@@ -2320,7 +2323,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 27438,
@@ -2951,7 +2955,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 26749,
@@ -3630,7 +3635,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 26748,
@@ -4011,7 +4017,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 41301,
@@ -4042,7 +4049,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 27481,
@@ -5618,7 +5626,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 41298,
@@ -5649,7 +5658,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 41299,
@@ -5680,7 +5690,8 @@
       ]
     ],
     "hookset": "Powerful",
-    "tug": "medium"
+    "tug": "medium",
+    "collectable": true
   },
   {
     "id": 41302,
@@ -7328,7 +7339,8 @@
       ]
     ],
     "hookset": "Precision",
-    "tug": "light"
+    "tug": "light",
+    "collectable": true
   },
   {
     "id": 27410,
