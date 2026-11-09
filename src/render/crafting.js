@@ -1,3 +1,4 @@
+import crypto from "crypto"
 import { defaultRecipe, materials } from "../js/utils/crafting.js"
 import { fishUrl } from "./fishing.js"
 import { itemUrl as gatheringUrl } from "./gathering.js"
@@ -6,13 +7,15 @@ import { gameIcon } from "../js/utils/images.js"
 import { ogIcon } from "./og.js"
 
 // The recipe list and a page per crafted item's name. A list entry is one recipe for all its `jobs`, see sameRecipes
-// in scripts/crafting-data.js
+// in scripts/build/crafting.js
 
-const DATA_SOURCES = ["js/data/crafting.json", "js/data/crafting"]
+const DATA_SOURCES = ["js/data/crafting.json", "js/data/crafting", "js/data/vendors.json"]
 // Item ids 2-19 are the crystals
 const LAST_CRYSTAL = 19
 const USES_SHOWN = 6
 const CRAFTER_COUNT = 8
+// The Item gil is, in vendors.json
+const GIL = 1
 
 /**
  * @returns {{ expansions: object[], items: Record<string, object>, recipes: Record<string, object> }}
@@ -24,6 +27,31 @@ const data = (() => {
     const expansions = readExpansions("crafting")
     const recipes = Object.assign({}, ...expansions.map((e) => readData(`crafting-recipes/${e.file}.json`)))
     cached = { expansions, items: readData("crafting-items.json"), recipes }
+    return cached
+  }
+})()
+
+/**
+ * The vendors, fetched by the planner when one is tapped rather than in every page that has something to buy.
+ * @returns {{ path: string, url: string, content: string, sold: Set<number>, costs: Map<number, [number, string, number]> }}
+ * `sold` has the items with a vendor, `costs` what the ones sold for something other than gil cost: [amount, currency,
+ * its icon]
+ */
+const vendorFile = (() => {
+  let cached = null
+  return () => {
+    if (cached) return cached
+    const vendors = readData("vendors.json")
+    const content = JSON.stringify(vendors)
+    const path = "rows/crafting/vendors.json"
+    const hash = crypto.createHash("md5").update(content).digest("hex").slice(0, 10)
+    const costs = new Map()
+    for (const [id, offers] of Object.entries(vendors.items)) {
+      // Gil comes first when it's sold for gil anywhere
+      const [, currency, amount] = offers[0]
+      if (currency !== GIL) costs.set(+id, [amount, ...vendors.currencies[currency]])
+    }
+    cached = { path, url: `/${path}?v=${hash}`, content, sold: new Set(Object.keys(vendors.items).map(Number)), costs }
     return cached
   }
 })()
@@ -78,6 +106,12 @@ function itemName(id) {
 const smallIcon = (icon) => html`<img class="bait-icon" src="${gameIcon(icon)}" alt="" width="24" height="24" loading="lazy">`
 
 /**
+ * @param {[number, string, number]} cost [amount, currency, its icon]
+ * @returns {import("./html.js").Html} "Vendor 2 [gemstone]", the currency named on hover
+ */
+const currencyChip = ([amount, currency, icon]) => html`<span class="chip chip-gold chip-currency" title="${amount.toLocaleString("en-US")} ${currency}">Vendor ${amount.toLocaleString("en-US")}<img src="${gameIcon(icon)}" alt="${currency}" width="16" height="16" loading="lazy"></span>`
+
+/**
  * @param {number} id
  * @returns {import("./html.js").Html[]}
  */
@@ -87,7 +121,8 @@ function sourceChips(id) {
     info.gathered && chip("Gathered"),
     info.fished && chip("Fished"),
     info.vendor && chip(`Vendor ${info.vendor.toLocaleString("en-US")} gil`, "chip-gold"),
-    !info.recipes && !info.gathered && !info.fished && !info.vendor && id > LAST_CRYSTAL && chip("Drop, market or other", "", "Not crafted, gathered, fished or sold by a vendor")
+    !info.vendor && vendorFile().costs.has(id) && currencyChip(vendorFile().costs.get(id)),
+    !info.recipes && !info.gathered && !info.fished && !info.vendor && !vendorFile().costs.has(id) && id > LAST_CRYSTAL && chip("Drop, market or other", "", "Not crafted, gathered, fished or sold by a vendor")
   ]
 }
 
@@ -129,7 +164,7 @@ export function recipeList() {
   const { rowFiles, files } = listRows("crafting", expansions, null, (entry) => entry.id, recipeRow, () => [])
   return {
     rowFiles,
-    files,
+    files: { ...files, [vendorFile().path]: vendorFile().content },
     defaultExpansion,
     defaultRows: JSON.parse(rowFiles)[defaultExpansion],
     expansionOptions: expansionOptions(expansions, defaultExpansion),
@@ -235,6 +270,41 @@ const timingOf = (() => {
 })()
 
 /**
+ * What has to be unlocked first to gather or fish each item, only when every node or fish of it needs something.
+ * @returns {Map<number, [string, string][]>} Item id -> ["folklore" | "quest", name], several when any one will do
+ */
+const unlocksOf = (() => {
+  let cached = null
+  return () => {
+    if (cached) return cached
+    const sources = new Map()
+    const add = (id, source) => sources.set(id, [...sources.get(id) ?? [], source])
+    // The node's quest only unlocks buying its book, when it has both
+    const unlockOf = (source) => source.folklore ? ["folklore", source.folklore] : source.quest ? ["quest", source.quest] : null
+    for (const e of readExpansions("gathering")) {
+      for (const node of e.entries) for (const item of node.items) add(item.id, unlockOf(node))
+    }
+    for (const e of readExpansions("fishing")) for (const fish of e.entries) add(fish.id, unlockOf(fish))
+    cached = new Map()
+    for (const [id, list] of sources) {
+      if (list.some((u) => !u)) continue
+      cached.set(id, [...new Map(list.map((u) => [u.join(), u])).values()])
+    }
+    return cached
+  }
+})()
+
+/**
+ * @param {number} id
+ * @param {object} r
+ * @returns {any[]} [recipe id, yield, job, level, ingredients, crystals, { book?, specialist? }]
+ */
+function plannerRecipe(id, r) {
+  const unlock = { ...(r.book ? { book: r.book } : {}), ...(r.specialist ? { specialist: true } : {}) }
+  return [id, r.yield, r.job, r.level, r.ingredients, r.crystals, ...(Object.keys(unlock).length ? [unlock] : [])]
+}
+
+/**
  * The items and recipes under one craft, for js/utils/planner.js.
  * @param {number} rootRecipe
  * @param {number[]} [others] Its other crafters' recipes, as `crafters`
@@ -245,17 +315,22 @@ function plannerData(rootRecipe, others = []) {
   const root = recipes[rootRecipe]
   const usedRecipes = {}
   const usedItems = {}
+  const unlocks = {}
+  const costs = {}
 
   const addItem = (id) => {
     if (usedItems[id]) return
     const info = items[id]
     // Crystals are at nodes too
-    const source = id <= LAST_CRYSTAL ? "crystal" : info.gathered ? "gathered" : info.fished ? "fished" : info.vendor ? "vendor" : "other"
+    const bought = info.vendor || vendorFile().costs.has(id)
+    const source = id <= LAST_CRYSTAL ? "crystal" : info.gathered ? "gathered" : info.fished ? "fished" : bought ? "vendor" : "other"
+    if (source === "vendor" && !info.vendor) costs[id] = vendorFile().costs.get(id)
     usedItems[id] = [info.name, info.icon, linkOf(id) ?? "", source, info.vendor ?? 0, ...(timingOf().has(id) ? [timingOf().get(id)] : [])]
+    if ((source === "gathered" || source === "fished") && unlocksOf().has(id)) unlocks[id] = unlocksOf().get(id)
     const recipeId = id === root.item ? rootRecipe : recipeIdOf(id)
     if (recipeId === undefined || usedRecipes[id]) return
     const r = recipes[recipeId]
-    usedRecipes[id] = [recipeId, r.yield, r.job, r.level, r.ingredients, r.crystals]
+    usedRecipes[id] = plannerRecipe(recipeId, r)
     for (const [ingredient] of [...r.ingredients, ...r.crystals]) addItem(ingredient)
   }
   addItem(root.item)
@@ -263,15 +338,20 @@ function plannerData(rootRecipe, others = []) {
   const crafters = {}
   for (const id of [rootRecipe, ...others]) {
     const r = recipes[id]
-    crafters[r.job] = [id, r.yield, r.job, r.level, r.ingredients, r.crystals]
+    crafters[r.job] = plannerRecipe(id, r)
     for (const [crystal] of r.crystals) addItem(crystal)
   }
+
+  const sold = Object.keys(usedItems).map(Number).filter((id) => usedItems[id][3] === "vendor" && vendorFile().sold.has(id))
 
   return JSON.stringify({
     root: root.item,
     slug: slug(items[root.item].name),
     recipes: usedRecipes,
     items: usedItems,
+    ...(Object.keys(unlocks).length ? { unlocks } : {}),
+    ...(sold.length ? { vendors: { url: vendorFile().url, items: sold } } : {}),
+    ...(Object.keys(costs).length ? { costs } : {}),
     ...(others.length ? { crafters } : {})
   })
 }

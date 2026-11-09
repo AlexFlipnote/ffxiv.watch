@@ -1,6 +1,7 @@
 import { alarmBell, placeOf, readAlarms } from "./alarmBells.js"
-import { materials, preferredCrafter } from "./crafting.js"
+import { UNLOCK_ICONS, materials, preferredCrafter } from "./crafting.js"
 import { closable } from "./dialog.js"
+import { openMap } from "./mapModal.js"
 import { toast } from "./toast.js"
 import { gameIcon } from "./images.js"
 import { everyTick, formatIn, setText } from "./time.js"
@@ -17,6 +18,7 @@ const GROUPS = [
   ["Get elsewhere", ["other"]]
 ]
 const STATE_ORDER = { open: 0, later: 1, always: 2, none: 3 }
+const UNLOCK_ORDER = { book: 0, specialist: 1, folklore: 2, quest: 3 }
 
 /**
  * @param {string} tag
@@ -35,7 +37,7 @@ export function el(tag, className = "", children = []) {
  * Several recipe pages' data as one, each root made by the preferred crafter when they can.
  * @param {object[]} list data-planner of each
  * @param {string | null} [crafter] See CRAFTER_KEY
- * @returns {{ recipes: object, items: object }}
+ * @returns {{ recipes: object, items: object, unlocks: object, costs: object, vendors?: { url: string, items: number[] } }}
  */
 export function mergeData(list, crafter = null) {
   const recipes = Object.assign({}, ...list.map((d) => d.recipes))
@@ -43,7 +45,14 @@ export function mergeData(list, crafter = null) {
     const job = preferredCrafter(crafter, d.crafters)
     recipes[d.root] = job ? d.crafters[job] : d.recipes[d.root]
   }
-  return { recipes, items: Object.assign({}, ...list.map((d) => d.items)) }
+  const sold = list.filter((d) => d.vendors)
+  return {
+    recipes,
+    items: Object.assign({}, ...list.map((d) => d.items)),
+    unlocks: Object.assign({}, ...list.map((d) => d.unlocks)),
+    costs: Object.assign({}, ...list.map((d) => d.costs)),
+    ...(sold.length ? { vendors: { url: sold[0].vendors.url, items: [...new Set(sold.flatMap((d) => d.vendors.items))] } } : {})
+  }
 }
 
 /**
@@ -159,7 +168,7 @@ export function stepper(value, label, onChange, { readOnly = false, min = 1 } = 
 /**
  * The tree, materials and crafts, drawn into the elements it returns.
  * @param {object} options
- * @param {{ recipes: object, items: object }} options.data
+ * @param {{ recipes: object, items: object, unlocks?: object, costs?: object, vendors?: { url: string, items: number[] } }} options.data
  * @param {() => [number, number][]} options.roots [item id, amount], read on every draw
  * @param {Set<number>} options.gotten Intermediates gotten rather than crafted
  * @param {Map<number, number>} [options.have] A list's counts of what's in hand
@@ -180,14 +189,15 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
 
   const info = (id) => {
     const [name, icon, url, source, vendor, timing] = data.items[id]
-    return { name, icon, url, source, vendor, timing }
+    // Sold for a currency rather than gil: [amount, currency, its icon]
+    return { name, icon, url, source, vendor, timing, cost: data.costs?.[id] }
   }
 
   /** @returns {import("./crafting.js").Recipe & { id: number, job: string, level: number } | null} */
   const recipeOf = (id) => {
     const r = data.recipes[id]
     if (!r || (gotten.has(id) && !rootIds().has(id))) return null
-    return { id: r[0], item: id, yield: r[1], job: r[2], level: r[3], ingredients: r[4], crystals: r[5] }
+    return { id: r[0], item: id, yield: r[1], job: r[2], level: r[3], ingredients: r[4], crystals: r[5], unlock: r[6] }
   }
 
   const icon = (id) => Object.assign(el("img", "bait-icon"), { src: gameIcon(info(id).icon), alt: "", width: 24, height: 24, loading: "lazy" })
@@ -195,6 +205,77 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
     const { name, url } = info(id)
     return url && url !== location.pathname ? Object.assign(el("a", "", [name]), { href: url }) : el("span", "", [name])
   }
+  let vendorData = null
+  const loadVendors = () => vendorData ??= fetch(data.vendors.url).then((res) => {
+    if (!res.ok) throw new Error(`${data.vendors.url}: ${res.status}`)
+    return res.json()
+  }).catch((err) => {
+    vendorData = null
+    throw err
+  })
+
+  /**
+   * @param {number} n
+   * @param {string} currency
+   * @param {number} icon
+   * @returns {HTMLElement} "Vendor 2 [gemstone]", the currency named on hover
+   */
+  const currencyChip = (n, currency, icon) => Object.assign(el("span", "chip chip-gold chip-currency", [
+    `Vendor ${n.toLocaleString("en-US")}`,
+    Object.assign(el("img"), { src: gameIcon(icon), alt: currency, width: 16, height: 16, loading: "lazy" })
+  ]), { title: `${n.toLocaleString("en-US")} ${currency}` })
+
+  /**
+   * The map at the item's first vendor, and a pick of the others to move the map to.
+   * @param {number} id
+   */
+  async function showVendors(id) {
+    let vendors
+    try {
+      vendors = await loadVendors()
+    } catch {
+      toast("Couldn't load the vendors, check your connection", { tone: "warning" })
+      return
+    }
+    // [vendor, currency (1 for gil), amount, quest?], by zone so a long pick is easy to look through
+    const offers = (vendors.items[id] ?? []).map(([key, currency, n, quest]) => ({ ...vendors.npcs[key], currency, n, quest }))
+      .sort((a, b) => a.zone.localeCompare(b.zone) || a.name.localeCompare(b.name))
+    const price = (o) => `${o.n.toLocaleString("en-US")} ${o.currency === 1 ? "gil" : vendors.currencies[o.currency][0]}`
+
+    /** @param {object} offer */
+    const show = (offer) => {
+      let pick = null
+      if (offers.length > 1) {
+        pick = el("select", "select map-vendor-pick", offers.map((o, i) => Object.assign(el("option", "", [`${o.zone}: ${o.name}, ${price(o)}`]), { value: i, selected: o === offer })))
+        pick.setAttribute("aria-label", `Vendors selling ${info(id).name}`)
+        pick.addEventListener("change", () => show(offers[pick.value]))
+      }
+      openMap({
+        zone: offer.zone,
+        map: offer.map,
+        aetheryte: offer.aetheryte,
+        note: [
+          el("span", "", ["Sold by ", el("strong", "", [offer.name]), ` for ${price(offer)}`]),
+          offer.quest && el("span", "map-vendor-quest", [`Unlocked by the quest ${offer.quest}`]),
+          pick && el("span", "map-vendors", [`${offers.length} vendors sell it`, pick])
+        ].filter(Boolean)
+      })
+    }
+    if (offers.length) show(offers[0])
+    else toast(`No vendor found for ${info(id).name}`, { tone: "info" })
+  }
+
+  /**
+   * @param {number} id
+   * @returns {HTMLElement} Its name, a button to its vendors on the map when it has any
+   */
+  const nameOrVendors = (id) => {
+    if (info(id).source !== "vendor" || !data.vendors?.items.includes(id)) return name(id)
+    const button = Object.assign(el("button", "planner-vendors", [info(id).name]), { type: "button", title: "Show where to buy it" })
+    button.addEventListener("click", () => showVendors(id))
+    return button
+  }
+
   const chip = (text, className = "") => el("span", `chip ${className}`.trim(), [text])
   const amount = (n) => el("span", "crafting-amount", [`${n}x`])
 
@@ -246,7 +327,8 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
     const { source, vendor } = info(id)
     const meta = recipe
       ? chip(`${recipe.job} Lv.${recipe.level}${times * recipe.yield > need ? `, makes ${times * recipe.yield}` : ""}`)
-      : SOURCE_LABELS[source] && chip(source === "vendor" ? `Vendor ${vendor.toLocaleString("en-US")} gil` : SOURCE_LABELS[source], source === "vendor" ? "chip-gold" : "")
+      : source === "vendor" && !vendor && info(id).cost ? currencyChip(...info(id).cost)
+        : SOURCE_LABELS[source] && chip(source === "vendor" ? `Vendor ${vendor.toLocaleString("en-US")} gil` : SOURCE_LABELS[source], source === "vendor" ? "chip-gold" : "")
 
     const li = el("li", "", [
       el("div", "craft-node", [
@@ -322,7 +404,7 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
    */
   function materialRow(id, need, w) {
     const label = w && !w.always && (bellOf(id, w) ?? el("span", "chip planner-when", [el("span")]))
-    const li = el("li", "", [icon(id), amount(need), el("span", "craft-label", [el("span", "crafting-ingredient", [name(id)]), label])])
+    const li = el("li", "", [icon(id), amount(need), el("span", "craft-label", [el("span", "crafting-ingredient", [nameOrVendors(id)]), withUnlock(id, null, label)])])
     if (label) timers.push({ el: label.lastChild, li, w })
     counter(li, have, id, need, `How many ${info(id).name} you have`)
     return li
@@ -348,16 +430,103 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
     return bells.get(id)
   }
 
-  /** @returns {{ groups: [string, [number, number][], number][], crystals: [number, number][], steps: object[] }} */
+  /**
+   * @param {[number, number][]} list
+   * @returns {{ n: number, currency: string, icon?: number }[]} What buying it all costs, gil first
+   */
+  function spendOf(list) {
+    const totals = new Map()
+    for (const [id, n] of list) {
+      const { vendor, cost } = info(id)
+      const [each, currency, icon] = vendor ? [vendor, "gil"] : cost ?? [0]
+      if (!each) continue
+      const total = totals.get(currency) ?? { n: 0, currency, icon }
+      total.n += each * n
+      totals.set(currency, total)
+    }
+    return [...totals.values()].sort((a, b) => (a.currency === "gil" ? 0 : 1) - (b.currency === "gil" ? 0 : 1))
+  }
+
+  /** @returns {{ groups: [string, [number, number][], { n: number, currency: string, icon?: number }[]][], crystals: [number, number][], steps: object[] }} */
   function totals() {
     const { materials: needed, crystals, crafts: steps } = materials(roots(), recipeOf)
     const groups = GROUPS.map(([title, sources]) => {
       const list = [...needed].filter(([id]) => sources.includes(info(id).source))
       // A gathered item a vendor also sells isn't bought
-      const gil = sources.includes("vendor") ? list.reduce((sum, [id, n]) => sum + info(id).vendor * n, 0) : 0
-      return [title, list, gil]
+      return [title, list, sources.includes("vendor") ? spendOf(list) : []]
     })
     return { groups, crystals: [...crystals], steps }
+  }
+
+  /**
+   * @param {number} id
+   * @param {object | null} recipe Its recipe, when it's crafted
+   * @returns {{ kind: string, names: string[] }[]} What it needs unlocked first, `names` has several when any one will do
+   */
+  function unlocksFor(id, recipe) {
+    if (recipe) {
+      return [
+        recipe.unlock?.book && { kind: "book", names: [recipe.unlock.book] },
+        recipe.unlock?.specialist && { kind: "specialist", names: [recipe.job] }
+      ].filter(Boolean)
+    }
+    const options = data.unlocks?.[id]
+    // A folklore tome at one node and a quest at another is rare enough to go by the first
+    return options ? [{ kind: options[0][0], names: options.map(([, name]) => name) }] : []
+  }
+
+  /** @returns {string} "Master Carpenter VIII", "Carpenter specialist", "Quest: Hearts of the Matter" */
+  const unlockName = ({ kind, names }) => {
+    const name = names.join(" or ")
+    return kind === "specialist" ? `${name} specialist` : kind === "quest" ? `Quest: ${name}` : name
+  }
+
+  /**
+   * The gold mark on a row that needs something unlocked first, what it is on hover or, on a phone, a tap.
+   * @param {{ kind: string, names: string[] }[]} list
+   * @returns {HTMLButtonElement | null}
+   */
+  function unlockChip(list) {
+    if (!list.length) return null
+    const text = `Needs ${list.map(unlockName).join(" and ")} first`
+    const image = list.map((u) => UNLOCK_ICONS[u.kind]).find(Boolean)
+    const button = Object.assign(el("button", "chip chip-gold planner-unlock", [
+      image && Object.assign(el("img"), { src: gameIcon(image), alt: "", width: 16, height: 16, loading: "lazy" }),
+      el("i")
+    ]), { type: "button", title: text })
+    button.setAttribute("aria-label", text)
+    button.addEventListener("click", () => toast(text, { tone: "info" }))
+    return button
+  }
+
+  /**
+   * The unlock mark kept with the chip after it, so on a phone both go under the name rather than cutting it short.
+   * @param {number} id
+   * @param {object | null} recipe
+   * @param {HTMLElement | false | null} chip The countdown or the crafter
+   * @returns {HTMLElement | false | null}
+   */
+  function withUnlock(id, recipe, chip) {
+    const mark = unlockChip(unlocksFor(id, recipe))
+    return mark ? el("span", "planner-tags", [mark, chip]) : chip
+  }
+
+  /**
+   * Every unlock the crafts and what's gathered for them need, for the text.
+   * @param {object[]} steps
+   * @param {[string, [number, number][], number][]} groups
+   * @returns {{ kind: string, names: string[], items: number[] }[]}
+   */
+  function unlocksOf(steps, groups) {
+    const found = new Map()
+    const add = (unlock, item) => {
+      const key = `${unlock.kind}|${unlock.names.join("|")}`
+      if (!found.has(key)) found.set(key, { ...unlock, items: [] })
+      if (!found.get(key).items.includes(item)) found.get(key).items.push(item)
+    }
+    for (const { recipe } of steps) for (const u of unlocksFor(recipe.item, recipe)) add(u, recipe.item)
+    for (const [id] of groups.find(([title]) => title === "Gather")[1]) for (const u of unlocksFor(id, null)) add(u, id)
+    return [...found.values()].sort((a, b) => UNLOCK_ORDER[a.kind] - UNLOCK_ORDER[b.kind] || a.names[0].localeCompare(b.names[0]))
   }
 
   function draw() {
@@ -369,7 +538,7 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
     timers = []
     setAlarms = new Set(readAlarms().map((a) => a.id))
     const { groups, crystals, steps } = totals()
-    const sections = groups.map(([title, list, gil]) => {
+    const sections = groups.map(([title, list, spend]) => {
       if (!list.length) return null
       let rows
       if (title === "Gather") {
@@ -382,7 +551,9 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
         rows = list.map(([id, n]) => materialRow(id, n))
       }
       return el("div", "planner-group", [
-        el("h3", "crafting-heading", [title, gil > 0 && el("span", "planner-extra", [`${gil.toLocaleString("en-US")} gil`])]),
+        el("h3", "crafting-heading", [title, ...spend.map((s) => el("span", "planner-extra", s.icon
+          ? [s.n.toLocaleString("en-US"), Object.assign(el("img"), { src: gameIcon(s.icon), alt: s.currency, title: s.currency, width: 16, height: 16, loading: "lazy" })]
+          : [`${s.n.toLocaleString("en-US")} gil`]))]),
         el("ul", "crafting-ingredients", rows)
       ])
     })
@@ -401,7 +572,7 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
     crafts.replaceChildren(...steps.map((c) => {
       const li = el("li", "", [
         icon(c.recipe.item), amount(c.crafts),
-        el("span", "craft-label", [el("span", "crafting-ingredient", [name(c.recipe.item)]), chip(`${c.recipe.job} Lv.${c.recipe.level}`)])
+        el("span", "craft-label", [el("span", "crafting-ingredient", [name(c.recipe.item)]), withUnlock(c.recipe.item, c.recipe, chip(`${c.recipe.job} Lv.${c.recipe.level}`))])
       ])
       counter(li, made, c.recipe.item, c.crafts, `How many times you've crafted ${info(c.recipe.item).name}`)
       return li
@@ -444,11 +615,14 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
     const lines = ["Craft tree"]
     for (const [id, n] of roots()) treeLines(id, n, 1, lines)
     lines.push("")
+    const needed = unlocksOf(steps, groups)
+    if (needed.length) lines.push("Before you start", ...needed.map((u) => `  ${unlockName(u)} (for ${u.items.map((id) => info(id).name).join(", ")})`), "")
     const left = (list, counts) => list.map(([id, n]) => [id, n - (counts?.get(id) ?? 0)]).filter(([, n]) => n > 0)
-    for (const [title, list, gil] of groups) {
+    for (const [title, list, spend] of groups) {
       const rows = left(list, have)
       if (!rows.length) continue
-      lines.push(gil ? `${title} (${gil.toLocaleString("en-US")} gil)` : title, ...rows.map(([id, n]) => `  ${n}x ${info(id).name}`), "")
+      const cost = spend.map((s) => `${s.n.toLocaleString("en-US")} ${s.currency}`).join(", ")
+      lines.push(cost ? `${title} (${cost})` : title, ...rows.map(([id, n]) => `  ${n}x ${info(id).name}`), "")
     }
     if (crystals.length) lines.push("Crystals", ...crystals.map(([id, n]) => `  ${n}x ${info(id).name}`), "")
     const todo = steps.map((c) => [c, c.crafts - (made?.get(c.recipe.item) ?? 0)]).filter(([, n]) => n > 0)

@@ -453,6 +453,18 @@ $tab-flare: .5rem;
   color: var(--gold);
 }
 
+// Sold for a currency, its icon after the amount
+.chip-currency {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
 .chip-accent {
   color: var(--accent);
 }
@@ -734,6 +746,26 @@ $tab-flare: .5rem;
   strong {
     color: var(--font-primary);
   }
+}
+
+// The other vendors in the map's note, picking one moves the map to them
+.map-vendors {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  margin-top: .5rem;
+  font-size: .8rem;
+  color: var(--font-tertiary);
+
+  .select {
+    max-width: 100%;
+  }
+}
+
+.map-vendor-quest {
+  display: block;
+  margin-top: .25rem;
+  color: var(--gold);
 }
 
 .done-entry {

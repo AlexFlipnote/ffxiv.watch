@@ -499,8 +499,17 @@ $control: 2.25rem;
 }
 
 .planner-extra {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
   margin-left: .5rem;
+  vertical-align: middle;
   color: var(--gold);
+
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .planner-group + .planner-group {
@@ -510,6 +519,59 @@ $control: 2.25rem;
 .planner-has .bait-icon {
   width: 1.875rem;
   height: 1.875rem;
+}
+
+.planner-tags {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  white-space: nowrap;
+
+  > * {
+    flex-shrink: 0;
+  }
+}
+
+// Looks like the other names' links, it opens the map at its vendors instead
+.planner-vendors {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+// The book or tome and a gold ! like a tug, small enough to sit next to the countdown
+.planner-unlock {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: .125rem;
+  padding: .0625rem .3125rem .0625rem .25rem;
+  border: 0;
+  background: color-mix(in srgb, var(--gold) 14%, transparent);
+  font: inherit;
+  font-size: .75rem;
+  cursor: help;
+
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  i {
+    width: .375rem;
+    height: .875rem;
+    background-color: currentColor;
+    -webkit-mask: url("/images/ui/tug.svg") center / contain no-repeat;
+    mask: url("/images/ui/tug.svg") center / contain no-repeat;
+  }
+
+  @include hover {
+    background: color-mix(in srgb, var(--gold) 24%, transparent);
+  }
 }
 
 // Folded away and not counted, the bag's always full of them
