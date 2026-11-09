@@ -3,6 +3,7 @@ import { fishUrl } from "./fishing.js"
 import { itemUrl as gatheringUrl } from "./gathering.js"
 import { chip, expansionOptions, facts, gameText, html, listRows, pager, raw, readData, readExpansions, slug } from "./html.js"
 import { gameIcon } from "../js/utils/images.js"
+import { ogIcon } from "./og.js"
 
 // The recipe list and a page per crafted item's name. A list entry is one recipe for all its `jobs`, see sameRecipes
 // in scripts/crafting-data.js
@@ -427,10 +428,7 @@ export function itemPages() {
       slug: key,
       name: page.name,
       ...itemSeo(page.name, page.entries),
-      // The site's banner, a preview each would slow the build
-      image: "",
-      imageAlt: "",
-      imageSize: "",
+      ...ogIcon(items[ids[0]].icon, page.name),
       content: html`${itemIntro(items[ids[0]], page.entries)}${page.entries.map((e) => recipeCard(e, page.entries.length > 1))}${fullCraft(page.entries[0])}${itemUses(ids)}
 ${pager(pagerTo(all[i - 1]), pagerTo(all[i + 1]), "Previous and next recipe")}`,
       sources: ["js/data/crafting-items.json", ...[...page.files].flatMap((file) => [`js/data/crafting/${file}.json`, `js/data/crafting-recipes/${file}.json`])]

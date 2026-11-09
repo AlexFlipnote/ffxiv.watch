@@ -3,7 +3,7 @@ import {
   html, listRow, listRows, locationFacts, mapFigure, pager, readData,
   readExpansions, slug
 } from "./html.js"
-import { ogImage } from "./og.js"
+import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
 import { gameIcon } from "../js/utils/images.js"
 
@@ -111,7 +111,7 @@ export function vistaPages() {
     return {
       slug: slug(name),
       name,
-      ...ogImage(vista),
+      ...ogIcon(text[name].emoteIcon, `${vista.emote} emote`),
       title: `${name}: FFXIV Sightseeing Log ${vistaNumber(vista)}`,
       description: `FFXIV ${expansion.name} sightseeing log ${vistaNumber(vista)}, ${name}: use the ${vista.emote} emote in ${vista.zone}${vista.map ? ` at ${coordinates(vista.map)}` : ""}${timed ? `, ${when}` : ""}.`,
       content: html`

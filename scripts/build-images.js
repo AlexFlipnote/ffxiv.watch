@@ -3,13 +3,9 @@ import path from "path"
 import { fileURLToPath } from "url"
 import saucer from "../src/data/saucer.js"
 import weather from "../src/data/weather.js"
-import { fishPages } from "../src/render/fishing.js"
-import { itemPages } from "../src/render/gathering.js"
 import { writeOgImages } from "../src/render/og.js"
-import { vistaPages } from "../src/render/sightseeing.js"
 
-// Fills img/dist/ for the img.ffxiv.watch Worker: icons, maps and link previews. A page whose preview isn't deployed
-// yet shows the site's banner
+// Fills img/dist/ for the img.ffxiv.watch Worker: icons, maps and the zones' link previews
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..")
 const OUT = path.join(ROOT, "img/dist")
@@ -22,6 +18,6 @@ for (const folder of FOLDERS) {
 }
 fs.copyFileSync(path.join(ROOT, "img/_headers"), path.join(OUT, "_headers"))
 
-// Rendering the pages queues their previews
-for (const pages of [itemPages, fishPages, vistaPages, weather, saucer]) pages()
+// Reading the zones queues their previews
+for (const pages of [weather, saucer]) pages()
 console.log(`og: ${await writeOgImages(path.join(OUT, "og"))} files`)
