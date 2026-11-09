@@ -8,6 +8,7 @@ import {
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
 import { CYCLE, nextVoyageTo } from "../js/utils/voyages.js"
+import { gameIcon } from "../js/utils/images.js"
 
 const DATA_SOURCES = ["js/data/fishing.json", "js/data/fishing"]
 
@@ -22,7 +23,7 @@ export const fishUrl = (fish) => `/fishing/${slug(fish.name)}/`
  * @param {object} info fishing-items.json
  * @returns {import("./html.js").Html} Its icon, small, for the bait
  */
-const baitIcon = (id, info) => html`<img class="bait-icon" src="/images/game/${info[id].icon}.webp" alt="" width="24" height="24">`
+const baitIcon = (id, info) => html`<img class="bait-icon" src="${gameIcon(info[id].icon)}" alt="" width="24" height="24">`
 
 // The icons of what the facts name, saved next to the item icons: Action.Icon of the fishing actions, and Item.Icon of
 // the folklore tomes, which all share one
@@ -41,7 +42,7 @@ export const FACT_ICONS = {
  * @param {any} text What the fact says next to it
  * @returns {import("./html.js").Html}
  */
-const withIcon = (name, text) => html`<span class="bait-step"><img class="bait-icon" src="/images/game/${FACT_ICONS[name]}.webp" alt="" width="24" height="24">${text}</span>`
+const withIcon = (name, text) => html`<span class="bait-step"><img class="bait-icon" src="${gameIcon(FACT_ICONS[name])}" alt="" width="24" height="24">${text}</span>`
 
 /**
  * @param {"light" | "medium" | "heavy"} tug
@@ -215,7 +216,7 @@ function fishIntro(fish, paged, info, expansion) {
 <div class="item-intro">
   <header class="detail-header">
     <div class="item-heading">
-      <img class="item-icon" src="/images/game/${info[fish.id].icon}.webp" alt="${fish.name} icon" width="44" height="44">
+      <img class="item-icon" src="${gameIcon(info[fish.id].icon)}" alt="${fish.name} icon" width="44" height="44">
       <div>
         <p class="detail-kicker">${[
     fish.big ? "Big fish" : fish.method === "Spearfishing" ? "Spearfishing" : "Fish",

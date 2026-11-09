@@ -32,7 +32,7 @@ export function soundUrl(name = load(SOUND_KEY) ?? DEFAULT_SOUND) {
  * @property {string} name
  * @property {string} url Its page
  * @property {string} place "Yak T'el, Xd'aa Talat Tsoly"
- * @property {number} [icon] Its game icon in /images/game/, missing on alarms set before they had one
+ * @property {number} [icon] Its game icon, see gameIcon in images.js, missing on alarms set before they had one
  * @property {string} [zone]
  * @property {[number, number][]} [times]
  * @property {string[]} [weather]

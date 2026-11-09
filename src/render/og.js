@@ -3,6 +3,7 @@ import fs from "fs"
 import path from "path"
 import sharp from "sharp"
 import { fileURLToPath } from "url"
+import { IMAGES as IMAGE_HOST } from "../js/utils/images.js"
 import { coordinates, mapPercent, mapSize } from "../js/utils/map.js"
 
 /*
@@ -23,11 +24,11 @@ const ICON_SIZE = 256
 const NAME_WIDTH = 880
 const NAME_HEIGHT = 120
 
-// "/images/og/hash.jpg" -> what it shows, filled while the pages render
+// "https://img.ffxiv.watch/og/hash.jpg" -> what it shows, filled while the pages render
 const images = new Map()
-// "/images/og/icon-22408.jpg" -> the icon
+// ".../og/icon-22408.jpg" -> the icon
 const icons = new Map()
-// "/images/og/zone-123741.webp" -> its art, see weather-art.json
+// ".../og/zone-123741.webp" -> its art, see weather-art.json
 const zones = new Map()
 
 /**
@@ -44,7 +45,7 @@ export function ogImage(entry) {
   if (!entry.map) return { image: "", imageAlt: "", imageSize: "" }
   const { image, scale, x, y, radius } = entry.map
   const spec = { image, scale, x, y, radius, aetheryte: entry.aetheryte && { x: entry.aetheryte.x, y: entry.aetheryte.y } }
-  const url = `/images/og/${crypto.createHash("md5").update(JSON.stringify(spec)).digest("hex").slice(0, 12)}.jpg`
+  const url = `${IMAGE_HOST}/og/${crypto.createHash("md5").update(JSON.stringify(spec)).digest("hex").slice(0, 12)}.jpg`
   images.set(url, spec)
   return { image: url, imageAlt: `Map of ${entry.zone}, marked at ${coordinates(entry.map)}`, imageSize: `${OG_WIDTH}x${OG_HEIGHT}` }
 }
@@ -55,7 +56,7 @@ export function ogImage(entry) {
  * @returns {OgImage}
  */
 export function ogIcon(icon, name) {
-  const url = `/images/og/icon-${icon}.jpg`
+  const url = `${IMAGE_HOST}/og/icon-${icon}.jpg`
   icons.set(url, icon)
   return { image: url, imageAlt: `${name} icon`, imageSize: `${ICON_SIZE}x${ICON_SIZE}` }
 }
@@ -68,7 +69,7 @@ export function ogIcon(icon, name) {
  */
 export function ogZone(zone, art) {
   if (!art) return { image: "", imageAlt: "", imageSize: "" }
-  const url = `/images/og/zone-${art.name}.webp`
+  const url = `${IMAGE_HOST}/og/zone-${art.name}.webp`
   zones.set(url, art)
   return { image: url, imageAlt: `${zone}, as the game shows it on arrival`, imageSize: `${OG_WIDTH}x${OG_HEIGHT}` }
 }
@@ -179,16 +180,17 @@ async function writeZone(art, file) {
 }
 
 /**
- * Writes every image the pages asked for.
- * @param {string} out The build folder
+ * Writes every image the pages asked for, see scripts/build-images.js.
+ * @param {string} dir
  * @returns {Promise<number>} How many
  */
-export async function writeOgImages(out) {
-  fs.mkdirSync(path.join(out, "images/og"), { recursive: true })
+export async function writeOgImages(dir) {
+  fs.mkdirSync(dir, { recursive: true })
+  const fileOf = (url) => path.join(dir, path.basename(url))
   const queue = [
-    ...[...images].map(([url, spec]) => () => writeImage(spec, path.join(out, url))),
-    ...[...icons].map(([url, icon]) => () => writeIcon(icon, path.join(out, url))),
-    ...[...zones].map(([url, art]) => () => writeZone(art, path.join(out, url)))
+    ...[...images].map(([url, spec]) => () => writeImage(spec, fileOf(url))),
+    ...[...icons].map(([url, icon]) => () => writeIcon(icon, fileOf(url))),
+    ...[...zones].map(([url, art]) => () => writeZone(art, fileOf(url)))
   ]
   const count = queue.length
   // A few at a time, sharp works on its own threads anyway

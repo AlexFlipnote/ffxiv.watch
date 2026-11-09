@@ -1,6 +1,6 @@
 /**
  * @typedef {object} MapSpot
- * @property {string} image File name in /images/maps/, without .webp
+ * @property {string} image File name in src/images/maps/, without .webp, see mapImage in images.js
  * @property {number} scale The map's size factor, 100 is 41 map units across
  * @property {number} x In-game map X, 1.0 at the left edge
  * @property {number} y In-game map Y, 1.0 at the top edge

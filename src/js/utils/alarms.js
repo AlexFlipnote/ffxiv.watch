@@ -6,6 +6,7 @@ import { load, onStored, store } from "./storage.js"
 import { everyTick, formatCountdown, formatIn, setText } from "./time.js"
 import { toast } from "./toast.js"
 import { nextVoyageTo } from "./voyages.js"
+import { gameIcon } from "./images.js"
 
 // Longer timers misfire in some browsers
 const MAX_WAIT = 60 * 60 * 1000
@@ -170,7 +171,7 @@ function buildList() {
     link.textContent = alarm.name
     li.querySelector(".alarms-place").textContent = alarm.place
     // Alarms set before icons were added have none
-    if (Number.isInteger(alarm.icon)) li.querySelector(".alarms-icon").innerHTML = `<img src="/images/game/${alarm.icon}.webp" alt="" width="36" height="36">`
+    if (Number.isInteger(alarm.icon)) li.querySelector(".alarms-icon").innerHTML = `<img src="${gameIcon(alarm.icon)}" alt="" width="36" height="36">`
     li.querySelector("button").setAttribute("aria-label", `Remove the alarm for ${alarm.name}`)
     li.querySelector("button").addEventListener("click", () => toggleAlarm(alarm))
     return li

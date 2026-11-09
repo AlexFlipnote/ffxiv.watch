@@ -1,5 +1,5 @@
-import { defineConfig, log } from "mothwing"
-import { writeOgImages } from "./src/render/og.js"
+import { defineConfig } from "mothwing"
+import { IMAGES } from "./src/js/utils/images.js"
 
 /**
  * A styled select (base-select, see _controls.scss) is as wide as its picked option, so the filters would shift with
@@ -19,12 +19,14 @@ export default defineConfig({
     scripts: ["js/index.js", "js/page.js"],
     modules: [
       "js/gathering.js", "js/sightseeing.js", "js/fishing.js", "js/item.js", "js/vista.js", "js/fish.js",
-      "js/weather.js", "js/weather-zone.js", "js/ocean.js", "js/saucer.js", "js/pvp.js", "js/events.js", "js/reset.js"
+      "js/weather.js", "js/weather-zone.js", "js/ocean.js", "js/saucer.js", "js/pvp.js", "js/events.js",
+      "js/reset.js"
     ]
   },
   sass: { "scss/index.scss": "css/index.css" },
   // images/zones is what render/og.js draws the weather zones' previews from
-  exclude: ["js", "scss", "render", "images/zones"],
+  // Served by img.ffxiv.watch
+  exclude: ["js", "scss", "render", "images/zones", "images/game", "images/maps"],
   // The game data the pages read with fs
   rerender: ["js/data"],
   seo: {
@@ -32,7 +34,7 @@ export default defineConfig({
   },
   minify: true,
   // Inline styles for the map markers' positions
-  csp: { "style-src": "'self' 'unsafe-inline'" },
+  csp: { "style-src": "'self' 'unsafe-inline'", "img-src": `'self' data: ${IMAGES}` },
   sitemap: { sections: ["fishing", "gathering", "sightseeing", "weather"] },
   robots: {
     // SEO crawlers that only feed a paid backlink database and send no one here
@@ -56,11 +58,5 @@ export default defineConfig({
   },
   // The reset pages are the timers', though not under / like a section's pages are under theirs
   activeLinks: (href, route) => href === "/" && route.source === "[resets.slug].html" ? "section" : undefined,
-  transforms: [sizeSelects],
-  // The link preview images the pages asked for, left out of dev builds as they take a while
-  after: [async ({ site, dev }) => {
-    if (dev) return
-    log("OG", "Drawing the link preview images...")
-    log("OG", `Done, ${await writeOgImages(site.out)} images`)
-  }]
+  transforms: [sizeSelects]
 })

@@ -4,6 +4,7 @@ import {
 } from "./html.js"
 import { ogIcon } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
+import { gameIcon } from "../js/utils/images.js"
 
 // Item ids below this are the shards, crystals and clusters, found at hundreds of nodes, so they get no page
 const FIRST_PAGED_ITEM = 20
@@ -24,13 +25,13 @@ const itemLink = (item) => itemUrl(item) ? html`<a href="${itemUrl(item)}">${ite
  * @param {{ icon: number }} info The item's entry in gathering-items.json
  * @returns {import("./html.js").Html} Its icon, saved by scripts/datamining.js
  */
-const itemIcon = (item, info) => html`<img class="item-icon" src="/images/game/${info.icon}.webp" alt="${item.name} icon" width="44" height="44">`
+const itemIcon = (item, info) => html`<img class="item-icon" src="${gameIcon(info.icon)}" alt="${item.name} icon" width="44" height="44">`
 
 /**
  * @param {number} icon Item.Icon
  * @returns {import("./html.js").Html} Small, next to a name in a list
  */
-const smallIcon = (icon) => html`<img class="bait-icon" src="/images/game/${icon}.webp" alt="" width="24" height="24">`
+const smallIcon = (icon) => html`<img class="bait-icon" src="${gameIcon(icon)}" alt="" width="24" height="24">`
 
 const stars = (item) => item.stars && html`<span class="gathering-stars">${"★".repeat(item.stars)}</span>`
 

@@ -5,6 +5,7 @@ import {
 } from "./html.js"
 import { ogImage } from "./og.js"
 import { coordinates } from "../js/utils/map.js"
+import { gameIcon } from "../js/utils/images.js"
 
 export const vistaUrl = (vista) => `/sightseeing/${slug(vista.name)}/`
 
@@ -118,7 +119,7 @@ export function vistaPages() {
   <div class="detail-top">
     <header class="detail-header">
       <div class="item-heading">
-        ${text[vista.name].emoteIcon && html`<img class="item-icon" src="/images/game/${text[vista.name].emoteIcon}.webp" alt="${vista.emote} emote" width="44" height="44">`}
+        ${text[vista.name].emoteIcon && html`<img class="item-icon" src="${gameIcon(text[vista.name].emoteIcon)}" alt="${vista.emote} emote" width="44" height="44">`}
         <div>
           <p class="detail-kicker">${expansion.name} sightseeing log ${vistaNumber(vista)}</p>
           <div class="detail-title-row"><h1 class="detail-title">${name}</h1>${doneButton(id, name)}</div>

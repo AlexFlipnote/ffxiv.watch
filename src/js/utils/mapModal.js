@@ -1,5 +1,6 @@
 import { closable } from "./dialog.js"
 import { coordinates, mapPercent, mapSize } from "./map.js"
+import { mapImage } from "./images.js"
 
 const modal = document.getElementById("map-modal")
 const title = document.getElementById("map-title")
@@ -98,7 +99,7 @@ export function openMap(entry) {
   subtitle.textContent = hasSpot ? `${entry.spot ? `${entry.spot}, ` : ""}${coordinates(map)}` : ""
   subtitle.hidden = !hasSpot
   // Another zone's map would sit there until the new one loads, so it's a blank pulsing square until then
-  const src = `/images/maps/${map.image}.webp`
+  const src = `${mapImage(map.image)}`
   if (image.getAttribute("src") !== src) {
     frame.classList.add("map-loading")
     image.src = src

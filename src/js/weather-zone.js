@@ -4,6 +4,7 @@ import { toEorzea } from "./utils/eorzea.js"
 import { openMap } from "./utils/mapModal.js"
 import { everyTick, formatCountdown, formatIn, setText, setTime } from "./utils/time.js"
 import { periodStart, WEATHER_PERIOD, weatherAt } from "./utils/windows.js"
+import { gameIcon } from "./utils/images.js"
 
 // As far ahead as the fish and vista windows look
 const HORIZON = 30 * 24 * 60 * 60 * 1000
@@ -37,7 +38,7 @@ const selects = {
 function weatherLabel(weather) {
   const label = Object.assign(document.createElement("span"), { className: "weather-label" })
   label.append(
-    Object.assign(document.createElement("img"), { className: "weather-icon", src: `/images/game/${ICONS[weather]}.webp`, alt: "", width: 24, height: 24 }),
+    Object.assign(document.createElement("img"), { className: "weather-icon", src: `${gameIcon(ICONS[weather])}`, alt: "", width: 24, height: 24 }),
     Object.assign(document.createElement("span"), { textContent: weather })
   )
   return label

@@ -13,12 +13,13 @@
     "sightseeing-data": "node scripts/sightseeing-data.js",
     "fishing-data": "node scripts/fishing-data.js",
     "ocean-fishing-data": "node scripts/ocean-fishing-data.js",
+    "deploy-images": "node scripts/build-images.js && npx wrangler@4.152.0 deploy -c img/wrangler.jsonc",
     "lodestone-data": "node scripts/lodestone-data.js"
   },
   "devDependencies": {
     "eslint": "^10.14.0",
     "globals": "^16.5.0",
-    "mothwing": "^0.3.2",
+    "mothwing": "^0.3.3",
     "sass": "^1.93.3",
     "sharp": "0.35.5"
   }

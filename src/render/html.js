@@ -6,6 +6,7 @@ import { ET_DAY_EARTH_MS } from "../js/utils/eorzea.js"
 import { coordinates, mapPercent, mapSize } from "../js/utils/map.js"
 import { windowsBetween } from "../js/utils/windows.js"
 import { escapeHtml, html, Html, raw, slug, unescapeHtml } from "mothwing/html"
+import { gameIcon, mapImage } from "../js/utils/images.js"
 
 export { escapeHtml, html, Html, raw, slug, unescapeHtml }
 
@@ -97,7 +98,7 @@ export const collectableChip = (entry) => entry.collectable && html`<span class=
  */
 export const scripCard = (scrips) => scrips && html`
     <div class="scrip-card">
-      <img class="bait-icon" src="/images/game/${scrips.icon}.webp" alt="" width="24" height="24">
+      <img class="bait-icon" src="${gameIcon(scrips.icon)}" alt="" width="24" height="24">
       <strong>${scrips.name}s</strong>${scrips.tiers.map(([at, count]) => html`
       <span class="scrip-tier" title="${count} scrips at ${at} collectability"><strong>${count}</strong> at ${at}</span>`)}
     </div>`
@@ -215,7 +216,7 @@ export const alarmButton = (alarm = null, icon = null) =>
  * has no map, a boat links to its stop on the ocean fishing page in its place
  */
 const locationLink = (entry) => entry.map
-  ? html`<a class="location" href="/images/maps/${entry.map.image}.webp" aria-label="Show ${entry.zone} on map" title="Show on map"></a>`
+  ? html`<a class="location" href="${mapImage(entry.map.image)}" aria-label="Show ${entry.zone} on map" title="Show on map"></a>`
   : entry.ocean
     ? html`<a class="location location-ocean" href="/ocean-fishing/#${slug(entry.ocean.stop)}" aria-label="${entry.ocean.stop} on the ocean fishing page" title="Voyages and fish at ${entry.ocean.stop}"></a>`
     : ""
@@ -308,8 +309,8 @@ export function mapFigure(entry, note, lazy) {
   const data = JSON.stringify({ zone: entry.zone, spot: entry.spot, map, aetheryte: entry.aetheryte, note })
 
   return html`
-    <a class="map map-zoom" href="/images/maps/${map.image}.webp" data-map="${data}" title="Show a bigger map">
-      <img src="/images/maps/${map.image}.webp" alt="Map of ${entry.zone}, marked at ${coordinates(map)}" width="1024" height="1024"${lazy ? html` loading="lazy"` : html` fetchpriority="high"`}>
+    <a class="map map-zoom" href="${mapImage(map.image)}" data-map="${data}" title="Show a bigger map">
+      <img src="${mapImage(map.image)}" alt="Map of ${entry.zone}, marked at ${coordinates(map)}" width="1024" height="1024"${lazy ? html` loading="lazy"` : html` fetchpriority="high"`}>
       ${map.radius ? html`<span class="map-area" style="${at(map)}; width: ${size}; height: ${size}"></span>` : ""}
       ${entry.aetheryte ? html`<span class="map-aetheryte" style="${at(entry.aetheryte)}"></span>` : ""}
       ${map.radius ? "" : html`<span class="map-pin" style="${at(map)}"></span>`}

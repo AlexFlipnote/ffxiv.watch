@@ -4,6 +4,7 @@ import ICONS from "./data/weather-icons.json"
 import { toEorzea } from "./utils/eorzea.js"
 import { everyTick, setText, setTime } from "./utils/time.js"
 import { periodStart, WEATHER_PERIOD, weatherAt } from "./utils/windows.js"
+import { gameIcon } from "./utils/images.js"
 
 const container = document.getElementById("weather")
 const search = document.getElementById("search")
@@ -37,7 +38,7 @@ const groups = [...container.querySelectorAll(".weather-group")].map((section) =
 function fillCell(cell, weather) {
   if (cell.dataset.weather === weather) return
   cell.dataset.weather = weather
-  const icon = Object.assign(document.createElement("img"), { src: `/images/game/${ICONS[weather]}.webp`, alt: "", width: 32, height: 32 })
+  const icon = Object.assign(document.createElement("img"), { src: `${gameIcon(ICONS[weather])}`, alt: "", width: 32, height: 32 })
   cell.replaceChildren(icon, Object.assign(document.createElement("span"), { textContent: weather }))
 }
 

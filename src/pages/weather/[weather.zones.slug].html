@@ -36,15 +36,15 @@
             <h2 class="detail-subtitle">Weather chances</h2>
             <ul class="weather-chances">
               <x-each items="page.chances" as="chance">
-              <li><img class="weather-icon" src="/images/game/{{ chance.icon }}.webp" alt="" width="24" height="24"><span>{{ chance.weather }}</span><strong>{{ chance.rate }}%</strong></li>
+              <li><img class="weather-icon" src="https://img.ffxiv.watch/game/{{ chance.icon }}.webp" alt="" width="24" height="24"><span>{{ chance.weather }}</span><strong>{{ chance.rate }}%</strong></li>
               </x-each>
             </ul>
           </section>
           <x-if value="page.map">
             <!-- No spot marked, the weather is the same all over it. Cut to the height next to it on a computer, around its main aetheryte -->
-            <a class="map map-zoom weather-map" href="/images/maps/{{ page.map.image }}.webp" data-map="{{ page.map.data }}" style="--focus: {{ page.map.focus }}" title="Show a bigger map">
+            <a class="map map-zoom weather-map" href="https://img.ffxiv.watch/maps/{{ page.map.image }}.webp" data-map="{{ page.map.data }}" style="--focus: {{ page.map.focus }}" title="Show a bigger map">
               <span class="weather-map-canvas">
-                <img src="/images/maps/{{ page.map.image }}.webp" alt="Map of {{ page.name }}" width="1024" height="1024" fetchpriority="high">
+                <img src="https://img.ffxiv.watch/maps/{{ page.map.image }}.webp" alt="Map of {{ page.name }}" width="1024" height="1024" fetchpriority="high">
                 <x-each items="page.map.aetherytes" as="aetheryte">
                 <span class="map-aetheryte" style="{{ aetheryte.style }}" title="{{ aetheryte.name }} aetheryte"></span>
                 </x-each>
@@ -64,7 +64,7 @@
               <!-- The coming weather as of the build, hidden until js/weather-zone.js writes the current rows in their place -->
               <tbody id="weather-periods">
                 <x-each items="page.periods" as="period">
-                <tr><td>{{ period.hour }}:00</td><td class="weather-period-weather"><span class="weather-label"><img class="weather-icon" src="/images/game/{{ period.icon }}.webp" alt="" width="24" height="24"><span>{{ period.weather }}</span></span></td><td><time>00:00</time></td><td>{{ period.in }}</td></tr>
+                <tr><td>{{ period.hour }}:00</td><td class="weather-period-weather"><span class="weather-label"><img class="weather-icon" src="https://img.ffxiv.watch/game/{{ period.icon }}.webp" alt="" width="24" height="24"><span>{{ period.weather }}</span></span></td><td><time>00:00</time></td><td>{{ period.in }}</td></tr>
                 </x-each>
               </tbody>
             </table>
