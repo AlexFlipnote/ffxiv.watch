@@ -129,6 +129,8 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
   let ready = false
   // Not in the URL like the filters, someone a link is shared with has their own done checks
   let hideDone = load(HIDE_DONE_KEY) === "1"
+  // Once, after the first rows are in
+  let restoreScroll = scrollMemory()
 
   // The filters are only in the URL, so a link shares them and a fresh visit starts from what the page picks
   const defaults = Object.fromEntries(Object.entries(selects).map(([name, select]) => [name, select.value]))
@@ -254,6 +256,8 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
     skeleton.hidden = true
     layout = null
     render(Date.now())
+    restoreScroll?.()
+    restoreScroll = null
   }
 
   /**
@@ -385,6 +389,28 @@ export function listing({ expansions, loadChunk, idOf, selects, search, body, em
   applyFilters()
   topButton(filters)
   everyTick(render)
+}
+
+/**
+ * How far down the list was, kept in its history entry for coming back to it. The browser's own scroll restore runs
+ * before rows fetched after the page are in, which is every row of /crafting/ and of the expansions a page leaves out.
+ * @returns {() => void} Scrolls back there, when this is a back or forward to the page
+ */
+function scrollMemory() {
+  // .page scrolls on a computer and the window on a phone, see _global.scss
+  const scroller = () => matchMedia("(hover: hover) and (pointer: fine)").matches ? document.querySelector(".page") : document.scrollingElement
+  // Kept as it scrolls, by pagehide a phone has already put it back to the top
+  let y = 0
+  document.addEventListener("scroll", () => {
+    y = scroller().scrollTop
+  }, { capture: true, passive: true })
+  addEventListener("pagehide", () => {
+    history.replaceState({ ...history.state, listScroll: y }, "")
+  })
+  return () => {
+    const saved = history.state?.listScroll
+    if (saved && performance.getEntriesByType("navigation")[0]?.type === "back_forward") scroller().scrollTop = saved
+  }
 }
 
 /**
