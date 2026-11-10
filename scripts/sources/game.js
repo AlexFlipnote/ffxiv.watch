@@ -173,10 +173,11 @@ export function readFile(file) {
 
 // Textures. A .tex file is an 80-byte header (format, size, where each mipmap starts), then the mipmaps
 
-// The pixel formats of the ones read, the icons use these
+// The pixel formats of the ones read, the icons and duty banners use these
 const B5G5R5A1 = 0x1441
 const B8G8R8A8 = 0x1450
 const BC1 = 0x3420
+const BC3 = 0x3431
 const BC7 = 0x6432
 const RGB565_MAX = [31, 63, 31]
 
@@ -185,18 +186,36 @@ const RGB565_MAX = [31, 63, 31]
  * lower, the fourth pick is transparent. Blended before the 5 and 6 bits are made 8, as DirectX does
  * @param {Buffer} b
  * @param {number} at
+ * @param {boolean} [opaque] BC3's color half, always the four colors whichever is lower
  * @returns {number[][]} 16 RGBA pixels, row by row
  */
-function bc1Block(b, at) {
+function bc1Block(b, at, opaque = false) {
   const c0 = b.readUInt16LE(at)
   const c1 = b.readUInt16LE(at + 2)
   const [e0, e1] = [c0, c1].map((c) => [c >> 11, (c >> 5) & 63, c & 31])
   const blend = (p, q) => [...e0.map((v, ch) => Math.round((p * v + q * e1[ch]) / (p + q) / RGB565_MAX[ch] * 255)), 255]
-  const colors = c0 > c1
+  const colors = opaque || c0 > c1
     ? [blend(1, 0), blend(0, 1), blend(2, 1), blend(1, 2)]
     : [blend(1, 0), blend(0, 1), blend(1, 1), [0, 0, 0, 0]]
   const bits = b.readUInt32LE(at + 4)
   return Array.from({ length: 16 }, (_, i) => colors[(bits >>> (i * 2)) & 3])
+}
+
+/**
+ * BC3: a BC1 block for the colors after 8 bytes of alpha, two alphas and 3 bits a pixel picking one or a blend. With
+ * the first alpha the higher there are six blends, else four and fully clear and opaque
+ * @param {Buffer} b
+ * @param {number} at
+ * @returns {number[][]} 16 RGBA pixels, row by row
+ */
+function bc3Block(b, at) {
+  const a0 = b[at]
+  const a1 = b[at + 1]
+  const steps = a0 > a1 ? 7 : 5
+  const alphas = [a0, a1, ...Array.from({ length: steps - 1 }, (_, i) => Math.round(((steps - 1 - i) * a0 + (i + 1) * a1) / steps))]
+  if (steps === 5) alphas.push(0, 255)
+  const bits = b.readUIntLE(at + 2, 6)
+  return bc1Block(b, at + 8, true).map((pixel, i) => [pixel[0], pixel[1], pixel[2], alphas[Math.floor(bits / 2 ** (i * 3)) & 7]])
 }
 
 // BC7's modes: subsets, partition bits, rotation bits, index selection bits, color bits, alpha bits, a p-bit per
@@ -303,8 +322,9 @@ export function readTexture(file) {
   const start = b.readUInt32LE(28)
   const rgba = Buffer.alloc(width * height * 4)
 
-  if (format === BC1 || format === BC7) {
-    const [size, decode] = format === BC1 ? [8, bc1Block] : [16, bc7Block]
+  const blocks = { [BC1]: [8, bc1Block], [BC3]: [16, bc3Block], [BC7]: [16, bc7Block] }
+  if (blocks[format]) {
+    const [size, decode] = blocks[format]
     const across = Math.ceil(width / 4)
     for (let by = 0; by < Math.ceil(height / 4); by++) {
       for (let bx = 0; bx < across; bx++) {
