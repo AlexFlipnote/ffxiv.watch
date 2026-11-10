@@ -56,10 +56,11 @@ function utc(month, day, year, hour, minute) {
 /**
  * @param {string} url
  * @returns {Promise<Response>}
+ * @throws {Error & { status: number }} When it isn't OK, `status` its HTTP status
  */
 export async function get(url) {
   const res = await fetch(url)
-  if (!res.ok) throw new Error(`${url}: HTTP ${res.status}`)
+  if (!res.ok) throw Object.assign(new Error(`${url}: HTTP ${res.status}`), { status: res.status })
   return res
 }
 

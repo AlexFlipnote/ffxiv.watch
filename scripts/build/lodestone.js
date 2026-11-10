@@ -180,6 +180,11 @@ async function main() {
 
 if (import.meta.main) {
   main().catch((err) => {
+    // The Lodestone answers 503 through its own maintenance, the next hourly run picks up where this left off
+    if (err.status === 503) {
+      warn(`The Lodestone is down, likely for maintenance, nothing changed: ${err.message}`)
+      return
+    }
     console.error(err)
     process.exit(1)
   })
