@@ -29,7 +29,7 @@ export default defineConfig({
   // The game data the pages read with fs
   rerender: ["js/data"],
   seo: {
-    image: { src: "/images/banner.png", width: 1200, height: 630, alt: "ffxiv.watch: Eorzea time, on your time." }
+    image: { src: "/images/icon-192.png", width: 192, height: 192, alt: "ffxiv.watch logo" }
   },
   minify: true,
   // Inline styles for the map markers' positions

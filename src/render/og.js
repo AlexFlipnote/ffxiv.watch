@@ -5,7 +5,7 @@ import { gameIcon } from "../js/utils/images.js"
 /**
  * What a page passes to <x-seo>.
  * @typedef {{ image: string, imageAlt: string, imageSize: string }} OgImage imageSize is "80x80", all empty
- * for none, which gives the site's banner
+ * for none, which gives the site's logo
  */
 
 /**
