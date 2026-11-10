@@ -1,10 +1,43 @@
+@use "sass:list";
 @use "../mixins" as *;
+
+// Under a banner until it loads, dark as the text on it is white
+$banner-fallback: #1e2228;
+// A tight shadow for the letters' edges and a soft one for bright patches the darkening doesn't cover
+$banner-text-shadow: 0 1px 2px rgb(0 0 0 / .9), 0 0 .75rem rgb(0 0 0 / .65);
+// The dark theme's --open, the banner is dark in either theme
+$banner-open: #4ade80;
+// Frontline's modes' dots, by their place in MODES (js/utils/pvp.js). None green, that's what's on now
+$mode-colors: #60a5fa, #c084fc, #fbbf24, #f472b6, #f87171, #2dd4bf;
+
+// A layer over a banner darkening all of it, so the white text on it reads. Not the image's opacity, that would show
+// the card through it
+@mixin banner-darken($shade) {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: $shade;
+  }
+}
+
+// A row or tile on a map's banner: the image under it is a .pvp-backdrop
+@mixin banner-tile {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: .5rem;
+  background-color: $banner-fallback;
+  color: #fff;
+  text-shadow: $banner-text-shadow;
+  @include banner-darken(rgb(0 0 0 / .62));
+}
 
 // Frontline's day and Crystalline Conflict's hour side by side, one above the other on a phone
 .pvp-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
   gap: 1rem;
 
   @include mobile {
@@ -19,15 +52,62 @@
   gap: .875rem;
   padding: 1rem 1.25rem;
 
-  // Ghosts until js/pvp.js fills in the maps
+  // Ghosts until the script fills in the maps
   .js .pvp-pending & {
     @include ghost;
   }
 }
 
+.pvp-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .pvp-title {
   margin: 0;
   font-size: 1.1rem;
+}
+
+// The rotation's own page, a chip like the back links with their chevron, pointing on
+.pvp-more {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: .25rem;
+  padding: .25rem .375rem .25rem .625rem;
+  border-radius: .5rem;
+  background: var(--chip-background);
+  color: var(--font-secondary);
+  font-size: .8rem;
+  text-decoration: none;
+  transition: color .2s, background-color .2s;
+
+  @include hover {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+    outline-offset: .125rem;
+  }
+
+  @include touch {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+
+  &::after {
+    content: "";
+    width: .875rem;
+    height: .875rem;
+    background-color: currentColor;
+    -webkit-mask: url("/images/ui/chevron.svg") center / contain no-repeat;
+    mask: url("/images/ui/chevron.svg") center / contain no-repeat;
+    transform: scaleX(-1);
+  }
 }
 
 .pvp-subtitle {
@@ -38,12 +118,136 @@
   color: var(--font-tertiary);
 }
 
+// A Frontline map's mode, a dot before its name
+.pvp-mode {
+  display: inline-block;
+  flex-shrink: 0;
+  width: .5rem;
+  height: .5rem;
+  margin-right: .4rem;
+  border-radius: 50%;
+  vertical-align: .05em;
+  background-color: var(--font-tertiary);
+
+  @each $color in $mode-colors {
+    &.pvp-mode-#{list.index($mode-colors, $color) - 1} {
+      background-color: $color;
+    }
+  }
+}
+
+// What the dots mean, at the bottom of a card with them. Each dot says its mode on hover too
+.pvp-modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .875rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: .8rem;
+  color: var(--font-secondary);
+}
+
+// The map on now over its duty finder banner, darkened under the text. The text is white on it in either theme
 .pvp-now {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+  // The banner's shape, taller when the text needs it
+  aspect-ratio: 1088 / 320;
+  padding: 1rem 1.125rem;
+  overflow: hidden;
+  border-radius: .75rem;
+  background-color: $banner-fallback;
+  color: #fff;
+  text-shadow: $banner-text-shadow;
+
+  @include banner-darken(linear-gradient(to top, rgb(0 0 0 / .75), rgb(0 0 0 / .5) 60%));
+
+  // The countdown under the map, a long name has the width to itself
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    aspect-ratio: 2;
+    padding: .875rem 1rem;
+  }
+}
+
+// As far from the title as a detail page's, see .detail
+.pvp-page .backlink {
+  margin-bottom: 1rem;
+}
+
+// A rotation's page: the banner takes what the rotation beside it leaves, side by side
+.pvp-page .pvp-now {
+  flex-grow: 1;
+}
+
+// A row or tile shows the banner's middle, cover crops the rest
+.pvp-banner,
+.pvp-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  // An image with no src yet is the box's color, not a broken one
+  &:not([src]) {
+    visibility: hidden;
+  }
+}
+
+.pvp-on,
+.pvp-change {
   display: flex;
   flex-direction: column;
-  gap: .25rem;
-  padding-bottom: .875rem;
-  border-bottom: 1px solid var(--divider);
+  gap: .125rem;
+}
+
+.pvp-on {
+  min-width: 0;
+}
+
+.pvp-change {
+  flex-shrink: 0;
+  align-items: flex-end;
+  font-variant-numeric: tabular-nums;
+
+  @include mobile {
+    flex-direction: row;
+    align-items: baseline;
+    gap: .5rem;
+  }
+}
+
+.pvp-label {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / .75);
+}
+
+// Today's and this hour's map, green like what's up now in the other lists
+.pvp-on .pvp-label {
+  color: $banner-open;
+}
+
+// The mode beside "Today", in the label's own white
+.pvp-now-mode {
+  margin-left: .5rem;
+  color: rgb(255 255 255 / .75);
+
+  &:empty {
+    display: none;
+  }
 }
 
 .pvp-map {
@@ -51,73 +255,369 @@
   min-height: 1.2em;
   font-size: 1.5rem;
   line-height: 1.2;
-  color: var(--accent);
 
   @include mobile {
     font-size: 1.3rem;
   }
 }
 
-.pvp-change {
-  font-size: .85rem;
-  font-variant-numeric: tabular-nums;
-  color: var(--font-tertiary);
-
-  strong {
-    color: var(--font-primary);
-  }
+.pvp-countdown {
+  font-size: 1.25rem;
+  line-height: 1.2;
 }
 
-.pvp-upcoming {
+.pvp-name {
+  overflow: hidden;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Each map after, or the rotation's order, as a thin band of its banner. Side by side the cards are as tall as the
+// longer list, the shorter's rows spread out to fill it
+.pvp-upcoming,
+.pvp-cycle {
+  flex-grow: 1;
+  display: grid;
+  align-content: space-between;
+  gap: .375rem;
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: .9rem;
 
   li {
+    @include banner-tile;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: .375rem 0;
-
-    + li {
-      border-top: 1px solid var(--divider);
-    }
+    height: 2.5rem;
+    padding: 0 .875rem;
 
     // The time over the map on a phone, so every row is two lines like the build's empty ones
     @include mobile {
       flex-direction: column;
-      gap: .125rem;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0;
+      height: 3rem;
     }
   }
 
-  time {
+  time,
+  .pvp-slot {
     flex-shrink: 0;
-    color: var(--font-tertiary);
+    color: rgb(255 255 255 / .8);
     font-variant-numeric: tabular-nums;
   }
 
-  span {
+  .pvp-name {
     text-align: right;
 
     @include mobile {
+      max-width: 100%;
       text-align: left;
     }
   }
 }
 
-.pvp-details {
-  font-size: .85rem;
-  color: var(--font-secondary);
+// The rotation's order on its page, where it's at now in green
+.pvp-cycle li {
+  // The order is short enough to stay one line on a phone too
+  @include mobile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 2.5rem;
+  }
 
-  summary {
-    cursor: pointer;
-    color: var(--font-tertiary);
+  &.is-now {
+    outline: 2px solid $banner-open;
+    outline-offset: -2px;
+
+    .pvp-slot {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: $banner-open;
+    }
   }
 }
 
-.pvp-order {
-  margin: .5rem 0 0;
-  padding-left: 1.25rem;
-  line-height: 1.6;
+// How the rotation works, under the map on now
+.pvp-facts {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  margin: 0;
+  padding-left: 1.125rem;
+  font-size: .9rem;
+  line-height: 1.5;
+  color: var(--font-secondary);
+
+  strong {
+    color: var(--font-primary);
+  }
+}
+
+// A month of Frontline's days or a day of Crystalline Conflict's hours, stepped through with the arrows
+.pvp-schedule {
+  margin-top: 1rem;
+}
+
+.pvp-schedule-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pvp-schedule-title {
+  margin: 0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+// The chevron points left, next has it flipped
+.pvp-step {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: .5rem;
+  background: var(--chip-background);
+  color: var(--font-secondary);
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+
+  &::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: currentColor;
+    -webkit-mask: url("/images/ui/chevron.svg") center / contain no-repeat;
+    mask: url("/images/ui/chevron.svg") center / contain no-repeat;
+  }
+
+  @include hover {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+
+  &:focus-visible {
+    outline: .125rem solid var(--accent);
+    outline-offset: .125rem;
+  }
+}
+
+.pvp-step-next::before {
+  transform: scaleX(-1);
+}
+
+.pvp-days {
+  display: grid;
+  gap: .375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    @include banner-tile;
+    display: flex;
+    flex-direction: column;
+    gap: .125rem;
+    padding: .5rem .625rem;
+  }
+
+  // Gone and done, darker
+  .is-past {
+    color: rgb(255 255 255 / .55);
+
+    &::before {
+      background: rgb(0 0 0 / .8);
+    }
+  }
+
+  .is-now {
+    outline: 2px solid $banner-open;
+    outline-offset: -2px;
+  }
+}
+
+.pvp-tag {
+  position: absolute;
+  top: .5rem;
+  right: .625rem;
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: $banner-open;
+}
+
+.pvp-when {
+  font-variant-numeric: tabular-nums;
+}
+
+// Frontline's month, a week a row from Monday
+.pvp-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: .375rem;
+  margin: 0 0 -.5rem;
+  padding: 0;
+  list-style: none;
+  font-size: .75rem;
+  text-align: center;
+  color: var(--font-tertiary);
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.pvp-calendar {
+  .pvp-days {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    // Five weeks, so most months don't move what's under them once the script fills them in
+    min-height: 27.75rem;
+
+    li {
+      justify-content: space-between;
+      height: 5.25rem;
+    }
+
+    .pvp-name {
+      font-size: .8rem;
+      line-height: 1.25;
+      white-space: normal;
+    }
+  }
+
+  .pvp-day {
+    font-weight: 600;
+  }
+
+  // The header above says the weekday, a phone's list has none
+  .pvp-weekday {
+    display: none;
+  }
+
+  // A row a day on a phone, the weeks would be too narrow for the names
+  @include mobile {
+    .pvp-days {
+      grid-template-columns: minmax(0, 1fr);
+      min-height: 0;
+
+      li {
+        flex-direction: row;
+        align-items: center;
+        gap: .75rem;
+        height: 2.75rem;
+        padding: 0 .875rem;
+      }
+
+      .is-blank {
+        display: none;
+      }
+
+      .pvp-name {
+        flex-grow: 1;
+        font-size: .9rem;
+        text-align: right;
+        white-space: nowrap;
+      }
+    }
+
+    .pvp-when {
+      display: flex;
+      gap: .375rem;
+      min-width: 4rem;
+    }
+
+    .pvp-weekday {
+      display: inline;
+      color: rgb(255 255 255 / .75);
+    }
+
+    // The outline says it, the row has no room for the name and a tag
+    .pvp-tag {
+      display: none;
+    }
+  }
+}
+
+// The days before the 1st, no map of this month's
+.pvp-days .is-blank {
+  background: none;
+
+  &::before {
+    content: none;
+  }
+}
+
+// Crystalline Conflict's day, its hours four a row
+.pvp-hours .pvp-days {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  // Six rows of four, a day without a clock change
+  min-height: 21.375rem;
+
+  li {
+    justify-content: center;
+    height: 3.25rem;
+  }
+
+  .pvp-when {
+    font-size: .8rem;
+    color: rgb(255 255 255 / .8);
+  }
+
+  .is-past .pvp-when {
+    color: inherit;
+  }
+
+  .pvp-name {
+    font-size: .875rem;
+  }
+
+  // A row an hour on a phone, like the PvP page's, two columns would cut the names short
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+
+    li {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      height: 2.5rem;
+      padding: 0 .875rem;
+    }
+
+    .pvp-when {
+      flex-shrink: 0;
+      font-size: .9rem;
+    }
+
+    .pvp-name {
+      flex-grow: 1;
+      font-size: .9rem;
+      text-align: right;
+    }
+
+    .pvp-tag {
+      position: static;
+    }
+  }
+}
+
+.pvp-note {
+  margin: 0;
+  font-size: .8rem;
+  color: var(--font-tertiary);
 }

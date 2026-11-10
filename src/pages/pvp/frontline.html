@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html src="partials/head.html"/>
+    <x-seo
+      title="FFXIV Frontline Rotation: Daily Map Calendar"
+      description="The FFXIV Frontline daily challenge map for every day in a calendar, in your local time, and how the rotation works."
+      section="PvP"
+      name="Frontline"
+    />
+    <!-- A module waits for the page like defer, from here it downloads while the rest of the page does -->
+    <x-js src="/js/pvp-schedule.js" module/>
+  </head>
+
+  <body>
+    <x-html src="partials/navbar.html"/>
+
+    <div class="page">
+      <main class="listing pvp pvp-page pvp-pending" data-rotation="frontline">
+        <a class="backlink" href="/pvp/">PvP maps</a>
+        <header class="listing-intro">
+          <h1 class="listing-title">Frontline rotation</h1>
+          <p class="listing-lead">The daily challenge's map for every day, in your local time, and the order it goes round in.</p>
+        </header>
+        <div class="pvp-grid">
+          <section class="pvp-card">
+            <div class="pvp-now">
+              <img class="pvp-banner" alt="" width="1088" height="320">
+              <span class="pvp-on"><span class="pvp-label">Today <span class="pvp-now-mode"></span></span> <strong class="pvp-map"></strong></span>
+              <span class="pvp-change"><span class="pvp-label">Changes in</span> <strong class="pvp-countdown"></strong></span>
+            </div>
+            <ul class="pvp-facts">
+              <li>A new map every day at the daily reset, <strong><time class="pvp-reset">15:00 UTC</time></strong>.</li>
+              <li>Always the same {{ pvp.frontline.length }} days in the same order, on every data center, so every day ahead is known.</li>
+              <li>Each map has its own mode, its dot's color.</li>
+            </ul>
+          </section>
+          <section class="pvp-card">
+            <h2 class="pvp-title">The rotation <span class="pvp-subtitle">Round in this order, a day each</span></h2>
+            <ol class="pvp-cycle" aria-label="The rotation's order">
+              <x-each items="pvp.frontline.cycle" as="map">
+                <li><img class="pvp-backdrop" src="{{ map.banner }}" alt="" width="1088" height="320" loading="lazy"><span class="pvp-slot">Day {{ map.n }}</span><span class="pvp-name"><x-if value="map.mode"><i class="pvp-mode pvp-mode-{{ map.mode.index }}" title="{{ map.mode.name }}"></i></x-if>{{ map.name }}</span></li>
+              </x-each>
+            </ol>
+            <x-html src="partials/pvp-modes.html"/>
+          </section>
+        </div>
+        <section class="pvp-card pvp-schedule pvp-calendar" aria-label="Calendar">
+          <header class="pvp-schedule-head">
+            <button class="pvp-step" type="button" data-step="-1" aria-label="Previous month"></button>
+            <h2 class="pvp-schedule-title" aria-live="polite">&nbsp;</h2>
+            <button class="pvp-step pvp-step-next" type="button" data-step="1" aria-label="Next month"></button>
+          </header>
+          <ol class="pvp-weekdays" aria-hidden="true"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ol>
+          <!-- js/pvp-schedule.js fills in the month's days -->
+          <ol class="pvp-days"></ol>
+          <x-html src="partials/pvp-modes.html"/>
+          <p class="pvp-note">A day's map is the one from its reset, at <time class="pvp-reset">15:00 UTC</time>.</p>
+        </section>
+      </main>
+      <x-html src="partials/footer.html"/>
+    </div>
+
+    <x-html src="partials/settings.html"/>
+  </body>
+</html>

@@ -2,7 +2,8 @@ import assert from "node:assert/strict"
 import fs from "node:fs"
 import { describe, it } from "node:test"
 import { ET_DAY_EARTH_MS, ET_MINUTE_EARTH_MS, nextWindow, toEorzea } from "../src/js/utils/eorzea.js"
-import { crystallineConflictAt, frontlineAt } from "../src/js/utils/pvp.js"
+import { CRYSTALLINE_CONFLICT, crystallineConflictAt, FRONTLINE, frontlineAt, modeOf } from "../src/js/utils/pvp.js"
+import PVP from "../src/js/data/pvp.json" with { type: "json" }
 import { FASHION_REPORT, gatesAfter, openTournaments, phaseAt, tournaments } from "../src/js/utils/saucer.js"
 import { getAllTimerStates } from "../src/js/utils/timers.js"
 import { BOARDING, CYCLE, nextVoyageTo, voyageAt } from "../src/js/utils/voyages.js"
@@ -155,10 +156,22 @@ describe("Timers", () => {
 
 describe("PvP maps", () => {
   it("rotates Frontline at the daily reset, as the game's data has it", () => {
-    assert.equal(frontlineAt(Date.UTC(2026, 9, 11, 14)).map, "Onsal Hakair (Danshig Naadam)")
-    assert.equal(frontlineAt(Date.UTC(2026, 9, 11, 15)).map, "Worqor Chirteh (Triumph)")
-    assert.equal(frontlineAt(Date.UTC(2026, 9, 13, 16)).map, "The Borderland Ruins (Secure)")
-    assert.equal(frontlineAt(Date.UTC(2026, 9, 17, 16)).map, "The Fields of Glory (Shatter)")
+    const on = (time) => {
+      const { map } = frontlineAt(time)
+      return `${map} (${modeOf(map).name})`
+    }
+    assert.equal(on(Date.UTC(2026, 9, 11, 14)), "Onsal Hakair (Danshig Naadam)")
+    assert.equal(on(Date.UTC(2026, 9, 11, 15)), "Worqor Chirteh (Triumph)")
+    assert.equal(on(Date.UTC(2026, 9, 13, 16)), "The Borderland Ruins (Secure)")
+    assert.equal(on(Date.UTC(2026, 9, 17, 16)), "The Fields of Glory (Shatter)")
+  })
+
+  it("has a banner for every map and a mode for every Frontline one", () => {
+    for (const map of [...FRONTLINE.maps, ...CRYSTALLINE_CONFLICT.maps]) {
+      assert.ok(fs.existsSync(`src/images/pvp/${PVP.banners[map]}.webp`), map)
+    }
+    for (const map of FRONTLINE.maps) assert.ok(modeOf(map), map)
+    for (const map of CRYSTALLINE_CONFLICT.maps) assert.equal(modeOf(map), null)
   })
 
   it("rotates Crystalline Conflict on the hour", () => {

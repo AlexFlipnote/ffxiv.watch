@@ -3,14 +3,14 @@
     "start": 1517065200000,
     "every": 86400000,
     "maps": [
-      "Seal Rock (Seize)",
-      "The Fields of Glory (Shatter)",
-      "Onsal Hakair (Danshig Naadam)",
-      "Worqor Chirteh (Triumph)",
-      "Seal Rock (Seize)",
-      "The Borderland Ruins (Secure)",
-      "Onsal Hakair (Danshig Naadam)",
-      "Worqor Chirteh (Triumph)"
+      "Seal Rock",
+      "The Fields of Glory",
+      "Onsal Hakair",
+      "Worqor Chirteh",
+      "Seal Rock",
+      "The Borderland Ruins",
+      "Onsal Hakair",
+      "Worqor Chirteh"
     ]
   },
   "crystallineConflict": {
@@ -25,5 +25,26 @@
       "Archeia Harmonias",
       "The Red Sands"
     ]
+  },
+  "modes": {
+    "Seal Rock": "Seize",
+    "The Fields of Glory": "Shatter",
+    "Onsal Hakair": "Danshig Naadam",
+    "Worqor Chirteh": "Triumph",
+    "The Borderland Ruins": "Secure"
+  },
+  "banners": {
+    "Seal Rock": "seal-rock",
+    "The Fields of Glory": "the-fields-of-glory",
+    "Onsal Hakair": "onsal-hakair",
+    "Worqor Chirteh": "worqor-chirteh",
+    "The Borderland Ruins": "the-borderland-ruins",
+    "The Palaistra": "the-palaistra",
+    "The Volcanic Heart": "the-volcanic-heart",
+    "The Bayside Battleground": "the-bayside-battleground",
+    "Cloud Nine": "cloud-nine",
+    "The Clockwork Castletown": "the-clockwork-castletown",
+    "Archeia Harmonias": "archeia-harmonias",
+    "The Red Sands": "the-red-sands"
   }
 }

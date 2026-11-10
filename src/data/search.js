@@ -16,6 +16,8 @@ const PAGES = [
   ["Gold Saucer", "/gold-saucer/", "gate jumbo cactpot fashion report"],
   ["Events", "/events/", "maintenance seasonal lodestone"],
   ["PvP maps", "/pvp/", "crystalline conflict frontline rival wings"],
+  ["Frontline rotation", "/pvp/frontline/", "pvp daily challenge calendar seize shatter secure"],
+  ["Crystalline Conflict rotation", "/pvp/crystalline-conflict/", "pvp cc hourly schedule"],
   ["Daily reset", "/daily-reset/", "roulettes beast tribe"],
   ["Weekly reset", "/weekly-reset/", "tomestones raids"],
   ["Housing lottery", "/housing-lottery/", "plots"],

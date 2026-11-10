@@ -1,0 +1,6 @@
+<!-- What a Frontline map's dot says, its mode, see modeDot in js/utils/pvp.js -->
+<ul class="pvp-modes" aria-label="Modes">
+  <x-each items="pvp.modes" as="mode">
+    <li><i class="pvp-mode pvp-mode-{{ mode.index }}"></i>{{ mode.name }}</li>
+  </x-each>
+</ul>

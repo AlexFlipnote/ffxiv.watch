@@ -1,12 +1,11 @@
 import "./utils/navbar.js"
-import { crystallineConflictAt, frontlineAt } from "./utils/pvp.js"
+import { crystallineConflictAt, fillNow, frontlineAt, mapName, backdropOf } from "./utils/pvp.js"
 import { everyTick, formatCountdown, setText, setTime } from "./utils/time.js"
 
 /**
  * @typedef {object} Card
  * @property {(time: number) => { map: string, start: number, end: number }} at
- * @property {number} coming How many after the current one are listed
- * @property {HTMLElement} map
+ * @property {HTMLElement} now
  * @property {HTMLElement} countdown
  * @property {HTMLOListElement} upcoming
  * @property {number | null} shown The start of the map on show
@@ -22,8 +21,7 @@ function card(id, at) {
   const upcoming = el.querySelector(".pvp-upcoming")
   return {
     at,
-    coming: upcoming.children.length,
-    map: el.querySelector(".pvp-map"),
+    now: el.querySelector(".pvp-now"),
     countdown: el.querySelector(".pvp-countdown"),
     upcoming,
     shown: null
@@ -33,20 +31,22 @@ function card(id, at) {
 const cards = [card("pvp-frontline", frontlineAt), card("pvp-crystalline-conflict", crystallineConflictAt)]
 
 /**
+ * The map on now and the ones after it, up to the first that's already been listed, so none shows twice.
  * @param {Card} c
  * @param {{ map: string, end: number }} on The map on now
  */
 function fill(c, on) {
-  c.map.textContent = on.map
-  let next = on.end
-  c.upcoming.replaceChildren(...Array.from({ length: c.coming }, () => {
-    const after = c.at(next)
-    next = after.end
+  fillNow(c.now, on.map)
+  const listed = new Set([on.map])
+  const rows = []
+  for (let after = c.at(on.end); !listed.has(after.map); after = c.at(after.end)) {
+    listed.add(after.map)
     const li = document.createElement("li")
     li.dataset.start = after.start
-    li.append(document.createElement("time"), Object.assign(document.createElement("span"), { textContent: after.map }))
-    return li
-  }))
+    li.append(backdropOf(after.map), document.createElement("time"), mapName(after.map))
+    rows.push(li)
+  }
+  c.upcoming.replaceChildren(...rows)
 }
 
 everyTick((now) => {
@@ -57,7 +57,7 @@ everyTick((now) => {
       fill(c, on)
     }
     setText(c.countdown, formatCountdown(on.end - now))
-    for (const li of c.upcoming.children) setTime(li.firstChild, new Date(+li.dataset.start), new Date(now))
+    for (const li of c.upcoming.children) setTime(li.querySelector("time"), new Date(+li.dataset.start), new Date(now))
   }
   document.querySelector(".pvp-pending")?.classList.remove("pvp-pending")
 })
