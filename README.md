@@ -2,37 +2,24 @@
 
 *Eorzea time, on your time.*
 
-FFXIV timers, mobile-first for the phone in your hand while you play, and just as at home on a desktop. No plugins, no account, no waiting on a heavy page: open it, see what's up, and get back to the game.
-
-## What's on it
-- **Timers**: daily and weekly resets, the housing lottery, leve allowances, Jumbo Cactpot, ocean fishing and Eorzea time
-- **Gathering**: every node, when the timed ones are up next, hidden items and scrip rewards
-- **Fishing**: every fish with its window, bait path and intuition, and the ocean fishing routes
-- **Sightseeing**: every vista, with its emote and when the time and weather line up
-- **Weather**: every zone now and ahead, and a finder for the weather you're waiting on
-- **PvP maps**: today's Frontline and this hour's Crystalline Conflict map
-
-Everything is shown in your local time, with your progress kept on your device.
+FFXIV timers, mobile-first for the phone in your hand while you play, and just as at home on a desktop. No plugins, no account, no waiting on a heavy page: open it, see what's up, and get back to the game. Everything is shown in your local time, with your progress kept on your device.
 
 ## How it's built
 Static pages with no framework and no backend. Each list loads only the expansion it shows, and the timers only wake when something on screen can change, so it stays light on a phone.
 
-## Tested on
-- **Samsung Galaxy A40**: the low end it's tuned for
-- iPhone 14 and newer
-- Google Pixel 10 Pro XL
-- A locked-down office PC (Intel i5-9500T, integrated UHD 630)
-- A high-end desktop PC
+The game's data, icons and maps are read from its own files, see [.env.example](.env.example).
 
-In Chrome, Firefox, Edge, Safari and Samsung Internet.
+Tuned on a Samsung Galaxy A40 as the low end, and tested on iPhone 14 and newer, a Pixel 10 Pro XL, an office PC with integrated graphics (i5-9500T, UHD 630) and a high-end desktop, in Chrome, Firefox, Edge, Safari and Samsung Internet.
 
-## Credits
-- **[Carbuncle Plushy's fish tracker](https://github.com/icykoneko/ff14-fish-tracker-app)** for when each fish bites, its bait and intuition
-- **[Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft)** for the bait, hookset and tug of the other fish, blue fish times, and the few shops the game only links to their NPC in its scripts
-- [XIVAPI's ffxiv-datamining](https://github.com/xivapi/ffxiv-datamining) for the names of the game sheets' columns. The game's data, icons and maps are read from its own files, see [.env.example](.env.example)
-- [Google Sans Flex](https://fonts.google.com/specimen/Google+Sans+Flex) (OFL), [Material Symbols](https://fonts.google.com/icons) (Apache 2.0) and the Lodestone's icon font via [ffxiv-axis-font-icons](https://github.com/thewakingsands/ffxiv-axis-font-icons)
+## Credits and license
+The code is under the [AGPL-3.0](LICENSE). It builds on:
 
-## License
-The code is under the [AGPL-3.0](LICENSE). The fish tracker's data (© 2019 icykoneko) and Teamcraft's (© 2017 Flavien Normand) are used under the MIT License ([tracker](https://github.com/icykoneko/ff14-fish-tracker-app/blob/master/LICENSE), [Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft/blob/staging/LICENSE)).
+| Project | Used for | License |
+| --- | --- | --- |
+| [XIVAPI's ffxiv-datamining](https://github.com/xivapi/ffxiv-datamining) | Names of the game sheets' columns | |
+| [Carbuncle Plushy's fish tracker](https://github.com/icykoneko/ff14-fish-tracker-app) | When each fish bites, its bait and intuition | [MIT](https://github.com/icykoneko/ff14-fish-tracker-app/blob/master/LICENSE), © 2019 icykoneko |
+| [Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft) | Other fish's bait, hookset and tug, blue fish times, script-only shops | [MIT](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft/blob/staging/LICENSE), © 2017 Flavien Normand |
+| [Google Sans Flex](https://fonts.google.com/specimen/Google+Sans+Flex) | Font | OFL |
+| [Material Symbols](https://fonts.google.com/icons) | Icons | Apache 2.0 |
 
 FINAL FANTASY XIV © SQUARE ENIX CO., LTD. All rights reserved. ffxiv.watch isn't affiliated with Square Enix.
