@@ -762,6 +762,17 @@ $tab-flare: .5rem;
   }
 }
 
+// As wide as its longest option, not the one picked, but kept on screen
+@supports (appearance: base-select) {
+  @media (pointer: fine) {
+    .map-vendor-pick::picker(select) {
+      width: max-content;
+      min-width: anchor-size(width);
+      max-width: calc(100vw - 2rem);
+    }
+  }
+}
+
 .map-vendor-quest {
   display: block;
   margin-top: .25rem;
