@@ -1,10 +1,10 @@
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
-import { readSheet } from "./game.js"
+import { columnCount } from "./game.js"
 
 // XIVAPI's ffxiv-datamining (https://github.com/xivapi/ffxiv-datamining): the names of the sheets' columns, which the
-// game's files don't have. Run it to save those names after a patch that changes a sheet's columns: npm run game-columns
+// game's files don't have. npm run game-data runs this first, it only goes online for a sheet that changed
 
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 
@@ -33,30 +33,48 @@ function sheetsUsed() {
  */
 const columnNames = (line) => line.replace(/\r$/, "").split(",").slice(1)
 
-async function refreshColumns() {
+/**
+ * Keeps game-columns.json in step with the install. A sheet keeps its saved names while it has as many columns as they
+ * name, only one the scripts start reading or a patch reshapes has its names fetched, so most runs stay offline.
+ * Throws when the schema hasn't caught up with a patch yet, before any data is written with names that don't fit.
+ */
+async function updateColumns() {
+  const file = path.join(HERE, "game-columns.json")
+  const saved = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : {}
   const columns = {}
-  let differ = 0
+  const behind = []
   for (const name of sheetsUsed()) {
+    const width = columnCount(name)
+    if (saved[name]?.length === width) {
+      columns[name] = saved[name]
+      continue
+    }
     const res = await fetch(`${HEADERS}/${name}.csv`)
     if (!res.ok) throw new Error(`${name}.csv: HTTP ${res.status}`)
-    const [head] = (await res.text()).split("\n", 1)
-    columns[name] = columnNames(head)
-    const rows = readSheet(name)
-    const width = rows[0]?.values.length
-    if (width !== columns[name].length) {
-      console.log(`${name}: ${columns[name].length} names for ${width} columns, the schema isn't caught up with the patch yet`)
-      differ++
-    } else {
-      console.log(`${name}: ${columns[name].length} columns, ${rows.length} rows`)
+    const names = columnNames((await res.text()).split("\n", 1)[0])
+    if (names.length !== width) {
+      behind.push(`${name} (${names.length} names for ${width} columns)`)
+      continue
     }
+    // The scripts read columns by name, a renamed one would read as empty
+    const before = saved[name] ?? []
+    const gone = before.filter((n) => !names.includes(n))
+    const added = names.filter((n) => !before.includes(n))
+    console.log(`Columns: ${name} ${before.length ? `went from ${before.length} to ${width}` : `is new, ${width}`}${gone.length ? `, without ${gone.join(", ")}` : ""}${added.length && before.length ? `, with ${added.join(", ")}` : ""}`)
+    columns[name] = names
   }
-  fs.writeFileSync(path.join(HERE, "game-columns.json"), JSON.stringify(columns) + "\n")
-  console.log(`Wrote the columns of ${Object.keys(columns).length} sheets to scripts/sources/game-columns.json`)
-  if (differ) process.exitCode = 1
+  if (behind.length) throw new Error(`The column names aren't caught up with the patch yet: ${behind.join(", ")}`)
+
+  if (JSON.stringify(columns) !== JSON.stringify(saved)) {
+    fs.writeFileSync(file, JSON.stringify(columns) + "\n")
+    console.log(`Columns: saved the names of ${Object.keys(columns).length} sheets`)
+  } else {
+    console.log(`Columns: all ${Object.keys(columns).length} sheets as the install has them`)
+  }
 }
 
 if (import.meta.main) {
-  refreshColumns().catch((err) => {
+  updateColumns().catch((err) => {
     console.error(err)
     process.exit(1)
   })

@@ -576,6 +576,12 @@ function rowValues(b, at, strings, columns) {
 }
 
 /**
+ * @param {string} name
+ * @returns {number} How many columns the sheet has, from its .exh alone
+ */
+export const columnCount = (name) => header(name).columns.length
+
+/**
  * Every row of a sheet.
  * @param {string} name
  * @param {string} [language]
@@ -627,10 +633,10 @@ const asText = (value) => typeof value === "boolean" ? (value ? "True" : "False"
  */
 export async function sheet(name) {
   const names = COLUMNS[name]
-  if (!names) throw new Error(`${name} has no column names yet, run npm run game-columns`)
+  if (!names) throw new Error(`${name} has no column names yet, run npm run game-data`)
   return readSheet(name).map(({ id, values }) => {
     if (values.length !== names.length) {
-      throw new Error(`${name} has ${values.length} columns but ${names.length} names, a patch changed it: run npm run game-columns`)
+      throw new Error(`${name} has ${values.length} columns but ${names.length} names, a patch changed it: run npm run game-data`)
     }
     return Object.fromEntries([["#", id], ...names.map((n, i) => [n, asText(values[i])])])
   })
