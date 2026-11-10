@@ -34,6 +34,18 @@ export function el(tag, className = "", children = []) {
 }
 
 /**
+ * A select made here as wide as its longest option, as sizeSelects in mothwing.config.js does the built ones,
+ * so picking a shorter one doesn't resize it.
+ * @param {HTMLSelectElement} select
+ * @returns {HTMLElement}
+ */
+export function sizedSelect(select) {
+  const sizer = el("span", "select select-sizer", [...select.options].map((o) => el("span", "", [o.text])))
+  sizer.setAttribute("aria-hidden", "true")
+  return el("span", "select-box", [select, sizer])
+}
+
+/**
  * Several recipe pages' data as one, each root made by the preferred crafter when they can.
  * @param {object[]} list data-planner of each
  * @param {string | null} [crafter] See CRAFTER_KEY
@@ -257,7 +269,7 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
         note: [
           el("span", "", ["Sold by ", el("strong", "", [offer.name]), ` for ${price(offer)}`]),
           offer.quest && el("span", "map-vendor-quest", [`Unlocked by the quest ${offer.quest}`]),
-          pick && el("span", "map-vendors", [`${offers.length} vendors sell it`, pick])
+          pick && el("span", "map-vendors", [`${offers.length} vendors sell it`, sizedSelect(pick)])
         ].filter(Boolean)
       })
     }

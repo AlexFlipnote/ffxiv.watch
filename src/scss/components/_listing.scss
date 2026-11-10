@@ -757,19 +757,16 @@ $tab-flare: .5rem;
   font-size: .8rem;
   color: var(--font-tertiary);
 
-  .select {
+  // As wide as its longest option but kept in the note, a longer one cut off
+  .select-box {
+    align-self: flex-start;
+    grid-template-columns: minmax(0, auto);
     max-width: 100%;
   }
-}
 
-// As wide as its longest option, not the one picked, but kept on screen
-@supports (appearance: base-select) {
-  @media (pointer: fine) {
-    .map-vendor-pick::picker(select) {
-      width: max-content;
-      min-width: anchor-size(width);
-      max-width: calc(100vw - 2rem);
-    }
+  .map-vendor-pick {
+    min-width: 0;
+    text-overflow: ellipsis;
   }
 }
 

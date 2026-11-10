@@ -92,12 +92,21 @@
         width: anchor-size(width);
         margin-top: .25rem;
         padding: .25rem;
-        border: none;
+        // The edge keeps it apart from a modal, the same color under it
+        border: .0625rem solid var(--divider);
         border-radius: .5rem;
         background-color: color-mix(in srgb, var(--surface-solid) 65%, transparent);
         -webkit-backdrop-filter: blur(16px);
         backdrop-filter: blur(16px);
         box-shadow: var(--card-shadow), 0 .5rem 1.5rem rgba(0, 0, 0, .25);
+
+        // Effects' Light: solid, see-through without the blur muddies the options. A shade off the surface so it
+        // stands out from a modal
+        :root[data-effects="light"] & {
+          background-color: color-mix(in srgb, var(--surface-solid) 94%, var(--font-primary));
+          -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+        }
       }
 
       option {
