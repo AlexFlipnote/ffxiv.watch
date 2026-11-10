@@ -163,7 +163,8 @@ function renderItems(own) {
 /** Loads the items' recipe pages and draws the plan */
 async function loadPlan() {
   const list = current
-  const key = `${list.id}|${list.items.map((i) => i.slug).join()}`
+  const own = list !== shared
+  const key = `${own}|${list.id}|${list.items.map((i) => i.slug).join()}`
   if (key === planKey && plan) return plan.draw()
   planKey = key
   plan = null
@@ -193,8 +194,9 @@ async function loadPlan() {
   const data = mergeData(datas, load(CRAFTER_KEY))
   const counts = (record) => new Map(Object.entries(record ?? {}).map(([id, n]) => [Number(id), n]))
   const gotten = new Set(list.gotten)
-  const have = counts(list.have)
-  const made = counts(list.made)
+  // A shared list is a look before saving it, someone else's counts would only be in the way
+  const have = own ? counts(list.have) : null
+  const made = own ? counts(list.made) : null
   plan = planView({
     data,
     roots: () => list.items.filter((i) => data.items[i.item]).map((i) => [i.item, i.amount]),
@@ -203,8 +205,10 @@ async function loadPlan() {
     made,
     onChange: () => {
       list.gotten = [...gotten]
-      list.have = Object.fromEntries(have)
-      list.made = Object.fromEntries(made)
+      if (own) {
+        list.have = Object.fromEntries(have)
+        list.made = Object.fromEntries(made)
+      }
       save()
     },
     onComplete: ({ materials, crafts }) => {
