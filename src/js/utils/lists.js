@@ -5,6 +5,9 @@ import { load, onStored, store } from "./storage.js"
 
 const KEY = "crafting-lists"
 
+// Short enough to fit beside the share button and in a URL
+export const NAME_LENGTH = 32
+
 /**
  * @typedef {{ slug: string, name: string, icon: number, item: number, amount: number }} ListItem
  * @typedef {{ id: string, name: string, items: ListItem[], gotten: number[], have: Record<string, number>, made?: Record<string, number> }} List
@@ -30,7 +33,7 @@ function byName(state) {
   const kept = []
   let active = state.active
   for (const list of state.lists) {
-    const name = freeName(kept, String(list.name || "My list").trim().slice(0, 60) || "My list")
+    const name = freeName(kept, String(list.name || "My list").trim().slice(0, NAME_LENGTH) || "My list")
     if (list.id === state.active) active = name
     kept.push({ ...list, id: name, name })
   }
@@ -95,7 +98,7 @@ export function freeName(lists, base = "My list") {
  * @returns {string} The name it got
  */
 export function renameList(lists, list, name) {
-  const wanted = name.trim().slice(0, 60) || list.name
+  const wanted = name.trim().slice(0, NAME_LENGTH) || list.name
   list.name = freeName(lists.filter((l) => l !== list), wanted)
   list.id = list.name
   return list.name
@@ -116,7 +119,7 @@ export function addToList(listId, item, gotten, name = "My list") {
   const state = readLists()
   let list = listId === NEW_LIST ? null : findList(state.lists, listId) ?? activeList(state)
   if (!list) {
-    list = newList(freeName(state.lists, name.trim().slice(0, 60) || "My list"))
+    list = newList(freeName(state.lists, name.trim().slice(0, NAME_LENGTH) || "My list"))
     state.lists.push(list)
   }
   const there = list.items.find((i) => i.slug === item.slug)
@@ -160,7 +163,7 @@ export function sharedList(code) {
     const [version, name, items, gotten] = JSON.parse(fromBase64Url(code))
     if (version !== 1 || typeof name !== "string" || !Array.isArray(items)) return null
     return {
-      ...newList(name.slice(0, 60)),
+      ...newList(name.slice(0, NAME_LENGTH)),
       items: items.filter((i) => Array.isArray(i) && typeof i[0] === "string" && /^[a-z0-9-]+$/.test(i[0])).map(([slug, amount, item, icon, itemName]) => ({
         slug, amount: Math.min(9999, Math.max(1, Math.floor(amount) || 1)), item: Number(item), icon: Number(icon), name: String(itemName)
       })),

@@ -1,7 +1,7 @@
 import "./utils/navbar.js"
 import { CRAFTER_KEY } from "./utils/crafting.js"
 import { gameIcon } from "./utils/images.js"
-import { findList, freeName, listUrl, loadPlanner, newList, onListsChange, readLists, renameList, sharedList, shareUrl, writeLists } from "./utils/lists.js"
+import { findList, freeName, listUrl, loadPlanner, NAME_LENGTH, newList, onListsChange, readLists, renameList, sharedList, shareUrl, writeLists } from "./utils/lists.js"
 import { closable } from "./utils/dialog.js"
 import { craftTreeButton, el, iconButton, mergeData, planView, stepper } from "./utils/planner.js"
 import { entriesOf, rank } from "./utils/search.js"
@@ -22,7 +22,7 @@ const intro = $("lists-intro")
 const index = $("lists-index")
 const cards = $("lists-cards")
 const view = $("lists-view")
-const nameInput = $("lists-name")
+const nameInput = Object.assign($("lists-name"), { maxLength: NAME_LENGTH })
 const actions = $("lists-actions")
 const items = $("lists-items")
 const addButton = $("lists-add")

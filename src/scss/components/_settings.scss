@@ -195,8 +195,12 @@
 }
 
 .settings-list-name {
+  min-width: 0;
+  overflow: hidden;
   color: var(--font-primary);
   font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .settings-list-count {

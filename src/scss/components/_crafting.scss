@@ -826,6 +826,12 @@ $control: 2.25rem;
   color: var(--font-primary);
   text-decoration: none;
 
+  strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   &:focus-visible {
     outline: .125rem solid var(--accent);
   }
@@ -1054,12 +1060,20 @@ $control: 2.25rem;
   }
 }
 
+// As wide as the name where field-sizing works, the full row elsewhere
 .lists-name {
   flex: 1 1 12rem;
   box-sizing: border-box;
   height: $control;
   font-size: 1.1rem;
   font-weight: bold;
+  text-overflow: ellipsis;
+
+  @supports (field-sizing: content) {
+    flex: 0 1 auto;
+    min-width: 8rem;
+    field-sizing: content;
+  }
 
   &:read-only {
     background: none;
@@ -1070,6 +1084,7 @@ $control: 2.25rem;
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
+  margin-left: auto;
 }
 
 .lists-items {
