@@ -3,7 +3,7 @@ import path from "path"
 import { fileURLToPath } from "url"
 import { mapPosition, nearestAetheryte, SCRIP_ITEMS, writeData } from "../common.js"
 import { byId, layoutNpcs, plainNames, saveIcons, saveMaps, sheets } from "../sources/game.js"
-import { teamcraft } from "../sources/teamcraft.js"
+import { SCRIPT_SHOPS } from "../sources/teamcraft.js"
 
 // Runs after crafting.js, for the items its recipes take
 
@@ -153,13 +153,12 @@ async function main() {
   }
   for (const [npc, list] of laidOut) placesOf.set(npc, list)
 
-  // Some shops are only picked in the game's scripts, the Shadowbringers gemstone traders' by FATE rank, so no sheet
-  // links them to their NPC. Teamcraft's are taken for those alone
+  // A few shops are only picked in the game's scripts, so no sheet links them to their NPC, see SCRIPT_SHOPS
   const shopsByNpc = new Map(npcBases.map((npc) => [npc["#"], shopsOf(npc, lookup)]))
   const linked = new Set([...shopsByNpc.values()].flat())
-  for (const shop of await teamcraft("shops.json")) {
-    if (linked.has(String(shop.id)) || !offersOf.has(String(shop.id))) continue
-    for (const npc of shop.npcs) shopsByNpc.get(String(npc))?.push(String(shop.id))
+  for (const [shop, owners] of Object.entries(SCRIPT_SHOPS)) {
+    if (linked.has(shop) || !offersOf.has(shop)) continue
+    for (const npc of owners) shopsByNpc.get(String(npc))?.push(shop)
   }
 
   const npcs = {}
