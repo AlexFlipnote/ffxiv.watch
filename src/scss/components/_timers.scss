@@ -209,8 +209,12 @@
     background-color: var(--chip-background);
   }
 
+  // A line each for name, dates and countdown, never two sharing one when they happen to fit
   @include mobile {
+    flex-direction: column;
+    gap: .25rem;
     padding: .625rem 1rem;
+    text-align: center;
   }
 }
 
