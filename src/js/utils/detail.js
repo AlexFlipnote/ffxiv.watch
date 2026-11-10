@@ -120,7 +120,7 @@ function alarmBells(timingOf) {
 export function backlink() {
   const link = document.querySelector(".backlink")
   link?.addEventListener("click", (e) => {
-    let from = null
+    let from
     try {
       from = new URL(document.referrer)
     } catch {

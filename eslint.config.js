@@ -18,7 +18,7 @@ export default [
 
     rules: {
       "no-undef": "warn",
-      "no-unused-vars": "warn",
+      "no-unused-vars": ["warn", { "ignoreRestSiblings": true }],
       "no-console": "off",
 
       // Style & Formatting Rules
