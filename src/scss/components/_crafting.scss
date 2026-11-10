@@ -611,6 +611,61 @@ $control: 2.25rem;
   height: 2rem;
 }
 
+// A row's add to list on /crafting/, drawn like the alarm bell in the other tables
+.row-list-add {
+  position: relative;
+  isolation: isolate;
+  flex: none;
+  display: flex;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--font-tertiary);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: currentColor;
+    -webkit-mask: url("/images/ui/list-add.svg") center / contain no-repeat;
+    mask: url("/images/ui/list-add.svg") center / contain no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -.375rem;
+    z-index: -1;
+    border-radius: .5rem;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::after {
+      outline: .125rem solid var(--accent);
+    }
+  }
+
+  &:active::after {
+    background: var(--chip-background);
+  }
+
+  @include hover {
+    color: var(--accent);
+
+    &::after {
+      background: var(--chip-background);
+    }
+  }
+
+  // Lists need the script
+  :root:not(.js) & {
+    visibility: hidden;
+  }
+}
+
 .list-add-modal {
   max-width: 24rem;
 }

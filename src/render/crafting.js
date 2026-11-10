@@ -148,13 +148,39 @@ const recipeChips = (recipe) => {
  * @returns {import("./html.js").Html}
  */
 function recipeRow(key, entry) {
-  const tags = recipeChips(entry).filter(Boolean)
+  const info = data().items[entry.item]
+  const tags = [
+    info.category && chip(info.category),
+    ...recipeChips(entry),
+    hasTimedMaterials(entry) && chip("Timed materials", "chip-accent", "Something in the full craft is only up at certain times")
+  ].filter(Boolean)
   const crafters = entry.jobs.length > 1 ? html`<span class="zone" title="${entry.jobs.join(", ")}">${entry.jobs.length === CRAFTER_COUNT ? "Any crafter" : `${entry.jobs[0]} +${entry.jobs.length - 1}`}</span>`
     : html`<span class="zone">${entry.jobs[0]}</span>`
   return html`
 <tr data-key="${key}">
-  <td colspan="2"><div class="row-body"><div class="row-main"><a class="crafting-name" href="${craftingUrl(entry.name)}"><strong>${entry.name}</strong>${stars(entry)}</a>${tags.length > 0 && html`<div class="tags">${tags}</div>`}</div><div class="place">${crafters}<span class="spot">Lv.${entry.level}</span></div></div></td>
+  <td><div class="row-body"><div class="row-main"><a class="crafting-name" href="${craftingUrl(entry.name)}"><strong>${entry.name}</strong>${stars(entry)}</a>${tags.length > 0 && html`<div class="tags">${tags}</div>`}</div><div class="place">${crafters}<span class="spot">Lv.${entry.level}</span></div></div></td>
+  <td class="location-cell"><div class="row-actions"><button class="row-list-add" type="button" title="Add to a list" aria-label="Add ${entry.name} to a list" data-item="${entry.item}" data-icon="${info.icon}"></button></div></td>
 </tr>`
+}
+
+/**
+ * @param {object} recipe
+ * @returns {(item: number) => object | null} What each item under it is crafted from, null for one that's gotten
+ */
+const recipeOfUnder = (recipe) => (item) => {
+  if (item === recipe.item) return recipe
+  const id = recipeIdOf(item)
+  return id === undefined ? null : data().recipes[id]
+}
+
+/**
+ * @param {object} entry
+ * @returns {boolean} Something in its full craft, as the planner first draws it, only up at certain times
+ */
+function hasTimedMaterials(entry) {
+  const recipe = data().recipes[recipeIds(entry)[0]]
+  const { materials: needed } = materials([[recipe.item, recipe.yield]], recipeOfUnder(recipe))
+  return [...needed.keys()].some((id) => timingOf().has(id))
 }
 
 /** @returns {object} The rows for /crafting/, all from /rows/ as one expansion has thousands */
@@ -364,12 +390,7 @@ function plannerData(rootRecipe, others = []) {
 function fullCraft(entry) {
   const [recipeId, ...others] = recipeIds(entry)
   const recipe = data().recipes[recipeId]
-  const recipeOf = (item) => {
-    if (item === recipe.item) return recipe
-    const id = recipeIdOf(item)
-    return id === undefined ? null : data().recipes[id]
-  }
-  const { crafts, materials: needed, crystals } = materials([[recipe.item, recipe.yield]], recipeOf)
+  const { crafts, materials: needed, crystals } = materials([[recipe.item, recipe.yield]], recipeOfUnder(recipe))
   if (crafts.length < 2) return html`
 <section class="crafting-full" data-planner="${plannerData(recipeId, others)}" hidden></section>`
 
