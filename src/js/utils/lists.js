@@ -5,8 +5,8 @@ import { load, onStored, store } from "./storage.js"
 
 const KEY = "crafting-lists"
 
-// Short enough to fit beside the share button and in a URL
-export const NAME_LENGTH = 32
+// Room for a long name, the page cuts off one too long to fit with an ellipsis
+export const NAME_LENGTH = 64
 
 /**
  * @typedef {{ slug: string, name: string, icon: number, item: number, amount: number }} ListItem
