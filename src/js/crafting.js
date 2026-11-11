@@ -18,8 +18,7 @@ listing({
 
   filter: (recipe) => !jobSelect.value || recipe.jobs.includes(jobSelect.value),
   // From a word's start, so "aunt" isn't every Gauntlets
-  matches: (recipe, query) => [recipe.name, ...recipe.jobs, ...recipe.books ?? [], recipe.expert && "Expert"]
-    .some((text) => text && startsWord(text, query))
+  matches: (recipe, query) => searchText(recipe).includes(` ${query}`)
 })
 
 // Each row's add to list button, a dialog per item it adds
@@ -36,9 +35,17 @@ body.addEventListener("click", (e) => {
   dialogs.get(item)()
 })
 
+// Made once a recipe, a search goes through every one of them on each keystroke
+const searchTexts = new WeakMap()
+
 /**
- * @param {string} text
- * @param {string} query Lowercase
- * @returns {boolean} The query at the start of a word in it
+ * @param {object} recipe
+ * @returns {string} Each of its words after a space, its fields a line each so a search can't run from one into the next
  */
-const startsWord = (text, query) => ` ${text.toLowerCase().replace(/[^a-z0-9' ]+/g, " ")}`.includes(` ${query}`)
+function searchText(recipe) {
+  if (!searchTexts.has(recipe)) {
+    const fields = [recipe.name, ...recipe.jobs, ...recipe.books ?? [], recipe.expert && "Expert"].filter(Boolean)
+    searchTexts.set(recipe, fields.map((text) => ` ${text.toLowerCase().replace(/[^a-z0-9' ]+/g, " ")}`).join("\n"))
+  }
+  return searchTexts.get(recipe)
+}
