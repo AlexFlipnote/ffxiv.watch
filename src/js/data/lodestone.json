@@ -11,21 +11,18 @@
       "end": null,
       "until": "8.0",
       "image": "/images/events/08ee0babf2893172a422c7a4da2f5e07f025a860.webp"
+    },
+    {
+      "id": "a5c6207a2b4f4c46266a195802ee7e0a426617b3",
+      "name": "FINAL FANTASY XIV x FINAL FANTASY XVI Crossover Event",
+      "lead": "The FINAL FANTASY XVI crossover event, The Path Infernal, returns to Eorzea!",
+      "url": "https://eu.finalfantasyxiv.com/lodestone/special/ffxvi/e86ytg2ko3",
+      "start": 1794988800000,
+      "end": 1796828340000,
+      "image": "/images/events/a5c6207a2b4f4c46266a195802ee7e0a426617b3.webp"
     }
   ],
   "topics": {
-    "90e50dd3821045bf9ce04940d690b27be5838622": {
-      "updated": "2026-10-16T07:00:00Z",
-      "found": null
-    },
-    "086e64eead299aa9b1656c3603a1fd84b4e9851f": {
-      "updated": "2026-10-16T09:30:00Z",
-      "found": null
-    },
-    "14be574eb8355d44b3352c0cd735a54a94457e9f": {
-      "updated": "2026-10-20T07:00:00Z",
-      "found": null
-    },
     "08ee0babf2893172a422c7a4da2f5e07f025a860": {
       "updated": "2026-10-21T08:00:00Z",
       "found": {
@@ -97,6 +94,22 @@
     },
     "eb90f30d42685d87fa3fa9705d680694804e6fbf": {
       "updated": "2026-11-10T10:00:00Z",
+      "found": null
+    },
+    "a5c6207a2b4f4c46266a195802ee7e0a426617b3": {
+      "updated": "2026-11-11T08:00:00Z",
+      "found": {
+        "url": "https://eu.finalfantasyxiv.com/lodestone/special/ffxvi/e86ytg2ko3",
+        "start": 1794988800000,
+        "end": 1796828340000
+      }
+    },
+    "d8fd7cc8d69114ce95adc5388f8a5b2315ff7e2b": {
+      "updated": "2026-11-11T07:30:00Z",
+      "found": null
+    },
+    "66d852908f419eb41502b869c41ab1ee7dd1f35b": {
+      "updated": "2026-11-11T07:00:00Z",
       "found": null
     }
   }
