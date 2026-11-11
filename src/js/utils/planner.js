@@ -187,7 +187,8 @@ export function stepper(value, label, onChange, { readOnly = false, min = 1 } = 
  * @param {Map<number, number>} [options.made] A list's counts of what's crafted
  * @param {() => void} [options.onChange]
  * @param {(done: { materials: boolean, crafts: boolean }) => void} [options.onComplete]
- * @returns {{ tree: HTMLElement, summary: HTMLElement, crafts: HTMLElement, draw: () => void, text: () => string }}
+ * @returns {{ tree: HTMLElement, summary: HTMLElement, crafts: HTMLElement, draw: () => void, text: () => string, stop: () => void }}
+ * `stop` ends its countdowns, for when it's replaced
  */
 export function planView({ data, roots, gotten, have = null, made = null, onChange = () => {}, onComplete = () => {} }) {
   // By their path from the root, "123>456"
@@ -642,9 +643,9 @@ export function planView({ data, roots, gotten, have = null, made = null, onChan
     return lines.join("\n").trim()
   }
 
-  // A replaced plan stops; by the summary, as the tree can be in a closed dialog
-  everyTick((now) => {
+  // By the summary, as the tree can be in a closed dialog
+  const stop = everyTick((now) => {
     if (summary.isConnected) tick(now)
   })
-  return { tree, summary, crafts, draw, text }
+  return { tree, summary, crafts, draw, text, stop }
 }

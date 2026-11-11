@@ -83,6 +83,7 @@ function render() {
 
 function renderIndex() {
   planKey = ""
+  plan?.stop()
   plan = null
   document.title = TITLE
   const start = Object.assign(el("button", "lists-card lists-card-new", [
@@ -167,6 +168,7 @@ async function loadPlan() {
   const key = `${own}|${list.id}|${list.items.map((i) => i.slug).join()}`
   if (key === planKey && plan) return plan.draw()
   planKey = key
+  plan?.stop()
   plan = null
   planBody.replaceChildren()
   craftsSection.hidden = true
