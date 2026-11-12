@@ -1,5 +1,4 @@
 import { defineConfig } from "mothwing"
-import { IMAGES } from "./src/js/utils/images.js"
 
 /**
  * A styled select (base-select, see _controls.scss) is as wide as its picked option, so the filters would shift with
@@ -24,8 +23,7 @@ export default defineConfig({
     ]
   },
   sass: { "scss/index.scss": "css/index.css" },
-  // Served by img.ffxiv.watch
-  exclude: ["js", "scss", "render", "images/game", "images/maps"],
+  exclude: ["js", "scss", "render"],
   // The game data the pages read with fs
   rerender: ["js/data"],
   seo: {
@@ -33,7 +31,7 @@ export default defineConfig({
   },
   minify: true,
   // Inline styles for the map markers' positions
-  csp: { "style-src": "'self' 'unsafe-inline'", "img-src": `'self' data: ${IMAGES}` },
+  csp: { "style-src": "'self' 'unsafe-inline'", "img-src": "'self' data:" },
   sitemap: { sections: ["fishing", "gathering", "sightseeing", "weather"] },
   robots: {
     // SEO crawlers that only feed a paid backlink database and send no one here

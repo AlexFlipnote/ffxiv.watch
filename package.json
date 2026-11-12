@@ -14,7 +14,6 @@
     "fishing-data": "node scripts/build/fishing.js",
     "ocean-fishing-data": "node scripts/build/ocean-fishing.js",
     "pvp-data": "node scripts/build/pvp.js",
-    "deploy-images": "node scripts/build-images.js && npx wrangler@4.152.0 deploy -c img/wrangler.jsonc",
     "lodestone-data": "node scripts/build/lodestone.js"
   },
   "devDependencies": {

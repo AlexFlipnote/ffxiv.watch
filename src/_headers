@@ -11,8 +11,18 @@
 # Linked without a hash, but rarely change
 /fonts/*
   Cache-Control: public, max-age=604800
-/images/*
+/images/maps/*
   Cache-Control: public, max-age=604800
+/images/events/*
+  Cache-Control: public, max-age=604800
+/images/pvp/*
+  Cache-Control: public, max-age=604800
+/images/ui/*
+  Cache-Control: public, max-age=604800
+
+# An icon id's image never changes in the game. Its own folder, as two rules that match join their Cache-Control
+/images/game/*
+  Cache-Control: public, max-age=31536000, immutable
 
 # frame-ancestors only works as a header, the CSP <meta> can't set it
 /*

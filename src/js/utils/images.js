@@ -1,5 +1,5 @@
-// The game's icons and maps are their own Worker, see img/wrangler.jsonc
-export const IMAGES = "https://img.ffxiv.watch"
+// The game's icons and maps, saved by scripts/sources/game.js
+export const IMAGES = "/images"
 
 /**
  * @param {number} icon
