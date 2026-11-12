@@ -35,11 +35,6 @@ describe("Search", () => {
     assert.equal(names("mosqito")[0], "Mosquito Fish")
   })
 
-  it("finds recipes, first when the query says recipe", () => {
-    assert.ok(rank(entries, "bronze ingot").some((e) => e.kind === "Recipe" && e.name === "Bronze Ingot"))
-    assert.equal(rank(entries, "recipe aunt tii")[0].url, "/crafting/aunt-tiis-billboard/")
-  })
-
   it("puts the pages first, found by their keywords too", () => {
     assert.equal(names("fish")[0], "Fishing")
     assert.equal(names("cactpot")[0], "Gold Saucer")

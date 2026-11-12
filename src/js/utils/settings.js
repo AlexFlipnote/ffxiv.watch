@@ -1,5 +1,4 @@
 import { DEFAULT_LEAD, DEFAULT_SOUND, LEAD_KEY, SOUND_KEY, soundUrl } from "./alarmBells.js"
-import { CRAFTER_KEY } from "./crafting.js"
 import { closable } from "./dialog.js"
 import { decodeBackup, encodeBackup, HIDE_DONE_KEY, LISTS, readDone, storageKey, writeDone } from "./done.js"
 import { autoEffects, pickedEffects, pickEffects } from "./effects.js"
@@ -18,7 +17,6 @@ const leads = [...modal.querySelectorAll("input[name=alarm-lead]")]
 const alarmSound = document.getElementById("settings-alarm-sound")
 const alarmPreview = document.getElementById("settings-alarm-preview")
 const lists = document.getElementById("settings-lists")
-const crafter = document.getElementById("settings-crafter")
 const code = document.getElementById("settings-code")
 const copy = document.getElementById("settings-copy")
 const restoreCode = document.getElementById("settings-restore-code")
@@ -127,7 +125,6 @@ function show() {
   showEffects()
   hideDone.checked = load(HIDE_DONE_KEY) === "1"
   showAlarms()
-  crafter.value = load(CRAFTER_KEY) ?? ""
   showProgress()
 }
 
@@ -135,7 +132,6 @@ for (const input of themes) input.addEventListener("change", () => pickTheme(inp
 for (const input of clocks) input.addEventListener("change", () => pickClock(input.value))
 for (const input of effects) input.addEventListener("change", () => pickEffects(input.value))
 hideDone.addEventListener("change", () => store(HIDE_DONE_KEY, hideDone.checked ? "1" : null))
-crafter.addEventListener("change", () => store(CRAFTER_KEY, crafter.value || null))
 for (const input of leads) input.addEventListener("change", () => store(LEAD_KEY, input.value === String(DEFAULT_LEAD) ? null : input.value))
 const preview = () => {
   const url = soundUrl(alarmSound.value)

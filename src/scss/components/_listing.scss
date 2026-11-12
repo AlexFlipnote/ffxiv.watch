@@ -320,8 +320,7 @@
     background: none;
   }
 
-  .group-header + .group-row,
-  .group-first {
+  .group-header + .group-row {
     td:first-child {
       border-top-left-radius: .5rem;
     }
@@ -451,18 +450,6 @@ $tab-flare: .5rem;
 
 .chip-gold {
   color: var(--gold);
-}
-
-// Sold for a currency, its icon after the amount
-.chip-currency {
-  display: inline-flex;
-  align-items: center;
-  gap: .25rem;
-
-  img {
-    width: 1rem;
-    height: 1rem;
-  }
 }
 
 .chip-accent {
@@ -746,34 +733,6 @@ $tab-flare: .5rem;
   strong {
     color: var(--font-primary);
   }
-}
-
-// The other vendors in the map's note, picking one moves the map to them
-.map-vendors {
-  display: flex;
-  flex-direction: column;
-  gap: .375rem;
-  margin-top: .5rem;
-  font-size: .8rem;
-  color: var(--font-tertiary);
-
-  // As wide as its longest option but kept in the note, a longer one cut off
-  .select-box {
-    align-self: flex-start;
-    grid-template-columns: minmax(0, auto);
-    max-width: 100%;
-  }
-
-  .map-vendor-pick {
-    min-width: 0;
-    text-overflow: ellipsis;
-  }
-}
-
-.map-vendor-quest {
-  display: block;
-  margin-top: .25rem;
-  color: var(--gold);
 }
 
 .done-entry {

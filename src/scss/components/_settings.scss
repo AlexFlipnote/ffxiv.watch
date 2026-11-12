@@ -213,13 +213,6 @@
   display: flex;
   gap: .5rem;
 
-  // Its name and then the select, on a line
-  .settings-label {
-    flex: 1;
-    align-self: center;
-    color: var(--font-secondary);
-  }
-
   .input {
     flex: 1;
     min-width: 0;

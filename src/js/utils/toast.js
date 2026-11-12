@@ -12,7 +12,7 @@ region.showPopover?.()
 /**
  * Shows a short message in the corner, gone after a while or when closed.
  * @param {string} text
- * @param {{ duration?: number, tone?: "info" | "success" | "warning" | "danger" }} [options] `duration` in ms
+ * @param {{ duration?: number, tone?: "info" | "success" | "warning" }} [options] `duration` in ms
  */
 export function toast(text, { duration = 4000, tone = "info" } = {}) {
   const el = document.createElement("div")

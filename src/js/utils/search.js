@@ -11,15 +11,13 @@ const RECENT_SHOWN = 5
 const KINDS = {
   fish: { label: "Fish", url: (name) => `/fishing/${slug(name)}/` },
   gathering: { label: "Gathering", url: (name) => `/gathering/${slug(name)}/` },
-  crafting: { label: "Recipe", url: (name) => `/crafting/${slug(name)}/` },
   sightseeing: { label: "Vista", url: (name) => `/sightseeing/${slug(name)}/` },
   weather: { label: "Weather", url: (name) => `/weather/${slug(name)}/` }
 }
 // A word naming a kind, "fish ruby" or "weather kugane", puts that kind first
 const KIND_WORDS = {
   fish: "Fish", item: "Gathering", items: "Gathering", gathering: "Gathering", node: "Gathering",
-  vista: "Vista", vistas: "Vista", sightseeing: "Vista", weather: "Weather", zone: "Weather", page: "Page",
-  recipe: "Recipe", recipes: "Recipe", craft: "Recipe", crafting: "Recipe"
+  vista: "Vista", vistas: "Vista", sightseeing: "Vista", weather: "Weather", zone: "Weather", page: "Page"
 }
 
 /**
@@ -131,8 +129,6 @@ function score(entry, query, words) {
   else if (entry.key.startsWith(query)) total += 100
   // "fish" means Fishing before Hook Fish
   if (entry.kind === "Page") total += 100
-  // Ten times as many recipes as the rest, they'd crowd out close calls ("fish" finding Fish Oil)
-  if (entry.kind === "Recipe") total -= 30
   return total
 }
 

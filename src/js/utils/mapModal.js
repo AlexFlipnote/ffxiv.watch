@@ -134,8 +134,7 @@ export function openMap(entry) {
 
   note.replaceChildren(...[entry.note ?? []].flat())
   note.hidden = !entry.note
-  // Opened again from its own note, to another spot
-  if (!modal.open) modal.showModal()
+  modal.showModal()
   // Once it's on the page, the frame has no size before
   if (hasSpot) center(pixels(map), entry.aetheryte && pixels(entry.aetheryte))
   // A whole zone as far out as it goes, so the most of it shows

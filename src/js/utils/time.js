@@ -168,21 +168,15 @@ const nextChange = (now) => Math.min(
  * Calls `fn` right away, then on the first frame after each moment the page can change (see nextChange). Waking
  * once or twice a second instead of every frame saves a phone's battery, and nothing runs while the tab is hidden.
  * @param {(now: number) => void} fn Gets `Date.now()`, should only touch the DOM when something changed
- * @returns {() => void} Stops it
  */
 export function everyTick(fn) {
-  let stopped = false
   const run = () => {
-    if (stopped) return
     const now = Date.now()
     fn(now)
     // A timer firing a hair early reruns with nothing changed and waits again
     setTimeout(() => requestAnimationFrame(run), Math.ceil(nextChange(now) - Date.now()))
   }
   run()
-  return () => {
-    stopped = true
-  }
 }
 
 /**

@@ -18,7 +18,7 @@ The code is under the [AGPL-3.0](LICENSE). It builds on:
 | --- | --- | --- |
 | [XIVAPI's ffxiv-datamining](https://github.com/xivapi/ffxiv-datamining) | Names of the game sheets' columns | |
 | [Carbuncle Plushy's fish tracker](https://github.com/icykoneko/ff14-fish-tracker-app) | When each fish bites, its bait and intuition | [MIT](https://github.com/icykoneko/ff14-fish-tracker-app/blob/master/LICENSE), © 2019 icykoneko |
-| [Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft) | Other fish's bait, hookset and tug, blue fish times, script-only shops | [MIT](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft/blob/staging/LICENSE), © 2017 Flavien Normand |
+| [Teamcraft](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft) | Other fish's bait, hookset and tug, blue fish times | [MIT](https://github.com/ffxiv-teamcraft/ffxiv-teamcraft/blob/staging/LICENSE), © 2017 Flavien Normand |
 | [Google Sans Flex](https://fonts.google.com/specimen/Google+Sans+Flex) | Font | OFL |
 | [Material Symbols](https://fonts.google.com/icons) | Icons | Apache 2.0 |
 

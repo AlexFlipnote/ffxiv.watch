@@ -18,9 +18,9 @@ export default defineConfig({
   js: {
     scripts: ["js/index.js", "js/page.js"],
     modules: [
-      "js/gathering.js", "js/sightseeing.js", "js/fishing.js", "js/item.js", "js/vista.js", "js/fish.js",
-      "js/weather.js", "js/weather-zone.js", "js/ocean.js", "js/saucer.js", "js/pvp.js", "js/pvp-schedule.js", "js/events.js",
-      "js/reset.js", "js/crafting.js", "js/recipe.js", "js/lists.js"
+      "js/gathering.js", "js/sightseeing.js", "js/fishing.js", "js/item.js", "js/vista.js",
+      "js/fish.js", "js/weather.js", "js/weather-zone.js", "js/ocean.js", "js/saucer.js",
+      "js/pvp.js", "js/pvp-schedule.js", "js/events.js", "js/reset.js"
     ]
   },
   sass: { "scss/index.scss": "css/index.css" },
@@ -34,7 +34,7 @@ export default defineConfig({
   minify: true,
   // Inline styles for the map markers' positions
   csp: { "style-src": "'self' 'unsafe-inline'", "img-src": `'self' data: ${IMAGES}` },
-  sitemap: { sections: ["crafting", "fishing", "gathering", "sightseeing", "weather"] },
+  sitemap: { sections: ["fishing", "gathering", "sightseeing", "weather"] },
   robots: {
     // SEO crawlers that only feed a paid backlink database and send no one here
     block: [
