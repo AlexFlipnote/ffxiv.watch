@@ -8,6 +8,7 @@ import { everyTick, formatCountdown, setText, setTime } from "./utils/time.js"
  * @property {HTMLElement} now
  * @property {HTMLElement} countdown
  * @property {HTMLOListElement} upcoming
+ * @property {number} size How many come after, as many as the build's empty rows
  * @property {number | null} shown The start of the map on show
  */
 
@@ -24,6 +25,7 @@ function card(id, at) {
     now: el.querySelector(".pvp-now"),
     countdown: el.querySelector(".pvp-countdown"),
     upcoming,
+    size: upcoming.children.length,
     shown: null
   }
 }
@@ -31,16 +33,14 @@ function card(id, at) {
 const cards = [card("pvp-frontline", frontlineAt), card("pvp-crystalline-conflict", crystallineConflictAt)]
 
 /**
- * The map on now and the ones after it, up to the first that's already been listed, so none shows twice.
+ * The map on now and the ones after it, repeats and all, one row each so the cards' lists line up.
  * @param {Card} c
  * @param {{ map: string, end: number }} on The map on now
  */
 function fill(c, on) {
   fillNow(c.now, on.map)
-  const listed = new Set([on.map])
   const rows = []
-  for (let after = c.at(on.end); !listed.has(after.map); after = c.at(after.end)) {
-    listed.add(after.map)
+  for (let after = c.at(on.end); rows.length < c.size; after = c.at(after.end)) {
     const li = document.createElement("li")
     li.dataset.start = after.start
     li.append(backdropOf(after.map), document.createElement("time"), mapName(after.map))
