@@ -21,27 +21,6 @@
           <p class="listing-lead">Today's Frontline and this hour's Crystalline Conflict map, when they change and what comes after, in your local time.</p>
         </header>
         <div class="pvp-grid">
-          <section class="pvp-card" id="pvp-frontline">
-            <header class="pvp-head">
-              <h2 class="pvp-title">Frontline <span class="pvp-subtitle">Daily challenge, changes at the daily reset</span></h2>
-              <a class="pvp-more" href="/pvp/frontline/">Calendar</a>
-            </header>
-            <div class="pvp-now">
-              <img class="pvp-banner" alt="" width="1088" height="320">
-              <span class="pvp-on"><span class="pvp-label">Today <span class="pvp-now-mode"></span></span> <strong class="pvp-map"></strong></span>
-              <span class="pvp-change"><span class="pvp-label">Changes in</span> <strong class="pvp-countdown"></strong></span>
-            </div>
-            <!-- Empty, to take the list's room before js/pvp.js fills one row each: one less than Crystalline Conflict's, the
-              modes' key takes the last row's room -->
-            <ol class="pvp-upcoming" aria-label="The days after">
-              <li><time>&nbsp;</time><span>&nbsp;</span></li>
-              <li><time>&nbsp;</time><span>&nbsp;</span></li>
-              <li><time>&nbsp;</time><span>&nbsp;</span></li>
-              <li><time>&nbsp;</time><span>&nbsp;</span></li>
-              <li><time>&nbsp;</time><span>&nbsp;</span></li>
-            </ol>
-            <x-html src="partials/pvp-modes.html"/>
-          </section>
           <section class="pvp-card" id="pvp-crystalline-conflict">
             <header class="pvp-head">
               <h2 class="pvp-title">Crystalline Conflict <span class="pvp-subtitle">A new map every hour</span></h2>
@@ -52,7 +31,7 @@
               <span class="pvp-on"><span class="pvp-label">Now</span> <strong class="pvp-map"></strong></span>
               <span class="pvp-change"><span class="pvp-label">Changes in</span> <strong class="pvp-countdown"></strong></span>
             </div>
-            <!-- Empty like Frontline's, the rest of the rotation's hours -->
+            <!-- Empty, to take the list's room before js/pvp.js fills one row each: the rest of the rotation's hours -->
             <ol class="pvp-upcoming" aria-label="The hours after">
               <li><time>&nbsp;</time><span>&nbsp;</span></li>
               <li><time>&nbsp;</time><span>&nbsp;</span></li>
@@ -61,6 +40,26 @@
               <li><time>&nbsp;</time><span>&nbsp;</span></li>
               <li><time>&nbsp;</time><span>&nbsp;</span></li>
             </ol>
+          </section>
+          <section class="pvp-card" id="pvp-frontline">
+            <header class="pvp-head">
+              <h2 class="pvp-title">Frontline <span class="pvp-subtitle">Daily challenge, changes at the daily reset</span></h2>
+              <a class="pvp-more" href="/pvp/frontline/">Calendar</a>
+            </header>
+            <div class="pvp-now">
+              <img class="pvp-banner" alt="" width="1088" height="320">
+              <span class="pvp-on"><span class="pvp-label">Today <span class="pvp-now-mode"></span></span> <strong class="pvp-map"></strong></span>
+              <span class="pvp-change"><span class="pvp-label">Changes in</span> <strong class="pvp-countdown"></strong></span>
+            </div>
+            <!-- Empty like Crystalline Conflict's, one row less: the modes' key takes the last row's room -->
+            <ol class="pvp-upcoming" aria-label="The days after">
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+              <li><time>&nbsp;</time><span>&nbsp;</span></li>
+            </ol>
+            <x-html src="partials/pvp-modes.html"/>
           </section>
         </div>
       </main>
