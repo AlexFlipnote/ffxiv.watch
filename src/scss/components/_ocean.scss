@@ -216,11 +216,31 @@
   @include glass;
   padding: 1rem;
   scroll-margin-top: calc(var(--navbar-height) + 1rem);
+
+  // The one the link was for
+  &:target {
+    outline: .125rem solid var(--accent);
+    outline-offset: .125rem;
+  }
 }
 
 .ocean-stop-name {
   margin: 0 0 .75rem;
   font-size: 1.1rem;
+
+  // Its own stop's anchor, to copy and share, underlined like Gold Saucer's card titles
+  a {
+    color: inherit;
+    text-decoration: underline;
+    @include faint-underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: .2em;
+    transition: text-decoration-color .2s;
+
+    @include hover {
+      text-decoration-color: currentColor;
+    }
+  }
 }
 
 .ocean-lists {

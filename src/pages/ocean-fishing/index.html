@@ -51,7 +51,7 @@
         <x-each items="route.stops" as="stop">
         <!-- Linked to from the voyages, by the place's slug -->
         <section class="ocean-stop" id="{{ stop.id }}" data-place="{{ stop.place }}" data-blue="{{ stop.blue }}">
-          <h3 class="ocean-stop-name">{{ stop.place }}</h3>
+          <h3 class="ocean-stop-name"><a href="#{{ stop.id }}">{{ stop.place }}</a></h3>
           <div class="ocean-lists">
             <div>
               <h4 class="ocean-list-title">Fish</h4>
