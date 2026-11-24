@@ -10,23 +10,20 @@
       "start": 1794988800000,
       "end": 1796828340000,
       "image": "/images/events/a5c6207a2b4f4c46266a195802ee7e0a426617b3.webp"
+    },
+    {
+      "id": "55abe658d9add2fd4d5e42cdc96523f7b16e7f19",
+      "name": "Moogle Treasure Trove - The Second Hunt for Astronomy",
+      "lead": "We are pleased to announce the return of the Moogle Treasure Trove starting Tuesday, 1 December 2026!",
+      "url": "https://eu.finalfantasyxiv.com/lodestone/special/mogmog-collection/202612/v261tbo7cq",
+      "start": 1796112000000,
+      "end": 1799740740000,
+      "image": "/images/events/55abe658d9add2fd4d5e42cdc96523f7b16e7f19.webp"
     }
   ],
   "topics": {
-    "7fe4d2afa5bdfdd749a4091aaaee39bfbb695192": {
-      "updated": "2026-10-30T08:01:00Z",
-      "found": null
-    },
-    "f614b50997ea4024e9efc3125af15363dbe100a6": {
-      "updated": "2026-10-31T04:40:00Z",
-      "found": null
-    },
     "5c3b0f9e2fa2295dfc32c19e02e57e4e0614a09c": {
       "updated": "2026-11-02T08:00:00Z",
-      "found": null
-    },
-    "74bc2f518effac0ba7dd05ab7c971b315795a373": {
-      "updated": "2026-11-02T07:00:00Z",
       "found": null
     },
     "1ce048bb8e6f66cb681604f8636bb139ce2fff9b": {
@@ -96,6 +93,22 @@
     "b3766cd45c01482654f79c464ed3129d36c71ba2": {
       "updated": "2026-11-20T08:00:00Z",
       "found": null
+    },
+    "8b643feceb60104c4b016cc54414b9d1ef71bfaa": {
+      "updated": "2026-11-24T17:00:00Z",
+      "found": null
+    },
+    "a1326adf1a6165fc78d84f042993394af4590d78": {
+      "updated": "2026-11-24T09:00:00Z",
+      "found": null
+    },
+    "55abe658d9add2fd4d5e42cdc96523f7b16e7f19": {
+      "updated": "2026-11-24T08:00:00Z",
+      "found": {
+        "url": "https://eu.finalfantasyxiv.com/lodestone/special/mogmog-collection/202612/v261tbo7cq",
+        "start": 1796112000000,
+        "end": 1799740740000
+      }
     }
   }
 }
