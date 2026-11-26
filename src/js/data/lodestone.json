@@ -1,6 +1,14 @@
 {
   "fixes": {},
-  "maintenance": [],
+  "maintenance": [
+    {
+      "name": "All Worlds Maintenance (Dec. 1)",
+      "url": "https://eu.finalfantasyxiv.com/lodestone/news/detail/a2369d4b565180cd9cd9abcb33172fa4b3fe6ce8",
+      "start": 1796104800000,
+      "end": 1796119200000,
+      "patch": "7.58"
+    }
+  ],
   "events": [
     {
       "id": "a5c6207a2b4f4c46266a195802ee7e0a426617b3",
